@@ -1,0 +1,21 @@
+add a way to specify damage of monster spells in r_info
+
+cave generation - wilderness areas, mazes, fractal caves, swamps with rivers, etc
+
+blunt weapons to 150% to undead
+small blades/polearms do 66% to undead
+bows do 75% to undead
+
+find some way (without discounts) to make birth items always worth 1au
+
+wand/bone -> (necromancer) weapon that activates for a spell, has charges
+staff/orb -> (sorceress) weapon that provides a spell skill
+rod/sceptre -> (paladin) weapon that activates for a spell, timeout
+add chance-to-cast items
+
+druid skill items
+
+variable percentile resistances on ego-items and randarts
+variable slays/brands on weapons
+
+give stats a maximum natural value that depends on starting class value

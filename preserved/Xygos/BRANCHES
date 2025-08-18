@@ -1,0 +1,9 @@
+master
+borg		active, experimental	Porting the Borg
+artifacts	active, experimental	Randarts / halfarts etc.
+sliding		inactive, merged		Sliding (mixed) classes
+champions	active, experimental	Champions (ghosts)
+world		inactive, merged		Multi-town world
+ego			inactive, merged		New ego item allocation method
+stores		inactive, merged		New store options
+timelimit	inactive, merged		Danger level increasing with time

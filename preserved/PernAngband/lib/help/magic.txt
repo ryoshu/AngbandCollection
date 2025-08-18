@@ -1,0 +1,118 @@
+|||||oy
+#####R === PernAngband Magic System ===
+
+In the official releases of Angband there are only two types magic
+spells:  Magic spells and priestly Prayers.  If the character is a
+mage, ranger or a rogue  (s)he can learn magic spells; if (s)he is
+a priest  or  a paladin,  (s)he  can learn prayers.  All mages can 
+learn the same spells and all priests can learn the same spells.
+
+PernAngband uses a more complex  "realms of magic" system improved 
+(or so we hope)  from ZAngband, which in turn was inspired  by the 
+commercial  fantasy  strategy game  Master of Magic  (Microprose), 
+which in turn supposedly borrowed it from the card game _Magic the 
+Gathering_ (by Wizards of the Coast).  The magic system,  as it is 
+implemented  in  PernAngband,  consists of  four major realms  and 
+eight minor realms.  The major realms are Nether, Valarin, Shadow, 
+and Magery. It may be convenient to think of the realms as being a 
+wheel:  Nether stands opposite  of Valarin,  and Shadow of Magery. 
+Between Nether and  Shadow lies  the subtle Illusion realm,  while 
+the gap between Nether and Magery is bridged by the wizards' realm 
+of Sigaldry.  The Crusade  realm lies  between Valarin and Magery, 
+and the  harnessing  of  natural  energies of the  Tribal realm is 
+between Shadow and Valarin. Aside from these, there are the realms 
+of special magic,  utilized by select  classes such as  Harpers or 
+Mimics.
+
+=====================================
+|        REALMS OF PERNANGBAND      |
+|                                   |
+|                *****m_spirit.txt*0[Spirit]             |
+|                                   |
+|                  |                |
+|                  |                |
+|           *****m_shadow.txt*0[Shadow] | *****m_valar.txt*0[Valarin]        |
+|                  |                |
+| *****m_illus.txt*0[Illusion]  - - - -+- - - - *****m_crusad.txt*0[Crusade] |
+|                  |                |
+|           *****m_nether.txt*0[Nether] | *****m_magery.txt*0[Magery]         |
+|                  |                |
+|                  |                |
+|                                   |
+|               *****m_sigald.txt*0[Sigaldry]            |
+|                                   |
+| *****m_tribal.txt*0[Tribal (nature oriented classes)]  |
+| *****m_druid.txt*0[Druid (Druids only)]               |
+| *****m_illus.txt*0[Illusion+ (Illusionists only)]     |
+| *****m_music.txt*0[Music (Harpers only)]              |
+| *****m_symbio.txt*0[Symbiotic (Symbiants only)]        |
+| *****m_chaos.txt*0[Chaos (Chaos Warriors and]         |
+|        Daemonologists only)       |
+| *****m_daemon.txt*0[Daemon (Daemonologists only)]      |
+| *****m_magic.txt*0[Magic (Old Vanilla Magic Realm)]   |
+| *****m_prayer.txt*0[Prayer (Old Vanilla Prayer Realm)] |
+|                                   |
+=====================================
+
+In standard Angband,  the type of a  character's spell ability was 
+determined  solely by the  character class.  In PernAngband,  most 
+spellcasting classes can select one  (or even two) types from the 
+realms of magic available. 
+
+The system of magic in  PernAngband is similar to that of standard 
+Angband,  but with subtle,  underlying differences  that do make a 
+significant difference.  Spellcasters choose their realms, but are 
+allowed only a set allotment of them.
+
+In standard Angband, there were 9 spellbooks for all spellcasters. 
+In PernAngband,  there are 9 each  for the major realms and 4 each 
+for the minor realms.  The first four  books of  a major realm and 
+the first  two books  of a minor  realm  can be bought  in a store 
+(Valarin and Crusade  spellbooks in the  town temple,  the rest in 
+the bookshop; of course the Black Market may stock any spellbook.)
+A character  with one major realm  and one minor realm  might thus 
+be carrying a whopping 13 spellbooks,  while a character with only 
+one  half-realm  of  magic  (rogues, rangers, paladins, and monks) 
+will  only need  to carry four  at the maximum.  All major  realms 
+have  64 spells,  dispersed  throughout  the books,  and all minor 
+realms have 32 spells, 8 in each book.
+
+It is important to note that the more spells studied in one realm, 
+the more effective spells from  that realm will be for the caster.
+This represents  the relative proficiency of  a  spellcaster  who 
+specializes in one realm.
+
+
+#####R=== Notes on Summoned / Charmed Creatures ===
+
+A friendly creature can be a mixed blessing. At first sight,
+one might  think that  they can  make the game  much easier.
+It is of course highly satisfying to send your pet Hell Wyrm
+into  a Troll pit and wait outside,  listening for the howls
+of agony and terror,  the sounds of  guts splattering, bones
+crunching and so on.  But one should not expect  to gain any
+experience for such a combat:  you will only gain experience
+for creatures  to whom you  deliver the death blow yourself.
+New experiences require hazards,  nobody gains experience by
+sitting home watching the TV.
+
+Secondly,  friendly monsters  are often so eager  to destroy
+your opponents  they may  forget all about you,  and you get
+trampled under their feet as they charge at  your foe.  They
+are not  as smart as  the regular monsters,  since they have
+given  up their free will to serve you.  So don't stand next
+to that Snaga when your pet Cyberdemon brandishes its rocket
+launcher!  Pets are also  rather easily irritable.  Once you
+do something  which causes the slightest discomfort to them,
+they will revert  to their normal behaviour and consider you
+their main target.  This is something to think about  before
+lighting up a room  if you have  pet orcs.  Needless to say,
+nobody wants to be your friend if you are aggravating them.
+Finally,  it takes  a lot of  mental energy  to maintain the
+control over the charmed monsters.  The first monster or the
+first few are 'free', but after that maintaining the control
+will start taxing your mana regain rate.  The higher the sum
+of the levels of your pets the less mana you will be able to
+regain. Keep this in mind if you have a pet which can summon
+or otherwise produce more pets...
+

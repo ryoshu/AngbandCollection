@@ -1,0 +1,293 @@
+# File: p_class.txt
+
+
+# This file is used to initialize the "lib/data/p_class.raw" file, which is
+# used to initialize the "player class" information for the Angband game.
+
+# Do not modify this file unless you know exactly what you are doing,
+# unless you wish to risk possible system crashes and broken savefiles.
+# After modifying this file, delete the "lib/data/p_class.raw" file.
+
+# Note that any change to the number of classes requires an update in
+# the limits.txt file.
+
+# === Understanding p_class.txt ===
+
+# Format:
+# N:class number:class name
+# S:str:int:wis:dex:con:chr
+# C:dis:dev:sav:stl:srh:fos:thn:thb:throw:dig
+# X:dis:dev:sav:stl:srh:fos:thn:thb:throw:dig
+# I:mhp:exp:sense_base:sense_div
+# A:max_attacks:min_weight:att_multiply
+# M:spellbook tval:spell-stat:first-level:max weight
+# B:spell number:level:mana:fail:exp
+# T:title
+# E:tval:sval:min:max
+# F:class flags
+
+# 'N' indicates the beginning of an entry. The serial number must
+# increase for each new class.
+
+# 'S' is for the stat modifiers - strength, intelligence, wisdom,
+# dexterity, constitution, charisma.
+
+# 'C' is for the base skills - disarming, magic devices, saving throws,
+# stealth, searching ability, searching frequency, to hit (normal),
+# to hit (bows), to hit (throwing), digging.
+
+# 'X' is for the skill modifiers (as above).  The modifiers are added to
+# the base skill every ten levels.
+
+# 'I' is for extra info - max. hitpoints gained per level, experience
+# factor in percent, base chance for pseudo-id (smaller is better),
+# level dependent divisor for the pseudo-id chance.
+
+# 'A' is for attack info - maximum possible number of attacks, minimum
+# weapon weight for calculating the number of attacks, multiplier for
+# attack calculations.
+
+# 'M' is for magic info - tval of the used spellbook, number of the
+# spell-stat, level of the first spell, weight that hurts spells.
+
+# 'B' is for spell/prayer info - number of the spell, level, mana
+# required, fail-rate, experience for first casting.
+
+# 'T' is for class titles.
+
+# 'E' is for starting equipment - tval of the item, sval of the item,
+# minimum amount, maximum amount.
+
+# 'F' is for class flags.
+
+# Angband/64 does not have class bonuses for throw and dig.
+# Angband/64 does not have class flags.
+
+# NOTE that food and torch provision is hard coded.
+
+# Version stamp (required)
+
+V:0.0.1
+
+N:0:Warrior
+S:5:-2:-2:2:2:-1
+C:25:18:18:1:14:2:70:55:55:0
+X:10:7:10:0:0:0:45:45:45:0
+I:9:0:9000:40
+A:6:30:5
+M:0:0:0
+E:potion:Berserk Strength:1:1
+E:sword:Broad Sword~:1:1
+E:hard armor:Chain Mail~:1:1
+F:BRAVERY_25 | PSEUDO_ID_IMPROV
+T:Rookie
+T:Soldier
+T:Mercenary
+T:Veteran
+T:Swordsman
+T:Champion
+T:Hero
+T:Baron
+T:Duke
+T:Lord
+
+N:1:Mage
+S:-5:3:0:1:-2:1
+C:30:36:30:2:16:20:34:20:20:0
+X:7:13:9:0:0:0:15:15:15:0
+I:0:30:240000:5
+A:4:40:2
+M:1:1:300
+E:book:Small Book:1:1
+E:hafted:Quarterstaff~:1:1
+E:wand:Fire Balls:1:1
+E:wand:Acid Bolts:1:1
+E:spell:Magic Missile:1:1
+E:spell:Detect Monsters:1:1
+F:CUMBER_GLOVE | ZERO_FAIL
+T:Novice
+T:Apprentice
+T:Trickster
+T:Illusionist
+T:Spellbinder
+T:Evoker
+T:Conjurer
+T:Warlock
+T:Sorcerer
+T:Mage Lord
+
+N:2:Priest
+S:-1:-3:3:-1:0:2
+C:25:30:32:2:16:8:48:35:35:0
+X:7:10:12:0:0:0:20:20:20:0
+I:2:20:10000:40
+A:5:35:3
+M:2:1:350
+F:PSEUDO_ID_IMPROV | CUMBER_GLOVE | BLESS_WEAPON
+E:book:Small Book:1:1
+E:hafted:Mace~:1:1
+E:potion:Healing:1:1
+E:spell:Detect Evil:1:1
+E:spell:Cure Light Wounds:1:1
+T:Believer
+T:Acolyte
+T:Adept
+T:Curate
+T:Canon
+T:Lama
+T:Patriarch
+T:Priest
+T:Head Priest
+T:Priest Lord
+
+N:3:Rogue
+S:2:1:-2:3:1:-1
+C:45:32:28:5:32:24:60:66:66:0
+X:15:10:10:0:0:0:40:30:30:0
+I:6:25:20000:40
+A:5:30:3
+M:1:5:350
+F:PSEUDO_ID_IMPROV | CUMBER_GLOVE
+E:book:Small Book:1:1
+E:sword:Rapier~:1:1
+E:soft armor:Soft Leather Armor~:1:1
+E:spell:Phase Door:1:1
+E:spell:Create Simple Trap:1:1
+T:Vagabond
+T:Cutpurse
+T:Robber
+T:Burglar
+T:Filcher
+T:Sharper
+T:Low Thief
+T:High Thief
+T:Master Thief
+T:Assassin
+
+N:4:Ranger
+S:2:2:0:1:1:1
+C:30:32:28:3:24:16:56:72:72:0
+X:8:10:10:0:0:0:30:45:45:0
+I:4:30:120000:5
+A:5:35:4
+M:1:3:400
+E:book:Small Book:1:1
+E:spell:Magic Missile:1:1
+E:spell:Detect Monsters:1:1
+E:sword:Broad Sword~:1:1
+E:bow:Long Bow~:1:1
+F:CUMBER_GLOVE | EXTRA_SHOT
+T:Runner
+T:Strider
+T:Scout
+T:Courser
+T:Tracker
+T:Guide
+T:Pathfinder
+T:Low Ranger
+T:High Ranger
+T:Ranger Lord
+
+N:5:Paladin
+S:3:-3:1:0:2:2
+C:20:24:25:1:12:2:68:40:40:0
+X:7:10:11:0:0:0:35:30:30:0
+I:6:35:60000:40
+A:5:30:4
+M:2:1:400
+F:PSEUDO_ID_IMPROV
+E:book:Small Book:1:1
+E:spell:Detect Evil:1:1
+E:spell:Cure Light Wounds:1:1
+E:sword:Broad Sword~:1:1
+E:scroll:Protection from Evil:1:1
+T:Gallant
+T:Keeper
+T:Protector
+T:Defender
+T:Warder
+T:Knight
+T:Guardian
+T:Low Paladin
+T:High Paladin
+T:Paladin Lord
+
+# War-Mage is a player class in Angband/64
+
+N:6:War-Mage
+S:2:1:-3:2:0:-1
+C:30:24:24:2:15:12:45:38:38:0
+X:9:10:10:0:0:0:30:30:30:0
+I:5:35:170000:5
+A:5:35:4
+M:1:1:300
+F:PSEUDO_ID_IMPROV | CUMBER_GLOVE | ZERO_FAIL
+E:book:Small Book:1:1
+E:polearm:Battle Axe~:1:1
+E:spell:Magic Missile:1:1
+E:soft armor:Soft Leather Armor~:1:1
+E:potion:Berserk Strength:1:1
+T:Novice
+T:Apprentice
+T:Protector
+T:Magic Guard
+T:Spellcaster
+T:Evil Hunter
+T:Conjurer
+T:Warlock
+T:Sorcerer
+T:War Lord
+
+# High Priest is a class in Angband/64
+
+N:7:High Priest
+S:-5:3:3:0:-1:2
+C:30:45:32:2:16:20:0:0:0:0
+X:2:10:10:0:0:0:0:0:0:0
+I:5:15:15000:40
+A:0:0:0
+M:2:1:350
+F:PSEUDO_ID_IMPROV | ZERO_FAIL | NO_ATTACK | EXTRA_RINGS
+E:book:Book:1:1
+E:spell:Cure Light Wounds:1:1
+E:spell:Magic Missile:1:1
+E:spell:Detect Monsters:1:1
+E:spell:Find Traps:1:1
+E:soft armor:Robe~:1:1
+E:wand:Wonder:1:1
+E:rod:Fire Bolts:1:1
+T:Novice
+T:Apprentice
+T:Acolyte
+T:Adept
+T:Spellbinder
+T:Curate
+T:Lama
+T:Conjurer
+T:High Mage
+T:Priest Lord
+
+# Gladiator is a class in Angband/64
+
+N:8:Gladiator
+S:5:-2:-2:2:2:-1
+C:25:14:18:1:14:2:70:45:45:0
+X:10:7:10:0:0:0:45:45:45:0
+I:9:0:9000:40
+A:6:30:5
+M:0:0:0
+E:helm:Metal Cap~:1:1
+E:sword:Dagger~:1:1
+E:potion:Berserk Strength:1:1
+E:polearm:Trident~:1:1
+F:BRAVERY_25 | PSEUDO_ID_IMPROV | NO_SHIELD | NO_ARMOR
+T:Rookie
+T:Apprentice
+T:Entertainer
+T:Fighter
+T:Team Fighter
+T:Team Leader
+T:Gladiator
+T:Champion
+T:Hero
+T:Lord

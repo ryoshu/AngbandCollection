@@ -1,0 +1,678 @@
+Details on new features for DaJAngband 1.1.2 and differences from vanilla Angband.
+==================================================================================
+
+Note: PC stands for player character (that little @-sign that you move around and 
+kill letters with).
+
+Misc. interface changes
+-----------------------
+
+	If blunt weapons are set to squelch "all but spendid" in the quality 
+squelch menu, then non-splendid ego-staffs (of types which you have squelched) 
+will be squelched also.  Otherwise ego-staffs will never be squelched, even if 
+you have that type of staff set to squelch.
+
+Quality squelch is now available for jewelry. The quality choices are:
+	1) nonego of squelched type (default) - squelches only non-ego jewelry of 
+types you have set to squelch.
+	2) all cursed except egos - squelches all non-ego jewelry of types you 
+have set to squelch and all non-ego cursed jewelry as soon as you are aware that 
+it's cursed.
+	3) all cursed (including egos) - squelches all cursed jewelry and any 
+non-ego jewelry of types you have set to squelch.
+	4) all cursed and all of squelched types - squelches all cursed jewelry 
+and all jewelry of types you have set to squelch (regardless of egos).
+
+	You may now look at the contents of your home from the knowledge menu 
+accessed by '~' or '|'.
+
+	The character history / note taking feature has been added (from 
+NPPAngband).  Use the ':' command to add a note.  On your character dump, it will 
+list your history, noting every fifth character level you gain, and whenever you 
+kill a unique monster as well as any notes you add.
+
+Some helpful commands 
+---------------------
+
+Display monster list ('[')
+  This command displays a list of currently visible or detected monsters in a 
+one-column display on the main terminal.  It will let you know which monsters are 
+in your line of sight and which ones are not aware of you.  It is highly 
+recommended to keep this list open in a separate term window. (Type '=' to go to 
+the options menu, then 'W' to control subwindow displays.)
+
+Display object list (']')
+  This command displays a list of currently visible or detected objects in a 
+one-column display on the main terminal.  This list is also available in a 
+separate term window.
+
+Command lists ("Enter" key)
+  This brings up a little window in the middle of the screen, in which you can 
+select what command you would like to use by browsing.  Useful for beginners.
+
+Remove weapon bonuses from a staff ('&')  (added in DaJAngband 1.0.98)
+  This removes all weapon bonuses and special abilities of any non-artifact magic 
+staff to allow stacking with another staff of the same type.
+
+Add a note to your character history (':'), see above.
+
+
+More differences from vanilla Angband and 
+in-depth explaination of some DaJAngband features:
+--------------------------------------------------
+
+---IDing stuff:
+
+	There are now ego lanterns and jewelry.  No ID is required to recognise 
+an ego on lanterns or jewelry (as long as you are aware of the jewelry type).
+
+	Traps can now occupy the same space as an object. This will only ever 
+happen either by a monster's treasure drops, or by a monster's create traps 
+spell (they will never be generated in the same space when you enter the level).  
+The map will show the symbol of the object, but if you (l)ook at the space, it 
+will tell you that there is a trap there (if you have discovered the trap).
+
+---Weapons & Combat:
+
+	A NPP-style quiver has been added to hold ammo and throwing weapons.  
+Each missile (an arrow, bolt, pebble, or shot) takes up one slot in the quiver.  
+Throwing weapons take up more than one slot each depending on their weight (a 
+throwing dagger takes up 2 slots, a throwing axe takes up 4 slots, and a javelin 
+takes up 8 slots).  Each 99 quiver slots takes up one slot in your inventory.
+
+	Missile launchers (slings, bows & crossbows) are slightly nerfed from 
+vanilla Angband:  Instead of having a x2 or x3 multiplier, launchers have a 
+multiplier level (ML). A sling has a multiplier level of 2 which multiplies 
+damage by x1.75 instead of x2, a long bow has an ML of 3 which multiplies 
+damage by x2.625, and a heavy crossbow with ML4 multiplies damage by x3.5.
+
+	Weapons which are meant for throwing (throwing dagger, javelin, etc) have 
+a damage multipler of x1.4 when thrown at a monster and get the full to-dam bonus 
+from strength and full to-hit bonus.  Gauntlets of throwing and occationally 
+other items will give your throwing weapons an improved multiplier in which case 
+they will have an ML of 2, 3, or even 4, which work the same as bow 
+multipliers (ML2 = x1.75).
+	Weapons which are good for throwing, but not primarily throwing weapons 
+(spear, wooden club, etc) have a damage multiplier of x1.2 when thrown at a 
+monster, get partial to-dam bonus from strength, and half of the object's to-hit 
+bonus when thrown.  These semi-throwing weapons can only be put in the quiver if 
+they are the same weight or lighter than a spear.
+	Weapons which are not meant for throwing get 1/3 of the object's to-hit 
+bonus and no strength bonus when thrown and a penalty to critical hit odds.
+
+	Brands can (partially) stack in DaJAngband.  If you're fighting with an
+artifact which is branded with both cold and fire against a monster that is 
+vulnerable to both, it will do the usual x3 damage for the 1st brand with an 
+additional 25% of the original damage for the second brand.  So if it would do
+10 pts of damage not including the brands, it will do 32 point of damage.
+	Any x3 slays may also stack (slay evil and slay animal are x2, the 
+kill/excecute slays are x5, all others are x3). So if you're fighting a troll
+skeleton with a slay-undead, slay-troll, fire-branded weapon, it will do x3.5 
+the original damage (x3 for the first, plus x.25 twice for the other two 
+multipliers).
+
+	Double weapons: A few types of weapons, the most common of which are 
+quarterstaffs, are double weapons.  Double weapons are much easier to get multiple 
+attacks with while not wearing a shield and still slightly easier while wearing a 
+shield.  Also, you get +1 to your maximum number of blows while wielding a double 
+weapon without a shield.
+	Double weapons have two sets of damage dice (you will notice a quarterstaff 
+says 1d8/1d5). The 1st and 3rd attacks with the weapon use the 1st set of damage 
+dice and the 2nd and 4th attacks with the weapon use the second set of damage dice.  
+(This attempts to imitate the double weapons of DND 3.5.)
+
+	Magic staves are now wieldable and can receive weapon bonuses and egos.
+
+	Digging without digging tools:  Digging while wielding a sword or staff is 
+not as effective as digging while wielding a polearm or axe (unless the sword or 
+staff has an acid brand).
+
+	Jamming doors with iron spikes is significantly more effective than it is in vanilla.
+
+---Magic & Spells
+
+	Spells and magic devices no longer automatically use the maximum range of 20 
+spaces anymore.  Maximum range for spells & devices used by the PC has a range of 
+16-20 spaces.  Actual range for devices is figured depending on your magic device 
+skill and character level. 
+	Actual range for spells depends on character level and which spell
+is being cast.  Most spells have a maximum range of 20 at character level 50. If a
+spell has a shorter range it will say in the spell description.
+
+	Not all classes which are able to cast spells start out with a spellbook, 
+but the class' spell realm is now noted on the birth screen when you're chosing you're 
+character. Also, you probably won't be able to read every book in your magic realm. 
+With the chance realm, the tourist's books are in the general store. The one chance 
+realm book which is sold in the magic store is not useable by tourists, but is of more 
+interest to rogues.  The game no longer allows you to buy spellbooks which your class 
+can't use.
+
+	About the Nature and Necromancy realms: These two realms are largely 
+borrowed from OAngband, but if you've played OAngband, it's important to remember 
+that many of the spells that may have the same name as one in OAngband don't 
+nessesarily have exactly the same effects. Browse a book and chose a spell to see 
+that's spell's description.
+
+	Demon aggravation: The necromancy realm has some very powerful spells, but 
+that realm also has more drawbacks than other realms.  Many necromancy spells 
+have a chance to leave an aura around you which aggravates demons.  Two spells in 
+the wizardry realm also have a chance to make you aggravate demons for a while: 
+summon demonic aid and rend soul.
+
+---Special levels, rooms, and dungeon features:
+
+	Rubble can be climbed over (or dug up) by both the player and by monsters, 
+but it takes some effort (like opening a stuck door).  Small flying monsters can 
+fly over the rubble effortlessly (but not bigger flying monsters like dragons, 
+they're too big to fly between the rubble pile and the ceiling).  Also, if there 
+is an object hidden in the rubble, you can find it by searching and pick it up 
+without digging up the rubble, so there is often no need to dig up rubble and it 
+may be useful to slow down monsters who are following you.
+
+	Unlike in vanilla, you can target monsters which are in a wall space with 
+spells or projectiles (although projectiles have a reduced chance to hit in that 
+situation).
+
+	Water: You'll now find ponds and puddles occationally.  There is no deep 
+water in the game, so it's easy to wade through. There's no risk of drowning in 
+it UNLESS you're 1) paralyzed, 2) grabbed by a null or water monster, or 3) 
+heavily stunned. Weaker fire-based monsters (and some other water-hating monsters) 
+will not pass water, while stronger fire-based monsters will dry it up.
+	When the target is in water, lightning and cold will do extra damage 
+while acid and fire will do reduced damage.  This applies both to the PC and to 
+monsters. (new in 1.2.0, idea from UnAngband except it doesn't modify damage as 
+drastically as in Un.)
+	Water also slows you down a little (-2) whenever you're in a space with 
+water.  Many types of monsters are also slowed, these are the monster types which
+are not slowed: water monsters, small flying monsters, incorporeal monsters (those
+that pass through walls and some which pass through doors), and monsters of size 6
+or larger.
+
+	Empty Vaults:  In addition to lesser and greater vaults like vanilla has, 
+you will sometimes find ruined empty vaults.  Empty vaults may still have some 
+monsters or treasures, but it won't be as much and they won't be out-of-depth.
+Also, emtpy vaults (usually) do not raise the level feeling.  Most empty vaults
+take the design of a lesser vault and remove most of the monsters and treasure
+and sometimes destroy some parts of the walls. Empty greater vaults are 
+exceedingly rare, but are possible in the deep dungeon.
+	There is one (and I may add more later) rare vault design which is in the 
+code as an empty vault, but it is more like a large lesser vault (it was too big 
+for the size limits on lesser vaults).  It is the size of most greater vaults, but 
+its difficulty and treasure level are more like a lesser vault.
+
+	Themed levels:  Occationally you will get another message after the level 
+feeling, letting you know that you're on a themed level.  Themed levels are 
+primarily populated by certain types of monsters. (A couple examples: a fairy 
+forest has fairies and forest animals, a full moon level has more werebeasts, 
+outlaws, and magic cats, and the haunted castle has knights, gargoyles, and undead.  
+	There are also themed levels for fire-based, air-based, and earth-based 
+monsters.  Certain monsters are never found outside of their themed level.  
+Because of the addition of themed levels, monster pits and nests have been made 
+slightly less common.
+	There are a couple dungeon features (like trees and statues) which are 
+primarily for the appropriate themed levels, but they may also appear in the 
+normal dungeon levels occationally.  Water will be much more common in a swamp-
+themed level, and you may find a pond or two in a forest themed level.
+
+
+---In-game effects and stats which are different or not in vanilla:
+
+	The effectiveness of charm-type effects (confuse, slow, sleep, scare) are 
+now modified by charisma.  They are at minimum slightly more effective than in 
+vanilla Angband, and can be much more effective with high charisma.
+	confusion: you (and monsters) are still able to cast spells while confused,
+only with a much higher fail rate.
+
+	Silver & Slime: Infections which have no effect in small amounts, but can 
+have nasty effects if you let them accumulate to high levels. Cure wounds potions 
+have no effect on them.  The two most effective things to fight these effects are 
+elven waybread and the potion or spell of purity. Mushrooms of cure serious wounds 
+also have a small anti-silver and slime effect. Mushrooms of health cure a little 
+sliming and mushrooms of clear mind cure a little silver poison.  Only a couple 
+very rare monsters can cause sliming or silver poison from a distance, normally 
+they are caused as melee attacks.
+	Sliming slowly turns a person's body into a mindless blob of slime, 
+starting by lowering thier constitution. Danger levels for slime: at 20 begins to 
+have occational minor effects, at 40 slime starts to have serious effects, and at 
+55 slime will be fatal if not cured very quickly. Monsters which cause sliming are
+more common than monsters that cause silver poison.
+	Silver poison makes a person forget who he is and corrupts the mind so that 
+he is no longer able to think about anything that matters. Its first effects are 
+reduction of wisdom and randomly activated amnesia or hallucenation. Danger levels 
+for silver: at 5-14 has rare minor effects, at 15-24 can have very serious effects, 
+and at 25 silver poison will be fatal if not cured within a few turns of getting to 
+this level.
+	Ego-items which have random resistances may now have slime resistance or
+silver resistance.
+
+	Charm: A few monsters can charm you. This timed effect prevents melee, 
+shooting, and casting, but only reduces to-hit for throwing. Monsters can only 
+charm you in melee, never from a distance.
+	Frenzy: A few monsters can put you into a mad, careless frenzy, this has 
+several effects: it lowers your to-hit and armor class, slightly lowers your 
+alertness, stealth and saving throw, sometimes makes you hit yourself with your 
+weapon, and slightly raises your to-damage bonus. Resistance to charm also 
+protects from the frenzy effect.
+
+	Luck: Every character starts with a luck rating which is separated into 
+good luck and bad luck (because with some effects, you can have both good luck and 
+bad luck at the same time).  Starting luck is always between 17 and 27 (except for 
+the rare case of a human tourist who can potentially start with a luck rating of up 
+to 30). A luck rating of 20 is neutral; no bonus or penalty. A luck rating above 20 
+is good, below 20 is bad.
+	Your exact luck rating is hidden. You can get a general indication of your 
+luck from the self knowledge screen (use '~' to get to the knowledge menu, then 
+'6' to show self knowledge), but the only way to know your exact good luck and bad 
+luck is to drink a potion of self knowledge. (BTW, a potion of self-knowledge will 
+also now identify everything in your inventory.)
+	Luck affects many different things in mostly minor ways. Luck affects 
+chance-realm casters, especially the tourist, more than other classes. Beware the 
+black cats which can lower your luck.
+
+	Corruption: Your character can become corrupted through use of evil-aligned 
+magic items* including Sauron's One Ring.  Corruption can lower your luck, make it 
+harder to remove curses, and attract demons.  Not all evil-aligned magic items will 
+corrupt you, the item's description will let you know if it corrupts.  Corruption 
+can be slowly removed by wielding good-aligned magic item(s) while not wielding any 
+evil ones. The only other way to remove corruption is by drinking a potion of 
+purity.
+	*There is one magic item which can corrupt which is not evil-aligned.  The 
+broken sword 'Narsil' is forever tainted by Isildur's decision to keep the One Ring 
+for himself instead of having it destroyed.  Because of this, it can cause 
+corruption even though it is not evil-aligned.
+
+
+---Monster Stuff:
+
+	Several dungeon monsters may now sometimes appear in town as a weaker-than-
+average specimen of its race.  At the very beginning of the game, no dungeon
+monsters native deeper than level 1 will appear, but later, more dungeon monsters
+will show up in the town.
+
+	Roaming monsters: Many monsters are now created awake but unaware of the PC.  
+You may see them walking around before they have noticed you.
+	In addition, many monsters may cast spells before they notice you.  Monsters
+are only allowed to cast a few certain spells if they haven't noticed you (or if you
+aren't in line of sight).
+
+	Non-agressive monsters: A few types of town monsters and one or two types of 
+dungeon monsters are non-agressive, meaning they will not take notice of you unless 
+they are attacked or aggravated.
+
+	Monster curse spell: Some monsters can cast a spell which curses you.  This 
+is a timed condition which lowers your armor class, lowers most of your skills, and 
+temporarily raises your bad luck.
+
+	Like the PC may have single resistance, double resistance, or immunity to 
+elements, monsters also now have incremental resistances.  Previously, monsters could
+only have one level of resistance, which for fire, cold, acid, lightning & poison was 
+an immunity.  For instance, kobolds are now only partially poison resistant, instead 
+of being immune.  Monsters also may be more vulnerable to certain elements.
+	Some monsters now may be resistant to damage from missile weapons.
+
+	Monster size: was nowhere but the textual monster description in vanilla and
+older DAJ versions.  Now monster size has these effects: monsters smaller than the PC
+get a minor bonus to-hit, monsters smaller than the PC get a minor penalty.  Same the
+other way around: the PC gets a minor bonus to hit larger monsters and a minor penalty
+against smaller monsters.  Size 6 or larger nullifies a monster's stealth when it is in
+your line of sight (its stealth still applies for magic detection and hearing it from
+out of sight).  
+	For Player races: hobbits, both gnomes, and kobolds are size 3.  Half trolls 
+and golems are size 5. Umber hulks are size 6. Power Sprites are size 1.  All others 
+are size 4.  Some monster size examples: 
+	Size 1: newt, fruit bat, garter snake, white mouse, yellow mushroom patch, 
+cave spider, sprites, killer bee, mosquito, icky things, hand druj.
+	Size 2: lesser eyes, jackel, most frogs, crow, garden gnome, yellow worm 
+mass, the magic cats, large brown bat, most creeping coins, wind shade.
+	Size 3: kobolds, hobgoblin, well lizard, rot jelly, wolf, most gnomes, nighthawk, millipede, black mamba, wererat, giant dragonflies, most hounds, trooping fairy.
+	Size 4: humans, dark elves, most orcs, lemure, tengu, black dwarves, smaller 
+golem types, warg, crockodile, giant tick, unicorns, snakeman, carrion crawler, beholder.
+	Size 5: most nagas, ape, baby & young dragons, giant spider, lesser ogres, 
+stegocentipede, most golems, griffon, centaurs, gargoyle, most trolls, werebear, catoblepas.
+	Size 6: behir, gelatinus cube, hydras, most tree monsters, iron golem, wereworm,
+most giants, giant python, most elementals, mature dragons, mumak, balrogs.
+	Size 7: giant ogre, colossus, wyvern, ancient dragons, great wyrms, mastodon, 
+greater elementals, young behemoth.
+	Size 8: (adult) behemoth.
+
+
+---Novelty Races & Classes
+
+	Living Ghoul - A living ghoul is a human who he or his ancestors have been 
+subjected to the effects of necromantic magic enough that they have been 
+permanently altered, though they are not true undead.  They have very poor 
+constitution, but have intrinsic see invisibile and resistance to nether.  Many 
+living ghouls decide to become clerics to battle against the necromantic magic 
+which has made them what they are.
+
+	Power Sprite - Tinkerbell can throw an ogre across the room.  That doesn't
+translate perfectly into the game (you can't actually throw monsters), but that sums
+up what the power sprite is about: massive brute strength in a very small body.  
+They come with resistance to light and fear, but because of their diminutive size, 
+they also have the lowest hit die of any player race.
+
+	Golem - Golems are contructs so they never get tired and never need to eat.
+They also do not regenerate hit points naturally.  They have no constitution score,
+no luck rating (except from equipment or temporary effects), and they resist fire, 
+poison, and shards.  Because of their weight, feather falling has no effect on 
+golems, they will always take damage when falling into a pit.
+
+	Umber Hulk - The most unbalanced of all races, the umber hulk has innate
+perfect digging ability, unmatched melee power, confusion resistance, and confuse 
+monsters with their attacks.  They also have big drawbacks: They may cause 
+earthquakes with their attacks and they aggravate monsters.  Previously, the Umber
+Hulk had it own required warrior class, but recently I changed it so they can play
+any class, though they will never be very good at magic.
+
+	The Tourist - A very difficult class to play, the tourist hears of the 
+challenge to kill Morgoth and gets excited about the interesting sights to see in
+the dungeon on the way.  He's obviously not a good fighter, he doesn't choose which 
+spells he learns, and his magic mostly consists of divination spells (detection, 
+mapping, and identifying), and random-effect spells.  At the beginning of the game, 
+his primary defence is the camera flash spell which stuns opponents for a
+couple turns and his best combat skill is in throwing weapons.  The luck stat has 
+more effect for the tourist than it does for any other class. Human tourists get 
+an extra bonus to luck, but any tourist is more likely to start with high luck than 
+other classes are.
+
+	The Knight classes - The knight classes (White knight, Black knight, Chaos 
+Warrior, Green Knight) are all pretty similar to each other except they each use a 
+different magic realm.  They are very tough fighters with mediocure skills and a little 
+bit of magic.  They are horrible at stealth and do not like to run away from a fight.  
+They can wear more armor than any other class without having their magic hindered.  
+There is planned to be a knight class for each magic realm eventually.  (The Chaos 
+Warrior is the knight class of the chance magic realm. It is not called a knight 
+because the chance realm is chaotic and knights are traditionally lawful).
+
+
+---Options which aren't in vanilla or have been changed:
+
+		Interface options:
+	Allow themed levels (themed_levels) - allows you to choose whether themed 
+levels are enabled. defaults to ON.
+	Remove level feelings (level_numb) - removes level feelings and at the same time activates a much milder version of the auto-scummer.  You will still get messages letting you know when you arrive on a themed level, and you may still request a danger feeling with CTRL-G. (It's only the treasure-related feelings which are completely removed). defaults to OFF.
+	Stop autoinscribe from overwriting old inscription (prevent_overwrite) - prevents autoinscriptions from replacing an inscription already on the item. defaults to ON.
+		Display option:
+	Show time in main window (show_gtime) - replaces the "equippy characters" with the game time display (which is always shown in the (c)haracter screen anyway). defaults to ON.
+		Disturbance option:
+	Disturb when ESP detects a new monster (disturb_move) - when you have telepathy, this disturbs when you detect a new monster coming within your ESP-detection range. defaults to OFF.
+	Disturb whenever viewable monster moves (disturb_near) has been changed so that monsters which are not aware of you don't disturb you unless they are within five spaces of you or unless they are just coming into your line of sight.
+		Birth options:
+	Randomize randart names (birth_randnames) - Decides whether randarts get random names or keep the names from the standard artifact list.  Often the names from the standard artifact list don't fit with the randomized artifacts. defaults to ON.
+	Enable selling to shops (birth_cansell) - allows you to sell dungeon items to the shops for gold and reduces the gold value of dungeon coins. defaults of OFF.
+		Cheat options:
+	Everything is IDed (cheat_noid) - All objects are automatically fully identified on creation except artifacts. Artifacts are excluded because the score from finding an artifact is given when you identify it, and you shouldn't get this score until you gain possession of the item (then again, having the cheat option on disables scoring anyway..).
+	The Know complete monster race info (cheat_know) option no longer prevents the game from being scored, but otherwise still acts like a cheat option.
+
+Here are details on a few of the new monster types:
+---------------------------------------------------
+
+	(B) Tyerrey: A hawk composed of fire and lightning.  While more common, it 
+is lesser-known than the pheonix because when people see it, they think they are 
+seeing a pheonix.
+
+	(g) Glarx: The glarx is a two-headed golem created by a mad wizard from 
+spare parts of other monsters which he had killed. One head is that of a gorgon, 
+naga or harpy and has the power to paralyze. The other head is made of metal and 
+can shoot bolts of lightning.
+
+	(h) Hobglibs:  Odd and fervently neutral, hobglibs enjoy playing games and 
+expermenting with magic and alchemy. They are humanoid monsters, averaging slightly 
+shorter than humans. Their skin is similar in color and texture to that of a potato. 
+They typically care about very little besides themselves and they almost never take 
+sides in any conflict, though they will sometimes help if offered something 
+interesting as a reward.
+
+	(I) Xan: The xan is an agent of the gods of the netherworld in the shape of 
+a mosquito.
+
+	(K) Dullahan: The dullahan is the source of the stories of headless 
+horsemen.  It is the original headless horseman, sometimes instead driving a coach 
+drawn by six black horses.  It carries its disembodied head in its left hand, and a 
+human-spine whip in its right hand. It calls to it those who are fated to die.
+
+	(l) Zhelung:  Zhelung lizards are creatures of light distantly related to 
+both dragons and light fairies. They live in underground rivers and lakes and they 
+love to light up the dark places, but they can be very dangerous.  Well lizards, 
+rasti, and zhangs are less magical relatives of the zhelung.  Rasti are like 
+reptillian bats, and zhangs are like reptillian wolves.
+
+	(M) Rastlig: From the domain of the grepse, the rastlig looks something like 
+a cross between an elephant and a dinosaur. It has wings which are way too small to 
+allow it to fly. Despite its comical appearance, it is very dangerous. Its breath 
+causes confusion and amnesia.  This is one of the very few monsters which can 
+breathe for silver poison. (Amnesia breath from a silver monster will also often 
+cause silver poison.)
+
+	(N) Null: The null is a tentacled swamp monster with acid under its skin.  
+The nulfraz is a more evil and intelligent type of null which can cast powerful 
+spells.
+
+	(u) Scyllis: This minor demon is shaped like a snake with a head on each end 
+of its body.  It has no wings, but it can fly and it swings its body back and forth 
+to bite with each head. It most commonly appears when summoned to plague and poison 
+someone with a curse.
+
+	The Grepse (silver beings): The domain of the grepse is a shadowy realm 
+full of illusions designed to make you comfortable and forget everything and 
+everyone you used to know.  The most common type of grepse are the (w)vyrms.  
+Their true form is like a flying worm, but they usually wear an illusion making 
+them look like a pleasant songbird. Their song creates illusions in people's minds 
+and make them forget what they care about.  The silverworm is a weaker form of a 
+vyrm. (The domain of the grepse is one of the themed level types).
+	(w) Wemu Vyrm: The lord of the grepse, its form is a tiny humanoid made of 
+silver slime. It usually wears an illusion making it look like the same size and 
+race as its victim.
+
+	(T) Goyley and Groyle: These are lesser types of gargoyles. The groyle is 
+sometimes mistaken for a winged orc, though they are usually loners and do not get 
+along with orcs. Goyleys are the smallest type of gargoyles are often mistaken for 
+winged gremlins.
+	Gargoyles are related closely enough to trolls that any weapons which slays 
+trolls also slays gargoyles.
+
+	(y) Light Fairies: These creatures of light (which means they take extra 
+damage from magical darkness) tend to be small and look harmless, but some of them 
+are very powerful with fairy magic. The most common light fairies are types of 
+sprites and gnomes.  Fairy gnomes (as opposed to the magic gnome player race) are 
+fairies of wisdom and cannot be confused by normal means*.  Bright sprites give 
+off light as they fly which can be bright enough to blind you.
+	*Poison has a different effect on light fairies as it does on mortals.  It 
+inflicts much less physical damage in light fairies, but it causes confusion for 
+them instead.
+
+
+
+
+
+
+
+
+
+		***Spoiler Alert***
+	The remainder of this document contains information which I would consider 
+to be spoiler information.  Read on only if you hate surprises.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Details on the Themed Levels:
+-----------------------------
+
+	Here is a list of each type of themed level and what types of monsters are 
+common there.  This list is in rough order of difficulty, so that you are more 
+likely to find a bug cave on earlier levels and a hell hall on later levels.
+	Themed levels have a chance to let in monsters which are not native to the
+theme, except that certain themes have conflicting monsters which will never 
+appear there.  Some certain monsters will never appear outside of their home
+theme. Uniques often have certain theme(s) that they are associated with also.
+
+The Icky Place
+  "This level is a slimy, icky place.."
+	Inhabitants: Slimes, worms, jellies, and other icky things (even blue 
+ones), also mind flayers.
+	Uniques: Wormtongue (Agent of Saruman), Sshppllluuit (the multi-hued 
+Icky King -theme only-), Draebor (the Imp), Ren the Unclean
+
+The Bug Cave
+  "The ground and walls here are nearly covered with ants and other tiny bugs."
+	Inhabitants: All types of bugs. Also, dark elves are often found here 
+because they worship Achrya, the spider goddess.
+	Uniques: The Queen Ant, Eol (the Dark Elf Smith), Shelob, Achrya (the
+Spider Goddess).
+
+The Fairy Forest
+  "The walls here are decorated with green trees and sprites."
+	Inhabitants: Fairies (gnomes, sprites), centaurs, trees, and forest animals.
+	Uniques: Grip (Farmer Maggot's dog), The Boar of Everholt, Old Man Willow, 
+Alatar the Blue, Humbaba (Guardian of the Forest), Huan (Wolfhound of the Valar)
+
+The Cold Forest
+  "The walls here are decorated with snowy trees of a cold forest."
+	Inhabitants: kobolds, forest/hill monsters, frost dragons, and other 
+cold-themed monsters.
+	Uniques: Fang (Farmer Maggot's dog), The Boar of Everholt, Golfimbul (the 
+Hill Orc Chief), Grishnakh, The White Witch (in-theme only), Beorn (the Shape-changer), 
+Ulbandi (the Ogre Chieftain), Tom, Bert & Bill (the Stone Trolls), Pallando the 
+Blue, Humbaba (Guardian of the Forest), Dwar (Dog Lord of Waw), 
+Carcharoth (the Jaws of Thirst)
+
+The Dwarf Mines
+  "You recognise a symbol on the wall as a mark to the entrance of a dwarf mine."
+	Inhabitants: cave orcs, dwarves, gnomes, balrogs, mine-themed monsters 
+(like creeping coins and mithril golems), and various cave-dwelling monsters 
+(including zhelung lizards).
+	Uniques: The Great Goblin, Bolg (Son of Azog), Nar the Dwarf, Gollum, 
+Ibun & Khim (Mim's sons), Azog (King of the orcs of Moria), Mim (Betrayer of 
+Turin), Blaygorm (the Black Dwarf Lord), Tom (the Stone Troll), The Watcher in
+the Water, Rogrog the Olog, Smaug the Golden, The Balrog of Moria, Alberich the
+Nibelung, Fafner the Giant.
+	Other notes: Certain monsters in this themed level are/have references to
+Terry Pratchett's Thud (The grags and the black dwarf superstitions).
+
+The Full Moon Zone
+  "Though deep underground, you inexplicably sense a full moon in the sky."
+	Inhabitants: outlaws, cats, wolves, were-beasts, vampires, certain demons, 
+and lightning dragons.
+	Uniques: Wolf (Farmer Maggot's dog), Ted Sandyman (the Miller), Bill Ferny
+(Agent of Saruman), The Dunlending Agent of the Nazgul, Ulfang, Ulwarth & Ulfast,
+Siniava (the 'Honeycat'), The Skeezix, The Cerberus, Ren the Unclean, Harowen the
+Black Hand, Artemis Entreri (the Master Assassin), Dwar (Dog Lord of Waw), The
+White Cat of Beruthiel, Thuringwethil (Messenger of Morgoth), Baphomet (the Goat
+of Mendes), Carcharoth (the Jaws of Thirst), Huan (Wolfhound of the Valar), 
+Draugluin (Sire of all Werewolves), Liart (Master of Torments).
+
+The Earth Cave
+  "The walls here have crystal and other types of rocks showing between the 
+granite."
+	Inhabitants: zhelung lizards, grey (stone/force) dragons and other 
+crystal, rock and earth-themed monsters.
+	Uniques: No uniques are native to the Earth cave.
+
+The Windy Cave
+  "This level has high ceilings and windy tunnels."
+	Inhabitants: various flying monsters, vortexes, violet (wind/nexus) dragons, 
+and other air-themed monsters.
+	Uniques: The Phoenix, Fafner the Giant, Pazuzu (Lord of Air)
+
+The Volcano
+  "The walls here are decorated with fire and veins of molten lava."
+	Inhabitants: basilisks, fire dragons and other fire-themed monsters, also 
+any monsters native to Mordor (mordor orcs, bats of Gorgoroth) because Mt Doom 
+was a volcano.
+	Uniques: Radbug & Lagduf of Cirith Ungol, Shagrat (Captain of Cirith Ungol),
+Kavlax the Many-Headed, Itangast (the Fire Drake), Shelob, The Mouth of Sauron, 
+The (Left and Right) Silent Watchers, Glaurung (Father of Dragons), The Witch-
+King of Angmar, Ancalagon the Black, Lungorthin (Balrog of White Fire)
+
+The Swamp
+  "The ground is very wet here and there are puddles of brown water."
+	Inhabitants: anphibians, green dragons, various swamp-dwelling monsters,
+and water-themed monsters.
+	Uniques: The Watcher in the Water, Leviathon, The Lernaean Hydra.
+
+The Haunted Castle
+  "This level is filled with the ruins of an ancient haunted castle."
+	Inhabitants: mimmics, golems, gargoyles, knights, and various undead, 
+plus a few other monsters which I thought might be found in the ruins of a 
+haunted castle.
+	Uniques: Wulf (Renegade of Rohan), Lorgan (Chief of the Easterlings), 
+Castamir the Usurper, Uvatha the Horseman, Alatar the Blue, Pallando the Blue,
+Akhorahil the Blind, Ramvodo Yek (the Gargoyle King), Artemis Entreri (the 
+Master Assassin), Ji Indur Dawndeath, Al-Pharazon the Golden, Baldor the 
+Hapless, The Lernaean Hydra, The Minotaur of Crete, Saruman of Many Colors, 
+Thuringwethil (Messenger of Morgoth), The (Left and Right) Silent Watchers, 
+Glaurung (Father of Dragons), Khamul (the Black Easterling), The Lord of the 
+Shadow Host, The Witch-King of Angmar, Ancalagon the Black, Vecna (The 
+Emperor Lich).
+
+The Dark Fairy City (replaces/ combined with the Nightmare plane)
+  "Grotesque carvings and the sounds of sadistic chuckling let you know that you 
+have found a dark fairy city of nightmares.."
+	Inhabitants: dark fairies, witches, beholders, various undead (not all 
+the same types as in the haunted castle), and other scary / nightmare-themed monsters.
+	Uniques: The Wicked Witch of the West, Draedor (the Imp), Bel-Shamharoth
+the Sender of Eight, Eol the dark elf smith, Hoarmurath of Dir, The Phantom of 
+Eilenel.
+
+The Domain of the Grepse
+  "A silver mist hangs in the air here; you sense that you have entered the domain 
+of the grepse."
+	Inhabitants: confusion dragons, all types of silver monsters (grepse), and
+a few others I thought were kindof appropriate.
+	Uniques: Khamul (the Black Easterling) -and I only put him there cause I 
+wanted to spread out the nine nazgul in different themes.
+
+The Hell Halls
+  "Extra shadows and demonic symbols line the walls. It's very hot in here.."
+	Inhabitants: mages, hellhounds, and all types of demons and devils.
+	Uniques: Draebor (the Imp), The Skeezix, The Cerberus, The Balrog of Moria, 
+Leviathon, Baphomet (the Goat of Mendes), Lungorthin (Balrog of White Fire), 
+Gothmog (the High Captain of the Balrogs).
+
+
+Selected Magic Item and Effect Spoilers:
+----------------------------------------
+
+Docile Dust Bunnies
+	Docile dust bunnies are cute and harmless, but they might make you sneeze.
+They are basically useless 'junk objects' which I'm not even sure why I added them.
+I will likely think up some somewhat obscure but interesting use for them at some
+point.
+
+Telekinesis (staff or spell)
+	Telekinesis allows you to pick up objects from a distance.  If your inventory
+is currently full, it will instead move the target object to the space at your feet. 
+The restriction on telekinesis is that the target object must be either in line of
+sight and/or within the range limit of the spell (usually about 9).  Only the thief
+and tourist classes get telekinesis as a spell.
+
+Teleport control
+	Rarely, you will find an item which gives teleport control (most often on
+a cursed item which also gives random teleporation).  Teleport control is risky 
+on such an item because you don't always succeed in controlling the teleporation.
+Odds of controlling teleportation with teleport control are based on your magic
+device skill and luck.  Also, the more you use the teleport control ability, the
+easier it gets for that character.
+
+Treasure Maps
+	Any unique monsters which are native to level 35 (1750') or deeper
+have a 6% chance to drop a treasure map.  Reading a treasure map makes it much
+more likely to find vault(s) on the next level you get to by going down stairs.  
+This will not help you find a vault when you get to another level by any other way 
+than going down stairs.  If a significant amount of time passes between reading the 
+map and going down stairs, you may forget the map and it will end up having no 
+effect.  This does not guarantee finding a vault, and it has no effect when your 
+new depth is less then level 5 (250').  The tourist class gets a spell in a dungeon 
+book which creates a treasure map.

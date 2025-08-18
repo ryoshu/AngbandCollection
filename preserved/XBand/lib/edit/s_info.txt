@@ -1,0 +1,503 @@
+# This file is used to initialize the "lib/raw/s_info.raw" file, which is
+# used to initialize the "soul type" information for the Angband game.
+
+# Do not modify this file unless you know exactly what you are doing,
+# unless you wish to risk possible system crashes and broken savefiles.
+
+# After modifying this file, delete the "lib/raw/s_info.raw" file.
+
+# === Understanding s_info.txt ===
+
+# N: serial number : name
+# C: max to-hit : max to-dam : max to-ac
+# F: level : flag | flag | etc
+
+# 'N' indicates the beginning of an entry. The serial number must
+# increase for each new item. The name is only for reference here,
+# and is not used in-game.
+
+# 'C' is for creation bonusses - maximum to-hit, to-dam, and to-ac.
+# A soul will provide the full bonus when it reaches maximum level.
+
+# 'F' is for flags.  The level indicates when the flags on that
+# line are learned by the soul. The flags themselves are fairly
+#  self-explanatory.
+
+N:0:Ants 'a'
+C:0:0:40
+F:1:SUST_CON
+
+N:1:Bats 'b'
+C:0:0:0
+F:0:SENSE | INFRA
+F:1:FEATHER
+
+N:2:Centipedes 'c'
+C:0:0:0
+F:0:SPEED
+F:1:SLOW_DIGEST
+
+N:3:Young dragons 'd'
+C:0:0:0
+F:0:STR
+F:1:FEATHER
+
+N:4:Floating eyes 'e'
+C:0:0:0
+F:0:SENSE | INFRA
+F:1:RES_BLIND
+F:2:SEE_INVIS
+
+N:5:Felines 'f'
+C:0:0:0
+F:0:STEALTH | INFRA
+F:1:FREE_ACT
+
+N:6:Golems 'g'
+C:0:0:40
+F:0:FREE_ACT | RES_FIRE
+F:1:RES_COLD
+F:2:RES_ELEC
+F:3:RES_ACID
+F:4:RES_POIS
+F:5:
+
+N:7:Humanoids 'h'
+C:0:0:0
+F:0:WIS
+F:1:SUST_WIS
+
+N:8:Icky things 'i'
+C:0:0:0
+F:0:TUNNEL
+F:1:REGEN
+
+N:9:Jellies 'j'
+C:0:0:0
+F:0:TUNNEL
+F:1:RES_FEAR
+
+N:10:Kobolds 'k'
+C:0:0:0
+F:0:DEX
+F:1:RES_POIS
+
+N:11:Aquatic creatures 'l'
+C:0:20:0
+F:1:LITE
+
+N:12:Molds 'm'
+C:0:0:0
+F:0:CON
+F:1:SUST_CON
+
+N:13:Nagas 'n'
+C:0:0:0
+F:0:STEALTH | FREE_ACT
+F:1:SUST_STR
+
+N:14:Orcs 'o'
+C:0:0:0
+F:0:STR
+F:1:RES_DARK
+
+N:15:People 'p'
+C:0:0:0
+F:0:INT
+F:1:SUST_INT
+
+N:16:Quadrapeds 'q'
+C:0:0:0
+F:0:CON
+F:1:SUST_CON
+F:2:SUST_STR
+F:3:SUST_DEX
+
+N:17:Rats 'r'
+C:0:0:0
+F:0:DEX
+F:1:SUST_DEX
+
+N:18:Skeletons 's'
+C:20:0:40
+F:1:SEE_INVIS
+F:2:RES_BLIND
+
+N:19:Townspeople 't'
+C:0:0:0
+F:0:CHR
+F:1:SUST_CHR
+
+N:20:Minor Demons 'u'
+C:0:0:0
+F:0:DEX | CHR
+F:1:RES_CONF
+F:2:RES_CHAOS
+
+N:21:Vorticies 'v'
+C:0:0:0
+F:0:SPEED | DEX
+F:1:FREE_ACT
+
+N:22:Worms 'w'
+C:20:0:0
+F:1:REGEN
+
+N:23:UNUSED 'x'
+C:0:0:0
+F:0:RES_LITE
+F:1:
+F:2:
+F:3:
+F:4:
+F:5:
+
+N:24:Yeeks 'y'
+C:20:0:0
+F:0:RES_ACID
+F:4:IM_ACID
+
+N:25:Zombies 'z'
+C:0:0:0
+F:0:CON
+F:1:REGEN
+F:2:SEE_INVIS
+
+N:26:Angels 'A'
+C:0:0:0
+F:0:WIS | CHR | SPEED | LITE
+F:1:RES_FEAR 
+F:2:RES_DARK
+
+N:27:Birds 'B'
+C:0:0:0
+F:0:WIS | SENSE
+F:1:FEATHER
+
+N:28:Canines 'C'
+C:0:0:0
+F:0:CON
+F:1:RES_FEAR
+
+N:29:Ancient Dragons 'D'
+C:0:0:0
+F:0:STR | SPEED
+F:1:FEATHER
+F:2:RES_FEAR
+
+N:30:Elementals 'E'
+C:20:0:0
+F:0:DEX
+F:1:FREE_ACT
+F:2:RES_BLIND
+
+N:31:Dragon Flies 'F'
+C:0:0:40
+F:0:SPEED
+F:1:FEATHER
+
+N:32:Ghosts 'G'
+C:0:0:0
+F:0:INT
+F:1:SEE_INVIS
+
+N:33:Hybrids 'H'
+C:0:20:0
+F:1:RES_CONF
+
+N:34:Insects 'I'
+C:0:0:0
+F:0:SPEED
+F:1:LITE
+
+N:35:Snakes 'J'
+C:0:0:0
+F:0:CHR
+F:1:FREE_ACT
+
+N:36:Killer Beetles 'K'
+C:0:20:40
+F:0:RES_CONF
+F:1:REGEN
+
+N:37:Liches 'L'
+C:0:0:0
+F:0:SPEED | WIS
+F:1:TELEPATHY
+
+N:38:Hydras 'M'
+C:0:0:0
+F:0:BLOWS | AGGRAVATE | NO_TELE
+
+N:39:Modrons 'N'
+C:0:0:40
+F:0:SPEED
+
+N:40:Ogres 'O'
+C:0:0:0
+F:0:WIS | STR
+F:1:SUST_STR
+F:2:RES_SHARDS
+
+N:41:Giants 'P'
+C:0:0:0
+F:0:CON | INT
+F:1:SUST_CON
+F:2:RES_SOUND
+
+N:42:Qulthyugs 'Q'
+C:0:0:40
+F:0:INT | WIS
+F:1:RES_NEXUS
+F:2:RES_CHAOS
+
+N:43:Reptiles 'R'
+C:0:0:0
+F:0:STR
+F:1:SUST_STR
+
+N:44:Spiders 'S'
+C:0:0:40
+F:1:SUST_DEX
+
+N:45:Trolls 'T'
+C:0:0:0
+F:0:CON | TUNNEL
+F:1:REGEN
+F:2:RES_DARK
+
+N:46:Greater Demons 'U'
+C:0:0:0
+F:0:STR | CON
+F:1:RES_CONF
+F:2:RES_CHAOS
+
+N:47:Vampires 'V'
+C:0:0:0
+F:0:INT | CHR | SPEED
+F:1:SEE_INVIS
+F:2:FREE_ACT
+
+N:48:Wraiths 'W'
+C:0:0:0
+F:0:SPEED | CON
+F:1:SUST_INT | SUST_WIS
+F:2:SUST_DEX | SUST_CHR
+F:3:SUST_CON | SUST_STR
+
+N:49:Xorn 'X'
+C:20:20:40
+F:0:TUNNEL
+F:1:RES_BLIND
+
+N:50:Yetis 'Y'
+C:0:20:0
+F:0:STR | RES_FEAR | RES_COLD
+F:4:IM_COLD
+
+N:51:Zepyhr Hounds 'Z'
+C:20:0:0
+F:0:SPEED
+F:1:SUST_DEX
+
+N:52:MISC
+C:0:0:0
+F:0:TELEPORT
+F:1:RES_CONF
+F:2:RES_NEXUS
+F:3:RES_DISEN
+F:4:RES_CHAOS
+
+N:53:Fire
+C:0:0:0
+F:0:RES_FIRE
+F:4:SH_FIRE | LITE
+F:5:IM_FIRE
+
+N:54:Cold
+C:0:0:0
+F:0:RES_COLD
+F:4:SH_COLD
+F:5:IM_COLD
+
+N:55:Acid
+C:0:0:0
+F:0:RES_ACID
+F:4:SH_ACID
+F:5:IM_ACID
+
+N:56:Elec
+C:0:0:0
+F:0:RES_ELEC
+F:4:SH_ELEC | LITE
+F:5:IM_ELEC
+
+N:57:Poison
+C:0:0:0
+F:0:RES_POIS
+F:5:IM_POIS
+
+N:58:Light
+C:0:0:0
+F:0:RES_LITE | LITE
+
+N:59:Dark
+C:0:0:0
+F:0:RES_DARK | STEALTH 
+
+N:60:Multihued
+C:0:0:0
+F:0:RES_FIRE
+F:1:RES_COLD
+F:2:RES_ACID
+F:3:RES_ELEC
+F:4:RES_POIS
+
+N:61:Confusion
+C:0:0:0
+F:0:RES_CONF
+
+N:62:Sound
+C:0:0:0
+F:0:RES_SOUND
+
+N:63:Nexus
+C:0:0:0
+F:0:RES_NEXUS
+
+N:64:Shards
+C:0:0:0
+F:0:RES_SHARDS
+
+N:65:Disenchant
+C:0:0:0
+F:0:RES_DISEN
+
+N:66:Nether
+C:0:0:0
+F:0:RES_NETHER
+F:1:HOLD_LIFE
+F:2:RES_COLD
+F:3:RES_DARK
+
+N:67:Chaos
+C:0:0:0
+F:0:RES_CHAOS
+F:1:RES_CONF
+F:3:RES_DISEN
+
+N:68:Time
+F:0:SUST_CHR | SUST_DEX
+F:1:SUST_INT | SUST_STR
+F:2:SUST_WIS | SUST_CON
+F:3:HOLD_LIFE
+
+N:69:Inertia
+F:0:FREE_ACT
+
+N:70:Gravity
+F:0:FREE_ACT
+F:1:RES_NEXUS
+F:2:RES_SOUND
+
+N:71:Plasma
+F:0:RES_FIRE
+F:1:RES_SOUND
+
+N:72:Force
+F:0:RES_SOUND
+F:1:FREE_ACT
+
+N:73:Mana
+F:0:SUST_CHR
+F:1:SUST_INT
+F:2:SUST_WIS
+
+N:74:Nuclear Waste
+F:0:RES_POIS
+F:1:RES_CHAOS
+
+N:75:Disintegration
+F:0:SUST_DEX
+F:1:SUST_STR
+F:2:SUST_CON
+
+N:76:Blindness
+F:0:RES_BLIND
+
+N:77:Fear
+F:0:RES_FEAR
+
+N:78:Drain Strength
+F:0:SUST_STR
+
+N:79:Drain Constitution
+F:0:SUST_CON
+
+N:80:Drain Dexterity
+F:0:SUST_DEX
+
+N:81:Drain Wisdom
+F:0:SUST_WIS
+
+N:82:Drain Intelligence
+F:0:SUST_INT
+
+N:83:Drain Charisma
+F:0:SUST_CHR
+
+N:84:Drain All
+F:0:SUST_CHR
+F:1:SUST_DEX
+F:2:SUST_INT
+F:3:SUST_STR
+F:4:SUST_WIS
+F:5:SUST_CON
+
+N:85:Eat Food
+F:0:SLOW_DIGEST
+
+N:86:Drain EXP
+F:0:HOLD_LIFE
+
+N:87:Impact
+F:0:IMPACT
+
+N:88:Paralysis
+F:0:FREE_ACT
+
+N:89:Extra Undead
+F:0:SEE_INVIS
+
+N:90:Extra Demon
+F:0:RES_CHAOS
+
+N:91:Extra Giant
+F:0:RES_SOUND
+
+N:92:Extra Orc
+F:0:RES_DARK
+
+N:93:Extra Troll
+F:0:REGEN
+
+N:94:Extra Dragon
+F:0:FEATHER
+
+N:95:Shining
+F:0:LITE
+F:1:RES_LITE
+F:2:RES_DARK
+
+N:96:Law
+F:0:RES_SOUND
+F:1:RES_SHARDS
+
+N:97:Balance
+F:0:RES_SOUND
+F:1:RES_CHAOS
+F:2:RES_SHARDS
+F:3:RES_DISEN
+
+N:100: Dummy
+C:0:0:0

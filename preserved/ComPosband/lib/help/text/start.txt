@@ -1,0 +1,25 @@
+Welcome to the Online Help System
+
+    Getting Started:
+    [a] General Information
+    [b] Creating a Character    
+    [c] Frequently Asked Questions
+
+    Core Concepts:
+    [d] Races, Classes and Personalities
+    [e] The Town and Wilderness
+    [f] The Dungeon
+    [g] Objects
+    [h] Monsters and Pets
+    [i] Attacking and Weapons
+    [j] Defending and Armor
+    [k] Magic Realms
+    [l] Commands
+
+    Advanced Topics:
+    [m] Options
+    [n] User Preference Files
+    [o] The Mogaminator
+
+    (?) Help System Commands
+

@@ -1,0 +1,396 @@
+=== XAngband Magic System ===
+
+XAngband uses a "realms of magic" system. This magic system, as 
+implemented in XAngband, consists of four magic realms: Sorcery, 
+Magic, Life and Combat as well as the elemental realms of Fire, 
+Ice, Sky, Sea, Dark, Chaos, Earth and Death.
+
+In general, Life is defensive although it offers some good attacking
+spells against evil monsters, Sorcery has good utility spells while
+Magic is strong in defensive capability. The Combat realm, as you'd 
+expect, supports fighters by enhancing them, their weapons and armor.
+
+In XAngband, spellcasting classes can select a realm from those 
+available. Realms available depend on class (with not all classes 
+having a choice of realms). Although spells are split among different 
+realms there are also ultra powerful rare high-level spells in many 
+realms.
+
+While any given realm of magic typically includes spells of a certain
+type or theme, each realm should have enough high-level spells to
+remain effective throughout the later stages of the game. The main
+difference lies in how they support your playing strategy. For example,
+some offer attacking spells which let you directly hurt your enemy,
+while others offer spells for protection, healing and gathering
+information.
+
+In XAngband, there are 3 spellbooks per realm. Two of them can be bought
+in the town stores and the remaining one must be found in the dungeon
+(although they may occasionally appear in the Black Market). 
+
+All realms have 30 spells, and each book contains 10 spells.
+
+
+***** <ClassSpellAbil>
+=== Class Spell Ability ===
+
+Warriors
+     Warriors cast no spells. They hate magic. In fact, they even gain
+     experience for destroying high level spellbooks.
+
+Mages
+     Mages can freely choose between Sorcery and Hex when a character 
+     is created:
+
+Priests
+     Priests have Life magic as their primary realm. When learning
+     spells, priests cannot voluntarily decide which spells to study:
+     they are rewarded with new prayers by their patron deities, with
+     no money-back satisfaction guarantee. 
+
+Rangers
+     Rangers may choose between Life magic and Combat magic. However 
+     they are slow to learn spells and unable to memorize some high 
+     level spells.
+
+Paladins
+     Paladins are trained in Life magic (only), and they despise the
+     other realms of magic (which they regard as the Devil's work).
+     Like priests, they cannot select which prayers to learn but are
+     rewarded with new prayers by their deities. They can learn all
+     Life spells, but not as fast as priests. 
+
+Warrior-Mages
+     Warrior-mages begin the game with either Sorcery or Combat magic.
+     Although they do not gain new spells as fast as regular mages, 
+     they will eventually learn every spell in their realm, thus making 
+     a very competitive choice for players who appreciate magic.
+
+Mindcrafter
+     Although the powers of a Mindcrafter may seem like magic, this is
+     not -- strictly speaking -- the case. They are mental powers,
+     independent of the ordinary sources of magic. Consequently,
+     Mindcrafters are not interested in 'magic' and learn no spells.
+
+Archer
+     Archers cannot use magic.  They are more interested in 
+     marskmanship.
+
+Archaeologist
+     Archaeologists are trained in Sorcery, although they will not 
+     progress in magic as fast as mages can.
+
+Elementalists
+     Elementalists choose their elemental realm on character creation.
+     They gain fixed powers centred on their element as they increase
+     level.  The elemental realms are Fire, Ice, Sky, Sea, Dark, Chaos, 
+     Earth and Death.
+
+***** <MagicRealms>
+=== The Realms of Magic ===
+
+Life
+     Life is magic is 'good' magic; it relies mostly on healing and
+     protective spells. It does have a few attack spells as well, but
+     these are mostly used for harming and banishing foul minions of
+     evil. It is rumored that there is a secret high level prayer which
+     will make the priest (or paladin) completely impervious to all
+     forms of hostile action.
+
+Sorcery
+     Sorcery is a `meta` realm, including enchantment and general
+     spells. It provides superb protection spells (such as Teleport
+     spells for fleeing and even Globe of Invulnerability), spells to
+     enhance your odds in combat (like Haste Self) and, most 
+     importantly, a vast selection of spells for gathering 
+     information. In the rare books, there are spells with which you 
+     can enchant your items or turn unwanted items to gold. 
+
+Hex
+     Hex is the only realm outside of Life to include healing 
+     spells.  It is also strong in defensive and enhancing spells,
+     as well as spells to inconvenience monsters.  However it has 
+     few spells that directly damage the enemy.
+    
+Combat
+     The Combat realm includes much magic to enhance melee and ranged 
+     combat.  It seems there are spells in the higher levels that are
+     cast on weapons and armor.  It also includes a few attack magics.
+     With this realm you can get great ability to attack, but for 
+     detection and identify you'll have no choice but to rely on
+     magic items.
+
+
+***** <CastingSpells>
+=== On Casting Spells ... ===
+
+Players who select spellcasting characters may notice a few unusual
+phenomena during the course of the game. Here's a few helps and
+hints on what may be happening.
+
+--- Armor and Spell Casting ---
+
+All spellcasting classes are penalized for wielding armor above a
+certain total combined weight. The threshold varies between 30lbs
+for a mage and 40lbs for a paladin. Typically, the more reliant on
+spells/prayers your class is deemed to be, the lower your weight
+allowance. If you exceed your weight limit, your mana will drop.
+This penalty is fairly stiff for low level characters but can
+generally be ignored by high level ones.
+
+--- Mage-Types and Gloves ---
+
+Spellcasters who use INT as the stat determining their spellcasting
+ability will be penalized heavily for wielding armor on their
+hands. The exception to this is that wielding gloves, gauntlets or
+cesti which boost DEX or which grant Free Action will result in no
+penalty. The rationale behind this is that the hands are needed to
+perform intricate gestures that accompany the casting of the spell
+and anything encumbering the hands would interfere with this. The
+priest-type classes (priest, paladin and monk) do not have the same
+restrictions as they are viewed as invoking the power of their
+deity directly through prayer.
+
+--- Casting Spells With Insufficient Mana ---
+
+Occasionally, you may try (either by accident or in desperation) to
+cast a spell when you have insufficient mana to do so. In these
+circumstances you will be told by the game that you do not have
+enough mana to cast the spell and then asked if you want to anyway.
+Casting the spell under these conditions has a drastically reduced
+chance of success and may also result in your constitution being
+damaged. It may also cause you to faint from the effort which will
+effectively paralyze you for several turns (even with free action).
+The CON drain and the paralyzation may happen regardless of whether
+the casting was successful or not.
+
+--- Spell Durations ---
+
+Some spells such as Haste-Self or Resistance grant an effect which
+wears off after a certain period of time. With very few exceptions,
+multiple castings of such spells are not cumulative in terms of the
+duration of the spell. In other words, casting a spell which has a
+duration of 20 turns three times will not result in a duration of
+60 turns. Typically, the subsequent castings will add only a small
+amount to the total duration.
+
+
+***** <SpellTypes>
+=== Spell Types ===
+
+--- Bolts and Beams ---
+
+A bolt spell is aimed in a direction or at a target but will hit
+the first monster or obstruction in its targeted direction. This
+may or may not be the intended target. Occasionally, you may note
+that your bolt spell hits multiple targets along the line of fire.
+This is because some bolt spells are granted a chance of 'beaming'
+which may be either fixed or level-dependent. A beam will hit every
+target within range along a 'straight' line in the direction in
+which it was aimed.
+
+--- Balls ---
+
+There are two things to remember about ball spells. Firstly, unlike
+bolt spells, they can be aimed at a specific target which allows
+you to target a specific monster as opposed to the first one in the
+direction you are aiming. Secondly, they have a radius (which
+varies from spell to spell). A radius value of one or more will
+result in the spell affecting monsters (and possibly objects, etc)
+around the target in addition to the target itself.
+
+--- Line-of-Sight ---
+
+Line-of-sight spells affect all monsters that that are currently
+in sight of your character. This includes monsters that may not
+currently be visible due to darkness but would be if it was light.
+
+--- Area ---
+
+Area spells affect an area around the player. The size of the area
+can vary considerably. For example, Light Area lights a single room
+while Detect Traps affects a map panel and Genocide the entire
+level.
+
+***** <Pets>
+=== Summoned/Charmed Creatures ===
+
+A friendly creature can be a mixed blessing. At first sight, one
+might think that they can make the game much easier. It is of
+course highly satisfying to send your pet Hell Wyrm into a Troll
+pit and wait outside listening for the howls of agony and terror,
+the sounds of guts splattering, bones crunching and so on. But one
+should not expect to gain any experience for such a combat: you
+will only gain experience for creatures to whom you deliver the
+death blow yourself. New experiences require hazards, nobody gains
+experience by sitting home watching the TV.
+
+Secondly, friendly monsters are often so eager to destroy your
+opponents they may forget all about you, and you get trampled under
+their feet as they charge at your foe. They are not as smart as the
+regular monsters, since they have given up their free will to serve
+you. So don't stand next to that Snaga when your pet Cyberdemon
+brandishes its rocket launcher! Pets are also rather easily
+irritable.
+
+Once you do something which causes the slightest discomfort to
+them, they will revert to their normal behavior and consider you
+their main target. This is something to think about before lighting
+up a room if you have pet orcs. Needless to say, nobody wants to be
+your friend if you are aggravating them.
+
+Finally, it takes a lot of mental energy to maintain the control
+over the charmed monsters. The first monster or the first few are
+'free', but after that maintaining the control will start taxing
+your mana regain rate. The higher the sum of the levels of your
+pets the less mana you will be able to regain. Keep this in mind if
+you have a pet which can summon or otherwise produce more pets...
+
+
+***** <Hints>
+=== Hints and Tips ===
+
+If you miss the `old` magic user, try picking Sorcery magic
+to get the most commonly used mage spells early on (Magic Missile,
+Detect Monsters + Traps + etc, Identify).
+
+***** <SpellLists>
+=== Spell Lists ===
+
+
+LIFE: Standard Spellbooks
+
+Book of Common Prayer
+     1. Detect Evil
+     2. Cure Light Wounds
+     3. Bless
+     4. Remove Fear
+     5. Call Light
+     6. Detect Doors and Traps
+     7. Cure Medium Wounds
+     8. Satisfy Hunger
+     9. Holy Light
+    10. Remove Curse
+
+High Mass
+     1. Cure Critical Wounds
+     2. Holy Orb
+     3. Foresight
+     4. Resistance Heat & Cold
+     5. Reforming
+     6. Protection from Evil
+     7. Healing
+     8. Banish Evil
+     9. Star Burst
+    10. Glyph of Warding
+
+LIFE: Rare Spellbooks
+
+Godly Insights
+     This book has the most powerful prayers of protection and healing,
+     as well as prayers of holy visions.
+
+SORCERY: Standard Spellbooks
+
+Beginner's Handbook
+     1. Magic Missile
+     2. Detect Monsters
+     3. Phase Door
+     4. Detect Doors and Traps
+     5. Light Area
+     6. Trap & Door Destruction
+     7. Teleport
+     8. Satisfy Hunger
+     9. Mana Burst
+    10. Word of Recall
+
+Master Sorcerer's Handbook
+     1. Stone to Mud
+     2. Recharging
+     3. Magic Mapping
+     4. Identify
+     5. Sense Minds
+     6. Mana Bolt
+     7. Haste Self
+     8. Teleport Away
+     9. Magic Rocket
+    10. Genocide
+
+SORCERY: Rare Spellbooks
+
+Tome of Destruction
+     More powerful enchantments against monsters, spells to enchant
+     items, and the Globe of Invulnerability.
+
+
+HEX: Standard Spellbooks
+
+Handbook of Hexing
+     1. Cure light wounds
+     2. Evily blessing
+     3. Word of inertia
+     4. Demonic aura
+     5. Stinking mist
+     6. Extra might
+     7. Curse weapon
+     8. Evil detection
+     9. Dark resistance
+    10. Ice armor
+
+Tome of Heavy Curses
+     1. Cure serious wounds
+     2. Call back monster
+     3. Inhail potion
+     4. Vampiric mist
+     5. Swords to runeswords
+     6. Nether resistance
+     7. Touch of confusion
+     8. Building up
+     9. Vanish monsters
+    10. Anti teleport barrier
+
+HEX: Rare Spellbooks
+
+Black Channels
+     A flexible selection of powerful spells 
+     of all types.
+
+
+COMBAT: Standard Spellbooks
+
+Trainee's Handbook
+     1. Regeneration
+     2. 3way Attack
+     3. Heroism
+     4. Jumping
+     5. Resist Environment
+     6. Lader Eye
+     7. Charging
+     8. Force Bolt
+     9. Stone Skin
+    10. Remove Curse
+
+Veterans's Handbook
+     1. Berserk
+     2. Earthquake
+     3. Jump and Attack
+     4. Resistance True
+     5. Aura Arrow
+     6. Fast Slicing
+     7. Haste Self
+     8. Whirlwind Attack
+     9. Inertia Beam
+    10. Magical Armour
+
+COMBAT: Rare Spellbooks
+
+Invincible Techniques
+      An impressive array of spells to magically enchance attacks 
+      and defense.
+
+--
+Original   : (??)
+Updated    : (??)
+Updated    : Zangband DevTeam
+Updated    : XAngband DevTeam
+Last update: March 2, 2009

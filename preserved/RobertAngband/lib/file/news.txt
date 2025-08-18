@@ -1,0 +1,17 @@
+
+
+              ***************************************************
+              **   Angband 2.8.3h   **   The Pits of Angband   **
+              ***************************************************
+
+           Based on Moria:   Copyright (c) 1985 Robert Alan Koeneke
+               and Umoria:   Copyright (c) 1989 James E. Wilson
+
+                       Angband 2.0 - 2.4 - 2.6.2 by:
+                   Alex Cutler, Andy Astrand, Sean Marsh,
+                 Geoff Hill, Charles Teague, Charles Swiger
+               Angband 2.8.3:  Copyright (c) 1997 Ben Harrison
+
+          Enhanced version by : Robert Ruehlmann < rr9@angband.org >
+
+Visit "Thangorodrim - The Angband Page" at "http://thangorodrim.angband.org/"

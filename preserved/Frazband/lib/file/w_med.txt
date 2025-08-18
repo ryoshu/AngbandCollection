@@ -1,0 +1,108 @@
+N:*:Default
+106
+'Skull Smasher'
+'Mauler'
+of Gideon
+'Inquisitor'
+of Bathory
+'Executioner'
+'Undertaker'
+of the Beast
+'Blood'
+'Peacemaker'
+'Liberator'
+'Dragon Claw'
+'Blue Steele'
+'Tempest'
+'Fury'
+'Disruptor'
+'Grimtooth'
+'Serpent's Tongue'
+'Mirrorbright'
+'Hildeleoma'
+'Anvil'
+of Battery
+'Howler'
+'Roarer'
+'Thunderer'
+'Marauder'
+'Possessor'
+'Harvester'
+'Harvester of Sorrow'
+'Breaker'
+'Gravedigger'
+'Flamebain'
+of Lyf
+of Rauli
+'Trooper'
+'Killer'
+'Chaser'
+'Predator'
+'Rampage'
+'Photon Storm'
+of Damocles
+'Vendetta'
+'Retaliator'
+'Deathtrack'
+of Peenemuende
+'Witchfire'
+of Midnight
+'Assassin'
+'Duellist'
+'Pandemonium'
+'Bloodrain'
+of Hatred
+of Pak
+of Sinanju
+'Slammer'
+of Brute Force
+of Brutality
+of Fatality
+'Delta'
+of Diamond
+of Osric
+of Dara
+of Finndo
+of Gihoagas
+of Beesadrig
+of Nitedo
+of Nakru
+of Serig
+of Owoxoikos
+of Renee
+of Tebu
+of Stakak
+of Snosta
+of Sappo
+of Vanahum
+of Citilla
+of Gusneef
+of Praireen
+of the Nodenai
+of Hihebrah
+of Nostapew
+of Plokara
+of Sogrue
+of Isatagota
+of Suwaxoib
+'Drunada'
+'Povasci'
+'Gavecrek'
+'Igeap'
+'Sapibakib'
+'Udaito'
+'Norde'
+'Tilkloh'
+'Firoodad'
+'Iruk'
+'Arordes'
+'Atet'
+'Eamoonee'
+'Soanozu'
+'Lenklurla'
+'Lenzehain'
+'Elaprevus'
+'Helse'
+'Eretesowu'
+'Isad'
+'Opiobue'

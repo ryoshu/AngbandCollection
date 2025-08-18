@@ -1,0 +1,25 @@
+             -- General Information --
+     
+Please choose one of the following online help files:
+
+    (1) Introduction               (welcome.txt)
+    (2) A Simple Tutorial          (tutorial.txt)
+    (3) Angband History            (version.txt)
+    (4) Using the Online Help      (usehelp.txt)
+
+
+
+
+
+
+
+
+
+ ?  : return to previous menu
+ ESC: leave help
+
+***** [1] welcome.txt
+***** [2] tutorial.txt
+***** [3] version.txt
+***** [4] usehelp.txt
+

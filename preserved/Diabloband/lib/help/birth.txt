@@ -1,0 +1,504 @@
+=== Creating a Character ===
+
+Angband is a roleplaying game, in which you, the player, control a character
+in the world of Angband.  Perhaps the most important thing you control is the
+birth of your character, in which you choose or allow to be chosen various
+attributes that will affect the future life of your character.
+
+Character creation, or birth, is controlled through a variety of choices
+as to constraints on the type of character you wish to play, followed by
+a series of random calculations to generate ("roll up") a random character
+matching the appropriate constraints.
+
+Once your character has been generated, you will be given the choice to
+generate a new character obeying the same constraints, and once you have
+generated more than one character, you can switch back and forth between
+the two most recent characters, until you are presented with a personality
+that you feel comfortable with.
+
+You may start the entire process over at any time.
+
+Once you have accepted a character you will asked to provide a name for the
+character.  In general, the actual choice of a name is not important, but do
+keep in mind that it may have some effect on the game itself.  For example,
+on some machines, the chatacter name determines the filename that will be
+used to save the character to disk.  On others, the character name specifies
+special "pref" files.  And the character name is used on the high score list.
+
+
+=== Character Characteristics ===
+
+Each character has a class, that is chosen before the character is generated,
+and which will stay fixed for the entire life of that character.  Class has
+many effects, which will be mentioned as they come up.
+
+Each character has a few secondary attributes, height and weight, which are
+randomly determined, but which are affected by the sex of the character.
+
+Each character also has six primary "stats", strength, intelligence, wisdom,
+dexterity, constitution, and charisma, which modify the abilities of the
+character in a variety of ways.  
+Every stat has a numerical value, ranging from a minimum of 3, up to a normal
+maximum of 18, and even higher, into the "percentile" range, represented as
+"18/01" through "18/100": this is the maximum that can be achieved
+intrinsically, for any given stat. If the character is started with the option
+of "maximize effect of race/class bonuses" (from the Birth Options menu, and
+this is set as "on" by default), the maximum figure of 18/100 is further
+adjusted by the adjustments for class.  
+Equipment may add bonuses or penalties to this, and raise the player's stats
+beyond the normal intrinsic limits: the stats may go as high as they like, with
+the right choice of equipment, but the effects of having higher stats largely
+stop at 18/200.
+
+Each character also has several primary "skills", disarming, magic devices,
+saving throws, stealth, searching ability, searching frequency, fighting skill,
+and shooting skill, which are derived from the character's class, level, stats,
+and current equipment.  These skills have rather obvious effects, but will be
+described more completely below.
+
+Each character has experience, which increases as the character becomes more
+experienced, and a level, which is based on experience, and also on class.  As
+the experience rises, so does the level, and as the level rises, certain other
+abilities and characteristics rise as well.  Deep down inside, the real
+objective of the game is to increase your experience, and certain other
+characteristics, and also to collect useful items, to give you a decent chance
+against Morgoth.  Certain monsters can "drain" your experience, and thus your
+level, which will cause you to lose all of the effects of the higher level.
+Luckily, you can restore drained experience through magical means, or by simply
+regaining the experience all over again.
+
+Each character has some gold, which can be used to buy items from the shops
+in the town, and which can be obtained not only from selling items to the
+shops, but also by taking it from dead monsters and by finding it hidden in
+the dungeon.  Each character starts out with some gold, the amount of which
+is based on the characters social class (higher is better), charisma (higher
+is better), and other stats (less powerful characters start with more gold).  
+Each character also starts out with a few useful items, which may be kept, 
+or sold to a shop-keeper for more gold. However, especially valuable items
+will never sell for the full price, as each shopkeeper has a maximum that 
+he is prepared to pay for any item. The more generous shopkeepers may buy 
+your items for up to 30,000 gold pieces: but some are really stingy, and 
+will pay no more than 5,000.
+
+Each character has an armor class, representing how well the character can
+avoid damage.  The armor class is affected by dexterity and the equipment. 
+Armor class on equipment is always denoted in [square brackets], usually as 
+a figure of [X,+Y] where X is the intrinsic AC of the armor in question, and 
+Y is the magical bonus to armor class provided by that item.
+
+Each character has hit points, representing how much damage the character can
+sustain before he dies.  The maximum number of hit points is derived from your
+race, class, level, and constitution, and you can never have more hit points
+than the maximum.  Hit points may be regained by a variety of means.
+
+Each character has spell points, or mana, which represents how many spells
+(or prayers) a character can cast (or pray).  The maximum number of spell
+points is derived from your class, level, and intelligence (for spells) or
+wisdom (for prayers), and you can never have more spell points than the
+maximum.  Spell points may be regained by a variety of means.
+
+
+=== Classes and Skills ===
+ 
+ 
+          Skills
+            Passive skill
+              These skills provide a bonus which continuously affects the
+              character. They cannot be activated, and are not shown in the 'm'
+              skill list.
+            Attack skill
+              An attack must be targetted at an adjacent monster, hits once,
+              and uses the character's second weapon only if there is no weapon
+              in the normal weapon slot.
+            Spell
+              Spells use mana to cast, and can have many different effects.
+            Aura
+              Auras affect the character while they are active. They can be
+              activated and de-activated by choosing them from the 'm' skill
+              list. An aura may have a mana cost per turn (and it ends when the
+              character does not have enough mana left to continue it), or a
+              mana cost each time it does something, or no cost at all. Only
+              one aura can be active at any time, and selecting a different
+              aura ends the current aura. Changing auras does not take any
+              time.
+            Charge up skill
+              Attacking with a charge-up skill active adds bouses and different
+              effects to finishing moves, but costs mana, and stops when the
+              character has accumulated 3 'charges' (the maximum) of the type
+              which the skill provides. Studying a charge-up skill increases
+              the chance that the character can hold on to these 'charges' for
+              longer, as well as increasing their effect on finishing moves.
+              Changing charge-up skills does not take any time.
+              Attacking normally with no charge-up skills active counts as a
+              finishing move, albeit with no added bonuses which finishing move
+              skills provide.
+            Finishing move
+              These are attack skills (see Attack skill above) available to the
+              assasin, which have various effects and also benefit from
+              charge-up skills.
+              A normal attack made with no charge-up skills active is
+              considered to be a finishing move, and therefore also benefits
+              from charge-up skills.
+            Shapeshift
+              Shapeshifting always takes mana to activate, ends after a certain
+              period of time (this time can be increased by Druids with the
+              Lycanthropy skill), and cannot be de-activated except by
+              activating a different shapeshift.
+              Some druid skills require a certain shape to be worn before they
+              can be used.
+
+          Barbarian
+            Barbarians are able to wield any two (non-claw type) weapons at
+            once.
+
+            Sword/Polearm/Hafted/Axe Mastery (passive, level 1)
+               These skills give a bonus to hit and damage per skill level,
+               with the relevant weapons.
+            Double Swing (attack, level 6)
+                Quickly attacks once with each weapon (two must be wielded to
+                use this skill) with a to-hit bonus.
+            Stun (attack, level 6)
+               Attack a monster and if attack hits, stun the monster, but do
+               less damage than normal. Stun duration and damage increase as
+               this skill is studied. Uses second weapon only if one exists and
+               there is nothing in first weapon slot.
+            Berserk (spell, level 6)
+               Enter a berserk rage which grants bonuses to hit and damage but
+               penalizes AC. Duration and effectiveness increase as this skill
+               is studied.
+            Increased Speed (passive, level 24)
+               Grants the Barbarian a bonus to speed.
+            Frenzy (aura, level 24, requires Double Swing and Increased Speed)
+               While this aura is active, successful hits may add to movement
+               and attack speed while costing a small amount of mana. This
+               skill is similar to an Assasin's charge-up skill, but it can
+               grant up to 5 charges, and the bonuses gained from it
+               continuously affect the character, but decrease over time.
+          Sorceress
+             Warmth (passive, level 1, requires at least one spell skill)
+                Slowly absorb mana from surroundings.
+             Zap (spell, level 1)
+                A bolt of electricity.
+             Firebolt (spell, level 1)
+                A bolt of fire.
+             Frostbolt (spell, level 1)
+                A bolt of frost.
+             Teleport (spell, level 6)
+                Teleport to a random location, range increases and mana cost
+                goes down as this skill is studied.
+             Psychometry (spell, level 6)
+                Learn about an item, gaining more information as this skill is
+                studied, up to full identification at skill level 20.
+             Lightning (spell, level 12, rquires Zap)
+                A beam of electricity.
+             Fireball (spell, level 12, requires Firebolt)
+                A roaring ball of flames.
+             Glacial Spike (spell, level 12, requires Frostbolt)
+                A bolt of ice and a ball of frost, cast simultaneously.
+             Thunderstorm (aura, level 24, requires Lightning)
+                While this aura is active, the sorceress is calling down
+                lightning bolts to strike one or more randomly chosen monsters
+                each turn (which must be in line-of-sight). It ends
+                automatically when the sorceress runs out of mana.
+             Blizzard (aura, level 24, requires Glacial Spike)
+                While this aura is active, the sorceress is calling down a hail
+                of cold and ice, which has a chance to strike each monster in
+                line-of-sight with either cold or ice. It ends automatically
+                when the sorceress runs out of mana.
+             Fire Mastery (passive, level 30, requires Firebolt)
+                Boosts the damage of sorceress spells that do fire damage.
+             Lightning Mastery (passive, level 30, requires Zap)
+                Boosts the damage of sorceress spells that do electrical damage.
+
+          Druid
+             Unarmed Combat (passive, level 1)
+                Can attack monsters effectively without a weapon. Damage done
+                and attacks per turn are increased at this skill is studied,
+                and the druid also gets a damage bonus from shapeshifts with
+                claws unless they are wearing gloves. Wearing a shield reduces
+                the number of times an attack can be made each turn.
+             Sunray (spell, level 1)
+                Lights the nearby area (radius increases as skill is studied)
+                and fires a ray of light, does damage to light-sensitive
+                monsters.
+             Lycanthropy (passive, level 1, requires at least one shapeshift)
+                This skill increases the duration of any shapeshift the druid
+                may use, and the amount of hitpoints the druid has while
+                shifted.
+             Werewolf (shapeshift, level 1)
+                Grants bonuses to damage and speed (both movement and attack
+                speed).
+             Werebear (shapeshift, level 1)
+                Grants bonuses to damage and AC.
+             Maul (attack, level 6, requires Werebear)
+                Attack a monster with a damaging and possibly stunning
+                attack. Does not automatically hit. Damage increases as this
+                skill is studied. This skill can only be used while in werebear
+                form.
+             Feral Rage (spell, level 12, requires Werewolf)
+                Enter a wild rage which grants bonuses to hit and damage but
+                penalizes AC. Duration and effectiveenss increase as this skill
+                is studied. The rage can only be used while in werewolf form,
+                and ends as soon as werewolf form is left.
+             Shockwave (spell, level 24, requires Werebear)
+                Causes a stunning earthquake. Radius of the earthquake, number
+                of squares effected within that radius, and duration of
+                stunning increase as this skill is studied. This skill can only
+                be used while in Werebear form.
+ 
+          Assasin
+             Assasins are able to wield two claw type weapons at once. These
+             include katars, cesti, wrist spikes and blades, and blade talons.
+
+             Claw Mastery (passive, level 1)
+               This skill gives a bonus to hit and damage per skill level, with
+               claw type weapons.
+             Dodging (passive, level 1)
+                Gives an AC bonus per level, reduced by weight of armour
+                (especailly shields) and equipment.
+             Tiger Strike (charge up, level 1)
+                Attacks made while this skill is active add damage to finishing
+                moves.
+             Dragon Kick (finishing move, level 1)
+                Kicks target a number of times, but stops as soon as the
+                assasin misses. Each kick after the first is slightly less
+                powerful. Studing this skill allows more kicks and increases
+                the potential damage of each kick.
+             Dragon Claws (finishing move, level 6)
+                Quickly attacks once with each claw weapon (two must be wielded
+                to use this skill) with a to-hit bonus.
+             Burst of Speed (spell, level 6)
+                Increases movement and attack speed for a duration which
+                increases as this skill is studied.
+             Cobra Strike (charge up, level 12)
+                Attacks made while this skill is active add life stealing to
+                finishing moves.
+             Assasination (passive, level 12)
+                Grants a chance to do triple normal damage to living non-giant
+                humanoids, which increases as this skill is studied. Must be
+                wielding a weapon to benefit from this skill.
+
+          Amazon
+             Jab (attack, level 1)
+                Jabs the target with amazon's wielded polearm a number of
+                times, but stops as soon as the amazon misses. Each jab after
+                the first is slightly less poweful. Studying this skill allows
+                more jabs and increases the damage of each jab.
+             Magic Ammunition (spell, level 1)
+                Creates and fires an unerringly accurate magical arrow, bolt or
+                shot from the archer's currently equipped missile
+                launcher. Grants a small bonus to damage.
+             Critical Strike (passive, level 12)
+                Grants a chance to do triple normal damage with missile weapons,
+                which increases as this skill is studied.
+ 
+          Paladin
+             Heroism (aura, level 1)
+                This aura grants a bonus to hit and damage while active.
+             Might (aura, level 1)
+                This aura grants a percentage bonus to damage while active.
+             Smite Undead (spell, level 6)
+                Damages a targetted undead.
+             Prayer (aura, level 6)
+                Draws life from surroundings to heal the paladin. This aura
+                costs mana whenever it heals the paladin, and ends
+                automatically if the paladin runs out of mana.
+             Shield Bash (attack, level 6)
+                For a small mana cost, use you shield to bash and possibly stun
+                a monster. Does not automatically hit. If the paladin also has
+                the Holy Shield skill, does more damage to evil monsters, which
+                increases as Holy Shield is studied.
+             Holy Shield (passive, level 24)
+                Gives a bonus to AC from worn shields, and protection from evil
+                (while wearing a shield), which increases in effectiveness as
+                this skill is studied.
+             Holy Light (aura, level 24)
+                This aura damages evil monsters that can see the paladin, and
+                costs mana each time it hurts a monster (and ends automatically
+                when the paladin runs out of mana). While it is active, it also
+                grants the paladin permanent light, which increases in radius
+                as this skill is studied.
+
+          Necromancer
+             Teeth (spell, level 1)
+                Fires a barrage of teeth at the target. Number of teeth
+                increases as this skill is studied.
+             Noxious Fumes (spell, level 6)
+                A poisonous cloud.
+             Bone Spear (spell, level 12, requires Teeth)
+                Fires a spear of bone that pierces its targets.
+             Mana Leech (passive, level 12)
+                This passive skill allows the necromancer to gain mana from 
+                killing living monsters which are not stupid or cold-blooded. 
+                The amount gained depends on the monster's level and how much 
+                this skill has been studied.
+             Terror (aura, level 24)
+                This aura has a chance to scare any monster which can see the
+                necromancer. It costs mana each time it affects a monster, and
+                ends automatically when the necromancer runs out of mana.
+             Lethargy (aura, level 24)
+                This aura reduces the speed of nearby monstes, and costs mana
+                each time it affects a monster, and ends automatically when the
+                necromancer runs out of mana.
+
+=== Stats ===
+
+          Strength
+               Strength is important in fighting with weapons and in melee
+               combat.  A high strength can improve your chances of hitting
+               as well as the amount of damage done with each hit.  Char-
+               acters with low strengths may receive penalties.  Strength
+               is also useful in tunnelling and in carrying heavy items.
+ 
+          Intelligence
+               Intelligence affects the mana of mage-like
+               spellcasters, sorceresses, archers and assasins.  A good
+               intelligence can also help with using magic devices, picking
+               locks, and disarming traps.
+ 
+          Wisdom
+               Wisdom affects the mana of priest-like spellcasters, berserkers,
+               druids and paladins.  A good wisdom can also help to improve
+               your chances of resisting magical spells cast upon you by
+               monsters.
+ 
+          Dexterity
+               Dexterity is a combination of agility and quickness.  A high
+               dexterity may allow a character to get multiple blows with
+               lighter weapons, thus greatly increasing his kill power, and
+               will increase his chances of hitting with any weapon and
+               dodging blows from enemies.  Dexterity is also useful in
+               picking locks, disarming traps, and protecting yourself from
+               some of the thieves that inhabit the dungeons. Indeed, if 
+               the character has a high enough dexterity, thieves will
+               never be successful in stealing from the player.
+ 
+          Constitution
+               Constitution is a character's ability to resist damage to his
+               body, and to recover from damage received.  Therefore a
+               character with a high constitution will receive more hit
+               points and also recover them faster while resting.
+ 
+          Charisma
+               Charisma represents a character's personality and physical
+               appearance.  A character with a high charisma will receive
+               better prices from store owners, whereas a character with a
+               very low charisma may be robbed blind. 
+ 
+
+=== Abilities (outdated) ===
+
+          Characters possess some different abilities which can  help  them
+          to survive.  The starting abilities of a character are based upon
+          race and class.  Abilities may be adjusted by high or low  stats,
+          and may increase with the level of the character.
+ 
+          Fighting
+               Fighting is the ability to hit and do damage with weapons or
+               fists.  Normally  a  character  gets  a single blow from any
+               weapon, but if his dexterity and strength are  high  enough,
+               he  may  receive  more blows per round with lighter weapons.
+               Strength and dexterity both modify the  ability  to  hit  an
+               opponent.  This skill increases  with the level of the char-
+               acter.
+ 
+          Shooting Ability
+               Using  ranged  missile  weapons  (and  throwing  objects) is
+               included  in this skill.  Different stats apply to different
+               weapons, but this ability may modify the distance an  object
+               is  thrown/fired, the amount of damage done, and the ability
+               to hit a creature.  This skill increases with the  level  of
+               the character.
+ 
+          Saving Throws
+               A Saving Throw is the ability of a character to  resist  the
+               effects  of  a spell cast on him by another person/creature.
+               This does not include spells cast on the player by  his  own
+               stupidity,  such  as  quaffing a nasty potion.  This ability
+               increases with the level of the  character,  but  then  most
+               high  level  creatures  are  better at casting spells, so it
+               tends to even out.  A high wisdom also increases this  abil-
+               ity.
+ 
+          Stealth
+               The ability to move  silently about is very useful.  Charac-
+               ters with good stealth can usually surprise their opponents,
+               gaining the first blow.  Also, creatures may fail to  notice
+               a  stealthy  character  entirely, allowing a player to avoid
+               certain fights.  This skill is based entirely upon race  and
+               class, and will never improve unless magically enhanced.
+ 
+          Disarming
+               Disarming is the  ability  to  remove  traps  (safely),  and
+               includes  picking  locks  on  traps and doors.  A successful
+               disarming will gain the character  some experience.  A  trap
+               must  be  found  before  it  can be disarmed.  Dexterity and
+               intelligence both modify the ability  to  disarm,  and  this
+               ability increases with the level of the character.
+ 
+          Magical Devices
+               Using a magical device such as  a  wand  or  staff  requires
+               experience  and  knowledge.  Spell  users such as  magi  and
+               priests are therefore much better at using a magical  device
+               than say a warrior.  This skill is modified by intelligence,
+               and increases with the level of the character.
+
+          Searching Frequency (Perception)
+               Perception  is  the  ability  to  notice  something  without
+               actively  seeking it out.  This skill is based entirely upon
+               race and class, and  will  never  improve  unless  magically
+               enhanced.
+
+          Searching Ability (Searching)
+               To search is to actively look for secret doors, floor traps,
+               and  traps on chests.  Rogues are the best at searching, but
+               magi,  rangers, and priests are also good at it.  This skill
+               is  based  entirely  upon  race  and  class,  and will never
+               improve unless magically enhanced.
+
+
+
+=== Miscellaneous (outdated) ===
+
+
+          Infra-vision
+               Infra-vision is the ability to see heat sources. Since most of
+               the dungeon is cool or cold, infra-vision will not allow the
+               player to see walls and objects.  Infra-vision will allow a
+               character to see any warm-blooded creatures up to a cer- tain
+               distance.  This ability works equally well with or with out a
+               light source.  However, many of Angband's creatures are
+               cold-blooded, and will not be detected unless lit up by a light
+               source.  Humans can gain infra-vision only if it is magically
+               enhanced.
+ 
+ 
+=== Stat Bonus Tables (outdated) ===
+
+Stat, hit dice, and experience points per level modifications due to class
+are listed in the following table.
+ 
+                     STR     INT     WIS     DEX     CON     CHR
+      Berserker      17       6       9      12      15       9
+      Sorceress       6     18/10     9      15       6      15
+      Druid           9       9      12      12      15       9
+      Assasin        12      15       9      12      12       9
+      Archer         12       9       9      15      12      12
+      Paladin        15       9      12      12      15      15
+      Necromancer     9      15       6      15       9       9
+ 
+ 
+=== Ability Tables (outdated) ===
+
+                                Save  Stea-        Magic                 Extra
+                    Fight Bows Throw  lth  Disarm Device Percep Search Exp/lev
+ 
+      Berserker      10     6    3     2      4      3      2      2       +0%
+      Sorceress       2     1   10     5      6     10      8      5      +30%
+      Druid           4     3    6     5      3      8      4      4      +20%
+      Assasin         8     9    7    10     10      6     10     10      +25%
+      Archer          6    10    8     7      6      7      6      6      +30%
+      Paladin         9     5    4     2      2      4      2      2      +35%
+      Necromancer     2     1   12     5      6     10      8      5      +35%
+ 
+

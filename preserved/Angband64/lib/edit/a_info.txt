@@ -1,0 +1,1410 @@
+# File: a_info.txt
+
+
+# This file is used to initialize the "lib/raw/a_info.raw" file, which is
+# used to initialize the "artifact" information for the Angband game.
+
+# Do not modify this file unless you know exactly what you are doing,
+# unless you wish to risk possible system crashes and broken savefiles.
+
+# After modifying this file, delete the "lib/raw/a_info.raw" file.
+
+
+# The artifact indexes are defined in "defines.h", and must not be changed.
+
+# Artifacts 1-15 are "special", 16-63 are "armor", and 64-127 are "weapons".
+
+# Hack -- "Grond" and "Morgoth" MUST have a rarity of one, or they might
+# not be dropped when Morgoth is killed.  Note that they, like the "special"
+# artifacts, are never created "accidentally".
+
+
+# Version stamp
+
+V:2.7.10
+
+# The Phial of Galadriel
+
+N:1:of Galadriel
+I:<tval>39:<sval>4:<p1val>0:<p2val>0
+W:<level>1:<rarity>1:<weight>10:<cost>10000
+P:<ac>0:<ds+dd>1d1:<tohit>0:<todam>0:<toac>0
+F:ACTIVATE |
+F:INSTA_ART
+D:A small crystal phial. It glitters as you move it, and rays of white
+D:light spring from it.
+
+
+# The Star of Elendil
+
+N:2:of Elendil
+I:<tval>39:<sval>5:<p1val>0:<p2val>0
+W:<level>30:<rarity>25:<weight>5:<cost>30000
+P:<ac>0:<ds+dd>1d1:<tohit>0:<todam>0:<toac>0
+F:ACTIVATE | SEE_INVIS |
+F:INSTA_ART
+D:A perfect spherical crystal deep black in hue.
+
+# The Arkenstone of Thrain
+# Was +2 WIS1/DEX1
+
+N:3:of Thrain
+I:<tval>39:<sval>6:<p1val>0:<p2val>0
+W:<level>50:<rarity>50:<weight>5:<cost>50000
+P:<ac>0:<ds+dd>1d1:<tohit>0:<todam>0:<toac>0
+F:ACTIVATE | SEE_INVIS | HOLD_LIFE |
+F:INSTA_ART
+D:It looks like a globe filled with moonlight, hung in a net woven
+D:of the glint of frosty starts
+
+# The Amulet of Carlammas
+
+N:4:of Carlammas
+I:<tval>40:<sval>10:<p1val>2:<p2val>0
+W: 50:10:3:60000
+F:CON1 | HIDE_TYPE |
+F:ACTIVATE | RES_FIRE |
+F:INSTA_ART
+
+# The Amulet of Ingwe
+
+N:5:of Ingwe
+I:<tval>40:<sval>11:<p1val>3:<p2val>0
+W:<level>65:<rarity>30:<weight>3:<cost>90000
+F:WIS1 | CHR1 | INFRA1 | HIDE_TYPE |
+F:SEE_INVIS | FREE_ACT | ACTIVATE |
+F:RES_ACID | RES_COLD | RES_ELEC |
+F:INSTA_ART
+
+
+# The Necklace of the Dwarves
+
+N:6:of the Dwarves
+I:<tval>40:<sval>12:<p1val>3:<p2val>0
+W:<level>70:<rarity>50:<weight>3:<cost>75000
+F:STR1 | CON1 | CHR1 | INFRA1 | HIDE_TYPE |
+F:SEE_INVIS | FREE_ACT | REGEN | SOMELITE |
+F:INSTA_ART
+D:Nauglamir. A carcanet of gold, and set therin are gems uncounted
+D:from Valinor; but it has a power within it so it rests lightly
+D:on its wearer as a strand of flax, and whatsoever neck it clasps
+D:it sits always with grace and loveliness
+
+N:7:of Duilin
+I:<tval>45:<sval>38:<p1val>3:<p2val>0
+W:<level>30:<rarity>25:<weight>2:<cost>65000
+P:<ac>0:<ds+dd>0d0:<tohit>25:<todam>0:<toac>0
+F:FEATHER | DEX1 | SPEED1 | STEALTH1
+F:INSTA_ART
+D:The ring of the Duilin of Gondolin, swiftest of all men to run
+D:and leap and surest of archers at a mark. 
+
+# The Ring of Barahir
+
+N:8:of Barahir
+I:<tval>45:<sval>32:<p1val>1:<p2val>0
+W:<level>50:<rarity>25:<weight>2:<cost>65000
+F:STR1 | INT1 | WIS1 | DEX1 | CON1 | CHR1 | STEALTH1 | HIDE_TYPE |
+F:RES_POIS |
+F:INSTA_ART
+D:The ring of king Felagund, given as token of his vow swearing an oath
+D:of abiding friendship and aid in every need to Barahir and all his
+D:kin.
+
+# The Ring of Tulkas
+
+N:9:of Tulkas
+I:<tval>45:<sval>33:<p1val>4:<p2val>0
+W:<level>70:<rarity>50:<weight>2:<cost>150000
+F:STR1 | DEX1 | CON1 | HIDE_TYPE |
+F:ACTIVATE |
+F:INSTA_ART
+D:The ring of Tulkas, also named Asaldo, the Valiant. He delights in
+D:wrestling and in contests of strength; and he rides no steed, for he
+D:can outrun all things that go on feet, and he is tireless.
+
+# The Ring of Power (Narya)
+
+N:10:of Power (Narya)
+I:<tval>45:<sval>34:<p1val>1:<p2val>0
+W:<level>70:<rarity>30:<weight>2:<cost>100000
+F:STR1 | INT1 | WIS1 | DEX1 | CON1 | CHR1 | SPEED1 | HIDE_TYPE |
+F:ACTIVATE | FREE_ACT | SEE_INVIS |
+F:SLOW_DIGEST | REGEN |
+F:SUST_STR | SUST_DEX | IM_FIRE |
+F:INSTA_ART
+D:The third ring, Narya the great, and the stone upon it
+D:is red as fire.
+
+# The Ring of Power (Nenya)
+
+N:11:of Power (Nenya)
+I:<tval>45:<sval>35:<p1val>2:<p2val>0
+W:<level>80:<rarity>40:<weight>2:<cost>200000
+F:STR1 | INT1 | WIS1 | DEX1 | CON1 | CHR1 | SPEED1 | HIDE_TYPE |
+F:ACTIVATE | HOLD_LIFE | FREE_ACT | SEE_INVIS |
+F:FEATHER | REGEN |
+F:SUST_INT | SUST_WIS | IM_COLD |
+F:INSTA_ART
+D:A mithril ring, bearing a single white stone that flickers
+D:like a frosty star.
+
+# The Ring of Power (Vilya)
+
+N:12:of Power (Vilya)
+I:<tval>45:<sval>36:<p1val>3:<p2val>0
+W:<level>90:<rarity>50:<weight>2:<cost>300000
+F:STR1 | INT1 | WIS1 | DEX1 | CON1 | CHR1 | SPEED1 | HIDE_TYPE |
+F:ACTIVATE | HOLD_LIFE | FREE_ACT | SEE_INVIS |
+F:FEATHER | SLOW_DIGEST | REGEN |
+F:SUST_INT | SUST_WIS | SUST_STR | SUST_DEX | IM_ELEC |
+F:INSTA_ART
+D:A ring of gold, set with a great blue Sapphire, the mightiest
+D:of the three.
+
+
+# The Ring of Power (The One Ring)
+
+N:13:of Power (The One Ring)
+I:<tval>45:<sval>37:<p1val>5:<p2val>0
+W:<level>100:<rarity>100:<weight>2:<cost>5000000
+F:STR1 | INT1 | WIS1 | DEX1 | CON1 | CHR1 | SPEED1 | HIDE_TYPE |
+F:ACTIVATE | CURSED | HEAVY_CURSE | PERMA_CURSE |
+F:AGGRAVATE | DRAIN_EXP | SEE_INVIS | REGEN |
+F:IM_FIRE | IM_COLD | IM_ELEC | IM_ACID |
+F:SUST_STR | SUST_DEX | SUST_CON |
+F:SUST_INT | SUST_WIS | SUST_CHR |
+F:INSTA_ART
+D:A plain gold ring, a thing of surpassing potency; and
+D:Sauron forged it in the Mountain of Fire in the Land of
+D:the Shadow.
+
+# Artifact 14 is unused
+N:14:of Voronwe
+I:<tval>45:<sval>39:<p1val>3:<p2val>8
+W:<level>40:<rarity>20:<weight>2:<cost>50000
+F:INT1 | WIS1 | HIDE_TYPE | SEE_INVIS
+F:IM_COLD | SEARCH2 | INFRA2 | STEALTH2 | SLOW_DIGEST
+F:SUST_INT | SUST_WIS
+F:INSTA_ART
+D:An ancient Elven Ring, worn by Voronwe the Faithful, the guide
+D:of Tuor to and from Gondolin.
+
+# Artifact 15 is unused
+
+# the Rod of Clear Thinking
+N:16:of Clear Thought
+I:<tval>66:<sval>45:<p1val>0:<p2val>0
+W:<level>50:<rarity>15:<weight>2:<cost>45000
+F:INSTA_ART
+D:An ancient Rod, belonging to one of the Five Istari, also known to
+D:mankind as wizards. It is inscribed with very fine marks. Looking
+D:closer, you can almost read them....
+
+# the Rod of Dreams
+N:17:of Dreams
+I:<tval>66:<sval>46:<p1val>0:<p2val>0
+W:<level>50:<rarity>15:<weight>2:<cost>45000
+F:INSTA_ART
+D:An ancient Rod, belonging to one of the Five Istari, also known to
+D:mankind as wizards. It has a vague cloud-like pattern on it, which
+D:is very pleasing to the eye.
+
+# the Rod of Escape
+N:18:of Escape
+I:<tval>66:<sval>47:<p1val>0:<p2val>0
+W:<level>50:<rarity>15:<weight>2:<cost>45000
+F:INSTA_ART
+D:An ancient Rod, belonging to one of the Five Istari, also known to
+D:mankind as wizards. It feels warped in some way, but you can see
+D:what you feel about it.
+
+# the Rod of Plenty
+N:19:of Plenty
+I:<tval>66:<sval>47:<p1val>0:<p2val>0
+W:<level>50:<rarity>15:<weight>2:<cost>45000
+F:INSTA_ART
+D:An ancient Rod, belonging to one of the Five Istari, also known to
+D:mankind as wizards. It is warm to the touch, and you suddenly wonder
+D:where those delicious smells came from.
+
+# the Rod of Knowledge
+N:20:of Knowledge
+I:<tval>66:<sval>48:<p1val>0:<p2val>0
+W:<level>50:<rarity>15:<weight>2:<cost>45000
+F:INSTA_ART
+D:An ancient Rod, belonging to one of the Five Istari, also known to
+D:mankind as wizards. You suddenly remember your great-grandfather telling
+D:you legends about the Istari.
+
+# The Multi-Hued Dragon Scale Mail 'Razorback'
+# Was (-2) INT1 | WIS1 | STEALTH1 | HIDE_TYPE, (-3) to hit, 30 pounds (?)
+
+N:36:'Razorback'
+I:<tval>38:<sval>6:<p1val>0:<p2val>0
+W:<level>90:<rarity>9:<weight>500:<cost>400000
+P:30:2d4:-4:0:25
+F:FREE_ACT | IM_ELEC |
+F:RES_FIRE | RES_COLD | RES_POIS | RES_LITE | RES_DARK |
+F:SOMELITE | SEE_INVIS | AGGRAVATE |
+F:ACTIVATE
+
+
+# The Power Dragon Scale Mail 'Bladeturner'
+# Was (-3) DEX1 | HIDE_TYPE, (-4) to hit, 50 pounds (?)
+
+N:37:'Bladeturner'
+I:<tval>38:<sval>30:<p1val>0:<p2val>0
+W:<level>95:<rarity>3:<weight>600:<cost>500000
+P:50:2d4:-8:0:35
+F:HOLD_LIFE | REGEN |
+F:RES_ACID | RES_ELEC | RES_FIRE | RES_COLD | RES_POIS |
+F:RES_LITE | RES_DARK | RES_BLIND | RES_CONF | RES_SOUND |
+F:RES_SHARDS | RES_NETHER | RES_NEXUS | RES_CHAOS | RES_DISEN |
+F:ACTIVATE
+
+
+# Artifact 18 is unused
+
+
+# The Adamantite Plate Mail 'Soulkeeper'
+
+N:39:'Soulkeeper'
+I:<tval>37:<sval>30:<p1val>2:<p2val>0
+W:<level>75:<rarity>9:<weight>420:<cost>300000
+P:40:2d4:-4:0:20
+F:CON1 |
+F:HOLD_LIFE | SUST_CON |
+F:RES_ACID | RES_COLD | RES_DARK | RES_NETHER | RES_NEXUS | RES_CHAOS |
+F:ACTIVATE
+
+
+# The Full Plate Armour of Isildur
+
+N:40:of Isildur
+I:<tval>37:<sval>15:<p1val>1:<p2val>0
+W:<level>30:<rarity>3:<weight>300:<cost>50000
+P:<ac>25:<ds+dd>2d4:<tohit>0:<todam>0:<toac>25
+F:CON1 |
+F:RES_ACID | RES_ELEC | RES_FIRE | RES_COLD |
+F:RES_SOUND | RES_CONF | RES_NEXUS
+
+
+# The Metal Brigandine Armour of the Rohirrim
+
+N:41:of the Rohirrim
+I:<tval>37:<sval>9:<p1val>2:<p2val>0
+W:<level>30:<rarity>3:<weight>200:<cost>30000
+P:<ac>19:<ds+dd>1d4:<tohit>0:<todam>0:<toac>15
+F:STR1 | DEX1 | HIDE_TYPE |
+F:RES_ACID | RES_ELEC | RES_FIRE | RES_COLD | RES_CONF | RES_SOUND
+
+
+# The Mithril Chain Mail 'Belegennon'
+
+N:42:'Belegennon'
+I:<tval>37:<sval>20:<p1val>4:<p2val>0
+W:<level>40:<rarity>3:<weight>150:<cost>105000
+P:28:1d4:-1:0:20
+F:STEALTH1 |
+F:RES_ACID | RES_ELEC | RES_FIRE | RES_COLD | RES_POIS | ACTIVATE
+
+
+# The Mithril Plate Mail of Celeborn
+
+N:43:of Celeborn
+I:<tval>37:<sval>25:<p1val>4:<p2val>0
+W:<level>40:<rarity>3:<weight>250:<cost>150000
+P:35:2d4:-3:0:25
+F:STR1 | CHR1 | HIDE_TYPE |
+F:RES_ACID | RES_ELEC | RES_FIRE | RES_COLD | RES_DARK |
+F:RES_DISEN | ACTIVATE
+
+
+# The Chain Mail of Arvedui
+
+N:44:of Arvedui
+I:<tval>37:<sval>4:<p1val>2:<p2val>0
+W:<level>20:<rarity>3:<weight>220:<cost>32000
+P:14:1d4:-2:0:15
+F:STR1 | CHR1 | HIDE_TYPE |
+F:RES_ACID | RES_ELEC | RES_FIRE | RES_COLD | RES_SHARDS | RES_NEXUS
+
+
+# The Augmented Chain Mail of Caspanion
+
+N:45:of Caspanion
+I:<tval>37:<sval>6:<p1val>3:<p2val>0
+W:<level>25:<rarity>9:<weight>270:<cost>40000
+P:16:1d4:-2:0:20
+F:INT1 | WIS1 | CON1 | HIDE_TYPE |
+F:RES_ACID | RES_POIS | RES_CONF | ACTIVATE
+
+
+# Artifact 26 is unused
+
+
+# The Soft Leather Armour 'Hithlomir'
+
+N:47:'Hithlomir'
+I:<tval>36:<sval>4:<p1val>4:<p2val>0
+W:<level>20:<rarity>3:<weight>80:<cost>45000
+P:<ac>4:<ds+dd>0d0:<tohit>0:<todam>0:<toac>20
+F:STEALTH1 |
+F:RES_ACID | RES_ELEC | RES_FIRE | RES_COLD | RES_DARK
+
+
+# The Leather Scale Mail 'Thalkettoth'
+
+N:48:'Thalkettoth'
+I:<tval>36:<sval>11:<p1val>3:<p2val>0
+W:<level>20:<rarity>3:<weight>60:<cost>25000
+P:11:1d1:-1:0:25
+F:DEX1 | HIDE_TYPE |
+F:RES_ACID | RES_SHARDS
+
+
+# Artifact 29 is unused
+
+
+# The Small Metal Shield of Thorin
+
+N:50:of Thorin
+I:<tval>34:<sval>3:<p1val>4:<p2val>0
+W:<level>30:<rarity>6:<weight>65:<cost>60000
+P:<ac>3:<ds+dd>1d2:<tohit>0:<todam>0:<toac>25
+F:STR1 | CON1 | HIDE_TYPE |
+F:FREE_ACT | IM_ACID | RES_SOUND |
+F:RES_CHAOS
+
+
+# The Large Leather Shield of Celegorm
+
+N:51:of Celegorm
+I:<tval>34:<sval>4:<p1val>0:<p2val>0
+W:<level>30:<rarity>3:<weight>60:<cost>12000
+P:<ac>4:<ds+dd>1d2:<tohit>0:<todam>0:<toac>20
+F:RES_ACID | RES_ELEC | RES_FIRE | RES_COLD | RES_LITE | RES_DARK
+
+
+# The Large Metal Shield of Anarion
+
+N:52:of Anarion
+I:<tval>34:<sval>5:<p1val>0:<p2val>0
+W:<level>40:<rarity>9:<weight>120:<cost>160000
+P:<ac>5:<ds+dd>1d3:<tohit>0:<todam>0:<toac>20
+F:RES_ACID | RES_ELEC | RES_FIRE | RES_COLD | SUST_STR | SUST_INT |
+F:SUST_WIS | SUST_DEX | SUST_CON | SUST_CHR
+
+# The Large Metal Shield of the Sun
+
+N:53:of the Sun
+I:<tval>34:<sval>5:<p1val>3:<p2val>0
+W:<level>40:<rarity>9:<weight>120:<cost>160000
+P:<ac>5:<ds+dd>1d3:<tohit>0:<todam>0:<toac>20
+F:RES_FIRE | RES_FIRE | RES_FEAR | FREE_ACT | ACTIVATE
+F:SPEED1 | LITE1
+D:The large shield of Theoden, King of Rohan, who could not be overtaken
+D:riding into battle. Fey he seemed, or the battle-fury of his fathers
+D:ran like new fire in his veins. His golden shield was uncovered, and
+D:lo! it shone like an image of the sun.
+
+
+# Artifact 33 is unused
+
+
+# The Massive Iron Crown of Morgoth
+
+N:54:of Morgoth
+I:<tval>33:<sval>50:<p1val>125:<p2val>0
+W:<level>100:<rarity>1:<weight>20:<cost>10000000
+P:<ac>0:<ds+dd>1d1:<tohit>0:<todam>0:<toac>0
+F:STR1 | INT1 | WIS1 | DEX1 | CON1 | CHR1 | INFRA1 | HIDE_TYPE |
+F:RES_ACID | RES_ELEC | RES_FIRE | RES_COLD | RES_POIS |
+F:RES_LITE | RES_DARK | RES_CONF | RES_NEXUS |
+F:SOMELITE | SEE_INVIS | TELEPATHY |
+F:CURSED | HEAVY_CURSE | PERMA_CURSE
+F:INSTA_ART
+
+
+# The Iron Crown of Beruthiel
+
+N:55:of Beruthiel
+I:<tval>33:<sval>10:<p1val>-25:<p2val>0
+W:<level>40:<rarity>12:<weight>20:<cost>0
+P:<ac>0:<ds+dd>1d1:<tohit>0:<todam>0:<toac>20
+F:STR1 | DEX1 | CON1 | HIDE_TYPE |
+F:FREE_ACT | SEE_INVIS | TELEPATHY | CURSED
+
+
+# The Hard Leather Cap of Thranduil
+
+N:56:of Thranduil
+I:<tval>32:<sval>2:<p1val>2:<p2val>0
+W:<level>20:<rarity>2:<weight>15:<cost>50000
+P:<ac>2:<ds+dd>0d0:<tohit>0:<todam>0:<toac>10
+F:INT1 | WIS1 | HIDE_TYPE |
+F:RES_BLIND | TELEPATHY
+
+
+# The Metal Cap of Thengel
+
+N:57:of Thengel
+I:<tval>32:<sval>3:<p1val>3:<p2val>0
+W:<level>10:<rarity>2:<weight>20:<cost>22000
+P:<ac>3:<ds+dd>1d1:<tohit>0:<todam>0:<toac>12
+F:WIS1 | CHR1 | HIDE_TYPE
+
+
+# The Steel Helm of Hammerhand
+
+N:58:of Hammerhand
+I:<tval>32:<sval>6:<p1val>3:<p2val>0
+W:<level>20:<rarity>2:<weight>60:<cost>45000
+P:<ac>6:<ds+dd>1d3:<tohit>0:<todam>0:<toac>20
+F:STR1 | DEX1 | CON1 | HIDE_TYPE |
+F:RES_ACID | RES_NEXUS
+
+
+# The Iron Helm of Dor-Lomin
+
+N:59:of Dor-Lomin
+I:<tval>32:<sval>5:<p1val>4:<p2val>0
+W:<level>40:<rarity>12:<weight>75:<cost>300000
+P:<ac>5:<ds+dd>1d3:<tohit>0:<todam>0:<toac>20
+F:STR1 | DEX1 | CON1 | HIDE_TYPE |
+F:RES_ACID | RES_ELEC | RES_FIRE | RES_COLD | RES_LITE | RES_BLIND |
+F:SOMELITE | SEE_INVIS | TELEPATHY
+
+
+# The Iron Helm 'Holhenneth'
+
+N:60:'Holhenneth'
+I:<tval>32:<sval>5:<p1val>2:<p2val>0
+W:<level>20:<rarity>5:<weight>75:<cost>100000
+P:<ac>5:<ds+dd>1d3:<tohit>0:<todam>0:<toac>10
+F:INT1 | WIS1 | SEARCH1 | HIDE_TYPE |
+F:RES_BLIND | SEE_INVIS | ACTIVATE
+
+
+# The Iron Helm of Gorlim
+
+N:61:of Gorlim
+I:<tval>32:<sval>5:<p1val>-25:<p2val>0
+W:<level>20:<rarity>5:<weight>75:<cost>0
+P:<ac>5:<ds+dd>1d3:<tohit>0:<todam>0:<toac>10
+F:INT1 | WIS1 | SEARCH1 | HIDE_TYPE |
+F:SEE_INVIS | AGGRAVATE | CURSED
+
+
+# The Golden Crown of Gondor
+
+N:62:of Gondor
+I:<tval>33:<sval>11:<p1val>3:<p2val>0
+W:<level>40:<rarity>40:<weight>30:<cost>100000
+P:<ac>0:<ds+dd>1d1:<tohit>0:<todam>0:<toac>15
+F:STR1 | WIS1 | CON1 | HIDE_TYPE |
+F:RES_COLD | RES_FIRE | RES_LITE | RES_BLIND |
+F:SOMELITE | SEE_INVIS | REGEN | ACTIVATE
+
+
+# Artifact 43 is unused
+
+
+# The Cloak 'Colluin'
+
+N:64:'Colluin'
+I:<tval>35:<sval>1:<p1val>0:<p2val>0
+W:<level>5:<rarity>45:<weight>10:<cost>10000
+P:<ac>1:<ds+dd>0d0:<tohit>0:<todam>0:<toac>15
+F:RES_ACID | RES_ELEC | RES_FIRE | RES_COLD | RES_POIS | ACTIVATE
+
+
+# The Cloak 'Holcolleth'
+
+N:65:'Holcolleth'
+I:<tval>35:<sval>1:<p1val>2:<p2val>0
+W:<level>5:<rarity>45:<weight>10:<cost>13000
+P:<ac>1:<ds+dd>0d0:<tohit>0:<todam>0:<toac>4
+F:INT1 | WIS1 | STEALTH1 | HIDE_TYPE |
+F:RES_ACID | ACTIVATE
+
+
+# The Cloak of Thingol
+
+N:66:of Thingol
+I:<tval>35:<sval>1:<p1val>3:<p2val>0
+W:<level>10:<rarity>90:<weight>10:<cost>35000
+P:<ac>1:<ds+dd>0d0:<tohit>0:<todam>0:<toac>18
+F:DEX1 | CHR1 | HIDE_TYPE |
+F:FREE_ACT | RES_ACID | RES_FIRE | RES_COLD | ACTIVATE
+
+
+# The Cloak of Thorongil
+
+N:67:of Thorongil
+I:<tval>35:<sval>1:<p1val>0:<p2val>0
+W:<level>5:<rarity>20:<weight>10:<cost>8000
+P:<ac>1:<ds+dd>0d0:<tohit>0:<todam>0:<toac>10
+F:FREE_ACT | RES_ACID | SEE_INVIS
+
+
+# The Cloak 'Colannon'
+
+N:68:'Colannon'
+I:<tval>35:<sval>1:<p1val>3:<p2val>0
+W:<level>3:<rarity>10:<weight>10:<cost>11000
+P:<ac>1:<ds+dd>0d0:<tohit>0:<todam>0:<toac>15
+F:STEALTH1 |
+F:RES_ACID | ACTIVATE
+
+
+# The Shadow Cloak of Luthien
+
+N:69:of Luthien
+I:<tval>35:<sval>6:<p1val>2:<p2val>0
+W:<level>40:<rarity>40:<weight>5:<cost>45000
+P:<ac>6:<ds+dd>0d0:<tohit>0:<todam>0:<toac>20
+F:INT1 | WIS1 | CHR1 | HIDE_TYPE |
+F:RES_ACID | RES_FIRE | RES_COLD | ACTIVATE
+
+
+# The Shadow Cloak of Tuor
+
+N:70:of Tuor
+I:<tval>35:<sval>6:<p1val>4:<p2val>0
+W:<level>40:<rarity>40:<weight>5:<cost>35000
+P:<ac>6:<ds+dd>0d0:<tohit>0:<todam>0:<toac>12
+F:STEALTH1 |
+F:FREE_ACT | IM_ACID | SEE_INVIS
+
+
+# Artifact 51 is unused
+
+
+# The Set of Leather Gloves 'Cambeleg'
+
+N:72:'Cambeleg'
+I:<tval>31:<sval>1:<p1val>2:<p2val>0
+W:<level>10:<rarity>6:<weight>5:<cost>36000
+P:<ac>1:<ds+dd>0d0:<tohit>8:<todam>8:<toac>15
+F:STR1 | CON1 | HIDE_TYPE |
+F:FREE_ACT | SHOW_MODS
+
+
+# The Set of Leather Gloves 'Cammithrim'
+
+N:73:'Cammithrim'
+I:<tval>31:<sval>1:<p1val>0:<p2val>0
+W:<level>10:<rarity>3:<weight>5:<cost>30000
+P:<ac>1:<ds+dd>0d0:<tohit>0:<todam>0:<toac>10
+F:FREE_ACT | RES_LITE | SUST_CON | SOMELITE | ACTIVATE
+
+
+# The Set of Gauntlets 'Paurhach'
+
+N:74:'Paurhach'
+I:<tval>31:<sval>2:<p1val>0:<p2val>0
+W:<level>10:<rarity>20:<weight>25:<cost>15000
+P:<ac>2:<ds+dd>1d1:<tohit>0:<todam>0:<toac>15
+F:RES_FIRE | ACTIVATE
+
+
+# The Set of Gauntlets 'Paurnimmen'
+
+N:75:'Paurnimmen'
+I:<tval>31:<sval>2:<p1val>0:<p2val>0
+W:<level>10:<rarity>20:<weight>25:<cost>13000
+P:<ac>2:<ds+dd>1d1:<tohit>0:<todam>0:<toac>15
+F:RES_COLD | ACTIVATE
+
+
+# The Set of Gauntlets 'Pauraegen'
+
+N:76:'Pauraegen'
+I:<tval>31:<sval>2:<p1val>0:<p2val>0
+W:<level>10:<rarity>20:<weight>25:<cost>11000
+P:<ac>2:<ds+dd>1d1:<tohit>0:<todam>0:<toac>15
+F:RES_ELEC | ACTIVATE
+
+
+# The Set of Gauntlets 'Paurnen'
+
+N:77:'Paurnen'
+I:<tval>31:<sval>2:<p1val>0:<p2val>0
+W:<level>10:<rarity>20:<weight>25:<cost>12000
+P:<ac>2:<ds+dd>1d1:<tohit>0:<todam>0:<toac>15
+F:RES_ACID | ACTIVATE
+
+
+# The Set of Gauntlets 'Camlost'
+
+N:78:'Camlost'
+I:<tval>31:<sval>2:<p1val>-5:<p2val>0
+W:<level>10:<rarity>20:<weight>25:<cost>0
+P:2:1d1:-11:-12:0
+F:STR1 | DEX1 | HIDE_TYPE |
+F:AGGRAVATE | CURSED | SHOW_MODS
+
+
+# The Set of Cesti of Fingolfin
+
+N:79:of Fingolfin
+I:<tval>31:<sval>5:<p1val>4:<p2val>0
+W:<level>40:<rarity>15:<weight>40:<cost>110000
+P:<ac>5:<ds+dd>1d1:<tohit>10:<todam>10:<toac>20
+F:DEX1 | HIDE_TYPE |
+F:FREE_ACT | RES_ACID | ACTIVATE | SHOW_MODS
+
+
+# The Pair of Hard Leather Boots of Feanor
+
+N:80:of Feanor
+I:<tval>30:<sval>3:<p1val>15:<p2val>0
+W:<level>40:<rarity>120:<weight>40:<cost>300000
+P:<ac>3:<ds+dd>1d1:<tohit>0:<todam>0:<toac>20
+F:SPEED1 |
+F:RES_NEXUS | ACTIVATE
+
+
+# The Pair of Soft Leather Boots 'Dal-i-thalion'
+
+N:81:'Dal-i-thalion'
+I:<tval>30:<sval>2:<p1val>5:<p2val>0
+W:<level>10:<rarity>25:<weight>20:<cost>40000
+P:<ac>2:<ds+dd>1d1:<tohit>0:<todam>0:<toac>15
+F:DEX1 | HIDE_TYPE |
+F:ACTIVATE | FREE_ACT |
+F:RES_NETHER | RES_CHAOS | SUST_CON
+
+# The Pair of Metal Shod Boots of Thror
+
+N:82:of Thror
+I:<tval>30:<sval>6:<p1val>3:<p2val>0
+W:<level>30:<rarity>25:<weight>80:<cost>12000
+P:<ac>6:<ds+dd>1d1:<tohit>0:<todam>0:<toac>20
+F:STR1 | CON1 | HIDE_TYPE
+
+
+# Artifact 63 is unused
+
+
+# The Main Gauche of Maedhros
+
+N:84:of Maedhros
+I:<tval>23:<sval>5:<p1val>3:<p2val>0
+W:<level>15:<rarity>30:<weight>30:<cost>20000
+P:<ac>0:<ds+dd>2d5:<tohit>12:<todam>15:<toac>0
+F:INT1 | DEX1 | HIDE_TYPE |
+F:SLAY_TROLL | SLAY_GIANT | FREE_ACT | SEE_INVIS | SHOW_MODS
+
+
+# The Dagger 'Angrist'
+
+N:85:'Angrist'
+I:<tval>23:<sval>4:<p1val>4:<p2val>0
+W:<level>20:<rarity>80:<weight>12:<cost>100000
+P:<ac>0:<ds+dd>2d4:<tohit>10:<todam>15:<toac>5
+F:DEX1 | HIDE_TYPE |
+F:SLAY_EVIL | SLAY_TROLL | SLAY_ORC | FREE_ACT | RES_DARK | SUST_DEX |
+F:SHOW_MODS
+
+
+# The Dagger 'Narthanc'
+
+N:86:'Narthanc'
+I:<tval>23:<sval>4:<p1val>0:<p2val>0
+W:<level>4:<rarity>10:<weight>12:<cost>12000
+P:<ac>0:<ds+dd>1d4:<tohit>4:<todam>6:<toac>0
+F:BRAND_FIRE | RES_FIRE | ACTIVATE | SHOW_MODS
+
+
+# The Dagger 'Nimthanc'
+
+N:87:'Nimthanc'
+I:<tval>23:<sval>4:<p1val>0:<p2val>0
+W:<level>3:<rarity>10:<weight>12:<cost>11000
+P:<ac>0:<ds+dd>1d4:<tohit>4:<todam>6:<toac>0
+F:BRAND_COLD | RES_COLD | ACTIVATE | SHOW_MODS
+
+
+# The Dagger 'Dethanc'
+
+N:88:'Dethanc'
+I:<tval>23:<sval>4:<p1val>0:<p2val>0
+W:<level>5:<rarity>10:<weight>12:<cost>13000
+P:<ac>0:<ds+dd>1d4:<tohit>4:<todam>6:<toac>0
+F:BRAND_ELEC | RES_ELEC | ACTIVATE | SHOW_MODS
+
+
+# The Dagger of Rilia
+
+N:89:of Rilia
+I:<tval>23:<sval>4:<p1val>0:<p2val>0
+W:<level>5:<rarity>40:<weight>12:<cost>15000
+P:<ac>0:<ds+dd>2d4:<tohit>4:<todam>3:<toac>0
+F:SLAY_ORC | RES_POIS | RES_DISEN | ACTIVATE | SHOW_MODS
+
+
+# The Dagger of Glorfindel.
+
+N:90:of Glorfindel
+I:<tval>23:<sval>4:<p1val>2:<p2val>0
+W:<level>10:<rarity>40:<weight>12:<cost>40000
+P:<ac>0:<ds+dd>2d4:<tohit>6:<todam>9:<toac>0
+F:DEX1 | HIDE_TYPE | KILL_DEMON | SLAY_ORC |
+F:BRAND_COLD | RES_COLD | SEE_INVIS | SLOW_DIGEST | REGEN | ACTIVATE |
+F:SHOW_MODS
+D:The dagger used by Glorfindel, Lord of the People of the Golden Hair
+D:to slay a Balrog in the Cleft of Eagles.
+
+# The Bastard Sword 'Calris'
+
+N:91:'Calris'
+I:<tval>23:<sval>21:<p1val>5:<p2val>0
+W:<level>30:<rarity>15:<weight>140:<cost>100000
+P:0:5d4:-20:20:0
+F:CON1 | HIDE_TYPE | COULD2H |
+F:KILL_DRAGON | SLAY_EVIL | SLAY_DEMON | SLAY_TROLL | RES_DISEN |
+F:AGGRAVATE | CURSED | HEAVY_CURSE | SHOW_MODS
+
+
+# The Broad Sword of Ecthelion
+
+N:92:of Ecthelion.
+I:<tval>23:<sval>16:<p1val>4:<p2val>0
+W:<level>20:<rarity>45:<weight>150:<cost>50000
+P:<ac>0:<ds+dd>3d5:<tohit>20:<todam>12:<toac>0
+F:DEX1 | HIDE_TYPE |
+F:KILL_DEMON | KILL_ORC | FREE_ACT | RES_COLD | FEATHER |
+F:SLOW_DIGEST | ACTIVATE | SHOW_MODS
+D:Ecthelion was the lord of the people of the Fountain in Gondolin,
+D:and tis said that Echtelion's folk there slew more Orcs than fell
+D:ever in all the battles of the Elves with that race. The brightness
+D:of this sword cleaves the iron of Balrogs, and does grievous
+D:hurt to their fire.
+
+# The Broad Sword 'Glamdring'
+
+N:93:'Glamdring'
+I:<tval>23:<sval>16:<p1val>1:<p2val>0
+W:<level>20:<rarity>20:<weight>150:<cost>40000
+P:<ac>0:<ds+dd>2d5:<tohit>10:<todam>15:<toac>0
+F:SEARCH1 |
+F:SLAY_EVIL | BRAND_FIRE | SLAY_ORC | RES_FIRE | RES_LITE | SOMELITE |
+F:SLOW_DIGEST | SHOW_MODS
+
+
+# The Broad Sword 'Aeglin'
+
+N:94:'Aeglin'
+I:<tval>23:<sval>16:<p1val>1:<p2val>0
+W:<level>20:<rarity>90:<weight>150:<cost>45000
+P:<ac>0:<ds+dd>2d5:<tohit>12:<todam>16:<toac>0
+F:SEARCH1 |
+F:BRAND_ELEC | SLAY_ORC | RES_ELEC | SOMELITE | SLOW_DIGEST | SHOW_MODS
+
+
+# The Broad Sword 'Orcrist'
+
+N:95:'Orcrist'
+I:<tval>23:<sval>16:<p1val>3:<p2val>0
+W:<level>20:<rarity>20:<weight>150:<cost>40000
+P:<ac>0:<ds+dd>2d5:<tohit>10:<todam>15:<toac>0
+F:STEALTH1 |
+F:SLAY_EVIL | BRAND_COLD | SLAY_ORC | RES_COLD | SOMELITE |
+F:SLOW_DIGEST | SHOW_MODS
+
+
+# The Two-Handed Sword 'Gurthang'
+
+N:96:'Gurthang'
+I:<tval>23:<sval>25:<p1val>2:<p2val>0
+W:<level>30:<rarity>30:<weight>200:<cost>100000
+P:<ac>0:<ds+dd>2d6:<tohit>9:<todam>17:<toac>0
+F:STR1 | HIDE_TYPE | MUST2H |
+F:KILL_DRAGON | SLAY_TROLL | FREE_ACT | SLOW_DIGEST | REGEN | SHOW_MODS
+
+
+# The Two-Handed Sword 'Zarcuthra'
+
+N:97:'Zarcuthra'
+I:<tval>23:<sval>25:<p1val>4:<p2val>0
+W:<level>30:<rarity>180:<weight>250:<cost>200000
+P:<ac>0:<ds+dd>3d6:<tohit>13:<todam>21:<toac>0
+F:STR1 | CHR1 | INFRA1 | HIDE_TYPE | MUST2H |
+F:KILL_DRAGON | SLAY_ANIMAL | SLAY_EVIL | BRAND_FIRE |
+F:SLAY_UNDEAD | SLAY_DEMON | SLAY_TROLL | SLAY_GIANT | SLAY_ORC |
+F:RES_FIRE | RES_CHAOS | FREE_ACT | SEE_INVIS | AGGRAVATE | SHOW_MODS
+
+
+# The Two-Handed Sword 'Mormegil'
+
+N:98:'Mormegil'
+I:<tval>23:<sval>25:<p1val>-10:<p2val>0
+W:<level>30:<rarity>15:<weight>250:<cost>0
+P:0:4d6:-40:-60:-50
+F:SPEED1 | MUST2H |
+F:AGGRAVATE | CURSED | HEAVY_CURSE | SHOW_MODS
+
+
+# The Cutlass 'Gondricam'
+
+N:99:'Gondricam'
+I:<tval>23:<sval>12:<p1val>3:<p2val>0
+W:<level>20:<rarity>8:<weight>110:<cost>28000
+P:<ac>0:<ds+dd>1d7:<tohit>10:<todam>11:<toac>0
+F:DEX1 | STEALTH1 | HIDE_TYPE |
+F:RES_ACID | RES_ELEC | RES_FIRE | RES_COLD | FEATHER |
+F:SEE_INVIS | REGEN | SHOW_MODS
+
+
+# The Executioner's Sword 'Crisdurian'
+
+N:100:'Crisdurian'
+I:<tval>23:<sval>28:<p1val>0:<p2val>0
+W:<level>40:<rarity>15:<weight>260:<cost>100000
+P:<ac>0:<ds+dd>4d5:<tohit>12:<todam>19:<toac>0
+F:SLAY_DRAGON | SLAY_EVIL | SLAY_UNDEAD | SLAY_TROLL | SLAY_GIANT |
+F:SLAY_ORC | SEE_INVIS | SHOW_MODS | MUST2H
+
+
+# The Katana 'Aglarang'
+
+N:101:'Aglarang'
+I:<tval>23:<sval>20:<p1val>5:<p2val>0
+W:<level>30:<rarity>25:<weight>50:<cost>40000
+P:<ac>0:<ds+dd>7d4:<tohit>0:<todam>0:<toac>0
+F:DEX1 | HIDE_TYPE | COULD2H |
+F:SUST_DEX | SHOW_MODS
+
+
+# The Long Sword 'Ringil'
+
+N:102:'Ringil'
+I:<tval>23:<sval>17:<p1val>10:<p2val>0
+W:<level>20:<rarity>120:<weight>130:<cost>300000
+P:<ac>0:<ds+dd>4d5:<tohit>22:<todam>25:<toac>0
+F:SPEED1 |
+F:SLAY_EVIL | BRAND_COLD | SLAY_UNDEAD | SLAY_DEMON | SLAY_TROLL |
+F:FREE_ACT | RES_COLD | RES_LITE | SOMELITE | SEE_INVIS | SLOW_DIGEST | REGEN |
+F:ACTIVATE | SHOW_MODS
+
+
+# The Long Sword 'Anduril'
+
+N:103:'Anduril'
+I:<tval>23:<sval>17:<p1val>4:<p2val>0
+W:<level>20:<rarity>40:<weight>130:<cost>80000
+P:<ac>0:<ds+dd>2d5:<tohit>10:<todam>15:<toac>5
+F:STR1 | HIDE_TYPE |
+F:SLAY_EVIL | BRAND_FIRE | SLAY_TROLL | SLAY_ORC | FREE_ACT |
+F:RES_FIRE | SUST_DEX | SEE_INVIS | ACTIVATE | SHOW_MODS
+D:On its blade is traced a device of seven stars set between the
+D:crescent Moon and the rayed Sun, and about them are written
+D:many runes. Very bright is the sword that is made whole again,
+D:and the light of the sun shines redly in it, and te light of the
+D:moon shines cold, and its edge is hard and keen.
+
+# The Long Sword 'Anguirel'
+
+N:104:'Anguirel'
+I:<tval>23:<sval>17:<p1val>2:<p2val>0
+W:<level>20:<rarity>30:<weight>130:<cost>40000
+P:<ac>0:<ds+dd>2d5:<tohit>8:<todam>12:<toac>0
+F:STR1 | CON1 | HIDE_TYPE |
+F:SLAY_EVIL | BRAND_ELEC | SLAY_DEMON | FREE_ACT | RES_ELEC |
+F:RES_LITE | SOMELITE | SEE_INVIS | SHOW_MODS
+
+
+# The Long Sword of Feanor
+
+N:105:'Elvagil'
+I:<tval>23:<sval>17:<p1val>4:<p2val>0
+W:<level>20:<rarity>15:<weight>130:<cost>30000
+P:<ac>0:<ds+dd>2d5:<tohit>2:<todam>7:<toac>0
+F:CON1 | HIDE_TYPE | IM_FIRE | REGEN |
+F:KILL_DEMON | SLAY_TROLL | SLAY_ORC | FEATHER | SEE_INVIS | SHOW_MODS
+D:The sword Feanor used in battle with Gothmog, Lord of Balrogs.
+D:Long he fought on, and undismayed, though he was wrapped in fire
+D:and wounded with many wounds.
+
+
+# The Rapier 'Forasgil'
+
+N:106:'Forasgil'
+I:<tval>23:<sval>7:<p1val>0:<p2val>0
+W:<level>15:<rarity>8:<weight>40:<cost>15000
+P:<ac>0:<ds+dd>1d6:<tohit>12:<todam>19:<toac>0
+F:SLAY_ANIMAL | BRAND_COLD | RES_COLD | RES_LITE | SOMELITE | SHOW_MODS
+
+
+# The Sabre of Egalmoth
+
+N:107:of Egalmoth
+I:<tval>23:<sval>11:<p1val>1:<p2val>0
+W:<level>15:<rarity>8:<weight>50:<cost>25000
+P:<ac>0:<ds+dd>1d7:<tohit>6:<todam>8:<toac>0
+F:BLOWS1 |
+F:SLAY_DRAGON | SLAY_ANIMAL | SLAY_TROLL | SLAY_GIANT |
+F:SLAY_ORC | SHOW_MODS
+D:The sabre of the leader of the Folk of the Heavenly Arch in Gondolin.
+D:None of the other Noldor bore curved swords.
+
+# The Small Sword 'Sting'
+
+N:108:'Sting'
+I:<tval>23:<sval>8:<p1val>2:<p2val>0
+W:<level>20:<rarity>15:<weight>75:<cost>100000
+P:<ac>0:<ds+dd>1d6:<tohit>7:<todam>8:<toac>0
+F:STR1 | DEX1 | CON1 | BLOWS1 |
+F:SLAY_EVIL | SLAY_UNDEAD | SLAY_ORC |
+F:FREE_ACT | RES_LITE | SOMELITE | SEE_INVIS | SHOW_MODS
+
+
+# The Scimitar 'Haradekket'
+
+N:109:'Haradekket'
+I:<tval>23:<sval>18:<p1val>2:<p2val>0
+W:<level>20:<rarity>8:<weight>130:<cost>30000
+P:<ac>0:<ds+dd>2d5:<tohit>9:<todam>11:<toac>0
+F:DEX1 | BLOWS1 |
+F:SLAY_ANIMAL | SLAY_EVIL | SLAY_UNDEAD | SEE_INVIS |
+F:SHOW_MODS
+
+
+# The Short Sword 'Gilettar'
+
+N:110:'Gilettar'
+I:<tval>23:<sval>10:<p1val>2:<p2val>0
+W:<level>20:<rarity>8:<weight>80:<cost>15000
+P:<ac>0:<ds+dd>1d7:<tohit>3:<todam>7:<toac>0
+F:BLOWS1 |
+F:SLAY_ANIMAL | SLOW_DIGEST | REGEN | SHOW_MODS
+
+
+# The Blade of Chaos 'Doomcaller'
+# Was (-5) CON1 | HIDE_TYPE, +0 armor
+
+N:111:'Doomcaller'
+I:<tval>23:<sval>30:<p1val>0:<p2val>0
+W:<level>70:<rarity>25:<weight>180:<cost>200000
+P:<ac>0:<ds+dd>4d5:<tohit>12:<todam>28:<toac>-50
+F:KILL_DRAGON | SLAY_ANIMAL | SLAY_EVIL | BRAND_COLD | SLAY_TROLL |
+F:SLAY_ORC | FREE_ACT | RES_ACID | RES_ELEC | RES_FIRE | RES_COLD |
+F:RES_CHAOS | SEE_INVIS | TELEPATHY | AGGRAVATE | SHOW_MODS | MUST2H
+
+
+# JK - 92 was unused
+# The Spear of Melkor
+N:112:of Melkor
+I:<tval>22:<sval>2:<p1val>4:<p2val>-5
+W:<level>15:<rarity>45:<weight>60:<cost>100000
+P:<ac>0:<ds+dd>3d10:<tohit>12:<todam>24:<toac>0
+F:STEALTH1 | INFRA1 | CURSED | HEAVY_CURSE | WIS2 | INT2 | 
+F:RES_DARK | RES_BLIND | RES_LITE | RES_NETHER | RES_CONF
+D:The spear Melkor used to cut down Telperion and Laurelin on
+D:the green mound Ezellohar.
+
+# The Beaked Axe of Theoden
+
+N:113:of Theoden
+I:<tval>22:<sval>10:<p1val>3:<p2val>0
+W:<level>20:<rarity>15:<weight>180:<cost>40000
+P:<ac>0:<ds+dd>2d6:<tohit>8:<todam>10:<toac>0
+F:WIS1 | CON1 | HIDE_TYPE |
+F:SLAY_DRAGON | TELEPATHY | SLOW_DIGEST | ACTIVATE | SHOW_MODS
+
+
+# The Glaive of Pain
+
+N:114:of Pain
+I:<tval>22:<sval>13:<p1val>0:<p2val>0
+W:<level>30:<rarity>25:<weight>190:<cost>50000
+P:<ac>0:<ds+dd>6d6:<tohit>0:<todam>30:<toac>0
+F:SHOW_MODS | MUST2H
+
+
+# The Halberd 'Osondir'
+
+N:115:'Osondir'
+I:<tval>22:<sval>15:<p1val>3:<p2val>0
+W:<level>20:<rarity>8:<weight>190:<cost>22000
+P:<ac>0:<ds+dd>3d5:<tohit>6:<todam>9:<toac>0
+F:CHR1 | HIDE_TYPE |
+F:BRAND_FIRE | SLAY_UNDEAD | SLAY_GIANT | RES_FIRE | RES_SOUND |
+F:FEATHER | SEE_INVIS | SHOW_MODS | COULD2H
+
+
+# The Pike 'Til-i-arc'
+
+N:116:'Til-i-arc'
+I:<tval>22:<sval>8:<p1val>2:<p2val>0
+W:<level>20:<rarity>15:<weight>160:<cost>32000
+P:<ac>0:<ds+dd>2d5:<tohit>10:<todam>12:<toac>10
+F:INT1 | HIDE_TYPE |
+F:BRAND_COLD | BRAND_FIRE | SLAY_DEMON | SLAY_TROLL | SLAY_GIANT |
+F:RES_FIRE | RES_COLD | SUST_INT | SLOW_DIGEST | SHOW_MODS
+
+
+# The Spear 'Aeglos'
+
+N:117:'Aeglos'
+I:<tval>22:<sval>2:<p1val>4:<p2val>0
+W:<level>15:<rarity>45:<weight>50:<cost>140000
+P:<ac>0:<ds+dd>3d6:<tohit>15:<todam>25:<toac>5
+F:WIS1 | HIDE_TYPE |
+F:BRAND_COLD | SLAY_TROLL | SLAY_ORC | FREE_ACT | RES_COLD |
+F:SLOW_DIGEST | ACTIVATE | BLESSED | SHOW_MODS
+
+
+# The Spear of Orome
+
+N:118:of Orome
+I:<tval>22:<sval>2:<p1val>4:<p2val>0
+W:<level>15:<rarity>45:<weight>50:<cost>60000
+P:<ac>0:<ds+dd>1d6:<tohit>15:<todam>15:<toac>0
+F:INT1 | INFRA1 | HIDE_TYPE |
+F:BRAND_FIRE | SLAY_GIANT | RES_FIRE | RES_LITE |
+F:FEATHER | SOMELITE | SEE_INVIS | ACTIVATE | BLESSED | SHOW_MODS
+
+
+N:119:of Tuor
+I:<tval>22:<sval>2:<p1val>3:<p2val>0
+W:<level>15:<rarity>12:<weight>50:<cost>30000
+P:<ac>0:<ds+dd>1d6:<tohit>11:<todam>13:<toac>0
+F:STEALTH1 |
+F:BRAND_COLD | SLAY_UNDEAD | RES_COLD | SEE_INVIS | SHOW_MODS
+D:The spear of Tuor Elvenfriend, a long spear, barbed with fishbone.
+
+# The Lance of Eorlingas
+
+N:120:of Eorlingas
+I:<tval>22:<sval>20:<p1val>2:<p2val>0
+W:<level>20:<rarity>23:<weight>360:<cost>55000
+P:<ac>0:<ds+dd>2d8:<tohit>2:<todam>21:<toac>0
+F:DEX1 | HIDE_TYPE | MUST2H |
+F:SLAY_EVIL | SLAY_TROLL | SLAY_ORC | SEE_INVIS | SHOW_MODS
+
+
+# The Great Axe of Durin
+
+N:121:of Durin
+I:<tval>22:<sval>25:<p1val>3:<p2val>0
+W:<level>30:<rarity>90:<weight>230:<cost>150000
+P:<ac>0:<ds+dd>3d4:<tohit>7:<todam>20:<toac>15
+F:CON1 | HIDE_TYPE | MUST2H |
+F:KILL_DRAGON | SLAY_DEMON | SLAY_TROLL | SLAY_ORC | FREE_ACT |
+F:RES_ACID | RES_FIRE | RES_LITE | RES_DARK | RES_CHAOS | SHOW_MODS
+
+
+# The Great Axe of Eonwe
+
+N:122:of Eonwe
+I:<tval>22:<sval>25:<p1val>2:<p2val>0
+W:<level>30:<rarity>120:<weight>230:<cost>200000
+P:<ac>0:<ds+dd>3d4:<tohit>11:<todam>18:<toac>8
+F:STR1 | INT1 | WIS1 | DEX1 | CON1 | CHR1 | HIDE_TYPE |
+F:SLAY_EVIL | BRAND_COLD | SLAY_UNDEAD | MUST2H |
+F:SLAY_ORC | FREE_ACT | IM_COLD | SEE_INVIS | ACTIVATE |
+F:BLESSED | SHOW_MODS
+
+
+# The Battle Axe of Balli Stonehand
+
+N:123:of Balli Stonehand
+I:<tval>22:<sval>22:<p1val>3:<p2val>0
+W:<level>30:<rarity>15:<weight>170:<cost>90000
+P:<ac>0:<ds+dd>3d8:<tohit>8:<todam>11:<toac>5
+F:STR1 | CON1 | STEALTH1 | HIDE_TYPE |
+F:SLAY_DEMON | SLAY_TROLL | SLAY_ORC | FREE_ACT |
+F:RES_ACID | RES_ELEC | RES_FIRE | RES_COLD | RES_BLIND | FEATHER |
+F:SEE_INVIS | REGEN | SHOW_MODS
+
+
+# The Battle Axe 'Dramborleg'
+
+N:124:'Dramborleg'
+I:<tval>22:<sval>22:<p1val>1:<p2val>0
+W:<level>30:<rarity>15:<weight>170:<cost>21000
+P:<ac>0:<ds+dd>2d8:<tohit>4:<todam>3:<toac>0
+F:STR1 | DEX1 | HIDE_TYPE |
+F:SLAY_TROLL | SLAY_ORC | ACTIVATE | SHOW_MODS
+D:The Axe of Tuor, the messenger of Ulmo to Gondolin.
+D:Its buffet stunned and its edge cleft all armour. It sang like the rush
+D:of eagle's wings in the air and took death as it fell.
+
+# The Lochaber Axe 'Mundwine'
+
+N:125:'Mundwine'
+I:<tval>22:<sval>28:<p1val>0:<p2val>0
+W:<level>30:<rarity>8:<weight>250:<cost>30000
+P:<ac>0:<ds+dd>3d8:<tohit>12:<todam>17:<toac>0
+F:SLAY_EVIL | RES_ACID | RES_ELEC | RES_FIRE | RES_COLD | SHOW_MODS
+
+
+# The Broad Axe 'Barukkheled'
+
+N:126:'Barukkheled'
+I:<tval>22:<sval>11:<p1val>3:<p2val>0
+W:<level>20:<rarity>8:<weight>160:<cost>50000
+P:<ac>0:<ds+dd>2d6:<tohit>13:<todam>19:<toac>0
+F:CON1 | HIDE_TYPE |
+F:SLAY_EVIL | SLAY_TROLL | SLAY_GIANT | SLAY_ORC |
+F:SEE_INVIS | SHOW_MODS
+
+
+# The Trident of Wrath
+
+N:127:of Wrath
+I:<tval>22:<sval>5:<p1val>2:<p2val>0
+W:<level>15:<rarity>35:<weight>300:<cost>90000
+P:<ac>0:<ds+dd>3d8:<tohit>16:<todam>18:<toac>0
+F:STR1 | DEX1 | HIDE_TYPE |
+F:SLAY_EVIL | SLAY_UNDEAD | RES_LITE | RES_DARK | SEE_INVIS |
+F:BLESSED | SHOW_MODS
+
+
+# The Trident of Ulmo
+
+N:128:of Ulmo
+I:<tval>22:<sval>5:<p1val>4:<p2val>0
+W:<level>30:<rarity>90:<weight>70:<cost>120000
+P:<ac>0:<ds+dd>4d8:<tohit>15:<todam>19:<toac>0
+F:DEX1 | HIDE_TYPE |
+F:SLAY_DRAGON | SLAY_ANIMAL | FREE_ACT | HOLD_LIFE | IM_ACID |
+F:RES_NETHER | SEE_INVIS | SLOW_DIGEST | REGEN | ACTIVATE |
+F:BLESSED | SHOW_MODS
+
+
+# The Scythe 'Avavir'
+
+N:129:'Avavir'
+I:<tval>22:<sval>17:<p1val>3:<p2val>0
+W:<level>40:<rarity>8:<weight>250:<cost>18000
+P:<ac>0:<ds+dd>3d3:<tohit>6:<todam>8:<toac>10
+F:DEX1 | CHR1 | HIDE_TYPE | MUST2H |
+F:BRAND_COLD | BRAND_FIRE | FREE_ACT | RES_FIRE | RES_COLD |
+F:RES_LITE | SOMELITE | SEE_INVIS | ACTIVATE | SHOW_MODS
+
+
+# Artifact 110 is unused
+# jk - now the Beaked Axe of Hurin
+N:110:of Hurin
+I:<tval>22:<sval>10:<p1val>3:<p2val>0
+W:<level>20:<rarity>15:<weight>180:<cost>90000
+P:<ac>0:<ds+dd>2d6:<tohit>12:<todam>20:<toac>0
+F:BLOWS1 | CON1 | HIDE_TYPE | BRAND_ACID
+F:SLAY_ORC | SLAY_DEMON | ACTIVATE | SHOW_MODS
+
+
+# The Mighty Hammer 'Grond'
+# Was 30 pounds (?), -10 to speed
+# The weight (100 pounds) of Grond yields about -4 to speed
+# Note that it takes 18/200 strength to wield Grond correctly
+
+N:131:'Grond'
+I:<tval>21:<sval>50:<p1val>0:<p2val>0
+W:<level>100:<rarity>1:<weight>1000:<cost>500000
+P:<ac>0:<ds+dd>9d9:<tohit>5:<todam>25:<toac>10
+F:KILL_DRAGON | SLAY_ANIMAL | SLAY_EVIL | IMPACT | SLAY_UNDEAD | MUST2H |
+F:SLAY_DEMON | SLAY_TROLL | SLAY_ORC | RES_ACID | RES_ELEC | RES_FIRE |
+F:RES_COLD | SEE_INVIS | TELEPATHY | AGGRAVATE | SHOW_MODS | INSTA_ART
+
+
+# The Flail 'Totila'
+
+N:132:'Totila'
+I:<tval>21:<sval>13:<p1val>2:<p2val>0
+W:<level>20:<rarity>8:<weight>150:<cost>55000
+P:<ac>0:<ds+dd>3d6:<tohit>6:<todam>8:<toac>0
+F:STEALTH1 |
+F:SLAY_EVIL | BRAND_FIRE | RES_FIRE | RES_CONF | ACTIVATE |
+F:SHOW_MODS
+
+
+# The Two-Handed Flail 'Thunderfist'
+
+N:133:'Thunderfist'
+I:<tval>21:<sval>18:<p1val>4:<p2val>0
+W:<level>45:<rarity>38:<weight>300:<cost>160000
+P:<ac>0:<ds+dd>2d6:<tohit>5:<todam>18:<toac>0
+F:STR1 | HIDE_TYPE | MUST2H |
+F:SLAY_ANIMAL | BRAND_FIRE | BRAND_ELEC | SLAY_TROLL | SLAY_ORC |
+F:RES_ELEC | RES_FIRE | RES_DARK | SHOW_MODS
+
+
+# The Morning Star 'Bloodspike'
+
+N:134:'Bloodspike'
+I:<tval>21:<sval>12:<p1val>4:<p2val>0
+W:<level>20:<rarity>30:<weight>150:<cost>30000
+P:<ac>0:<ds+dd>2d6:<tohit>8:<todam>20:<toac>0
+F:STR1 | HIDE_TYPE | COULD2H |
+F:SLAY_ANIMAL | SLAY_TROLL | SLAY_ORC | RES_NEXUS | SEE_INVIS |
+F:SHOW_MODS
+
+
+N:135:of Penlod
+I:<tval>21:<sval>12:<p1val>0:<p2val>0
+W:<level>20:<rarity>15:<weight>150:<cost>35000
+P:<ac>0:<ds+dd>2d6:<tohit>5:<todam>7:<toac>2
+F:BRAND_COLD | IM_COLD | ACTIVATE | SHOW_MODS | COULD2H
+D:Marshall of both the folk of the Pillar and of the Tower of Snow
+D:in Gondolin, tallest of the Noldoli.
+
+# The Mace 'Taratol'
+
+N:136:of Galdor
+I:<tval>21:<sval>5:<p1val>0:<p2val>0
+W:<level>20:<rarity>15:<weight>200:<cost>50000
+P:<ac>0:<ds+dd>3d4:<tohit>12:<todam>12:<toac>0
+F:KILL_DRAGON | BRAND_ELEC | IM_ELEC | ACTIVATE | SHOW_MODS | COULD2H
+D:Galdor was the leader of the Kindred of the Tree in Gondolin, and
+D:was held the most valiant of all the Gondothlim save Turgon alone.
+D:They fought with iron-studded maces.
+
+# The War Hammer of Aule
+
+N:137:of Aule
+I:<tval>21:<sval>8:<p1val>4:<p2val>0
+W:<level>40:<rarity>75:<weight>120:<cost>250000
+P:<ac>0:<ds+dd>7d3:<tohit>19:<todam>21:<toac>5
+F:WIS1 | HIDE_TYPE |
+F:KILL_DRAGON | SLAY_EVIL | BRAND_ELEC | SLAY_UNDEAD | SLAY_DEMON |
+F:FREE_ACT | RES_ACID | RES_ELEC | RES_FIRE | RES_COLD | RES_NEXUS |
+F:SEE_INVIS | SHOW_MODS | COULD2H
+
+
+# The Quarterstaff 'Nar-i-vagil'
+
+N:138:'Nar-i-vagil'
+I:<tval>21:<sval>3:<p1val>3:<p2val>0
+W:<level>20:<rarity>18:<weight>150:<cost>70000
+P:<ac>0:<ds+dd>1d9:<tohit>10:<todam>20:<toac>0
+F:INT1 | HIDE_TYPE |
+F:SLAY_ANIMAL | BRAND_FIRE | RES_FIRE | SHOW_MODS
+
+
+# The Quarterstaff 'Eriril'
+
+N:139:'Eriril'
+I:<tval>21:<sval>3:<p1val>4:<p2val>0
+W:<level>20:<rarity>18:<weight>150:<cost>20000
+P:<ac>0:<ds+dd>1d9:<tohit>3:<todam>5:<toac>0
+F:INT1 | WIS1 | HIDE_TYPE |
+F:SLAY_EVIL | RES_LITE | SOMELITE | SEE_INVIS | ACTIVATE | SHOW_MODS
+
+
+# The Quarterstaff of Olorin
+
+N:140:of Olorin
+I:<tval>21:<sval>3:<p1val>4:<p2val>0
+W:<level>30:<rarity>105:<weight>150:<cost>130000
+P:<ac>0:<ds+dd>2d9:<tohit>10:<todam>13:<toac>0
+F:INT1 | WIS1 | CHR1 | HIDE_TYPE |
+F:SLAY_EVIL | BRAND_FIRE | SLAY_TROLL | SLAY_ORC |
+F:HOLD_LIFE | RES_FIRE | RES_NETHER | SEE_INVIS | ACTIVATE | SHOW_MODS
+
+
+# The Mace of Disruption of Rog
+
+N:141:of Rog
+I:<tval>21:<sval>20:<p1val>6:<p2val>0
+W:<level>80:<rarity>20:<weight>400:<cost>400000
+P:<ac>0:<ds+dd>7d8:<tohit>18:<todam>18:<toac>0
+F:STR1 | TUNNEL1 | HIDE_TYPE |
+F:SLAY_DEMON | SLAY_ANIMAL | SLAY_EVIL | SLAY_UNDEAD | BRAND_ELEC |
+F:IM_ELEC | RES_DARK | RES_CHAOS | RES_DISEN | AGGRAVATE |
+F:SHOW_MODS | MUST2H
+D:Rog, the leader of the folk of the Hammer of Wrath, used this
+D:terrible Mace with a long handle to strike the Balrogs before
+D:Gondolin, and he and his Folk won the greatest glory of all those
+D:fair houses in that struggle against Doom.
+
+# The Lucerne Hammer 'Turmil'
+
+N:142:'Turmil'
+I:<tval>21:<sval>10:<p1val>4:<p2val>0
+W:<level>20:<rarity>15:<weight>120:<cost>30000
+P:<ac>0:<ds+dd>2d5:<tohit>10:<todam>6:<toac>8
+F:WIS1 | INFRA1 | HIDE_TYPE |
+F:BRAND_COLD | SLAY_ORC | RES_COLD | RES_LITE | SOMELITE | REGEN |
+F:ACTIVATE | SHOW_MODS
+
+
+# Artifact 123 is unused
+# jk - now the Main Gauche of Azaghal, which wounded Glaurung
+# The Main Gauche of Maedhros
+N:143:of Azaghal
+I:<tval>23:<sval>5:<p1val>0:<p2val>0
+W:<level>15:<rarity>30:<weight>30:<cost>40000
+P:<ac>0:<ds+dd>2d5:<tohit>12:<todam>14:<toac>0
+F:KILL_DRAGON | IM_FIRE
+
+
+# The Long Bow of Bregor
+
+N:144:of Bregor
+I:<tval>19:<sval>13:<p1val>3:<p2val>0
+W:<level>40:<rarity>20:<weight>40:<cost>35000
+P:<ac>0:<ds+dd>0d0:<tohit>20:<todam>22:<toac>0
+F:DEX1 | STEALTH1 | HIDE_TYPE |
+F:RES_DISEN | SHOTS1 | SHOW_MODS
+D:The bow of Bregor father of Barahir, an ancient heirloom
+D:of the house of Beor.
+
+
+# The Long Bow of Bard
+
+N:145:of Bard
+I:<tval>19:<sval>13:<p1val>3:<p2val>0
+W:<level>30:<rarity>20:<weight>40:<cost>20000
+P:<ac>0:<ds+dd>0d0:<tohit>17:<todam>19:<toac>0
+F:DEX1 | HIDE_TYPE |
+F:FREE_ACT | MIGHT1 | SHOW_MODS
+
+
+# The Light Crossbow of Duilin.
+
+N:146:of Duilin
+I:<tval>19:<sval>23:<p1val>10:<p2val>0
+W:<level>50:<rarity>25:<weight>110:<cost>50000
+P:<ac>0:<ds+dd>0d0:<tohit>10:<todam>14:<toac>0
+F:SPEED1 |
+F:RES_FIRE | MIGHT1 | ACTIVATE | SHOW_MODS
+D:Duilin, leader of the folk of the Swallow in Gondolin,
+D:the swiftest of all men to run and leap, and surest
+D:of archers at a mark.
+
+
+# JK - now the black axe of Gothmog, which slew Fingon
+
+N:147:of Gothmog
+I:<tval>22:<sval>28:<p1val>-4:<p2val>0
+W:<level>30:<rarity>8:<weight>250:<cost>30000
+P:<ac>0:<ds+dd>3d8:<tohit>14:<todam>19:<toac>0
+F:BRAND_FIRE | CHR1 | ACTIVATE | SHOW_MODS | CURSED
+D:The Black Axe of Gothmog, which he used to cleave the skull of
+D:Hurin son of Galdor
+
+N:148:of Gondor
+#I:tval:sval:pval
+#W:level:rarity:weight:cost
+#P:ac:ds+dd:tohit:todam:to_ac
+#F:flags
+I:<tval>17:<sval>2:<p1val>0:<p2val>0
+W:<level>20:<rarity>5:<weight>3:<cost>25000
+P:<ac>0:<ds+dd>10d8:<tohit>10:<todam>20:<toac>0
+F:KILL_EVIL
+D:A single arrow, black feathered and barbed with steel. The point is
+D:painted red.
+
+# The Quarterstaff 'Eriril'
+
+N:149:of Saruman
+I:<tval>21:<sval>3:<p1val>6:<p2val>-5
+W:<level>20:<rarity>18:<weight>150:<cost>15000
+P:<ac>0:<ds+dd>3d9:<tohit>21:<todam>2:<toac>0
+F:CHR1 | INT2 | WIS2 | HIDE_TYPE | ACTIVATE | SHOW_MODS
+

@@ -1,0 +1,721 @@
+=== Character Attributes ===
+
+During the process of Character Generation (see birth.txt [1]), you
+will select your character's three primary attributes - its sex, race
+and class. If you select a spellcasting class, you will also make a
+choice of magic realms at that time. Your character will be randomly
+assigned a number of other attributes such as height, weight, social
+class, and background history
+
+Your choices as to sex, race, class and realm are irrevocable and will
+remain fixed for the entire life of that character. The only exception
+to this, is that the Chaos spell 'Polymorph Self' (and the mutation of
+the same name) may cause your race to change as one of its possible
+effects.
+
+In addition to these attributes, there are several statistics which are
+used to determine your character's relative skills and abilities as
+follows:
+
+
+--- Primary Statistics ---
+
+Each character has six primary statistics or 'stats'. These are
+strength, intelligence, wisdom, dexterity, constitution and charisma,
+which modify the abilities of the character in a variety of ways. For
+example, strength affects your carrying capacity, the amount of damage
+you to a monster when you hit it and the number of blows per round you
+get with a weapon. A more complete discussion of the primary statistics
+is contained later in this document (see below [2]).
+
+--- Experience ---
+
+Experience affects almost everything else about your character. 
+Experience can be gained as your character kills monsters, casts spells
+or prays for the first time, learns about an object kind by using it,
+disarms traps and unlocks doors.  Certain classes may also gain
+experience by destroying specific dungeon spell books and there are
+potions in the dungeon that will boost your experience if you quaff
+them.
+
+When your character's experience crosses certain fixed boundaries, you
+will attain a new experience level (up to a maximum of 50). When this
+happens, your hitpoints, mana (if any), certain skills such as melee
+fighting and bows and throws will all increase. Some races and classes
+will also gain new powers and abilities when crossing certain
+experience thresholds.
+
+Deep down inside, the real objective of the game is to increase your
+experience, and certain other characteristics, and also to collect
+useful items, to give you a decent chance against the great Serpent of
+Chaos. Certain monsters can "drain" your experience, and thus your
+level, which will cause you to lose all of the effects of the higher
+level. Luckily, you can restore drained experience through magical
+means, or by simply regaining the experience all over again.
+
+--- Gold (AU) ---
+
+Each character has some gold, which can be used to buy items and
+services from the shops and other buildings on the town level. Gold
+can be obtained by selling items to the shops, taking it from the
+corpses of dead monsters, mining it and by finding it lying on the
+dungeon floor.
+
+Each character starts out with some gold, the amount of which is
+based on the character's social class, charisma, sex (female
+characters start with more gold), and other stats (less powerful
+characters start with more gold). Each character also starts out
+with a few useful items, which may be kept, or sold to a
+shop-keeper for more gold.
+
+--- Armor Class ---
+
+Each character has an armor class, representing how well the character
+can avoid damage. Your armor class is affected by your dexterity and
+your equipment. A more detailed discussion of Armor Class can be found
+in the Combat section (see attack.txt#Armor [3]). 
+
+--- Hit Points ---
+
+Each character has hit points, representing how much damage the
+character can sustain before he dies. Your hit points are derived
+from your race, class, level, and constitution, and can be boosted
+by magical means. Hit points may be regained by resting, or by a
+variety of magical means.
+
+--- Spell Points (Mana) ---
+
+Each character has spell points, or mana, which represents how many
+spells (or prayers) a character can cast (or pray). Your spell
+points (sometimes called mana) are derived from your class, level
+and intelligence (for spells) or wisdom (for prayers). Spell points
+may be regained by resting, or by a few magical means.
+
+--- Character Skills ---
+
+Each character also has several primary skills: disarming, magic
+devices, saving throws, stealth, searching, perception, melee and bows
+and throws, which are derived from the character's race, class,
+experience level, stats and their current equipment. These skills have
+fairly obvious effects, but will be described more completely below.
+The starting abilities of a character are based upon race and class.
+Abilities may be adjusted by high or low stats, and may increase with
+the level of the character (see below for details [4]).
+
+Each character may have one or more racially intrinsic skills and
+racial abilities, which may also include special resistances and
+activations.
+
+
+***** <TheSexes>
+=== Gender ===
+
+You character may be male or female.  Males tend to be heavier but
+there are no significant gameplay differences between the two sexes.
+
+
+***** <TheRaces>
+=== Races ===
+
+There are nine different races that you can choose from in XBAND.
+Each race has various strengths and weaknesses and its own adjustments
+to a character's stats and abilities. Many races also have intrinsic
+abilities and powers.
+ 
+Black Orc
+   Black Orcs are the largest and strongest of all orcs. Like all orcs,
+   their skin is green, but it is such a dark shade that it appears
+   almost black. Their discipline is legendary; they are completely
+   fearless.
+
+Savage Orc
+   Savage Orcs are tribal; They cover themselves with mystical tattoos
+   that believe protect them from evil magic.
+  
+Ogre
+   Ogres are notoriously single-minded, and as such, are almost
+   impossible to confuse. They are also a bit sluggish. They are very
+   strong and tough, but also very clumsy.
+  
+Ettin
+   Ettins have two heads, and as such, it is very difficult to blind
+   them. They are very strong and tough, but also very clumsy.
+
+Stone Troll
+   Stone Trolls regenerate, and have rock-hard skin. They are
+   also a bit sluggish. They are very strong and tough, but also very
+   stupid.
+  
+Goblin
+   Goblins have free action. They are also very speedy. They are
+   physically somewhat weak, but are very nimble and smart.
+  
+Night Goblin
+   Night Goblins can see invisible things. They are also very speedy.
+   They are physically somewhat weak, but are very nimble and smart.
+
+Hobgoblin
+   Hobgoblins are the sneakiest and most treacherous of all orc-kind.
+   No-one likes them. Thousands of generations of back-stabbing have
+   led to Hobgoblins being highly resistant to poison. 
+   
+Gremlin
+   Gremlins are small, winged humanoids that are closely related to
+   Goblins. As Gremlins age, their skin grows tougher and tougher,
+   until it finally reaches a stone-like consistency. Because of their
+   stone skin, Gremlins are much tougher than goblins, but also much
+   less agile. 
+
+Human
+   These scrawny pink creatures are physically weak, although they do
+   have some aptitude for magic. They dwell above ground, and as such
+   have no infravision, but are also less susceptible to Light attacks.
+   They don't eat much.
+
+Snotling
+   These tiny green creatures are weak, clumsy, and stupid. They have
+   no redeeming qualities; everyone hates them.
+  
+
+***** <TheClasses>
+=== Classes ===
+ 
+There are eleven different classes that you can choose from in
+XBAND. Each class has various strengths and weaknesses and its own
+adjustments to a character's stats and abilities. Many classes also
+have intrinsic abilities and powers. These are often linked to the
+character's experience level and only become available later in the
+game.
+ 
+--- The Classes ---
+
+Warrior
+    A Warrior is a hack-and-slash character, who solves most of his
+    problems by cutting them to pieces, but will occasionally fall back
+    on the help of a magical device. Unfortunately, many high-level
+    devices may be forever beyond their use.
+
+    A warrior's prime statistics are his or her Strength, Dexterity and
+    Constitution. A Warrior will be good at Fighting and Throwing/Bows,
+    but bad at most other skills. Warriors cannot learn magic and gain
+    experience for destroying high level spellbooks.
+
+    As a warrior's experience increases, he becomes more proficient
+    with his weapons gaining an additional attack per round with his
+    missile weapon. As his skill improves, a warrior will become more
+    confident in his ability to defeat his opponents and eventually
+    will become resistant to fear attacks.
+
+Mage
+    A Mage is a spell caster that must live by his wits as he cannot
+    hope to simply hack his way through the dungeon like a warrior. In
+    addition to his spellbooks, a mage should carry a range of magical
+    devices to help him in his endeavors which he can master far more
+    easily than anyone else. A mage is also better able to resist the
+    effects of spells cast at him by his enemies.
+
+    A mage's prime statistic is Intelligence as this determines his
+    spell casting ability. Good Wisdom and Dexterity also help. There
+    is no rule that says a mage cannot become a good fighter, but
+    spells are the mage's true strength. With two notable exceptions,
+    mages should avoid wearing armor on their hands as this can
+    restrict their spell casting ability. 
+
+    Unlike other spellcasting classes, mages can freely choose any two
+    magic realms, although they will never be as good at Life magic as
+    a priest. Otherwise, mages tend to learn and cast all the spells in
+    their realms better than any other character except the high mage
+    who has concentrated his efforts so as to excel in a single realm.
+
+Priest
+    A Priest is a character devoted to serving a higher power. They
+    explore the dungeon in the service of their God and if treasure
+    just happens to fall into their packs, well, so much more to the
+    glory of their religion. A Priest's primary stat is Wisdom since
+    this determine his success at praying to his deity. Since Priests
+    receive new prayers as gifts from their patron deity, they cannot
+    choose which ones they will learn. Priests are familiar with
+    magical devices which they believe act as foci for divine
+    intervention in the natural order of things, but are not as good as
+    a mage in their use.
+
+    Priests are good at resisting spells cast at them and make decent
+    fighters but prefer blunt weapons over edged ones. A priest
+    wielding an edged weapon will be so uncomfortable with it that his
+    fighting ability will be affected unless it has first been blessed
+    by the Gods. High level priests who practice Life magic will learn
+    to invoke the power of their patron deity to bless such weapons.
+
+    There are two types of priests in XBAND: the ordinary priests
+    who, select Life magic as their primary realm, and the 'dark'
+    priests, who select Death magic instead. Since the natural
+    inclination of priests is towards Life Magic, priests who select
+    Life magic will be able to learn their prayers faster and better
+    than their evil colleagues. Priests can also select a secondary
+    realm from the other five realms, and should be able to learn all
+    spells in it although not as efficiently as mages.
+
+Rogue
+    A Rogue is a character that prefers to live by his cunning, but is
+    capable of fighting his way out of a tight spot. Rogues are good at
+    locating hidden traps and doors and are the masters of disarming
+    traps and picking locks. A rogue has a high stealth allowing him to
+    sneak around many creatures without having to fight, or to get in a
+    telling first blow. A rogue may also backstab a fleeing monster.
+
+    A rogue is better than a warrior or paladin with magical devices,
+    but still cannot rely on their performance. Rogues can also learn a
+    few spells from a choice of four realms, but not the powerful
+    offensive spells magi can use. A rogue's primary statistics are
+    Intelligence and Dexterity but Strength and Constitution are
+    important too.
+
+    There are several subtypes of Rogues in XBAND and the exact type
+    is determined by the realm of magic chosen. The common Thief, will
+    probably be content with Arcane magic and its wide applicability.
+    The Burglar, on the other hand, is more interested in the Sorcery
+    spells, which allow him or her to do the job fast and efficiently.
+    Assassins' partiality for Death magic is well known, and they are
+    feared for it. 
+    
+    As a rogue increases in experience, his proficiency with the sling
+    improves and he will ultimately gain two additional shots per round
+    with his favorite missile launcher.
+
+Ranger
+    A Ranger is a combination of a warrior and a mage who has developed
+    a special affinity for the natural world around him. He is a good
+    fighter and the best of the classes with a missile weapon such as
+    a bow. A ranger has a good stealth, good perception, good
+    searching, a good saving throw and is good with magical devices.
+
+    A Ranger's primary stats are Intelligence and Dexterity since these
+    affect his spell casting ability and his ability with his bow but,
+    as a fighter, Strength and Constitution are important too. As a
+    ranger's experience increases, so does his skill with his primary
+    weapon - the bow and he will learn to notch and loose arrows very
+    quickly. His ability with a cross bow will similarly increase but
+    not to the same extent. Unfortunately, because a ranger is really a
+    dual class character, more experience is required for him to
+    advance through the levels.
+
+    All rangers are trained in Nature magic, and all Nature spells are
+    available to them. They even learn these spells almost as fast as
+    mages. They can also select a secondary realm and may choose from
+    any realm except Life magic, but they are slow learners of the
+    second realm, and may find themselves unable to learn some of the
+    highest level spells.
+
+Paladin
+    A Paladin is a combination of a warrior and a priest. Paladins are
+    very good fighters, second only to the warrior class, but not very
+    good at missile weapons. A paladin lacks much in the way of
+    abilities. He is poor at stealth, perception, searching, and
+    magical devices but has a decent saving throw due to his divine
+    alliance.
+
+    A paladin's primary stats are Strength, Dexterity, Constitution and
+    Wisdom since he must both fight and pray for divine intervention.
+    The paladin receives prayers at a slower pace then the priest, but
+    can receive even the most powerful prayers although at a higher
+    cost and fail rate. Unlike priests, Paladins do not learn a second
+    magic realm. Because a paladin is really a dual class character,
+    more experience is required for him to advance through the levels.
+
+    There are two types of Paladins: those trained in Life magic and
+    their evil counterparts (the 'Death Knights') who are trained in
+    Death magic. An 'ordinary' paladin will gain experience for
+    destroying high-level spellbooks from all the magic realms except
+    Life. A Death Knight, on the other hand, is very tolerant of the
+    other realms and will only gain experience for destroying
+    high-level Life books.
+
+    As a Paladin gains in experience he will become more confident in
+    his abilities to defeat his enemies and in his deity's power to
+    protect him. As a result, Paladins become resistant to fear at
+    higher levels.
+
+Warrior-Mage
+    A Warrior-Mage is precisely what the name suggests: a cross between
+    the warrior and mage classes. While their brothers, the rangers,
+    specialize in Nature magic and survival skills, true Warrior-Mages
+    attempt to reach the best of both worlds. As warriors they are much
+    superior to the usual Mage class.
+
+    The Warrior-Mage is recommended for the players who want to cast
+    spells but whose mages tend to die too quickly. However, the power
+    does not come without a price as Warrior-Mages require more
+    experience to advance levels than any other class.
+
+    Warrior-mages begin the game with Arcane magic, and they can freely
+    select another realm of magic. Although they do not gain new spells
+    as fast as regular mages, they will eventually learn every spell in
+    both realms, thus making a very competitive choice for players who
+    appreciate Arcane magic.
+
+Chaos-Warrior
+    Chaos Warriors are the feared servants of the terrible Demon Lords
+    of Chaos. Every Chaos Warrior has a Patron Demon and, when gaining
+    a level, may receive a reward from his Patron. He might be healed
+    or polymorphed, his stats could be increased, or he might be
+    rewarded with an awesome weapon. His Patron Demon might, for some
+    reason, get annoyed with him and do something fairly nasty like
+    surround him with monsters, drain his stats or wreck his equipment
+    or they might simply ignore him. The Demon Lords of Chaos are
+    chaotic and unpredictable indeed. The exact type of reward depends
+    on both the Patron Demon (different Demons give different rewards)
+    and chance.
+
+    Chaos Warriors are, as one might expect, trained in Chaos magic.
+    They are not interested in any other form of magic. They can learn
+    every Chaos spell.
+
+    As a chaos-warrior gains in experience, he becomes more confident
+    of his ability to defeat his enemies and will learn to resist fear
+    at higher levels. In addition, as a result of their prolonged
+    service to the Demon Lords of Chaos, a chaos-warrior will eventually
+    become resistant to the effects of chaos.
+
+Monk
+    The Monk character class is very different from all other classes.
+    Although they can use weapons and armor just like any other class,
+    their training in martial arts makes them much more powerful with
+    no armor or weapons. To gain the resistances necessary for
+    survival at higher levels a monk may need to wear some kind of
+    armor, but if the armor he wears is too heavy, it will severely
+    disturb his martial arts maneuvers. 
+
+    As a monk gains in experience he learns, new, powerful forms of
+    attack and is able to land more blows per round. His defensive
+    capabilities increase likewise. Fortunately, the amount of armor a
+    monk can wear, while still fighting efficiently, also increases
+    with experience.
+
+    In addition, the monk's agility allows him to resist paralyzing
+    attacks once he reaches a high enough level (but only if his armor
+    is not restricting his movement). Monk's are able to move quickly
+    and will become faster and be able to strike more quickly as they
+    gain experience.
+
+    The different sects of monks are devoted to different areas of
+    magic. The typical monk is interested in the harmony of nature, and
+    studies Nature magic. An idealist monk would select Life magic, and
+    try to work to benefit his neighbor. But there are also dark
+    monks, who practice Death magic. A monk will eventually learn all
+    prayers in the discipline of their choice.
+
+Mindcrafter
+    The Mindcrafter is a unique class that uses the powers of the mind
+    instead of magic. These powers are unique to Mindcrafters, and vary
+    from simple extrasensory powers to mental domination of others.
+    Since these powers are developed by the practice of certain
+    disciplines, a Mindcrafter requires no spellbooks to use them. The
+    available powers are simply determined by the character's level.
+
+    A Mindcrafter's primary stat is Wisdom since this is used to
+    determine how well he / she can perform the psychic powers, and in
+    combat a Mindcrafter is roughly the equivalent of a priest. Unlike
+    the priest, however, a Mindcrafter is never penalized for wielding
+    an edged weapon.
+
+    Although the powers of a Mindcrafter may seem like magic, this is
+    not strictly speaking the case. They are mental powers, independent
+    of the ordinary sources of magic. Consequently, Mindcrafters are
+    not interested in 'magic' and learn no spells or prayers.
+
+    As a Mindcrafter's experience increases, so does his ability to
+    control his body with his mind as do his mental powers. A
+    mindcrafter will learn to control his fear early in his career and
+    to resist becoming confused at higher levels. His practice of
+    mental discipline will mean that eventually his wisdom will be
+    sustained. Very experienced mindcrafters will gain the power of
+    telepathy.
+
+High Mage
+    High mages are mages who specialize in one particular field of
+    magic and learn it very well - much better than the ordinary mage.
+    For the price of giving up a second realm of magic, they gain
+    substantial benefits in the mana costs, minimum levels, and failure
+    rates in the spells of the realm of their specialty.
+
+    A high mage's prime statistic is intelligence as this determines
+    his spell casting ability. Good wisdom and dexterity also help.
+    There is no rule that says a high mage cannot become a good
+    fighter, but spells are the mage's true strength. With two notable
+    exceptions, high mages should avoid wearing armor on their hands as
+    this can restrict their spell casting ability.
+
+    High mages may freely choose any realm but it should be noted that
+    a high mage specializing in Life Magic will not learn it as well as
+    a priest.
+ 
+
+***** <PrimaryStats>
+=== Primary Statistcs ===
+
+Each character has six primary "stats", strength, intelligence, wisdom,
+dexterity, constitution, and charisma, which modify the abilities of
+the character in a variety of ways. Every stat has a numerical value,
+ranging from a minimum of 3, up to a normal maximum of 18, and even
+higher, into the "percentile" range, represented as  "18/01" through
+"18/100". Actually, every stat can be raised even above 18/100 by
+magical means, up to a pure maximum of 18/220, which is represented as
+"18/***".
+
+Traditionally, a percentile stat such as "18/50" has been thought of as
+representing a value part way between 18 and 19, and this is one way to
+think of them. However, often, the best way to view the "bonus" values
+after the "18/" is as "tenth" points, since it often takes the same
+magic to raise a stat from, say, 4 to 5, or 16 to 17, as it does from,
+say, 18/40 to 18/50. The important thing to remember is that almost all
+internal calculations "ignore" the final digit of any "bonus", so that,
+for example, "18/40" and "18/49" are always have the same effects.
+
+--- The Primary Statistics ---
+
+Strength
+     Strength is critical to fighting effectively in melee combat and
+     with missile weapons. A high strength will improve your chances of
+     getting multiple blows with your melee weapon and, in addition,
+     will dramatically increase the amount of damage done with each
+     hit. Strength also has a marginal effect on your chance to hit
+     your opponent. Characters with low strength may receive penalties.
+     Strength is also useful in tunneling, bashing and in carrying
+     heavy items without being slowed down.
+ 
+Intelligence
+     Intelligence affects the spellcasting abilities of mage-like
+     spellcasters (high mages, mages, warrior-mages, rangers, chaos
+     warriors and rogues). Intelligence will affect the number of
+     spells these classes may learn each level, the number of spell
+     points they receive and their spell fail rates. These classes
+     cannot learn spells if their intelligence is 7 or lower. Also,
+     intelligent characters are better at using magic devices, picking
+     locks and disarming traps.
+ 
+Wisdom
+     Wisdom affects the ability of priest-like spellcasters (priests,
+     paladins and monks) to use prayers. Wisdom will affect the number
+     of spells these classes may learn each level, the number of spell
+     points they receive and their spell fail rates. In addition, 
+     wisdom is also used to determine a mindcrafter's ability to use
+     his or her mental powers. These classes cannot learn spells if
+     their wisdom is 7 or lower. Wise character's will have better
+     chances of resisting magical spells cast upon them by monsters.
+ 
+Dexterity
+     Dexterity is a combination of agility and quickness. A high
+     dexterity may allow a character to get multiple blows with lighter
+     weapons, thus greatly increasing his kill power, and will increase
+     his chances of hitting with any weapon and dodging blows from
+     enemies. Dexterity is also useful in picking locks, disarming
+     traps, and protecting yourself from some of the thieves that
+     inhabit the dungeons.
+ 
+Constitution
+     Constitution is a character's ability to resist damage to his
+     body, and to recover from damage received. Therefore a character
+     with a high constitution will receive more hit points and also
+     recover them faster while resting.
+
+Charisma
+     Charisma represents a character's personality and physical
+     appearance. A character with a high charisma will receive better
+     prices from store owners, whereas a character with a very low
+     charisma may be robbed blind. A high charisma will also mean more
+     starting money for the character. Charisma is also used when
+     calculating the success of a mindcrafter at dominating a monster.
+ 
+
+***** <PrimarySkills>
+=== Primary Skills ===
+
+Characters possess some different abilities which can help them to
+survive. The starting abilities of a character are based upon race and
+class. Abilities may be adjusted by high or low stats, and may increase
+with the level of the character with the rate of increase dependent
+upon the level of the character.
+ 
+Melee
+     Melee is the ability to hit and do damage with weapons or fists.
+     Normally a character gets a single blow from any weapon, but if
+     his dexterity and strength are high enough, he may receive more
+     blows per round with lighter weapons. Strength and dexterity both
+     modify the ability to hit an opponent. This skill increases with
+     the level of the character.
+ 
+Bows and Throws
+     Using ranged missile weapons (and throwing objects) is included in
+     this skill. Different stats apply to different weapons, but this
+     ability may modify the distance an object is thrown/fired, the
+     amount of damage done, and the ability to hit a creature. This
+     skill increases with the level of the character.
+ 
+Saving Throws
+     A Saving Throw is the ability of a character to resist the effects
+     of a spell cast on him by another person/creature. This does not
+     include spells cast on the player by his own stupidity, such as
+     quaffing a nasty potion. This ability increases with the level of
+     the character, but then most high level creatures are better at
+     casting spells, so it tends to even out. A high wisdom also
+     increases this ability.
+ 
+Stealth
+     The ability to move silently about is very useful. Characters with
+     good stealth can usually surprise their opponents, gaining the
+     first blow. Also, creatures may fail to notice a stealthy
+     character entirely, allowing a player to avoid certain fights.
+     This skill is based entirely upon race and class, and will never
+     improve unless magically enhanced.
+ 
+Disarming
+     Disarming is the ability to remove traps (safely), and includes
+     picking locks on traps and doors. A successful disarming will gain
+     the character some experience. A trap must be found before it can
+     be disarmed. Dexterity and intelligence both modify the ability to
+     disarm, and this ability increases with the level of the
+     character.
+ 
+Magical Devices
+     Using a magical device such as a wand or staff requires experience
+     and knowledge. Spell users such as magi and priests are therefore
+     much better at using a magical device than say a warrior. This
+     skill is modified by intelligence, and increases with the level of
+     the character.
+ 
+Perception (Searching Frequency)
+     Perception is the ability to notice something without actively
+     seeking it out. This skill is based entirely upon race and class,
+     and will never improve unless magically enhanced.
+ 
+Searching (Searching Ability)
+     To search is to actively look for secret doors, floor traps, and
+     traps on chests. Rogues are the best at searching, but magi,
+     rangers, and priests are also good at it. This skill is based
+     entirely upon race and class, and will never improve unless
+     magically enhanced.
+
+Infra-vision
+     Infra-vision is the ability to see heat sources. Since most of the
+     dungeon is cool or cold, infra-vision will not allow the player to
+     see walls and objects. Infra-vision will allow a character to see
+     any warm-blooded creatures up to a certain distance. This ability
+     works equally well with or with out a light source. The majority
+     of XBAND's creatures are cold-blooded, and will not be detected
+     unless lit up by a light source. Most non human races have innate
+     infra-vision ability. Human can gain infra-vision only if it is
+     magically enhanced.
+
+
+***** <StatBonusTable>
+=== Stat Bonus Tables ===
+
+Each of the races and classes has certain modifications to their
+starting statistics. 
+
+--- Table 1 - Race Statistic Bonus Table ---
+
+              STR  INT  WIS  DEX  CON  CHR  Hit Dice 
+Black Orc     +2    0    0    0   +2   +2      11    
+Ettin          0   +2   +2   -4   +2    0      14    
+Goblin        -2   +2   +2   +2   -2   -2       7   
+Gremlin       -2    0    0   -2   +4   -2       7
+Hobgoblin      0    0    0   +4    0   -6       9    
+Human          0    0    0    0    0    0       9
+Night Goblin  -2   +4   +4   +2   -4   -2       7    
+Ogre          +2    0    0   -4   +2    0      14    
+Savage Orc     0   -2   -2   +2   +2   +2      11    
+Snotling      -6   -6   -6   -6   -6   -6       4
+Stone Troll   +4   -4   -4   -4   +4   -2      14    
+
+
+--- Table 2 - Class Statistic Bonus Table ---
+
+              STR  INT  WIS  DEX  CON  CHR  Hit Dice  Exp Penalty
+Warrior       +5   -2   -2   +2   +2   -1      +9         +0%
+Mage          -5   +3    0   +1   -2   +1       0         +30%
+Priest        -1   -3   +3   -1    0   +2      +2         +20%
+Rogue         +2   +1   -2   +3   +1   -1      +6         +25%
+Ranger        +2   +2    0   +1   +1   +1      +4         +30%
+Paladin       +3   -3   +1    0   +2   +2      +6         +35%
+Warrior-Mage  +2   +2    0   +1    0   +1      +4         +50%
+Chaos Warrior +2   +1    0   +1   +2   -2      +5         +35
+Monk          +2   -1   +1   +3   +2   +1      +6         +40%
+Mindcrafter   -1    0   +3   -1   -1   +2      +2         +25%
+High Mage     -5   +4    0    0   -2   +1       0         +30%
+ 
+
+***** <SkillBonusTable>
+=== Ability Tables ===
+
+Each of the races and classes has certain modifications to their
+starting abilities. Players may also receive an additional level-based
+bonus to certain skills which is based on their class. For example
+mages improve their magical device skill more rapidly than warriors. As
+noted above, some skills will not improve unless magically enhanced.
+
+
+--- Table 1 - Race Skill Bonus Table ---
+
+              Dsrm  Dvce  Save  Stlh  Srch  Prcp  Melee Bows  Infra
+Human         +0    +0    +0    +0    +0    +10   +0    +0    None
+Half-Elf      +2    +3    +3    +1    +6    +11   -2    +3    20 feet
+Elf           +5    +6    +6    +2    +8    +12   -6    +6    30 feet
+Hobbit        +15   +18   +18   +5    +12   +15   -11   +6    40 feet
+Gnome         +10   +12   +12   +3    +6    +13   -8    +0    40 feet
+Dwarf         +2    +9    +10   -1    +7    +10   +7    +0    50 feet
+Half-Orc      -3    -3    -3    -1    +0    +7    +3    -3    30 feet
+Half-Troll    -5    -8    -8    -2    -1    +5    +10   -5    30 feet
+Amberite      +4    +5    +5    +2    +3    +13   +6    +0    None
+High-Elf      +4    +20   +20   +4    +3    +14   +0    +10   40 feet
+Barbarian     -2    -10   +2    -1    +1    +7    +10   +0    None
+Half-Ogre     -3    -5    -5    -2    -1    +5    +12   +0    30 feet
+Half-Giant    -6    -8    -6    -2    -1    +5    +13   +2    30 feet
+Half-Titan    -5    +5    +2    -2    +1    +8    +13   +0    None
+Cyclops       -4    -5    -5    -2    -2    +5    +10   +6    10 feet
+Yeek          +2    +4    +10   +3    +5    +15   -5    -5    20 feet
+Klackon       +10   +5    +5    +0    -1    +10   +5    +5    20 feet
+Kobold        -2    -3    -2    -1    +1    +8    +8    -8    30 feet
+Nibelung      +3    +5    +10   +1    +5    +10   +5    +0    50 feet
+Dark Elf      +5    +15   +20   +3    +8    +12   -5    +7    50 feet
+Draconian     -2    +5    +3    +0    +1    +10   +5    +5    20 feet
+Mind Flayer   +10   +25   +15   +2    +5    +12   -8    -5    40 feet
+Imp           -3    +2    -1    +1    -1    +10   +5    -5    30 feet
+Golem         -5    -5    +10   -1    -1    +8    +10   +0    40 feet
+Skeleton      -5    -5    +5    -1    -1    +8    +8    +0    20 feet
+Zombie        -5    -5    +8    -1    -1    +5    +10   +0    20 feet
+Vampire       +4    +10   +10   +4    +1    +8    +5    +0    50 feet
+Spectre       +10   +25   +20   +5    +5    +14   -10   -5    50 feet
+Sprite        +10   +10   +10   +4    +10   +10   -8    +0    40 feet
+Beastman      -5    -2    -1    -1    -1    +5    +9    +5    None
+Ghoul         -3    -3    +6    +1    +0    +5    +5    +0    20 feet
+
+
+--- Table 2 - Class Skill Bonus Table ---
+
+              Dsrm  Dvce  Save  Stlh  Srch  Prcp  Melee  Bows
+Warrior       25+12 18+7  18+10  1    14/2        25+100 17+55
+Mage          30+7  36+13 30+9   2    15/20       10+25  10+14
+Priest        25+7  30+10 32+12  2    16/8        16+50   7+18
+Rogue         45+15 32+10 28+10  5    32/24       15+70  20+40
+Ranger        30+8  32+10 28+10  3    24/16       15+65  20+63
+Paladin       20+7  24+10 26+11  1    12/2        19+76  10+14
+Warrior-Mage  30+7  30+10 28+9   2    18/16       20+75  20+50
+Chaos Warrior 20+7  25+11 25+10  1    14/12       23+90   7+40
+Monk          45+15 32+11 28+10  5    32/24       12+30  14+25
+Mindcrafter   30+10 30+10 30+10  3    22/16       15+30  15+20
+High Mage     30+7  36+13 30+9   2    15/20       10+15  10+10
+
+
+--
+Original   : (??)
+Updated    : (??)
+Updated    : Zangband DevTeam
+Last update: October 15, 2001
+
+***** Begin Hyperlinks
+***** [1] birth.txt
+***** [2] charattr.txt#PrimaryStats
+***** [3] defend.txt#Armor
+***** [4] charattr.txt#PrimarySkills
+

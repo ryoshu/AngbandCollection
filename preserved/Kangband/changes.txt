@@ -1,0 +1,355 @@
+Kangband 2.9.3r1
+================
+
+Bug Fixes
+---------
+- Fixed bug preventing the wiz_create_item debug command from being
+  able to create Druid and Illusionist books.
+- Fixed problem with the names of two of the new amulets.
+- Fixed problems with Druid and Illusionists being assigned the wrong
+  list of spells.
+- Fixed problem with Bloodspike not being correctly generated in one
+  of the new quests.
+- Fixed an inaccessible area in one of the quests.
+- The "disintegrate" spell will no longer affect permanent grids.
+
+
+Kangband 2.9.3
+==============
+
+Codebase Updates
+----------------
+- Updated Kangband to the Angband 2.9.3 code base and applied latest
+  bug fixes where applicable.
+- Moved some Kangband-specific code to different, more appropriate
+  locations.
+
+New / Changed Features
+----------------------
+- Added the quests for the four empty plots included in 2.9.2r2.
+  These need additional play testing.  This addition should allow
+  players to properly import characters started in KangbandTk.
+- Updated the help files for the new races, classes, terrain and
+  added some other corrections.  The help files still need more work.
+- Removed the [y/n/k] pickup prompt.  Players should use the command
+  command to access the auto-destroy/auto-pickup menus available from
+  the main options screen to get this functionality for individual
+  object types.
+- Added some color to quest-related messages so that they are more
+  visible to the player.
+
+Bug Fixes
+---------
+- Fixed a bug with the Sauron and Morgoth quests which made it
+  impossible to win the game.
+- Fixed a bug preventing unique's escorts from being generated inside
+  quest levels under certain circumstances.
+- Fixed bug with the town lighting code keeping certain terrain types
+  illuminated at night.
+- Fixed a bug with being able to run across chasm terrain under
+  certain circumstances.
+- Fixed a bug with the "Compare weapons" service .. this still needs
+  more work.
+
+
+Kangband 2.9.2r2
+================
+
+New / Changed Features
+----------------------
+- Permanently turned on the functionality of the following options
+  (which have been removed): "flow_by_sound", "flow_by_smell",
+  "smart_monsters", "smart_packs", "smart_learn". Also, "smart_cheat"
+  is now a birth option.
+- Added a "fast_flow" option that makes the monster flow code less
+  CPU intensive (from Zangband/Oangband). 
+- Added two new flags "GOOD" and "FRIENDLY". Monsters assigned the
+  'FRIENDLY' flag will fight for the player unless he betrays them.
+  (l)ooking at a monster will tell you whether it is friendly or not.
+- "Friendly" monsters will occasionally be given "pet" status. Pets
+  have a chance of remaining "friendly" if the player damages them.
+- Added commands to control friendly monsters (accessed via '$') and
+  made friendly monsters smarter (adapted from Zangband).
+- Added HURT_LITE, HURT_ACID, HURT_ELEC, HURT_FIRE and HURT_COLD to the
+  list of available flags for items and players.  HURT_LITE prevents
+  any resistance to light attacks. The others flags prevent temporary
+  resistance to their respective attack forms. They do not affect the
+  permanent resistances.
+- Also added the "GHOSTLY" and "INVISIBLE" flags for items and players.
+  These flags make the player "ghostlike" and invisible respectively.
+- Added two new races - Ents and Wraiths. Ents are taken pretty much
+  from Oangband without the hard-coded changes to STR, DEX, etc. Ents
+  have the HURT_FIRE flag.  Wraiths may pass through walls and resist
+  cold and poison intrinsically. However, they aggravate and are hurt
+  by light.
+- The One Ring now has both the GHOSTLY and INVISIBLE flags as do
+  Amulets of Doom.
+- You can no longer regenerate mana or hitpoints when passing through
+  walls.
+- Added the "ARCHER", "BERSERKER" and "COWARDLY" flags for monsters.
+  These flags affect how the monster will move towards/from the player.
+  Archers and cowards attempt to keep some distance between them and
+  the player.  Berserkers will never run away.
+- Reworked the way AQUATIC monsters are placed. The game will now try
+  very hard to place them if a water streamer is generated.
+- Clairvoyance and Magic Mapping, will now correctly display terrain
+  streamers.
+
+Bug Fixes
+---------
+- Patches for the latest bug fixes for Angband 2.9.2 applied where
+  aplicable.
+- Fixed a bug with the "smart_learn" ability of monsters.
+- Fixed a bug with the saving of the cave_special array.
+- Fixed a bug with the [y/n/k] prompt not flushing messages properly.
+- Fixed various other quest-related bugs and oddities.
+
+
+Kangband 2.9.2r1
+================
+
+Codebase Updates
+----------------
+- Quest designers may now specify the generation of a random artifact,
+  a specific ego item, a specific item with an appropriate random ego
+  type or a totally random ego item.
+- Removed support for loading savefiles from versions of Kangband older
+  than 2.8.3(x).
+- Various tweaks/additions to the pref files.
+  
+
+New / Changed Features
+----------------------
+- Selectively implemented Jonathan Ellis' updates to the *_info.txt
+  files for objects and artifacts.
+- Added an auto-destoy item and auto-pick-up item feature (accessed via
+  the '#' command) which makes the game automatically destroy or
+  pick-up an item as the player moves over it. This is not the
+  "squelch" patch although some code was adapted from that in refining
+  the original implementation.
+- Added the [y/n/k] pick-up prompt from Zangband.
+- Added the "Time of day" command from Zangband ('[' in the roguelike
+  key set).
+- Studying spells is now done via the 'G' command rather than in the
+  buildings.
+- Items created via the debugging mode commands 'g' and 'v' will now
+  be created unid'd. Use cheat_iden if you want this functionality.
+- Mages and Illusionists now require progressively less energy to use
+  wands and rods. Priests and Druids require progressively less energy
+  to use staves.
+
+Bug Fixes
+---------
+- Patches for the latest bug fixes for Angband 2.9.2 applied where
+  aplicable.
+- You no longer receive inappropriate 'feeling' messages in the Arena
+  or in fixed quests.
+- Specified ego items (where sensible) are now generated in the fixed
+  quests.
+- Various problems with the towns/quests fixed.
+
+
+Kangband 2.9.2
+==============
+
+Codebase Updates
+----------------
+- Upgraded the source code base to Angband 2.9.2. (See the change logs
+  for standard Angband for details).
+- Changed some minor feature differences so as to conform Kangband
+  more closely with standard Angband (mostly combat stuff).
+- Conformed vault generation with standard Angband. The customized
+  vaults will be added back in the next version via a different
+  methodology.
+- Updated building and quest-handling code to that of Zangband 2.4.0.
+  This necessitated some changes to quests and buildings. Note that
+  characters loaded from earlier versions will have their arena and
+  quest information reset as a result of this change.
+
+New / Changed Features
+----------------------
+- Entering and leaving quests is now done via the '<' and '>' commands.
+- Added a Maia race similar to that of Oangband (from where the stats
+  and histories were taken). Maia have intrinsic regeneration and
+  slowed digestion. Unlike Oangband, their score is not adjusted.
+- The temporary high resistances available to certain classes are now
+  cummulative with the permanent high resistances and offer the same
+  protection from magical attack side effects (such as stunning and
+  confusion).
+- The Monster AI options now factor in the temporary resistances when
+  choosing which spell a monster will cast.
+- Made some changes to allow 'magical items' to be artifacts and added
+  four new artifact rods.  The name 'Rod of Delving' was taken from
+  Oangband but the effect is somewhat different.
+	Rod of Delving (Stone-to-Mud)
+	Rod of Hidden Ways (Dimension Door)
+	Rod of Unsung Heroes (Berserk Rage, Haste Self, Remove Fear)
+	Rod of Illusions (Ghostliness, Invisibility, See Invisible)
+- Added the "No confirm to destroy known worthless items." option from
+  Zangband.
+- The cheat_flav option was replaced with cheat_iden which makes the
+  game behave as if all items have been *identified* when describing
+  them.
+- Monsters with quality drops may now also drop Rings of Lordly
+  Protection and Rings of Extra Attacks.
+- Vorpal weapons now do a flat 1/3 extra damage *after* factoring in
+  weapon damage bonuses but the effect only kicks in half the time.
+  This needs to be playtested.
+- Vampiric weapons have had caps on their life draining removed but
+  no longer drain monsters every blow. This needs to be playtested.
+- The chaotic effects produced by Chaos brand weapons have been changed
+  so that you will now get a player-centered, radius 2 ball of either
+  chaos or disenchantment if the chaotic effect goes off.
+- Replaced the Mage's 'Resist Poison' spell with 'Resist Electricity'.
+
+Bug Fixes
+---------
+- Fixed a bug with the 'Resist Cold' spell.
+- Fixed a bug with the separation of confusion and chaos and the 
+  smart_cheat option.
+- Fixed a bug with *ID-ing* certain artifacts.
+- Fixed a bug with the "Immolation" spell in Purifications and Healing
+  which was intended to be "Dispel Demons (x6)" but actually dispelled
+  undead. Since dispelling demons doesn't fit with the theme of that
+  book, the spell was moved to Wrath of God with altered minimum level
+  and mana costs and reduced to x4.
+
+
+Kangband 2.9.1r1
+================
+
+Codebase Updates
+----------------
+- Applied all the bug-fix patches to the 2.9.1 source available on
+  Thangorodrim.
+- Updated the makefiles using gcc to use the '-fno-strength-reduce'
+  switch.
+
+New / Changed Features
+----------------------
+- Added a new cheating option which identifies all flavored items by
+  bypassing the p_ptr->aware checks. When in use, the game behaves as
+  if all flavored items are known to the player. Switching off the
+  option restores the original behaviour.
+- Assigning the "LEVITATION" flag as an intrinsic racial ability via
+  p_info.txt should now have the appropriate effect.
+- You may no longer cross the "Chasm" terrain when levitating. This is
+  in preparation for adding chasm streamers deep in the dungeon.
+- Crossing lava is now allowed without fire resitance or levitation.
+  However, you will take varying amounts of damage without these. Only
+  fire immunity provides complete protection. Taken from Zangband.
+- Crossing deep water when overburdened is now allowed. However, you
+  will take damage from doing so unless you are levitating. Taken
+  from Zangband.
+- If the Illusion spell 'Shadow Form' expires while the player is
+  moving through rock, the player will now take damage from being
+  crushed. Adapted from Zangband.
+
+Bug Fixes
+---------
+- Fixed a bug with the timed levitation spell (which necessitated an
+  increment to the version number).
+- Fixed a bug that allowed cast spells to bypass the adult_ironman
+  option and scrolls/rods of recall to bypass the time/space anchor.
+- Fixed a bug with the adult_no_stores option that let you enter the
+  special buildings when it was set.
+- Fixed a problem with the 'Unknown Building' quest in the 'Haunting
+  of Telamoor' plot which resulted in a 'nothing' object being
+  created.
+- Added various missing entries to font-ibm.prf, font-xxx.prf and
+  font-new.prf (but have not checked for completeness). In most cases,
+  this was done by assigning tiles used by Zangband for similar (in
+  some sense) things. Note that 16x16 tiles are unavailable in some
+  cases (denoted below by '*'). The non-trivial mappings are as
+  follows:
+
+  Kangband                        Zangband
+  --------------------------------------------------------------
+  Illusion Spellbooks             Sorcery Spellbooks
+  Druid Spellbooks                Nature Spellbooks
+  Balrog*                         N/A (utilized unused 8x8 tile)
+  Greater Balrog                  Gothmog (duplicate)
+  Grand Master Thief*             Jack of Shadows
+  Troll Clan Chief*               Storm Troll
+  Troll King*                     Ulik, the Troll
+  Troll High Priest               Spirit Troll
+  Blue Dragon Worm                Blue Worm Mass (duplicate)
+  White Dragon Worm               White Worm Mass (duplicate)
+  Red Dragon Worm	                Red Worm Mass (duplicate)
+  Black Dragon Worm               Abyss Worm Mass (duplicate)
+  Green Dragon Worm               Green Worm Mass (duplicate)
+  Multihued Dragon Worm           Giant Purple Worm (duplicate)
+  Old Sorceror                    Brand
+  Black Troll                     Rogrog (duplicate)
+  Python                          Large Brown Snake (duplicate)
+  Eol, the Dark Elf*              Malekith
+  Maeglin, Traitor of Gondolin    Eric
+  Sea Slime                       Portuguse Man-o-war
+  Sea Serpent*                    Fastitolocan
+  Town Guard                      Corwin
+  Guard Captain                   Bleys
+  Royal Guard                     Benedict
+  Eilinel, the Entrapped          Fiona
+  Easterling                      Beserker
+
+
+Kangband 2.9.1 (Beta)
+=====================
+
+Codebase Updates
+----------------
+- Updated the source code base to Angband 2.9.1 which involves numerous
+  minor changes (see change lists for standard Angband for details).
+
+New / Changed Features
+----------------------
+- Removed the pseudo-graphics in inventory, equipment and store
+  listings (may be restored later).
+- Pet fear handling removed (pet handling in general will get a major
+  overhaul in the next version).
+
+
+Kangband 2.8.3j (patch-level 1)
+===============================
+
+Codebase Updates:
+-----------------
+- Added Greg Wooledge's patch for glibc2.1/egcs systems
+- Some (fairly minor) source cleanups/changes.
+- Added Tim Baker's 'easy' patch (disabled though).
+
+New / Changed Features
+----------------------
+- Temple doesn't sell books anymore; book shop only buys books.
+- Random character/attribute options added to birth.
+
+Bug Fixes
+---------
+- Infamous save-file '2.8.3c' bug fixed.
+- Now prints home details after death instead of black market stock.
+- Fixed faulty vault layout (Greg Wooledge).
+- Fixed bug where you could be asked to kill a unique who'd already
+  died. If you have a save-file where a quest cannot be completed
+  because of this, leave the town level; when you return the quest
+  will be marked completed.
+- It's now not possible to wield quest items multiple times to receive
+  multiple gifts (eg. Sting).
+- Various spells could destroy staircases ; fixed
+
+ 
+Kangband 2.8.3j
+===============
+
+New / Changed Features
+----------------------
+- Can now wield item from floor to complete a quest.
+- Extra shopkeepers added (previously, Black Market and Bookstore had
+  the same owners).
+- Few other minor alterations.
+
+Bug Fixes
+---------
+- Screen not always refreshed in casino; fixed.
+- Rogue-like commands wouldn't work in new buildings. Hopefully fixed.
+- Fixed/added a few prototypes. Some functions called with too many
+  arguments, etc.

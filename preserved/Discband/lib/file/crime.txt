@@ -1,0 +1,45 @@
+N:53:Grip, Farmer Maggot's dog
+N:54:Wolf, Farmer Maggot's dog
+N:55:Fang, Farmer Maggot's dog
+0
+
+N:*:Default
+38
+an anti-crime.
+being a mime.
+an anti-crime against humanity.
+breaking and decorating.
+stealing fire from the gods.
+loitering with intent to loiter some more.
+Whitemailing.
+Autocondimenting.
+having too large a stick up his arse.
+talking with his mouth full.
+burser-napping.
+maskquerading cats meat for dogs meat.
+Stealing without a licence.
+fraud and embezzlement.
+counterfeiting Barbarian Invaders tokens.
+smuggling.
+sheep stealing.
+putting his penut butter in someone elses chocolate.
+putting his chocolate in someone elses penut butter.
+pillaging.
+rape and pillage.
+cruelty to humans.
+dealing drugs.
+murder for hire.
+luring souls to destruction.
+smashing holy relics.
+glorying in chaos.
+summoning dragons.
+desecration of holy places.
+anoying the patrician.
+abuse of self-appointed privilege.
+leaguing with the underworld for fun and profit.
+spawning minions of darkness.
+the desolation of kingdoms.
+lese-majesty. Whatever that is.
+obstructing justice.
+conspiring to obstruct justice.
+assault with a deadly weapon.

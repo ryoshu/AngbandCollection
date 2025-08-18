@@ -1,0 +1,12 @@
+1/15/02
+Finished balancing Draconians.
+
+1/14/02
+Removed Dragonriders Totally...
+Added Draconians in place of Dragonriders.
+Removed Maia.
+Added Chaos Lords from Amber
+
+1/13/02
+Changed makefiles to say conglomoband.
+Updated ./lib/file/news.txt 

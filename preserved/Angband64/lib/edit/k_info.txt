@@ -1,0 +1,4657 @@
+# File: k_info.txt
+
+# This file is used to initialize the "lib/raw/k_info.raw" file, which is
+# used to initialize the "object kind" information for the Angband game.
+
+# Do not modify this file unless you know exactly what you are doing,
+# unless you wish to risk possible system crashes and broken savefiles.
+
+# After modifying this file, delete the "lib/raw/k_info.raw" file.
+
+
+# Note that major changes are planned for Angband 2.8.0
+
+# Available slots (?):
+#   29, 29, 90, 177, 178, 179, 182, 183, 195, 196, 205,
+#   268, 270, 293, 299, 350, 351, 399, 413, 414, 423-479
+
+# XXX XXX Add some "IGNORE_XXX" flags to Rings, Amulets, etc.
+
+# The old "MULTI_HUED" objects are now "violet", and no other object
+# is violet, so all six violet objects can be made "multi-hued", though
+# this would be a heinous hack.  XXX XXX
+
+
+# Version stamp
+
+V:2.7.10
+
+
+##### Something special #####
+
+N:something
+G:&:w
+I:<tval>0:<sval>0:<p1val>0:<p2val>0
+
+##### Mushrooms #####
+
+N:Blindness
+G:,:u
+I:<tval>80:<sval>1:<p1val>500:<p2val>0
+W:<level>5:<extra>0:<weight>1:<cost>0
+A:<locale>5/<chance>1
+D:It induces Blindness.
+
+N:Paranoia
+G:,:u
+I:<tval>80:<sval>2:<p1val>500:<p2val>0
+W:<level>5:<extra>0:<weight>1:<cost>0
+A:<locale>5/<chance>1
+D:It causes Paranoia.
+
+N:Confusion
+G:,:u
+I:<tval>80:<sval>3:<p1val>500:<p2val>0
+W:<level>5:<extra>0:<weight>1:<cost>0
+A:<locale>5/<chance>1
+D:It causes Confusion.
+
+N:Hallucination
+G:,:u
+I:<tval>80:<sval>4:<p1val>500:<p2val>0
+W:<level>10:<extra>0:<weight>1:<cost>0
+A:<locale>10/<chance>1
+D:It causes Hallucination.
+
+N:Cure Poison
+G:,:u
+I:<tval>80:<sval>12:<p1val>500:<p2val>0
+W:<level>10:<extra>0:<weight>1:<cost>60
+A:<locale>10/<chance>1
+D:It cures poisoning.
+
+N:Cure Blindness
+G:,:u
+I:<tval>80:<sval>13:<p1val>500:<p2val>0
+W:<level>10:<extra>0:<weight>1:<cost>50
+A:<locale>10/<chance>1
+D:It cures blindness.
+
+N:Cure Paranoia
+G:,:u
+I:<tval>80:<sval>14:<p1val>500:<p2val>0
+W:<level>10:<extra>0:<weight>1:<cost>25
+A:<locale>10/<chance>1
+D:It cures paranoia.
+
+N:Cure Confusion
+G:,:u
+I:<tval>80:<sval>15:<p1val>500:<p2val>0
+W:<level>10:<extra>0:<weight>1:<cost>50
+A:<locale>10/<chance>1
+D:It cures confusion.
+
+N:Weakness
+G:,:u
+I:<tval>80:<sval>6:<p1val>500:<p2val>0
+W:<level>10:<extra>0:<weight>1:<cost>0
+A:<locale>10/<chance>1
+D:It reduces your strength.
+
+N:Unhealth
+G:,:u
+I:<tval>80:<sval>10:<p1val>500:<p2val>0
+W:<level>15:<extra>0:<weight>1:<cost>50
+A:<locale>15/<chance>1
+P:<ac>0:<ds+dd>10d10:<to hit>0:<to dam>0:<to ac>0
+D:It reduces you health, and can also be thrown for 10d10 damage.
+
+N:Restore Constitution
+G:,:u
+I:<tval>80:<sval>18:<p1val>500:<p2val>0
+W:<level>20:<extra>0:<weight>1:<cost>350
+A:<locale>10/<chance>1
+D:It restores your constitution.
+
+N:Restoring
+G:,:u
+I:<tval>80:<sval>19:<p1val>500:<p2val>0
+W:<level>20:<extra>0:<weight>1:<cost>1000
+A:<locale>20/<chance>4:<locale>30/<chance>2:<locale>40/<chance>1
+D:It restores all of your stats.
+
+N:Stupidity
+G:,:u
+I:<tval>80:<sval>8:<p1val>500:<p2val>0
+W:<level>15:<extra>0:<weight>1:<cost>0
+A:<locale>15/<chance>1
+D:It reduces your intelligence and is poisonous.
+
+N:Naivety
+G:,:u
+I:<tval>80:<sval>9:<p1val>500:<p2val>0
+W:<level>15:<extra>0:<weight>1:<cost>0
+A:<locale>15/<chance>1
+D:It reduces your wisdom and is poisonous.
+
+N:Poison
+G:,:u
+I:<tval>80:<sval>0:<p1val>500:<p2val>0
+W:<level>5:<extra>0:<weight>1:<cost>0
+A:<locale>5/<chance>5:<locale>5/<chance>1
+D:It is poisonous.
+
+N:Sickness
+G:,:u
+I:<tval>80:<sval>7:<p1val>500:<p2val>0
+W:<level>10:<extra>0:<weight>1:<cost>0
+A:<locale>10/<chance>1
+D:It reduces your constitution and is poisonous.
+
+N:Paralysis
+G:,:u
+I:<tval>80:<sval>5:<p1val>500:<p2val>0
+W:<level>20:<extra>0:<weight>1:<cost>0
+A:<locale>20/<chance>1
+D:It paralyzes you.
+
+N:Restore Strength
+G:,:u
+I:<tval>80:<sval>17:<p1val>500:<p2val>0
+W:<level>20:<extra>0:<weight>1:<cost>350
+A:<locale>10/<chance>1
+D:It restores your strength.
+
+N:Disease
+G:,:u
+I:<tval>80:<sval>11:<p1val>500:<p2val>0
+W:<level>20:<extra>0:<weight>1:<cost>50
+A:<locale>20/<chance>1
+P:<ac>0:<ds+dd>10d10:<to hit>0:<to dam>0:<to ac>0
+D:It decreases your strength, but can also be thrown for 10d10 damage.
+
+N:Cure Serious Wounds
+G:,:u
+I:<tval>80:<sval>16:<p1val>500:<p2val>0
+W:<level>15:<extra>0:<weight>2:<cost>75
+A:<locale>15/<chance>1
+D:It heals 4d8 hitpoints.
+
+##### Normal Food #####
+
+N:& Ration~ of Food
+G:,:U
+I:<tval>80:<sval>35:<p1val>5000:<p2val>0
+W:<level>0:<extra>0:<weight>10:<cost>3
+A:<locale>0/<chance>1:<locale>5/<chance>1:<locale>10/<chance>1
+D:It is a non-descript item of food.
+F:NOFLAVOR
+
+N:& Hard Biscuit~
+G:,:U
+I:<tval>80:<sval>32:<p1val>500:<p2val>0
+W:<level>0:<extra>0:<weight>2:<cost>1
+A:<locale>0/<chance>1
+D:It is very hard, but some describe it as crispy.
+F:NOFLAVOR
+
+N:& Strip~ of Beef Jerky
+G:,:u
+I:<tval>80:<sval>33:<p1val>1500:<p2val>0
+W:<level>0:<extra>0:<weight>2:<cost>2
+A:<locale>0/<chance>1
+D:It is a bit salty, but very nourishing.
+F:NOFLAVOR
+
+N:& Slime Mold~
+G:,:g
+I:<tval>80:<sval>36:<p1val>3000:<p2val>0
+W:<level>1:<extra>0:<weight>5:<cost>2
+A:<locale>1/<chance>1
+D:Don't look at it, just eat it!
+F:NOFLAVOR
+
+N:& Piece~ of Elvish Waybread
+G:,:B
+I:<tval>80:<sval>37:<p1val>7500:<p2val>0
+W:<level>5:<extra>0:<weight>3:<cost>10
+A:<locale>5/<chance>1:<locale>10/<chance>1:<locale>20/<chance>1
+D:Wafers wrapped in leaves, these are the fabled Food of the Elves.
+F:NOFLAVOR
+
+N:& Pint~ of Fine Ale
+G:,:y
+I:<tval>80:<sval>38:<p1val>500:<p2val>0
+W:<level>0:<extra>0:<weight>5:<cost>1
+A:<locale>0/<chance>1
+D:It is brown and foaming.
+F:NOFLAVOR
+
+N:& Pint~ of Fine Wine
+G:,:r
+I:<tval>80:<sval>39:<p1val>1000:<p2val>0
+W:<level>0:<extra>0:<weight>10:<cost>2
+A:<locale>0/<chance>1
+D:It is dark red and very old.
+F:NOFLAVOR
+
+##### Edged Weapons #####
+
+N:& Broken Dagger~
+G:|:D
+I:<tval>23:<sval>1:<p1val>0:<p2val>0
+W:<level>0:<extra>0:<weight>5:<cost>1
+A:<locale>0/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>-2:<to dam>-4:<to ac>0
+F:SHOW_MODS
+D:It is a dagger with a broken blade.
+
+N:& Bastard Sword~
+G:|:W
+I:<tval>23:<sval>21:<p1val>0:<p2val>0
+W:<level>15:<extra>0:<weight>140:<cost>350
+A:<locale>15/<chance>1
+P:<ac>0:<ds+dd>3d4:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS | COULD2H
+A:A sword meant for use in one hand or both hands.
+
+N:& Scimitar~
+G:|:W
+I:<tval>23:<sval>18:<p1val>0:<p2val>0
+W:<level>10:<extra>0:<weight>130:<cost>250
+A:<locale>10/<chance>1
+P:<ac>0:<ds+dd>2d5:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS
+D:It is a broad, curved blade with a plain handle.
+
+N:& Tulwar~
+G:|:W
+I:<tval>23:<sval>15:<p1val>0:<p2val>0
+W:<level>5:<extra>0:<weight>100:<cost>200
+A:<locale>5/<chance>1
+P:<ac>0:<ds+dd>2d4:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS
+D:It is a short, curved sword.
+
+N:& Broad Sword~
+G:|:W
+I:<tval>23:<sval>16:<p1val>0:<p2val>0
+W:<level>10:<extra>0:<weight>150:<cost>255
+A:<locale>10/<chance>15:<locale>10/<chance>1
+P:<ac>0:<ds+dd>2d5:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS
+D:It is a plain but large sword.
+
+N:& Short Sword~
+G:|:W
+I:<tval>23:<sval>10:<p1val>0:<p2val>0
+W:<level>5:<extra>0:<weight>80:<cost>90
+A:<locale>5/<chance>1
+P:<ac>0:<ds+dd>1d7:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS
+D:It is a plain but small sword.
+
+N:& Blade~ of Chaos
+G:|:v
+I:<tval>23:<sval>30:<p1val>0:<p2val>0
+W:<level>70:<extra>0:<weight>180:<cost>4000
+A:<locale>70/<chance>8
+P:<ac>0:<ds+dd>6d5:<to hit>0:<to dam>0:<to ac>0
+F:RES_CHAOS | SHOW_MODS
+D:It is a sword with an intricate design written on it. The blade doesn't
+D:seem quite straight, but it is difficult to see where it is bent. The outlines
+D:shimmer if you look at it.
+
+N:& Two-Handed Sword~
+G:|:W
+I:<tval>23:<sval>25:<p1val>0:<p2val>0
+W:<level>30:<extra>0:<weight>200:<cost>775
+A:<locale>30/<chance>40:<locale>30/<chance>1
+P:<ac>0:<ds+dd>3d6:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS | MUST2H
+D:It is a plain but very large sword.
+
+N:& Main Gauche~
+G:|:W
+I:<tval>23:<sval>5:<p1val>0:<p2val>0
+W:<level>3:<extra>0:<weight>30:<cost>25
+A:<locale>3/<chance>1
+P:<ac>0:<ds+dd>1d5:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS
+D:It is somewhat larger than a dagger, yet not as large as a sword.
+
+N:& Cutlass~
+G:|:W
+I:<tval>23:<sval>12:<p1val>0:<p2val>0
+W:<level>5:<extra>0:<weight>110:<cost>85
+A:<locale>5/<chance>1
+P:<ac>0:<ds+dd>1d7:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS
+D:It is a thin, curved sword.
+
+N:& Executioner's Sword~
+G:|:r
+I:<tval>23:<sval>28:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>260:<cost>850
+A:<locale>40/<chance>1
+P:<ac>0:<ds+dd>4d5:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS | MUST2H
+D:It is a very large sword with an ornamental handle.
+
+N:& Katana~
+G:|:W
+I:<tval>23:<sval>20:<p1val>0:<p2val>0
+W:<level>20:<extra>0:<weight>120:<cost>400
+A:<locale>20/<chance>1
+P:<ac>0:<ds+dd>3d4:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS | COULD2H
+D:It is a long, thin and razor-sharp sword.
+
+N:& Long Sword~
+G:|:W
+I:<tval>23:<sval>17:<p1val>0:<p2val>0
+W:<level>10:<extra>0:<weight>130:<cost>300
+A:<locale>10/<chance>20:<locale>10/<chance>1
+P:<ac>0:<ds+dd>2d5:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS
+D:It is a plain and normal-sized sword.
+
+N:& Dagger~
+G:|:W
+I:<tval>23:<sval>4:<p1val>0:<p2val>0
+W:<level>0:<extra>0:<weight>12:<cost>10
+A:<locale>0/<chance>1:<locale>5/<chance>1:<locale>10/<chance>1:<locale>20/<chance>1
+P:<ac>0:<ds+dd>1d4:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS
+
+N:& Rapier~
+G:|:W
+I:<tval>23:<sval>7:<p1val>0:<p2val>0
+W:<level>5:<extra>0:<weight>40:<cost>42
+A:<locale>5/<chance>1
+P:<ac>0:<ds+dd>1d6:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS
+D:It has no edges, but a very sharp point.
+
+N:& Sabre~
+G:|:W
+I:<tval>23:<sval>11:<p1val>0:<p2val>0
+W:<level>5:<extra>0:<weight>50:<cost>50
+A:<locale>5/<chance>1
+P:<ac>0:<ds+dd>1d7:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS
+D:It is a thin, curved sword.
+
+N:& Small Sword~
+G:|:W
+I:<tval>23:<sval>8:<p1val>0:<p2val>0
+W:<level>5:<extra>0:<weight>75:<cost>48
+A:<locale>5/<chance>1
+P:<ac>0:<ds+dd>1d6:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS
+D:It is a plain but small sword.
+
+N:& Broken Sword~
+G:|:D
+I:<tval>23:<sval>2:<p1val>0:<p2val>0
+W:<level>0:<extra>0:<weight>30:<cost>2
+A:<locale>0/<chance>1
+P:<ac>0:<ds+dd>1d2:<to hit>-2:<to dam>-4:<to ac>0
+F:SHOW_MODS
+D:It is a sword with about half of the blade left.
+
+##### Hafted Weapons #####
+
+N:& Ball-and-Chain~
+G:\:D
+I:<tval>21:<sval>6:<p1val>0:<p2val>0
+W:<level>20:<extra>0:<weight>150:<cost>200
+A:<locale>20/<chance>1
+P:<ac>0:<ds+dd>2d4:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS | COULD2H
+D:It is a spiked ball attached to a wooden handle by a length of chain.
+
+N:& Whip~
+G:\:D
+I:<tval>21:<sval>2:<p1val>0:<p2val>0
+W:<level>3:<extra>0:<weight>30:<cost>30
+A:<locale>3/<chance>1
+P:<ac>0:<ds+dd>1d6:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS
+D:Multiple thick leather strips attached to a short woorden staff.
+
+N:& Flail~
+G:\:D
+I:<tval>21:<sval>13:<p1val>0:<p2val>0
+W:<level>10:<extra>0:<weight>150:<cost>353
+A:<locale>10/<chance>1
+P:<ac>0:<ds+dd>2d6:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS | COULD2H
+D:It is a large handle, with a short chain and a iron cilinder attached at the end.
+
+N:& Two-Handed Flail~
+G:\:y
+I:<tval>21:<sval>18:<p1val>0:<p2val>0
+W:<level>45:<extra>0:<weight>280:<cost>590
+A:<locale>45/<chance>1
+P:<ac>0:<ds+dd>3d6:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS | MUST2H
+D:It is a large handle, with a short chain and a heavy iron cilinder attached at the end.
+
+N:& Morning Star~
+G:\:D
+I:<tval>21:<sval>12:<p1val>0:<p2val>0
+W:<level>10:<extra>0:<weight>150:<cost>396
+A:<locale>10/<chance>1
+P:<ac>0:<ds+dd>2d6:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS | COULD2H
+D:It is a wooden handle with a spiked ball of iron at the end.
+
+N:& Mace~
+G:\:D
+I:<tval>21:<sval>5:<p1val>0:<p2val>0
+W:<level>5:<extra>0:<weight>120:<cost>130
+A:<locale>5/<chance>1
+P:<ac>0:<ds+dd>2d4:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS | COULD2H
+D:It is a wooden handle with an iron weight at the end.
+
+N:& Quarterstaff~
+G:\:U
+I:<tval>21:<sval>3:<p1val>0:<p2val>0
+W:<level>10:<extra>0:<weight>150:<cost>200
+A:<locale>10/<chance>1
+P:<ac>0:<ds+dd>1d9:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS | COULD2H
+D:It is a stout stick, hard yet resilient and somewhat longer than yourself.
+
+N:& War Hammer~
+G:\:D
+I:<tval>21:<sval>8:<p1val>0:<p2val>0
+W:<level>5:<extra>0:<weight>120:<cost>225
+A:<locale>5/<chance>1
+P:<ac>0:<ds+dd>3d3:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS | COULD2H
+D:It is a heavy hammer.
+
+N:& Lead-Filled Mace~
+G:\:D
+I:<tval>21:<sval>15:<p1val>0:<p2val>0
+W:<level>15:<extra>0:<weight>180:<cost>502
+A:<locale>15/<chance>1
+P:<ac>0:<ds+dd>3d4:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS | COULD2H
+D:It is a wooden handle with an iron weight, filled with lead, at the end.
+
+N:& Mace~ of Disruption
+G:\:v
+I:<tval>21:<sval>20:<p1val>0:<p2val>0
+W:<level>80:<extra>0:<weight>400:<cost>4300
+A:<locale>80/<chance>8
+P:<ac>0:<ds+dd>5d8:<to hit>0:<to dam>0:<to ac>0
+F:SLAY_UNDEAD | SHOW_MODS | MUST2H
+D:It is a heavy mace, the staff is inscribed with many runes. When wielding
+D:it, you seem strangely eager to bash undead creatures with it.
+
+N:& Lucerne Hammer~
+G:\:B
+I:<tval>21:<sval>10:<p1val>0:<p2val>0
+W:<level>10:<extra>0:<weight>120:<cost>376
+A:<locale>10/<chance>1
+P:<ac>0:<ds+dd>2d5:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS | COULD2H
+D:It is a large hammer, but with nasty-looking spikes at the head.
+
+##### Polearms #####
+
+N:& Beaked Axe~
+G:/:s
+I:<tval>22:<sval>10:<p1val>0:<p2val>0
+W:<level>15:<extra>0:<weight>180:<cost>408
+A:<locale>15/<chance>1
+P:<ac>0:<ds+dd>2d6:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS | COULD2H
+D:It is a large axe, with an inwardly-curved head.
+
+N:& Glaive~
+G:/:s
+I:<tval>22:<sval>13:<p1val>0:<p2val>0
+W:<level>20:<extra>0:<weight>190:<cost>363
+A:<locale>20/<chance>1
+P:<ac>0:<ds+dd>2d6:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS | COULD2H
+D:It is a broad-bladed polearm, in which the edges curve backwards near the point.
+
+N:& Halberd~
+G:/:s
+I:<tval>22:<sval>15:<p1val>0:<p2val>0
+W:<level>25:<extra>0:<weight>190:<cost>430
+A:<locale>25/<chance>1
+P:<ac>0:<ds+dd>3d5:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS | COULD2H
+D:It is a polearm with an axe-blade (spiked on the back) and a spear point at the top.
+
+N:& Awl-Pike~
+G:/:s
+I:<tval>22:<sval>4:<p1val>0:<p2val>0
+W:<level>10:<extra>0:<weight>160:<cost>340
+A:<locale>10/<chance>1
+P:<ac>0:<ds+dd>1d8:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS | COULD2H
+D:It is a smaller polearm, adorned with a sharp blade.
+
+N:& Pike~
+G:/:s
+I:<tval>22:<sval>8:<p1val>0:<p2val>0
+W:<level>15:<extra>0:<weight>160:<cost>358
+A:<locale>15/<chance>1
+P:<ac>0:<ds+dd>2d5:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS | COULD2H
+D:It is a full-sized polearm, with a sharp blade at the end.
+
+N:& Spear~
+G:/:s
+I:<tval>22:<sval>2:<p1val>0:<p2val>0
+W:<level>5:<extra>0:<weight>50:<cost>36
+A:<locale>5/<chance>1
+P:<ac>0:<ds+dd>1d6:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS
+D:It is a light spear, with a sharp point.
+
+N:& Trident~
+G:/:y
+I:<tval>22:<sval>5:<p1val>0:<p2val>0
+W:<level>5:<extra>0:<weight>70:<cost>120
+A:<locale>5/<chance>1
+P:<ac>0:<ds+dd>1d8:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS | COULD2H
+D:It is a large spear, with a triple blade at the top.
+
+N:& Lance~
+G:/:s
+I:<tval>22:<sval>20:<p1val>0:<p2val>0
+W:<level>10:<extra>0:<weight>300:<cost>230
+A:<locale>10/<chance>1
+P:<ac>0:<ds+dd>2d8:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS | MUST2H
+D:It is a very large and very heavy spear, with a sharp point.
+D:Because of it's size, it is difficult to wield.
+
+N:& Great Axe~
+G:/:s
+I:<tval>22:<sval>25:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>230:<cost>500
+A:<locale>40/<chance>1
+P:<ac>0:<ds+dd>4d4:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS | MUST2H
+D:It is a full-sized axe, with a heavy and sharp double blade.
+D:Only the greatest warriors can wield it well, since it requires a lot of strength.
+
+N:& Battle Axe~
+G:/:s
+I:<tval>22:<sval>22:<p1val>0:<p2val>0
+W:<level>15:<extra>0:<weight>170:<cost>334
+A:<locale>15/<chance>1
+P:<ac>0:<ds+dd>2d8:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS | COULD2H
+D:It is an axe made for killing, with a large double blade at the top.
+D:A favorite weapon of dwarves.
+
+N:& Lochaber Axe~
+G:/:D
+I:<tval>22:<sval>28:<p1val>0:<p2val>0
+W:<level>45:<extra>0:<weight>250:<cost>750
+A:<locale>45/<chance>1
+P:<ac>0:<ds+dd>3d8:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS | COULD2H
+D:It is a somewhat short but very sharp axe. It has a nice balance.
+
+N:& Broad Axe~
+G:/:s
+I:<tval>22:<sval>11:<p1val>0:<p2val>0
+W:<level>15:<extra>0:<weight>160:<cost>304
+A:<locale>15/<chance>1
+P:<ac>0:<ds+dd>2d6:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS | COULD2H
+D:It is an axe with a large blade.
+
+N:& Scythe~
+G:/:s
+I:<tval>22:<sval>17:<p1val>0:<p2val>0
+W:<level>45:<extra>0:<weight>250:<cost>800
+A:<locale>45/<chance>1
+P:<ac>0:<ds+dd>5d3:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS | COULD2H
+D:It is a scythe with a large and sharp blade at the end.
+
+N:& Scythe~ of Slicing
+G:/:r
+I:<tval>22:<sval>30:<p1val>0:<p2val>0
+W:<level>60:<extra>0:<weight>250:<cost>3500
+A:<locale>60/<chance>4
+P:<ac>0:<ds+dd>8d4:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS | MUST2H
+D:It is a large and intimidating scythe, the shaft is inscribed with various runes.
+
+
+##### Bows, Crossbows, Slings #####
+
+N:& Short Bow~
+G:}:U
+I:<tval>19:<sval>12:<p1val>0:<p2val>0
+W:<level>3:<extra>0:<weight>30:<cost>50
+A:<locale>3/<chance>1
+F:SHOW_MODS
+D:It is a small bow.
+
+N:& Long Bow~
+G:}:U
+I:<tval>19:<sval>13:<p1val>0:<p2val>0
+W:<level>10:<extra>0:<weight>40:<cost>120
+A:<locale>10/<chance>1
+F:SHOW_MODS
+D:It is a large and powerful bow.
+
+N:& Elven Long Bow~
+G:}:U
+I:<tval>19:<sval>34:<p1val>0:<p2val>0
+W:<level>10:<extra>0:<weight>20:<cost>12000
+A:<locale>40/<chance>4
+F:SHOW_MODS
+D:This is the fabled bow of the Elves, a large bow, made of deep brown wood, with
+D:runes inscribed lightly upon it.
+
+N:& Light Crossbow~
+G:}:s
+I:<tval>19:<sval>23:<p1val>0:<p2val>0
+W:<level>15:<extra>0:<weight>110:<cost>140
+A:<locale>15/<chance>1
+F:SHOW_MODS
+D:It is a small crossbow, with heavy wooden arms.
+
+N:& Heavy Crossbow~
+G:}:s
+I:<tval>19:<sval>24:<p1val>0:<p2val>0
+W:<level>30:<extra>0:<weight>200:<cost>300
+A:<locale>30/<chance>1
+F:SHOW_MODS
+D:It is a large crossbow, with heavy iron arms.
+
+N:& Sling~
+G:}:u
+I:<tval>19:<sval>2:<p1val>0:<p2val>0
+W:<level>1:<extra>0:<weight>5:<cost>5
+A:<locale>1/<chance>1
+F:SHOW_MODS
+D:It is a sling consisting of a strip of leather.
+
+N:& Hobbit Sling~
+G:}:u
+I:<tval>19:<sval>33:<p1val>0:<p2val>0
+W:<level>1:<extra>0:<weight>5:<cost>1000
+A:<locale>2/<chance>5
+F:SHOW_MODS
+D:It is a sling consisting of a finely crafted piece of leather, with some
+D:hobbit inscriptions upon it.
+
+##### Missiles #####
+
+N:& Crooked Arrow~
+G:{:U
+I:<tval>17:<sval>0:<p1val>0:<p2val>0
+W:<level>1:<extra>0:<weight>1:<cost>1
+A:<locale>1/<chance>5:<locale>1/<chance>1
+P:<ac>0:<ds+dd>1d2:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS
+D:It is a long arrow, but some of the fletching seems loose.
+
+N:& Arrow~
+G:{:U
+I:<tval>17:<sval>1:<p1val>0:<p2val>0
+W:<level>3:<extra>0:<weight>2:<cost>1
+A:<locale>3/<chance>15:<locale>3/<chance>1
+P:<ac>0:<ds+dd>1d4:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS
+D:It is a long arrow, with feather fletching, and a small metal point.
+
+#G:char:color
+#I:tval:sval:pval
+#W:level:extra:wgt:cost
+#A:chance
+#P:ac:dam dice:dam sides:hit:dam:to ac
+N:& Seeker Arrow~
+G:{:G
+I:<tval>17:<sval>2:<p1val>0:<p2val>0
+W:<level>55:<extra>0:<weight>2:<cost>20
+A:<locale>55/<chance>2
+P:<ac>0:<ds+dd>4d4:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS
+D:It is a very long arrow, with fletching, and a large, hooked, point.
+
+N:& Broken Bolt~
+G:{:s
+I:<tval>18:<sval>0:<p1val>0:<p2val>0
+W:<level>1:<extra>0:<weight>2:<cost>1
+A:<locale>1/<chance>15:<locale>1/<chance>1
+P:<ac>0:<ds+dd>1d3:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS
+D:It is a crossbow-bolt with the point broken off.
+
+N:& Bolt~
+G:{:s
+I:<tval>18:<sval>1:<p1val>0:<p2val>0
+W:<level>3:<extra>0:<weight>3:<cost>2
+A:<locale>3/<chance>25:<locale>3/<chance>1
+P:<ac>0:<ds+dd>1d5:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS
+D:It is a crossbow-bolt, with a metal point.
+
+N:& Seeker Bolt~
+G:{:B
+I:<tval>18:<sval>2:<p1val>0:<p2val>0
+W:<level>65:<extra>0:<weight>3:<cost>25
+A:<locale>65/<chance>4
+P:<ac>0:<ds+dd>4d5:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS
+D:It is a large crossbow-bolt, with a nasty-looking barbed metal point.
+
+N:& Rounded Pebble~
+G:{:s
+I:<tval>16:<sval>0:<p1val>0:<p2val>0
+W:<level>0:<extra>0:<weight>4:<cost>1
+A:<locale>0/<chance>1
+P:<ac>0:<ds+dd>1d2:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS
+D:It is a smooth, rounded piece of rock.
+
+N:& Iron Shot~
+G:{:s
+I:<tval>16:<sval>1:<p1val>0:<p2val>0
+W:<level>3:<extra>0:<weight>5:<cost>2
+A:<locale>3/<chance>1
+P:<ac>0:<ds+dd>1d3:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS
+D:It is a small, dense iron ball.
+
+N:& Lead Shot~
+G:{:s
+I:<tval>16:<sval>2:<p1val>0:<p2val>0
+W:<level>3:<extra>0:<weight>6:<cost>4
+A:<locale>12/<chance>2
+P:<ac>0:<ds+dd>1d5:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS
+D:It is a small, dense iron ball. It feels heavy, since it is weightened with a lead core.
+
+##### Shovels and Picks #####
+
+N:& Shovel~
+G:\:s
+I:<tval>20:<sval>1:<p1val>1:<p2val>0
+W:<level>1:<extra>0:<weight>60:<cost>10
+A:<locale>5/<chance>16
+P:<ac>0:<ds+dd>1d2:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS | TUNNEL1
+D:It is a normal-looking shovel.
+
+N:& Gnomish Shovel~
+G:\:G
+I:<tval>20:<sval>2:<p1val>2:<p2val>0
+W:<level>20:<extra>0:<weight>60:<cost>100
+A:<locale>20/<chance>4
+P:<ac>0:<ds+dd>1d2:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS | TUNNEL1
+D:It is a larger than usual shovel.
+
+N:& Dwarven Shovel~
+G:\:B
+I:<tval>20:<sval>3:<p1val>3:<p2val>0
+W:<level>40:<extra>0:<weight>120:<cost>200
+A:<locale>40/<chance>1
+P:<ac>0:<ds+dd>1d3:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS | TUNNEL1
+D:It is a strange shovel: the handle is shorter than usual, but the blade is much larger.
+D:You can see its made for a short, strong worker.
+
+N:& Pick~
+G:\:s
+I:<tval>20:<sval>4:<p1val>1:<p2val>0
+W:<level>5:<extra>0:<weight>150:<cost>50
+A:<locale>10/<chance>16
+P:<ac>0:<ds+dd>1d3:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS | TUNNEL1 | COULD2H
+D:It is a normal pick.
+
+N:& Orcish Pick~
+G:\:g
+I:<tval>20:<sval>5:<p1val>2:<p2val>0
+W:<level>30:<extra>0:<weight>150:<cost>300
+A:<locale>30/<chance>4
+P:<ac>0:<ds+dd>1d3:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS | TUNNEL1 | COULD2H
+D:It is a larger than usual pick.
+
+N:& Dwarven Pick~
+G:\:b
+I:<tval>20:<sval>6:<p1val>3:<p2val>0
+W:<level>50:<extra>0:<weight>200:<cost>600
+A:<locale>50/<chance>1
+P:<ac>0:<ds+dd>1d4:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS | TUNNEL1 | COULD2H
+D:It is a strange pick: the handle is shorter than usual, but the head is much heavier.
+D:You can see its made for a short, strong worker.
+
+##### Armor #####
+
+N:& Pair~ of Soft Leather Boots
+G:]:U
+I:<tval>30:<sval>2:<p1val>0:<p2val>0
+W:<level>3:<extra>0:<weight>20:<cost>7
+A:<locale>3/<chance>1
+P:<ac>2:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:It is a pair of boots, made from soft leather.
+
+N:& Pair~ of Hard Leather Boots
+G:]:U
+I:<tval>30:<sval>3:<p1val>0:<p2val>0
+W:<level>5:<extra>0:<weight>40:<cost>12
+A:<locale>5/<chance>1
+P:<ac>3:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:It is a pair of boots, made from hard leather.
+
+N:& Pair~ of Metal Shod Boots
+G:]:s
+I:<tval>30:<sval>6:<p1val>0:<p2val>0
+W:<level>20:<extra>0:<weight>80:<cost>50
+A:<locale>20/<chance>1
+P:<ac>6:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:It is a pair of boots, made from hard leather, and reinfoced with steel.
+
+N:& Hard Leather Cap~
+G:]:u
+I:<tval>32:<sval>2:<p1val>0:<p2val>0
+W:<level>3:<extra>0:<weight>15:<cost>12
+A:<locale>3/<chance>1
+P:<ac>2:<ds+dd>0d0:<to hit>0:<to dam>0:<to ac>0
+D:It is a cap, made from multiple layers of hardened leather.
+
+N:& Metal Cap~
+G:]:s
+I:<tval>32:<sval>3:<p1val>0:<p2val>0
+W:<level>10:<extra>0:<weight>20:<cost>30
+A:<locale>10/<chance>1
+P:<ac>3:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:It is a conical, metal cap.
+
+N:& Iron Helm~
+G:]:s
+I:<tval>32:<sval>5:<p1val>0:<p2val>0
+W:<level>20:<extra>0:<weight>75:<cost>75
+A:<locale>20/<chance>1
+P:<ac>5:<ds+dd>1d3:<to hit>0:<to dam>0:<to ac>0
+D:It is a helmet, made from iron, in a classical shape.
+
+N:& Steel Helm~
+G:]:W
+I:<tval>32:<sval>6:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>60:<cost>200
+A:<locale>40/<chance>1
+P:<ac>6:<ds+dd>1d3:<to hit>0:<to dam>0:<to ac>0
+D:It is a large helmet, made from steel, with a face-plate.
+
+N:& Iron Crown~
+G:]:s
+I:<tval>33:<sval>10:<p1val>0:<p2val>0
+W:<level>45:<extra>0:<weight>20:<cost>500
+A:<locale>45/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:It is an iron crown, adorned with valorous runes and etchings.
+
+N:& Golden Crown~
+G:]:y
+I:<tval>33:<sval>11:<p1val>0:<p2val>0
+W:<level>45:<extra>0:<weight>30:<cost>1000
+A:<locale>45/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+F:IGNORE_ACID
+D:It is a golden crown, adorned with valorous runes and inspiring etchings.
+
+N:& Jewel Encrusted Crown~
+G:]:v
+I:<tval>33:<sval>12:<p1val>0:<p2val>0
+W:<level>50:<extra>0:<weight>40:<cost>2000
+A:<locale>50/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+F:IGNORE_ACID
+D:It is a golden crown, adorned with runes and encrusted with large and small gems.
+
+# soft armour
+
+N:& Robe~
+G:(:b
+I:<tval>36:<sval>2:<p1val>0:<p2val>0
+W:<level>1:<extra>0:<weight>20:<cost>4
+A:<locale>1/<chance>50:<locale>1/<chance>1
+P:<ac>2:<ds+dd>0d0:<to hit>0:<to dam>0:<to ac>0
+D:It is a robe, made from black cloth.
+
+N:& Filthy Rag~
+G:(:D
+I:<tval>36:<sval>1:<p1val>0:<p2val>0
+W:<level>0:<extra>0:<weight>20:<cost>1
+A:<locale>0/<chance>1
+P:<ac>1:<ds+dd>0d0:<to hit>0:<to dam>0:<to ac>-1
+D:It is a piece of clothing from before Second Age, if you see the state of it.
+
+N:& Soft Leather Armour~
+G:(:U
+I:<tval>36:<sval>4:<p1val>0:<p2val>0
+W:<level>3:<extra>0:<weight>80:<cost>18
+A:<locale>3/<chance>1
+P:<ac>4:<ds+dd>0d0:<to hit>0:<to dam>0:<to ac>0
+D:It is a leather armour, made from multiple layers of soft leather.
+
+N:& Soft Studded Leather~
+G:(:U
+I:<tval>36:<sval>5:<p1val>0:<p2val>0
+W:<level>3:<extra>0:<weight>90:<cost>35
+A:<locale>3/<chance>1
+P:<ac>5:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:It is a leather armour, made from multiple layers of soft leather. It has padding on the
+D:inside.
+
+N:& Hard Leather Armour~
+G:(:U
+I:<tval>36:<sval>6:<p1val>0:<p2val>0
+W:<level>5:<extra>0:<weight>100:<cost>150
+A:<locale>5/<chance>1
+P:<ac>6:<ds+dd>1d1:<to hit>-1:<to dam>0:<to ac>0
+D:It is a leather armour, made from multiple layers of hardened leather.
+
+N:& Hard Studded Leather~
+G:(:U
+I:<tval>36:<sval>7:<p1val>0:<p2val>0
+W:<level>10:<extra>0:<weight>110:<cost>200
+A:<locale>10/<chance>1
+P:<ac>7:<ds+dd>1d2:<to hit>-1:<to dam>0:<to ac>0
+D:It is a leather armour, made from multiple layers of hardened leather. It has padding on the
+D:inside.
+
+N:& Leather Scale Mail~
+G:(:U
+I:<tval>36:<sval>11:<p1val>0:<p2val>0
+W:<level>15:<extra>0:<weight>140:<cost>450
+A:<locale>15/<chance>1
+P:<ac>11:<ds+dd>1d1:<to hit>-1:<to dam>0:<to ac>0
+D:It is a leather armour, made from scales of hardened leather stitched onto a soft leather
+D:base. It is padded on the inside.
+
+# hard armour
+
+N:& Metal Scale Mail~
+G:[:s
+I:<tval>37:<sval>3:<p1val>0:<p2val>0
+W:<level>25:<extra>0:<weight>250:<cost>550
+A:<locale>25/<chance>1
+P:<ac>13:<ds+dd>1d4:<to hit>-2:<to dam>0:<to ac>0
+D:It is an armour made of metal scales, riveted on a soft leather base, padded on the inside.
+
+N:& Chain Mail~
+G:[:s
+I:<tval>37:<sval>4:<p1val>0:<p2val>0
+W:<level>25:<extra>0:<weight>220:<cost>750
+A:<locale>25/<chance>1
+P:<ac>14:<ds+dd>1d4:<to hit>-2:<to dam>0:<to ac>0
+D:It is made from small metal ringlets, each linked to each other.
+
+N:& Rusty Chain Mail~
+G:[:r
+I:<tval>37:<sval>1:<p1val>-1:<p2val>0
+W:<level>25:<extra>0:<weight>200:<cost>550
+A:<locale>25/<chance>1
+P:<ac>14:<ds+dd>1d4:<to hit>-5:<to dam>0:<to ac>-8
+F:STEALTH1
+D:It is made from small metal ringlets, each linked to each other.
+D:It is quite rusty, and creaks as you move.
+
+N:& Augmented Chain Mail~
+G:[:s
+I:<tval>37:<sval>6:<p1val>0:<p2val>0
+W:<level>30:<extra>0:<weight>270:<cost>900
+A:<locale>30/<chance>1
+P:<ac>16:<ds+dd>1d4:<to hit>-2:<to dam>0:<to ac>0
+D:It is made from small metal ringlets, each linked to each other. Underneath
+D:is a hard leather armour, padded on the inside.
+
+N:& Bar Chain Mail~
+G:[:s
+I:<tval>37:<sval>8:<p1val>0:<p2val>0
+W:<level>35:<extra>0:<weight>280:<cost>950
+A:<locale>35/<chance>1
+P:<ac>18:<ds+dd>1d4:<to hit>-2:<to dam>0:<to ac>0
+D:It is made from small metal bars, each linked to each other. Underneath
+D:is a hard leather armour, padded on the inside.
+
+N:& Metal Brigandine Armour~
+G:[:s
+I:<tval>37:<sval>9:<p1val>0:<p2val>0
+W:<level>35:<extra>0:<weight>290:<cost>1100
+A:<locale>35/<chance>1
+P:<ac>19:<ds+dd>1d4:<to hit>-3:<to dam>0:<to ac>0
+D:It is a chain-mail with extra plates at critical spots.
+
+N:& Partial Plate Armour~
+G:[:W
+I:<tval>37:<sval>12:<p1val>0:<p2val>0
+W:<level>45:<extra>0:<weight>260:<cost>1200
+A:<locale>45/<chance>1
+P:<ac>22:<ds+dd>1d6:<to hit>-3:<to dam>0:<to ac>0
+D:It is an armour made of metal plates, overlapping each other, protecting your
+D:upper body.
+
+N:& Metal Lamellar Armour~
+G:[:W
+I:<tval>37:<sval>13:<p1val>0:<p2val>0
+W:<level>45:<extra>0:<weight>340:<cost>1250
+A:<locale>45/<chance>1
+P:<ac>23:<ds+dd>1d6:<to hit>-3:<to dam>0:<to ac>0
+D:It is an armour made of metal strips, overlapping each other, protecting your
+D:upper body.
+
+N:& Full Plate Armour~
+G:[:W
+I:<tval>37:<sval>15:<p1val>0:<p2val>0
+W:<level>45:<extra>0:<weight>380:<cost>1350
+A:<locale>45/<chance>1
+P:<ac>25:<ds+dd>2d4:<to hit>-3:<to dam>0:<to ac>0
+D:It is an armour made of metal plates, overlapping each other, protecting your
+D:entire body.
+
+N:& Ribbed Plate Armour~
+G:[:W
+I:<tval>37:<sval>18:<p1val>0:<p2val>0
+W:<level>50:<extra>0:<weight>380:<cost>1500
+A:<locale>50/<chance>1
+P:<ac>28:<ds+dd>2d4:<to hit>-3:<to dam>0:<to ac>0
+D:It is an armour made of metal plates, overlapping each other, protecting your
+D:entire body. Each metal plate is reinfoced by thick ridges at the center.
+
+N:& Adamantite Plate Mail~
+G:[:G
+I:<tval>37:<sval>30:<p1val>0:<p2val>0
+W:<level>75:<extra>0:<weight>420:<cost>20000
+A:<locale>75/<chance>8
+P:<ac>40:<ds+dd>2d4:<to hit>-4:<to dam>0:<to ac>0
+F:IGNORE_ACID
+D:It is an armour made of metal plates, overlapping each other, protecting your
+D:entire body. The plates are made of Adamantite, that priceless metal
+D:which no acid can dissolve.
+
+N:& Mithril Plate Mail~
+G:[:B
+I:<tval>37:<sval>25:<p1val>0:<p2val>0
+W:<level>60:<extra>0:<weight>300:<cost>15000
+A:<locale>60/<chance>4
+P:<ac>35:<ds+dd>2d4:<to hit>-3:<to dam>0:<to ac>0
+F:IGNORE_ACID
+D:It is an armour made of metal plates, overlapping each other, protecting your
+D:entire body. The plates are made of Mithril, delved from the deep mines
+D:of Moria before the waking of Durin's Bane.
+
+N:& Mithril Chain Mail~
+G:[:B
+I:<tval>37:<sval>20:<p1val>0:<p2val>0
+W:<level>55:<extra>0:<weight>150:<cost>7000
+A:<locale>55/<chance>4
+P:<ac>28:<ds+dd>1d4:<to hit>-1:<to dam>0:<to ac>0
+F:IGNORE_ACID
+D:It is made from small metal ringlets, each linked to each other.
+D:The plates are made of Mithril, delved from the deep mines of Moria
+D:before the waking of Durin's Bane.
+
+N:& Double Chain Mail~
+G:[:s
+I:<tval>37:<sval>7:<p1val>0:<p2val>0
+W:<level>30:<extra>0:<weight>250:<cost>850
+A:<locale>30/<chance>1
+P:<ac>16:<ds+dd>1d4:<to hit>-2:<to dam>0:<to ac>0
+D:It is made from two layers of small metal ringlets, each linked to each other.
+
+### The Cloaks ###
+
+N:& Cloak~
+G:(:g
+I:<tval>35:<sval>1:<p1val>0:<p2val>0
+W:<level>1:<extra>0:<weight>10:<cost>3
+A:<locale>1/<chance>20:<locale>1/<chance>1
+P:<ac>1:<ds+dd>0d0:<to hit>0:<to dam>0:<to ac>0
+D:It is a cloak, made from tough fabric.
+
+N:& Shadow Cloak~
+G:(:D
+I:<tval>35:<sval>6:<p1val>1:<p2val>0
+W:<level>60:<extra>0:<weight>5:<cost>4000
+A:<locale>60/<chance>4
+F:STEALTH1
+P:<ac>6:<ds+dd>0d0:<to hit>0:<to dam>0:<to ac>4
+D:It is a cloak, made from elven fabric. Its color seems to change with your surroundings.
+
+### The Gloves ###
+
+N:& Set~ of Leather Gloves
+G:]:U
+I:<tval>31:<sval>1:<p1val>0:<p2val>0
+W:<level>1:<extra>0:<weight>5:<cost>3
+A:<locale>1/<chance>1
+P:<ac>1:<ds+dd>0d0:<to hit>0:<to dam>0:<to ac>0
+D:It is a set of gloves, made from thick leather.
+
+N:& Set~ of Gauntlets
+G:]:U
+I:<tval>31:<sval>2:<p1val>0:<p2val>0
+W:<level>10:<extra>0:<weight>25:<cost>35
+A:<locale>10/<chance>1
+P:<ac>2:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:It is a set of gauntlets made from metal.
+
+N:& Set~ of Cesti
+G:]:W
+I:<tval>31:<sval>5:<p1val>0:<p2val>0
+W:<level>50:<extra>0:<weight>40:<cost>100
+A:<locale>50/<chance>1
+P:<ac>5:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:It is a set of leather gloves, equipped with iron ridges and rivets designed
+D:to deal crushing blows to your enemies.
+
+### The shields ###
+
+N:& Shield~ of Deflection
+G:[:B
+I:<tval>34:<sval>10:<p1val>0:<p2val>0
+W:<level>70:<extra>0:<weight>100:<cost>10000
+A:<locale>70/<chance>8
+P:<ac>10:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>10
+F:IGNORE_ACID
+D:It is a large shield, made of Mithril, delved from the deep mines of Moria
+D:before the waking of Durin's Bane. It stays polished under the worst
+D:circumstances.
+
+N:& Small Leather Shield~
+G:):U
+I:<tval>34:<sval>2:<p1val>0:<p2val>0
+W:<level>3:<extra>0:<weight>50:<cost>30
+A:<locale>3/<chance>1
+P:<ac>2:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:It is a small shield, made from multiple layers of hardened leather.
+
+N:& Large Leather Shield~
+G:):U
+I:<tval>34:<sval>4:<p1val>0:<p2val>0
+W:<level>15:<extra>0:<weight>100:<cost>120
+A:<locale>15/<chance>1
+P:<ac>4:<ds+dd>1d2:<to hit>0:<to dam>0:<to ac>0
+D:It is a large shield, made from multiple layers of hardened leather.
+
+N:& Small Metal Shield~
+G:):s
+I:<tval>34:<sval>3:<p1val>0:<p2val>0
+W:<level>10:<extra>0:<weight>65:<cost>50
+A:<locale>10/<chance>1
+P:<ac>3:<ds+dd>1d2:<to hit>0:<to dam>0:<to ac>0
+D:It is a small shield, made from multiple layers of tough metal.
+
+N:& Large Metal Shield~
+G:):s
+I:<tval>34:<sval>5:<p1val>0:<p2val>0
+W:<level>30:<extra>0:<weight>120:<cost>200
+A:<locale>30/<chance>1
+P:<ac>5:<ds+dd>1d3:<to hit>0:<to dam>0:<to ac>0
+D:It is a large, made from multiple layers of tough metal.
+
+##### Rings #####
+
+N:Teleportation
+G:=:r
+I:<tval>45:<sval>4:<p1val>0:<p2val>0
+W:<level>5:<extra>0:<weight>2:<cost>0
+A:<locale>5/<chance>1
+F:CURSED | TELEPORT | EASY_KNOW
+
+N:Telepathy
+G:=:d
+I:<tval>45:<sval>5:<p1val>0:<p2val>0
+W:<level>80:<extra>0:<weight>2:<cost>35000
+A:<locale>80/<chance>6
+F:TELEPATHY | HIDE_TYPE
+
+N:Slow Digestion
+G:=:r
+I:<tval>45:<sval>6:<p1val>0:<p2val>0
+W:<level>5:<extra>0:<weight>2:<cost>250
+A:<locale>5/<chance>1
+F:SLOW_DIGEST | EASY_KNOW
+
+N:Feather Falling
+G:=:r
+I:<tval>45:<sval>7:<p1val>0:<p2val>0
+W:<level>5:<extra>0:<weight>2:<cost>200
+A:<locale>5/<chance>1
+F:FEATHER | EASY_KNOW
+
+N:Resist Fire
+G:=:r
+I:<tval>45:<sval>8:<p1val>0:<p2val>0
+W:<level>10:<extra>0:<weight>2:<cost>250
+A:<locale>10/<chance>1
+F:RES_FIRE | IGNORE_FIRE | EASY_KNOW
+
+N:Resist Cold
+G:=:r
+I:<tval>45:<sval>9:<p1val>0:<p2val>0
+W:<level>10:<extra>0:<weight>2:<cost>250
+A:<locale>10/<chance>1
+F:RES_COLD | IGNORE_COLD | EASY_KNOW
+
+N:Searching
+G:=:r
+I:<tval>45:<sval>23:<p1val>0:<p2val>0
+W:<level>5:<extra>0:<weight>2:<cost>250
+A:<locale>5/<chance>1
+F:SEARCH1 | HIDE_TYPE
+
+N:Strength
+G:=:r
+I:<tval>45:<sval>24:<p1val>0:<p2val>0
+W:<level>30:<extra>0:<weight>2:<cost>500
+A:<locale>30/<chance>1
+F:STR1 | HIDE_TYPE
+
+N:Intelligence
+G:=:r
+I:<tval>45:<sval>25:<p1val>0:<p2val>0
+W:<level>30:<extra>0:<weight>2:<cost>500
+A:<locale>30/<chance>1
+F:INT1 | HIDE_TYPE
+
+N:Dexterity
+G:=:r
+I:<tval>45:<sval>26:<p1val>0:<p2val>0
+W:<level>30:<extra>0:<weight>2:<cost>500
+A:<locale>30/<chance>1
+F:DEX1 | HIDE_TYPE
+
+N:Constitution
+G:=:r
+I:<tval>45:<sval>27:<p1val>0:<p2val>0
+W:<level>30:<extra>0:<weight>2:<cost>500
+A:<locale>30/<chance>1
+F:CON1 | HIDE_TYPE
+
+N:Speed
+G:=:r
+I:<tval>45:<sval>31:<p1val>0:<p2val>0
+W:<level>80:<extra>0:<weight>2:<cost>100000
+A:<locale>80/<chance>1
+F:SPEED1 | HIDE_TYPE
+
+N:Poison Resistance
+G:=:r
+I:<tval>45:<sval>20:<p1val>0:<p2val>0
+W:<level>60:<extra>0:<weight>2:<cost>16000
+A:<locale>60/<chance>2
+F:RES_POIS | EASY_KNOW
+
+N:Free Action
+G:=:r
+I:<tval>45:<sval>21:<p1val>0:<p2val>0
+W:<level>20:<extra>0:<weight>2:<cost>1500
+A:<locale>20/<chance>1
+F:FREE_ACT | EASY_KNOW
+
+N:Weakness
+G:=:r
+I:<tval>45:<sval>2:<p1val>-5:<p2val>0
+W:<level>5:<extra>0:<weight>2:<cost>0
+A:<locale>5/<chance>1
+F:CURSED | STR1 | HIDE_TYPE
+
+N:Flames
+G:=:r
+I:<tval>45:<sval>18:<p1val>0:<p2val>0
+W:<level>50:<extra>0:<weight>2:<cost>3000
+A:<locale>50/<chance>1
+P:<ac>0:<ds+dd>0d0:<to hit>0:<to dam>0:<to ac>15
+F:RES_FIRE | IGNORE_FIRE | EASY_KNOW
+D:It also allows you to attack your enemies aided by fire once in a while.
+D:It helps with fire-based spells.
+
+N:Acid
+G:=:r
+I:<tval>45:<sval>17:<p1val>0:<p2val>0
+W:<level>50:<extra>0:<weight>2:<cost>3000
+A:<locale>50/<chance>1
+P:<ac>0:<ds+dd>0d0:<to hit>0:<to dam>0:<to ac>15
+F:RES_ACID | IGNORE_ACID | EASY_KNOW
+D:It also allows you to attack your enemies aided by acid once in a while.
+D:It helps with acid-based spells.
+
+N:Ice
+G:=:r
+I:<tval>45:<sval>19:<p1val>0:<p2val>0
+W:<level>50:<extra>0:<weight>2:<cost>3000
+A:<locale>50/<chance>1
+P:<ac>0:<ds+dd>0d0:<to hit>0:<to dam>0:<to ac>15
+F:RES_COLD | IGNORE_COLD | EASY_KNOW
+D:It also allows you to attack your enemies aided by cold once in a while.
+D:It helps with ice-based spells.
+
+N:Sparks
+G:=:r
+I:<tval>45:<sval>38:<p1val>0:<p2val>0
+W:<level>50:<extra>0:<weight>2:<cost>3000
+A:<locale>50/<chance>1
+P:<ac>0:<ds+dd>0d0:<to hit>0:<to dam>0:<to ac>15
+F:RES_ELEC | IGNORE_ELEC | EASY_KNOW
+D:It also allows you to attack your enemies aided by lightning once in a while.
+D:It helps with electricity-based spells.
+
+N:Woe
+G:=:r
+I:<tval>45:<sval>0:<p1val>-5:<p2val>0
+W:<level>50:<extra>0:<weight>2:<cost>0
+A:<locale>50/<chance>1
+F:CURSED | TELEPORT | WIS1 | CHR1 | HIDE_TYPE
+
+N:Stupidity
+G:=:r
+I:<tval>45:<sval>3:<p1val>-5:<p2val>0
+W:<level>5:<extra>0:<weight>2:<cost>0
+A:<locale>5/<chance>1
+F:CURSED | INT1 | HIDE_TYPE
+
+N:Damage
+G:=:r
+I:<tval>45:<sval>29:<p1val>0:<p2val>0
+W:<level>20:<extra>0:<weight>2:<cost>500
+A:<locale>20/<chance>1
+D:It allows you to attack with extra damage once in a while.
+
+N:Accuracy
+G:=:r
+I:<tval>45:<sval>28:<p1val>0:<p2val>0
+W:<level>20:<extra>0:<weight>2:<cost>500
+A:<locale>20/<chance>1
+D:It allows you a higher chance of hitting your enemies, and hitting them hard.
+
+N:Protection
+G:=:r
+I:<tval>45:<sval>16:<p1val>0:<p2val>0
+W:<level>10:<extra>0:<weight>2:<cost>500
+A:<locale>10/<chance>1
+D:It makes you hard to hit in melee combat.
+
+N:Aggravate Monster
+G:=:r
+I:<tval>45:<sval>1:<p1val>0:<p2val>0
+W:<level>5:<extra>0:<weight>2:<cost>0
+A:<locale>5/<chance>1
+F:CURSED | AGGRAVATE | EASY_KNOW
+
+N:See Invisible
+G:=:r
+I:<tval>45:<sval>22:<p1val>0:<p2val>0
+W:<level>30:<extra>0:<weight>2:<cost>340
+A:<locale>30/<chance>1
+F:SEE_INVIS | EASY_KNOW
+
+N:Sustain Strength
+G:=:r
+I:<tval>45:<sval>10:<p1val>0:<p2val>0
+W:<level>30:<extra>0:<weight>2:<cost>750
+A:<locale>30/<chance>1
+F:SUST_STR | EASY_KNOW
+
+N:Sustain Intelligence
+G:=:r
+I:<tval>45:<sval>11:<p1val>0:<p2val>0
+W:<level>30:<extra>0:<weight>2:<cost>600
+A:<locale>30/<chance>1
+F:SUST_INT | EASY_KNOW
+
+N:Sustain Wisdom
+G:=:r
+I:<tval>45:<sval>12:<p1val>0:<p2val>0
+W:<level>30:<extra>0:<weight>2:<cost>600
+A:<locale>30/<chance>1
+F:SUST_WIS | EASY_KNOW
+
+N:Sustain Constitution
+G:=:r
+I:<tval>45:<sval>13:<p1val>0:<p2val>0
+W:<level>30:<extra>0:<weight>2:<cost>750
+A:<locale>30/<chance>1
+F:SUST_CON | EASY_KNOW
+
+N:Sustain Dexterity
+G:=:r
+I:<tval>45:<sval>14:<p1val>0:<p2val>0
+W:<level>30:<extra>0:<weight>2:<cost>750
+A:<locale>30/<chance>1
+F:SUST_DEX | EASY_KNOW
+
+N:Sustain Charisma
+G:=:r
+I:<tval>45:<sval>15:<p1val>0:<p2val>0
+W:<level>30:<extra>0:<weight>2:<cost>500
+A:<locale>30/<chance>1
+F:SUST_CHR | EASY_KNOW
+
+N:Slaying
+G:=:r
+I:<tval>45:<sval>30:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>2:<cost>1000
+A:<locale>40/<chance>1
+F:SHOW_MODS
+D:It affects both of your combat qualities.
+
+N:& Iron Ring~
+#N:Iron
+G:=:s
+I:<tval>45:<sval>42:<p1val>0:<p2val>0
+W:<level>5:<extra>0:<weight>2:<cost>50
+A:<locale>5/<chance>1
+P:<ac>0:<ds+dd>0d0:<to hit>0:<to dam>0:<to ac>0
+F:NOFLAVOR
+
+N:& Silver Ring~
+G:=:w
+I:<tval>45:<sval>43:<p1val>0:<p2val>0
+W:<level>5:<extra>0:<weight>2:<cost>1000
+A:<locale>15/<chance>1
+P:<ac>0:<ds+dd>0d0:<to hit>0:<to dam>0:<to ac>0
+F:NOFLAVOR
+
+N:& Gold Ring~
+G:=:y
+I:<tval>45:<sval>44:<p1val>0:<p2val>0
+W:<level>5:<extra>0:<weight>2:<cost>5000
+A:<locale>30/<chance>1
+P:<ac>0:<ds+dd>0d0:<to hit>0:<to dam>0:<to ac>0
+F:NOFLAVOR
+
+N:& Mithril Ring~
+G:=:B
+I:<tval>45:<sval>45:<p1val>0:<p2val>0
+W:<level>5:<extra>0:<weight>2:<cost>15000
+A:<locale>45/<chance>1
+P:<ac>0:<ds+dd>0d0:<to hit>0:<to dam>0:<to ac>0
+F:NOFLAVOR
+
+##### Amulets #####
+
+N:Wisdom
+G:":o
+I:<tval>40:<sval>6:<p1val>0:<p2val>0
+W:<level>20:<extra>0:<weight>3:<cost>500
+A:<locale>20/<chance>1
+F:WIS1 | HIDE_TYPE
+
+N:Charisma
+G:":o
+I:<tval>40:<sval>7:<p1val>0:<p2val>0
+W:<level>20:<extra>0:<weight>3:<cost>500
+A:<locale>20/<chance>1
+F:CHR1 | HIDE_TYPE
+
+N:Searching
+G:":o
+I:<tval>40:<sval>5:<p1val>0:<p2val>0
+W:<level>30:<extra>0:<weight>3:<cost>600
+A:<locale>30/<chance>4
+F:SEARCH1 | HIDE_TYPE
+
+N:Teleportation
+G:":o
+I:<tval>40:<sval>1:<p1val>0:<p2val>0
+W:<level>15:<extra>0:<weight>3:<cost>0
+A:<locale>15/<chance>1
+F:CURSED | TELEPORT | EASY_KNOW
+
+N:Slow Digestion
+G:":o
+I:<tval>40:<sval>3:<p1val>0:<p2val>0
+W:<level>15:<extra>0:<weight>3:<cost>200
+A:<locale>15/<chance>1
+F:SLOW_DIGEST | EASY_KNOW
+
+N:Resist Acid
+G:":o
+I:<tval>40:<sval>4:<p1val>0:<p2val>0
+W:<level>20:<extra>0:<weight>3:<cost>300
+A:<locale>20/<chance>1
+F:RES_ACID | IGNORE_ACID | EASY_KNOW
+
+N:Adornment
+G:":o
+I:<tval>40:<sval>2:<p1val>0:<p2val>0
+W:<level>15:<extra>0:<weight>3:<cost>20
+A:<locale>15/<chance>1
+F:EASY_KNOW
+D:It is a very nice amulet, made from multiple kinds of metal, with a nice leather
+D:strip to bind it around your neck. You will surely look very smart with it.
+
+## XXX 170 XXX ##
+
+N:the Magi
+G:":o
+I:<tval>40:<sval>8:<p1val>0:<p2val>0
+W:<level>50:<extra>0:<weight>3:<cost>30000
+A:<locale>50/<chance>4
+P:<ac>0:<ds+dd>0d0:<to hit>0:<to dam>0:<to ac>3
+F:FREE_ACT | SEE_INVIS | SEARCH1 |
+F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+
+N:DOOM
+G:":o
+I:<tval>40:<sval>0:<p1val>-5:<p2val>0
+W:<level>50:<extra>0:<weight>3:<cost>0
+A:<locale>50/<chance>1
+F:CURSED | STR1 | INT1 | WIS1 | DEX1 | CON1 | CHR1 | HIDE_TYPE
+
+
+##### Scrolls #####
+
+N:Enchant Weapon To-Hit
+G:?:w
+I:<tval>70:<sval>17:<p1val>0:<p2val>0
+W:<level>15:<extra>0:<weight>5:<cost>125
+A:<locale>15/<chance>1
+D:It lets you enhance the to-hit bonus of weapons, rings and some armour types.
+
+N:Enchant Weapon To-Dam
+G:?:w
+I:<tval>70:<sval>18:<p1val>0:<p2val>0
+W:<level>15:<extra>0:<weight>5:<cost>125
+A:<locale>15/<chance>1
+D:It lets you enhance the to-dam bonus of weapons, rings and some armour types.
+
+N:Enchant Armor
+G:?:w
+I:<tval>70:<sval>16:<p1val>0:<p2val>0
+W:<level>15:<extra>0:<weight>5:<cost>125
+A:<locale>15/<chance>1
+D:It lets you enhance the ac bonus of armour, some rings and some amulets.
+
+N:Identify
+G:?:w
+I:<tval>70:<sval>12:<p1val>0:<p2val>0
+W:<level>1:<extra>0:<weight>5:<cost>50
+A:<locale>1/<chance>1:<locale>5/<chance>1:<locale>10/<chance>1:<locale>30/<chance>1
+D:It will let you identify one item.
+
+N:*Identify*
+G:?:w
+I:<tval>70:<sval>13:<p1val>0:<p2val>0
+W:<level>30:<extra>0:<weight>5:<cost>1000
+A:<locale>30/<chance>1
+D:It will learn you all hidden qualities and subtle aspects of one item.
+
+N:Remove Curse
+G:?:w
+I:<tval>70:<sval>14:<p1val>0:<p2val>0
+W:<level>10:<extra>0:<weight>5:<cost>100
+A:<locale>10/<chance>1
+D:It will remove a curse from one item.
+
+N:Light
+G:?:w
+I:<tval>70:<sval>24:<p1val>0:<p2val>0
+W:<level>0:<extra>0:<weight>5:<cost>15
+A:<locale>0/<chance>1:<locale>3/<chance>1:<locale>10/<chance>1
+D:It will lighten up your surroundings, doing damage do light-fearing creatures.
+
+N:Summon Monster
+G:?:w
+I:<tval>70:<sval>4:<p1val>0:<p2val>0
+W:<level>1:<extra>0:<weight>5:<cost>0
+A:<locale>1/<chance>1
+D:It will summon a monster.
+
+N:Phase Door
+G:?:w
+I:<tval>70:<sval>8:<p1val>0:<p2val>0
+W:<level>1:<extra>0:<weight>5:<cost>15
+A:<locale>1/<chance>1
+D:It will let you teleport a short way off.
+
+N:Teleportation
+G:?:w
+I:<tval>70:<sval>9:<p1val>0:<p2val>0
+W:<level>10:<extra>0:<weight>5:<cost>40
+A:<locale>10/<chance>1
+D:It will instantly transport you to another location in the dungeon.
+
+N:Teleport Level
+G:?:w
+I:<tval>70:<sval>10:<p1val>0:<p2val>0
+W:<level>20:<extra>0:<weight>5:<cost>50
+A:<locale>20/<chance>1
+D:It will instantly transport you to another level in the dungeon.
+
+N:Treasure Creation
+G:?:w
+I:<tval>70:<sval>6:<p1val>0:<p2val>0
+W:<level>20:<extra>0:<weight>5:<cost>50
+A:<locale>20/<chance>1
+D:It will create treasure right in front of you.
+
+N:Monster Confusion
+G:?:w
+I:<tval>70:<sval>36:<p1val>0:<p2val>0
+W:<level>5:<extra>0:<weight>5:<cost>30
+A:<locale>5/<chance>1
+D:The next monster you touch will have a high chance of being confused for a while.
+
+N:Magic Mapping
+G:?:w
+I:<tval>70:<sval>25:<p1val>0:<p2val>0
+W:<level>5:<extra>0:<weight>5:<cost>40
+A:<locale>5/<chance>1
+D:You will learn the layout of the surrounding dungeons.
+
+N:Rune of Protection
+G:?:w
+I:<tval>70:<sval>38:<p1val>0:<p2val>0
+W:<level>60:<extra>0:<weight>5:<cost>500
+A:<locale>60/<chance>90:<locale>60/<chance>4
+D:It will inscibe a magic rune on the floor where you are standing that no monster
+D:will lightly pass.
+
+N:*Remove Curse*
+G:?:w
+I:<tval>70:<sval>15:<p1val>0:<p2val>0
+W:<level>50:<extra>0:<weight>5:<cost>8000
+A:<locale>50/<chance>2
+D:It will remove a *curse* from an item.
+
+N:Treasure Detection
+G:?:w
+I:<tval>70:<sval>26:<p1val>0:<p2val>0
+W:<level>0:<extra>0:<weight>5:<cost>15
+A:<locale>0/<chance>1
+D:It will let you know if there is any treasure in the dungeon around you.
+
+N:Object Detection
+G:?:w
+I:<tval>70:<sval>27:<p1val>0:<p2val>0
+W:<level>0:<extra>0:<weight>5:<cost>15
+A:<locale>0/<chance>1
+D:It will let you know if there are any objects in the dungeon around you.
+
+N:Trap Detection
+G:?:w
+I:<tval>70:<sval>28:<p1val>0:<p2val>0
+W:<level>5:<extra>0:<weight>5:<cost>35
+A:<locale>5/<chance>10:<locale>5/<chance>1
+D:It will let you know if there are any (hidden) traps in the dungeon around you.
+
+## XXX 195 XXX ##
+
+## XXX 196 XXX ##
+
+N:Door/Stair Location
+G:?:w
+I:<tval>70:<sval>29:<p1val>0:<p2val>0
+W:<level>5:<extra>0:<weight>5:<cost>35
+A:<locale>5/<chance>1:<locale>10/<chance>1:<locale>15/<chance>1
+D:It will learn you the location of doors and stairs in the vicinity.
+
+N:Acquirement
+G:?:w
+I:<tval>70:<sval>46:<p1val>0:<p2val>0
+W:<level>20:<extra>0:<weight>5:<cost>100000
+A:<locale>20/<chance>8
+D:It will create an exclusive object right in front of you.
+
+N:*Acquirement*
+G:?:w
+I:<tval>70:<sval>47:<p1val>0:<p2val>0
+W:<level>60:<extra>0:<weight>5:<cost>200000
+A:<locale>60/<chance>16
+D:It will create some exclusive objects right in front of you.
+
+N:Mass Genocide
+G:?:w
+I:<tval>70:<sval>45:<p1val>0:<p2val>0
+W:<level>50:<extra>0:<weight>5:<cost>1000
+A:<locale>50/<chance>4
+D:It will let you kill all monsters surrounding you, at a cost of up to 2
+D:times your player level per monster.
+
+N:Detect Invisible
+G:?:w
+I:<tval>70:<sval>30:<p1val>0:<p2val>0
+W:<level>1:<extra>0:<weight>5:<cost>15
+A:<locale>1/<chance>1
+D:It will let you see invisible monsters for a while.
+
+N:Aggravate Monster
+G:?:w
+I:<tval>70:<sval>1:<p1val>0:<p2val>0
+W:<level>5:<extra>0:<weight>5:<cost>0
+A:<locale>5/<chance>1
+D:You will aggravate nearby monsters after reading this for quite some time.
+
+N:Trap Creation
+G:?:w
+I:<tval>70:<sval>7:<p1val>0:<p2val>0
+W:<level>10:<extra>0:<weight>5:<cost>15
+A:<locale>10/<chance>1
+D:If allows you to create traps on any floor surrounding you.
+
+N:Trap/Door Destruction
+G:?:w
+I:<tval>70:<sval>39:<p1val>0:<p2val>0
+W:<level>10:<extra>0:<weight>5:<cost>50
+A:<locale>10/<chance>1
+D:It will destruct all doors and traps next to you.
+
+## XXX 205 XXX ##
+
+N:Recharging
+G:?:w
+I:<tval>70:<sval>22:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>200
+A:<locale>40/<chance>1
+D:It will let you recharge one item, staff, wand or rod.
+
+N:Genocide
+G:?:w
+I:<tval>70:<sval>44:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>750
+A:<locale>40/<chance>4
+D:It will let you wipe one race in this dungeon level, at a cost of up to 10% of
+D:monster level in hitpoints per monster.
+
+N:Darkness
+G:?:w
+I:<tval>70:<sval>0:<p1val>0:<p2val>0
+W:<level>1:<extra>0:<weight>5:<cost>0
+A:<locale>1/<chance>1
+D:It will darken the area surrounding you.
+
+N:Protection from Evil
+G:?:w
+I:<tval>70:<sval>37:<p1val>0:<p2val>0
+W:<level>30:<extra>0:<weight>5:<cost>50
+A:<locale>30/<chance>1
+D:It will keep evil monsters from attacking you in melee combat.
+
+N:Satisfy Hunger
+G:?:w
+I:<tval>70:<sval>32:<p1val>0:<p2val>0
+W:<level>5:<extra>0:<weight>5:<cost>10
+A:<locale>5/<chance>1
+D:It will keep you nourished for quite some time.
+
+N:Dispel Undead
+G:?:w
+I:<tval>70:<sval>42:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>200
+A:<locale>40/<chance>1
+D:It will damage undead monsters surrounding you.
+
+N:*Enchant Weapon*
+G:?:w
+I:<tval>70:<sval>21:<p1val>0:<p2val>0
+W:<level>50:<extra>0:<weight>5:<cost>500
+A:<locale>50/<chance>1
+D:It lets you greatly enhance the to-dam bonus of weapons, rings and some armour types.
+
+N:Curse Weapon
+G:?:w
+I:<tval>70:<sval>3:<p1val>0:<p2val>0
+W:<level>50:<extra>0:<weight>5:<cost>0
+A:<locale>50/<chance>1
+D:It curses your weapon.
+
+N:*Enchant Armor*
+G:?:w
+I:<tval>70:<sval>20:<p1val>0:<p2val>0
+W:<level>50:<extra>0:<weight>5:<cost>500
+A:<locale>50/<chance>50:<locale>50/<chance>1
+D:It lets you greatly enhance the ac bonus of armour, some rings and some amulets.
+
+N:Curse Armor
+G:?:w
+I:<tval>70:<sval>2:<p1val>0:<p2val>0
+W:<level>50:<extra>0:<weight>5:<cost>0
+A:<locale>50/<chance>1
+D:It curses your armour.
+
+N:Summon Undead
+G:?:w
+I:<tval>70:<sval>5:<p1val>0:<p2val>0
+W:<level>15:<extra>0:<weight>5:<cost>0
+A:<locale>15/<chance>1
+D:It will let you summon an undead monster.
+
+N:Blessing
+G:?:w
+I:<tval>70:<sval>33:<p1val>0:<p2val>0
+W:<level>1:<extra>0:<weight>5:<cost>15
+A:<locale>1/<chance>1
+D:You will walk with the favor of your God for a while.
+
+N:Holy Chant
+G:?:w
+I:<tval>70:<sval>34:<p1val>0:<p2val>0
+W:<level>10:<extra>0:<weight>5:<cost>40
+A:<locale>10/<chance>1
+D:You will walk with the favor of your God for some time.
+
+N:Holy Prayer
+G:?:w
+I:<tval>70:<sval>35:<p1val>0:<p2val>0
+W:<level>25:<extra>0:<weight>5:<cost>80
+A:<locale>25/<chance>1
+D:You will walk with the favor of your God for quite some time.
+
+N:Word of Recall
+G:?:w
+I:<tval>70:<sval>11:<p1val>0:<p2val>0
+W:<level>5:<extra>0:<weight>5:<cost>150
+A:<locale>5/<chance>1
+D:You will be magically recalled to the town some short time from now.
+
+N:*Destruction*
+G:?:w
+I:<tval>70:<sval>41:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>250
+A:<locale>40/<chance>1
+D:This spell will destroy the dungeon around you, pulling down walls and ceilings alike.
+
+#
+# PAGES
+#
+
+# A: locale / chance
+# locale is measurement of "how good" an item is
+# chance : randint(chance) == 0 means item is generated
+
+# spell cost = scale * level * 100 *
+# (1 (nat/item/self/world) or 2 (drk / escape / sense / other) or 3 (heal))
+# this is done in init2.c
+#G:char:color
+
+#book Magic for Beginners - about 5/1
+N:Magic Missile
+G:?:b
+I:<tval>71:<sval>1:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>5/<chance>1
+D:The spell will create a magic missile.
+
+N:Detect Monsters
+G:?:b
+I:<tval>71:<sval>2:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>5/<chance>1
+D:The spell will let you detect nearby monsters.
+
+N:Phase Door
+G:?:b
+I:<tval>71:<sval>3:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>5/<chance>1
+D:The spell will let you teleport some short distance away.
+
+N:Light Area
+G:?:b
+I:<tval>71:<sval>4:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>5/<chance>1
+D:The spell will brighten up the area, doing damage do light-fearing creatures.
+
+N:Treasure Detection
+G:?:b
+I:<tval>71:<sval>5:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>5/<chance>1
+D:The spell will let you detect nearby treasure.
+
+N:Cure Light Wounds
+G:?:b
+I:<tval>71:<sval>6:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>250
+A:<locale>5/<chance>1
+D:The spell will heal up to 2d8 hitpoints, and try to heal cuts as well.
+
+N:Object Detection
+G:?:b
+I:<tval>71:<sval>7:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>5/<chance>1
+D:The spell will let you detect nearby objects.
+
+N:Find Traps/Doors
+G:?:b
+I:<tval>71:<sval>8:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>5/<chance>1
+D:The spell will let you detect nearby traps and doors, be they hidden or no.
+
+N:Stinking Cloud
+G:?:b
+I:<tval>71:<sval>9:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>5/<chance>2
+D:The spell will let you cast a poisonous cloud to your foes.
+
+#book Conjuring and Tricks - about 10/1
+N:Create Confusion
+G:?:b
+I:<tval>71:<sval>20:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>10/<chance>1
+D:The spell will let you confuse a specific monster with dreams, visions and strange realities.
+
+N:Lightning Bolt
+G:?:b
+I:<tval>71:<sval>21:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>10/<chance>2
+D:The spell will let you cast a powerful lightning bolt to fry your foe.
+
+N:Destruct Trap/Door
+G:?:b
+I:<tval>71:<sval>22:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>10/<chance>1
+D:The spell will destroy any traps and doors surrounding you.
+
+N:Sleep I
+G:?:b
+I:<tval>71:<sval>23:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>10/<chance>1
+D:The spell will let try to let you put a nearby monster to sleep.
+
+N:Cure Poison
+G:?:b
+I:<tval>71:<sval>24:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>10/<chance>1
+D:The spell will let you purge yourself of poisonous residues.
+
+N:Teleport Self
+G:?:b
+I:<tval>71:<sval>25:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>10/<chance>2
+D:The spell will let you teleport to another location in the dungeon instantly.
+
+N:Spear Of Light
+G:?:b
+I:<tval>71:<sval>26:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>10/<chance>1
+D:The spell will let you cast a ray of intense light in a direction of your choice,
+D:doing damage to light-fearing creatures.
+
+N:Frost Bolt
+G:?:b
+I:<tval>71:<sval>27:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>10/<chance>2
+D:The spell will let you cast a ball of intense cold, to stop your enemies where they stand.
+
+N:Turn Stone to Mud
+G:?:b
+I:<tval>71:<sval>28:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>10/<chance>2
+D:The spell will let you transform a wall into a puddle of mud, thus allowing you to
+D:boldy go where no one has gone before.
+
+#book Incantations and Illusions - about 20/1
+N:Satisfy Hunger
+G:?:b
+I:<tval>71:<sval>30:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>20/<chance>1
+D:The spell will feed you for quite some time.
+
+N:Recharge Item I
+G:?:b
+I:<tval>71:<sval>31:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>20/<chance>1
+D:The spell will let you recharge an item.
+
+N:Sleep II
+G:?:b
+I:<tval>71:<sval>32:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>20/<chance>1
+D:The spell will let try hard to let you put a nearby monster to sleep.
+
+N:Polymorph Other
+G:?:b
+I:<tval>71:<sval>33:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>20/<chance>1
+D:The spell will allow you to transform a bothersome creature into something that
+D:is less bothersome.
+
+N:Identify
+G:?:b
+I:<tval>71:<sval>34:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>20/<chance>2
+D:The spell will let you identify one item.
+
+N:Sleep III
+G:?:b
+I:<tval>71:<sval>35:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>20/<chance>2
+D:The spell will let try very hard to let you put a nearby monster to sleep.
+
+N:Fire Bolt
+G:?:b
+I:<tval>71:<sval>36:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>20/<chance>1
+D:The spell will let you cast a fiery bolt at a monster of your choice.
+
+N:Slow Monster
+G:?:b
+I:<tval>71:<sval>37:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>20/<chance>2
+D:The spell will slow down a monster of your choice.
+
+#book Sorcery and Evocations - about 30/1
+N:Frost Ball
+G:?:b
+I:<tval>71:<sval>40:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>30/<chance>1
+D:The spell will let you hurl a ball of cold at your enemies.
+
+N:Recharge Item II
+G:?:b
+I:<tval>71:<sval>41:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>30/<chance>1
+D:The spell will let you recharge an item with a high chance of success.
+
+N:Teleport Other
+G:?:b
+I:<tval>71:<sval>42:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>30/<chance>2
+D:The spell will let you remove a monster from your sight.
+
+N:Haste Self
+G:?:b
+I:<tval>71:<sval>43:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>30/<chance>2
+D:The spell will let you do more in less time, but beware of the addictive
+D:effects of this spell.
+
+N:Fire Ball
+G:?:b
+I:<tval>71:<sval>44:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>30/<chance>1
+D:The spell will let you hurl a fiery ball at your enemies.
+
+N:Word of Destruction
+G:?:b
+I:<tval>71:<sval>45:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>30/<chance>1
+D:The spell will let you unleash a small earthquake. Its center will be where you are.
+
+N:Genocide I
+G:?:b
+I:<tval>71:<sval>46:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>30/<chance>3
+D:The spell will let you wipe one race in this dungeon level, at a cost of up to 10% of
+D:monster level in hitpoints per monster.
+
+#book Resistances and Scarabtarices - about 40/1
+N:Resist Fire
+G:?:b
+I:<tval>71:<sval>50:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>40/<chance>1
+D:The spell will cause you to resist fire for a short while.
+
+N:Resist Cold
+G:?:b
+I:<tval>71:<sval>51:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>40/<chance>1
+D:The spell will cause you to resist cold for a short while.
+
+N:Resist Acid
+G:?:b
+I:<tval>71:<sval>52:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>40/<chance>1
+D:The spell will cause you to resist acid for a short while.
+
+N:Resist Poison
+G:?:b
+I:<tval>71:<sval>53:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>40/<chance>1
+D:The spell will cause you to resist poison for a short while.
+
+N:Resistance
+G:?:b
+I:<tval>71:<sval>54:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>40/<chance>2
+D:The spell will cause you to resist fire, acid, cold and poison for a short while.
+
+#book Mordenkainen's Escapes - about 50/1
+N:Door Creation
+G:?:b
+I:<tval>71:<sval>60:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>50/<chance>1
+D:The spell will create doors around you, shutting your enemies off.
+
+N:Stair Creation
+G:?:b
+I:<tval>71:<sval>61:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>50/<chance>1
+D:The spell will create a stair on the spot, allowing you an easy escape route.
+
+N:Teleport Level
+G:?:b
+I:<tval>71:<sval>62:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>50/<chance>1
+D:This spell will transport you to another level in the dungeon.
+
+N:Earthquake
+G:?:b
+I:<tval>71:<sval>63:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>50/<chance>1
+D:The spell will let you unleash an intense earthquake. Its center will be where you are.
+
+N:Word of Recall
+G:?:b
+I:<tval>71:<sval>64:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>50/<chance>1
+D:This spell will cause you to be magically recalled to the town some short time from now.
+
+#book Kelek's Grimoire of Power - about 60/1
+N:Detect Evil
+G:?:b
+I:<tval>71:<sval>70:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>60/<chance>1
+D:This spell will learn you the location of all evil monsters in the vicinity.
+
+N:Detect Enchantment
+G:?:b
+I:<tval>71:<sval>71:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>60/<chance>1
+D:This spell will learn you the location of all enchanted items around you.
+
+N:Recharge Item III
+G:?:b
+I:<tval>71:<sval>72:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>60/<chance>1
+D:The spell will let you recharge an item with a very high chance of success.
+
+N:Genocide II
+G:?:b
+I:<tval>71:<sval>73:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>60/<chance>1
+D:The spell will let you wipe one race in this dungeon level, at a cost of up to 10% of
+D:monster level in hitpoints per monster.
+
+N:Mass Genocide
+G:?:b
+I:<tval>71:<sval>74:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>60/<chance>3
+D:This spell will let you kill all monsters surrounding you, at a cost of up to 2
+D:times your player level per monster.
+
+#book Tenser's Transformations - about 80/2
+N:Heroism
+G:?:b
+I:<tval>71:<sval>80:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>80/<chance>2
+D:This spell will transform you into a valorous hero for a short while.
+
+N:Shield
+G:?:b
+I:<tval>71:<sval>81:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>80/<chance>2
+D:This spell will magically enhance your armour for some short time.
+
+N:Berserker
+G:?:b
+I:<tval>71:<sval>82:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>80/<chance>2
+D:This spell will enrage you like a true berserker for a while.
+
+N:Essence of Speed
+G:?:b
+I:<tval>71:<sval>83:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>80/<chance>2
+D:This spell will speed up your actions, so you can do more in less time, for some short while.
+
+N:Invulnerability
+G:?:b
+I:<tval>71:<sval>84:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>80/<chance>3
+D:This spell will create a magic shell around you, that your enemies must break down before
+D:they can strike at you in melee combat.
+
+#book Raal's Tome of Destruction - about 100/4
+# somewhat more common here!
+N:Acid Bolt
+G:?:b
+I:<tval>71:<sval>90:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>60/<chance>5
+D:This spell will let you cast a powerful bolt of acid at your enemies.
+
+N:Cloud Kill
+G:?:b
+I:<tval>71:<sval>91:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>60/<chance>5
+D:This spell will let you cast a large ball of poison at your enemies.
+
+N:Acid Ball
+G:?:b
+I:<tval>71:<sval>92:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>62/<chance>5
+D:This spell will let you cast a large ball of acid at your enemies.
+
+N:Ice Storm
+G:?:b
+I:<tval>71:<sval>93:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>64/<chance>5
+D:This spell will let you cast a large ball of intense cold at your enemies.
+
+N:Meteor Swarm
+G:?:b
+I:<tval>71:<sval>94:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>66/<chance>5
+D:This spell will let you cast a large magic missile at your enemies.
+
+N:Hell Fire
+G:?:b
+I:<tval>71:<sval>95:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>70/<chance>5
+D:This spell will let you cast a large ball of pure energy at your enemies.
+
+# A: locale / chance
+# locale is measurement of "how good" an item is
+# chance : randint(chance) == 0 means item is generated
+
+# spell cost = scale * level * 100 *
+# (1 (nat/item/self/world) or 2 (drk / escape / sense / other) or 3 (heal))
+# this is done in init2.c
+#G:char:color
+
+#book new spells
+N:Magic Reflection
+G:?:b
+I:<tval>71:<sval>96:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>40/<chance>5
+D:This spell will create a magic shell around you, that will cause your enemies
+D:to strike themselves when they intended to dismember you in melee combat.
+
+N:Create Simple Trap
+G:?:b
+I:<tval>71:<sval>100:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>10/<chance>1
+D:This spell will allow you to create a simple trap, if you know the trap.
+
+N:Create Effective Trap
+G:?:b
+I:<tval>71:<sval>101:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>20/<chance>2
+D:This spell will allow you to create an higher level trap, if you know the trap.
+
+N:Create Dangerous Trap
+G:?:b
+I:<tval>71:<sval>102:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>30/<chance>2
+D:This spell will allow you to create an high level trap, if you know the trap.
+
+N:Create Death Trap
+G:?:b
+I:<tval>71:<sval>103:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>40/<chance>4
+D:This spell will allow you to create an very high level trap, if you know the trap.
+
+N:Create Complex Trap
+G:?:b
+I:<tval>71:<sval>103:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>60/<chance>3
+D:This spell will allow you to create a complex trap, consisting of more traps,
+D:provided you know these traps.
+
+# priest pages
+
+#book Beginners Handbook - about 5/1
+N:Detect Evil
+G:?:b
+I:<tval>71:<sval>150:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>5/<chance>1
+D:This spell will let your God show you the location of evil monsters lurking nearby.
+
+N:Cure Minor Wounds
+G:?:b
+I:<tval>71:<sval>151:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>5/<chance>1
+D:This spell will heal small injuries and cuts.
+
+N:Bless
+G:?:b
+I:<tval>71:<sval>152:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>5/<chance>1
+D:This spell will let you walk in the shadow of your God for a time.
+
+N:Remove Fear
+G:?:b
+I:<tval>71:<sval>153:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>5/<chance>1
+D:This spell will let you fear nothing.
+
+N:Call Light
+G:?:b
+I:<tval>71:<sval>154:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>5/<chance>2
+D:This spell will call on your God to light up your surroundings.
+
+N:Find Traps
+G:?:b
+I:<tval>71:<sval>155:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>5/<chance>2
+D:This spell will let your God reveal hidden traps to you.
+
+N:Detect Doors Stairs
+G:?:b
+I:<tval>71:<sval>156:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>5/<chance>1
+D:This spell will let your God reveal doors and stairs to you.
+
+N:Slow Poison
+G:?:b
+I:<tval>71:<sval>157:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>5/<chance>2
+D:This spell will try to reduce any poisonous residues in your system.
+
+#book Word of Wisdom - about 10/1
+N:Terrify Creature
+G:?:b
+I:<tval>71:<sval>160:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>10/<chance>1
+D:This spell will inflict fear in a monster of your choice.
+
+N:Portal
+G:?:b
+I:<tval>71:<sval>161:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>10/<chance>1
+D:This spell will magically teleport you some short distance away.
+
+N:Cure Medium Wounds
+G:?:b
+I:<tval>71:<sval>162:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>10/<chance>1
+D:This spell will heal medium wounds and cuts.
+
+N:Chant
+G:?:b
+I:<tval>71:<sval>163:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>10/<chance>1
+D:This spell will offer a Chant to your God, thus ensuring your continued
+D:blessing from Above.
+
+N:Sanctuary
+G:?:b
+I:<tval>71:<sval>164:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>10/<chance>2
+D:This spell will put to sleep any monster touching you at the moment.
+
+N:Divine Satiation
+G:?:b
+I:<tval>71:<sval>165:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>10/<chance>1
+D:This spell will nourish you with heavenly food.
+
+N:Remove Curse
+G:?:b
+I:<tval>71:<sval>166:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>10/<chance>1
+D:This spell will let your God lift a curse from one item.
+
+N:Resist Heat/Cold
+G:?:b
+I:<tval>71:<sval>167:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>10/<chance>2
+D:This spell will cause you to be protected from extreme cold as well as extreme heat for some time.
+
+#book Chants and Blessings - about 20/1
+N:Neutralize Poison
+G:?:b
+I:<tval>71:<sval>170:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>20/<chance>1
+D:This spell will remove any poisonous residues in your system.
+
+N:Orb of Draining
+G:?:b
+I:<tval>71:<sval>171:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>20/<chance>2
+D:This spell will strike a bolt of Divine Energy at a target of your choice. Both enemies and
+D:Items are affected.
+
+N:Cure Serious wounds I
+G:?:b
+I:<tval>71:<sval>172:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>20/<chance>1
+D:This spell will heal serious wounds and cuts.
+
+N:Sense Invisible
+G:?:b
+I:<tval>71:<sval>173:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>20/<chance>1
+D:This spell will reveal all invisible monsters to your blessed eyes for a time.
+
+N:Protection from Evil
+G:?:b
+I:<tval>71:<sval>174:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>20/<chance>1
+D:This spell will keep evil monsters from attacking you in melee combat.
+
+N:Earthquake
+G:?:b
+I:<tval>71:<sval>175:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>20/<chance>1
+D:This spell will cause an earthquake, with yourself in the center.
+
+N:Sense Surroundings
+G:?:b
+I:<tval>71:<sval>176:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>20/<chance>2
+D:This spell will reveal the layout of the dungeon around you.
+
+N:Cure Critical Wounds I
+G:?:b
+I:<tval>71:<sval>177:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>20/<chance>1
+D:This spell will heal critical wounds and cuts. It will refresh stunned players.
+
+N:Turn Undead
+G:?:b
+I:<tval>71:<sval>178:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>20/<chance>1
+D:This spell will let you try to return any visible undead to their rightfull place.
+
+#book Exorcism & Dispelling - about 30/1
+N:Prayer
+G:?:b
+I:<tval>71:<sval>180:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>30/<chance>1
+D:This spell will grant you a lot of goodwill from your God, making you blessed for
+D:quite some time.
+
+N:Dispel Undead I
+G:?:b
+I:<tval>71:<sval>181:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>30/<chance>1
+D:This spell will damage undead monsters surrounding you.
+
+N:Heal
+G:?:b
+I:<tval>71:<sval>182:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>30/<chance>2
+D:This spell will heal majour wounds and cuts. If will completely refresh stunned players.
+
+N:Dispel Evil I
+G:?:b
+I:<tval>71:<sval>183:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>30/<chance>1
+D:This spell will damage evil monsters surrounding you.
+
+N:Glyph of Warding
+G:?:b
+I:<tval>71:<sval>184:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>30/<chance>1
+D:It will inscibe a magic rune on the floor where you are standing that no monster
+D:will lightly pass.
+
+N:Holy Word
+G:?:b
+I:<tval>71:<sval>185:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>30/<chance>1
+D:This spell will let you invoke your God to damage evil monsters around you,
+D:completely heal even life-threatening wounds and cuts, remove any stunning
+D:effects you may have, remove any poisonous residues from your system and also
+D:remove fear if you are so afflicted.
+
+#book Ethereal Openings - about 40/1
+N:Blink
+G:?:b
+I:<tval>71:<sval>190:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>40/<chance>1
+D:This spell will teleport you some short distance away.
+
+N:Teleport
+G:?:b
+I:<tval>71:<sval>191:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>40/<chance>1
+D:This spell will teleport you across the dungeon in an instant.
+
+N:Teleport Away
+G:?:b
+I:<tval>71:<sval>192:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>40/<chance>2
+D:This spell will let your God magically move a monster of your choice to another place in the dungeon.
+
+N:Teleport Level
+G:?:b
+I:<tval>71:<sval>193:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>40/<chance>1
+D:This spell will cause you to instantly appear in another level of the dungeon.
+
+N:Alter Reality
+G:?:b
+I:<tval>71:<sval>195:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>40/<chance>2
+D:This spell will cause the current level to be rebuild around you.
+
+#book Godly Insights - about 50/1
+N:Detect Monsters
+G:?:b
+I:<tval>71:<sval>200:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>50/<chance>1
+D:This spell will reveal the location of all monsters surrounding you.
+
+N:Detection
+G:?:b
+I:<tval>71:<sval>201:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>50/<chance>1
+D:This spell will learn you the location of treasure, objects, doors and traps.
+
+N:Perception
+G:?:b
+I:<tval>71:<sval>202:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>50/<chance>1
+D:This spell will let you identify one object.
+
+N:Probing
+G:?:b
+I:<tval>71:<sval>203:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>50/<chance>1
+D:This spell will reveal the current hitpoints and other information about a monster
+D:you see.
+
+N:Clairvoyance
+G:?:b
+I:<tval>71:<sval>204:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>50/<chance>2
+D:This spell will let holy light fill the entire level, lighting every room and tunnel.
+
+#book Purifications and Healing - about 60/1
+N:Cure Serious Wounds II
+G:?:b
+I:<tval>71:<sval>210:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>60/<chance>1
+D:This spell will cure serious wounds and cuts in an easy way.
+
+N:Cure Critical wounds II
+G:?:b
+I:<tval>71:<sval>211:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>60/<chance>1
+D:This spell will cure critical wounds and cuts in an easy way.
+
+N:Healing
+G:?:b
+I:<tval>71:<sval>212:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>60/<chance>1
+D:This spell will completely heal even life-threatening wounds and cuts, and also
+D:relieve you of the effects of any stunning you may have.
+
+N:Restoration
+G:?:b
+I:<tval>71:<sval>213:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>60/<chance>2
+D:This spell will restore all of your stats to their normal values.
+
+N:Remembrance
+G:?:b
+I:<tval>71:<sval>214:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>60/<chance>2
+D:This spell will recall any experience you may have lost in contact with life-draining
+D:creatures.
+
+#book Holy Infusions - about 80/2
+N:Unbarring Ways
+G:?:b
+I:<tval>71:<sval>220:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>80/<chance>2
+D:This spell will destroy all doors you are currently touching.
+
+N:Recharging
+G:?:b
+I:<tval>71:<sval>221:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>80/<chance>2
+D:This spell will recharge an item.
+
+N:Dispel Curse
+G:?:b
+I:<tval>71:<sval>222:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>80/<chance>2
+D:This spell will remove curses on any item you are carrying or wielding.
+
+N:Enchant Weapon
+G:?:b
+I:<tval>71:<sval>223:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>80/<chance>3
+D:This spell will try to enhance a weapon of your choice in some way.
+
+N:Enchant Armour
+G:?:b
+I:<tval>71:<sval>224:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>80/<chance>2
+D:This spell will try to enhance a piece of armour of your choice in some way.
+
+N:Elemental Brand
+G:?:b
+I:<tval>71:<sval>225:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>80/<chance>3
+D:This spell will try to enhance a weapon of your choice by granting it an elemental attack.
+
+#book Wrath of God - about 100/4
+#more common here
+N:Dispel Undead II
+G:?:b
+I:<tval>71:<sval>230:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>70/<chance>5
+D:This spell will severely damage undead monsters surrounding you.
+
+N:Dispel Evil II
+G:?:b
+I:<tval>71:<sval>231:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>72/<chance>5
+D:This spell will severely damage evil monsters surrounding you.
+
+N:Banishment
+G:?:b
+I:<tval>71:<sval>232:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>74/<chance>5
+D:This spell will try to move evil monsters surrounding you to another place in the dungeon.
+
+N:Word of Destruction
+G:?:b
+I:<tval>71:<sval>233:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>76/<chance>5
+D:This spell will destroy the dungeon around you, pulling down walls and ceilings alike.
+
+N:Annihilation
+G:?:b
+I:<tval>71:<sval>234:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>5:<cost>0
+A:<locale>80/<chance>5
+D:This spell will directly drain life-energy from a creature of your choice. Undead and
+D:Demons have no life to drain, however.
+
+# spell books
+N:Small Book
+G:?:B
+I:<tval>85:<sval>1:<p1val>0:<p2val>0
+W:<level>3:<extra>0:<weight>50:<cost>750
+A:<locale>3/<chance>1
+D:A small book to hold spells.
+
+N:Book
+G:?:B
+I:<tval>85:<sval>2:<p1val>0:<p2val>0
+W:<level>20:<extra>0:<weight>60:<cost>5000
+A:<locale>20/<chance>4
+D:A normal book to hold spells.
+
+N:Large Book
+G:?:B
+I:<tval>85:<sval>3:<p1val>0:<p2val>0
+W:<level>80:<extra>0:<weight>100:<cost>25000
+A:<locale>40/<chance>4
+D:A large book to hold spells.
+
+##### Potions #####
+
+N:Slime Mold Juice
+G:!:g
+I:<tval>75:<sval>2:<p1val>400:<p2val>0
+W:<level>0:<extra>0:<weight>4:<cost>2
+A:<locale>0/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:It is a thick liquid, with unsavory globs of something in it. If you close your eyes,
+D:it's smell is delicious.
+F:NOFLAVOR
+
+N:Apple Juice
+G:!:y
+I:<tval>75:<sval>1:<p1val>250:<p2val>0
+W:<level>0:<extra>0:<weight>4:<cost>1
+A:<locale>0/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:It has a wonderfull deep golden colour, and a tart taste.
+F:NOFLAVOR
+
+N:Water
+G:!:B
+I:<tval>75:<sval>0:<p1val>200:<p2val>0
+W:<level>0:<extra>0:<weight>4:<cost>1
+A:<locale>0/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:Crystal-clear and sparkling water.
+F:NOFLAVOR
+
+N:Strength
+G:!:v
+I:<tval>75:<sval>48:<p1val>0:<p2val>0
+W:<level>30:<extra>0:<weight>4:<cost>8000
+A:<locale>30/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:It will increase your strength.
+
+N:Weakness
+G:!:v
+I:<tval>75:<sval>16:<p1val>0:<p2val>0
+W:<level>3:<extra>0:<weight>4:<cost>0
+A:<locale>3/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:It will decrease your strength.
+
+N:Restore Strength
+G:!:v
+I:<tval>75:<sval>42:<p1val>0:<p2val>0
+W:<level>25:<extra>0:<weight>4:<cost>300
+A:<locale>12/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:It will restore your strength.
+
+N:Intelligence
+G:!:v
+I:<tval>75:<sval>49:<p1val>0:<p2val>0
+W:<level>30:<extra>0:<weight>4:<cost>8000
+A:<locale>15/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:It will increase your intelligence.
+
+N:Stupidity
+G:!:v
+I:<tval>75:<sval>17:<p1val>0:<p2val>0
+W:<level>20:<extra>0:<weight>4:<cost>0
+A:<locale>20/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:It will decrease your intelligence.
+
+N:Restore Intelligence
+G:!:v
+I:<tval>75:<sval>43:<p1val>0:<p2val>0
+W:<level>25:<extra>0:<weight>4:<cost>300
+A:<locale>12/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:It will restore your intelligence.
+
+N:Wisdom
+G:!:v
+I:<tval>75:<sval>50:<p1val>0:<p2val>0
+W:<level>30:<extra>0:<weight>4:<cost>8000
+A:<locale>15/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:It will increase your wisdom.
+
+N:Naivety
+G:!:v
+I:<tval>75:<sval>18:<p1val>0:<p2val>0
+W:<level>20:<extra>0:<weight>4:<cost>0
+A:<locale>20/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:It will decrease your wisdom.
+
+N:Restore Wisdom
+G:!:v
+I:<tval>75:<sval>44:<p1val>0:<p2val>0
+W:<level>25:<extra>0:<weight>4:<cost>300
+A:<locale>12/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:It will restore your wisdom.
+
+N:Charisma
+G:!:v
+I:<tval>75:<sval>53:<p1val>0:<p2val>0
+W:<level>20:<extra>0:<weight>4:<cost>1000
+A:<locale>20/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:It will increase your charisma.
+
+N:Ugliness
+G:!:v
+I:<tval>75:<sval>21:<p1val>0:<p2val>0
+W:<level>20:<extra>0:<weight>4:<cost>0
+A:<locale>20/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:It will decrease your charisma.
+
+N:Restore Charisma
+G:!:v
+I:<tval>75:<sval>47:<p1val>0:<p2val>0
+W:<level>20:<extra>0:<weight>4:<cost>300
+A:<locale>10/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:It will restore your charisma.
+
+N:Cure Light Wounds
+G:!:v
+I:<tval>75:<sval>34:<p1val>50:<p2val>0
+W:<level>0:<extra>0:<weight>4:<cost>15
+A:<locale>0/<chance>1:<locale>1/<chance>1:<locale>3/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:It will cure light wounds.
+
+N:Fire
+G:!:v
+I:<tval>75:<sval>8:<p1val>50:<p2val>0
+W:<level>0:<extra>0:<weight>4:<cost>50
+A:<locale>0/<chance>1:<locale>1/<chance>1:<locale>3/<chance>1
+P:<ac>0:<ds+dd>5d10:<to hit>0:<to dam>0:<to ac>0
+F:BRAND_FIRE
+D:It will induce fire from your fingertips, sometimes branding your weapon.
+D:It does a lot of damage when thrown.
+
+N:Cold
+G:!:v
+I:<tval>75:<sval>10:<p1val>50:<p2val>0
+W:<level>0:<extra>0:<weight>4:<cost>50
+A:<locale>0/<chance>1:<locale>1/<chance>1:<locale>3/<chance>1
+P:<ac>0:<ds+dd>5d12:<to hit>0:<to dam>0:<to ac>0
+F:BRAND_COLD
+D:It will induce cold from your fingertips, sometimes branding your weapon.
+D:It does a lot of damage when thrown.
+
+N:Acid
+G:!:v
+I:<tval>75:<sval>12:<p1val>50:<p2val>0
+W:<level>0:<extra>0:<weight>4:<cost>50
+A:<locale>0/<chance>1:<locale>1/<chance>1:<locale>3/<chance>1
+P:<ac>0:<ds+dd>5d16:<to hit>0:<to dam>0:<to ac>0
+F:BRAND_ACID
+D:It will induce acid from your fingertips, sometimes branding your weapon.
+D:It does a lot of damage when thrown.
+
+N:Sparks
+G:!:v
+I:<tval>75:<sval>14:<p1val>50:<p2val>0
+W:<level>0:<extra>0:<weight>4:<cost>50
+A:<locale>0/<chance>1:<locale>1/<chance>1:<locale>3/<chance>1
+P:<ac>0:<ds+dd>8d16:<to hit>0:<to dam>0:<to ac>0
+F:BRAND_ELEC
+D:It will induce sparks from your fingertips, sometimes branding your weapon.
+D:It does a lot of damage when thrown.
+
+N:Clumsiness
+G:!:v
+I:<tval>75:<sval>19:<p1val>0:<p2val>0
+W:<level>5:<extra>0:<weight>4:<cost>0
+A:<locale>5/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:It will decrease your dexterity.
+
+N:Sickliness
+G:!:v
+I:<tval>75:<sval>20:<p1val>0:<p2val>0
+W:<level>10:<extra>0:<weight>4:<cost>0
+A:<locale>10/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:It will decrease your constitution.
+
+N:Cure Serious Wounds
+G:!:v
+I:<tval>75:<sval>35:<p1val>100:<p2val>0
+W:<level>3:<extra>0:<weight>4:<cost>40
+A:<locale>3/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:It will cure serious wounds.
+
+N:Cure Critical Wounds
+G:!:v
+I:<tval>75:<sval>36:<p1val>100:<p2val>0
+W:<level>5:<extra>0:<weight>4:<cost>100
+A:<locale>5/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:It will cure critical wounds.
+
+N:Healing
+G:!:v
+I:<tval>75:<sval>37:<p1val>200:<p2val>0
+W:<level>15:<extra>0:<weight>4:<cost>300
+A:<locale>15/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:It will cure life-threatening wounds.
+
+N:Constitution
+G:!:v
+I:<tval>75:<sval>52:<p1val>0:<p2val>0
+W:<level>30:<extra>0:<weight>4:<cost>8000
+A:<locale>30/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:It will increase your constitution.
+
+N:Experience
+G:!:v
+I:<tval>75:<sval>59:<p1val>0:<p2val>0
+W:<level>65:<extra>0:<weight>4:<cost>25000
+A:<locale>65/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:It will increase your experience.
+
+N:Sleep
+G:!:v
+I:<tval>75:<sval>11:<p1val>100:<p2val>0
+W:<level>0:<extra>0:<weight>4:<cost>0
+A:<locale>0/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:It will induce sleep.
+
+N:Blindness
+G:!:v
+I:<tval>75:<sval>7:<p1val>0:<p2val>0
+W:<level>0:<extra>0:<weight>4:<cost>0
+A:<locale>0/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:It will induce blindness.
+
+N:Confusion
+G:!:v
+I:<tval>75:<sval>9:<p1val>50:<p2val>0
+W:<level>0:<extra>0:<weight>4:<cost>0
+A:<locale>0/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:It will induce confusion.
+
+N:Poison
+G:!:v
+I:<tval>75:<sval>6:<p1val>0:<p2val>0
+W:<level>3:<extra>0:<weight>4:<cost>0
+A:<locale>3/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:It will poison you.
+
+N:Speed
+G:!:v
+I:<tval>75:<sval>29:<p1val>0:<p2val>0
+W:<level>1:<extra>0:<weight>4:<cost>75
+A:<locale>1/<chance>40:<locale>1/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:It will speed you up for a while.
+
+N:Mule Legs
+G:!:v
+I:<tval>75:<sval>60:<p1val>0:<p2val>0
+W:<level>1:<extra>0:<weight>4:<cost>250
+A:<locale>1/<chance>40:<locale>1/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:It will make able to carry heavy loads for a while.
+
+N:Slowness
+G:!:v
+I:<tval>75:<sval>4:<p1val>50:<p2val>0
+W:<level>1:<extra>0:<weight>4:<cost>0
+A:<locale>1/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:It will cause you to slow down for some turns.
+
+N:Dexterity
+G:!:v
+I:<tval>75:<sval>51:<p1val>0:<p2val>0
+W:<level>30:<extra>0:<weight>4:<cost>8000
+A:<locale>30/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:It will increase your dexterity.
+
+N:Restore Dexterity
+G:!:v
+I:<tval>75:<sval>45:<p1val>0:<p2val>0
+W:<level>25:<extra>0:<weight>4:<cost>300
+A:<locale>25/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:It will restore your dexterity.
+
+N:Restore Constitution
+G:!:v
+I:<tval>75:<sval>46:<p1val>0:<p2val>0
+W:<level>25:<extra>0:<weight>4:<cost>300
+A:<locale>25/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:It will restore your constitution.
+
+N:Lose Memories
+G:!:v
+I:<tval>75:<sval>13:<p1val>0:<p2val>0
+W:<level>10:<extra>0:<weight>4:<cost>0
+A:<locale>10/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:You will lose carefully collected experiences with and knowledge about items.
+
+N:Salt Water
+G:!:v
+I:<tval>75:<sval>5:<p1val>0:<p2val>0
+W:<level>0:<extra>0:<weight>4:<cost>0
+A:<locale>0/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:It tastes very vile, making you throw up. It will remove any poison
+D:from your body in this way.
+
+N:Enlightenment
+G:!:v
+I:<tval>75:<sval>56:<p1val>0:<p2val>0
+W:<level>25:<extra>0:<weight>4:<cost>800
+A:<locale>25/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:You will learn the layout of the entire level, lighting up every room
+D:and tunnel.
+
+N:Heroism
+G:!:v
+I:<tval>75:<sval>32:<p1val>0:<p2val>0
+W:<level>1:<extra>0:<weight>4:<cost>35
+A:<locale>1/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This potion will transform you into a hero for a few turns.
+
+N:Berserk Strength
+G:!:v
+I:<tval>75:<sval>33:<p1val>0:<p2val>0
+W:<level>3:<extra>0:<weight>4:<cost>100
+A:<locale>3/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This potions will induce you to attack without fear and regard
+D:for your own health for some time.
+
+N:Boldness
+G:!:v
+I:<tval>75:<sval>28:<p1val>0:<p2val>0
+W:<level>1:<extra>0:<weight>4:<cost>10
+A:<locale>1/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This potion will cause you to forget any fears lingering in your soul.
+
+N:Restore Life Levels
+G:!:v
+I:<tval>75:<sval>41:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>4:<cost>400
+A:<locale>15/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This potion will restore any experience you may have lost in contact with
+D:life-draining creatures.
+
+N:Resist Heat
+G:!:v
+I:<tval>75:<sval>30:<p1val>0:<p2val>0
+W:<level>1:<extra>0:<weight>4:<cost>30
+A:<locale>1/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This potion will cause you to resist heat for quite some time.
+
+N:Resist Cold
+G:!:v
+I:<tval>75:<sval>31:<p1val>0:<p2val>0
+W:<level>1:<extra>0:<weight>4:<cost>30
+A:<locale>1/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+# jk - this seems appropriate
+F:RES_COLD | IGNORE_COLD
+D:This potion will cause you to resist cold for quite some time.
+
+N:Detect Invisible
+G:!:v
+I:<tval>75:<sval>25:<p1val>0:<p2val>0
+W:<level>3:<extra>0:<weight>4:<cost>50
+A:<locale>3/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This potion will cause you to detect invisible monsters for quite some time.
+
+N:Slow Poison
+G:!:v
+I:<tval>75:<sval>26:<p1val>0:<p2val>0
+W:<level>1:<extra>0:<weight>4:<cost>25
+A:<locale>1/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This potion will try to slow down any effects from poisonous residues lingering in your body.
+
+N:Neutralize Poison
+G:!:v
+I:<tval>75:<sval>27:<p1val>0:<p2val>0
+W:<level>5:<extra>0:<weight>4:<cost>75
+A:<locale>5/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This potion will try to remove any poisonous residues lingering in your body.
+
+N:Restore Mana
+G:!:v
+I:<tval>75:<sval>40:<p1val>0:<p2val>0
+W:<level>25:<extra>0:<weight>4:<cost>350
+A:<locale>25/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This potion will refresh you by bringing your mana back to it's maximum.
+
+N:Infra-vision
+G:!:v
+I:<tval>75:<sval>24:<p1val>0:<p2val>0
+W:<level>3:<extra>0:<weight>4:<cost>20
+A:<locale>3/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This potion will make your eyes sensitive towards warm-blooded creatures, allowing you
+D:to detect them from afar.
+
+## XXX 268 XXX ##
+
+##### Wands #####
+
+N:Light
+G:-:D
+I:<tval>65:<sval>7:<p1val>0:<p2val>0
+W:<level>3:<extra>0:<weight>10:<cost>200
+A:<locale>3/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This wand will shoot out a ray of powerful light.
+
+N:Lightning Bolts
+G:-:D
+I:<tval>65:<sval>17:<p1val>0:<p2val>0
+W:<level>15:<extra>0:<weight>10:<cost>600
+A:<locale>15/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This wand will emit a bolt of pure lightning.
+
+N:Frost Bolts
+G:-:D
+I:<tval>65:<sval>19:<p1val>0:<p2val>0
+W:<level>20:<extra>0:<weight>10:<cost>800
+A:<locale>20/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This wand will fire a frosty bolt.
+
+N:Fire Bolts
+G:-:D
+I:<tval>65:<sval>18:<p1val>0:<p2val>0
+W:<level>30:<extra>0:<weight>10:<cost>1000
+A:<locale>30/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+F:RES_FIRE | IGNORE_FIRE
+D:This wand will fire a bolt of pure fire.
+
+N:Stone to Mud
+G:-:D
+I:<tval>65:<sval>6:<p1val>0:<p2val>0
+W:<level>10:<extra>0:<weight>10:<cost>300
+A:<locale>10/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This wand will turn almost any wall into a puddle of mud.
+
+N:Polymorph
+G:-:D
+I:<tval>65:<sval>13:<p1val>0:<p2val>0
+W:<level>20:<extra>0:<weight>10:<cost>400
+A:<locale>20/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This wand will transform a monster into another, perhaps more peaceful, monster.
+
+N:Heal Monster
+G:-:D
+I:<tval>65:<sval>0:<p1val>0:<p2val>0
+W:<level>3:<extra>0:<weight>10:<cost>0
+A:<locale>3/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This wand will restore the hitpoints of a monster to their maximum.
+
+N:Haste Monster
+G:-:D
+I:<tval>65:<sval>1:<p1val>0:<p2val>0
+W:<level>3:<extra>0:<weight>10:<cost>0
+A:<locale>3/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This wand will speed up a monster.
+
+N:Slow Monster
+G:-:D
+I:<tval>65:<sval>9:<p1val>0:<p2val>0
+W:<level>5:<extra>0:<weight>10:<cost>500
+A:<locale>5/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This wand will slow down a monster.
+
+N:Confuse Monster
+G:-:D
+I:<tval>65:<sval>10:<p1val>0:<p2val>0
+W:<level>5:<extra>0:<weight>10:<cost>500
+A:<locale>5/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This wand will confuse a monster.
+
+N:Sleep Monster
+G:-:D
+I:<tval>65:<sval>8:<p1val>0:<p2val>0
+W:<level>5:<extra>0:<weight>10:<cost>500
+A:<locale>5/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This wand will try to put a monster to sleep.
+
+N:Drain Life
+G:-:D
+I:<tval>65:<sval>12:<p1val>0:<p2val>0
+W:<level>50:<extra>0:<weight>10:<cost>1200
+A:<locale>50/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This wand will drain pure life-energy from a monster, but Undead and Demons
+D:have no life energy to drain.
+
+N:Trap/Door Destruction
+G:-:D
+I:<tval>65:<sval>5:<p1val>0:<p2val>0
+W:<level>10:<extra>0:<weight>10:<cost>100
+A:<locale>10/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This wand will destroy a door or trap of your choice.
+
+N:Magic Missile
+G:-:D
+I:<tval>65:<sval>15:<p1val>0:<p2val>0
+W:<level>3:<extra>0:<weight>10:<cost>200
+A:<locale>3/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This wand will emit a magical missile.
+
+N:Clone Monster
+G:-:D
+I:<tval>65:<sval>2:<p1val>0:<p2val>0
+W:<level>15:<extra>0:<weight>10:<cost>0
+A:<locale>15/<chance>50:<locale>15/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This wand will duplicate a monster.
+
+N:Scare Monster
+G:-:D
+I:<tval>65:<sval>11:<p1val>0:<p2val>0
+W:<level>10:<extra>0:<weight>10:<cost>500
+A:<locale>10/<chance>4
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This wand will make one monster fear you.
+
+N:Teleport Other
+G:-:D
+I:<tval>65:<sval>3:<p1val>0:<p2val>0
+W:<level>20:<extra>0:<weight>10:<cost>350
+A:<locale>20/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This wand will magically teleport one monster to another spot in the dungeon.
+
+N:Disarming
+G:-:D
+I:<tval>65:<sval>4:<p1val>0:<p2val>0
+W:<level>20:<extra>0:<weight>10:<cost>700
+A:<locale>20/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This wand will disarm one trap.
+
+N:Lightning Balls
+G:-:D
+I:<tval>65:<sval>21:<p1val>0:<p2val>0
+W:<level>35:<extra>0:<weight>10:<cost>1200
+A:<locale>35/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+F:IGNORE_ELEC
+D:This wand will emit a powerful ball of lightning.
+
+N:Cold Balls
+G:-:D
+I:<tval>65:<sval>23:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>10:<cost>1500
+A:<locale>40/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+F:IGNORE_COLD
+D:This wand will emit a powerful ball of cold energy.
+
+N:Fire Balls
+G:-:D
+I:<tval>65:<sval>22:<p1val>0:<p2val>0
+W:<level>50:<extra>0:<weight>10:<cost>1800
+A:<locale>50/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+F:IGNORE_FIRE
+D:This wand will emit a powerful ball of fire.
+
+N:Stinking Cloud
+G:-:D
+I:<tval>65:<sval>14:<p1val>0:<p2val>0
+W:<level>5:<extra>0:<weight>10:<cost>400
+A:<locale>5/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This wand will emit a small cloud of poisonous gasses.
+
+N:Acid Balls
+G:-:D
+I:<tval>65:<sval>20:<p1val>0:<p2val>0
+W:<level>50:<extra>0:<weight>10:<cost>1650
+A:<locale>50/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+F:IGNORE_ACID
+D:This wand will emit a large ball of acidic matter.
+
+N:Wonder
+G:-:D
+I:<tval>65:<sval>24:<p1val>0:<p2val>0
+W:<level>3:<extra>0:<weight>10:<cost>250
+A:<locale>3/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+D:This wand will do something at random.
+
+## XXX 293 XXX ##
+
+N:Acid Bolts
+G:-:D
+I:<tval>65:<sval>16:<p1val>0:<p2val>0
+W:<level>30:<extra>0:<weight>10:<cost>950
+A:<locale>30/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This wand will emit a powerful acid bolt.
+
+N:Dragon's Flame
+G:-:D
+I:<tval>65:<sval>26:<p1val>0:<p2val>0
+W:<level>50:<extra>0:<weight>10:<cost>2400
+A:<locale>50/<chance>4
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+D:This wand will emit a very large ball of fire.
+
+N:Dragon's Frost
+G:-:D
+I:<tval>65:<sval>27:<p1val>0:<p2val>0
+W:<level>50:<extra>0:<weight>10:<cost>2400
+A:<locale>50/<chance>4
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+D:This wand will emit a very large ball of cold.
+
+N:Dragon's Breath
+G:-:D
+I:<tval>65:<sval>28:<p1val>0:<p2val>0
+W:<level>60:<extra>0:<weight>10:<cost>2400
+A:<locale>60/<chance>4
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+D:This wand will emit a very large elemental or poison ball.
+
+N:Annihilation
+G:-:D
+I:<tval>65:<sval>25:<p1val>0:<p2val>0
+W:<level>60:<extra>0:<weight>10:<cost>3000
+A:<locale>60/<chance>4
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+D:This wand will directly drain life-energy from a creature of your choice. Undead and
+D:Demons have no life to drain, however.
+
+## XXX 299 XXX ##
+
+##### Staffs #####
+
+N:Trap Location
+G:_:D
+I:<tval>55:<sval>12:<p1val>0:<p2val>0
+W:<level>10:<extra>0:<weight>50:<cost>350
+A:<locale>10/<chance>1
+P:<ac>0:<ds+dd>1d2:<to hit>0:<to dam>0:<to ac>0
+D:This staff will show you the location of nearby traps.
+
+N:Treasure Location
+G:_:D
+I:<tval>55:<sval>10:<p1val>0:<p2val>0
+W:<level>5:<extra>0:<weight>50:<cost>200
+A:<locale>5/<chance>1
+P:<ac>0:<ds+dd>1d2:<to hit>0:<to dam>0:<to ac>0
+D:This staff will show you the location of nearby treasure.
+
+N:Object Location
+G:_:D
+I:<tval>55:<sval>11:<p1val>0:<p2val>0
+W:<level>5:<extra>0:<weight>50:<cost>200
+A:<locale>5/<chance>1
+P:<ac>0:<ds+dd>1d2:<to hit>0:<to dam>0:<to ac>0
+D:This staff will show you the location of nearby objects.
+
+N:Teleportation
+G:_:D
+I:<tval>55:<sval>4:<p1val>0:<p2val>0
+W:<level>20:<extra>0:<weight>50:<cost>2000
+A:<locale>20/<chance>1
+P:<ac>0:<ds+dd>1d2:<to hit>0:<to dam>0:<to ac>0
+D:This staff will instantly transport you to another location in the dungeon.
+
+N:Earthquakes
+G:_:D
+I:<tval>55:<sval>28:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>50:<cost>350
+A:<locale>40/<chance>1
+P:<ac>0:<ds+dd>1d2:<to hit>0:<to dam>0:<to ac>0
+D:This staff will cause an earthquake with you in the center.
+
+N:Summoning
+G:_:D
+I:<tval>55:<sval>3:<p1val>0:<p2val>0
+W:<level>10:<extra>0:<weight>50:<cost>0
+A:<locale>10/<chance>50:<locale>10/<chance>1
+P:<ac>0:<ds+dd>1d2:<to hit>0:<to dam>0:<to ac>0
+D:This staff will summon another creature.
+
+N:Light
+G:_:D
+I:<tval>55:<sval>8:<p1val>0:<p2val>0
+W:<level>5:<extra>0:<weight>50:<cost>250
+A:<locale>5/<chance>1
+P:<ac>0:<ds+dd>1d2:<to hit>0:<to dam>0:<to ac>0
+D:This staff will light up the area around you, doing damage to light-sensitive creatures.
+
+N:*Destruction*
+G:_:D
+I:<tval>55:<sval>29:<p1val>0:<p2val>0
+W:<level>50:<extra>0:<weight>50:<cost>2500
+A:<locale>50/<chance>70:<locale>50/<chance>1
+P:<ac>0:<ds+dd>1d2:<to hit>0:<to dam>0:<to ac>0
+D:This staff will destroy the dungeon around you, pulling down walls and ceilings alike.
+
+N:Starlight
+G:_:D
+I:<tval>55:<sval>7:<p1val>0:<p2val>0
+W:<level>20:<extra>0:<weight>50:<cost>800
+A:<locale>20/<chance>1
+P:<ac>0:<ds+dd>1d2:<to hit>0:<to dam>0:<to ac>0
+D:This staff will emit powerful rays of light in all directions,
+D:thus doing damage to light-sensitive creatures.
+
+N:Haste Monsters
+G:_:D
+I:<tval>55:<sval>2:<p1val>0:<p2val>0
+W:<level>10:<extra>0:<weight>50:<cost>0
+A:<locale>10/<chance>1
+P:<ac>0:<ds+dd>1d2:<to hit>0:<to dam>0:<to ac>0
+D:This staff will haste a monster.
+
+N:Slow Monsters
+G:_:D
+I:<tval>55:<sval>21:<p1val>0:<p2val>0
+W:<level>10:<extra>0:<weight>50:<cost>800
+A:<locale>10/<chance>1
+P:<ac>0:<ds+dd>1d2:<to hit>0:<to dam>0:<to ac>0
+D:This staff will slow down a monster.
+
+N:Sleep Monsters
+G:_:D
+I:<tval>55:<sval>20:<p1val>0:<p2val>0
+W:<level>10:<extra>0:<weight>50:<cost>700
+A:<locale>10/<chance>1
+P:<ac>0:<ds+dd>1d2:<to hit>0:<to dam>0:<to ac>0
+D:This staff will try to put a monster to sleep.
+
+N:Cure Light Wounds
+G:_:D
+I:<tval>55:<sval>16:<p1val>0:<p2val>0
+W:<level>5:<extra>0:<weight>50:<cost>350
+A:<locale>5/<chance>1
+P:<ac>0:<ds+dd>1d2:<to hit>0:<to dam>0:<to ac>0
+D:This staff will heal minor wounds and cuts.
+
+N:Detect Invisible
+G:_:D
+I:<tval>55:<sval>14:<p1val>0:<p2val>0
+W:<level>5:<extra>0:<weight>50:<cost>200
+A:<locale>5/<chance>1
+P:<ac>0:<ds+dd>1d2:<to hit>0:<to dam>0:<to ac>0
+D:This staff will allow you to see invisible monsters for a while.
+
+N:Speed
+G:_:D
+I:<tval>55:<sval>22:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>50:<cost>1000
+A:<locale>40/<chance>1
+P:<ac>0:<ds+dd>1d2:<to hit>0:<to dam>0:<to ac>0
+D:This staff will speed you up, allowing you to do more in less time.
+
+N:Slowness
+G:_:D
+I:<tval>55:<sval>1:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>50:<cost>0
+A:<locale>40/<chance>1
+P:<ac>0:<ds+dd>1d2:<to hit>0:<to dam>0:<to ac>0
+D:This staff will slow you down, making you an easy target for your enemies.
+
+N:Door/Stair Location
+G:_:D
+I:<tval>55:<sval>13:<p1val>0:<p2val>0
+W:<level>10:<extra>0:<weight>50:<cost>350
+A:<locale>10/<chance>1
+P:<ac>0:<ds+dd>1d2:<to hit>0:<to dam>0:<to ac>0
+D:This staff will learn you the locations of doors and traps around you.
+
+N:Remove Curse
+G:_:D
+I:<tval>55:<sval>6:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>50:<cost>500
+A:<locale>40/<chance>1
+P:<ac>0:<ds+dd>1d2:<to hit>0:<to dam>0:<to ac>0
+D:This staff will remove a curse from an item of your choice.
+
+N:Detect Evil
+G:_:D
+I:<tval>55:<sval>15:<p1val>0:<p2val>0
+W:<level>20:<extra>0:<weight>50:<cost>350
+A:<locale>20/<chance>1
+P:<ac>0:<ds+dd>1d2:<to hit>0:<to dam>0:<to ac>0
+D:This staff will detect evil monsters in the area.
+
+N:Curing
+G:_:D
+I:<tval>55:<sval>17:<p1val>0:<p2val>0
+W:<level>25:<extra>0:<weight>50:<cost>1000
+A:<locale>25/<chance>1
+P:<ac>0:<ds+dd>1d2:<to hit>0:<to dam>0:<to ac>0
+D:This staff will not heal wounds, but will cure stunning, cuts, blindness, confusion
+D:and poison.
+
+N:Dispel Evil
+G:_:D
+I:<tval>55:<sval>24:<p1val>0:<p2val>0
+W:<level>50:<extra>0:<weight>50:<cost>1200
+A:<locale>50/<chance>1
+P:<ac>0:<ds+dd>1d2:<to hit>0:<to dam>0:<to ac>0
+D:This staff will damage evil monsters surrounding you.
+
+N:Probing
+G:_:D
+I:<tval>55:<sval>23:<p1val>0:<p2val>0
+W:<level>30:<extra>0:<weight>50:<cost>2000
+A:<locale>30/<chance>1
+P:<ac>0:<ds+dd>1d2:<to hit>0:<to dam>0:<to ac>0
+D:This staff will reveal the current hitpoints and other information about a monster
+D:you see.
+
+N:Darkness
+G:_:D
+I:<tval>55:<sval>0:<p1val>0:<p2val>0
+W:<level>5:<extra>0:<weight>50:<cost>0
+A:<locale>5/<chance>50:<locale>5/<chance>1
+P:<ac>0:<ds+dd>1d2:<to hit>0:<to dam>0:<to ac>0
+D:This staff will emit a cloud of darkness, darkening the area around you and also doing
+D:damage to certain creatures.
+
+N:Genocide
+G:_:D
+I:<tval>55:<sval>27:<p1val>0:<p2val>0
+W:<level>70:<extra>0:<weight>50:<cost>3500
+A:<locale>70/<chance>4
+P:<ac>0:<ds+dd>1d2:<to hit>0:<to dam>0:<to ac>0
+D:This staff will let you wipe one race in this dungeon level, at a cost of up to 10% of
+D:monster level in hitpoints per monster.
+
+N:Power
+G:_:D
+I:<tval>55:<sval>25:<p1val>0:<p2val>0
+W:<level>70:<extra>0:<weight>50:<cost>4000
+A:<locale>70/<chance>2
+P:<ac>0:<ds+dd>1d2:<to hit>0:<to dam>0:<to ac>0
+D:It will damage all monsters surrounding you.
+
+N:the Magi
+G:_:D
+I:<tval>55:<sval>19:<p1val>0:<p2val>0
+W:<level>70:<extra>0:<weight>50:<cost>4500
+A:<locale>70/<chance>2
+P:<ac>0:<ds+dd>1d2:<to hit>0:<to dam>0:<to ac>0
+D:This staff will restore your intelligence if needed, and then
+D:replenish your mana.
+
+N:Perception
+G:_:D
+I:<tval>55:<sval>5:<p1val>0:<p2val>0
+W:<level>10:<extra>0:<weight>50:<cost>400
+A:<locale>10/<chance>1
+P:<ac>0:<ds+dd>1d2:<to hit>0:<to dam>0:<to ac>0
+D:This staff will allow you to identify one item.
+
+N:Holiness
+G:_:D
+I:<tval>55:<sval>26:<p1val>0:<p2val>0
+W:<level>70:<extra>0:<weight>50:<cost>4500
+A:<locale>70/<chance>2
+P:<ac>0:<ds+dd>1d2:<to hit>0:<to dam>0:<to ac>0
+D:This staff will damage evil monsters surrounding you, protect you from melee
+D:attacks by evil monsters for a time, and heal some of your wounds.
+
+N:Enlightenment
+G:_:D
+I:<tval>55:<sval>9:<p1val>0:<p2val>0
+W:<level>20:<extra>0:<weight>50:<cost>750
+A:<locale>20/<chance>1
+P:<ac>0:<ds+dd>1d2:<to hit>0:<to dam>0:<to ac>0
+D:This staff will magically light up the entire level, and reveal the layout to you.
+
+N:Healing
+G:_:D
+I:<tval>55:<sval>18:<p1val>0:<p2val>0
+W:<level>70:<extra>0:<weight>50:<cost>5000
+A:<locale>70/<chance>2
+P:<ac>0:<ds+dd>1d2:<to hit>0:<to dam>0:<to ac>0
+D:This staff will heal life-threatening wounds, and also cure cuts and stunning.
+
+##### Chests #####
+
+N:& Small wooden chest~
+G:~:y
+I:<tval>7:<sval>1:<p1val>0:<p2val>0
+W:<level>5:<extra>0:<weight>250:<cost>20
+A:<locale>5/<chance>1
+P:<ac>0:<ds+dd>2d3:<to hit>0:<to dam>0:<to ac>0
+D:It is a heavy, small chest of dense, dark brown wood with reinforced edges.
+
+N:& Large wooden chest~
+G:~:y
+I:<tval>7:<sval>5:<p1val>0:<p2val>0
+W:<level>15:<extra>0:<weight>500:<cost>60
+A:<locale>15/<chance>1
+P:<ac>0:<ds+dd>2d5:<to hit>0:<to dam>0:<to ac>0
+D:It is a heavy, very large chest of dense, dark brown wood with reinforced edges
+D:and strip running around it.
+
+N:& Small iron chest~
+G:~:y
+I:<tval>7:<sval>2:<p1val>0:<p2val>0
+W:<level>25:<extra>0:<weight>300:<cost>100
+A:<locale>25/<chance>1
+P:<ac>0:<ds+dd>2d4:<to hit>0:<to dam>0:<to ac>0
+D:It is a heavy, small chest of iron, with reinforced edges.
+
+N:& Large iron chest~
+G:~:y
+I:<tval>7:<sval>6:<p1val>0:<p2val>0
+W:<level>35:<extra>0:<weight>1000:<cost>150
+A:<locale>35/<chance>1
+P:<ac>0:<ds+dd>2d6:<to hit>0:<to dam>0:<to ac>0
+D:It is a heavy, large chest of iron, with reinforced edges.
+
+N:& Small steel chest~
+G:~:y
+I:<tval>7:<sval>3:<p1val>0:<p2val>0
+W:<level>45:<extra>0:<weight>500:<cost>200
+A:<locale>45/<chance>1
+P:<ac>0:<ds+dd>2d4:<to hit>0:<to dam>0:<to ac>0
+D:It is a heavy, small chest of steel, with reinforced edges.
+D:It is decorated with diverse incisions.
+
+N:& Large steel chest~
+G:~:y
+I:<tval>7:<sval>7:<p1val>0:<p2val>0
+W:<level>55:<extra>0:<weight>1000:<cost>250
+A:<locale>55/<chance>1
+P:<ac>0:<ds+dd>2d6:<to hit>0:<to dam>0:<to ac>0
+D:It is a heavy, large chest of steel, with reinforced edges.
+D:It is decorated with diverse incisions.
+
+N:& Ruined chest~
+G:~:y
+I:<tval>7:<sval>0:<p1val>0:<p2val>0
+W:<level>0:<extra>0:<weight>250:<cost>0
+A:<locale>75/<chance>1
+D:It is a heavy, small chest of steel, with reinforced edges.
+D:It seems to have been blown up from the inside, and there are
+D:multiple jagged, gaping holes in the sides and top. Needless to
+D:say it is quite empty.
+
+##### Various Stuff #####
+
+N:& Iron Spike~
+G:~:W
+I:<tval>5:<sval>0:<p1val>0:<p2val>0
+W:<level>1:<extra>0:<weight>10:<cost>1
+A:<locale>1/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:A small piece of metal, pointed at one end. It can be used to jam a lock in a door.
+
+N:& Wooden Torch~
+G:~:u
+I:<tval>39:<sval>0:<p1val>4000:<p2val>0
+W:<level>1:<extra>0:<weight>30:<cost>2
+A:<locale>1/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+F:EASY_KNOW
+D:It is a stout piece of wood, with oil-dripping cloth wound around the top.
+
+N:& Brass Lantern~
+G:~:U
+I:<tval>39:<sval>1:<p1val>7500:<p2val>0
+W:<level>3:<extra>0:<weight>50:<cost>35
+A:<locale>3/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+F:EASY_KNOW | IGNORE_FIRE
+D:It is a lantern, made of brass, fueled by oil.
+
+N:& Lamp~ of the Noldor
+G:~:b
+I:<tval>39:<sval>2:<p1val>7500:<p2val>0
+W:<level>3:<extra>0:<weight>50:<cost>3500
+A:<locale>15/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+F:EASY_KNOW | IGNORE_FIRE
+D:It is a lantern, with a precious jewel, made by the Noldor in ages past, inside.
+D:The jewel shines with a powerful, faintly bluish light.
+
+
+N:& Flask~ of oil
+G:!:y
+I:<tval>77:<sval>0:<p1val>7500:<p2val>0
+W:<level>1:<extra>0:<weight>10:<cost>3
+A:<locale>1/<chance>1
+P:<ac>0:<ds+dd>2d6:<to hit>0:<to dam>0:<to ac>0
+D:A flask of oil. It can fuel your lantern, but can also be thrown at monsters with a piece
+D:of wick in it, making a fiery surprise.
+
+N:& Empty Bottle~
+G:!:w
+I:<tval>2:<sval>1:<p1val>0:<p2val>0
+W:<level>0:<extra>0:<weight>2:<cost>0
+A:<locale>0/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:It is a bottle. No trace of the contents remains.
+
+##### Here are the Rods #####
+
+## XXX 350 XXX ##
+
+N:Trap Location
+G:-:D
+I:<tval>66:<sval>0:<p1val>0:<p2val>0
+W:<level>5:<extra>0:<weight>15:<cost>100
+A:<locale>5/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This rod will reveal the location of traps around you.
+
+N:Door/Stair Location
+G:-:D
+I:<tval>66:<sval>1:<p1val>0:<p2val>0
+W:<level>15:<extra>0:<weight>15:<cost>1000
+A:<locale>15/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This rod will reveal the location of doors and stairs around you.
+
+N:Perception
+G:-:D
+I:<tval>66:<sval>2:<p1val>0:<p2val>0
+W:<level>50:<extra>0:<weight>15:<cost>13000
+A:<locale>50/<chance>8
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This rod will let you identify one item.
+
+N:Recall
+G:-:D
+I:<tval>66:<sval>3:<p1val>0:<p2val>0
+W:<level>30:<extra>0:<weight>15:<cost>4000
+A:<locale>30/<chance>4
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This rod will magically recall you to the town some short time from now.
+
+N:Illumination
+G:-:D
+I:<tval>66:<sval>4:<p1val>0:<p2val>0
+W:<level>20:<extra>0:<weight>15:<cost>1000
+A:<locale>20/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This rod will light up the area around you, doing damage to light-sensitive creatures.
+
+N:Enlightenment
+G:-:D
+I:<tval>66:<sval>5:<p1val>0:<p2val>0
+W:<level>65:<extra>0:<weight>15:<cost>10000
+A:<locale>65/<chance>4
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This rod will light up the entire level, revealing it's layout to you.
+
+N:Detection
+G:-:D
+I:<tval>66:<sval>6:<p1val>0:<p2val>0
+W:<level>30:<extra>0:<weight>15:<cost>5000
+A:<locale>30/<chance>8
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This rod will learn you the location of treasure, objects, doors and traps.
+
+N:Probing
+G:-:D
+I:<tval>66:<sval>7:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>15:<cost>4000
+A:<locale>40/<chance>4
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This rod will reveal the current hitpoints and other information about a monster
+D:you see.
+
+N:Curing
+G:-:D
+I:<tval>66:<sval>8:<p1val>0:<p2val>0
+W:<level>65:<extra>0:<weight>15:<cost>15000
+A:<locale>65/<chance>8
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This rod will not heal wounds, but will cure stunning, cuts, blindness, confusion
+D:and poison.
+
+N:Healing
+G:-:D
+I:<tval>66:<sval>9:<p1val>0:<p2val>0
+W:<level>80:<extra>0:<weight>15:<cost>20000
+A:<locale>80/<chance>8
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This staff will heal life-threatening wounds, and will also cure stunning and cuts.
+
+N:Restoration
+G:-:D
+I:<tval>66:<sval>10:<p1val>0:<p2val>0
+W:<level>80:<extra>0:<weight>15:<cost>25000
+A:<locale>80/<chance>16
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This rod will restore all of your stats to their normal values, and also restore
+D:your experience if necessary.
+
+N:Speed
+G:-:D
+I:<tval>66:<sval>11:<p1val>0:<p2val>0
+W:<level>95:<extra>0:<weight>15:<cost>50000
+A:<locale>95/<chance>16
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This rod will grant you a temporary speed bonus.
+
+N:Teleport Other
+G:-:D
+I:<tval>66:<sval>20:<p1val>0:<p2val>0
+W:<level>45:<extra>0:<weight>15:<cost>1400
+A:<locale>45/<chance>2
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This rod will teleport a bothersome creature to another, random, location in the dungeon.
+
+N:Disarming
+G:-:D
+I:<tval>66:<sval>21:<p1val>0:<p2val>0
+W:<level>35:<extra>0:<weight>15:<cost>2100
+A:<locale>35/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This rod will disarm a trap of your choice.
+
+N:Light
+G:-:D
+I:<tval>66:<sval>22:<p1val>0:<p2val>0
+W:<level>10:<extra>0:<weight>15:<cost>500
+A:<locale>10/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This rod will emit a powerful ray of light, doing damage to light-sensitive creatures.
+
+N:Sleep Monster
+G:-:D
+I:<tval>66:<sval>23:<p1val>0:<p2val>0
+W:<level>30:<extra>0:<weight>15:<cost>1500
+A:<locale>30/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This rod try to put a monster of your choice to sleep.
+
+N:Slow Monster
+G:-:D
+I:<tval>66:<sval>24:<p1val>0:<p2val>0
+W:<level>30:<extra>0:<weight>15:<cost>1500
+A:<locale>30/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This rod will slow down a monster of your choice.
+
+N:Drain Life
+G:-:D
+I:<tval>66:<sval>25:<p1val>0:<p2val>0
+W:<level>75:<extra>0:<weight>15:<cost>3600
+A:<locale>75/<chance>4
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This rod will drain pure life-energy from a monster, but Undead and Demons
+D:have no life energy to drain.
+
+N:Polymorph
+G:-:D
+I:<tval>66:<sval>26:<p1val>0:<p2val>0
+W:<level>35:<extra>0:<weight>15:<cost>1200
+A:<locale>35/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This rod will transform a monster into another, perhaps more peaceful, monster.
+
+N:Acid Bolts
+G:-:D
+I:<tval>66:<sval>27:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>15:<cost>3500
+A:<locale>40/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This rod will emit a powerful bolt of lightning.
+
+N:Lightning Bolts
+G:-:D
+I:<tval>66:<sval>28:<p1val>0:<p2val>0
+W:<level>20:<extra>0:<weight>15:<cost>2000
+A:<locale>20/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This rod will emit a powerful bolt of lightning.
+
+N:Fire Bolts
+G:-:D
+I:<tval>66:<sval>29:<p1val>0:<p2val>0
+W:<level>30:<extra>0:<weight>15:<cost>3000
+A:<locale>30/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This rod will emit a powerful bolt of fire.
+
+N:Frost Bolts
+G:-:D
+I:<tval>66:<sval>30:<p1val>0:<p2val>0
+W:<level>25:<extra>0:<weight>15:<cost>2500
+A:<locale>25/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This rod will emit a powerful bolt of cold.
+
+N:Acid Balls
+G:-:D
+I:<tval>66:<sval>31:<p1val>0:<p2val>0
+W:<level>70:<extra>0:<weight>15:<cost>5500
+A:<locale>70/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This rod will emit a powerful ball of acid.
+
+N:Lightning Balls
+G:-:D
+I:<tval>66:<sval>32:<p1val>0:<p2val>0
+W:<level>55:<extra>0:<weight>15:<cost>4000
+A:<locale>55/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This rod will emit a powerful ball of lightning.
+
+N:Fire Balls
+G:-:D
+I:<tval>66:<sval>33:<p1val>0:<p2val>0
+W:<level>75:<extra>0:<weight>15:<cost>5000
+A:<locale>75/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This rod will emit a powerful ball of fire.
+
+N:Cold Balls
+G:-:D
+I:<tval>66:<sval>34:<p1val>0:<p2val>0
+W:<level>60:<extra>0:<weight>15:<cost>4500
+A:<locale>60/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This rod will emit a powerful ball of cold.
+
+# JK - rod of trap identification
+#
+N:Trap Identification
+G:-:D
+I:<tval>66:<sval>35:<p1val>0:<p2val>0
+W:<level>65:<extra>0:<weight>15:<cost>10000
+A:<locale>65/<chance>4
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This rod will identify one trap-type for you, making it much easier to avoid it
+D:the next time.
+
+# reserved for artifact rods:
+# sval 45 and up
+
+##### Junk #####
+
+N:& Shard~ of Pottery
+G:~:r
+I:<tval>3:<sval>3:<p1val>0:<p2val>0
+W:<level>0:<extra>0:<weight>5:<cost>0
+A:<locale>0/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This may have belonged to a hero's commerative Vase, a deceased hero's urn, or
+D:to a beggar's mug. It is not recognizable anymore.
+
+N:& Broken Stick~
+G:~:r
+I:<tval>3:<sval>6:<p1val>0:<p2val>0
+W:<level>0:<extra>0:<weight>3:<cost>0
+A:<locale>0/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:Nobody can tell if this was bow, quarterstaff or firewood.
+
+
+##### Skeletons #####
+
+N:& Broken Skull~
+G:~:w
+I:<tval>1:<sval>1:<p1val>0:<p2val>0
+W:<level>0:<extra>0:<weight>1:<cost>0
+A:<locale>0/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:Empty eyes stare back at you, and ants resent your disturbance.
+
+N:& Broken Bone~
+G:~:w
+I:<tval>1:<sval>2:<p1val>0:<p2val>0
+W:<level>0:<extra>0:<weight>2:<cost>0
+A:<locale>0/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:It's broken en scoured clean.
+
+N:& Skeleton~
+G:~:w
+I:<tval>1:<sval>3:<p1val>0:<p2val>0
+W:<level>1:<extra>0:<weight>10:<cost>0
+A:<locale>1/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:You cannot really see if this is complete, and if so, what it has been.
+
+## XXX 399 XXX ##
+
+
+##### Dragon Scale Mail #####
+
+N:Black Dragon Scale Mail~
+G:[:s
+I:<tval>38:<sval>1:<p1val>0:<p2val>0
+W:<level>60:<extra>0:<weight>200:<cost>30000
+A:<locale>60/<chance>8
+P:<ac>30:<ds+dd>2d4:<to hit>-2:<to dam>0:<to ac>10
+F:RES_ACID |
+F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+D:Gleaming black scales, held together by pure energy, create this awesome armour.
+
+N:Blue Dragon Scale Mail~
+G:[:b
+I:<tval>38:<sval>2:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>200:<cost>35000
+A:<locale>40/<chance>8
+P:<ac>30:<ds+dd>2d4:<to hit>-2:<to dam>0:<to ac>10
+F:RES_ELEC |
+F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+D:Gleaming blue scales, held together by pure energy, create this awesome armour.
+
+N:White Dragon Scale Mail~
+G:[:w
+I:<tval>38:<sval>3:<p1val>0:<p2val>0
+W:<level>50:<extra>0:<weight>200:<cost>40000
+A:<locale>50/<chance>8
+P:<ac>30:<ds+dd>2d4:<to hit>-2:<to dam>0:<to ac>10
+F:RES_COLD |
+F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+D:Gleaming white scales, held together by pure energy, create this awesome armour.
+
+N:Red Dragon Scale Mail~
+G:[:r
+I:<tval>38:<sval>4:<p1val>0:<p2val>0
+W:<level>80:<extra>0:<weight>200:<cost>100000
+A:<locale>80/<chance>8
+P:<ac>30:<ds+dd>2d4:<to hit>-2:<to dam>0:<to ac>10
+F:RES_FIRE |
+F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+D:Gleaming red scales, held together by pure energy, create this awesome armour.
+
+N:Green Dragon Scale Mail~
+G:[:g
+I:<tval>38:<sval>5:<p1val>0:<p2val>0
+W:<level>70:<extra>0:<weight>200:<cost>80000
+A:<locale>70/<chance>8
+P:<ac>30:<ds+dd>2d4:<to hit>-2:<to dam>0:<to ac>10
+F:RES_POIS |
+F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+D:Gleaming green scales, held together by pure energy, create this awesome armour.
+
+N:Multi-Hued Dragon Scale Mail~
+G:[:v
+I:<tval>38:<sval>6:<p1val>0:<p2val>0
+W:<level>100:<extra>0:<weight>200:<cost>150000
+A:<locale>100/<chance>16
+P:<ac>30:<ds+dd>2d4:<to hit>-2:<to dam>0:<to ac>10
+F:RES_ACID | RES_ELEC | RES_FIRE | RES_COLD | RES_POIS
+F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+D:Gleaming scales, whose colour seems to switch between red, white, blue, green and black
+D:in a moment, held together by pure energy, create this awesome armour.
+
+N:Shining Dragon Scale Mail~
+G:[:o
+I:<tval>38:<sval>10:<p1val>0:<p2val>0
+W:<level>65:<extra>0:<weight>200:<cost>60000
+A:<locale>65/<chance>16
+P:<ac>30:<ds+dd>2d4:<to hit>-2:<to dam>0:<to ac>10
+F:RES_LITE | RES_DARK |
+F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+D:Gleaming glass-like scales, held together by pure energy, create this awesome armour.
+
+N:Law Dragon Scale Mail~
+G:[:B
+I:<tval>38:<sval>12:<p1val>0:<p2val>0
+W:<level>80:<extra>0:<weight>200:<cost>80000
+A:<locale>80/<chance>16
+P:<ac>30:<ds+dd>2d4:<to hit>-2:<to dam>0:<to ac>10
+F:RES_SOUND | RES_SHARDS |
+F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+D:Gleaming purple scales, held together by pure energy, create this awesome armour.
+
+N:Bronze Dragon Scale Mail~
+G:[:U
+I:<tval>38:<sval>14:<p1val>0:<p2val>0
+W:<level>55:<extra>0:<weight>200:<cost>30000
+A:<locale>55/<chance>8
+P:<ac>30:<ds+dd>2d4:<to hit>-2:<to dam>0:<to ac>10
+F:RES_CONF |
+F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+D:Gleaming bronze-colored scales, held together by pure energy, create this awesome armour.
+D:There seems to be some very fine design on the scales.
+
+N:Gold Dragon Scale Mail~
+G:[:y
+I:<tval>38:<sval>16:<p1val>0:<p2val>0
+W:<level>65:<extra>0:<weight>200:<cost>40000
+A:<locale>65/<chance>8
+P:<ac>30:<ds+dd>2d4:<to hit>-2:<to dam>0:<to ac>10
+F:RES_SOUND |
+F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+D:Gleaming golden-hued scales, held together by pure energy, create this awesome armour.
+D:A slight vibration seems to blurs the outlines of this armour.
+
+N:Chaos Dragon Scale Mail~
+G:[:v
+I:<tval>38:<sval>18:<p1val>0:<p2val>0
+W:<level>75:<extra>0:<weight>200:<cost>70000
+A:<locale>75/<chance>16
+P:<ac>30:<ds+dd>2d4:<to hit>-2:<to dam>0:<to ac>10
+F:RES_CHAOS | RES_DISEN |
+F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+D:Gleaming grey scales, held together by pure energy, create this awesome armour.
+D:The colour of the scales seems to change constantly, and the armour itself
+D:seems almost alive.
+
+N:Balance Dragon Scale Mail~
+G:[:v
+I:<tval>38:<sval>20:<p1val>0:<p2val>0
+W:<level>90:<extra>0:<weight>200:<cost>100000
+A:<locale>90/<chance>16
+P:<ac>30:<ds+dd>2d4:<to hit>-2:<to dam>0:<to ac>10
+F:RES_CHAOS | RES_DISEN | RES_SOUND | RES_SHARDS |
+F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+D:Gleaming pure white scales, held together by pure energy, create this awesome armour.
+D:You sense a waft of soothing communion coming from the armour.
+
+N:Power Dragon Scale Mail~
+G:[:v
+I:<tval>38:<sval>30:<p1val>0:<p2val>0
+W:<level>110:<extra>0:<weight>200:<cost>300000
+A:<locale>110/<chance>64
+P:<ac>40:<ds+dd>2d4:<to hit>-3:<to dam>0:<to ac>15
+F:RES_ACID | RES_FIRE | RES_COLD | RES_ELEC | RES_POIS |
+F:RES_NETHER | RES_NEXUS | RES_CHAOS | RES_LITE | RES_DARK
+F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+D:Gleaming scales, with multiple colors on each scale in many variants, held together by
+D:pure energy, create this awesome armour. The hairs on your skin stand up just looking
+D:at it.
+
+## XXX 413 XXX ##
+
+## XXX 414 XXX ##
+
+
+##### Extra potions #####
+
+N:Death
+G:!:v
+I:<tval>75:<sval>23:<p1val>0:<p2val>0
+W:<level>55:<extra>0:<weight>4:<cost>0
+A:<locale>55/<chance>4
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This potion will kill you in an instant.
+
+N:Ruination
+G:!:v
+I:<tval>75:<sval>15:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>4:<cost>0
+A:<locale>40/<chance>8
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This potion will wither you and drain all your stats.
+
+N:Detonations
+G:!:v
+I:<tval>75:<sval>22:<p1val>0:<p2val>0
+W:<level>60:<extra>0:<weight>4:<cost>10000
+A:<locale>60/<chance>8
+P:<ac>0:<ds+dd>25d25:<to hit>0:<to dam>0:<to ac>0
+D:This potion will let you explode from the inside. It also works that way when thrown.
+
+N:Augmentation
+G:!:v
+I:<tval>75:<sval>55:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>4:<cost>60000
+A:<locale>40/<chance>16
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This potion will try to increase all of your stats.
+
+N:*Healing*
+G:!:v
+I:<tval>75:<sval>38:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>4:<cost>1500
+A:<locale>40/<chance>4
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This potion will bring you back from the brink of leaving this world,
+D:removing blindness, cuts, stunning, confusion and poison as well.
+
+N:Life
+G:!:v
+I:<tval>75:<sval>39:<p1val>0:<p2val>0
+W:<level>60:<extra>0:<weight>4:<cost>5000
+A:<locale>60/<chance>4
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This potion will bring you back from the brink of leaving this world,
+D:removing blindness, cuts, stunning, confusion and poison as well.
+D:It will also restore all your stats and your experience.
+
+N:Self Knowledge
+G:!:v
+I:<tval>75:<sval>58:<p1val>0:<p2val>0
+W:<level>40:<extra>0:<weight>4:<cost>2000
+A:<locale>40/<chance>1
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This potion will reveal all your intrinsic qualities.
+
+N:*Enlightenment*
+G:!:v
+I:<tval>75:<sval>57:<p1val>0:<p2val>0
+W:<level>70:<extra>0:<weight>4:<cost>80000
+A:<locale>70/<chance>4
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+D:This potion will magically light up the entire level, revealing its layout to you,
+D:increase your intelligence and wisdom, detect traps, doors, stairs, treasure and
+D:other objects, identify everything you are carrying and reveal all your intrinsic
+D:qualities.
+
+## XXX 423 XXX ##
+
+## XXX 424 XXX ##
+
+
+##### Items 425 to 439 unused #####
+
+##### Items 440 to 444 reserved (old "fake" objects) #####
+
+##### Items 445 to 479 reserved (old "terrain" objects) #####
+
+
+# The old "notice_seams" option is currently unused, but much of its
+# old functionality can be obtained by clever use of 'F' commands in
+# a pref file which define "quartz" and "magma" to look like "granite".
+
+# Note that the "player" picture does not really fit in anywhere, and I
+# have no idea how to go about allowing "redefinition" of that picture.
+# Perhaps by using "monster 0" or "object 0" or "feature 0" or even a
+# special "player picture" which might yield a simple way to show the
+# player in different colors or whatever for different "states", or even
+# a different picture for various "class" or "race" choices.
+
+
+##### And here starts the gold/gems #####
+
+N:copper
+G:$:u
+I:<tval>100:<sval>0:<p1val>0:<p2val>0
+W:<level>1:<extra>0:<weight>0:<cost>3
+
+N:silver
+G:$:s
+I:<tval>100:<sval>1:<p1val>0:<p2val>0
+W:<level>1:<extra>0:<weight>0:<cost>6
+
+N:garnet
+G:$:r
+I:<tval>100:<sval>2:<p1val>0:<p2val>0
+W:<level>1:<extra>0:<weight>0:<cost>9
+
+N:gold
+G:$:y
+I:<tval>100:<sval>3:<p1val>0:<p2val>0
+W:<level>1:<extra>0:<weight>0:<cost>12
+
+N:opal
+G:$:W
+I:<tval>100:<sval>4:<p1val>0:<p2val>0
+W:<level>1:<extra>0:<weight>0:<cost>18
+
+N:sapphire
+G:$:b
+I:<tval>100:<sval>5:<p1val>0:<p2val>0
+W:<level>1:<extra>0:<weight>0:<cost>20
+
+N:ruby
+G:$:r
+I:<tval>100:<sval>6:<p1val>0:<p2val>0
+W:<level>1:<extra>0:<weight>0:<cost>24
+
+N:diamond
+G:$:w
+I:<tval>100:<sval>7:<p1val>0:<p2val>0
+W:<level>1:<extra>0:<weight>0:<cost>28
+
+N:pearl
+G:$:w
+I:<tval>100:<sval>11:<p1val>0:<p2val>0
+W:<level>1:<extra>0:<weight>0:<cost>20
+
+N:emerald
+G:$:g
+I:<tval>100:<sval>8:<p1val>0:<p2val>0
+W:<level>1:<extra>0:<weight>0:<cost>32
+
+N:mithril
+G:$:B
+I:<tval>100:<sval>9:<p1val>0:<p2val>0
+W:<level>1:<extra>0:<weight>0:<cost>40
+
+N:adamantite
+G:$:G
+I:<tval>100:<sval>10:<p1val>0:<p2val>0
+W:<level>1:<extra>0:<weight>0:<cost>80
+
+N:corpse
+G:&:r
+I:<tval>101:<sval>0:<p1val>0:<p2val>0
+
+##### Objects 498 and 499 are the "Morgoth Artifacts" #####
+
+# These objects, like objects 500 to 511, are never created
+# without being turned into artifacts.  This simplifies the
+# code for "killing the winner monster".
+
+N:& Mighty Hammer~
+G:\:D
+I:<tval>21:<sval>50:<p1val>0:<p2val>0
+W:<level>15:<extra>0:<weight>200:<cost>1000
+P:<ac>0:<ds+dd>3d9:<to hit>0:<to dam>0:<to ac>0
+F:SHOW_MODS | INSTA_ART
+
+N:& Massive Iron Crown~
+G:]:D
+I:<tval>33:<sval>50:<p1val>0:<p2val>0
+W:<level>44:<extra>0:<weight>20:<cost>1000
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+F:INSTA_ART
+
+
+##### Objects 500 to 511 are the "Special Artifacts" #####
+
+# These objects do not specify "full names" because the artifact name
+# is added in "obj-desc.c" based on the artifact index ("i_ptr->name1").
+#
+# These objects do specify a "base name", which is used when the object
+# is "aware" (always true for lites)
+#
+# The Lites (and the One Ring) specify "physical colors", which
+# over-ride the "flavor" colors, if any.  Note that the "One Ring"
+# also has a specific check for "unknown" in which it changes its
+# name to "a plain gold ring".  See "obj-desc.c"
+#
+# Note that ALL artifacts are given "IGNORE_ACID/ELEC/FIRE/COLD",
+# so we do not need to specify that here.
+#
+# Note that the "INSTA_ART" flag is used to prevent these objects from
+# being created without also turning them into artifacts.  This flag
+# must be specified both here and in the artifact template.
+#
+# The only reason for having six different "ring" templates and three
+# different "amulet" templates is to allow each "special artifact" to
+# have a different "color" and "flavor", and also to allow the use of
+# special "base names" (such as "Necklace").
+
+
+# The Phial of Galadriel -- see artifact list
+
+N:& Phial~
+G:~:y
+I:<tval>39:<sval>4:<p1val>0:<p2val>0
+W:<level>1:<extra>0:<weight>10:<cost>10000
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+F:INSTA_ART
+
+# The Star of Elendil -- see artifact list
+
+N:& Star~
+G:~:y
+I:<tval>39:<sval>5:<p1val>0:<p2val>0
+W:<level>30:<extra>0:<weight>5:<cost>25000
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+F:INSTA_ART
+
+# The Arkenstone of Thrain -- see artifact list
+
+N:& Arkenstone~
+G:~:y
+I:<tval>39:<sval>6:<p1val>0:<p2val>0
+W:<level>60:<extra>0:<weight>5:<cost>60000
+P:<ac>0:<ds+dd>1d1:<to hit>0:<to dam>0:<to ac>0
+F:INSTA_ART
+
+
+# The Amulet of Carlammas -- see artifact list
+
+N:& Amulet~
+G:":o
+I:<tval>40:<sval>10:<p1val>0:<p2val>0
+W:<level>50:<extra>0:<weight>3:<cost>60000
+F:INSTA_ART
+
+# The Amulet of Ingwe -- see artifact list
+
+N:& Amulet~
+G:":o
+I:<tval>40:<sval>11:<p1val>0:<p2val>0
+W:<level>60:<extra>0:<weight>3:<cost>90000
+F:INSTA_ART
+
+# The Necklace of the Dwarves -- see artifact list
+
+N:& Necklace~
+G:":o
+I:<tval>40:<sval>12:<p1val>0:<p2val>0
+W:<level>70:<extra>0:<weight>3:<cost>75000
+F:INSTA_ART
+
+# The Ring of Duilin -- see artifact list
+
+N:& Ring~
+G:=:r
+I:<tval>45:<sval>38:<p1val>0:<p2val>0
+W:<level>50:<extra>0:<weight>2:<cost>65000
+F:INSTA_ART
+
+# The ring of Voronwe
+
+N:& Ring~
+G:=:r
+I:<tval>45:<sval>39:<p1val>0:<p2val>0
+W:<level>50:<extra>0:<weight>2:<cost>50000
+F:INSTA_ART
+
+# The Ring of Barahir -- see artifact list
+
+N:& Ring~
+G:=:r
+I:<tval>45:<sval>32:<p1val>0:<p2val>0
+W:<level>50:<extra>0:<weight>2:<cost>65000
+F:INSTA_ART
+
+# The Ring of Tulkas -- see artifact list
+
+N:& Ring~
+G:=:r
+I:<tval>45:<sval>33:<p1val>0:<p2val>0
+W:<level>90:<extra>0:<weight>2:<cost>150000
+F:INSTA_ART
+
+# The Ring of Power (Narya) -- see artifact list
+
+N:& Ring~
+G:=:r
+I:<tval>45:<sval>34:<p1val>0:<p2val>0
+W:<level>80:<extra>0:<weight>2:<cost>100000
+F:INSTA_ART
+
+# The Ring of Power (Nenya) -- see artifact list
+
+N:& Ring~
+G:=:r
+I:<tval>45:<sval>35:<p1val>0:<p2val>0
+W:<level>90:<extra>0:<weight>2:<cost>200000
+F:INSTA_ART
+
+# The Ring of Power (Vilya) -- see artifact list
+
+N:& Ring~
+G:=:r
+I:<tval>45:<sval>36:<p1val>0:<p2val>0
+W:<level>100:<extra>0:<weight>2:<cost>300000
+F:INSTA_ART
+
+# The Ring of Power (The One Ring) -- see artifact list
+
+N:& Ring~
+G:=:y
+I:<tval>45:<sval>37:<p1val>0:<p2val>0
+W:<level>110:<extra>0:<weight>2:<cost>5000000
+F:INSTA_ART
+
+# the Rod of Clear Thinking
+N:& Ancient Rod~
+G:-:r
+I:<tval>66:<sval>45:<p1val>0:<p2val>0
+W:<level>50:<extra>0:<weight>2:<cost>45000
+F:INSTA_ART
+
+# the Rod of Dreams
+N:& Ancient Rod~
+G:-:r
+I:<tval>66:<sval>46:<p1val>0:<p2val>0
+W:<level>50:<extra>0:<weight>2:<cost>45000
+F:INSTA_ART
+
+# the Rod of Escape
+N:& Ancient Rod~
+G:-:r
+I:<tval>66:<sval>47:<p1val>0:<p2val>0
+W:<level>50:<extra>0:<weight>2:<cost>45000
+F:INSTA_ART
+
+# the Rod of Plenty
+N:& Ancient Rod~
+G:-:r
+I:<tval>66:<sval>48:<p1val>0:<p2val>0
+W:<level>50:<extra>0:<weight>2:<cost>45000
+F:INSTA_ART
+
+# the Rod of Knowledge
+N:& Ancient Rod~
+G:-:r
+I:<tval>66:<sval>49:<p1val>0:<p2val>0
+W:<level>50:<extra>0:<weight>2:<cost>45000
+F:INSTA_ART
+
+

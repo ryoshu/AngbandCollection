@@ -1,0 +1,20 @@
+The old Angband compilation instructions no longer work at all.
+Instead use the make command corresponding to your OS:
+
+Windows:
+make -f Makefile.cyg install
+
+Mac OS X (Nota bene: this does not currently function. If you can
+	collect the proper headers and make the proper changes so that
+	it compiles, please send a pull request with the necessary alterations):
+make -f Makefile.osx install
+
+Linux (Untested, but should work):
+make -f Makefile.std install
+
+
+Makefile.inc and Makefile.src are referenced by other makefiles, not to be used directly.
+
+All other makefiles are deprecated, as far as I am concerned. Many are out of date,
+and were I to support all 14 of the 'true' makefiles, I would spend all my development
+time compiling and fixing portability bugs. If one works for you, great.

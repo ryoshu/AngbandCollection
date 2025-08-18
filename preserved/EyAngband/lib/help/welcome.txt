@@ -1,0 +1,67 @@
+=== General Information ===
+
+EyAngband is basically a complex single player dungeon simulation.  A player
+creates a character, choosing from a variety of sexes, races and classes,
+and then "runs" that character over a period of days, weeks, even months.
+
+The player will begin his adventure on the town level where he may acquire
+supplies, weapons, armor, and magical devices by bartering with various shop
+owners.  Then the player can descend into the dungeon, where he will explore
+the many levels of the dungeon, gaining experience by killing fierce creatures,
+collecting powerful objects and valuable treasure, and returning to town 
+occasionally to barter for new supplies.  Eventually, as the player grows more
+experienced, he may attempt to win the game by defeating Morgoth, the Lord of 
+Darkness, who resides far below the surface.
+
+Note that EyAngband is a very complex game, and it may be difficult to grasp
+everything at first, especially if you have never played a "roguelike" game
+before.  Even if you are an experienced hand at Angband or others of its many
+variants, however, you will discover that much is different.  You should 
+probably browse through all of the "online help files" before beginning any
+serious adventuring.
+
+For the true newcomer, a simple tutorial is available in the "tutorial.txt"
+help file. 
+
+=== A Note from the Maintainer ===
+
+Welcome to EyAngband. My name is Eytan Zweig, and I have maintained EyAngband
+ever since it branched out of the main Angband development line in October 
+2000, and started a life of it's own.  However, it is far from correct to 
+attribute the entire project to me - for much of what you see when you play the
+game I am indebted to previous maintainers, patch writers, and many people who
+took the time to share their ideas and feedback with me.  
+
+EyAngband's official home page is http://eyangband.sourceforge.net where the 
+newest versions can be found, as well as information about the current state
+of development, and some additional documentation.  You can email compliments,
+complaints, suggestions, bug reports, and patches to me ("eytanz@oook.cz"). 
+Finally, a mailing list exists for discussion of all things EyAngband, at 
+http://www.yahoogroups.com/group/eyangband.
+
+For more information, you might want to check the Official Angband Home Page 
+("http://thangorodrim.angband.org/"), which contains news and links to all the
+different Angband variants and versions.  Another great resource is 
+http://angband.oook.cz, the site of the Angband ladder, where many past 
+EyAngband (and other Angband) characters are comemorated.  And, of cours, you
+ can post interesting experiences and basic questions to the Angband newsgroup 
+("rec.games.roguelike.angband").
+
+You may freely distribute the game, and its source, though you are bound not 
+only by the existing copyright notice from 1984, but also whatever restrictions
+may be present on various other pieces of the code, including the fact that any
+source written by any contributer other than myself is automatically put under 
+copyright and may thus not be used for commercial purposes.  My own code is all
+under the public domain - however, there are very few areas of the game where
+the code is purely mine.  Remember to read the "version.txt" help file for some 
+more copyright information.
+
+I aim to keep the basic help files supplied with this game are more or less up 
+to date, but when in doubt, you should ask the newsgroup for confirmation.  
+
+And be sure to tell all your friends about how much you like EyAngband - and if 
+you found that it isn't quite suited for your tastes, try one of the many other
+Angband variants out there.  You'll be amazed at the variety available.
+
+
+======================= Last updated for EyAngband 0.5.0 ======================

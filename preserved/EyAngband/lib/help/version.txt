@@ -1,0 +1,145 @@
+=== Version Information ===
+
+Make sure to read the newsgroup ("rec.games.roguelike.angband"), and to visit
+the EyAngband home page (http://eyangband.sourceforge.net) and the Official 
+Angband Home Page ("http://thangorodrim.angband.org") for the most up to date
+information about EyAngband and Angband in general.
+
+EyAngband has an incredibly complex history, and is the result of a lot of work
+by a lot of people, all of whom have contributed their time and energy for 
+free, being rewarded only by the pleasure they incur from it. 
+
+The version control files, if they existed, would span more than ten years
+time, and more than six different primary developers.  Without such files,
+we must rely on simpler methods, such as change logs, source file diffs, and
+word of mouth.  Some of this information is summarized in this file.
+
+Please be sure to read the copyright information at the end of this file.
+
+=== A Brief History of EyAngband ===
+
+First came "VMS Moria", by Robert Alan Koeneke (1985).
+
+Then came "Umoria" (Unix Moria), by James E. Wilson (1989).
+
+Details about the history of the various flavors of "Moria", the direct 
+ancestor to Angband, can be found elsewhere.  Note that "Moria" is still played
+on its own account, having been ported to a variety of platforms, and has its 
+own newsgroup, and its own fans.
+
+In 1990, Alex Cutler and Andy Astrand, with the help of other students at the 
+University of Warwick, created Angband 1.0, based on the existing code for 
+Umoria 5.2.1.  They wanted to expand the game, keeping or even strengthening 
+the grounding in Tolkien lore, while adding more monsters and items, including
+unique monsters and artifact items, plus activation, pseudo-sensing, level 
+feelings, and special dungeon rooms.
+
+Over time, Sean Marsh, Geoff Hill, Charles Teague, and others, worked on the 
+source, releasing a copy known as "Angband 2.4.frog_knows" at some point, 
+which ran only on Unix systems, but which was ported by various people to 
+various other systems.  One of the most significant ports was the "PC Angband 
+1.4" port, for old DOS machines, which added color and various other 
+significant changes, only some of which ever made it back into the official 
+source.
+
+Then Charles Swiger (cs4w+@andrew.cmu.edu) took over, sometime in late 1993, 
+cleaning up the code, fixing a lot of bugs, and bringing together various 
+patches from various people, resulting in several versions of Angband, starting
+with Angband 2.5.1 (?), and leading up to the release of Angband 2.6.1 (and 
+Angband 2.6.2) in late 1994.  Some of the changes during this period were based
+on suggestions from the "net", and from various related games, including 
+"UMoria 5.5", "PC Angband 1.4", and "FAngband".
+
+Angband 2.6.1 was primarily targetted towards Unix/NeXT machines, and it 
+required the use of the low level "curses" commands for all screen manipulation
+and keypress interaction.  Each release had to be ported from scratch to any 
+new platforms, normally by creating visual display code that acted as a 
+"curses" emulator.  One such port was "Macintosh Angband 2.6.1", by Keith 
+Randall, which added support for color, and which formed the basis for the 
+first release of Angband 2.7.0.
+
+During the last half of 1994, Ben Harrison had been playing with the Angband 
+source, primarily to investigate the possibility of making some kind of 
+automatic player for Angband, like the old "rogue-o-matic" program for the game
+"rogue".  The difficulty of compiling a version for the Macintosh, and the 
+complexity of the code, prevented this, and so he began cleaning up the code in 
+various ways for his own personal use.
+
+In late 1994, Charles Swiger announced that he was starting a real job and 
+would no longer be able to be the Angband maintainer.  This induced some amount
+of uproar in the Angband community (as represented by the Angband newsgroup), 
+with various people attempting to form "committees" to take over the 
+maintenance of Angband.  Since committees have never given us anything but 
+trouble (think "COBOL"), there was very little resistance when, on the first 
+day of 1995, Ben made his code available, calling it "Angband 2.7.0", and by 
+default, taking over as the new maintainer of Angband.
+
+Angband 2.7.0 was a very clean (but very buggy) rewrite that, among other 
+things, allowed extremely simple porting to multiple platforms, starting with 
+Unix and Macintosh, and by the time most of the bugs were cleaned up, in 
+Angband 2.7.2, including X11, and various IBM machines.  Angband 2.7.4 was 
+released to the "ftp.cis.ksu.edu" site, and quickly gained acceptance, perhaps
+helped by the OS2 and Windows and Amiga and Linux ports.  Angband 2.7.5 and 
+2.7.6 added important capabilities such as macros and user pref files, and 
+continued to clean up the source.  Angband 2.7.8 was released to the major ftp
+archives as the first "stable" version in a year or so, with new "help files"
+and "spoiler files" for the "online help", plus a variety of minor tweaks and 
+some new features.
+
+After Angband 2.7.8 was released, Ben created a web site to keep track of all 
+the changes made in each version (though a few may have been missed), and 
+acquired the use of a new develoepement ftp server to supplement the official 
+"mirror" server.  This web site is now permanently located at 
+http://www.phial.com/).  Unfortunately, the next six versions were numbered 
+Angband 2.7.9v1 to Angband 2.7.9v6, but really each were rather major updates.
+Angband 2.8.0 and 2.8.1 were released using a more normal version scheme.  
+Angband 2.8.2 and 2.8.3 added a few random features, cleaned up some code, and
+provided graphics support and such for a few more platforms.
+
+After the release of Angband 2.8.3 Ben's free time was more and more occupied 
+by his work.  He released a beta version of Angband 2.8.5, introducing many new
+features, but couldn't give as much attention to maintaining the game as he 
+wanted to.
+
+So in March 2000, Robert Ruehlmann offered to take over Angband and started to 
+fix the remaining bugs in the Angband 2.8.5 beta.  The resulting version has 
+now been released as Angband 2.9.0, which was soon followed by Angband 2.9.1. 
+
+Around that time, I (Eytan Zweig), having just finished teaching myself some
+basic C skills, decided that the best way to improve them while doing something
+productive is to develop my own variant.  Since then, EyAngband has been slowly
+evolving, growing from a version of Angband with some slight differences to 
+having major re-thinking of some basic gameplay mechanics.  Through it, I tried
+to keep true to what I believed are the basic principles of Angband design, 
+namely a single, totally random dungeon, where everyone you meet is an enemy. 
+
+As further Angband versions were released, EyAngband strove to keep up with the
+changes, incoporating most of the bug fixes and technology updates included in
+Angbands 2.9.2-3.0.1, with the major exception of Lua scripting.  During this
+period, it has also borrowed code and ideas, to various degrees, from other
+variants, especially Oangband, but also ToME (PernAngband) and DrAngband. 
+
+For a more detailed account of Angband's history, check the "version.txt" file
+that accompanies Angband.
+
+
+=== Copyright Information ===
+
+Copyright (c) 1997 Ben Harrison, James E. Wilson, Robert A. Koeneke
+
+This software may be copied and distributed for educational, research,
+and not for profit purposes provided that this copyright and statement
+are included in all such copies.  Other copyrights may also apply.
+
+All changes made by Ben Harrison and Robert Ruehlmann are also available
+under the GNU GENERAL PUBLIC LICENSE.  Note that this doesn't influence
+the current distribution, since parts of the source are still only
+available under the old Moria/Angband license.  Until all parts of
+Angband are distributed under the GPL the only valid license remains
+the original Moria/Angband license.
+
+All changes made by Eytan Zweig are public domain, and may be used freely by 
+all users insofar as the above licenses are respected for accompanying code.
+
+
+======================= Last updated for EyAngband 0.5.0 ======================

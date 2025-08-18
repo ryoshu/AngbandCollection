@@ -1,0 +1,562 @@
+**** 07/09/04
+
+Fixed a bug that caused crashes when Blade of Chaos were generated.
+Made a bunch of flavor changes to the items list.
+Improved randarts a bit more.
+
+**** 05/20/04
+
+Fixed a bug where some worthless items were being pseudo-id'ed as "excellent"
+
+**** 05/19/04
+
+Made sure named monsters no longer drop their named artifacts; some
+  of these could cause game crashes, since the underlying weapon types
+  don't exist anymore (Groo's Katana, for example).
+
+**** 05/18/04
+
+Tweaked the Dark soul sub-type; added STEALTH
+Fixed a typo in the chaos spell descriptions
+Fixed a bug where acid was damaging acid-resistant armor+weapons
+Greatly weakened staff + wand draining
+
+**** 05/17/04
+
+Reverted psychometry to previous behavior; new behavior was bugged
+Fixed bug where Ogres + Ettins were not getting resist lite.
+Fixed bug where Vorpal flag and Immunity flags were being listed incorrectly
+
+**** 05/12/04
+
+Lots of racial re-working. Removed Jungle Trolls; added Snotlings,
+Humans, and Gremlins.
+
+Edited help files to match new races.
+
+Fixed a bug in the birth screens; hitting escape could cause a 
+program crash.
+
+**** 02/26/04
+
+Fixed a typo
+
+**** 02/25/04
+
+Added some more info when you 'i'nspect a bound item
+Fixed a bug where the DIG flag also gave the IMPACT flag.
+Updated spell info screens with new healing amounts
+
+Made some ego-types deeper (Resistance, of the Hummingbird)
+Made some ego-types rarer (of the Hummingbird)
+
+**** 02/24/04
+
+Stripped out a lot of the weapons / armor that don't fit the setting.
+Fixed a bug that allowed *ID'ed* artifacts to be destroyed
+Summoned monsters now appear next to the summoner, rather than the player.
+
+**** 02/23/04
+
+Added a new function for generating names for randart non-weapons
+
+Stripping out pattern stuff (including pattern weapons)
+Stripped out trump stuff (including trump magic + weapons)
+
+Temporarily disabled normal artifacts
+
+**** 02/20/04
+
+More racial tweaking
+  buffed the Hit Dice of all the big guys, but gave speed penalties to
+    compensate.
+  The little guys now get a speed boost to make up for their lower hit die.
+  Replaced Jungle Troll's SLOW_DIGEST with SUST_DEX
+  Gave Jungle Trolls a slight nerf to melee, and a big boost to ranged combat.
+  
+Added ILL_STAT flags. Items can now be generated that boost one stat while
+  penalizing another.
+
+Re-worked all item flags.
+  Removed IGNORE_XXX, replaced with IGNORE_ELEM, which ignores all elements.
+  Many items have had IGNORE_ELEM added.
+  Items without IGNORE_ELEM will still ignore some elements, if the item
+    grants resistance against that element (armor of resist acid, for example).
+  Removed QUEST_ITEM, along with grond + morgoth's crown
+  Added AURA_POIS, a poison sheath.
+ 
+Re-worked the character info screen a little bit to show the new flags
+  AURA_POIS is shown on the screen
+  ILL_XXX flags are shown as penalties
+  If an item has a penalty to a stat, but also sustains it, that value will
+    be shown in yellow.
+
+**** 02/19/04
+
+Replaced all the townsfolk
+
+Fixed a bug where randarts with the 'Sharpness' ego-type could give way too
+  many extra attacks
+
+Non-sword randarts can no longer have the 'Vorpal' flag, they get the
+  'Earthquake' flag instead.
+
+Fixed a bug where randart lites were not being generated with some flags
+
+Monsters generated in town no longer drop soul gems
+
+**** 02/18/04
+
+More racial tweaks
+More work on randart names
+
+Began stripping out Amberites
+
+Fixed potions of life; they weren't healing.
+
+**** 02/17/04
+
+Added three new races: Jungle Trolls, Savage Orcs, Ettins
+Reworked all of the races
+
+Cool new function for randart weapon names
+
+**** 02/16/04
+
+Stripped out ALL of the old races, replaced them with the green menace:
+  Orcs, Forest Goblins, Night Goblins, Trolls, Ogres, Hobgoblins
+
+**** 02/13/04
+
+XBAND 0.4.0 released.
+
+**** 02/10/04
+
+The message about the soul dealer in monster recall is now displayed in green.
+Weapons and armor are no longer generated in stacks at the stores.
+Rings and Amulets don't stack at the stores anymore.
+
+Made all staves/rods/potions/mushrooms/spells of "Cure X" act the same way.
+
+- Still need to address potions of curing, probably by removing them.
+
+Adjust costs of some ego items.
+
+Made some changes to artifacts
+
+**** 02/09/04
+
+Messed around with hidden attribute detection
+
+**** 02/06/04
+
+Weakened Ogre souls
+
+Changed color of Lizardmen / Lizard King to prevent confusion with Gnome Mages
+Changed color of Alberich, Mime, and Hagen to all match.
+Changed color of most leprechauns
+
+Changed Forest Gnome to Gnome Archer, changed color.
+
+Changed color of snotlings to prevent confusion with goblins
+
+Psychometry (and by extension, the Chaos spell Sense Power) will now filter
+  out already-sensed items.
+
+**** 02/05/04
+
+Fixed browse info for sense power.
+
+**** 02/04/04
+
+Dialed back brand damage
+  Fire, Cold, Elec, Acid, and Poison brands now do 2X damage.
+  
+Rings and amulets no longer stack.
+
+Warpstone weapons now cause random teleportation.
+
+Randarts can now have Vampiric or Vorpal as random slays.
+
+Monsters that have elemental auras will now drop soul gems with elemental sub-types.
+  
+Fixed some door closing / opening stuff
+
+Fixed interaction between swamps and poison immunity
+
+Changed algorithm for decreasing stats, algorithm taken from Z 2.7.4b
+
+Added some fixes for possible crashes relating to monster movement in melee2.c from Z 2.7.4b
+
+Quest monsters now appear in red in visible monsters term.
+
+Fixed ego-type 'of digging'.
+
+Randart lites now always have permanent light. 
+  (The timeouts on fuel and the timeouts on activated abilities are linked; I had to either cut activated abilities on randart lites,
+  or give all lites permanent lite).
+  
+Fixed permenant inscription you used to get if you tried to destroy an artifact.
+
+
+**** 02/03/04
+
+Dialed back damage bonuses.
+  Each +1 now gives +5% damage
+
+**** 02/02/04
+
+Ported over some bugfixes from Z:
+  Fixed some savefile loading bugs
+  Fixed monster lights
+  
+Un-did the Vanilla town store shuffling
+  
+**** 01/30/04
+
+Character dumps are now saved in the SAVE directory, while note files are still
+  saved in the USER directory. This prevents a problem where it was easy to over-
+  write note files with character dumps.
+
+Vanilla town has had one more store added (Soul Dealer), and some of the other stores
+  shuffled around a little. As a consequence, Vanilla mode is now much more playable.
+  
+The Vanilla town is now the default town.
+  
+Removed the 'Imbue' option from the soul dealer; imbuing items is now a simple
+  command. Just hit 'B' to (imbue/bind) a soul to an item.
+As a consequence, Ironman mode should now be much more playable.
+
+Chaos magic has been re-worked a bit; it should have more flexibility now.
+  Removed Wonder, replaced with Sense Power, which pseudo-ID's equipment.
+  Removed Chain Lightning, replaced with Battle Frenzy, which berserks + hastes.
+  Removed Touch of Confusion, replaced with Ray of Confusion, which confuses at range.
+  Removed Chaos Branding, replaced with Mass Confusion, which confuses all monsters in LOS.
+
+Fixed scrolls of rumor.
+
+Replaced ZAngband with XBAND in a lot of help files.
+
+Added the Soul Gem helpfile to the helpfile system.
+
+**** 01/20/04
+
+Added poison immunity
+Poison is now one of the basic resists, many items have been updated to reflect this.
+Kobolds now gain poison immunity at L30
+Poison soul gems now grant poison immunity at L6
+Green Dragon Scale Mail now provides poison immunity.
+
+**** 01/16/04
+
+Released XBAND 0.3.1 
+
+Made some of the mid-level soul types weaker
+
+**** 01/15/04
+
+Red/Blue/Black/White Dragon Scale Mail now provides immunity to their respective element
+
+**** 01/14/04
+
+Another fix to the randart code - new randarts were being created with some flags known
+
+**** 01/13/03
+
+Fixed randart code - now always generates items with exactly two ego types (if possible)
+Items now indicate if they need to be *Idenitified*
+Randarts now may have an activation
+
++Deadliness% now goes much higher. Maximum cap on a weapon was +75%, now +150%.
+Each + to damage was 3%, now +10%.
+
+Increased damage from slays. All do X3 damage, except for Slay Animal (X2), 
+Slay Evil (X2), and Kill Dragon (X5)
+
+**** 12/22/03
+
+Re-named some items to make naming more consistent / less confusing
+  Armor of Bravery -> Boldness
+  Rods/Staves of Perception -> Identify
+  Helms of Holiness -> of Kings
+  
+Altered item generation algorithm; deeper items will now appear less often. Conversely,
+  this change will make less deep items show up more often, which means you should see
+  broken swords / potions of apple juice / assorted level-0 items in the dungeon again.
+  
+Made rounded pebbles more common
+
+**** 12/08/03
+
+Fixed a bug that made artifacts way too common
+Fixed the jewelery pluralization bug
+
+**** 11/11/03
+
+Added armor of Bravery
+Made Orfax deeper, now he only summons kin
+Released XBAND 0.3.0
+
+**** 11/07/03
+
+Ring / Amulet material is now *very* important - cheaper materials won't allow souls to fully develop
+Made higher material rings / amulets rarer, but much more valuable
+Rings / amulets once again stack, if unimbued.
+Made worthless armors possible, and added two new "worthless" armors
+Made the two worthless gloves a tiny bit less worthless
+
+**** 10/31/03
+
+Chaotic weapons now get a random resist, slay, sustain, and ability
+Fixed some artifact-generation stuff I broke
+
+**** 10/30/03
+
+Removed a lot of the Modrons, greatly increased the AC of those that remain to make them more interesting
+Added some new ego-types (original, this time!)
+Weakened the most powerful soul gems
+Added soul gem information for Modrons
+
+**** 10/10/03
+
+Fixed a bug with generating artifact shields
+Improved randarts slightly, now rerolls second ego-type indefinately if the two ego-types chosen are identical.
+Add another improvment to randarts: they all get one free resist, power, or sustain (equal chance, random).
+
+**** 10/09/03
+
+Made mutant mushroom patches more annoying.
+Massively de-powered randarts, now they are basically ego-items with multiple ego-types.
+Fixed the bug with imbuing stacks of rings / amulets.
+Increased the chance ego items might have inflated damage dice
+Permanent Walls should now appear as light brown
+Added many, many new ego types, all ripped from Angband.
+
+**** 10/08/03
+
+Now, high-level characters will automatically pseudo-id weapons/armor when they are prompted to pick it up.
+Mages, Priests, High-Mages, Mindcrafters, and monks gain this ability at level 50, 
+Paladins, Rangers, Warrior-Mages, and Chaos-Warriors gain it at 40,
+Warriors gain it at level 30,
+and Rogues gain it at level 20.
+
+At very high levels, some classes will now automatically identify weapons/armor when they are prompted to pick it up.
+Paladins, Rangers, Warrior-Mages, and Chaos-Warriors gain it at 50,
+Warriors gain it at level 40,
+and Rogues gain it at level 30.
+
+At level 40, Rogues automatically identify all items when they are prompted to pick them up.
+At level 50, Rogues automatically *Identify* all items when they are prompted to pick them up.
+
+Rogues now gain Identify and *Identify* spells earlier.
+
+**** 10/02/03
+
+Added a bunch of new room types from Z 2.7.3
+Made unusual rooms about twice as common
+Made higher-metal rings & amulets less common
+
+**** 09/30/03
+
+Removed void mushrooms, tweaked mutant mushrooms a bit more
+Added the Modrons!
+
+**** 09/30/03
+
+Tweaked the character dump a little
+Tweaked the mutant mushrooms, were *far* too annoying before.
+
+**** 09/29/03
+
+Fixed the bug that allowed slay animal on armor
+Added some new monsters: mutant mushroom patch, yeek necromancer
+Renamed ewoks -> forest gnomes, removed SILLY flag
+Changed color of kamikaze yeeks and serpent men to remove conflicts
+
+**** 09/26/03
+
+Tweaked rewards for depositing soul gems at the soul dealer
+Added two more elemental soul types; law and balance. 
+XBAND 0.2.0 released
+
+**** 09/25/03
+
+Removed extra attacks from Holy Avengers
+If a monster had multiple elemental attacks, it's secondary soul types will now be randomized.
+Added a new secondary soul type - shining
+Now only non-weapons show bonuses to accuracy and damage when inspected.
+Now only non-armor shows bonuses to armor when inspected.
+Randomization of secondary soul types gives preference to better types
+Powered-down soul types big time
+Made souls about half as rare, and made them level about half as fast
+Set leveling threshold for souls higher
+
+**** 09/24/03
+
+Added four new elemental brands on weapons - they are powered-up versions of the basic
+elemental brands; they provide extra damage from their element, immunity to their 
+element, and an elemental sheath.
+Added title to character dump
+Made cloaks of elemental sheath less deep
+Made character dumps show more information
+Made character dumps made upon death identical to normal character dumps
+Made the rewards from the soul dealer much better
+Removed the Greater Hell Beast!
+Added a few more secondary soul types, for double-race monsters like skeleton trolls. 
+Added two new artifact weapons
+Removed the random error messages
+
+**** 09/23/03
+
+Implemented secondary soul types; any creature that breathes an element has a soul that provides
+additional bonuses related to that element.
+Any creature that has an elemental touch attack now provides additional bonuses related to that element.
+
+**** 09/22/03
+
+Removed two more of the single low-level people.
+
+**** 09/19/03
+
+Moved some of the single low-level people (novice warriors, etc) to yeeks and kobolds. Kept the FRIENDS versions.
+Fixed a bug that caused the soul dealer to always charge for soul evaluation, even if canceled.
+
+**** 09/18/03
+
+Fixed a bug that prevented evaluating souls
+Added two new item flags; SH_COLD and SH_ACID, they function like SH_FIRE and SH_ELEC
+Updated the character info screen to show above flags
+
+**** 09/17/03
+
+Edited the makefiles to match changes I have made. Probably broke all kinds of stuff.
+First release
+
+Fixed a bug that misdisplayed soul potentials
+Potential of wielded imbued items can now be displayed
+When inspected, items now display their added damage / accuracy / armor
+Soul potentials now display added damage / accuracy / armor
+
+**** 09/11/03
+
+More soul gem rebalancing, took away some flags from any gem with SPEED (good enough already)
+Made sure uniques never drop soul gems
+Made quest levels give level feelings
+Re-Fixed a bug that prevented soul items from giving AC / acc / dam bonuses until L2.
+
+**** 09/10/03
+
+Finished massive re-balancing of soul gems. Most are now much weaker.
+Soul gems now go from level 1-6, gaining pval (and possibly flags) at each level.
+Made rings, amulets more common (but did not change depth)
+Fixed a bug that prevented soul items from giving AC / acc / dam bonuses until L2.
+
+**** 09/08/03
+
+Re-Implemented Staves, Wands
+Soul Dealer now hands out rewards for turned-in soul gems
+Monster description now lists whether or not a monster has had it's soul captured
+
+**** 09/05/03
+
+Made rings / amulets a little deeper, and a little rarer
+Made soul gems destroyable by lightning
+Wands are no longer vulnerable to lightning, now harmed by fire
+Monsters now drop souls 1 time in 100
+Souls need 100 exp * level to level up
+Big changes to how soul types are stored. Now every item has a soul source, and two soul types.
+  Currently, the soul source is used for naming, and the second soul type is unused.
+  Due to this change, un-imbued rings / amulets are now listed as "A Silver Amulet (Empty)"
+Added 'E'valuate soul to soul dealer, this tells you how a soul will turn out.
+Re-Implemented Scrolls, Potions, Food
+
+**** 09/04/03
+
+Removed code for the One Ring
+Made amulets destroyable by lightning
+Finished populating initial 53 soul types
+Initial 53 soul types now work
+Altered naming for rings / amulets. Was "an Amulet of Silver (Imbued)" now "A Silver Amulet (Newt)"
+
+**** 09/03/03
+
+s_info.txt can now indicate which abilities are gained at which levels
+Soul coins now set into rings / amulets instead of weapons / armor
+Renamed soul coins to soul gems (makes more sense with setting it into jewelery)
+Stripped out ego & artifact rings + amulets
+Added to hit, to damage, and AC bonuses to soul types, and imbued items
+Imbued items now only gain xp if a certain xp threshold is passed (xp = item level)
+
+**** 09/02/03
+
+No code changes yet; working on table of soul types
+
+**** 08/29/03
+
+Imbued items now gain experience, soul coins no longer gain experience
+Added soul dealer to base town
+Now supports multiple soul types; they are read from s_info.txt
+
+**** 08/28/03
+
+Soul data now named soul coins
+Added new field to object_type to track soul type seperately from pval
+Soul data now provides a pval, that increases with level
+Soul data no longer has it's pval / flags wiped out when loading savefiles
+Gave some random flags to all souls
+Added new option at Soul Dealer, 'Imbue Soul'
+  Imbue Soul gives flags / pval on a given soul to a weapon / piece of armor, deletes soul
+
+**** 08/27/03
+
+Removed non-preserve mode
+Removed the option to use old stupid monster AI
+Removed birth option munchkin_death
+Removed borg stuff
+Removed virtues
+Removed a lot of #if 0 stuff
+Updated news.txt
+Changed some instances of ZAngband -> XBand
+Soul data can now gain experience and levels. They still don't do anything.
+
+**** 08/26/03
+
+Modified Rogue Arcane spells to start at level 5
+Removed racial price adjustment
+Removed Moria mode
+Removed TK code, remaining Lua code
+Removed references to Logrus, replaced with Chaos / The Warp / Warpstone as appropriate
+Added new shop type, Soul Dealer. 
+  Can deposit souls, view soul library
+
+**** 08/25/03
+
+Stripped out Lua code
+Added new item type, Soul Data.
+  Monsters drop Soul Data when killed.
+  Soul Data is displayed as Soul Data (Monster Name).
+  Currently Soul Data doesn't do anything.
+  
+**** TODO:
+
+*Fix Racial info in help files
+Make imbued items 'A'ctivateble
+Possibly fix soul memory across characters bug
+Cleanup savefile format
+Add more artifacts
+Remove Amber stuff (including Pattern stuff)
+Fix version numbering
+Change 'ZAngband' -> 'XBand'
+Item descriptions in character dump
+Update official FAQ
+Update help files
+I don't think the HURT_FIRE and HURT_COLD flags work
+Add more ego-types! (Very important with new artifact system)
+Revamp spell lists
+Add procs to weapons and armor
+Better method of soul gem generation / Play up collectible aspect of soul gems
+Re-work Rogues (remove spell books, give innate abilities)
+Much clearer soul gem evaluation
+Port over some of the new throwing code from cmd2.c
+Look into adding the new race flags from 2.7.4
+Look into adding protection from XXX from 2.7.4 (melee1.c)

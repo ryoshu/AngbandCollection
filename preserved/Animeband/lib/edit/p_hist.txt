@@ -1,0 +1,377 @@
+# File: p_hist.txt
+
+
+# This file is used to initialize the "lib/data/p_hist.raw" file, which is
+# used to initialize the "player history" information for the Angband game.
+
+# Do not modify this file unless you know exactly what you are doing,
+# unless you wish to risk possible system crashes and broken savefiles.
+# After modifying this file, delete the "lib/data/p_hist.raw" file.
+
+# Background information (see below)
+
+# Chart progression by race:
+#   Human/Sky/Rem -->  1 -->  2 -->  3 --> 50 --> 51 --> 52 --> 53
+#   Nedian        -->  5 -->  6 --> 40 --> 41 --> 42 --> 53
+#   Sayian        -->  7 -->  8 -->  9 --> 54 --> 55 --> 56
+#   Jureian       --> 10 --> 11 -->  3 --> 50 --> 51 --> 52 --> 53
+#   Android       --> 13 --> 14 --> 50 --> 51 --> 52 --> 53
+#   Ctarl-Ctarl      --> 16 --> 17 --> 18 --> 57 --> 58 --> 59 --> 60 --> 61
+#   Tentacruel    --> 19 -->  2 -->  3 --> 50 --> 51 --> 52 --> 53
+#   Sanjiyan      --> 22 --> 23 --> 62 --> 63 --> 64 --> 65 --> 66
+
+# XXX XXX XXX This table *must* be correct or drastic errors may occur!
+
+# Note that the "spacing" in the "description" lines is very important!
+
+
+# Version stamp (required)
+
+V:0.6.0
+
+
+N:1:2:10:25
+D:You are the illegitimate and unacknowledged child 
+N:1:2:20:35
+D:You are the illegitimate but acknowledged child 
+N:1:2:95:45
+D:You are one of several children 
+N:1:2:100:50
+D:You are the first child 
+
+N:2:3:40:65
+D:of a Merchant.  
+N:2:3:65:80
+D:of a Teacher.  
+N:2:3:80:90
+D:of a Ronin.  
+N:2:3:90:105
+D:of a Salaryman.  
+N:2:3:96:120
+D:of a Samurai.  
+N:2:3:99:130
+D:of a Damiyo Lord.  
+N:2:3:100:140
+D:of a Royal Blood Line.  
+
+N:3:50:20:20
+D:You are the black sheep of the family.  
+N:3:50:80:55
+D:You are a credit to the family.  
+N:3:50:100:60
+D:You are a well liked child.  
+
+
+N:4:2:10:25
+D:You are reborn as the illegitimate and unacknowledged child 
+N:4:2:20:35
+D:You are reborn as the illegitimate but acknowledged child 
+N:4:2:95:45
+D:You are reborn as one of several children 
+N:4:2:100:50
+D:You are reborn as the first child 
+
+N:5:6:60:50
+D:You are one of several children of a Nedian 
+N:5:6:100:55
+D:You are the only child of a Nedian 
+
+N:6:40:40:80
+D:Shopkeeper.  
+N:6:40:70:90
+D:Journalist.  
+N:6:40:87:110
+D:Zoologist.  
+N:6:40:95:125
+D:Mayor.  
+N:6:40:99:140
+D:Professor.  
+N:6:40:100:145
+D:Wise Man.  
+
+
+N:7:8:60:25
+D:You are one of several children 
+N:7:8:100:35
+D:You are the only child 
+
+N:8:9:75:50
+D:of a Sayajin 
+N:8:9:95:55
+D:of an elite Sayajin 
+N:8:9:100:60
+D:of a Super Sayajin 
+
+N:9:54:40:80
+D:Rogue.  
+N:9:54:70:90
+D:Inventor.  
+N:9:54:87:110
+D:Warrior.  
+N:9:54:95:125
+D:Royal Guard.  
+N:9:54:99:140
+D:Prince.  
+N:9:54:100:145
+D:King.  
+
+N:10:11:85:45
+D:You are descended from a Juraian 
+N:10:11:100:55
+D:You are the only descendent of a Juraian 
+
+N:11:3:20:55
+D:Shopkeep.  
+N:11:3:30:80
+D:Businessman.  
+N:11:3:40:90
+D:Musician.  
+N:11:3:50:100
+D:Professor.  
+N:11:3:80:110
+D:Warrior.  
+N:11:3:100:140
+D:Royal Family.  
+
+N:12:23:30:20
+D:You are one of several children of a 
+N:12:23:100:25
+D:You are the only child of a  
+
+N:13:14:85:45
+D:You were built in a backyard shack owned by a
+N:13:14:100:55
+D:You were built in a laboratory owned by a
+
+N:14:50:20:55
+D: Beggar.  
+N:14:50:50:70
+D: Bratty Little Kid Genius.  
+N:14:50:75:85
+D:n Amateur Scientist.  
+N:14:50:95:100
+D: Police Officer.  
+N:14:50:100:125
+D:n Evil Mad Scientist.  
+
+N:16:17:25:40
+D:You are of a litter of 5 of a Ctarl-Ctarl 
+N:16:17:100:50
+D:You are of a litter of 3 of a Ctarl-Ctarl 
+
+N:17:18:10:60
+D:Thief.  
+N:17:18:25:75
+D:Circus Performer.  
+N:17:18:75:90
+D:Warrior.  
+N:17:18:90:110
+D:Scientist.  
+N:17:18:99:130
+D:Mayor.  
+N:17:18:100:150
+D:King.  
+
+N:18:57:15:10
+D:You are the black sheep of the family.  
+N:18:57:85:50
+D:You are a credit to the family.  
+N:18:57:100:55
+D:You are a well liked child.  
+
+N:19:20:25:25
+D:You are the bane of women everywhere.    
+N:19:20:100:25
+D:You are the bane of women and adolescent girls everywhere.  
+
+N:20:21:100:10
+D:You have slimy, translucent skin and 
+
+N:21:24:25:10
+D:a couple of 
+N:21:24:100:20
+D:a lot of 
+
+
+N:23:62:95:55
+D:Sanjiyan Scholar.  
+N:23:62:99:65
+D:Sanjiyan Shaman.  
+N:23:62:100:80
+D:Sanjiyan Magi.  
+
+N:24:25:10:20
+D:green tentacles.  
+N:24:25:20:30
+D:red tentacles.  
+N:24:25:100:40
+D:flesh colored tentacles.  
+
+N:25:0:100:10
+D:You don't want to know anymore.
+
+N:40:41:20:50
+D:You have dark brown eyes, 
+N:40:41:60:50
+D:You have brown eyes, 
+N:40:41:70:50
+D:You have hazel eyes, 
+N:40:41:80:50
+D:You have green eyes, 
+N:40:41:90:50
+D:You have blue eyes, 
+N:40:41:100:50
+D:You have blue-gray eyes, 
+
+N:41:42:70:50
+D:straight 
+N:41:42:90:50
+D:wavy 
+N:41:42:100:50
+D:spikey 
+
+N:42:53:30:50
+D:brown hair, 
+N:42:53:70:50
+D:pink hair, 
+N:42:53:80:50
+D:red hair, 
+N:42:53:100:50
+D:blue hair, 
+
+N:50:51:20:50
+D:You have dark brown eyes, 
+N:50:51:60:50
+D:You have brown eyes, 
+N:50:51:70:50
+D:You have hazel eyes, 
+N:50:51:80:50
+D:You have green eyes, 
+N:50:51:90:50
+D:You have blue eyes, 
+N:50:51:100:50
+D:You have blue-gray eyes, 
+
+N:51:52:70:50
+D:straight 
+N:51:52:90:50
+D:wavy 
+N:51:52:100:50
+D:curly 
+
+N:52:53:30:50
+D:black hair, 
+N:52:53:70:50
+D:brown hair, 
+N:52:53:80:50
+D:auburn hair, 
+N:52:53:90:50
+D:red hair, 
+N:52:53:100:50
+D:blond hair, 
+
+N:53:0:10:50
+D:and a very dark complexion.
+N:53:0:30:50
+D:and a dark complexion.
+N:53:0:80:50
+D:and an average complexion.
+N:53:0:90:50
+D:and a fair complexion.
+N:53:0:100:50
+D:and a very fair complexion.
+
+N:54:55:85:50
+D:You have light brown eyes, 
+N:54:55:95:50
+D:You have dark brown eyes, 
+N:54:55:100:50
+D:You have dark black eyes, 
+
+N:55:56:75:50
+D:spiked 
+N:55:56:100:50
+D:wavy 
+
+N:56:0:75:50
+D:brown hair, and a fair complexion.
+N:56:0:85:50
+D:black hair, and a fair complexion.
+N:56:0:95:50
+D:purple hair, and a fair complexion.
+N:56:0:100:50
+D:blond hair, and a fair complexion.
+
+N:57:58:99:50
+D:You have dark green eyes, 
+N:57:58:100:60
+D:You have dark blue eyes, 
+
+N:58:59:90:50
+D:straight 
+N:58:59:100:50
+D:wavy 
+
+N:59:60:50:50
+D:red hair, 
+N:59:60:75:50
+D:silver hair, 
+N:59:60:100:50
+D:blue hair, 
+
+N:60:61:25:50
+D:droopy brown ears, 
+N:60:61:60:51
+D:fuzzy brown ears, 
+N:60:61:90:53
+D:fluffy brown ears, 
+N:60:61:100:55
+D:furry brown ears, 
+
+N:61:0:75:50
+D:and a short, bushy tail.
+N:61:0:100:50
+D:and a long tail.
+
+N:62:41:20:50
+D:You have three green eyes, 
+N:62:41:40:50
+D:You have three blue eyes, 
+N:62:41:60:50
+D:You have three red eyes, 
+N:62:41:100:50
+D:You have three black eyes, 
+
+N:63:64:25:40
+D:You are of a litter of 5 of a Moogle 
+N:63:64:100:50
+D:You are of a litter of 3 of a Moogle 
+
+N:64:65:10:60
+D:Thief.  
+N:64:65:25:75
+D:Circus Performer.  
+N:64:65:75:90
+D:Warrior.  
+N:64:65:90:110
+D:Scientist.  
+N:64:65:99:130
+D:Mayor.  
+N:64:65:100:150
+D:King.  
+
+N:65:66:99:50
+D:You have dark green eyes, 
+N:65:66:100:60
+D:You have dark blue eyes,
+
+N:66:0:75:50
+D:brown wings, and a red antenna.
+N:66:0:85:50
+D:black wings, and a green antenna.
+N:66:0:95:50
+D:purple wings, and a blue antenna.
+N:66:0:100:50
+D:red wings, and a shining antenna.
+
+

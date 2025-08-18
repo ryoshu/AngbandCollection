@@ -1,0 +1,481 @@
+-1.0.1-
+
+Fixed priest/paladin spell list, dungeon books were broken
+Changed title in files.txt, 'V' command gives correct info now
+Removed limit on number of traps when in nightmare mode
+Activations of wands/staffs/rods/artifacts do not use player level anymore
+
+-1.0.2-
+
+Nightmare mode clears the map every player turn now, instead of each round
+
+When in astral and nightmare modes, cannot get below level 97 when
+descending more than one level at a time
+Also, does not continuously forget the map
+
+Astral characters can now move through walls, and start with
+lanter/oil or torches, as walls are not lit up
+
+Choose classes at start of game. Hit ESCAPE to stop choosing classes
+
+Got rid of restriction on rogues/tricksters that they could only have
+one other class, can't remember why I decided to do that anyway...
+Half-elves can only have 2 classes now, not 3
+
+Gets attribute bonuses/penalties from all classes now
+Second class now needs twice as much experience, third *3. fourth *4
+Skills are an average of what is granted to each available class
+HP are based on average of hitdie from all available classes
+Mana/Piety are displayed regardless of which class is active, and are
+initialised properly at character birth
+
+Added realm information on character info screen. Character can have a
+magery realm (magic or illusion) and a prayer realm (holy or death)
+
+Equipment : spellcasters get first spellbooks, everyone except monks
+gets a melee weapon, archers and rangers get a missile weapon and ammo
+Warriors : chainmail
+Mages or Illusionists : wizard hat
+Priest or Death Priest : ! of cure critical wounds
+Rogue or Trickster : scroll of teleport
+Ranger : fur cloak
+Paladin : large metal shield
+Archer : potion of speed
+Berserker: ! of berserk strength
+Monk : pair of sandals
+
+Changed brand_ammo to be more efficient (thanks to takkaria)
+
+Boosts to infravision/stealth (from spells, potions, etc) give +3 now
+
+Added scroll of Mundanify, returns weapon or armour to base type,
+without enchantments
+
+-1.0.3-
+
+Changed Elf to Grey-Elf - has sustain intelligence as well as resist
+light, intelligent but weak, good at devices, poor at melee, 2
+classes, likes bows
+
+Examining an item in the home displayed the item as if it was
+identified, even if it wasn't.
+The spell-info for the mage's fire-bolt spell was used for the stone
+to mud spell.
+Potions of life will now restore stats before healing to provide full
+health even if CON was drained.
+
+Berserkers now gain the effects of berserk rage while confused or cut
+(in addition to potions/spells and being near death), and while raging
+gain better bonuses to hit, bonuses to damage, and worse AC
+Berserkers can now stun monsters only when scoring a critical hit
+
+Added potion of rejuvenation - restores 1/3rd of total HP and mana
+
+Unworking spells (from illusion/death realms) are not shown in books anymore
+Boccob's and Bigby's books have the right spells in them now
+
+-1.0.4-
+
+Added Crusader - similar to Warrior/Paladin, learns innate powers, can have one
+active power and one passive power in action at the same time. Active powers
+are shown in blue, current active power in light blue. Passive powers are shown
+in green, current passive power in light green.
+Active powers are used in attacking monsters, while passive powers are
+defensive. Some active powers add a bonus or temporary branding to
+melee/missile weapons, and to unarmed attacks if the character is also a
+monk. If the character is not a monk, they must use a weapon to take advantage
+of these powers.
+
+Half-elves and cavemen can have 3 classes now, in addition to high-elves and
+dunadan.
+Holy Priests cannot be Rogues OR Tricksters now. Berserkers can be Monks.
+Berserkers have 1/2 chance of decreasing length of berserk strength each turn.
+
+List of effects ('~' then '4') is ordered, with most used effects first.
+
+Made regeneration *5 to regen amount instead of *2, and made it require more
+food.
+
+At birth, in easy mode, cannot get an ego-weapon of a magic/prayer realm if
+character cannot use that realm.
+
+Fixed calculation of best psuedo-id
+
+Changed how experience is divided between classes, this works for XP gained
+from killing monsters, identifying items, and potions of experience.
+Number of Place of class                 Example of 60 XP
+classes   First   Second  Third   Fourth First   Second  Third   Fourth
+1         *1                             +60
+2         *2/3    *1/3                   +40     +20
+3         *1/2    *1/3    *1/6           +30     +20     +10
+4         *2/5    *3/10   *1/5    *1/10  +24     +18     +12     +6
+Calculation of experience factor stays the same, ie second class needs *2 XP,
+third needs *3, etc
+Changed how XP gain code works, now mostly uses gain_exp_all() which can use
+one of three methods of allocating experience
+
+If player has 'persistence', ie conditions do not timeout, then do not rest
+until starving because game is waiting for some conditions to timeout, such as
+slowing or confusion.
+
+Fixed : astral characters in walls can be attacked now
+
+-1.0.5-
+
+Crusader powers of Heroism and Berserk Strength become passive powers, thus the
+only active powers are those that affect weapons/(unarmed combat if monk).
+
+Added Shadow race : Can avoid death by entering astral mode (unless already
+astral or on the surface), but loses all gold, most inventory/equipment
+(artifacts and items at home are safe, others have a chance of being lost), and
+all but 1/10th of experience. Regains body upon returning to the surface, and
+loses benefits of astral form. Unlike characters who choose 'astral mode' at
+birth, Shadows can use word of recall freely. Can have up to 4 classes. Resists
+cold, poison, darkness and nether, has feather fall, regeneration, and see
+invisible. When in astral form, gains the benefits of speed, continual light,
+telepathy, slow digestion and can pass through walls. Gains experience
+slowly. Shadows gain little sustenance from food.
+
+Amulet of Aid : activates to deal with one of these : slowness, blindness,
+confusion, fear, hallucination, poison, cuts, stunning, low hp (< 9/10ths), or
+hunger. Chooses randomly from whichever of these the character is suffering
+from.
+
+When 'I'nspecting artifacts and magical devices (wands, staffs, rods), chance
+to activate or use the item is described (only if activation is known, or type
+of device is known). (calculation is from sCthangband)
+
+Added class : Undead Slayer. Gets slow but heavy pseudo-id, is strong, wise and
+healthy, but not very intelligent, has a good saving throw, and is nearly as
+good in combat as a warrior.
+Undead slayers get piety from killing undead monsters. Their reward depends on
+the level of the monster, and is doubled if the monster is a unique. Their
+piety does not regenerate over time.
+They use this piety to pray (with 'p' key).
+
+Easy mode gives more useful ego enchantments for weapons.
+
+-1.0.6-
+
+Nightmare mode no longer has permanent amnesia, it was too annoying
+Got rid of Shadow race, too hacky
+
+Added Shifter class: has a number of different forms, each form has access to a
+number of different powers and intrinstics. Forms require experience before
+they can be accessed, and although they do not cost mana to assume, the shifter
+may not get it right the first time - their chance of success is affected by
+dexterity. Powers require mana to use, but are always successfull. Shifter's
+mana is affected by their intelligence.
+
+Hide how much piety an undead slayer has if the adult_hidden option is set
+
+Added Slayer powers of Blessing, Shield and Healing
+
+Point-based character creation no longer gives race/class bonuses twice
+Don't use non-maximize mode when using point-based creation
+
+Nightmare mode does not prevent connecting stairs when in astral mode, but this
+does not guarantee a stair when starting the game
+Nightmare mode no longer ignores FORCE_DEPTH monster flag (Sauron and Morgoth
+were killing too many of my astral characters)
+
+When choosing a random class, there is also a chance of NOT choosing another
+class, but only if the player has at least one class already
+
+When casting spells 'm' or praying 'p', switch to relevant class silently.
+Also reorder books (if used) so that first usable book is 'a',
+etc. (Also silently).
+Now, Crusaders, Shifters and other spellcasters (which use the 'm'
+key) cannot combine.
+
+Updated table of allowed multiclass cominations in lib/help/multi.txt
+and explanations
+
+-1.0.7-
+
+Added spell scrolls - can find spell scrolls in shops, and the dungeon. Temple
+only sells/buys priestly scrolls, magic shop only sells/buys magery/illusion
+scrolls, alchemist buys both (but does not sell them). 
+Spell is cast at level 1 by default, or at player's level if the player has a
+relevant class.
+There are four svals - one for each type of spell book. The sval of the scroll
+is always obvious, but the actual spell is not known unless the scroll has been
+identified (even if it has been used/encountered before).
+
+When destroying spell books, create (and put in inventory) a random number of
+scrolls from spells in the book.
+
+Added wizard command to 'S'huffle stores - sometimes causes
+segmentation fault tho.
+
+Hide success chance of using magical devices when in hidden knowledge mode
+
+Fixed message given when creating spell scrolls from spellbooks to deal with
+pluralization correctly. No message is given if no scrolls are created
+
+Switch automagically when using 'G' or 'b' commands if there is only one class
+which can use books and that class is not active.
+Ask player to switch classes manually if there is more than one class.
+
+Fade out price of items in stores if they're not affordable
+Fixed psuedo-id (again) - now uses average value of all available classes, but
+gives heavy psuedo-id if player has one of Warrior, Rogue, Trickster, Paladin,
+Berserker or Slayer
+
+Recognize picked-up spell scrolls if the spell is known
+
+Added Talismans (amulets of spell) - contain a random spell. Can be activated
+once identified. Timeout is randomly between spell level * 5 and spell level *
+10. Sold by Magic shop.
+
+Changed Rogue to Thief
+Thief gains bonuses to stealth and searching from level, but has less spells
+available now
+Removed Trickster
+
+Added Runecaster class
+      Starts with a talisman of Magic Missile
+      If in easy mode, also gets talismans of Detect Monsters and Cure Light
+      Wounds
+      When reading an identified spell/prayer scroll, can copy it into a
+      talisman (if one is being worn) instead of casting it
+      Can use mana to activate (charging) talismans, cost = turns left / 5 + 1
+      Uses Runecaster level when casting spells from scrolls/talismans	
+      Gets more pages from books
+      - + (level / 20) to random number of pages generated
+      - 1 + (level / 15) guaranteed pages from town books
+      - (level / 25) guaranteed pages from dungeon books
+
+Inform player when rods and talismans recharge
+Talismans have a 1/10 chance of recharging each turn if in the inventory - this
+chance is decreased by Runecrafter level
+
+Fixed food giving only 1/10th of nutrition it should have done
+
+Update charging rods/talismans in inventory/equipment windows
+Drop scrolls from destoryed books if no room in inventory
+Added charms - same as talismans, but rings
+Now can add spells to any charm/talisman in inventory or equipment
+Fixed game crashing when 'I'nspecting an amulet of Aid
+
+Added Book of Infinite Spells - read like a scroll, but with a 1/100 chance of
+disappearing, and a 1/3 chance of changing spell every time it is
+used. Runecasters can copy spells from it to talismans and charms. It is a very
+rare and deep item
+
+-1.0.8-
+
+Merged Crusader and Undead Slayer classes. Now Crusaders can use both powers
+(with 'm') and prayers (with 'p'). They gain piety from killing evil monsters,
+demons and undead. Changed prayers and powers
+
+Non-Runecasters can only get a max of 1 page from books now, and not always
+that
+Changed how many scrolls Runecasters get from destroying books
+Non-Runecasters now find it twice as hard to use talismans/charms
+Fixed talismans/charms of mage spells Treasure/Object Detection being level 99
+
+At class selection, really can't hit ESCAPE before choosing one class now
+
+Monsters can now target spells at players in walls, and are themselves not
+protected by walls
+
+Added Dark Slayer class - uses Death prayer books, gets piety from killing
+living monsters (without empty minds or cold blood), which decreases over time.
+
+Decrease piety of Crusaders over time, takes longer as Crusader level increases
+Maia cannot be Death Priest or Slayer now
+Changed slightly which classes can combine with which, updated
+explanations in multi.txt
+Crusaders/Slayers start with more piety now
+Crusaders/Slayers are now not left completely in the dark about their piety
+rating when in 'hidden' mode
+Crusaders get difrerent powered versions of some prayers, ie Healing
+and Dispel Evil
+Shifters get forms earlier, added Ent and Mind Flayer forms, changed
+intrinstics given
+
+Increased number of traps in nightmare mode
+
+Book spells which caster doesn't have enough mana/piety to use are darkened
+
+Changed how long Berserkers can stun monsters for, it was too long
+
+Added some Shifter powers and forms
+Fixed Shifter stat bonusese from forms, added some intrinstics to some forms
+Monks have half the normal number of blows if they are wearing a shield
+Monk/Shifters do extra damage when in Arctic Bear, Wyvern, Umber Hulk and Chaos
+Drake forms, and also Colbrans/Ice Trolls/Chaos Drakes get an elemental brand
+with their unarmed attacks
+Calculation of blows needed to kill monster (in monster memory) takes account
+of crusader and shifter modifiers (brands and claws)
+Damage shown in character info screen takes account of shifter claws,
+but not brands
+Some gloves and boots help monks do more damage, but sandals penalize
+them slightly
+Added ego-item boots of Kicking (not sandals or soft leather boots tho)
+
+1.0.9
+
+Easy mode gives even more gold and better objects, but score /5 instead of /2
+Changed Hp calculation to really give an average, rather than using best value
+Removed Ranger and Paladin classes
+Thiefs cannot use magic any longer, they will be given other abilities later
+Kobolds can be Death Priests
+Archers get less chance of preferred missiles breaking
+Runecasters are even worse at melee/missile combat now
+Runecasters start with talisman of magic missile and 2 charms from
+detect monsters, detect traps/doors, light area and phase door
+Death Priests can use scythes without penalties, and scythes can be
+weapons of death
+Heavy armour penalizes spell failure rates much more now, it was too low
+Added IGNORE_ flags to death books
+Spell scrolls from destroyed books are worth only 10% of original price
+Half as many spell/prayer scrolls in shops and a few more books
+Added some new flavours from Sangband
+Added spiked club, kite shield, steel gauntlets
+A few artifacts have their base type changed
+Added brand_lite and weapons of magery/illusion/holiness/death to
+randart generation code
+Added Staff of Suprises, like Wand of Wonder, chooses a random effect
+
+Changed the way crusaders and slayers piety decreases - now loses more
+at higher levels, as it is harder to keep their deity pleased. At
+level 1, loses 1 piety per 50 turns, up to level 50 and losing 1 piety
+every turn. Also, it no longer decreases over time in town (but you
+don't get any piety from level 0 monsters)
+Crusaders/slayers xp penalty increased to 50
+Crusaders gain a small amount of piety from destroying Death books,
+Slayers get the same from Holy Prayer books, but neither will ever get
+spell scrolls from these books
+Slayers now get a list of powers similar to those that Crusaders get
+Crusader prays from Holy Prayer books just like Slayer prays from Death books,
+instead of having a separate list of prayers
+Added meditation power, piety decreases 5 times as fast, prayers are easier and
+those that increase in power with player level are twice as effective
+Added weapon of darkness for slayers, has chance of scaring monster each hit,
+decreases player's light radius by 1 (unless that would mean no light
+available), and grants resistance to light
+
+Cancelling spells that require directions, identify, recharge and
+enchanting costs no mana now
+Added a command to show the time of day (control-T).
+Changed and cleaned up monster recall colours
+
+Shortened 'effects' list (one of the '~' screens) and divided effects
+into 3 types - attack forms (bolt, bolt or beam, beam, and ball),
+attack types (type of element, eg fire or chaos), and other effects
+(eg Satisfy Hunger or Phase Door).
+
+Mundanify scroll gives same question as Enchant scrolls
+Amnesia makes character forget the town, also affects astral characters and
+prevents them from knowing the level
+Fixed giving more gold in easy mode when using point-based stats
+Added ego-items for charms/talismans, (Glowing) or (Indestructible)
+Cancelling staffs/rods of id does not take time
+Spell failure chance is set to 0% if it would have gone below that
+before penalties are added
+
+1.1.0
+
+Redid calculation of how many scrolls runecasters get from books<br>
+Groups of monsters are scattered
+No unique monsters are generated for astral characters, they have to
+go to the surface first
+Changed how black market gets items, tied closer to player depth
+Show extra might in multiplier of missile launcher
+Changed message when attacking monsters to 'you punch it' if no weapon is
+wielded, monks using unarmed combat get 'you kick it' half the time
+Added number of shots to kill a monster to monster memory
+Added some more weapons and body armour
+
+Added shifter power to 'unshift', ie return to default form, 0% failure chance
+If shapeshifted, show current form on character info screen
+Fixed mindflayer form giving bonus to str/con instead of penalty
+
+Fixed some polearms having the wrong tval in k_info.txt
+Priests/Crusader/Slayer now have -1 to Int (was -3), Mage/Illusionist
+has -1 to Wis (was 0), Monk has +1 to Wis (was -1).
+Fixed spells in Purifications and Healing
+Crusader/Slayer haste and infravision stacks with temporary haste/infra
+Fixed unid'd missile weapons/ammo showing damage/to-hit on 'C' screen
+Items give exact chance to be activated/used now, instead of estimate
+Quick-start added (broke savefile compatibility)
+
+1.1.1
+
+Added Sorceror class. Learns spells from spell scrolls (max of 20
+spells, after that can replace known spells), can get spell scrolls
+from books like a Runecaster.
+
+Fixed bugs
+Crusaders/Slayers now get no scrolls from opposing prayerbooks
+Failing to use staffs/rods now takes a turn
+If chance to use/activate an item is <1%, say 'you have less than 1%
+chance' instead of 'you have 0% chance'
+Dark Slayers power of Stealth wasn't doing anything
+Spells that mages can't use (Treasure/Object Detection) don't show up
+in their spellbooks anymore
+
+Shifter bonus/penalty to stats is shown on character screen with
+temporary stat reductions, in umber for a bonus and yellow for a
+penalty
+(stats are shown on main screen the same as before, green except for
+when reduced, then in yellow)
+
+1.1.2
+
+Show experience bar (in hidden mode) in yellow if xp has been drained
+Experience drain now happens from class with highest experience first
+Book of Infinite Spells changes the spell it contains every time it is
+used (rather than 1 in 3 times), and will always be unidentified when
+found, and renamed it to Scroll of Infinite Spells to avoid confusion
+(as it is actually a scroll)
+Show number of blows when in hidden mode
+Added descriptions to spells, thanks to somniloquy for the code and
+some of the descriptions
+
+1.1.3
+
+Fixed bug : when wielding a missile launcher and no ammo, damage/to
+hit were showing up wrong in the 'C' screen
+All classes (with current/max level) are shown in the high-score list
+Reduced rarity of ring of extra ettacks from 8 to 3
+Ammo that matches what is in your quiver is automatically picked up
+and equipeed (thansk to somniloquy)
+somniloquy added class info and total xp to 'C' screen
+astral characters get more food rations
+Archers chance of breaking ammo can be as low as 2% now, depending
+on their level (was 10%)
+fixed bug : shifter failing to shift takes a turn now
+monster memory now shows 'life rating' of monsters once again
+fixed bug : ammo in quiver was not being counted towards total weight
+added Angel race and some artifacts/ego-items from Ingeborg
+
+1.1.4
+
+Added Fey race: based on humans, but weaker, charismatic, good saving
+throw, feather fall. Can shift between Seelie and Unseelie with 'U'. 
+Seelie = lite +2, aggravate, res fear/dark, hold life, heroism, brand light.
+Unseelie = stealth, see invis, max light radius of 2, hurt by bright light.
+
+Demunchkinated farmer maggot (oops)
+Invulnerability is no longer affected by persistence
+Monsters summon around themselves, rather than around the player
+Quickstart saves starting mana/piety values
+Crusader/slayer piety cap at level * level * 4 = 4 to 10k
+Astral characters start with 5 mass-id and 50 id, instead of 30 mass-id
+Cavemen favour slings rather than bows
+
+Mana is now an average of that available to all classes
+Extra menua when using 'm'/'p', to choose which classes powers to use
+Shifters can now combine with any class except Berserkers
+Crusaders/Slayers can now combine with Runecasters/Sorcerors
+Crusaders/Slayers lose piety from destroying their own prayer books 
+Sorceror mana is decreased from wearing gloves or heavy armour
+Max weight of armour allowed is an average now, instead of being
+calculated seperately for each class
+
+1.1.4b
+
+Fixed a bug that crashed the game when you tried to make a character with certain classes

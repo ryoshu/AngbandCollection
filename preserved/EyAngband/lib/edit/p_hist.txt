@@ -1,0 +1,554 @@
+# File: p_hist.txt
+
+# This file is used to initialize the "lib/data/p_hist.raw" file, which is
+# used to initialize the "player history" information for the Angband game.
+
+# Do not modify this file unless you know exactly what you are doing,
+# unless you wish to risk possible system crashes and broken savefiles.
+
+# Background information (see below)
+
+#   Human/Dunadan -->  1 -->  2 -->  3 -->  4 -->  5 -->  6 --> 7
+#   Elf           -->  8 -->  9 --> 10 --> 11 --> 12 --> 13
+#   Dwarf         --> 14 --> 15 --> 16 --> 17 --> 18 --> 19 --> 20 --> 21
+#   Gnome         --> 22 --> 23 -->  3 -->  4 -->  5 -->  6 --> 7
+#   Grippli       --> 24 --> 25 --> 26 --> 27 --> 28
+#   Lizardman     --> 29 --> 30 --> 31 --> 32 --> 27 --> 28
+#   Rattikin      --> 33 --> 34 --> 35 --> 36 --> 37 --> 38 --> 39 --> 40
+#   Felpurr       --> 41 --> 42 --> 43 --> 44 --> 45 --> 46
+#   Ursa          --> 47 --> 48 --> 49 --> 50 --> 51 --> 52
+#   Vargr         --> 53 --> 54 --> 55 --> 56 --> 57
+#   Kyrrus        --> 58 --> 59 --> 60 --> 61
+#   Angel         --> 62 --> 63 --> 64
+#   Demon         --> 65 --> 66 -->(67)--> 68
+
+# XXX XXX XXX This table *must* be correct or drastic errors may occur!
+
+# Note that the "spacing" in the "description" lines is very important!
+
+# Version stamp (required)
+
+V:0.5.2
+
+N:1:2:10:25
+D:You are the illegitimate and unacknowledged child 
+N:1:2:20:35
+D:You are the illegitimate but acknowledged child 
+N:1:2:95:45
+D:You are one of several children 
+N:1:2:100:50
+D:You are the first child 
+
+N:2:3:40:65
+D:of a Serf.  
+N:2:3:65:80
+D:of a Yeoman.  
+N:2:3:80:90
+D:of a Townsman.  
+N:2:3:90:105
+D:of a Guildsman.  
+N:2:3:96:120
+D:of a Landed Knight.  
+N:2:3:99:130
+D:of a Titled Noble.  
+N:2:3:100:140
+D:of a Royal Blood Line.  
+
+N:3:4:20:20
+D:You are the black sheep of the family.  
+N:3:4:80:55
+D:You are a credit to the family.  
+N:3:4:100:60
+D:You were a well liked child.  
+
+N:4:5:20:50
+D:You have dark brown eyes, 
+N:4:5:60:50
+D:You have brown eyes, 
+N:4:5:70:50
+D:You have hazel eyes, 
+N:4:5:80:50
+D:You have green eyes, 
+N:4:5:90:50
+D:You have blue eyes, 
+N:4:5:100:50
+D:You have blue-gray eyes, 
+
+N:5:6:70:50
+D:straight 
+N:5:6:90:50
+D:wavy 
+N:5:6:100:50
+D:curly 
+
+N:6:7:30:50
+D:black hair, 
+N:6:7:70:50
+D:brown hair, 
+N:6:7:80:50
+D:auburn hair, 
+N:6:7:90:50
+D:red hair, 
+N:6:7:100:50
+D:blond hair, 
+
+N:7:0:10:50
+D:and a very dark complexion.
+N:7:0:30:50
+D:and a dark complexion.
+N:7:0:80:50
+D:and an average complexion.
+N:7:0:90:50
+D:and a fair complexion.
+N:7:0:100:50
+D:and a very fair complexion.
+
+N:8:9:60:50
+D:You are one of several children 
+N:8:9:100:55
+D:You are the only child 
+
+N:9:10:65:50
+D:of a city-born Elf 
+N:9:10:90:55
+D:of a Wood-Elf 
+N:9:10:100:60
+D:of a High-Elf 
+
+N:10:11:40:80
+D:Ranger.  
+N:10:11:70:90
+D:Archer.  
+N:10:11:87:110
+D:Warrior.  
+N:10:11:95:125
+D:Mage.  
+N:10:11:99:140
+D:Prince.  
+N:10:11:100:145
+D:King.  
+
+N:11:12:85:50
+D:You have light grey eyes, 
+N:11:12:95:50
+D:You have light blue eyes, 
+N:11:12:100:50
+D:You have light green eyes, 
+
+N:12:13:75:50
+D:straight 
+N:12:13:100:50
+D:wavy 
+
+N:13:0:75:50
+D:black hair, and a fair complexion.
+N:13:0:85:50
+D:brown hair, and a fair complexion.
+N:13:0:95:50
+D:blond hair, and a fair complexion.
+N:13:0:100:50
+D:silver hair, and a fair complexion.
+
+N:14:15:25:40
+D:You are one of two children of a Dwarven 
+N:14:15:100:50
+D:You are the only child of a Dwarven 
+
+N:15:16:10:60
+D:Thief.  
+N:15:16:25:75
+D:Prison Guard.  
+N:15:16:75:90
+D:Miner.  
+N:15:16:90:110
+D:Warrior.  
+N:15:16:99:130
+D:Priest.  
+N:15:16:100:150
+D:King.  
+
+N:16:17:15:10
+D:You are the black sheep of the family.  
+N:16:17:85:50
+D:You are a credit to the family.  
+N:16:17:100:55
+D:You are a well liked child.  
+
+N:17:18:99:50
+D:You have dark brown eyes, 
+N:17:18:100:60
+D:You have glowing red eyes, 
+
+N:18:19:90:50
+D:straight 
+N:18:19:100:50
+D:wavy 
+
+N:19:20:75:50
+D:black hair, 
+N:19:20:100:50
+D:brown hair, 
+
+N:20:21:25:50
+D:a one foot beard, 
+N:20:21:60:51
+D:a two foot beard, 
+N:20:21:90:53
+D:a three foot beard, 
+N:20:21:100:55
+D:a four foot beard, 
+
+N:21:0:100:50
+D:and a dark complexion.
+
+N:22:23:85:45
+D:You are one of several children of a Gnome 
+N:22:23:100:55
+D:You are the only child of a Gnome 
+
+N:23:3:20:55
+D:Beggar.  
+N:23:3:50:70
+D:Braggart.  
+N:23:3:75:85
+D:Prankster.  
+N:23:3:95:100
+D:Warrior.  
+N:23:3:100:125
+D:Mage.
+
+N:24:25:100:50
+D:You are one of a spawning of dozens. Your parents were 
+
+N:25:26:40:40
+D:Fishers. 
+N:25:26:70:50
+D:Hunters. 
+N:25:26:90:60
+D:Warriors. 
+N:25:26:100:70
+D:Nobles. 
+
+N:26:27:50:40
+D:Your skin is warty and 
+N:26:27:70:50
+D:Your skin is smooth, slimey, and 
+N:26:27:90:55
+D:Your skin is smooth and 
+N:26:27:100:60
+D:Your skin is smooth, and coloured red and 
+
+N:27:28:70:50
+D:brown, 
+N:27:28:80:55
+D:light green, 
+N:27:28:90:60
+D:dark green, 
+N:27:28:100:65
+D:black, 
+
+N:28:0:50:50
+D:and your eyes are yellow.
+N:28:0:100:50
+D:and your eyes are red.
+
+N:29:30:50:50
+D:You are one of a brood of ten. 
+N:29:30:75:50
+D:You are one of a brood of nine. 
+N:29:30:100:50
+D:You are one of a brood of eight. 
+
+N:30:31:50:50
+D:Your father was a fisher, 
+N:30:31:70:50
+D:Your father was a tribal guard, 
+N:30:31:85:60
+D:Your father was the tribe priest, 
+N:30:31:100:75
+D:Your father was chief, 
+
+N:31:32:50:50
+D:and your mother was a hunter. 
+N:31:32:80:55
+D:and your mother was a warrior. 
+N:31:32:100:60
+D:and your mother was a witch. 
+
+N:32:27:100:50
+D:Your scales are 
+
+N:33:34:20:40
+D:You are the runt of 
+N:33:34:80:50
+D:You come from 
+N:33:34:100:55
+D:You are the largest of 
+
+N:34:35:15:45
+D:a litter numbering a dozen, 
+N:34:35:40:45
+D:a litter of ten, 
+N:34:35:70:50
+D:a litter of seven, 
+N:34:35:85:50
+D:a litter of six, 
+N:34:35:95:55
+D:a litter of five, 
+N:34:35:100:55
+D:a litter of four, 
+
+N:35:36:15:45
+D:all of which survived. 
+N:35:36:85:50
+D:most of which survived. 
+N:35:36:100:55
+D:of which all but you had died. 
+
+N:36:37:35:40
+D:Your father was a thief, 
+N:36:37:70:45
+D:Your father was a merchant, 
+N:36:37:95:50
+D:Your father was a warrior, 
+N:36:37:100:60
+D:Your father was the tribal chief, 
+
+N:37:38:50:45
+D:and your mother was a thief. 
+N:37:38:95:50
+D:and your mother was a mage. 
+N:37:38:100:55
+D:and your mother was a huntress. 
+
+N:38:39:10:50
+D:You have black eyes, 
+N:38:39:40:50
+D:You have dark brown eyes, 
+N:38:39:80:50
+D:You have brown eyes, 
+N:38:39:99:50
+D:You have light brown eyes, 
+N:38:39:100:50
+D:You have glowing red eyes, 
+
+N:39:40:40:45
+D:pale white fur, 
+N:39:40:60:50
+D:pale brown fur, 
+N:39:40:95:50
+D:olive green fur, 
+N:39:40:100:60
+D:glistering silver fur, 
+
+N:40:0:10:50
+D:and large, flat teeth.
+N:40:0:90:50
+D:and small, sharp teeth.
+N:40:0:100:50
+D:and large, sharp teeth.
+
+N:41:42:20:45
+D:You are the smallest of 
+N:41:42:80:50
+D:You come from 
+N:41:42:100:55
+D:You are the largest of 
+
+N:42:43:20:45
+D:a litter of six. 
+N:42:43:50:50
+D:a litter of five. 
+N:42:43:80:55
+D:a litter of four. 
+N:42:43:100:60
+D:a litter of three. 
+
+N:43:44:10:40
+D:Your mother was a servant, 
+N:43:44:30:50
+D:Your mother was a warrior, 
+N:43:44:50:60
+D:Your mother was an artist, 
+N:43:44:70:75
+D:Your mother was a warrior-mage, 
+N:43:44:85:90
+D:Your mother was a noble huntress, 
+N:43:44:100:100
+D:Your mother was a princess, 
+
+N:44:45:100:50
+D:and you never knew your father. 
+
+N:45:46:10:50
+D:You have black eyes 
+N:45:46:40:50
+D:You have yellow eyes 
+N:45:46:80:50
+D:You have green eyes 
+N:45:46:100:50
+D:You have orange eyes, 
+
+N:46:0:20:40
+D:and grey fur.
+N:46:0:50:50
+D:and smooth grey fur.
+N:46:0:70:50
+D:and calico fur.
+N:46:0:90:55
+D:and orange fur.
+N:46:0:100:60
+D:and golden fur.
+
+N:47:48:65:50
+D:You are the only cub 
+N:47:48:100:55
+D:You are one of several cubs 
+
+N:48:49:40:45
+D:of an Ursa Woodcutter and 
+N:48:49:70:50
+D:of an Ursa Mercenary and 
+N:48:49:90:55
+D:of an Ursa Hunter and 
+N:48:49:100:65
+D:of an Ursa Chief and 
+
+N:49:50:50:50
+D:his 
+N:49:50:100:50
+D:her 
+
+N:50:51:50:50
+D:mate, a Warrior. 
+N:50:51:75:50
+D:mate, a Paladin. 
+N:50:51:100:55
+D:mate, a Priest. 
+
+N:51:52:60:50
+D:Your fur is smooth 
+N:51:52:100:50
+D:Your fur is rough 
+
+N:52:0:60:50
+D:and coloured light brown.
+N:52:0:80:50
+D:and coloured dark brown.
+N:52:0:95:60
+D:and coloured black.
+N:52:0:100:75
+D:and coloured pure white.
+
+N:53:54:15:40
+D:You are the runt of 
+N:53:54:85:50
+D:You come from 
+N:53:54:100:55
+D:You are the largest of 
+
+N:54:55:20:45
+D:a litter of six. 
+N:54:55:50:50
+D:a litter of five. 
+N:54:55:80:55
+D:a litter of four. 
+N:54:55:100:60
+D:a litter of three. 
+
+N:55:56:50:50
+D:Your parents were both hunters. 
+N:55:56:80:50
+D:Your parents were both warriors. 
+N:55:56:90:55
+D:Your parents were both warrior-mages. 
+N:55:56:100:55
+D:Your parents were both paladins. 
+
+N:56:57:30:40
+D:Your eyes are yellow, 
+N:56:57:60:50
+D:Your eyes are deep red, 
+N:56:57:90:50
+D:Your eyes are midnight black, 
+N:56:57:100:60
+D:Your eyes glow moonlight-blue, 
+
+N:57:0:20:40
+D:and your fur is brown.
+N:57:0:50:50
+D:and your fur is brownish-grey.
+N:57:0:70:50
+D:and your fur is grey.
+N:57:0:90:55
+D:and your fur is silvery-grey.
+N:57:0:95:60
+D:and your fur is silver hued.
+N:57:0:100:70
+D:and your fur is black.
+
+N:58:59:60:40
+D:You have been raised by your parents, who were 
+N:58:60:90:75
+D:You have been raised at a monastery from a young age. 
+N:58:60:100:100
+D:You have been raised at a secret mystical conclave from a young age. 
+
+N:59:60:20:30
+D:servants in a monastery. 
+N:59:60:45:60
+D:members of the lower arcane orders. 
+N:59:60:70:65
+D:members of the lower holy orders. 
+N:59:60:85:80
+D:members of the higher arcane orders. 
+N:59:60:100:90
+D:members of the higher holy orders. 
+
+N:60:61:40:40
+D:Your fur is mottled grey, and 
+N:60:61:65:50
+D:Your fur is white with brown sploches, and 
+N:60:61:80:55
+D:Your fur is white with black sploches, and 
+N:60:61:95:75
+D:Your fur is pure white, and 
+N:60:61:100:80
+D:Your fur is pure black, and 
+
+N:61:0:50:40
+D:your horns are short and pointy.
+N:61:0:70:55
+D:your horns are medium-lengthed and slightly curved.
+N:61:0:100:75
+D:your horns are long and curved.
+
+N:62:63:100:80
+D:You are of the blessed host of heaven. 
+
+N:63:64:50:80
+D:You have been sent to earth to eradicate the wicked, 
+N:63:64:100:80
+D:You have been sent to earth to bring forth justice, 
+
+N:64:0:100:80
+D:and shall not rest until you have succeeded.
+
+N:65:66:100:50
+D:You are of the accursed spawn of hell. 
+
+N:66:67:20:40
+D:You were the servant of a great demon lord, 
+# Note that the next line skips a stage
+N:66:68:80:50
+D:You have been cast out by the whim of the greater demons, 
+N:66:67:100:60
+D:You have allied yourself with a demon lord, 
+
+N:67:68:80:50
+D:upon whose defeat in war you've been banished from your home, 
+N:67:68:100:50
+D:who arranged for your banishment due to some percieved trechery, 
+
+N:68:0:100:50
+D:and now you seek revenge.

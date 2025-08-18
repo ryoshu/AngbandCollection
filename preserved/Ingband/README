@@ -1,0 +1,186 @@
+This is the README file for Ingband 0.2.0 (19990509)
+Written by "elemental", Copyright (C)1999 Robert Shiells.
+
+
+===============================================================================
+This release is over a year overdue :( Sorry.
+This release includes may changes, including changes made between Angband 2.8.2
+and 2.8.3 - some things may have been broken.  As such, this is still an ALPHA
+quality release - even more so than the previous one.  Please report any
+problems to me (note new address at end).
+===============================================================================
+
+
+********************************************************************************
+*** If anybody has sent e-mail to my old address since February 1998, I have ***
+*** never seen it!  The old web page is still there, so I guess e-mail will  ***
+*** still be accepted at the old address - but I can no longer access that   ***
+*** account!  The reasons are complicated; I can do nothing about it.        ***
+********************************************************************************
+
+
+
+Ironman-Angband (Ingband for short) is a "variant" of Angband, a successful
+"graphical" dungeon adventure game derived many years ago from "Moria".  This
+variant was originally developed in response to a discussion about playing
+style on the Usenet group "alt.games.roguelike.angband" - future plans,
+however, will make this variant much more than the simple "Angband with lots
+taken out" game it started out as.  Suggestions are always welcome (e-mail
+address at end).
+
+This is the original Ironman Angband game, written by elemental (aka Robert
+Shiells).  For an overview of recent changes, please read the file "CHANGES".
+
+
+This game should work on the same platforms as Angband - if not, fixes would
+be appreciated (but let me know about it even if you can't fix the problem
+yourself).
+
+
+Help on playing the game is available within the game itself by pressing [?],
+or you can look at the files in the "lib/help" directory with your favourite
+text viewer.  Please note, however, that the help is very out of date.
+
+
+If you have the source distribution of Ingband, you will want to choose the
+appropriate Makefile for your platform and edit it to your liking; you may
+also want/need to edit config.h and h-config.h.  Then a simple "make" should
+do the job...  Some specific requirements are listed in the relevant Makefile.
+
+
+General ethos
+=============
+The character is a hard nut.  He will not wimp out of going into the dungeon,
+and actually has an intense desire to travel deeper into the dungeon at every
+available opportunity.  He wouldn't dream of going back up, except in a dire
+emergency!  This type of character is likely to die young...
+
+Ironman-Angband makes for a fun, short(er) game, for experienced players and
+maybe not-so-experienced players alike...  So long as you can live with dying
+frequently ;)
+
+
+Notes
+=====
+The online help is still fairly unchanged from Angband; some of it will
+therefore not make sense for this game.  I will be working on the help
+shortly - I intend to implement a much more user-friendly system, within
+the constraints of the multi-platform requirement.
+
+Macintosh note, straight from Angband's README:
+
+`The Macintosh requires that the "lib" folder be in the same folder as
+the executable.  Also, note that System 7.5 (and perhaps others) are
+brain damaged, and may default to the incorrect folder for opening
+savefiles.  Make sure you keep all your savefiles in the proper place,
+and if you load a savefile from the wrong place, note that the game
+may decide to re-save your savefile in the proper place when you quit.
+If you move the "lib" folder (or any ancestor folder) while a game is
+in progress, you may not be able to save your game.  To use a savefile
+from another platform (or really old version of Angband) you must use
+the "Import..." menu command instead of the "Open..." menu command.'
+  -- Ben Harrison, maintainer of Angband since 2.7.
+
+
+Layout
+======
+
+This directory
+  |    Informative text files
+  |    The game binary, once compiled
+  |
+  +- src
+  |    The complete source code (note: optional extras may be needed for
+  |    some platforms, distributed seperately).
+  |
+  +- lib
+     | Several sub-directories of data.
+     |
+     +- apex
+     |     High score file, "scores.raw".  Must exist or be creatable
+     |     for the game to run correctly.
+     |
+     +- data
+     |     Binary files created using the data in the edit directory (see
+     |     below).  These files are required, but will be created by the
+     |     game if the edit directory contains valid files and if the game
+     |     was compiled with the option to allow this.
+     |     "a_info.raw" comes from "a_info.txt", and so on for each of
+     |     "e_info.raw", "f_info.raw", "k_info.raw", "r_info.raw" and
+     |     "k_info.raw".
+     |
+     +- edit
+     |     Text files containing game data; used to create the files in the
+     |     "data" directory (see above).  These files are required if the
+     |     binary files in "data" are not available, and can be used to
+     |     alter various things in the game (if you know what you're doing).
+     |     "a_info.txt": Describes game artifacts (special equipment).
+     |     "e_info.txt": Describes "ego" items - very good equipment.
+     |     "f_info.txt": Describes terrain features, such as walls and doors.
+     |     "k_info.txt": Describes kinds of objects.
+     |     "r_info.txt": Describes monster races.
+     |     "v_info.txt": Describes special "vault" rooms.
+     |
+     +- file
+     |     Contains several special text files.
+     |     "news.txt" is displayed when the game is started.
+     |     "dead.txt" is displayed when a player dies.
+     |     "guild[1-7].txt" are files containing guild information, displayed
+     |       when the player enters the corresponding guild building in town.
+     |     "wizards.txt" can be created to restrict players entering "wizard" mode.
+     |     "time.txt" can be created to restrict the times at which the game may
+     |       be played.
+     |     "load.txt" can be created to restrict the load the game may impose on
+     |       the system.
+     |     Support for "wizards.txt" "time.txt" and "load.txt" is platform-specific
+     |     and requires support to be configured-in.  More information is available
+     |     in the configuration files and in the source itself (see "files.c").
+     |
+     +- help
+     |     Contains the standard online-help files.  These are (currently) plain
+     |     text files.  The special "help.hlp" is the first file displayed, and
+     |     contains a list of all other help files available, assigning them to
+     |     numeric keys.  Additional help can be created in the "info" directory
+     |     and the appropriate entry made in "help.hlp" (but note that there can
+     |     be a maximum of ten files listed).
+     |
+     +- info
+     |     Contains (optional) online spoiler files.  This directory is searched
+     |     for help files not found in "help".  The default "help.hlp" file (in
+     |     the "help" directory) allows key 9 to access "spoiler.hlp" and key 0
+     |     to access "user.hlp", which should be created here if required.
+     |
+     +- save
+     |     Contains player savefiles.  These are named in accordance with the
+     |     character in the game.  On multi-user platforms, these will be prefixed
+     |     with the numerical uid of the player (and a ".").  Savefiles are
+     |     portable between systems, assuming that they are renamed appropriately.
+     |
+     +- user
+     |     Contains user preference files, allowing various aspects of the game
+     |     to be customized.
+     |
+     +- xtra
+           Contains special system files, if applicable.
+
+
+Important Places
+================
+The Official Ironman-Angband Page (information & new releases)
+	http://www.sucs.swan.ac.uk/~element/ingband/
+
+The Angband Newsgroup (help, new release announcements, etc)
+	news:alt.games.roguelike.angband
+
+The Angband FTP Site (releases of Angband and several variants)
+	ftp://export.andrew.cmu.edu/angband/
+
+Roguelike News (Information & news about all roguelike games)
+	http://www.skoardy.demon.co.uk/rlnews/
+
+The Official Angband Page
+	http://www.phial.com/angband/
+
+My E-mail address (bug reports, suggestions, problems)
+	email:element@sucs.swan.ac.uk
+

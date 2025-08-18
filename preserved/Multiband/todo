@@ -1,0 +1,108 @@
+
+fix 'chance to activate devices', something is wrong with the formulas..
+
+bug : examinig identified scroll of infinite spells makes the game crash
+
+bug : death priest is non-recommended class for maia, but selecting two classes makes it available again..
+
+get rid of favoured archer pref and let archers choose a weapon
+
+crusader/slayer/priest reading opposing prayer scroll should have nothing happen
+
+ironman_rooms
+
+berserker : hit for > 1/8 hp in one hit, go berserk
+powers : berserk strength, massacre (heng), haste, leap attack, bash
+
+amulet/ring of magic stasis, persistence + res disen
+
+autosave
+
+save starting equipment for quickstart
+
+archers : create ammo (and brand with chosen ego), criticals (based on
+dex), 2 shots at level 1, remove racial prefs, allow player to choose
+mastery
+
+crusader/slayer brands suck at higher levels - brand nether, vampiric
+(instaed of slay animal), aura of fire (crusader), aura of cold
+(slayer), aura of fear (slayer)
+
+make scroll of infinite spells an artifact, and indestructible
+
+make sorc spells sortable, allow replacing if list < max, use up/down to reorder spells
+allow sorcs to 'b'rowse spell list
+add info for 'b'rowsing spells
+sorc/runecaster use 'G' to learn from spell scrolls
+list sorc spells in file dumps
+
+two-weapon combat, two-handed weapons (>20lbs + mage staff, qstaff, beaked axe, glaive, halberd, awl-pike, pike)
+stop attacking when monster dies, take less time if not all blows were used
+tv_axe
+
+give runecasters more ring/amulet slots?
+
+use ESC to cancel curent queue of messages, like one-turn auto-more
+
+make groups monsters stay away from doorways when they are in a room and you are in a corridor
+
+--
+
+rod/wand/staff stacking
+
+allow player to choose which class gets XP
+- get rid of code to divide XP automagiaclly
+- class/race xp penalties remain
+- show unallocated XP with ADV and each class's with normal XP display
+- show each class's number in 'c' screen
+- add command to add xp to a class
+- default amount is all, ask for amount
+- add option to divide ZP in asked for proportions, ie 2 in one class and 5 in another
+- XP draining code takes unallocated XP first, then from class with highest amount of XP
+- regained XP goes to unallocated
+
+---
+
+Reject non-Multiband savefiles, do conversions for older Multiband savefiles
+change VERSION_MAJOR/MINOR/PATCH and headers in *_info.txt's
+
+---
+
+Add code for set_shadow, wizard_lock, set_invis, SUMMON_SHADOWS, and
+then fix spell_flags so those spells can be seen in books again
+- invisibility and monster AI
+- pets
+
+make effects for throwing potions, add throwing weapons, spikes and flasks do
+more damage
+make monsters affected by traps
+traps - on disarming leave a trapkit sometimes (depending on how well the trap
+was disarmed)
+thiefs can reset traps
+thief abilities? steal from shops, guess objects value, good at throwing
+
+---
+
+add random quests, ToME style or Ey style?
+
+add stalls in town, selling a set of related items, eg by TVAL, or ego-items only, or rare items only, etc
+make stalls move around, arrive and depart, but not change owner
+add gambling store
+
+---
+
+add 'Warlock' class
+- uses random powers
+- create power list at birth
+- only show castable powers, requires plev of power level, dim not enough mana powers
+- each power has a random elemental type, higher level powers get access to better types
+- each power has a chance of being bolt, beamable bolt, ball, beam, or large
+  ball, higher levels get larger chance of better types
+- don't repeat powers, ie more than 2 of same element and same type
+- damage and ball radius depends on power level, large balls get larger radius
+- mana cost depends on power level
+- power name depends on type, base name of 'Element Type' ie 'Fire Bolt'
+- names 
+  for large balls - sphere, cloud, storm
+  beam/spear, fire/flame, cold/frost, lightning/spark(minor), acid/corrosion,
+  poison/toxic/stinking(minor), nether/enthropy, dark/shadow, light/sunfire(major only)

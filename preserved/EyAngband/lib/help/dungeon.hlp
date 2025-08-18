@@ -1,0 +1,22 @@
+         -- The Dungeon and its Contents --
+
+Please choose one of the following online help files:
+
+    (1) Exploring the Dungeon          (dungeon.txt)
+    (2) Monsters                       (enemy.txt)
+    (3) Items and Equipment            (items.txt)
+
+
+
+
+
+
+
+
+
+ ?  : return to previous menu
+ ESC: leave help
+
+***** [1] dungeon.txt
+***** [2] enemy.txt
+***** [3] items.txt

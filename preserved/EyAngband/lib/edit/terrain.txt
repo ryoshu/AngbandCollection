@@ -1,0 +1,220 @@
+# File: terrain.txt
+
+# This file is used to initialize the "lib/raw/terrain.raw" file, which is
+# used to initialize the "terrain feature" information for the Angband game.
+
+# Do not modify this file unless you know exactly what you are doing,
+# unless you wish to risk possible system crashes and broken savefiles.
+
+# Note that the terrain feature are grouped into very regular groups,
+# such that each of the bits in the feature type conveys information.
+
+# Note that terrain feature zero contains the "darkness" picture.
+
+# === Understanding terrain.txt ===
+
+# N : serial number : terrain name
+# G : symbol : color
+# M : feature to mimic
+
+# N' indicates the beginning of an entry. The serial number must
+# increase for each new item.
+
+# 'G' is for graphics - symbol and color. There are 16 colors, as
+# follows:
+
+# D - Black        w - White          s - Gray          o - Orange
+# r - Red          g - Green          b - Blue          u - Brown
+# d - Dark Gray    W - Light Gray     v - Violet        y - Yellow
+# R - Light Red    G - Light Green    B - Light Blue    U - Light Brown
+
+# 'M' is the index of a feature to mimic.
+
+# Version stamp (required)
+
+V:0.5.2
+
+# 0x00 --> <darkness>
+
+N:0:<darkness>
+G: :w
+
+# 0x01 --> open floor
+
+N:1:open floor
+G:.:w
+
+# 0x02 --> up stairs (perm)
+
+N:2:up staircase
+G:<:w
+
+# 0x03 --> down stairs (perm)
+
+N:3:down staircase
+G:>:w
+
+# 0x04 --> open door
+
+N:4:open door
+G:':U
+
+# 0x05 --> broken door
+
+N:5:broken door
+G:':u
+
+# 0x06 --> closed door
+
+N:6:closed door
+G:+:U
+
+# 0x07 --> chest
+
+N:7:chest
+G:~:s
+
+# 0x08 --> quest chest
+
+N:8:ancient chest
+G:~:v
+
+# 0x10 --> secret door
+
+N:16:secret door
+G:#:w
+M:24
+
+# 0x11 --> pile of rubble
+
+N:17:pile of rubble
+G:::w
+
+# 0x12 --> magma vein
+
+N:18:magma vein
+G:%:s
+
+# 0x13 --> quartz vein
+
+N:19:quartz vein
+G:%:w
+
+# 0x14 --> magma vein + treasure
+
+N:20:magma vein
+G:%:s
+M:18
+
+# 0x15 --> quartz vein + treasure
+
+N:21:quartz vein
+G:%:w
+M:19
+
+# 0x16 --> magma vein + known treasure
+
+N:22:magma vein with treasure
+G:*:o
+
+# 0x17 --> quartz vein + known treasure
+
+N:23:quartz vein with treasure
+G:*:o
+
+# 0x18 --> granite wall -- basic
+
+N:24:granite wall
+G:#:w
+
+# 0x19 --> granite wall -- inner
+
+N:25:granite wall
+G:#:w
+M:24
+
+# 0x1A --> granite wall -- outer
+
+N:26:granite wall
+G:#:w
+M:24
+
+# 0x1B --> granite wall -- solid
+
+N:27:granite wall
+G:#:w
+M:24
+
+# 0x1C --> permanent wall -- basic (perm)
+
+N:28:permanent wall
+G:#:w
+
+# 0x1D --> permanent wall -- inner (perm)
+
+N:29:permanent wall
+G:#:w
+M:28
+
+# 0x1E --> permanent wall -- outer (perm)
+
+N:30:permanent wall
+G:#:w
+M:28
+
+# 0x1F --> permanent wall -- solid (perm)
+
+N:31:permanent wall
+G:#:w
+M:29
+
+# 0x20 --> shop -- general store (perm)
+
+N:32:General Store
+G:1:U
+
+# 0x21 --> shop -- armoury (perm)
+
+N:33:Armoury
+G:2:s
+
+# 0x22 --> shop -- weapon shop (perm)
+
+N:34:Weaponsmith's
+G:3:w
+
+# 0x23 --> shop -- temple (perm)
+
+N:35:Temple
+G:4:g
+
+# 0x24 --> shop -- alchemist (perm)
+
+N:36:Alchemy Shop
+G:5:b
+
+# 0x25 --> shop -- magic shop (perm)
+
+N:37:Magic Shop
+G:6:r
+
+# 0x26 --> shop -- black market (perm)
+
+N:38:Black Market
+G:7:D
+
+# 0x27 --> shop -- home (perm)
+
+N:39:Home
+G:8:y
+
+# 0x28 --> shop -- bookstore (perm)
+
+N:40:Bookshop
+G:9:o
+
+# 0x29 --> shop - adventurer's guild (perm)
+N:41:Adventurer's Guild
+G:0:v
+
+

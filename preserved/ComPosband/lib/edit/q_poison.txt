@@ -1,0 +1,61 @@
+# Closely adapted from Kangband
+
+?:[EQU $QUEST78 Taken InProgress]
+D:Water trolls are poisoning the lake outside the town. As this
+D:is the primary source of water for our fair city, you can
+D:see the dire consequences! Hurry and eliminate the trolls
+D:so the water can return to a normal state naturally.
+D:Be prepared, rumor has it there are dozens of water trolls
+D:at the lake.
+?:1
+
+?:[EQU $QUEST78 Completed]
+D:Thank you! Please accept this reward.
+?:1
+
+?:[EQU $QUEST78 Failed]
+D:You have failed me, beware you do not do so again!
+?:1
+
+L:#:PERMANENT
+L:.:GRASS
+L:<:UP_STAIR
+L:W:DEEP_WATER
+L:V:SHALLOW_WATER
+L:a:MON(water troll)
+L:b:MON(troll king)
+
+# Dungeon
+M:##########################################################################
+M:#........................................................................#
+M:#................................VVVV....................................#
+M:#................#.............VVVWWVVVV......VVVV.......................#
+M:#.............................VVWWWWWWWVVVV.VVVWWVV......................#
+M:#................#........a...VWWWWWWWWWWWVVVWWWWWVVV....................#
+M:#.......................aa...VVWWWWWWWWWWWWWWWWWWWWWVVV..................#
+M:#................#a........VVVWWWWWWWWWWWWWWWWWWWWWWWWVVV................#
+M:#.........................VVWWWWWW..aaaaa......WWWWWWVV..................#
+M:#................#a.....a.VVWWWW.....aWW.aa.....WWWWVV...................#
+M:#..........................VVVWW...a..WWaa.....WWVVVV....................#
+M:#................#...........VVWWW...aaaa....WWWWV.......................#
+M:#.......................a.....VVWWW.......WWWWVVVV.......................#
+M:#................#a.......a....VVWWWWWWWWWWWVVV..........................#
+M:#.<......b.......................VVWWWWWWWVVV............................#
+M:#..................................VVVVVVVV..............................#
+M:#........................................................................#
+M:##########################################################################
+
+R:OBJ(steel helm):EGO(troll)
+
+?:[EQU $RACE Death-Sword]
+R:OBJ(long sword)
+
+?:[EQU $RACE Hound Spider Ring Beholder Vortex]
+R:OBJ(^ring$):EGO(combat)
+
+?:[EQU $RACE Centipede]
+R:OBJ(metal shod boots)
+
+# vim: filetype=q :
+
+

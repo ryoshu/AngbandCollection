@@ -1,0 +1,14 @@
+*.o
+*.exe
+*.patch
+*.tgz
+*.raw
+*.prf
+lib/user/
+lib/save/
+*.INI
+.project
+.cproject
+*.res
+.settings/
+

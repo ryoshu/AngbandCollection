@@ -1,0 +1,99 @@
+N:*:Default
+97
+'Idspispopd'
+'Uhl Khakhaas'
+'Stratocaster'
+'Arkanna'
+'Uhl Dover'
+'Mallana'
+'Pummeler'
+'Morphain's Friend'
+'Regulator'
+'Mangler'
+'Laik Kenegul'
+'Mae Govannon'
+of the Uncaring
+'Executioner's Friend'
+of Eddie
+'Cannae'
+'Revenge of Orculs'
+'Whirlwind'
+'Ogresmasher'
+'Pod'
+'Elfrist'
+'Quick Kill'
+'Quick Kick'
+'Quick Maim'
+'Luckbane'
+'Wormbiter'
+'Mumakbane'
+'Cat's Claw'
+'Shrieker'
+'Baton'
+of Horror
+'Flame Dart'
+'Invader'
+'Bad Company'
+'Bad Blood'
+'Crackdown'
+'Budokan'
+'Breakout'
+of Morgue
+'Stunner'
+of Misery
+'Whiplash'
+'Fossilizer'
+'Wrangler'
+of Worst Fear
+'Pig's Eye'
+of Fender
+of Fal
+'Raid'
+of Lesser Might
+of the Mind
+of Agenosi
+of Osnege
+of Rada
+of Taltu
+of Hohatirre
+of Leet
+of Girikar
+of Tripa
+of Eesasite
+of Nostant
+of Camafaby
+of Huwelme
+of Repiongar
+of Frepeset
+of Lustiorso
+of Relai
+of Soburrosa
+of Krecrak
+of Uhoat
+of Canzigi
+of Matrap
+of Bushuha
+of Zaiquedri
+'Rutuju'
+'Muflee'
+'Yofirre'
+'Dafuides'
+'Cileas'
+'Quiemosol'
+'Yacinoi'
+'Feays'
+'Pilery'
+'Iteabat'
+'Elose'
+'Zelpuko'
+'Osoirti'
+'Sisugiot'
+'Ridablo'
+'Ugrejid'
+'Cilt'
+'Irtoe'
+'Cizotasep'
+'Otaprafea'
+'Relabuto'
+'Apan'
+'Dalti'

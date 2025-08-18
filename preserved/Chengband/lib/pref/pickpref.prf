@@ -1,0 +1,213 @@
+#=================================================#
+#   Object Auto-picker/Destroyer Sample Setting   #
+#=================================================#
+mushroom of restoring#!E
+potion of resist#!k!q
+potion of restore mana#!k!q
+
+ring of speed
+ring of weaponmastery
+
+power dragon
+balance dragon
+dragon gloves
+dragon boots
+dragon shield
+dragon helm
+dragon wings
+dragon fang
+elven cloak
+armors:dragon
+mirror shield
+weapons:poison needle
+
+?:[EQU $CLASS Mage High-Mage]
+rod of cold balls#!s!d!k
+rod of fire balls#!s!d!k
+rod of lightning balls#!s!d!k
+rod of acid balls#!s!d!k
+wizardstaff
+wizard cloak
+?:1
+
+rod of healing
+staff of healing
+staff of speed
+staff of destruction#!u!s!d!k
+
+diamond edge
+rune sword
+blade of chaos
+
+
+#
+# Pick up all wanted corpses for bounty hunting.
+# And inscribe {Wanted} on it.
+#
+wanted corpses or skeletons#Wanted!k!k!k
+
+#
+# Pick up all magical items with unknown effects.
+#
+unaware items
+
+#
+# Turning on leave_excellent and we keep all egos by default
+# thanks to the following line, but you may want to narrow
+# down which egos to keep.
+# I use unidentified since I might want to auto-destroy weapons
+# of slay orc, or other useless egos, and that should trigger
+# after I identify the object.
+~unidentified ego
+
+# If you just want ego weapons:
+#~unidentified ego weapons
+#~ego more than 19
+
+# If you just want ego armors:
+#~unidentified ego armors
+
+# If you just want ego bolts:
+#~unidentified ego bolt
+
+
+#
+# I usually turn leave_excellent on and uncomment
+# the following 2 lines about midway thru the game.
+# Note that order is important. The line '~unidentified ego'
+# must come before '!unidentified weapons' since both will
+# match on an excellent dagger, for example. As always, first
+# match wins.
+#
+#!unidentified weapons
+#!unidentified armors
+
+# To summarize with an example:
+# [1] '!unidentified weapons' matches as I step onto a grid with an
+#     unknown dagger.
+# [2] When the game tries to destroy the dagger, it discovers it is an
+#     ego weapon, and notices that leave_excellent is turned on.
+# [3] The object then is pseudo-identified as 'excellent' and preferences
+#     are rescanned for a new match.
+# [4] The line '~unidentified ego' is found 
+#     (before '!unidentified weapons'), so the object is not destroyed.
+# [5] I identifiy the weapon, to find it is a Dagger of Slay Animal.
+# [6] The game rescans the preferences and finds the match of
+#     '(!common ego weapons:of slay animal' and destroys the weapon
+#
+
+
+
+#
+# Pick up an object if you have same objects in your inventory,
+# and if it will be stacked in a single slot.
+# CTK: I fixed so that wands and staves are collecting even when
+#      not yet identified.
+# (Useful to collect many supplies.)
+#
+collecting rod
+collecting potion
+collecting scroll
+collecting staff
+collecting wand
+(collecting items
+acquirement#!*
+
+#
+# Pick up important magical potions.
+# And inscribe {!k} on it to protect from accidental destruction.
+#
+potion of strength#!k
+potion of wisdom#!k
+potion of dexterity#!k
+potion of constitution#!k
+potion of intelligence#!k
+potion of charisma#!k
+potion of augmentation#!k
+potion of experience
+potion of polymorph#!k
+potion of new life#!*!*
+potion of self knowledge#!k
+potion of giant strength#!k
+potion of life#!k!q
+potion of *healing*#!k!q
+potion of healing#!k!q
+potion of resistance#!k!q
+potion of speed#!k!q
+
+#
+# Pick up important magical scrolls,
+# unless you are a Berserker who cannot read scrolls.
+#
+?:[NOT [EQU $CLASS Berserker]]
+scroll of artifact creation#!*
+scroll of destruction#!*
+scroll of mass genocide#!*
+scroll of genocide#!*
+?:1
+
+#
+# Auto-destroy some junk juice.
+#
+!potion of apple juice
+
+?:[EQU $CLASS Archer]
+# Archers pick up all bones to create arrows from it.
+junks:^broken skull
+junks:^broken bone
+corpses or skeletons:skeleton
+
+?:[EQU $CLASS Magic-Eater]
+# Magic-Eaters pick up magical devices to absorb its magical power.
+magical devices:rod
+magical devices:staff
+magical devices:wand
+
+?:[EQU $CLASS Ninja]
+# Ninja use a Light source of Darkness.
+(~ego lights:of darkness
+
+# Ninja throw Iron Spikes as Shuriken. 
+Iron Spike#@v0
+
+# Define a macro to throw Iron Spikes on pressing the TAB key.
+#A:\s\s\s\s\\v0*t
+#P:\t
+?:1
+
+#
+# Pick up magical weapons with bigger dice.
+#
+unidentified dice boosted weapons
+
+#
+# Auto-destroy non-magical common equipments for high level character,
+# except Dragon armors, Blades of Chaos, etc. which are NOT common.
+#
+?:[GEQ $LEVEL 30]
+# Destroy both average and good equipments.
+!nameless common weapons
+!nameless common armors
+
+?:[GEQ $LEVEL 20]
+# Destroy known average equipments.
+!average common weapons
+!average common armors
+?:1
+
+#
+# Pick up high level spellbooks, and inscribe on it.
+#
+first realm's fourth spellbooks#@md!k
+second realm's fourth spellbooks#@mh!k
+first realm's third spellbooks#@mc!k
+second realm's third spellbooks#@mg!k
+
+#
+# Inscribe on low level spellbooks.
+#
+~first realm's second spellbooks#@mb!k
+~first realm's first spellbooks#@ma!k
+~second realm's second spellbooks#@mf!k
+~second realm's first spellbooks#@me!k
+

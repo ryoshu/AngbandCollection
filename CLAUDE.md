@@ -8,38 +8,57 @@ This is a public archive and registry of Angband variants and related roguelike 
 
 ## Architecture Strategy
 
-The repository follows a hybrid approach:
+Pure registry + selective preservation approach:
 
-1. **Authoritative repos** - Listed in README.md with links to their official GitHub/GitLab locations
-2. **Orphaned/dead variants** - Kept as local copies for historical preservation when no authoritative repo exists
-3. **Metadata-driven** - README.md serves as the primary registry with status indicators
+1. **Primary registry** - README.md serves as the canonical discovery hub with links to authoritative repos
+2. **Selective preservation** - Only truly orphaned variants are stored locally in `/preserved/`
+3. **Utility scripts** - Tools in `/scripts/` for link validation and orphan management
+4. **Fast discovery** - Users can quickly browse all variants without downloading gigabytes
 
 ## Repository Structure
 
-- Each top-level directory represents one Angband variant
-- Variants with authoritative repos should eventually be removed and exist only as links in README.md
-- Variants without authoritative homes remain as local preservation copies
-- README.md contains the canonical list with links where available
+```
+/scripts/
+  validate-links.sh     # Check all GitHub links are alive  
+  fetch-orphans.sh     # Download variants without homes
+/preserved/            # Only truly orphaned variants
+  Angband64/
+  GSNband/
+  [other orphaned variants]
+/README.md            # Primary registry with links + metadata
+```
+
+- README.md contains ALL variants with authoritative repo links where available
+- `/preserved/` contains only variants with no active authoritative repository
+- `/scripts/` contains maintenance utilities
+- No local copies of variants that have active upstream repositories
 
 ## Common Development Tasks
 
 ### Adding a new variant
 1. Check if an authoritative repo exists
-2. If yes: Add to README.md with link, do not add local copy
-3. If no: Add local copy to preserve the variant
+2. If yes: Add to README.md with link only
+3. If no: Add to `/preserved/` directory and list in README.md
 
-### Converting local copy to link
-1. Verify authoritative repo exists and is maintained
-2. Add link to README.md
-3. Remove local directory
-4. Update git to reflect removal
+### Moving variant from local to linked
+1. Verify authoritative repo exists and is actively maintained
+2. Update README.md with link
+3. Remove from `/preserved/` directory 
+4. Commit the removal
 
-### Validating links
-Use scripts to periodically check that linked repositories are still accessible and maintained.
+### Preserving an orphaned variant
+1. Use `scripts/fetch-orphans.sh` to download from source
+2. Place in `/preserved/` directory
+3. Add to README.md without link
 
-## Repository Management
+### Validating repository health
+- Run `scripts/validate-links.sh` to check all external links
+- Review variants in `/preserved/` for potential new upstream homes
 
-- Keep local copies minimal - only for preservation of orphaned variants
-- Prioritize linking to authoritative sources over local storage
-- Maintain README.md as the primary discovery mechanism
-- Avoid duplicating actively maintained codebases locally
+## Repository Management Principles
+
+- README.md is the single source of truth for discovery
+- Only preserve locally what cannot be found elsewhere
+- Prefer links to live repositories over static copies
+- Keep the repository lightweight for fast cloning
+- Maintain scripts for automated validation and maintenance

@@ -1,0 +1,57 @@
+This is the CHANGES file for Ingband 0.2.0 (19990509)
+
+Ingband 0.1.1 - Ingband 0.2.0 (19990509)
+	Limited character re-rolling; now have a choice of one from ten rolls
+	All characters start as a new character class: Citizen
+	Start equipment removed; now created in player's home
+	Moved character class selection to buildings in town
+	Extended random starting equipment
+	New character class: Druid
+	Added Elemental Magic Books for the Druid's magic
+	Possibility of starting with lantern & flasks of oil instead of torches
+	Merged pray and magic commands to ease implementation of Druid spells
+	Added Priest spell "Force Hammer"
+	New start-up screen (wow!)
+	Implemented new Druid spells
+	Removed cheating options
+	Removed monster health bar
+	A few minor fixes
+	Ported changes from Angband 2.8.2 - Angband 2.8.3
+	Added trapped doors
+	Made each building in town a different guild (& removed temp. p/n cmds)
+	Added guild information, displayed in each guild
+	Expanded object identification (/) command (old Angband patch)
+	Otherwise identical rods sort by recharge time (old Angband patch)
+
+Ingband 0.1.0 - Ingband 0.1.1 (19971105)
+	Fixed problem with colours in DOS version
+	Fixed some filename discrepancies in some Makefiles
+
+Angband 2.8.2 - Ingband 0.1.0 (19971008)
+	All stores are locked (the owners have left town!)
+	Only one up-staircase on any one level
+	Removed connected stairs
+	Removed auto-scumming
+	Start with more food
+	Start with more light
+	Always have preserve mode on
+	Removed limit on maximum dice rolls for character birth
+	Increased minimum value of dice rolls for character birth
+	"Create stairs" only creates down staircases
+	"Teleport level" only teleports downwards
+	Added quantity prompting for drop & destroy
+	Removed redundant tables
+	Modified save and load code
+	Minor changes to levels and rarity of some objects
+	Farmer Maggot now appears at 50ft and drops 1 or 2 exceptional items
+	Allow attacking of monsters in walls by moving (no need to tunnel)
+	Cannot use up-staircases unless current hp <= 1/4 max hp
+	Removed auto-roller
+	Up-staircases lead to an empty level (with just a down-staircase)
+	Mages start with Scroll of Identify instead of Word of Recall
+	Fixed problem with "empty" levels crashing
+	Added random starting items
+	Always play in "maximize" mode (option removed)
+	Removed mage spell Word of Recall
+	Removed priest spells Word of Recall and Alter Reality
+	Changed activation of Avavir

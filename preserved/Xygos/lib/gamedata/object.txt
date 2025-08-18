@@ -1,0 +1,5290 @@
+# File: object.txt
+#
+# This file is used to initialize the "object kind" information for Angband.
+# Modifying this file when you don't know what you're doing may be harmful 
+# to you or your character's health.  It could possibly be considered cheating 
+# under some circumstances, too. :)
+
+# === Understanding object.txt ===
+
+# name: & object name~
+# graphics: symbol : color
+# type: tval 
+# level: level
+# weight : weight
+# cost : cost
+# attack : base damage : plus to-hit : plus to-dam
+# armor: base armor class : plus to-armor class
+# alloc: commonness : min to max level
+# charges: charges
+# pile: chance of being generated in a pile : dice for number of items
+# power: power of the effect for object power evaluations
+# msg: message on using the object
+# vis-msg: message on using the object, only when player is not blind
+# effect: effect when used : subtype (optional) : radius (optional) : parameter (optional)
+# effect-yx: y value for effect : x value for effect
+# dice:dice string
+# expr:substitution code:base value:expression
+# flags: flag | flag | etc.
+# values: label[value] | label[value] | etc.
+# pval: pval
+# desc: description
+
+# Some fields accept randomized numbers of the form "10+2d3M4" where
+# 10 is the non-variable base, 2d3 is a standard die roll, and
+# M4 uses the m_bonus function to generate a number between 0 and
+# 4 according to a normal distribution.  All three components are
+# optional, and the number of dice is optional and assumed to be 1
+# when not specified.  10+2d3M4 has the range 12-20.  10+M4 has the
+# range 10-14.  10+2d3 has the range 12-16.  10+d3 has the range 11-13.
+# 2d3, d3, M4, 2d3M4, and d3M4 are all acceptable as well.  Randomized
+# expressions which begin with "-" are currently handled differently in the
+# "values" line than they are elsewhere.  In the "values" line, the leading
+# "-" sets the sign on the base value (i.e. 10 in the example).  On other lines,
+# a leading "-" in the randomized expression means multiply the random result
+# from what follows by negative one.  As a result, something like "-d4" will
+# not work as you want when used for a "values" line.  Use "-5+1d4" instead.
+
+# 'name' indicates the beginning of an entry. The '&' and '~' symbols are use to
+# include articles and pluralization as necessary to ensure
+# grammatical correctness in object descriptions.
+#
+# For non-English and irregular plurals, the '|' symbol may be used
+# instead, as in "|singular|plural|". The part between the first and
+# second | symbol is used for singular, and the part between the second
+# and third | for plural.  The number of | symbols in the name must
+# always be a multiple of 3.
+
+# 'graphics' is for symbol and color. There are 27 colors, as
+# follows:
+
+# D - Dark Gray    w - White          s - Gray          o - Orange
+# r - Red          g - Green          b - Blue          u - Umber
+# W - Light Gray   P - Light Purple   y - Yellow        R - Light Red
+# G - Light Green  B - Light Blue     U - Light Umber   p - Purple
+# v - Violet       t - Teal           m - Mud           Y - Light Yellow
+# i - Magenta-Pink T - Light Teal     V - Light Violet  I - Light Pink
+# M - Mustard      z - Blue Slate     Z - Deep Light Blue
+
+# Another color, "d", is used for "flavoured" items.
+
+# 'type' is for the base type of item, from object_base.txt.
+
+# 'level' defines how "advanced" the object is, when determining how easy it
+# is to use a device, gun or gadget.
+
+# 'weight' is in tenth-pounds, grams or kg (if a g or kg suffix is used).
+
+# 'cost' is the item's base value.
+
+# 'attack' is for combat attack information, the item's base damage and
+# pluses to-hit and to-dam.  The base damage should be a standard dice roll
+# (eg 2d5), and last two numbers can be any randomized values as above.
+
+# 'armor' is for armor information, the item's base armor class and plus to-ac.
+# The latter accepts randomized values.
+
+# 'alloc' is for allocation - frequency and range of levels found. It is used to
+# ensure that certain vital items such as food and recall cards
+# are found throughout the dungeon. The "allocation" depth need not
+# match the level as specified in the "level:" line, but is likely similar.
+
+# 'charges' is for charges (wands and devices only).  This field accepts
+# randomized values.
+
+# 'pile' is for piling behaviour - how likely the item is to be found in a
+# pile, and how many (random value) objects in such a pile.  Objects
+# without a pile line appear singly.
+
+# 'flags' is for flags, which can be either object flags (as found in
+# src/list-object-flags.h) or kind flags (src/list-kind-flags.h).  As many
+# flags: lines may be used as are needed to specify all the flags, and
+# flags are separated by the '|' symbol.
+
+# 'carried-flags' is for (object) flags, which take effect when carried
+# (and *not* when worn)
+
+# 'values' is for object modifiers which take a value - stats, slays, brands,
+# resistances and so on.  An example is SLAY_UNDEAD[3], which denotes that
+# the weapon concerned has a basic 3x slay against undead creatures.  Like
+# flags, values are separated by '|' and as many values: lines as needed
+# can be used.
+
+# 'power' is used in calculating the power of the object for pricing and 
+# generating random artifacts.  It reflects the power of the effect of the
+# object; other properties are taken into account separately in power
+# calculation.
+
+# 'msg' is any message printed on using the object.
+
+# 'effect' is for the effect when an object is eaten, activated or whatever.
+# Fields are the name of the effect (as found in src/list-effects.h), the
+# subtype which is either an index or a name (look at effect_subtype()
+# in src/effects.c for more information about the available subtypes), the
+# radius, and the other parameter.  The effect name is required.  The others
+# are optional, and the trailing ones that are unused can be omitted.
+
+# 'effect-yx' is y and x values for an effect if necessary
+
+# 'dice' provides a random value to be used by an effect (for damage,
+# healing, etc).  As well as the normal random value fields described above,
+# it can contain expressions like $B, which refer forward to an 'expr' line.
+
+# 'expr' provides an expression for use in effect dice.  It consists of a
+# code letter (eg B) for the expression, a base function to use (for example
+# PLAYER_LEVEL), and a sequence of operations to perform on that base.
+
+# 'time' gives a random value to be used as the time to recharge for a rod or
+# activatable item.
+
+# 'pval' is for pval - an auxiliary value that can mean food value, launcher
+# multiplier or turns of light. A pval can take a random value.
+
+# 'desc' is for description. As many desc: lines may be used as are needed
+# to describe the object. Note that lines will need spaces at their
+# ends or the beginning of the next line to prevent words from running
+# together.
+
+
+
+
+
+##### Non-kind (things treated like objects) #####
+
+name:<pile>
+type:none
+graphics:&:w
+
+name:<unknown item>
+type:none
+graphics:*:r
+
+name:<unknown treasure>
+type:none
+graphics:*:w
+
+name:<fault object>
+type:none
+graphics:*:v
+
+##### Implants (Arms) #####
+
+# Dex - FA? (But that's more a whole-body thing)
+# Esp Str. Maybe con
+# + to hit/dam?
+# tunneling? (DIG_1 ..3)
+# blows, shots, might? (Not might for guns)
+# sustains?
+
+# Str only
+name:& Cybasics Cydearm~
+type:arms
+graphics:!:White
+weight:4740g
+cost:5450
+level:28
+alloc:4:20 to 50
+values:STR[1+M2]
+desc:A cybernetic implant - without any of the extra features of the high-end implants, it is still effective at strengthening your arms.
+material:steel
+
+# Str sustained
+name:& Collective Powerlift~
+type:arms
+graphics:!:Red
+weight:3800g
+cost:11500
+level:38
+alloc:3:30 to 127
+values:STR[2d2M2]
+flags:SUST_STR
+desc:The Powerlift cybernetic implant greatly strengthens your arms. The included advanced nanorebuilder also makes it almost impossible to become weakened.
+material:titanium
+
+# Dex (and a little str) - to hit?
+name:& Collective Powerflex~
+type:arms
+graphics:!:Red
+weight:3500g
+cost:15500
+level:43
+alloc:3:36 to 127
+values:STR[1+M2]
+values:DEX[2d2M2]
+flags:SUST_STR
+flags:SUST_DEX
+attack:0d0:1+M9:0
+desc:The Powerflex cybernetic implant strengthens your arms and improves your dexterity, so making you a more precise, effective combatant. The included advanced nanorebuilder also makes it almost impossible to become weaker or less agile.
+material:titanium
+
+##### Implants (Legs) #####
+
+#Blink/teleport?
+#FA, regen, sus SPD?
+# Stealth?
+# (But also look at making them into egos)
+
+# Basics only
+name:& Cybasics Legend~
+type:legs
+graphics:!:White
+weight:9150g
+cost:7700
+level:33
+alloc:3:25 to 55
+values:MOVES[1]
+desc:A cybernetic implant - without any of the extra features of the high-end implants, it still gets you moving faster.
+material:steel
+
+# Sprinting
+name:& Netrunner Sprint~
+type:legs
+graphics:!:Blue
+weight:6550g
+cost:11000
+level:40
+alloc:4:25 to 127
+values:SPD[-1+d2M1]
+values:MOVES[1]
+desc:A cybernetic implant, combining fast running with sprinting (extra move speed for a short while, as a technique).
+material:titanium
+
+book:[Legs]
+spell:Sprint:1:12:4:4:1:3d30
+seffect:TIMED_INC:FAST:0:5
+sdice:6d3
+sdesc:Sprints - rapid movement for a few moments.
+
+# FF / AC / Stealth
+name:& Collective Skate~
+type:legs
+weight:5400g
+cost:12400
+level:42
+alloc:4:30 to 127
+graphics:!:Red
+flags:FEATHER
+values:MOVES[1+M2]
+values:STEALTH[1+M2]
+desc:A cybernetic implant - the main intent being fast running, but force-skate technology has been integrated to provide some protection and especially to cushion falls. An additional benefit of this is that your steps are muffled, improving your stealth.
+
+# Mixed bag
+name:& Netrunner Leg-Up~
+type:legs
+graphics:!:Blue
+weight:7600g
+cost:14000
+level:45
+alloc:3:30 to 127
+values:SPD[-1+d2M1]
+values:MOVES[1+M3]
+values:STR[M3]
+values:DEX[M4]
+values:CON[M2]
+desc:A cybernetic implant, with the main intent being fast running though there are usually some side benefits.
+material:titanium
+
+# Dex
+name:& Netrunner Flex~
+type:legs
+graphics:!:Blue
+weight:5890g
+cost:18000
+level:49
+alloc:2:35 to 127
+values:SPD[d2M1]
+values:MOVES[1+M3]
+values:DEX[2d2M4]
+desc:A cybernetic implant, combining fast running with agility and overall quickness.
+material:titanium
+
+# Str/con
+name:& Collective Powertrain~
+type:legs
+graphics:!:Red
+weight:7950g
+cost:21000
+level:52
+alloc:2:38 to 127
+values:MOVES[1+M3]
+values:STR[d2M4]
+values:CON[d2M4]
+desc:A cybernetic implant, combining fast running with enhanced strength and toughness.
+material:titanium
+
+# Speed
+name:& Collective Lightning~
+type:legs
+graphics:!:Red
+weight:8300g
+cost:25000
+level:55
+alloc:2:55 to 127
+values:SPD[3d2M4]
+values:MOVES[1+M3]
+flags:SUST_SPD
+desc:A cybernetic implant, allowing fast running combined with overall speed.
+material:titanium
+
+# Capstone?
+# (But consider FBCs)
+
+##### Thrown Weapons #####
+
+# Thrown weapons - molotov, fr[ao]g grenade, EMP grenade, thermal detonator, energy bomb, flash grenade, smoke bomb, vortex bomb, gas grenade, plasmacon, sonic stun[ner]...
+# If thrown these are assumed armed, most should be launchable to greater distance (and contact fused?) with a grenade launcher.
+# How much of this should be base and how much ego?
+# The different names (and weights, radii etc) suggest that all the above (and other) type be different base items,
+# with egos mostly being applicable to all of them.
+# You can arm them without throwing and get faster - or arm them and get caught.
+# This group includes some heavy weapons (satchel charge) that aren't really meant for throwing, although a strong character could throw them a small distance.
+# There may be some (thermal detonator) that are somewhere in between.
+# Egos may include: crawler (will move after being thrown towards closest target, including you), contact, 'persist' (remains in place until touched)
+# Preferably thrown items should rebound.
+# Combat information here is for typical damage at ground zero - damage is much less at range.
+# Even small explosions should cause secondaries and especially fling stuff around which goes off when it hits the wall/monster.
+
+name:& fire bomb~
+type:bomb
+graphics:*:Brown
+level:1
+weight:800g
+cost:20
+pile:10:3
+alloc:6:0 to 14
+flags:EXPLODE
+msg:The {flavor} explodes!
+effect:SPOT:FIRE:3
+dice:2d10
+desc:A 'Molotov Cocktail' - a beer bottle filled with highly flammable fuel. It's not a sophisticated weapon, but it can still be effective.
+material:glass
+
+##### Lights #####
+
+name:& wax candle~
+type:light
+graphics:~:Cream
+level:0
+weight:150g
+cost:1
+pile:20:6
+alloc:20:0 to 40
+attack:1d1:0:0
+armor:0:0
+pval:1500
+time:1500
+flags:BURNS_OUT | LIGHT_2
+desc:A wax candle.
+material:wax
+
+name:& firecracker~
+type:light
+graphics:~:Cream
+level:1
+weight:150g
+cost:30
+pile:5:6
+alloc:6:0 to 45
+attack:1d1:0:0
+armor:0:0
+pval:15
+time:15
+flags:BURNS_OUT | LIGHT_2 | MIMIC_KNOW | ACT_FAILED | NO_ACTIVATION
+msg:The {flavor} explodes!
+effect:SPOT:SHARD:3
+dice:4d10
+desc:A candle-shaped firework. Light the blue touch paper and after a 15 second delay - BANG.
+material:paper
+
+name:& flare~
+type:light
+graphics:~:Cream
+level:1
+weight:150g
+cost:30
+pile:50:6
+alloc:6:0 to 75
+attack:1d1:0:0
+armor:0:0
+pval:40
+time:40
+flags:BURNS_OUT | LIGHT_5 | MIMIC_KNOW
+msg:The {kind} fizzles out.
+desc:A small candle-shaped flare, intended to be safely hand held. It gives a very bright white light for the short time it burns for.
+material:paper
+
+name:& stick~ of dynamite
+type:light
+graphics:~:Cream
+level:18
+weight:150g
+cost:150
+pile:5:6
+alloc:4:15 to 75
+attack:1d1:0:0
+armor:0:0
+pval:15
+time:15
+flags:BURNS_OUT | LIGHT_2 | MIMIC_KNOW | ACT_FAILED | NO_ACTIVATION
+msg:The {flavor} explodes!
+effect:SPOT:SHARD:6
+dice:4d20
+effect:SPOT:KILL_DOOR:2
+dice:4d40
+desc:A candle-shaped explosive charge with a 15-second fuze. It's not intended as a weapon but could be thrown, with the explosion typically covering a 60m radius. But the long fuze could be a problem, and you can't fire it from a grenade launcher.
+material:paper
+
+name:& keyfob light~
+type:light
+graphics:~:CadetBlue
+level:0
+weight:15g
+cost:25
+pile:10:2
+alloc:30:0 to 60
+attack:1d1:0:0
+armor:0:0
+material:plastic
+pval:2000
+values:USE_ENERGY[1]
+flags:BURNS_OUT | EASY_KNOW | LIGHT_2 | IGNORE_FIRE
+desc:A tiny LED light. While it will last for a while it's too dim to be much help, and it can't be recharged.
+
+name:& disposable flashlight~
+type:light
+graphics:~:SkyBlue
+level:0
+weight:80g
+cost:40
+pile:30:5
+alloc:20:0 to 60
+attack:1d1:0:0
+armor:0:0
+material:plastic
+pval:500
+values:USE_ENERGY[1]
+flags:BURNS_OUT | EASY_KNOW | LIGHT_3 | IGNORE_FIRE
+desc:A small, light yet reasonably bright LED light. It won't last long, though and it cannot be recharged.
+
+name:& glowstick~
+type:light
+graphics:~:T
+level:0
+weight:30g
+cost:30
+alloc:12:0 to 60
+pile:75:10
+attack:1d1:0:0
+armor:0:0
+material:plastic
+pval:800
+time:800
+flags:BURNS_OUT | EASY_KNOW | LIGHT_2 | IGNORE_FIRE
+desc:A slim cylinder of fluorescent goop. Once activated you'll have a few hours of dim, sickly green light. A good backup but you don't want to rely on it as your primary light source.
+
+name:& electric torch~
+type:light
+graphics:~:w
+level:2
+weight:220g
+cost:90
+alloc:30:0 to 80
+attack:1d1:0:0
+armor:0:0
+material:aluminium
+pval:7500
+values:USE_ENERGY[1]
+flags:TAKES_FUEL | EASY_KNOW | LIGHT_3 | IGNORE_FIRE
+desc:A reasonably small and light LED torch, with a rechargable battery.
+
+name:& tactical flashlight~
+type:light
+graphics:~:w
+level:15
+weight:380g
+cost:260
+alloc:10:0 to 100
+attack:1d1:0:0
+armor:0:0
+material:aluminium
+pval:15000
+values:USE_ENERGY[3]
+flags:TAKES_FUEL | EASY_KNOW | LIGHT_4 | IGNORE_FIRE
+desc:A bulky but very bright LED torch, with a rechargable battery which it drains faster than typical torches do.
+
+name:& mobilamp~
+type:light
+graphics:~:w
+level:24
+weight:3200g
+cost:840
+alloc:3:0 to 100
+attack:1d1:0:0
+armor:0:0
+material:aluminium
+pval:30000
+values:USE_ENERGY[10]
+flags:TAKES_FUEL | EASY_KNOW | LIGHT_5 | IGNORE_FIRE
+desc:A very big, heavy and bright LED lamp, which drains its battery very quickly.
+
+name:& alkaline batter|y|ies|
+type:battery
+graphics:!:Copper
+level:0
+weight:135g
+cost:15
+alloc:50:0 to 50
+attack:1d4:0:0
+armor:0:0
+pval:3000
+flags:BURNS_OUT | HIDE_ACTIVATION
+desc:A BogStan brand D-cell, sealed in plastic and claiming to be ultra-long-life but long past its sell-by date despite that. Still, with luck it should still be usable to some extent.
+msg:You drain the cell dry.
+effect:NOURISH:INC_BY
+dice:30
+material:steel
+
+name:& lithium batter|y|ies|
+type:battery
+graphics:!:HotPink
+level:3
+weight:95g
+cost:65
+alloc:20:2 to 70
+attack:1d4:0:0
+armor:0:0
+pval:7500
+flags:BURNS_OUT | HIDE_ACTIVATION
+desc:A Flammacell D-size battery, sealed in plastic and not too far past its sell-by date. You can expect to get a lot more use from it than the cheap alternatives.
+msg:You drain the cell dry.
+effect:NOURISH:INC_BY
+dice:75
+material:steel
+
+name:& alcohol cell~
+type:battery
+graphics:!:Violet
+level:19
+weight:72g
+cost:350
+alloc:5:13 to 85
+attack:1d4:0:0
+armor:0:0
+pval:15000
+flags:BURNS_OUT | HIDE_ACTIVATION
+desc:A D-size Bendacell battery, based on an alcohol fuel cell. It lasts much longer than any normal battery, and is lighter as well. In more than ways than one - drop it and it's as likely as not to go up in flames.
+msg:You drain the cell dry. Hic!
+effect:NOURISH:INC_BY
+dice:100
+material:titanium
+
+name:& hydrogen cell~
+type:battery
+graphics:!:OrangeRed
+level:33
+weight:40g
+cost:720
+alloc:5:20 to 100
+attack:1d4:0:0
+armor:0:0
+pval:30000
+flags:BURNS_OUT | HIDE_ACTIVATION
+desc:A D-size Flammacell battery, based on a hydrogen fuel cell. It lasts a great deal longer than any normal battery, and it's very light too. Apart from a slight tendency to explode it's a real win.
+msg:You drain the cell dry.
+effect:NOURISH:INC_BY
+dice:100
+material:titanium
+
+# cooldown, reusable
+name:& atomic cell~
+type:battery
+graphics:!:CadetBlue
+level:54
+weight:380g
+cost:5500
+alloc:3:53 to 100
+attack:1d4:0:0
+armor:0:0
+pval:7500
+time:500
+flags:HIDE_ACTIVATION
+desc:A Bettacell atomic battery which can be used like conventional D cells, to recharge any device. While it has a cooldown interlock preventing it from being used twice without waiting for a few minutes, its reserves of energy are sufficient that it will live - if not quite for ever - then at least for longer than you will. Especially if you drop it.
+msg:You recharge from the atomic cell.
+effect:NOURISH:INC_BY
+dice:100
+material:titanium
+
+# no or much shorter cooldown, higher pval
+# Should be scarce (e.g. 10), but not unique
+name:Mr Fusion~
+type:battery
+graphics:!:w
+level:75
+weight:82g
+cost:17000
+alloc:1:72 to 100
+attack:1d4:0:0
+armor:0:0
+pval:30000
+time:25
+flags:HIDE_ACTIVATION
+desc:The iconic dustbin-sized fusion reactor that powers cars and homes, now shrunk into a D-cell format. Few were made - you may consider yourself lucky to have found one of them. Or not, depending on which rumors you believe about *why* they were so quickly pulled off the market...
+msg:You recharge from Mr Fusion.
+effect:NOURISH:INC_BY
+dice:100
+material:unobtainium
+
+##### Chunks #####
+# Chunks (blocks) are raw materials in 1 kg blocks, used for item creation.
+# A chunk's pval is the printer level needed to use it
+
+name:& plastic block~
+type:block
+graphics:%:W
+level:3
+weight:1kg
+cost:150
+alloc:10:1 to 100
+pile:70:5
+pval:0
+desc: A block of tough, whitish plastic - raw material to build items with.
+material:plastic
+
+name:& aluminum block~
+type:block
+graphics:%:w
+level:15
+weight:1kg
+cost:550
+alloc:8:5 to 100
+pile:50:4
+pval:0
+desc: A block of shiny aluminum - raw material to build items with.
+material:aluminium
+
+name:& steel block~
+type:block
+graphics:%:s
+level:27
+weight:1kg
+cost:1150
+alloc:6:10 to 100
+pile:40:4
+pval:2
+desc: A block of stainless steel - raw material to build items with.
+material:steel
+
+name:& titanium block~
+type:block
+graphics:%:s
+level:44
+weight:1kg
+cost:3500
+alloc:5:18 to 100
+pile:30:3
+pval:2
+desc: A block of titanium - raw material to build items with.
+material:titanium
+
+name:& gold block~
+type:block
+graphics:%:Gold
+level:61
+weight:1kg
+cost:75000
+alloc:1:30 to 100
+pval:3
+desc: A shining block of pure gold - raw material to build items with.
+material:gold
+
+name:& unobtainium block~
+type:block
+graphics:%:AliceBlue
+level:87
+weight:1kg
+cost:95000
+alloc:1:65 to 127
+pval:3
+desc: A block of unobtainium, a blue-gleaming metal - so scarce that some still think that it's just a joke, unobtainium is incredibly light, incredibly strong, invulnerable to corrosion... the ideal material.
+material:unobtainium
+
+##### Food #####
+
+### Normal Food ###
+# Aisle 1, Produce.
+# These are usually found in stacks, and have lowish food value
+# per gram (still not much overall), and non-special ones are fairly common.
+# Some have special effects, which may be associated with a 'lookalike' name.
+# Effect when thrown?
+
+name:& apple~
+type:food
+graphics:,:G
+level:0
+weight:98g
+cost:3
+alloc:10:0 to 20
+pile:30:1d2
+power:0
+msg:That tastes good.
+effect:NOURISH:INC_BY
+dice:10
+desc:A fresh shiny green apple.
+
+# A fruit resembling an apple, but you don't want to eat it.
+# ID should work (or you could eat ID it), but as it has the same name as the apple it won't stack.
+# This looks cheesy, so maybe this and any other mimic item carried at once should auto-ID (on the basis that it is easier to identify
+# it when there is a real apple next to it to compare it to)? Could have red and green apples, but that wouldn't help much.
+name:& choke-apple~
+type:food
+graphics:,:G
+level:6
+weight:98g
+cost:0
+alloc:1:5 to 20
+pile:5:1d2
+power:0
+msg:Blech! You choke and spit it out!
+effect:NOURISH:SET_TO
+dice:1+d5
+flags:MIMIC_KNOW
+desc:A fruit closely resembling an apple, but you now recognize it as something nastier than even a Red Delicious. Yuck!
+
+name:& pear~
+type:food
+graphics:,:G
+level:0
+weight:150g
+cost:3
+alloc:10:0 to 20
+pile:10:1d2
+power:0
+msg:That tastes good.
+effect:NOURISH:INC_BY
+dice:15
+desc:A fresh green pear.
+
+name:& orange~
+type:food
+graphics:,:o
+level:0
+weight:350g
+cost:5
+alloc:10:0 to 20
+pile:30:1d2
+power:0
+msg:That tastes good.
+effect:NOURISH:INC_BY
+dice:15
+desc:The ill-formed orange
+desc: Sadly fails to please the eye:
+desc: Segmentation fault.
+
+name:& satsuma~
+type:food
+graphics:,:o
+level:0
+weight:90g
+cost:4
+alloc:6:0 to 20
+pile:30:1d3
+power:0
+msg:That tastes good.
+effect:NOURISH:INC_BY
+dice:10
+desc:A small satsuma.
+
+name:& banana~
+type:food
+graphics:,:y
+level:0
+weight:250g
+cost:6
+alloc:6:0 to 20
+pile:90:1d5
+power:0
+effect:BANANA
+desc:A bendy banana.
+
+name:& pineapple~
+type:food
+graphics:,:y
+level:1
+weight:900g
+cost:9
+alloc:4:0 to 30
+power:1
+msg:That tastes good.
+effect:NOURISH:INC_BY
+dice:25
+desc:A spiky pineapple.
+
+name:& durian~
+type:food
+graphics:,:y
+level:1
+weight:2500g
+cost:40
+alloc:3:0 to 25
+power:1
+msg:That tastes... well, better than it smells, anyway.
+carried-flags:AGGRAVATE
+effect:NOURISH:INC_BY
+dice:90
+desc:Known as the king of fruits - perhaps because it smells like you are in the "throne room".
+
+name:& melon~
+type:food
+graphics:,:g
+level:0
+weight:1200g
+cost:12
+alloc:5:0 to 20
+power:0
+msg:That tastes good.
+effect:NOURISH:INC_BY
+dice:25
+desc:A round, warty, green melon.
+
+name:& carrot~
+type:food
+graphics:,:Carrot
+level:1
+weight:200g
+cost:18
+alloc:5:0 to 30
+power:0
+msg:That tastes good.
+effect:NOURISH:INC_BY
+dice:12
+effect:CURE:BLIND
+desc:A long skinny bright orange carrot, complete with a bunch of greens.
+
+name:& pepper~
+type:food
+graphics:,:R
+level:0
+weight:75g
+cost:8
+alloc:5:0 to 20
+power:0
+msg:That tastes good.
+effect:NOURISH:INC_BY
+dice:8
+desc:A red bell pepper.
+
+name:& habanero~
+type:food
+graphics:,:R
+level:3
+weight:75g
+cost:120
+alloc:2:1 to 30
+power:0
+effect:HABANERO
+flags:MIMIC_KNOW
+desc:An extremely HOT red pepper.
+
+name:& cucumber~
+type:food
+graphics:,:g
+level:0
+weight:400g
+cost:4
+alloc:5:0 to 20
+power:0
+msg:That tastes good.
+effect:NOURISH:INC_BY
+dice:6
+desc:A long dark green cucumber.
+
+# Gigantism (and a lot of food)
+# It also tastes foul - so there is a WIS check
+name:& snozzcumber~
+type:food
+graphics:,:Green
+level:0
+weight:400g
+cost:650
+alloc:2:1 to 100
+power:0
+effect:SNOZZCUMBER
+flags:MIMIC_KNOW
+desc:A vegetable resembling a long dark green cucumber. But if you can get past 
+desc:the truly foul taste, it does much more for you than your average salad!
+
+name:& packet~ of dried fruit
+type:food
+graphics:,:u
+level:0
+weight:40g
+cost:5
+alloc:5:0 to 50
+power:0
+msg:That tastes good.
+effect:NOURISH:INC_BY
+dice:15
+desc:Fruit roughly chopped and sun-dried.
+
+name:& cheese~
+type:food
+graphics:,:Y
+level:0
+weight:120g
+cost:4
+alloc:5:0 to 50
+power:0
+msg:That tastes good.
+carried-flags:AGGRAVATE
+effect:NOURISH:INC_BY
+dice:20
+desc:A small round hard pongy pale yellow cheese.
+
+name:& slime mold~
+type:food
+graphics:,:g
+level:1
+weight:2
+cost:2
+alloc:2:1 to 100
+pile:100:2d3
+power:0
+msg:That tastes... slimy.
+effect:NOURISH:INC_BY
+dice:15
+desc:A strange fungal growth, prone to moving if not observed.  Not very tasty
+desc: but quite filling.
+
+name:& Ration~ of Food
+type:food
+graphics:,:U
+level:0
+weight:8
+cost:3
+alloc:40:0 to 50
+pile:100:1d5
+power:0
+msg:That tastes good.
+effect:NOURISH:INC_BY
+dice:30
+desc:This nutritious but fairly bland food, called cram by the Lake-men who
+desc: make it is familiar to anyone contemplating long journeys.  It is
+desc: sustaining, but very uninteresting except as a chewing exercise.
+
+name:& scrap~ of flesh
+type:food
+graphics:,:s
+level:0
+weight:5
+cost:0
+alloc:30:5 to 100
+pile:50:1d3
+power:0
+msg:That tastes disgusting.
+effect:RANDOM
+dice:5
+effect:NOURISH:INC_BY
+dice:20
+effect:NOURISH:INC_BY
+dice:20
+effect:NOURISH:INC_BY
+dice:10
+effect:NOURISH:SET_TO
+dice:1d4
+effect:NOURISH:SET_TO
+dice:5+1d4
+desc:A grey-looking piece of dried flesh of you dare not guess what creature.
+desc:  You would have to be desperate to eat this.
+
+
+name:& slice~ of meat
+type:food
+graphics:,:W
+level:0
+weight:10
+cost:3
+alloc:30:3 to 50
+pile:50:1d3
+power:0
+msg:That tastes good.
+effect:NOURISH:INC_BY
+dice:40
+desc:A thick slice of pork, salted to keep it from spoiling.  It is very
+desc: filling.
+
+name:& Hunter's pie~
+type:food
+graphics:,:y
+level:5
+weight:10
+cost:100
+alloc:15:15 to 70
+pile:25:1d3
+power:1
+msg:Delicious!
+effect:NOURISH:INC_TO
+dice:90
+effect:TIMED_INC:BOLD
+dice:200+4d40
+desc:A delicious sweet, involving dried fruit and honey and some secret ingredients that 
+desc:have never been disclosed but do seem to keep customers coming back for more, despite 
+desc:the high price. It's named after the first baker to come up with the secret recipe 
+desc:(so yes, it's vegetarian:), and still made as it was before the War.
+
+name:& Piece~ of Elvish Waybread
+type:food
+graphics:,:B
+level:5
+weight:3
+cost:10
+alloc:20:30 to 100
+pile:10:1d3
+power:4
+msg:That tastes great.
+effect:NOURISH:INC_TO
+dice:75
+effect:CURE:POISONED
+effect:HEAL_HP
+dice:20
+desc:Food of the elves is always good; their waybread is no exception.  These
+desc: thin cakes are wrapped in leaves and keep their tastiness for months.
+
+name:& bottle~ of whiskey
+type:food
+graphics:,:y
+level:0
+weight:5
+cost:1
+power:0
+msg:That tastes great!
+effect:NOURISH:INC_BY
+dice:3
+effect:TIMED_INC:CONFUSED
+dice:-1+1d5
+desc:It raises your spirits.
+
+name:& Pint~ of Fine Wine
+type:food
+graphics:,:r
+level:0
+weight:10
+cost:2
+power:0
+msg:That tastes great!  A fine vintage.
+effect:NOURISH:INC_BY
+dice:3
+effect:TIMED_INC:BOLD
+dice:79+1d41
+desc:A fine way to wash down some otherwise unappetising rations.
+
+name:& Sip~ of Miruvor
+type:food
+graphics:,:w
+level:0
+weight:2
+cost:100
+alloc:20:10 to 50
+power:0
+msg:You feel your heart warm.
+effect:NOURISH:INC_BY
+dice:3
+effect:RESTORE_STAT:STR
+effect:RESTORE_STAT:CON
+desc:Just a little of this warm and fragrant liquor gives you fresh hope and
+desc: vigour.
+
+name:& Swig~ of Orcish Liquor
+type:food
+graphics:,:m
+level:0
+weight:2
+cost:1
+alloc:20:20 to 100
+pile:10:1d3
+power:0
+msg:It burns your throat.
+effect:NOURISH:INC_BY
+dice:5
+effect:TIMED_SET:STUN
+dice:2+1d3
+effect:TIMED_SET:SLOW
+dice:2+1d3
+desc:This is a dirty brown color; you don't trust it.
+
+name:& Draught~ of the Ents
+type:food
+graphics:,:w
+level:0
+weight:10
+cost:2000
+alloc:10:60 to 100
+power:0
+msg:Refreshing!
+effect:NOURISH:INC_TO
+dice:60
+effect:RESTORE_STAT:STR
+effect:RESTORE_STAT:CON
+effect:GAIN_STAT:STR
+effect:GAIN_STAT:CON
+desc:This looks like pure water, but its scent reminds you of the smell of a
+desc: distant wood borne from afar by a cool breeze at night.
+
+### The shrooms, an interesting collection ###
+
+name:Second Sight
+type:mushroom
+graphics:,:d
+level:0
+weight:1
+cost:200
+alloc:10:5 to 100
+pile:70:1d4
+power:10
+effect:CURE:BLIND
+effect:TIMED_INC:TELEPATHY
+dice:50+7d7
+effect:NOURISH:INC_BY
+dice:5
+
+name:Fast Recovery
+type:mushroom
+graphics:,:d
+level:0
+weight:1
+cost:200
+alloc:10:5 to 40
+pile:70:1d4
+power:7
+effect:HEAL_HP
+dice:30
+effect:CURE:STUN
+effect:CURE:CUT
+effect:CURE:POISONED
+effect:CURE:BLIND
+effect:NOURISH:INC_BY
+dice:5
+
+name:Vigor
+type:mushroom
+graphics:,:d
+level:0
+weight:1
+cost:200
+alloc:25:20 to 100
+pile:13:1d3
+power:15
+effect:RESTORE_STAT:STR
+effect:RESTORE_STAT:INT
+effect:RESTORE_STAT:WIS
+effect:RESTORE_STAT:DEX
+effect:RESTORE_STAT:CON
+effect:RESTORE_STAT:CHR
+effect:RESTORE_STAT:SPD
+effect:NOURISH:INC_BY
+dice:5
+
+name:clarity
+type:mushroom
+graphics:,:d
+level:0
+weight:1
+cost:200
+alloc:10:5 to 40
+pile:70:1d4
+power:8
+effect:CURE:CONFUSED
+effect:CURE:AFRAID
+effect:CURE:IMAGE
+effect:TIMED_INC:OPP_CONF
+dice:50+7d7
+effect:NOURISH:INC_BY
+dice:5
+
+name:emergency
+type:mushroom
+graphics:,:d
+level:0
+weight:1
+cost:60
+alloc:10:5 to 100
+pile:70:1d4
+power:7
+effect:TIMED_INC:IMAGE
+dice:25+5d5
+effect:TIMED_INC:OPP_FIRE
+dice:25+5d5
+effect:TIMED_INC:OPP_COLD
+dice:25+5d5
+effect:HEAL_HP
+dice:200
+effect:NOURISH:INC_BY
+dice:5
+
+name:gigantism
+type:mushroom
+graphics:,:d
+level:0
+weight:1
+cost:700
+pile:40:1d2
+alloc:1:20 to 100
+power:9
+effect:SHAPECHANGE:giant
+desc:It one-ups the more common snozzcumber by allowing you to assume giant form 
+desc:without any risk of failure.
+
+name:terror
+type:mushroom
+graphics:,:d
+level:0
+weight:1
+cost:60
+alloc:10:5 to 40
+pile:70:1d4
+power:5
+effect:TIMED_SET:TERROR
+dice:25+5d5
+effect:NOURISH:INC_BY
+dice:5
+desc:It allows you to run for your life.
+
+name:stoneskin
+type:mushroom
+graphics:,:d
+level:0
+weight:1
+cost:60
+alloc:10:10 to 40
+pile:70:1d4
+power:5
+effect:TIMED_SET:STONE_SKIN
+dice:50+7d7
+effect:NOURISH:INC_BY
+dice:5
+desc:Its poison turns your skin to stone, albeit briefly.
+
+name:Turbulence
+type:mushroom
+graphics:,:d
+level:0
+weight:1
+cost:60
+#alloc:10:5 to 100
+pile:70:1d4
+#E:SHROOM_TURB
+pval:500
+
+name:Debility
+type:mushroom
+graphics:,:d
+level:0
+weight:1
+cost:20
+alloc:10:10 to 40
+pile:70:1d4
+effect:NOURISH:INC_BY
+dice:5
+effect:RANDOM
+dice:2
+effect:DRAIN_STAT:STR
+effect:DRAIN_STAT:CON
+
+name:Sprinting
+type:mushroom
+graphics:,:d
+level:0
+weight:1
+cost:100
+alloc:1:15 to 100
+pile:70:1d4
+power:5
+effect:TIMED_INC:SPRINT
+dice:100
+effect:NOURISH:INC_BY
+dice:5
+desc:It hastes you for a while, but then makes you slower for a while afterward.
+
+name:Purging
+type:mushroom
+graphics:,:d
+level:0
+weight:1
+cost:60
+alloc:1:15 to 100
+pile:70:1d4
+power:5
+msg:Your stomach heaves.
+effect:NOURISH:SET_TO
+dice:5
+effect:RESTORE_STAT:STR
+effect:RESTORE_STAT:CON
+effect:CURE:POISONED
+desc:It makes you very hungry but otherwise healthy.
+
+name:Shadows
+type:mushroom
+graphics:,:d
+level:0
+weight:1
+cost:300
+alloc:20:50 to 100
+pile:70:1d4
+power:9
+effect:NOURISH:INC_BY
+dice:5
+effect:TIMED_INC:STEALTH
+dice:10+d10
+desc:It makes you very stealthy for a short while.
+
+
+##### Weapons #####
+
+### Swords ###
+
+name:& pocket kni|fe|ves|
+type:sword
+graphics:|:W
+level:0
+weight:100g
+cost:30
+alloc:20:0 to 30
+attack:1d3:0:0
+armor:0:0
+desc:A small knife (and set of several semi-useful tools) in a folding, pocketable
+desc: case. It's not intended as a weapon of course, but could be used as one if
+desc: you really had nothing else better.
+material:steel
+
+name:& flick kni|fe|ves|
+type:sword
+graphics:|:W
+level:1
+weight:180g
+cost:40
+alloc:20:1 to 100
+attack:1d5:0:0
+armor:0:0
+desc:A smallish knife, spring-loaded to open automatically.
+material:steel
+
+name:& survival kni|fe|ves|
+type:sword
+graphics:|:W
+level:3
+weight:550g
+cost:65
+alloc:20:3 to 100
+attack:1d7:0:0
+armor:0:0
+desc:A long, heavy knife with a metal guard, long black leather hilt and attached strap.
+material:steel
+
+name:& machete~
+type:sword
+graphics:|:W
+level:5
+weight:750g
+cost:90
+alloc:20:5 to 100
+attack:1d9:0:0
+armor:0:0
+desc:A very long knife, broadening toward the tip, with a serrated back and moulded rubber grip.
+material:steel
+
+
+# Laser knives - like a miniature lightsaber.
+# There are a lot of these (5 laserknives, 5 crystal knives, 12? lightsabers) and all should
+# be unusual, so all must be rare.
+# They fade out l60ish as they are (not strictly, but for most characters that have reached that far) worse
+# than the *crystal knives.
+
+name:& laser kni|fe|ves|
+type:sword
+graphics:|:Green
+level:20
+weight:150g
+alloc:4:20 to 60
+attack:1d12:0:0
+armor:0:0
+brand:LIGHT_2
+values:LIGHT[1]
+flags:GOOD
+desc:A line of green laser light forms a long knife that cuts through armour easily.
+material:aluminium
+
+name:& phase kni|fe|ves|
+type:sword
+graphics:|:White
+level:15
+weight:150g
+alloc:4:15 to 56
+attack:1d8:8+d5M10:0
+armor:0:0
+brand:NEXUS_2
+flags:GOOD
+desc:A line of shimmering points of light - a blade of pure phased energy for which armor doesn't exist.
+material:aluminium
+
+# absorption, disruption, prismatic?
+
+# Lightsabers, etc.
+# These also eventually are outclassed by *blades, though not by dual/dim etc.
+# They generally have a brand (weak if dual) but no resistance.
+
+name:& lightsaber~
+type:sword
+graphics:|:Green
+level:30
+alloc:3:25 to 65
+weight:350g
+attack:1d14:0:0
+armor:0:0
+brand:LIGHT_3
+flags:GOOD
+values:LIGHT[1] | RES_LIGHT[1]
+desc:A line of green laser light extends from a saber's hilt, a powerful weapon that cuts through armour easily.
+material:aluminium
+
+name:& phantom lightsaber~
+type:sword
+graphics:|:Cyan
+level:31
+alloc:3:27 to 67
+weight:350g
+attack:1d16:0:0
+armor:0:0
+brand:NEXUS_3
+values:RES_NEXUS[1]
+desc:A line of shimmering points of light marks the path of a blade of pure phased energy, moving through solid rock without leaving a trace to reach its target.
+material:aluminium
+
+name:& darksaber~
+type:sword
+graphics:|:Red
+level:33
+alloc:3:28 to 65
+weight:350g
+attack:1d14:0:0
+armor:0:0
+brand:DARK_3
+values:RES_DARK[1]
+flags:GOOD
+desc:A glowing red absorption beam extends from a saber's hilt, a powerful weapon that shrieks as air rushes into it.
+material:aluminium
+
+name:& dimsaber~
+type:sword
+graphics:|:Yellow
+level:35
+alloc:3:30 to 70
+weight:350g
+attack:1d14:0:0
+armor:0:0
+brand:CHAOS_3
+values:RES_CHAOS[1]
+flags:GOOD
+desc:A swirling blade of disruption extends from a saber's hilt, a powerful weapon that twists space about it.
+material:aluminium
+
+name:& prismatic lightsaber~
+type:sword
+graphics:|:Violet
+level:37
+alloc:3:33 to 72
+weight:350g
+attack:1d15:0:0
+armor:0:0
+brand:LIGHT_3
+values:LIGHT[1] | RES_LIGHT[1]
+flags:GOOD
+effect:PRISMATIC
+desc:A weapon for the Jedi who can never decide what to pack. The prismatic lightsaber switches at the touch of a button between a laser weapon, an absorption beam, a blade of disruption, an invisible X-ray beam and a phantom blade of phased energy.
+material:aluminium
+
+name:& dual lightsaber~
+type:sword
+graphics:|:Green
+level:40
+alloc:2:35 to 75
+weight:1250g
+attack:2d14:-5:0
+armor:0:0
+brand:LIGHT_2
+values:LIGHT[1] | RES_LIGHT[1]
+flags:GOOD
+desc:Two lines of green laser light extend in each direction from a saber's hilt, a powerful weapon that cuts through armour easily - though it's considerably heavier and more unwieldy than the single type.
+material:aluminium
+
+name:& dual darksaber~
+type:sword
+graphics:|:Red
+level:43
+alloc:2:38 to 78
+weight:1250g
+attack:2d14:-5:0
+armor:0:0
+brand:DARK_2
+values:RES_DARK[1]
+flags:GOOD
+desc:Twin absorption beams, glowing deep red, extending in both directions, a powerful weapon that cuts through armour easily - though it's considerably heavier and more unwieldy than the single type.
+material:aluminium
+
+name:& dual dimsaber~
+type:sword
+graphics:|:Yellow
+level:45
+alloc:2:40 to 80
+weight:1250g
+attack:2d14:0:0
+armor:0:0
+brand:CHAOS_2
+values:RES_CHAOS[1]
+flags:GOOD
+desc:Two swirling blades of disruption, extending in opposite directions - a powerful weapon that cuts through armour easily.
+material:aluminium
+
+name:& dual phantom lightsaber~
+type:sword
+graphics:|:Cyan
+level:45
+alloc:2:40 to 80
+weight:1250g
+attack:2d14:0:0
+armor:0:0
+brand:NEXUS_2
+values:RES_NEXUS[1]
+flags:GOOD
+desc:Two lines of shimmering points of light mark the path of blades of pure phased energy, moving through solid rock without leaving a trace to reach its target.
+material:aluminium
+
+name:& dual prismatic lightsaber~
+type:sword
+graphics:|:Violet
+level:47
+alloc:2:42 to 82
+weight:1250g
+attack:2d15:0:0
+armor:0:0
+brand:LIGHT_2
+values:LIGHT[1] | RES_LIGHT[1]
+flags:GOOD
+effect:PRISMATIC
+desc:A weapon for the Jedi who can never decide what to pack. This dual prismatic lightsaber can switch at the touch of a button between laser weapons, absorption beams, blades of disruption, invisible X-ray beams and phantom blades of phased energy.
+material:aluminium
+
+name:& X-rated lightsaber~
+type:sword
+graphics:|:Blue
+level:35
+alloc:2:30 to 70
+weight:350g
+attack:1d18:-20:0
+armor:0:0
+brand:RADIATION_3
+values:RES_RADIATION[1]
+flags:GOOD
+desc:A line of invisible radiation extends from a saber's hilt, a powerful weapon - if you can hit anything with it.
+
+name:& X-rated dual lightsaber~
+type:sword
+graphics:|:Blue
+level:45
+alloc:2:40 to 80
+weight:1250g
+attack:2d18:-25:0
+armor:0:0
+brand:RADIATION_2
+values:RES_RADIATION[1]
+flags:GOOD
+desc:Two lines of invisible radiation extend in each direction from a saber's hilt, a powerful weapon that cuts through armour easily - though it's considerably heavier and more unwieldy than the single type, and so is even less easy to hit with.
+
+
+
+
+# Crystal knives - rare, deadly and bearing an elemental attack and resistance.
+# They are something like more advanced versions of the laser/phaser knives - more powerful
+# than the *sabers, although not the *blades.
+# Nega/soni=sonic, spectra=laser, para/warp- =phaser, perma=disruption, prismatic=?
+
+name:& sonicrystal kni|fe|ves|
+type:sword
+graphics:|:D
+level:50
+weight:400g
+alloc:2:40 to 127
+attack:1d16:0:0
+armor:0:0
+values:RES_SOUND[1]
+brand:SOUND_3
+flags:GOOD
+desc:A long knife of glossy black crystal, which buzzes faintly as you hold it.
+material:glass
+
+name:& spectracrystal kni|fe|ves|
+type:sword
+graphics:|:Violet
+level:52
+weight:400g
+alloc:2:42 to 127
+attack:1d17:0:0
+armor:0:0
+values:RES_LIGHT[1]
+brand:LIGHT_3
+flags:GOOD
+desc:A long knife of brilliant crystal, flashing thousands of colours.
+material:glass
+
+name:& warp-crystal kni|fe|ves|
+type:sword
+graphics:|:Gray50
+level:55
+weight:400g
+alloc:2:45 to 127
+attack:1d15:10+2d4M10:0
+armor:0:0
+values:RES_NEXUS[1]
+brand:NEXUS_3
+flags:GOOD
+desc:A long knife of greyish crystal, which doesn't seem to be all quite there...
+material:glass
+
+# disruption equivalent
+
+### Clubs ###
+
+name:& baseball bat~
+type:hafted
+graphics:\:U
+level:1
+weight:960g
+cost:50
+alloc:20:0 to 100
+attack:2d4:0:0
+armor:0:0
+desc:'If that dragon's got any voonerables, that arrow'll find 'em.'
+material:wood
+
+name:& sledgehammer~
+type:hafted
+graphics:\:D
+level:3
+weight:5500g
+cost:105
+alloc:20:3 to 100
+attack:3d3:0:0
+armor:0:0
+desc:A heavy hammer with a long handle.
+material:wood
+
+name:& blackjack~
+type:hafted
+graphics:\:U
+level:5
+weight:580g
+cost:70
+alloc:20:5 to 100
+attack:2d2:0:0
+armor:0:0
+desc:A small, easily concealed bludgeon. The heavy head makes it a reasonably effective weapon despite its small size. 
+material:wood
+
+name:& crowbar~
+type:hafted
+graphics:\:s
+level:8
+weight:6200g
+cost:250
+alloc:20:8 to 100
+attack:3d4:0:0
+armor:0:0
+desc:A hefty hooked metal bar, intended as a levering tool but it makes a useful improvised weapon if you can handle the weight.
+material:steel
+
+
+### Axes ###
+
+name:& hatchet~
+type:polearm
+graphics:/:s
+level:12
+weight:780g
+cost:150
+alloc:20:12 to 100
+attack:2d5:0:0
+armor:0:0
+desc:A simple, short-handled hatchet.
+material:steel
+
+name:& fire axe~
+type:polearm
+graphics:/:Red
+level:15
+weight:1450g
+cost:408
+alloc:10:15 to 100
+attack:2d7:0:0
+armor:0:0
+flags:IGNORE_FIRE
+values:RES_FIRE[1]
+desc:A narrow axe head, backed with a spike on a long, bright red handle.
+material:steel
+
+
+##### Guns #####
+
+name:& 6mm handgun~
+type:gun
+graphics:}:u
+level:1
+weight:710g
+cost:5
+alloc:20:1 to 100
+flags:SHOOTS_6MM
+pval:2
+
+name:& 6mm rifle~
+type:gun
+graphics:}:u
+level:1
+weight:4500g
+cost:5
+alloc:20:1 to 100
+flags:SHOOTS_6MM
+pval:3
+
+name:& 9mm handgun~
+type:gun
+graphics:}:U
+level:3
+weight:930g
+cost:50
+alloc:20:3 to 100
+flags:SHOOTS_9MM
+pval:2
+
+name:& 9mm rifle~
+type:gun
+graphics:}:U
+level:10
+weight:5700g
+cost:120
+alloc:20:10 to 100
+flags:SHOOTS_9MM
+pval:3
+
+name:& 12mm handgun~
+type:gun
+graphics:}:s
+level:15
+weight:1100g
+cost:140
+alloc:20:15 to 100
+flags:SHOOTS_12MM
+pval:2
+
+name:& 12mm rifle~
+type:gun
+graphics:}:s
+level:30
+weight:7200g
+cost:300
+alloc:20:30 to 100
+flags:SHOOTS_12MM
+pval:3
+
+
+##### Missiles #####
+
+name:& 6mm bullet~
+type:6mm ammo
+graphics:{:s
+level:1
+weight:20g
+cost:2
+pile:100:9d7
+alloc:30:1 to 100
+attack:1d3:0:0
+armor:0:0
+desc:6mm ammunition, suitable for any gun of that caliber.
+
+name:& 9mm bullet~
+type:9mm ammo
+graphics:{:s
+level:3
+weight:50g
+cost:3
+pile:100:7d7
+alloc:30:3 to 100
+attack:1d6:0:0
+armor:0:0
+desc:9mm ammunition, suitable for any gun of that caliber.
+
+name:& 12mm bullet~
+type:12mm ammo
+graphics:{:s
+level:5
+weight:80g
+cost:4
+pile:100:5d7
+alloc:30:5 to 100
+attack:1d10:0:0
+armor:0:0
+desc:12mm ammunition, suitable for any gun of that caliber.
+
+##### Digging Tools #####
+
+name:& Shovel~
+type:digger
+graphics:\:s
+level:1
+weight:60
+cost:10
+alloc:20:5 to 100
+attack:1d2:0:0
+armor:0:0
+flags:DIG_1
+desc:A compact and sturdy spade.
+
+name:& Pick~
+type:digger
+graphics:\:g
+level:30
+weight:180
+cost:300
+alloc:20:30 to 100
+attack:1d3:0:0
+armor:0:0
+flags:DIG_2
+desc:A heavy mining tool with a long, slightly curved head that tapers
+desc: to chisel points on both ends.
+
+name:& Mattock~
+type:digger
+graphics:\:D
+level:50
+weight:250
+cost:700
+alloc:20:50 to 100
+attack:1d8:0:0
+armor:0:0
+flags:DIG_3
+desc:A digging tool with a broad horizontal blade balanced by a smaller
+desc: vertical blade.  Used as a weapon of war by dwarves.
+
+
+##### Armor #####
+
+##### Boots #####
+
+name:& pair~ of high heels
+type:boots
+graphics:]:r
+level:0
+weight:320g
+cost:4
+alloc:4:0 to 100
+attack:1d1:-4:0
+armor:1:0
+desc:They look fabulous and that's always the main thing, but perhaps not that practical for underground exploration and combat?
+material:leather
+
+name:& pair~ of flip flops
+type:boots
+graphics:]:DeepSkyBlue
+level:0
+weight:200g
+cost:4
+alloc:10:0 to 100
+attack:1d1:-1:0
+armor:0:0
+desc:Colourful plasticky footwear that flips and flops and is generally best left on the beach.
+material:plastic
+
+name:& pair~ of trainers
+type:boots
+graphics:]:W
+level:3
+weight:350g
+cost:25
+alloc:30:2 to 100
+attack:1d1:0:0
+armor:1:0
+desc:A pair of basic white trainers, still in good condition.
+material:leather
+
+name:& pair~ of combat boots
+type:boots
+graphics:]:ForestGreen
+level:5
+weight:400g
+cost:35
+alloc:10:4 to 100
+attack:1d1:1:0
+armor:2:0
+desc:Lightweight grippy boots. They aren't armored as such but are still a notch more protective than trainers.
+material:leather
+
+name:& pair~ of work boots
+type:boots
+graphics:]:Tan
+level:6
+weight:1600g
+cost:50
+alloc:20:5 to 100
+attack:1d1:0:1
+armor:4:0
+material:steel
+desc:A pair of heavy leather boots with steel toe caps. Decent protection - and gives you an edge if you want to put the boot in.
+
+name:& pair~ of armored boots
+type:boots
+graphics:]:SteelBlue
+level:20
+weight:2750g
+cost:350
+alloc:20:18 to 100
+attack:1d1:-1:1
+armor:7:0
+flags:IGNORE_FIRE
+material:steel
+desc:A heavy pair of boots, reinforced with stainless steel armor plating. If you don't object to the weight they are very effective.
+
+name:& pair~ of kevlar boots
+type:boots
+graphics:]:EmeraldGreen
+level:28
+weight:1100g
+cost:350
+alloc:12:25 to 100
+attack:1d1:1:0
+armor:8:0
+flags:IGNORE_ACID
+desc:A pair of boots which uses chunky plastic mesh armoring to provide a lot of protection without being too heavy.
+material:plastic
+
+name:& pair~ of titanium boots
+type:boots
+graphics:]:Gray75
+level:40
+weight:1350g
+cost:850
+alloc:6:36 to 100
+attack:1d1:0:1
+armor:9:0
+flags:IGNORE_ACID | IGNORE_FIRE
+desc:A pair of boots reinforced with titanium armor. Somewhat more protective and much lighter than the more common steel kickers.
+material:titanium
+
+name:& pair~ of unobtainium boots
+type:boots
+graphics:]:AliceBlue
+level:70
+weight:550g
+cost:6500
+alloc:1:60 to 100
+attack:1d1:0:1
+armor:12:0
+flags:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+desc:A real rarity - a pair of glittering, faceted boots with the unmistakable blue sheen of unobtainium. Highly effective protection, yet you would hardly know from the weight that they were armored at all.
+material:unobtainium
+
+name:& pair~ of force skates
+type:boots
+graphics:]:Violet
+level:33
+weight:40g
+cost:2200
+alloc:4:30 to 100
+attack:0d0:0:0
+armor:0:1+d5M18
+flags:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD 
+desc:A pair of slim titanium chains, fitting closely around your ankles. At first sight they just appear to be jewellery. However they contain miniaturized forcefield generators - second cousin to the more well known belt devices - and some models can provide more protection than heavily armored boots, while weighing almost nothing.
+material:titanium
+
+
+
+### Headgear ###
+
+name:& sun hat~
+type:helm
+graphics:]:Straw
+level:1
+weight:80g
+cost:12
+alloc:5:1 to 100
+attack:0d0:0:0
+armor:1:0
+values:RES_LIGHT[1]
+desc:A light, floppy hat which would protect you from the sun, if the sun shone underground.
+
+name:& bike helmet~
+type:helm
+graphics:]:SkyBlue
+level:3
+weight:330g
+cost:12
+alloc:20:3 to 100
+attack:0d0:0:0
+armor:2:0
+desc:Lightweight and reasonably effective - but inevitably dorky-looking - head protection.
+material:plastic
+
+name:& hard hat~
+type:helm
+graphics:]:Yellow
+level:8
+weight:480g
+cost:25
+alloc:20:8 to 100
+attack:1d1:0:0
+armor:3:0
+desc:A cheery bright yellow ribbed plastic helmet with a heavy rim and a chin strap. 
+material:plastic
+
+name:& tin hat~
+type:helm
+graphics:]:ForestGreen
+level:10
+weight:1.6kg
+cost:30
+alloc:20:10 to 100
+attack:1d1:0:0
+armor:4:0
+desc:Heavy but fairly effective protection for your head.
+material:steel
+
+name:& motorcycle helmet~
+type:helm
+graphics:]:Orange
+level:16
+weight:1.45kg
+cost:80
+alloc:20:16 to 100
+attack:0d0:0:0
+armor:6:0
+desc:A smoothly curved full-face helmet that covers your entire head with tough plastic - including a clear plastic flip-up visor in front.
+material:plastic
+
+#combat helmet?
+
+### Body armours ###
+
+name:& loud shirt~
+type:soft armor
+graphics:(:HotPink
+level:0
+alloc:20:0 to 100
+weight:150g
+cost:4
+attack:0d0:0:0
+armor:1:0
+desc:A loose, short-sleeved cotton shirt printed in colourful patterns.
+material:cloth
+
+name:& force harness~
+type:hard armor
+graphics:[:Grey75
+level:52
+alloc:1:40 to 100
+weight:1100g
+cost:3000
+attack:1d1:0:0
+armor:4:10+2d5M50
+flags:IGNORE_ACID
+desc:Close fitting, telescoping titanium chains, which cross over your chest and back between a collar and belt. They don't look as if they could offer much protection, but are in fact the equivalent of the more common belt forcefield generators and can be very effective.
+material:titanium
+
+
+################ forcefield generators (belt armor)
+## These are worn on the belt and you can only have one at once - including force-type
+## armors worn in other slots, although not including normal force enhancement.
+## These can be of different strengths but probably can't be enhanced in the same way,
+## and while there will be egos ("mods") most of them are specific to genneys.
+## As this means there is less progression, and as there a lot of base types, they are
+## fairly rare.
+# TODO 'armored' - with base? & indestructible
+
+name:& personal forcefield generator~
+type:belt
+graphics:(:White
+level:5
+weight:150g
+cost:300
+alloc:8:1 to 25
+attack:0d0:0:0
+armor:0:4+d3M2
+flags:IGNORE_ACID
+desc:A small device that clips to your belt and radiates a force field that turns away blows, or at least reduces their impact.
+material:plastic
+
+name:& Reflex forcefield generator~
+type:belt
+graphics:(:SkyBlue
+level:12
+cost:650
+alloc:4:6 to 45
+armor:0:11+d5M4
+weight:120g
+flags:IGNORE_ACID
+desc:A small device that clips to your belt and radiates a protective force field.  It's Reflex's take on the standard personal forcefield generator, and is considerably more effective than the basic model.
+material:plastic
+
+name:& Rebound forcefield generator~
+type:belt
+graphics:(:LightRed
+level:15
+cost:750
+alloc:4:6 to 45
+armor:0:20+d6M5
+weight:900g
+values:STEALTH[-5+d3M1]
+flags:IGNORE_ACID
+desc:A small(ish) device that clips to your belt and radiates a protective force field.  It's Rebound's alternative to the Reflex generator - based on previous-generation technology, which shows in the weight and in the annoying buzz it makes.  Despite these disadvantages, it does provide a lot of protection and is as popular as the Reflex.
+material:plastic
+
+name:& Triplex forcefield generator~
+type:belt
+graphics:(:DeepSkyBlue
+level:33
+cost:2800
+alloc:3:16 to 56
+armor:0:27+d6M4
+weight:280g
+flags:IGNORE_ACID
+desc:A small device that clips to your belt and radiates a protective force field. It's Reflex's most advanced model, expensive and hard to find but very effective.
+material:plastic
+
+name:& military forcefield generator~
+type:belt
+graphics:(:ForestGreen
+level:45
+cost:4400
+alloc:3:35 to 80
+armor:0:39+d10M6
+weight:250g
+flags:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD 
+desc:A small device that clips to your belt and radiates a powerful protective force field. It's related to the common personal forcefield generators, but far more effective - and also more difficult to damage.
+material:aluminium
+
+name:& special forcefield generator~
+type:belt
+graphics:(:SapGreen
+level:68
+cost:7000
+alloc:2:46 to 100
+armor:0:62+d8M5
+weight:330g
+flags:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD 
+desc:A small device that clips to your belt and radiates a very powerful protective force field. This is the latest generation of military spec equipment - just about as good as it gets.
+material:aluminium
+
+#scarcity 5? 5 arts?
+name:prototype forcefield generator~
+type:belt
+graphics:(:Violet
+level:90
+cost:15000
+alloc:1:76 to 100
+armor:0:76+2d10
+weight:1250g
+flags:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD 
+desc:A chunky, awkward device that clips to your belt and radiates an extremely powerful protective force field. Never made in any quantity, you are very lucky to have found one of the few prototypes!
+material:steel
+
+### Cloaks ###
+
+name:& Cloak~
+type:cloak
+graphics:(:g
+level:1
+weight:10
+cost:3
+alloc:20:1 to 100
+attack:0d0:0:0
+armor:1:0
+desc:A traveller's sturdy outer garment.
+
+name:& Fur Cloak~
+type:cloak
+graphics:(:o
+level:1
+weight:25
+cost:600
+alloc:20:20 to 100
+attack:0d0:0:0
+armor:3:0
+desc:A heavy cloak made from fur and lined with leather; a luxury.
+
+
+### Gloves ###
+
+name:& Set~ of Leather Gloves
+type:gloves
+graphics:]:U
+level:0
+weight:10
+cost:5
+alloc:20:1 to 100
+attack:0d0:0:0
+armor:1:0
+desc:Leather hand protection, with an open palm for gripping weapons.
+material:leather
+
+name:& Set~ of Gauntlets
+type:gloves
+graphics:]:s
+level:0
+weight:25
+cost:45
+alloc:20:10 to 100
+attack:1d1:0:0
+armor:3:0
+desc:A set of gloves that completely covers the hand and wrist in steel plating.
+material:steel
+
+### Shields ###
+
+#N:180:& Buckler~
+#G:):U
+#I:shield
+#W:3:0:20:30
+#A:100:3 to 100
+#P:1:1d1:0:0:0
+#D:A small round shield designed to be useful in deflecting enemy swords.
+
+name:& Wicker Shield~
+type:shield
+graphics:):U
+level:1
+weight:30
+cost:20
+alloc:20:1 to 100
+attack:1d1:0:0
+armor:2:0
+desc:A light circular frame of wood surrounding fine-grained wickerwork.
+
+
+##### Cards #####
+
+
+### Special case for quest ###
+
+name:security
+type:card
+graphics:-:Deep Light Blue
+level:1
+weight:5g
+cost:10
+alloc:0:1 to 100
+power:0
+desc:It's encrypted, and you have no way to know what's on it.
+
+
+### Teleportation ###
+
+name:blinking
+type:card
+graphics:-:Deep Light Blue
+level:1
+weight:5g
+cost:15
+alloc:50:1 to 100
+pile:100:2d3
+power:5
+effect:TELEPORT
+dice:10
+
+name:teleport
+type:card
+graphics:-:Deep Light Blue
+level:10
+weight:5g
+cost:40
+alloc:40:10 to 100
+pile:25:2
+power:6
+effect:TELEPORT
+dice:M60
+
+name:vertical teleport
+type:card
+graphics:-:Deep Light Blue
+level:20
+weight:5g
+cost:800
+alloc:16:20 to 100
+pile:10:2
+power:15
+effect:TELEPORT_LEVEL
+
+
+### Detection ###
+
+name:mapping
+type:card
+graphics:-:Deep Light Blue
+level:5
+weight:5g
+cost:65
+alloc:50:5 to 100
+pile:70:1d3
+power:10
+effect:MAP_AREA
+effect-yx:22:40
+
+name:Treasure Detection
+type:card
+graphics:-:Deep Light Blue
+level:0
+weight:5g
+cost:70
+alloc:50:0 to 70
+pile:40:1d5
+power:6
+effect:DETECT_GOLD
+effect-yx:22:40
+effect:SENSE_OBJECTS
+effect-yx:22:40
+
+name:Detect Invisible
+type:card
+graphics:-:Deep Light Blue
+level:1
+weight:5g
+cost:15
+alloc:50:1 to 70
+pile:70:1d3
+power:6
+effect:DETECT_INVISIBLE_MONSTERS
+effect-yx:22:40
+
+name:identity
+type:card
+graphics:-:Deep Light Blue
+level:1
+weight:5g
+cost:200
+alloc:50:5 to 100
+pile:70:1d4
+power:6
+effect:IDENTIFY
+
+### Enchantments ###
+
+#precision/power?
+name:enhanced precision
+type:card
+graphics:-:Deep Light Blue
+level:15
+weight:5g
+cost:125
+alloc:40:15 to 70
+pile:25:2
+power:15
+effect:ENCHANT:TOHIT
+dice:1
+desc:Attempts to make weapons or ammunition a little more precise, more likely to hit its target.
+
+name:enhanced power
+type:card
+graphics:-:Deep Light Blue
+level:15
+weight:5g
+cost:125
+alloc:40:15 to 70
+pile:25:2
+power:20
+effect:ENCHANT:TODAM
+dice:1
+desc:Attempts to make weapons or ammunition a little more powerful, more capable of striking truly.
+
+name:enhanced protection
+type:card
+graphics:-:Deep Light Blue
+level:15
+weight:5g
+cost:125
+alloc:40:15 to 70
+pile:25:2
+power:12
+effect:ENCHANT:TOAC
+dice:1
+desc:Attempts to make armour or other worn equipment a little more protective.
+
+name:enhanced potency
+type:card
+graphics:-:Deep Light Blue
+level:50
+weight:5g
+cost:500
+alloc:40:50 to 100
+pile:25:2
+power:22
+effect:ENCHANT:TOBOTH
+dice:1d3
+desc:Attempts to make weapons or ammunition more precise and powerful, more capable of striking forcefully and accurately.
+
+name:enhanced preservation
+type:card
+graphics:-:Deep Light Blue
+level:50
+weight:5g
+cost:500
+alloc:40:50 to 100
+pile:25:2
+power:15
+effect:ENCHANT:TOAC
+dice:2+1d3
+desc:Attempts to make armour or other worn equipment considerably more protective.
+
+name:repair
+type:card
+graphics:-:Deep Light Blue
+level:10
+weight:5g
+cost:100
+alloc:16:10 to 100
+pile:25:2
+power:8
+effect:REMOVE_FAULT
+dice:20+d20
+
+name:major repair
+type:card
+graphics:-:Deep Light Blue
+level:50
+weight:5g
+cost:8000
+alloc:16:50 to 100
+pile:25:2
+power:20
+effect:REMOVE_FAULT
+dice:50+d50
+
+### Summoning ###
+
+name:summoning
+type:card
+graphics:-:Deep Light Blue
+level:1
+weight:5g
+cost:0
+alloc:10:1 to 100
+pile:70:1d3
+power:0
+effect:SUMMON:ANY
+dice:1d3
+desc:It's a form of teleportation. It transports monsters from off the level to your side.
+
+#name:Summon Undead
+#type:card
+#graphics:-:Deep Light Blue
+#level:15
+#weight:5g
+#cost:0
+#alloc:10:15 to 100
+#pile:70:1d3
+#power:0
+#effect:SUMMON:UNDEAD
+#dice:1d3
+
+name:local acquisition
+type:card
+graphics:-:Deep Light Blue
+level:8
+weight:5g
+cost:2700
+alloc:5:8 to 100
+power:20000
+effect:LOCAL_ACQUIRE
+dice:1
+desc:It's a form of teleportation. It grabs the most valuable item on the level and leaves it at your feet.
+
+name:remote acquisition
+type:card
+graphics:-:Deep Light Blue
+level:20
+weight:5g
+cost:5000
+alloc:10:20 to 100
+power:20000
+effect:ACQUIRE
+dice:1
+desc:It's a form of teleportation. It grabs an item - hopefully a valuable one - from some unknown distant location.
+
+name:mass acquisition
+type:card
+graphics:-:Deep Light Blue
+level:60
+weight:5g
+cost:10000
+alloc:5:60 to 100
+power:20000
+effect:ACQUIRE
+dice:1+1d2
+desc:It's a form of teleportation. It grabs a few items - hopefully valuable ones - from some unknown distant location.
+
+### Killing cards ###
+
+name:Dispel Undead
+type:card
+graphics:-:Deep Light Blue
+level:40
+weight:5g
+cost:200
+alloc:40:40 to 100
+pile:25:2
+power:9
+effect:PROJECT_LOS:DISP_UNDEAD:0:1
+dice:60
+
+name:Banishment
+type:card
+graphics:-:Deep Light Blue
+level:40
+weight:5g
+cost:2500
+alloc:25:40 to 100
+power:20
+effect:BANISH
+
+name:Mass Banishment
+type:card
+graphics:-:Deep Light Blue
+level:50
+weight:5g
+cost:3000
+alloc:20:50 to 100
+power:25
+effect:MASS_BANISH
+
+
+### Utility ###
+
+name:lighting
+type:card
+graphics:-:Deep Light Blue
+level:0
+weight:5g
+cost:15
+alloc:50:0 to 60
+pile:35:2d3
+power:4
+effect:LIGHT_AREA
+effect:SPOT:LIGHT_WEAK:2
+dice:2d8
+
+name:recall
+type:card
+graphics:-:Deep Light Blue
+level:5
+weight:5g
+cost:125
+alloc:50:5 to 100
+pile:35:2d3
+power:15
+effect:RECALL
+
+name:recharging
+type:card
+graphics:-:Deep Light Blue
+level:40
+weight:5g
+cost:200
+alloc:40:40 to 100
+pile:12:2d3
+power:11
+effect:RECHARGE
+dice:6
+
+name:battering
+type:card
+graphics:-:Deep Light Blue
+level:10
+weight:5g
+cost:50
+alloc:40:10 to 60
+pile:25:2d3
+power:6
+effect:TOUCH:KILL_DOOR
+
+name:descent
+type:card
+graphics:-:Deep Light Blue
+level:10
+weight:5g
+cost:250
+alloc:20:1 to 100
+pile:20:2
+power:19
+effect:DEEP_DESCENT
+
+
+### "Holy" spells ###
+
+name:Blessing
+type:card
+graphics:-:Deep Light Blue
+level:1
+weight:5g
+cost:15
+alloc:50:1 to 50
+pile:70:1d3
+power:6
+effect:TIMED_INC:BLESSED
+dice:6+1d12
+
+name:Holy Chant
+type:card
+graphics:-:Deep Light Blue
+level:10
+weight:5g
+cost:40
+alloc:40:10 to 70
+pile:25:2
+power:7
+effect:TIMED_INC:BLESSED
+dice:12+1d24
+
+name:Holy Prayer
+type:card
+graphics:-:Deep Light Blue
+level:25
+weight:5g
+cost:80
+alloc:40:50 to 100
+pile:25:2
+power:8
+effect:TIMED_INC:BLESSED
+dice:24+1d48
+
+name:Protection from Evil
+type:card
+graphics:-:Deep Light Blue
+level:30
+weight:5g
+cost:50
+alloc:40:30 to 100
+pile:25:2
+power:6
+effect:TIMED_INC:PROTEVIL
+dice:$B+1d25
+expr:B:PLAYER_LEVEL:* 3
+
+
+### Misc. ###
+
+name:info
+type:card
+graphics:-:Deep Light Blue
+level:0
+weight:5g
+cost:5
+alloc:16:0 to 60
+pile:75:1d5
+power:1
+effect:RUMOR
+dice:50
+desc:An update on the latest buzz - a hint, although not always a useful one.
+
+name:confusion
+type:card
+graphics:-:Deep Light Blue
+level:5
+weight:5g
+cost:30
+alloc:16:5 to 60
+pile:25:2
+power:8
+effect:TIMED_INC:ATT_CONF
+dice:10000
+
+name:protection
+type:card
+graphics:-:Deep Light Blue
+level:60
+weight:5g
+cost:500
+alloc:30:70 to 100
+power:20
+effect:GLYPH:WARDING
+
+name:destruction
+type:card
+graphics:-:Deep Light Blue
+level:40
+weight:5g
+cost:1000
+alloc:30:40 to 100
+power:12
+effect:DESTRUCTION:LIGHT:15
+
+### Bad cards ###
+
+name:annoyance
+type:card
+graphics:-:Deep Light Blue
+level:5
+weight:5g
+cost:0
+alloc:10:5 to 70
+pile:70:1d3
+power:0
+msg:There is a high pitched humming noise.
+effect:WAKE
+effect:PROJECT_LOS:MON_SPEED
+dice:25
+
+name:blast weapon
+type:card
+graphics:-:Deep Light Blue
+level:50
+weight:5g
+cost:0
+#A:10:50 to 100
+pile:70:1d3
+power:0
+effect:BLAST_WEAPON
+
+name:blast armour
+type:card
+graphics:-:Deep Light Blue
+level:50
+weight:5g
+cost:0
+#A:10:50 to 100
+pile:70:1d3
+power:0
+effect:BLAST_ARMOR
+
+name:darkness
+type:card
+graphics:-:Deep Light Blue
+level:1
+weight:5g
+cost:0
+alloc:10:1 to 70
+pile:70:1d3
+power:0
+effect:DARKEN_AREA
+effect:BALL:DARK_WEAK:3
+dice:10
+
+name:entrapment
+type:card
+graphics:-:Deep Light Blue
+level:10
+weight:5g
+cost:0
+alloc:10:10 to 70
+pile:70:1d3
+power:0
+msg:You hear a low-pitched whistling sound.
+effect:TOUCH:MAKE_TRAP:3
+
+
+##### Pills #####
+
+# Moved from satisfy-hunger card
+# You should usually be using real food, so this is relatively rare and expensive.
+name:nutria
+type:pill
+graphics:!:d
+level:5
+weight:1g
+cost:150
+alloc:20:5 to 100
+pile:20:1d3
+power:3
+effect:NOURISH:INC_TO
+dice:90
+desc:A wonder of nanotechnology - food for a day in a single pill.
+
+### Statgain ###
+
+# Permanent stat buffs, first-rank
+name:strength nano-
+type:pill
+graphics:!:d
+level:30
+weight:1g
+cost:8000
+alloc:30:30 to 100
+pile:10:2
+power:20000
+effect:RESTORE_STAT:STR
+effect:GAIN_STAT:STR
+desc:A colony of nanites, compressed into a pill which rebuilds your muscles, immediately and permanently increasing your strength.
+
+name:intelligence nano-
+type:pill
+graphics:!:d
+level:30
+weight:1g
+cost:8000
+alloc:30:30 to 100
+pile:10:2
+power:20000
+effect:RESTORE_STAT:INT
+effect:GAIN_STAT:INT
+desc:A colony of nanites, compressed into a pill which rebuilds your brain, immediately and permanently increasing your intelligence.
+
+name:wisdom nano-
+type:pill
+graphics:!:d
+level:30
+weight:1g
+cost:8000
+alloc:30:30 to 100
+pile:10:2
+power:20000
+effect:RESTORE_STAT:WIS
+effect:GAIN_STAT:WIS
+desc:A colony of nanites, compressed into a pill which rebuilds your brain, immediately and permanently increasing your wisdom.
+
+# names? dextro, mentalo etc. ?
+name:dexterity nano-
+type:pill
+graphics:!:d
+level:30
+weight:1g
+cost:8000
+alloc:30:30 to 100
+pile:10:2
+power:20000
+effect:RESTORE_STAT:DEX
+effect:GAIN_STAT:DEX
+desc:A colony of nanites, compressed into a pill which rebuilds your nerves, immediately and permanently increasing your dexterity.
+
+name:constitution nano-
+type:pill
+graphics:!:d
+level:30
+weight:1g
+cost:8000
+alloc:30:30 to 100
+pile:10:2
+power:20000
+effect:RESTORE_STAT:CON
+effect:GAIN_STAT:CON
+desc:A colony of nanites, compressed into a pill which rebuilds your body, immediately and permanently making you tougher.
+
+name:charisma nano-
+type:pill
+graphics:!:d
+level:24
+weight:1g
+cost:1500
+alloc:30:24 to 100
+pile:10:2
+power:4000
+effect:RESTORE_STAT:CHR
+effect:GAIN_STAT:CHR
+desc:A colony of nanites, compressed into a pill which rebuilds your body, immediately and permanently improving your looks.
+
+# Permanent stat buffs, second-rank
+# INT-DEX 'precision' WIS-CHA 'persona' STR-CON 'perform'? 
+# or INT-WIS-CHA 'persona' / STR-DEX-CON 'performa' 
+name:persona nano-
+type:pill
+graphics:!:d
+level:36
+weight:1g
+cost:32000
+alloc:20:36 to 100
+pile:3:2
+power:20000
+effect:RESTORE_STAT:INT
+effect:GAIN_STAT:INT
+effect:RESTORE_STAT:WIS
+effect:GAIN_STAT:WIS
+effect:RESTORE_STAT:CHR
+effect:GAIN_STAT:CHR
+desc:A colony of advanced nanites, compressed into a pill which deeply rebuilds your brain, permanently enhancing your intelligence, wisdom and charisma.
+
+name:performa nano-
+type:pill
+graphics:!:d
+level:39
+weight:1g
+cost:38000
+alloc:20:39 to 100
+pile:3:2
+power:20000
+effect:RESTORE_STAT:DEX
+effect:GAIN_STAT:DEX
+effect:RESTORE_STAT:STR
+effect:GAIN_STAT:STR
+effect:RESTORE_STAT:CON
+effect:GAIN_STAT:CON
+desc:A colony of advanced nanites, compressed into a pill which deeply rebuilds your body, permanently enhancing your strength, toughness and dexterity.
+
+# Permanent stat buffs, top-rank
+
+name:speed nano-
+type:pill
+graphics:!:d
+level:42
+weight:1g
+cost:28000
+alloc:20:38 to 100
+power:20000
+effect:RESTORE_STAT:SPD
+effect:GAIN_STAT:SPD
+
+name:augmenta nano-
+type:pill
+graphics:!:d
+level:46
+weight:1g
+cost:50000
+alloc:15:45 to 100
+attack:1d1:0:0
+armor:0:0
+power:20000
+effect:RESTORE_STAT:STR
+effect:GAIN_STAT:STR
+effect:RESTORE_STAT:INT
+effect:GAIN_STAT:INT
+effect:RESTORE_STAT:WIS
+effect:GAIN_STAT:WIS
+effect:RESTORE_STAT:DEX
+effect:GAIN_STAT:DEX
+effect:RESTORE_STAT:CON
+effect:GAIN_STAT:CON
+effect:RESTORE_STAT:CHR
+effect:GAIN_STAT:CHR
+desc:A colony of the most advanced nanites, compressed into a pill which thoroughly rebuilds your body and mind, permanently increasing all your abilities.
+
+#################
+# Restorations.
+# Since you get this at level up and from shrooms etc these should be high level or rare, but do more?
+
+# INT, WIS, CHR restored; 
+name:remind nano-
+type:pill
+graphics:!:d
+level:26
+weight:1g
+cost:1600
+alloc:15:26 to 100
+attack:1d1:0:0
+armor:0:0
+power:2000
+effect:RESTORE_STAT:INT
+effect:RESTORE_STAT:WIS
+effect:RESTORE_STAT:CHR
+
+name:experia nano-
+type:pill
+graphics:!:d
+level:65
+weight:1g
+cost:25000
+alloc:50:65 to 100
+power:20000
+effect:GAIN_EXP
+dice:200000
+
+### Healings ###
+
+name:curing
+type:pill
+graphics:!:d
+level:0
+weight:1g
+cost:20
+alloc:80:1 to 15
+pile:90:2d3
+power:3
+effect:HEAL_HP
+dice:20
+effect:CURE:BLIND
+effect:TIMED_DEC:CUT
+dice:20
+effect:TIMED_DEC:CONFUSED
+dice:20
+desc:First aid, in a pill - this rapidly restores you to health, healing wounds, blindness and confusion. It's not the most powerful remedy of this kind, but it is cheap and widely available - don't go adventuring without it!
+
+name:extra-curing
+type:pill
+graphics:!:d
+level:3
+weight:1g
+cost:70
+alloc:80:5 to 40
+pile:80:2d3
+power:6
+effect:HEAL_HP
+dice:40
+effect:CURE:BLIND
+effect:CURE:CUT
+effect:CURE:CONFUSED
+desc:It's a more powerful relative of the common healing pill. Twice as effective at healing and will always immediately heal blindness, wounds and confusion.
+
+name:critical curing
+type:pill
+graphics:!:d
+level:5
+weight:1g
+cost:200
+alloc:80:12 to 100
+pile:70:2d3
+power:9
+effect:HEAL_HP
+dice:60
+effect:CURE:BLIND
+effect:CURE:CUT
+effect:CURE:POISONED
+effect:CURE:STUN
+effect:CURE:AMNESIA
+effect:CURE:CONFUSED
+desc:The most powerful widely available healing pill. Heals as well as three curing pills, and immediately heals blindness, wounds, stunning, amnesia and confusion.
+
+name:healing
+type:pill
+graphics:!:d
+level:15
+weight:1g
+cost:800
+alloc:64:30 to 100
+pile:25:2
+power:12
+effect:HEAL_HP
+dice:300+m35
+effect:CURE:BLIND
+effect:CURE:CUT
+effect:CURE:POISONED
+effect:CURE:STUN
+effect:CURE:AMNESIA
+effect:CURE:CONFUSED
+effect:CURE:IMAGE
+effect:TIMED_DEC:RAD
+dice:10d4
+desc:A valuable remedy that instantly heals serious wounds and deadly poison of all kinds including blindness, stunning, amnesia, hallucination and confusion. It even has some effect against radiation sickness.
+
+name:mega-healing
+type:pill
+graphics:!:d
+level:40
+weight:1g
+cost:1500
+alloc:40:40 to 100
+attack:1d1:0:0
+armor:0:0
+power:18
+effect:HEAL_HP
+dice:600+m70
+effect:CURE:BLIND
+effect:CURE:CUT
+effect:CURE:POISONED
+effect:CURE:STUN
+effect:CURE:AMNESIA
+effect:CURE:CONFUSED
+effect:CURE:IMAGE
+effect:TIMED_DEC:RAD
+dice:10d50
+desc:A rare and precious remedy that instantly heals severe wounds and deadly poison of all kinds including blindness, stunning, amnesia, hallucination and confusion, and all but the most severe radiation sickness.
+
+name:life
+type:pill
+graphics:!:d
+level:60
+weight:1g
+cost:5000
+alloc:20:60 to 100
+attack:1d1:0:0
+armor:0:0
+msg:You feel life flow through your body!
+power:21
+effect:RESTORE_EXP
+effect:CURE:BLIND
+effect:CURE:CUT
+effect:CURE:POISONED
+effect:CURE:STUN
+effect:CURE:AMNESIA
+effect:CURE:CONFUSED
+effect:CURE:IMAGE
+effect:CURE:RAD
+effect:RESTORE_STAT:STR
+effect:RESTORE_STAT:INT
+effect:RESTORE_STAT:WIS
+effect:RESTORE_STAT:DEX
+effect:RESTORE_STAT:CON
+effect:RESTORE_STAT:SPD
+effect:RESTORE_STAT:CHR
+effect:HEAL_HP
+dice:5000
+desc:The most effective healing pill ever made.  Capable of bringing you back from the edge of death to full strength, instantly.  It cures wounds, all forms of poison including radiation sickness and drained abilities and experience.  These are scarce - save them for when they are really needed!
+
+name:anti-toxin
+type:pill
+graphics:!:d
+level:5
+weight:1g
+cost:75
+alloc:60:1 to 35
+pile:25:2
+power:1
+effect:CURE:POISONED
+desc:An antidote to most common forms of poison, including those causing blindness, confusion and hallucination. One pill is the usual dose, but especially bad cases of poisoning may require more.
+
+### Stat restore ###
+
+# removed: old stat restoration
+
+name:Restore Life Levels
+type:pill
+graphics:!:d
+level:40
+weight:1g
+cost:400
+alloc:40:30 to 100
+pile:25:2
+power:8
+effect:RESTORE_EXP
+
+
+### Gain one/lose one pills ###
+
+name:brawn nano-
+type:pill
+graphics:!:d
+level:3
+weight:1g
+cost:1000
+alloc:30:20 to 40
+pile:10:2
+power:30
+effect:RESTORE_STAT:STR
+effect:GAIN_STAT:STR
+effect:LOSE_RANDOM_STAT:STR
+desc:A cheap knock-off, built from last-generation nanotechnology. It can be relied on to permanently buff your strength - but unlike the latest nano-pills, it has some nasty and unpredictable side-effects.
+
+name:intellect nano-
+type:pill
+graphics:!:d
+level:20
+weight:1g
+cost:1000
+alloc:30:20 to 40
+pile:10:2
+power:25
+effect:RESTORE_STAT:INT
+effect:GAIN_STAT:INT
+effect:LOSE_RANDOM_STAT:INT
+desc:A cheap knock-off, built from last-generation nanotechnology. It can be relied on to permanently boost your brainpower - but unlike the latest nano-pills, it has some nasty and unpredictable side-effects.
+
+name:contemplation nano-
+type:pill
+graphics:!:d
+level:20
+weight:1g
+cost:1000
+alloc:30:20 to 40
+pile:10:2
+power:25
+effect:RESTORE_STAT:WIS
+effect:GAIN_STAT:WIS
+effect:LOSE_RANDOM_STAT:WIS
+desc:A cheap knock-off, built from last-generation nanotechnology. It can be relied on to permanently deepen your mind - but unlike the latest nano-pills, it has some nasty and unpredictable side-effects.
+
+name:nimbleness nano-
+type:pill
+graphics:!:d
+level:5
+weight:1g
+cost:1000
+alloc:30:20 to 40
+pile:10:2
+power:25
+effect:RESTORE_STAT:DEX
+effect:GAIN_STAT:DEX
+effect:LOSE_RANDOM_STAT:DEX
+desc:A cheap knock-off, built from last-generation nanotechnology. It can be relied on to permanently sharpen your reflexes - but unlike the latest nano-pills, it has some nasty and unpredictable side-effects.
+
+name:toughness nano-
+type:pill
+graphics:!:d
+level:10
+weight:1g
+cost:1000
+alloc:30:20 to 40
+pile:10:2
+power:30
+effect:RESTORE_STAT:CON
+effect:GAIN_STAT:CON
+effect:LOSE_RANDOM_STAT:CON
+desc:A cheap knock-off, built from last-generation nanotechnology. It can be relied on to permanently toughen your body - but unlike the latest nano-pills, it has some nasty and unpredictable side-effects.
+
+# more generous than others as chr is less useful
+name:vanity nano-
+type:pill
+graphics:!:d
+level:3
+weight:1g
+cost:600
+alloc:30:20 to 40
+pile:10:2
+power:10
+effect:RESTORE_STAT:CHR
+effect:GAIN_STAT:CHR
+effect:RANDOM
+dice:3
+effect:GAIN_STAT:CHR
+effect:RESTORE_STAT:CHR
+effect:LOSE_RANDOM_STAT:CHR
+desc:A cheap knock-off, built from last-generation nanotechnology. It can be relied on to permanently improve your looks - but unlike the latest nano-pills, it sometimes has some nasty and unpredictable side-effects.
+
+# less generous as speed is more useful. 'athleti[a cs]'?
+name:sprinting nano-
+type:pill
+graphics:!:d
+level:24
+weight:1g
+cost:1800
+alloc:30:25 to 45
+pile:5:2
+power:35
+effect:RESTORE_STAT:SPD
+effect:LOSE_RANDOM_STAT:SPD
+effect:TIMED_INC:FAST:0:5
+dice:20+2d10
+effect:RANDOM
+dice:3
+effect:GAIN_STAT:SPD
+effect:RESTORE_STAT:SPD
+effect:LOSE_RANDOM_STAT:SPD
+desc:A cheap knock-off, built from last-generation nanotechnology. It will sometimes permanently boost your speed as advertised - but unlike the latest nano-pills, it also has some nasty and unpredictable side-effects.
+
+
+### Knowledge ###
+
+name:Enlightenment
+type:pill
+graphics:!:d
+level:25
+weight:1g
+cost:800
+alloc:40:25 to 100
+pile:25:2
+power:22
+effect:LIGHT_LEVEL
+dice:1
+
+name:*Enlightenment*
+type:pill
+graphics:!:d
+level:70
+weight:1g
+cost:12000
+alloc:8:70 to 100
+attack:1d1:0:0
+armor:0:0
+power:20000
+effect:LIGHT_LEVEL
+dice:1
+effect:RESTORE_STAT:INT
+effect:GAIN_STAT:INT
+effect:RESTORE_STAT:WIS
+effect:GAIN_STAT:WIS
+effect:DETECT_GOLD
+effect-yx:22:40
+effect:DETECT_OBJECTS
+effect-yx:22:40
+effect:DETECT_INVISIBLE_MONSTERS
+effect-yx:500:500
+effect:DETECT_VISIBLE_MONSTERS
+effect-yx:500:500
+
+
+### Buffs ###
+
+name:whizz
+type:pill
+graphics:!:d
+level:1
+weight:1g
+cost:75
+alloc:40:1 to 100
+pile:25:2
+power:10
+effect:TIMED_INC:FAST:0:5
+dice:20+2d10
+
+name:Heroism
+type:pill
+graphics:!:d
+level:1
+weight:1g
+cost:25
+alloc:40:1 to 100
+pile:25:2
+power:7
+effect:HEAL_HP
+dice:10
+effect:CURE:AFRAID
+effect:TIMED_INC:HERO
+dice:25+1d25
+
+#combat drugs?
+name:Berserk Strength
+type:pill
+graphics:!:d
+level:3
+weight:1g
+cost:80
+alloc:40:3 to 100
+pile:25:2
+power:8
+effect:HEAL_HP
+dice:30
+effect:CURE:AFRAID
+effect:TIMED_INC:SHERO
+dice:25+1d25
+
+name:Boldness
+type:pill
+graphics:!:d
+level:1
+weight:1g
+cost:8
+alloc:40:1 to 90
+pile:25:2
+power:2
+effect:CURE:AFRAID
+
+name:fireproofing
+type:pill
+graphics:!:d
+level:30
+weight:1g
+cost:30
+alloc:40:30 to 100
+pile:25:2
+power:4
+effect:TIMED_INC:OPP_FIRE
+dice:50+1d10
+
+name:polarizing
+type:pill
+graphics:!:d
+level:30
+weight:1g
+cost:30
+alloc:40:30 to 100
+pile:25:2
+power:4
+effect:TIMED_INC:OPP_COLD
+dice:50+1d10
+
+name:antitoxin
+type:pill
+graphics:!:d
+level:20
+weight:1g
+cost:30
+alloc:40:20 to 100
+pile:25:2
+power:4
+effect:TIMED_INC:OPP_POIS
+dice:50+1d10
+effect:CURE:POISONED
+
+name:X-vision
+type:pill
+graphics:!:d
+level:3
+weight:1g
+cost:50
+alloc:40:3 to 40
+pile:25:2
+power:7
+effect:CURE:BLIND
+effect:TIMED_INC:SINVIS
+dice:50+2d6
+
+name:infravision
+type:pill
+graphics:!:d
+level:3
+weight:1g
+cost:20
+alloc:40:3 to 40
+pile:25:2
+power:5
+effect:TIMED_INC:SINFRA
+dice:100+4d25
+
+
+### Useless buggers ###
+
+# Well, OK this one is not entirely useless
+name:mutagen
+type:pill
+graphics:!:d
+level:12
+weight:1g
+cost:250
+alloc:10:3 to 100
+pile:10:1d3
+power:2
+effect:MUTATE
+dice:1
+desc:You will undergo a freakish metamorphosis, and will likely end up permanently transformed.  Such mutations are not necessarily harmful, but many are...
+
+name:sugar
+type:pill
+graphics:!:d
+level:0
+weight:1g
+cost:2
+alloc:10:1 to 10
+pile:70:2d3
+power:0
+effect:NOURISH:INC_BY
+dice:1
+desc:A plain sugar pill that won't do anything.
+
+name:sleeping
+type:pill
+graphics:!:d
+level:0
+weight:1g
+cost:10
+alloc:10:0 to 10
+pile:70:2d3
+attack:3d4:0:0
+armor:0:0
+power:0
+effect:TIMED_INC:PARALYZED
+dice:5+1d5
+effect:NOURISH:INC_BY
+dice:1
+desc:A pill that will instantly put you to sleep.
+
+name:blindness
+type:pill
+graphics:!:d
+level:0
+weight:1g
+cost:0
+alloc:10:0 to 10
+pile:70:2d3
+attack:3d4:0:0
+armor:0:0
+power:0
+effect:TIMED_INC:BLIND
+dice:75+4d25
+desc:A nasty pill that will temporarily blind you.
+
+# give it a more interesting name?
+name:confusion
+type:pill
+graphics:!:d
+level:0
+weight:1g
+cost:0
+alloc:10:0 to 10
+pile:70:2d3
+attack:3d4:0:0
+armor:0:0
+power:0
+effect:TIMED_INC:CONFUSED
+dice:10+4d5
+effect:NOURISH:INC_BY
+dice:1
+desc:A pill that will confuse you for a while.
+
+name:poison
+type:pill
+graphics:!:d
+level:3
+weight:1g
+cost:0
+alloc:10:0 to 10
+pile:70:2d3
+attack:3d4:0:0
+armor:0:0
+power:0
+effect:TIMED_INC:POISONED
+dice:10+2d7
+desc:A toxic pill, which can be fatal if you are already weakened.
+
+name:slow poison
+type:pill
+graphics:!:d
+level:10
+weight:1g
+cost:0
+alloc:2:8 to 20
+pile:40:2d3
+attack:3d4:0:0
+armor:0:0
+power:0
+effect:TIMED_INC:POISONED
+dice:30+2d20
+desc:Now why would anyone see something labelled 'Slow Poison', and eat it?
+
+name:slowness
+type:pill
+graphics:!:d
+level:1
+weight:1g
+cost:0
+alloc:10:0 to 10
+pile:70:2d3
+attack:3d4:0:0
+armor:0:0
+power:0
+effect:TIMED_INC:SLOW
+dice:15+1d25
+effect:NOURISH:INC_BY
+dice:1
+
+name:mystery
+type:pill
+graphics:!:d
+level:10
+weight:1g
+cost:0
+alloc:10:10 to 15
+pile:25:2
+power:0
+effect:RANDOM
+dice:5
+effect:TIMED_INC:SCRAMBLE
+dice:20+1d20
+effect:SHAPECHANGE:bat
+effect:DRAIN_STAT:INT
+effect:DRAIN_STAT:WIS
+effect:TIMED_INC:STONE_SKIN
+dice:20+1d20
+
+name:emetic
+type:pill
+graphics:!:d
+level:0
+weight:1g
+cost:0
+alloc:10:3 to 15
+pile:100:1d2
+power:0
+msg:The pill makes you queasy.
+effect:NOURISH:SET_TO
+dice:2
+effect:CURE:POISONED
+effect:TIMED_INC_NO_RES:PARALYZED
+dice:4
+
+
+### Weird one ###
+
+name:Dragon Breath
+type:pill
+graphics:!:d
+level:0
+weight:1g
+cost:100
+pile:100:1d2
+alloc:20:40 to 100
+pile:70:1d3
+power:8
+effect:RANDOM
+dice:2
+effect:BREATH:FIRE:0:20
+dice:80
+effect:BREATH:COLD:0:20
+dice:80
+
+
+
+##### Wands #####
+
+### Bolts ###
+
+name:& mini-missile launcher~
+type:wand
+graphics:-:d
+level:3
+weight:10
+cost:200
+alloc:20:3 to 60
+attack:1d1:0:0
+armor:0:0
+charges:6+d10
+power:3
+effect:BOLT_OR_BEAM:MISSILE
+dice:3d4
+
+name:& beam taser~
+type:wand
+graphics:-:d
+level:15
+weight:10
+cost:600
+alloc:20:15 to 60
+attack:1d1:0:0
+armor:0:0
+charges:6+d8
+power:5
+effect:BEAM:ELEC
+dice:6d6
+
+name:& icer~
+type:wand
+graphics:-:d
+level:20
+weight:10
+cost:800
+alloc:20:20 to 60
+attack:1d1:0:0
+armor:0:0
+charges:6+d5
+power:4
+effect:BOLT:COLD
+dice:12d8
+
+name:& flame thrower~
+type:wand
+graphics:-:d
+level:30
+weight:10
+cost:1000
+alloc:20:30 to 60
+attack:1d1:0:0
+armor:0:0
+charges:6+d8
+power:7
+effect:BOLT_OR_BEAM:FIRE
+dice:12d8
+
+name:& squirt gun~
+type:wand
+graphics:-:d
+level:30
+weight:10
+cost:950
+alloc:20:30 to 60
+attack:1d1:0:0
+armor:0:0
+charges:6+d8
+power:6
+effect:BOLT_OR_BEAM:ACID
+dice:10d8
+
+
+### Balls ###
+
+name:& cloudmaker~
+type:wand
+graphics:-:d
+level:5
+weight:10
+cost:400
+alloc:20:5 to 60
+attack:1d1:0:0
+armor:0:0
+charges:6+d8
+power:3
+effect:BALL:POIS:3
+dice:12
+
+name:& mass-tazer~
+type:wand
+graphics:-:d
+level:35
+weight:10
+cost:1200
+alloc:20:35 to 100
+attack:1d1:0:0
+armor:0:0
+charges:4+d8
+flags:IGNORE_ELEC
+power:9
+effect:BALL:ELEC:2
+dice:64
+
+name:& cryosplat gun~
+type:wand
+graphics:-:d
+level:40
+weight:10
+cost:1500
+alloc:20:40 to 100
+attack:1d1:0:0
+armor:0:0
+charges:2+d6
+flags:IGNORE_COLD
+power:10
+effect:BALL:COLD:2
+dice:100
+
+name:& fireballista~
+type:wand
+graphics:-:d
+level:50
+weight:10
+cost:1800
+alloc:20:50 to 100
+attack:1d1:0:0
+armor:0:0
+charges:2+d4
+flags:IGNORE_FIRE
+power:11
+effect:BALL:FIRE:2
+dice:144
+
+name:& super soaker~
+type:wand
+graphics:-:d
+level:50
+weight:10
+cost:1650
+alloc:20:50 to 100
+attack:1d1:0:0
+armor:0:0
+charges:2+d5
+flags:IGNORE_ACID
+power:11
+effect:BALL:ACID:2
+dice:120
+
+
+### Monster status changing ###
+
+name:& molasso ray~
+type:wand
+graphics:-:d
+level:5
+weight:10
+cost:500
+alloc:20:5 to 100
+attack:1d1:0:0
+armor:0:0
+charges:2+d6
+power:3
+effect:BOLT_AWARE:MON_SLOW
+dice:10+1d20
+
+name:& pixilator~
+type:wand
+graphics:-:d
+level:5
+weight:10
+cost:500
+alloc:20:5 to 100
+attack:1d1:0:0
+armor:0:0
+charges:2+d6
+power:3
+effect:BOLT_AWARE:MON_CONF
+dice:5+1d5
+
+name:& paralator~
+type:wand
+graphics:-:d
+level:5
+weight:10
+cost:500
+alloc:20:5 to 100
+attack:1d1:0:0
+armor:0:0
+charges:2+d6
+power:3
+effect:BOLT_AWARE:MON_HOLD
+dice:3+1d5
+
+name:& stun gun~
+type:wand
+graphics:-:d
+level:5
+weight:10
+cost:500
+alloc:20:5 to 100
+attack:1d1:0:0
+armor:0:0
+charges:2+d6
+power:3
+effect:BOLT_AWARE:MON_STUN
+dice:5+1d5
+
+name:& terrorizer~
+type:wand
+graphics:-:d
+level:10
+weight:10
+cost:500
+alloc:20:10 to 100
+attack:1d1:0:0
+armor:0:0
+charges:3+d5
+power:3
+effect:BOLT_AWARE:TURN_ALL
+dice:10
+
+
+### Utility ###
+
+#remove or upgrade to LIGHT?
+name:& beamlight~
+type:wand
+graphics:-:d
+level:3
+weight:10
+cost:200
+alloc:20:3 to 60
+attack:1d1:0:0
+armor:0:0
+charges:6+d10
+vis-msg:A line of shimmering blue light appears.
+power:6
+effect:LINE:LIGHT_WEAK
+dice:6d8
+
+name:& mining rig~
+type:wand
+graphics:-:d
+level:10
+weight:10
+cost:300
+alloc:20:10 to 100
+attack:1d1:0:0
+armor:0:0
+charges:6+d10
+power:6
+effect:LINE:KILL_WALL
+dice:20+1d30
+
+name:& transmogrificator~
+type:wand
+graphics:-:d
+level:20
+weight:10
+cost:400
+alloc:20:20 to 60
+attack:1d1:0:0
+armor:0:0
+charges:6+d8
+power:7
+effect:BOLT_AWARE:MON_POLY
+dice:$B
+expr:B:PLAYER_LEVEL:+ 0
+
+name:& etheric beamlight~
+type:wand
+graphics:-:d
+level:3
+weight:10
+cost:100
+alloc:20:3 to 60
+attack:1d1:0:0
+armor:0:0
+charges:6+d10
+power:4
+effect:LINE:DARK_WEAK
+dice:6d8
+
+name:& replicator beam~
+type:wand
+graphics:-:d
+level:15
+weight:10
+cost:0
+alloc:20:15 to 100
+attack:1d1:0:0
+armor:0:0
+charges:3+d5
+power:0
+effect:BOLT_STATUS:MON_CLONE
+
+name:& transporter beam~
+type:wand
+graphics:-:d
+level:20
+weight:10
+cost:3500
+alloc:20:20 to 100
+attack:1d1:0:0
+armor:0:0
+charges:6+d5
+power:11
+effect:BOLT_STATUS:AWAY_ALL
+dice:$B
+expr:B:MAX_SIGHT:* 5
+
+name:& deboobilizer~
+type:wand
+graphics:-:d
+level:20
+weight:10
+cost:700
+alloc:20:20 to 60
+attack:1d1:0:0
+armor:0:0
+charges:4+d5
+power:7
+effect:ALTER:KILL_TRAP
+desc:Makes traps safe.
+
+name:& omniprojector~
+type:wand
+graphics:-:d
+level:3
+weight:10
+cost:250
+alloc:20:3 to 60
+attack:1d1:0:0
+armor:0:0
+charges:8+d15
+flags:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+power:9
+effect:WONDER
+dice:$B+1d100
+expr:B:PLAYER_LEVEL:/ 5
+
+
+
+### Dragons' wands ###
+
+name:& melta belta~
+type:wand
+graphics:-:d
+level:50
+weight:10
+cost:2400
+alloc:20:50 to 100
+attack:1d1:0:0
+armor:0:0
+charges:1+d3
+flags:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+power:13
+effect:ARC:FIRE:0:30
+dice:200
+
+name:& cryonic projector~
+type:wand
+graphics:-:d
+level:50
+weight:10
+cost:2400
+alloc:20:50 to 100
+attack:1d1:0:0
+armor:0:0
+charges:1+d3
+flags:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+power:12
+effect:ARC:COLD:0:30
+dice:160
+
+name:& multi-thrower~
+type:wand
+graphics:-:d
+level:60
+weight:10
+cost:2400
+alloc:20:60 to 100
+attack:1d1:0:0
+armor:0:0
+charges:1+d3
+flags:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+power:12
+effect:RANDOM
+dice:5
+effect:ARC:ACID:0:30
+dice:160
+effect:ARC:ELEC:0:30
+dice:160
+effect:ARC:FIRE:0:30
+dice:160
+effect:ARC:COLD:0:30
+dice:160
+effect:ARC:POIS:0:30
+dice:160
+
+
+### Drain lifes ###
+
+name:& death ray~
+type:wand
+graphics:-:d
+level:50
+weight:10
+cost:1200
+alloc:50:50 to 100
+attack:1d1:0:0
+armor:0:0
+charges:3+d3
+power:11
+effect:BOLT_STATUS_DAM:MON_DRAIN
+dice:150
+
+name:& annihilator~
+type:wand
+graphics:-:d
+level:60
+weight:10
+cost:3000
+alloc:20:60 to 100
+attack:1d1:0:0
+armor:0:0
+charges:1+d2
+flags:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+power:12
+effect:BOLT_STATUS_DAM:MON_DRAIN
+dice:250
+
+
+### Rubbish ###
+
+name:& healing ray~
+type:wand
+graphics:-:d
+level:3
+weight:10
+cost:0
+alloc:10:3 to 40
+attack:1d1:0:0
+armor:0:0
+charges:8+d20
+power:0
+effect:BOLT_STATUS:MON_HEAL
+dice:4d6
+
+name:& energy beamer~
+type:wand
+graphics:-:d
+level:3
+weight:10
+cost:0
+alloc:10:3 to 40
+attack:1d1:0:0
+armor:0:0
+charges:8+d20
+power:0
+effect:BOLT_STATUS:MON_SPEED
+dice:100
+
+
+
+
+##### Devices #####
+
+### Bad devices ###
+
+#attractor? bionic acquisitor?
+name:Summoning
+type:device
+graphics:_:d
+level:10
+weight:50
+cost:0
+alloc:10:10 to 100
+attack:1d2:0:0
+armor:0:0
+charges:2d3
+power:0
+effect:SUMMON:ANY
+dice:1d3
+
+name:& energizing field~
+type:device
+graphics:_:d
+level:10
+weight:50
+cost:0
+alloc:10:10 to 40
+attack:1d2:0:0
+armor:0:0
+charges:8+d8
+power:0
+effect:PROJECT_LOS:MON_SPEED
+dice:50
+
+name:& etheric strobe~
+type:device
+graphics:_:d
+level:5
+weight:50
+cost:0
+alloc:10:5 to 40
+attack:1d2:0:0
+armor:0:0
+charges:8+d8
+power:0
+effect:DARKEN_AREA
+effect:BALL:DARK_WEAK:3
+dice:10
+
+### Destruction ###
+
+name:& seismic shaker~
+type:device
+graphics:_:d
+level:40
+weight:50
+cost:350
+alloc:20:40 to 100
+attack:1d2:0:0
+armor:0:0
+charges:3+d5
+power:5
+effect:EARTHQUAKE:NONE:10
+
+name:& disinto device~
+type:device
+graphics:_:d
+level:50
+weight:50
+cost:6000
+alloc:20:50 to 100
+attack:1d2:0:0
+armor:0:0
+charges:1+d3
+power:12
+effect:DESTRUCTION:LIGHT:15
+
+### Monster-affecting ###
+
+name:& pixilator field~
+type:device
+graphics:_:d
+level:10
+weight:50
+cost:800
+alloc:20:10 to 100
+attack:1d2:0:0
+armor:0:0
+charges:3+d3
+power:10
+effect:PROJECT_LOS_AWARE:MON_CONF
+dice:5+1d5
+
+name:& molasso field~
+type:device
+graphics:_:d
+level:10
+weight:50
+cost:800
+alloc:20:10 to 100
+attack:1d2:0:0
+armor:0:0
+charges:4+d4
+power:7
+effect:PROJECT_LOS:MON_SLOW
+dice:10+1d10
+
+name:& dozifier field~
+type:device
+graphics:_:d
+level:10
+weight:50
+cost:700
+alloc:20:10 to 100
+attack:1d2:0:0
+armor:0:0
+charges:6+d5
+power:8
+effect:PROJECT_LOS_AWARE:SLEEP_ALL
+dice:$B
+expr:B:PLAYER_LEVEL:* 10 + 500
+
+
+### Detect ###
+
+name:& anti-stealth radar~
+type:device
+graphics:_:d
+level:5
+weight:50
+cost:200
+alloc:30:5 to 100 
+attack:1d2:0:0
+armor:0:0
+charges:8+d15
+power:6
+effect:DETECT_INVISIBLE_MONSTERS
+effect-yx:22:40
+
+# remove or replace?
+name:Detect Evil
+type:device
+graphics:_:d
+level:20
+weight:50
+cost:350
+alloc:30:20 to 100
+attack:1d2:0:0
+armor:0:0
+charges:8+d15
+power:6
+effect:DETECT_EVIL
+effect-yx:22:40
+
+#navigation module?
+name:& mapping device~
+type:device
+graphics:_:d
+level:20
+weight:50
+cost:600
+alloc:40:10 to 100
+attack:1d2:0:0
+armor:0:0
+charges:5+d5
+power:10
+effect:MAP_AREA
+effect-yx:22:40
+
+
+### Healing ###
+
+name:Curing
+type:device
+graphics:_:d
+level:25
+weight:50
+cost:500
+alloc:30:10 to 100
+attack:1d2:0:0
+armor:0:0
+charges:4+d3
+power:9
+effect:CURE:BLIND
+effect:CURE:CUT
+effect:CURE:POISONED
+effect:CURE:STUN
+effect:CURE:CONFUSED
+
+name:Cure Light Wounds
+type:device
+graphics:_:d
+level:5
+weight:50
+cost:350
+alloc:30:5 to 100
+attack:1d2:0:0
+armor:0:0
+charges:6+d5
+power:3
+effect:HEAL_HP
+dice:20
+effect:CURE:BLIND
+effect:TIMED_DEC:CUT
+dice:20
+effect:TIMED_DEC:CONFUSED
+dice:20
+
+name:Healing
+type:device
+graphics:_:d
+level:70
+weight:50
+cost:5000
+alloc:10:70 to 100
+attack:1d2:0:0
+armor:0:0
+charges:1+d2
+power:12
+effect:HEAL_HP
+dice:300+m35
+effect:CURE:BLIND
+effect:CURE:CUT
+effect:CURE:POISONED
+effect:CURE:STUN
+effect:CURE:AMNESIA
+effect:CURE:CONFUSED
+
+
+### Killing devices ###
+
+#remove or replace?
+name:Dispel Evil
+type:device
+graphics:_:d
+level:50
+weight:50
+cost:1200
+alloc:50:50 to 100
+attack:1d2:0:0
+armor:0:0
+charges:4+d3
+power:9
+effect:PROJECT_LOS:DISP_EVIL:0:1
+dice:60
+
+name:Banishment
+type:device
+graphics:_:d
+level:70
+weight:50
+cost:5000
+alloc:10:70 to 100
+attack:1d2:0:0
+armor:0:0
+charges:1+d2
+power:20
+effect:BANISH
+
+name:Power
+type:device
+graphics:_:d
+level:70
+weight:50
+cost:4000
+alloc:20:70 to 100
+attack:1d2:0:0
+armor:0:0
+charges:1+d3
+power:11
+effect:PROJECT_LOS:DISP_ALL:0:1
+dice:120
+
+name:Holiness
+type:device
+graphics:_:d
+level:70
+weight:50
+cost:3500
+alloc:20:70 to 100
+attack:1d2:0:0
+armor:0:0
+charges:2d2
+power:12
+effect:PROJECT_LOS:DISP_EVIL:0:1
+dice:120
+effect:HEAL_HP
+dice:50
+effect:TIMED_INC:PROTEVIL
+dice:$B+1d25
+expr:B:PLAYER_LEVEL:* 3
+effect:CURE:POISONED
+effect:CURE:TERROR
+effect:CURE:AFRAID
+effect:CURE:STUN
+effect:CURE:CUT
+effect:CURE:SLOW
+effect:CURE:BLIND
+effect:CURE:CONFUSED
+effect:CURE:IMAGE
+effect:CURE:AMNESIA
+
+
+### Utility ###
+
+name:& floodlight~
+type:device
+graphics:_:d
+level:5
+weight:50
+cost:250
+alloc:30:5 to 80
+attack:1d2:0:0
+armor:0:0
+charges:8+d20
+power:4
+effect:LIGHT_AREA
+effect:SPOT:LIGHT_WEAK:2
+dice:2d8
+
+name:& starlight laser show~
+type:device
+graphics:_:d
+level:20
+weight:50
+cost:800
+alloc:20:20 to 80
+attack:1d2:0:0
+armor:0:0
+charges:6+d5
+power:5
+effect:STAR:LIGHT
+dice:6d8
+
+name:& teleporter~
+type:device
+graphics:_:d
+level:20
+weight:50
+cost:2000
+alloc:50:20 to 100
+attack:1d2:0:0
+armor:0:0
+charges:5+d4
+power:6
+effect:TELEPORT
+dice:M60
+
+name:Speed
+type:device
+graphics:_:d
+level:40
+weight:50
+cost:2000
+alloc:20:40 to 100
+attack:1d2:0:0
+armor:0:0
+charges:4+d3
+power:10
+effect:TIMED_INC:FAST:0:5
+dice:20+2d10
+
+name:& repair module~
+type:device
+graphics:_:d
+level:40
+weight:50
+cost:500
+alloc:20:40 to 100
+attack:1d2:0:0
+armor:0:0
+charges:4+d3
+power:8
+effect:REMOVE_FAULT
+dice:20+d20
+
+
+##### Rods #####
+
+### Detection ###
+
+name:& metal detector~
+type:gadget
+graphics:-:d
+level:5
+weight:15
+cost:1000
+alloc:30:8 to 75
+power:6
+effect:DETECT_GOLD
+effect-yx:22:40
+effect:SENSE_OBJECTS
+effect-yx:22:40
+time:50
+
+name:& universal detector~
+type:gadget
+graphics:-:d
+level:30
+weight:15
+cost:3000
+alloc:30:50 to 100
+attack:1d1:0:0
+armor:0:0
+flags:IGNORE_ELEC
+power:10
+effect:DETECT_GOLD
+effect-yx:22:40
+effect:SENSE_OBJECTS
+effect-yx:22:40
+effect:DETECT_INVISIBLE_MONSTERS
+effect-yx:22:40
+effect:DETECT_VISIBLE_MONSTERS
+effect-yx:22:40
+time:100
+
+name:&galactic map~
+type:gadget
+graphics:-:d
+level:65
+weight:15
+cost:2000
+alloc:30:35 to 100
+attack:1d1:0:0
+armor:0:0
+power:10
+effect:MAP_AREA
+effect-yx:33:55
+time:100
+
+name:& tricorder~
+type:gadget
+graphics:-:d
+level:35
+weight:15
+cost:1000
+alloc:20:35 to 100
+attack:1d1:0:0
+armor:0:0
+power:8
+effect:PROBE
+time:100
+
+
+### Bolts ###
+
+name:Fire Bolts
+type:gadget
+graphics:-:d
+level:30
+weight:15
+cost:3000
+alloc:20:30 to 80
+attack:1d1:0:0
+armor:0:0
+power:7
+effect:BOLT_OR_BEAM:FIRE
+dice:12d8
+time:15
+
+name:Frost Bolts
+type:gadget
+graphics:-:d
+level:25
+weight:15
+cost:2500
+alloc:20:25 to 80
+attack:1d1:0:0
+armor:0:0
+power:7
+effect:BOLT:COLD
+dice:12d8
+time:13
+
+name:Lightning Bolts
+type:gadget
+graphics:-:d
+level:20
+weight:15
+cost:2000
+alloc:20:20 to 80
+attack:1d1:0:0
+armor:0:0
+power:5
+effect:BEAM:ELEC
+dice:6d6
+time:11
+
+name:Acid Bolts
+type:gadget
+graphics:-:d
+level:40
+weight:15
+cost:3500
+alloc:20:40 to 80
+attack:1d1:0:0
+armor:0:0
+power:7
+effect:BOLT_OR_BEAM:ACID
+dice:12d8
+time:12
+
+
+### Balls ###
+
+name:Fire Balls
+type:gadget
+graphics:-:d
+level:75
+weight:15
+cost:5000
+alloc:20:75 to 100
+attack:1d1:0:0
+armor:0:0
+power:11
+effect:BALL:FIRE:2
+dice:144
+time:30
+
+name:Cold Balls
+type:gadget
+graphics:-:d
+level:60
+weight:15
+cost:4500
+alloc:20:60 to 100
+attack:1d1:0:0
+armor:0:0
+power:10
+effect:BALL:COLD:2
+dice:100
+time:25
+
+name:Lightning Balls
+type:gadget
+graphics:-:d
+level:55
+weight:15
+cost:4000
+alloc:20:55 to 100
+attack:1d1:0:0
+armor:0:0
+flags:IGNORE_ELEC
+power:9
+effect:BALL:ELEC:2
+dice:64
+time:23
+
+name:Acid Balls
+type:gadget
+graphics:-:d
+level:70
+weight:15
+cost:5500
+alloc:20:70 to 100
+attack:1d1:0:0
+armor:0:0
+power:11
+effect:BALL:ACID:2
+dice:120
+time:27
+
+
+### Status-affecting ###
+
+name:Slow Monster
+type:gadget
+graphics:-:d
+level:30
+weight:15
+cost:1500
+alloc:20:30 to 100
+attack:1d1:0:0
+armor:0:0
+power:3
+effect:BOLT_AWARE:MON_SLOW
+dice:10+1d20
+time:40
+
+name:Hold Monster
+type:gadget
+graphics:-:d
+level:30
+weight:15
+cost:1500
+alloc:20:30 to 100
+attack:1d1:0:0
+armor:0:0
+power:3
+effect:BOLT_AWARE:MON_HOLD
+dice:3+1d5
+time:40
+
+
+### Healing ###
+
+name:Curing
+type:gadget
+graphics:-:d
+level:65
+weight:15
+cost:1000
+alloc:20:10 to 80
+attack:1d1:0:0
+armor:0:0
+power:9
+effect:CURE:BLIND
+effect:CURE:CUT
+effect:CURE:POISONED
+effect:CURE:STUN
+effect:CURE:CONFUSED
+time:100
+
+name:Healing
+type:gadget
+graphics:-:d
+level:80
+weight:15
+cost:20000
+alloc:20:80 to 100
+attack:1d1:0:0
+armor:0:0
+flags:IGNORE_ELEC
+power:14
+effect:HEAL_HP
+dice:500
+effect:CURE:CUT
+effect:CURE:STUN
+time:1000
+
+name:Restoration
+type:gadget
+graphics:-:d
+level:80
+weight:15
+cost:25000
+alloc:10:80 to 100
+attack:1d1:0:0
+armor:0:0
+flags:IGNORE_ELEC
+power:17
+effect:RESTORE_STAT:STR
+effect:RESTORE_STAT:INT
+effect:RESTORE_STAT:WIS
+effect:RESTORE_STAT:DEX
+effect:RESTORE_STAT:CON
+effect:RESTORE_EXP
+time:1000
+
+
+### Other ###
+
+name:Polymorph
+type:gadget
+graphics:-:d
+level:35
+weight:15
+cost:1200
+alloc:20:35 to 80
+attack:1d1:0:0
+armor:0:0
+power:7
+effect:BOLT_STATUS:MON_POLY
+dice:$B
+expr:B:PLAYER_LEVEL:+ 0
+time:25
+
+name:Drain Life
+type:gadget
+graphics:-:d
+level:75
+weight:15
+cost:3600
+alloc:20:75 to 100
+attack:1d1:0:0
+armor:0:0
+power:11
+effect:BOLT_STATUS_DAM:MON_DRAIN
+dice:150
+time:23
+
+name:Teleport Other
+type:gadget
+graphics:-:d
+level:45
+weight:15
+cost:5000
+alloc:20:45 to 100
+attack:1d1:0:0
+armor:0:0
+power:11
+effect:BOLT_STATUS:AWAY_ALL
+dice:$B
+expr:B:MAX_SIGHT:* 5
+time:25
+
+name:Disable Traps
+type:gadget
+graphics:-:d
+level:35
+weight:15
+cost:2100
+alloc:10:10 to 100
+attack:1d1:0:0
+armor:0:0
+power:7
+effect:ALTER:KILL_TRAP
+time:30
+
+name:Light
+type:gadget
+graphics:-:d
+level:10
+weight:15
+cost:500
+alloc:30:5 to 100
+attack:1d1:0:0
+armor:0:0
+vis-msg:A line of shimmering blue light appears.
+power:6
+effect:LINE:LIGHT_WEAK
+dice:6d8
+time:9
+
+name:Illumination
+type:gadget
+graphics:-:d
+level:20
+weight:15
+cost:1000
+alloc:20:10 to 100
+attack:1d1:0:0
+armor:0:0
+power:4
+effect:LIGHT_AREA
+effect:SPOT:LIGHT_WEAK:2
+dice:2d8
+time:30
+
+name:Recall
+type:gadget
+graphics:-:d
+level:30
+weight:15
+cost:4000
+alloc:10:30 to 100
+attack:1d1:0:0
+armor:0:0
+flags:IGNORE_ELEC
+power:15
+effect:RECALL
+time:60
+
+name:Speed
+type:gadget
+graphics:-:d
+level:95
+weight:15
+cost:25000
+alloc:10:80 to 100
+attack:1d1:0:0
+armor:0:0
+flags:IGNORE_ELEC
+power:10
+effect:TIMED_INC:FAST:0:5
+dice:20+2d10
+time:100
+
+
+##### Printers #####
+# pval = efficiency (/1000: 1000 would be perfect)
+
+name:& P-2 printer~
+type:printer
+graphics:%:Cream
+level:5
+alloc:10:1 to 100
+cost:370
+weight:1800g
+pval:500
+effect:PRINT:2:0
+desc:The famous self-replicable hobbyist's printer - it's not big and can't handle metals, but it is reliable and effective for what it can do - and the price can't be beat!
+material:plastic
+
+name:& P-5 printer~
+type:printer
+graphics:%:Blue
+level:8
+alloc:7:1 to 100
+cost:780
+weight:7200g
+pval:700
+effect:PRINT:20:0
+desc:A commercial scaled-up version of the self-replicable P-2, capable of handling most plastic items.
+material:plastic
+
+name:& A-1 printer~
+type:printer
+graphics:%:Gray90
+level:10
+alloc:5:1 to 100
+cost:600
+weight:1200g
+pval:550
+effect:PRINT:2:1
+desc:A printer designed to be especially compact and lightweight, suitable for plastic and light metal work.
+material:aluminium
+
+name:& A-20 printer~
+type:printer
+graphics:%:Green
+level:24
+alloc:3:5 to 100
+cost:5500
+weight:13.5kg
+pval:750
+effect:PRINT:250:1
+desc:A large, heavy printer, but capable of producing any plastic item and most aluminium ones, too.
+material:aluminium
+
+name:& H-5 printer~
+type:printer
+graphics:%:SlateGray
+level:28
+alloc:3:6 to 100
+cost:7200
+weight:8500g
+pval:700
+effect:PRINT:5:2
+desc:A medium-sized printer capable of handling all common metals - steel, titanium, aluminium - as well as plastics.
+material:steel
+
+name:& H-40 printer~
+type:printer
+graphics:%:Red
+level:48
+alloc:2:15 to 100
+cost:12000
+weight:45kg
+pval:800
+effect:PRINT:250:2
+desc:A very large and heavy printer, not intended to be portable, but capable of producing the largest items in any common material (steel, titanium, aluminium, plastic)
+material:steel
+
+name:& X-15 printer~
+type:printer
+graphics:%:AliceBlue
+level:65
+alloc:2:30 to 100
+cost:18000
+weight:18.7kg
+pval:775
+effect:PRINT:5:3
+desc:A printer intended for use with exotic materials such as unobtainium.  Apart from its modest size, it's as good as it gets.
+material:titanium
+
+name:& X-50 printer~
+type:printer
+graphics:%:Violet
+level:85
+alloc:2:40 to 100
+cost:35000
+weight:32kg
+pval:825
+effect:PRINT:250:3
+desc:A top-of-the-line printer, capable of handling exotic materials such as unobtainium and producing even the largest items. The only real disadvantage is the weight.
+material:titanium
+
+name:& X-99 printer~
+type:printer
+graphics:%:Violet
+level:95
+alloc:1:86 to 127
+cost:90000
+weight:9.2kg
+pval:825
+effect:PRINT:250:3
+desc:The only printer known to use unobtainium construction - as a result while it can do everything that the X-50 can do (producing even the largest items, in any material) it is a fraction of the weight.
+material:unobtainium
+
+
+
+##### Containers ######
+##
+## 'What's interesting about a container?'
+## - The contents. At least some containers should have 'themed' contents - items with a common purpose, or perhaps material, etc.
+## - Difficulty of getting into it. May be locked, sealed, trapped, etc. May be able to break into it, possibly damaging the contents.
+## - As all containers can take infinite bulk and high weight, avoid anything which sounds flimsy (paper bags, cardboard boxes).
+##
+#############################################################################
+
+
+name:& small wooden crate~
+type:chest
+graphics:~:Burlywood
+level:3
+weight:20kg
+cost:10
+alloc:10:1 to 100
+attack:2d3:0:0
+armor:0:0
+material:wood
+desc:A sturdy container built of closely overlapped boards.
+
+# metal ones are possible
+name:& plastic locker~
+type:chest
+graphics:~:s
+level:6
+weight:40kg
+cost:45
+alloc:10:2 to 100
+attack:2d5:0:0
+armor:0:0
+material:wood
+desc:A tub-shaped container made of thick, grey plastic with a chunky combination lock.
+
+name:& large wooden crate~
+type:chest
+graphics:~:Burlywood
+level:10
+weight:80kg
+cost:30
+alloc:10:4 to 100
+attack:2d5:0:0
+armor:0:0
+material:wood
+desc:A large, sturdy container built of closely overlapped boards.
+
+# this could be made of other metals
+name:& flight case~
+type:chest
+graphics:~:Gray80
+level:18
+weight:30kg
+cost:200
+alloc:15:16 to 100
+attack:2d4:0:0
+armor:0:0
+material:aluminium
+desc:A lightweight yet strong padded metal case, with a simple lock.
+
+# this could be made of other metals
+name:& trunk~
+type:chest
+graphics:~:Gray80
+level:26
+weight:80kg
+cost:450
+alloc:15:16 to 100
+attack:2d4:0:0
+armor:0:0
+material:aluminium
+desc:A large wheeled metal case, with a fingerprint lock set into the handle.
+
+name:& file cabinet~
+type:chest
+graphics:~:s
+level:35
+weight:120kg
+cost:150
+alloc:10:35 to 100
+attack:2d6:0:0
+armor:0:0
+material:steel
+desc:A large cabinet built from thin, rusty steel. The lock looks quite serious, though.
+
+# safes might rarely be of titanium, but not anything else
+name:& compact safe~
+type:chest
+graphics:~:s
+level:45
+weight:75kg
+cost:1200
+alloc:15:45 to 100
+attack:2d4:0:0
+armor:0:0
+desc:A small but very heavily built metal cabinet with an electronic lock.
+material:steel
+
+name:& large safe~
+type:chest
+graphics:~:s
+level:55
+weight:400kg
+cost:2500
+alloc:10:55 to 100
+attack:2d6:0:0
+armor:0:0
+desc:A large and extremely heavy metal cabinet with an electronic lock.
+material:steel
+
+##### Dragon Scale Mail #####
+
+name:Black Dragon Scale Mail~
+type:dragon armor
+graphics:[:s
+level:50
+weight:120
+cost:40000
+alloc:8:35 to 100
+attack:2d4:-2:0
+armor:16:10
+flags:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+values:RES_ACID[1]
+power:11
+effect:BREATH:ACID:0:20
+dice:120
+time:50
+desc:A suit of utterly black scales, against which no metal or wood can rest.
+
+
+##### Gold/gems #####
+
+name:bottle caps
+type:cash
+graphics:$:SteelBlue
+material:steel
+
+name:mountain money
+type:cash
+graphics:$:I
+material:paper
+
+name:wooden nickels
+type:cash
+graphics:$:Burlywood
+material:wood
+
+name:chocolate coins
+type:cash
+graphics:$:Gold
+material:aluminium
+
+name:monopoly money
+type:cash
+graphics:$:i
+material:paper
+
+name:sequins
+type:cash
+graphics:$:i
+material:plastic
+
+name:lottery tickets
+type:cash
+graphics:$:i
+material:paper
+
+name:arcade tokens
+type:cash
+graphics:$:Brass
+material:copper
+
+name:swarovskite
+type:cash
+graphics:$:y
+material:glass
+
+name:postage stamps
+type:cash
+graphics:$:i
+material:paper
+
+name:small change
+type:cash
+graphics:$:Copper
+material:copper
+
+name:book tokens
+type:cash
+graphics:$:T
+material:paper
+
+name:cubic zirconia
+type:cash
+graphics:$:w
+material:stone
+
+name:gift cards
+type:cash
+graphics:$:y
+material:paper
+
+name:ethelcoins
+type:cash
+graphics:$:Brass
+material:copper
+
+name:used bills
+type:cash
+graphics:$:ForestGreen
+material:paper
+
+name:santo gold
+type:cash
+graphics:$:Goldenrod
+material:copper
+
+name:liquor certificates
+type:cash
+graphics:$:Tan
+material:paper
+
+name:silver nuggets
+type:cash
+graphics:$:w
+material:silver
+
+name:pearls
+type:cash
+graphics:$:W
+material:organic
+
+name:space-miles
+type:cash
+graphics:$:SkyBlue
+material:paper
+
+name:opals
+type:cash
+graphics:$:W
+material:stone
+
+name:sapphires
+type:cash
+graphics:$:b
+material:stone
+
+name:gold dust
+type:cash
+graphics:$:Gold
+material:gold
+
+name:emeralds
+type:cash
+graphics:$:g
+material:stone
+
+name:rare coins
+type:cash
+graphics:$:Gold
+material:gold
+
+name:tiberium
+type:cash
+graphics:$:G
+material:metal
+
+name:rubies
+type:cash
+graphics:$:r
+material:stone
+
+name:platinum bars
+type:cash
+graphics:$:Grey75
+material:platinum
+
+name:diamonds
+type:cash
+graphics:$:w
+material:stone
+
+name:gold-pressed latinum
+type:cash
+graphics:$:Gold
+material:gold
+
+name:dilithium crystals
+type:cash
+graphics:$:w
+material:stone
+
+name:unobtainium wafers
+type:cash
+graphics:$:AliceBlue
+material:unobtainium
+
+
+##### "Morgoth Artifacts" #####
+
+# These objects are never created without being turned into artifacts.
+# This simplifies the code for "killing the winner monster".
+
+name:& Mighty Hammer~
+type:hafted
+graphics:\:D
+level:15
+weight:200
+cost:1000
+attack:3d9:0:0
+armor:0:0
+flags:INSTA_ART | QUEST_ART
+
+name:& Massive Iron Crown~
+type:crown
+graphics:]:D
+level:44
+weight:20
+cost:1000
+attack:1d1:0:0
+armor:0:0
+flags:INSTA_ART | QUEST_ART
+
+
+#The "Special Artifacts" are now automatically generated from artifact.txt
+
+name:& chocolate egg~
+type:food
+graphics:,:Violet
+level:0
+weight:200g
+cost:25
+alloc:15:0 to 20
+power:0
+flags:SPECIAL_GEN
+msg:That tastes good.
+effect:NOURISH:INC_BY
+dice:50
+desc:A chocolate egg, covered in shiny purple foil.

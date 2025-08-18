@@ -1,0 +1,350 @@
+# File: p_class.txt
+
+# This file is used to initialize the "lib/data/p_class.raw" file, which is
+# used to initialize the "class" information for the EyAngband game.
+
+# Do not modify this file unless you know exactly what you are doing,
+# unless you wish to risk possible system crashes and broken savefiles.
+
+# Format:
+# N:class number:class name
+# S:str:int:wis:dex:con:chr
+# C:dis:byp:dev:sav:stl:per:thn:thb:tht:dig:alc 
+# X:dis:byp:dev:sav:stl:per:thn:thb:tht:dig:alc
+# O:acd:elc:fir:cld:wtr:poi:dis:lit:drk:snd:shr:nex:nth:chs:dsn:tim:mna
+# I:hitdie:expbase:spellstat1:spellstat2:disturbweight
+# B:sval:handicap
+# E:tval:sval:min:max - starting equipment, up to 3 entries per class
+# T:class titles - there must be exactly 10 of these per class
+# F:class flags 
+
+# 'N' indicates the beginning of an entry. The serial number must
+# increase for each new item.
+
+# 'S' Is the stat modifiers for the class, applied during class creation.
+
+# 'C' and 'X' are the skill lines - 'C' represents the basic class skill, and 'X' 
+# is the amount of skill gained every 10 levels.
+
+# 'I' is class info. Hitdie and Expbase are modified according to race. Attacks factor
+# determines the number of melee attacks you might get - higher is better (max = 4). The two 
+# spellstats are  the index number of the stats (0 = STR, 1 = INT, 2 = WIS, 3 = DEX, 
+# 4 = CON, 5 = CHR) used for mana and fail rate calculations -
+# the actual figure used is the average of the two stats, use the same stat twice if 
+# only one stat has effect. Disturbweight is the maximum weight the character can wear
+# without losing mana.
+
+# 'B' is for spell book allowances. You must list the sval of the book, and its handicap.
+
+# 'E' lines are for equipment - you can have 0-3 of these lines. Tval and Sval determine
+# which object will be generated, and min and max determine the possible quantity of the
+# item with which the character shall begin. Note that weapons, an several basic items,
+# are generated independantly of these lines.
+
+# 'T' lines determine the class titles - the number of lines does not make a difference 
+# but there must be exactly 10 titles in all divided between them. The titles are seperated
+# by the '|' symbol.
+
+# 'F' is for flags. As many F: lines may be used as are needed to specify all the flags
+# and flags are separated by the '|' symbol. The current possible flags are:
+#
+# PSEUDO_IDn - Where n is a value between 1 to 4. The higher n is, the faster the pseudo 
+# id.
+# PSEDUO_ID_HEAVY - If a class has this flag it gets the "heavy" (more detailed) pseudo ID.
+# EXTRA_SHOT - The character shall gain extra shots at higher levels.
+# BRAVERY_30 - The character shall gain resistance to fear at level 30.
+# NO_GLOVE - Spellcasting skills are reduced by wearing gloves.
+# BLESS_WEAPON - The character's spellcasting skill is reduced by using non-hafted, 
+# non-blessed weapons. Also, the character will get a more powerful orb of destruction.
+# CHOOSE_SPELLS - Allows the character to choose which spell to learn.
+# ZERO_FAIL - The character can reach a 0% fail rate for spells. Without this, fail rate
+# is determined by the relevant realm's handicap.
+# BEAM - The character's bolt spells have a higher chance of beaming.
+# POWER - The character's spells will be more powerful.
+# INFLUENCE - Monsters will find it harder to resist player "condition" spells (such as sleep).
+# EXTRA_MANA - The character gets 1.5 times as much mana as without this flag.
+# EXTRA_SPELL - The character gains spells faster.
+# MYSTIC_CAST - Allows the character to cast spells from the mystic spellbooks even
+# while blinded or confused.
+# MUSIC - Allows the character to use musical instruments.
+# LORE - Identifying an artifact reveals all info about it (acts as *identify*)
+# BETTER_CRITICAL - Improved critical hits in melee.
+# BETTER_SHOT - Improved critical hits with fire weapons.
+# BETTER_THROW	- Improved critical hits with throwen weapons.
+# TRAP_KNOW	- Allows accurate trap descriptions.
+# TRAP_PLACE - Allows placement of traps.
+# APPRAISE - Allows "sensing" item value.
+# SUB_SPELLS - Allows acces to sub-spell menus.
+# BETTER_BLOWS - Provides a bonus to amount of blows in melee.
+# WORSE_BLOWS - Provides a penalty to amount of blows in melee.
+# WEAPON_GOOD - Better selection of starting weapons.
+# WEAPON_NONE - No starting weapon
+
+
+# Version stamp (required)
+
+V:0.5.2
+
+N:0:Warrior
+S:3:-2:-1:2:1:-2
+C:25:5:18:21:1:15:10:7:8:0:26
+X:10:1:7:11:0:2:7:6:6:0:5
+O:18:18:18:18:5:12:12:5:5:5:5:3:3:3:5:0:0
+I:9:0:0:0:0
+# Leather Scale Mail, Small leather Shield, Potion of Berserk Strength
+E:75:30:1:1
+E:36:6:1:1
+E:34:3:1:1
+T:Rookie
+T:Soldier
+T:Mercenary
+T:Veteran
+T:Swordsman
+T:Champion
+T:Hero
+T:Baron
+T:Duke
+T:Lord
+F:BRAVERY_30 | PSEUDO_ID4 | BETTER_CRITICAL | PSEUDO_ID_HEAVY | BETTER_BLOWS |
+F:WEAPON_GOOD
+
+N:1:Thief
+S:0:0:-2:3:0:-1
+C:40:30:30:30:3:25:7:4:7:0:40
+X:10:10:7:10:1:3:4:3:4:0:8
+O:10:10:10:10:5:5:15:5:10:15:5:3:3:3:0:0:0
+I:3:0:0:0:0
+# Soft Leather Armor, 3 Potions of Stealth, 1 Potion of Invisibility
+E:36:3:1:1
+E:75:23:3:3
+E:75:63:1:1
+T:Cutpurse
+T:Robber
+T:Burgler
+T:Catburgler
+T:Dodger
+T:Rogue
+T:Knave
+T:Thief
+T:Master-Thief
+T:Shadow
+F:PSEUDO_ID4 | PSEUDO_ID_HEAVY | TRAP_KNOW | TRAP_PLACE | BETTER_THROW |
+F:APPRAISE
+
+N:2:Mage
+S:-3:2:0:1:-1:1
+C:30:0:36:30:2:14:3:2:2:0:45
+X:7:1:13:9:0:1:2:2:2:0:10
+O:15:15:15:15:5:5:5:5:5:5:5:10:10:10:0:0:3
+I:0:25:1:1:250
+B:0:1
+B:1:1
+B:2:1
+B:3:1
+B:4:1
+B:5:1
+B:6:1
+B:7:1
+B:8:1
+B:22:1
+B:23:1
+B:24:1
+# Robes, Scroll of WoR, [Elementary Incantations]
+E:70:12:1:1
+E:90:0:1:1
+E:36:1:1:1
+T:Novice
+T:Apprentice
+T:Trickster
+T:Illusionist
+T:Spellbinder
+T:Evoker
+T:Conjurer
+T:Warlock
+T:Sorcerer
+T:Mage-Lord
+F:NO_GLOVE | ZERO_FAIL | BEAM | PSEUDO_ID1 | CHOOSE_SPELLS | 
+F:SUB_SPELLS | WORSE_BLOWS
+
+N:3:Spellsword
+S:2:1:-1:0:0:0
+C:25:3:30:25:1:12:8:4:4:0:30
+X:7:1:10:10:0:1:5:4:4:0:7
+O:13:13:13:13:5:10:10:5:5:5:5:3:3:5:0:0:0
+I:5:35:1:1:400
+B:0:5
+B:1:5
+B:2:5
+B:3:5
+B:4:5
+B:5:5
+B:6:5
+B:7:5
+B:8:5
+# Hard Leather Armor, Wooden Shield, Scroll of Teleportation.
+E:34:1:1:1
+E:36:4:1:1
+E:70:10:1:1 
+T:Student
+T:Journeyman
+T:Spellslinger
+T:Wizard
+T:Warrior-Mage
+T:Knight-Mage
+T:Spellsword
+T:Battlemage
+T:Scourge
+T:Wizard-Lord
+F:PSEUDO_ID2 | CHOOSE_SPELLS | SUB_SPELLS | WEAPON_GOOD
+
+N:4:Ranger
+S:1:1:0:2:0:0
+C:30:10:32:28:3:24:7:12:10:0:35
+X:8:3:10:10:0:3:4:6:5:0:8
+O:20:20:20:20:15:15:15:3:3:3:3:3:3:3:0:0:0
+I:4:25:1:1:350
+B:0:3
+B:1:4
+B:2:7
+B:4:5
+B:5:11
+B:9:3
+# Soft Leather Armor, Arrows, Hunting Bow
+E:36:3:1:1
+E:15:0:15:20
+E:20:1:1:1
+T:Runner
+T:Strider
+T:Scout
+T:Courser
+T:Tracker
+T:Guide
+T:Pathfinder
+T:Low-Ranger
+T:High-Ranger
+T:Ranger-Lord
+F:EXTRA_SHOT | PSEUDO_ID2 | CHOOSE_SPELLS | BETTER_SHOT
+
+N:5:Priest
+S:-1:-2:2:-1:0:1
+C:25:0:30:32:2:15:5:4:4:0:30
+X:7:0:10:12:0:1:3:2:2:0:7
+O:10:10:10:10:5:5:5:10:15:5:5:10:15:10:0:0:0
+I:2:15:2:2:350
+B:10:1
+B:11:1
+B:12:1
+B:13:1
+B:14:1
+B:15:1
+B:16:1
+B:17:1
+B:18:1
+B:22:1
+B:23:1
+B:24:1
+# Robes, Potion of Healing, [Beginner's Handbook]
+E:36:1:1:1
+E:75:34:1:1
+E:90:10:1:1
+T:Believer
+T:Acolyte
+T:Adept
+T:Curate
+T:Canon
+T:Lama
+T:Patriarch
+T:Priest
+T:High-Priest
+T:Archpriest
+F:BLESS_WEAPON | ZERO_FAIL | PSEUDO_ID4 
+
+N:6:Paladin
+S:2:-2:1:0:1:1
+C:20:0:24:25:1:12:9:4:4:0:19
+X:7:0:10:11:0:1:5:4:4:0:5
+O:10:10:10:10:5:5:5:5:10:5:5:10:15:10:0:0:0
+I:6:30:2:2:400
+B:10:5
+B:11:5
+B:12:5
+B:13:5
+B:14:5
+B:15:5
+B:16:5
+B:17:5
+B:18:5
+# Hard Leather Armor, Small Metal Shield, Scroll of Protection from Evil
+E:34:3:1:1
+E:36:4:1:1
+E:70:37:1:1
+T:Gallant
+T:Keeper
+T:Protector
+T:Defender
+T:Warder
+T:Knight
+T:Guardian
+T:Low-Paladin
+T:High-Paladin
+T:Paladin-Lord
+F:PSEUDO_ID3 | PSEUDO_ID_HEAVY | WEAPON_GOOD
+
+N:7:Mystic
+S:-4:3:3:0:0:0
+C:25:2:23:35:3:15:1:2:8:0:30
+X:6:1:4:10:0:2:1:1:4:0:5
+O:15:15:15:15:10:10:10:10:10:10:10:10:10:0:0:0:8
+I:1:27:1:2:180
+B:0:1
+B:1:1
+B:2:1
+B:3:1
+B:10:1
+B:11:1
+B:12:1
+B:20:1
+B:21:1
+B:22:1
+B:23:1
+B:24:1
+# [Elementary Incantations], [Beginner's Handbook], Powder of Incineration
+E:76:13:1:1
+E:90:0:1:1
+E:90:10:1:1
+T:Aspirant
+T:Initiate
+T:Mystic
+T:Grand-Mystic
+T:Seer
+T:Guru
+T:Enlightened
+T:Master
+T:Grand-Master
+T:Transcendent
+F:NO_GLOVE | ZERO_FAIL | POWER | PSEUDO_ID1 | SUB_SPELLS | WORSE_BLOWS
+F:EXTRA_MANA | EXTRA_SPELL | MYSTIC_CAST | CHOOSE_SPELLS | WEAPON_NONE
+
+N:8:Bard
+S:0:1:-1:1:0:2
+C:25:10:30:25:3:18:7:5:4:0:40
+X:10:2:10:10:0:2:4:5:2:0:8
+O:10:10:10:10:5:5:5:5:10:15:5:3:3:5:0:0:0
+I:3:15:5:5:350
+# Hard Leather Armor, Lyre, Horn
+E:36:4:1:1
+E:50:0:1:1
+E:50:1:1:1
+T:Performer
+T:Entertainer
+T:Musician
+T:Troubador
+T:Minstrel
+T:Courtier
+T:Poet
+T:Bard
+T:Master-Bard
+T:Maestro
+F:MUSIC | PSEUDO_ID4 | PSEUDO_ID_HEAVY | NO_GLOVE | LORE | INFLUENCE |
+F:ZERO_FAIL
+

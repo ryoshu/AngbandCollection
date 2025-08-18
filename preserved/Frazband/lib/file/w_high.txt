@@ -1,0 +1,89 @@
+N:*:Default
+87
+of Ultimate Might
+'Slayer'
+'World Ender'
+'Destructor'
+of Destruction
+'Impulse'
+'Vanquisher'
+'Molliner'
+'Hand of God'
+'Deathstorm'
+'Word of God'
+'Idkfa'
+'Quietus'
+'Wraithverge'
+'Arc of Death'
+of Death
+'Devastator'
+'Excsymyr'
+'Vorax'
+of Muramasa
+'Bloodscourge'
+'Armageddon'
+'Devourer'
+'Abyss'
+'Cosmic Horror'
+'Dragon Fang'
+'Nemesis'
+'Death Wish'
+'Exodus'
+'Exterminator'
+'Thunderstrike'
+'Bloodwych'
+'Inferno'
+'Warhead'
+'Red Storm'
+'Dominator'
+'Conqueror'
+'Angel of Death'
+'Destroying Angel'
+'Black Star'
+'Turma'
+'Surma'
+'Kalma'
+'Right Hand of Justice'
+'Apocalyptica'
+'Doomsday'
+'Judgement of Heaven'
+'Creeping Death'
+'Eternity's End'
+'Word of Death'
+'Weapon Omega'
+'Finalizer'
+of Fargoal
+of Gerard
+of Elric
+of Erlik
+'Aeglin'
+'Aeglos'
+'Fatal Destiny'
+'Undying Samurai'
+'Eternal Verities'
+'Durindana'
+'Joyeuse'
+of the Eagle Lord
+'Azriel's Own'
+of Goalt
+of Sawisk
+of Pooswe
+of Luhi
+of Nampomi
+of Duquoo
+of Oarolla
+of Faska
+of Lobomp
+of Ohop
+'Dunadea'
+'Laldit'
+'Oilodut'
+'Elessate'
+'Talcam'
+'Daca'
+'Taneelate'
+'Colnor'
+'Rebiv'
+'Avioreer'
+'Rarra'
+'Loyewal'

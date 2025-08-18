@@ -1,0 +1,932 @@
+# File: e_info.txt
+
+
+# This file is used to initialize the "lib/raw/e_info.raw" file, which is
+# used to initialize the "ego-item" information for the Angband game.
+
+# Do not modify this file unless you know exactly what you are doing,
+# unless you wish to risk possible system crashes and broken savefiles.
+
+# After modifying this file, delete the "lib/raw/e_info.raw" file.
+
+
+# The ego-item indexes are defined in "defines.h", and must not be changed.
+
+# Ego-items 1-63 are "armor", and 64-127 are "weapons"
+
+# Note that every "ego-item" type has a different "index", and can only be
+# created from items that belong to a certain "slot" in the equipment, if
+# one assumes that "ammo" belongs to an imaginary slot (23).  However, it
+# is possible for several "ego-item" types to have the same "textual name",
+# such as with "Armor of Resistance" and "Shield of Resistance".
+
+
+# Version stamp
+
+V:2.7.10
+
+
+### Body Armor ###
+
+N:4:of Resist Acid
+I:<slot>30:<rating>16:<weight>100
+W:<level>0:<rarity>0:<cost>1000
+F:EASY_KNOW | RES_ACID | IGNORE_ACID
+
+N:5:of Resist Lightning
+I:<slot>30:<rating>10:<weight>100
+W:<level>0:<rarity>0:<cost>400
+F:EASY_KNOW | RES_ELEC | IGNORE_ELEC
+
+N:6:of Resist Fire
+I:<slot>30:<rating>14:<weight>100
+W:<level>0:<rarity>0:<cost>800
+F:EASY_KNOW | RES_FIRE | IGNORE_FIRE
+
+N:7:of Resist Cold
+I:<slot>30:<rating>12:<weight>100
+W:<level>0:<rarity>0:<cost>600
+F:EASY_KNOW | RES_COLD | IGNORE_COLD
+
+N:8:of Resistance
+I:<slot>30:<rating>20:<weight>100
+W:<level>0:<rarity>0:<cost>12500
+C:<max tohit>0:<max todam>0:<max ac>10:<max p1val>0:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>0:<min p2val>0
+F:EASY_KNOW | RES_ACID | RES_ELEC | RES_FIRE | RES_COLD |
+F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+
+# OnePower
+
+# jk - armor of elvenkind weights 1/4 of normal armor
+
+N:9:of Elvenkind
+I:<slot>30:<rating>25:<weight>25
+W:<level>0:<rarity>0:<cost>15000
+C:<max tohit>0:<max todam>0:<max ac>10:<max p1val>3:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>0
+F:STEALTH1 |
+F:RES_ACID | RES_ELEC | RES_FIRE | RES_COLD |
+F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+
+# 10 (unused)
+
+# OnePower
+
+N:11:of Permanence
+I:<slot>30:<rating>30:<weight>100
+W:<level>0:<rarity>0:<cost>30000
+C:<max tohit>0:<max todam>0:<max ac>10:<max p1val>0:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>0:<min p2val>0
+F:SUST_STR | SUST_DEX | SUST_CON | SUST_INT | SUST_WIS | SUST_CHR |
+F:HOLD_LIFE | RES_ACID | RES_ELEC | RES_FIRE | RES_COLD |
+F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+
+# jk - armor of quality +15 / +25 AC, -10 tohit, +80% weight
+N:12:of Quality
+I:<slot>30:<rating>30:<weight>180
+W:<level>0:<rarity>0:<cost>5000
+C:<max tohit>-10:<max todam>0:<max ac>25:<max p1val>0:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>-5:<min todam>0:<min ac>15:<min p1val>0:<min p2val>0
+
+# 13 (unused)
+
+# 14 (unused)
+
+# 15 (unused)
+
+
+### Shields ###
+
+N:16:of Resist Acid
+I:<slot>32:<rating>16:<weight>100
+W:<level>0:<rarity>0:<cost>1000
+F:RES_ACID | IGNORE_ACID
+
+N:17:of Resist Lightning
+I:<slot>32:<rating>10:<weight>100
+W:<level>0:<rarity>0:<cost>400
+F:RES_ELEC | IGNORE_ELEC
+
+N:18:of Resist Fire
+I:<slot>32:<rating>14:<weight>100
+W:<level>0:<rarity>0:<cost>800
+F:RES_FIRE | IGNORE_FIRE
+
+N:19:of Resist Cold
+I:<slot>32:<rating>12:<weight>100
+W:<level>0:<rarity>0:<cost>600
+F:RES_COLD | IGNORE_COLD
+
+N:20:of Resistance
+I:<slot>32:<rating>20:<weight>100
+W:<level>0:<rarity>0:<cost>12500
+C:<max tohit>0:<max todam>0:<max ac>10:<max p1val>0:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>0:<min p2val>0
+F:RES_ACID | RES_ELEC | RES_FIRE | RES_COLD |
+F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+
+# 21 (unused)
+N:21:of the Dwarves
+I:<slot>32:<rating>15:<weight>120
+W:<level>0:<rarity>0:<cost>8000
+C:<max tohit>0:<max todam>0:<max ac>0:<max p1val>3:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>0
+F:CON1 | INFRA1
+
+# 22 (unused)
+
+### Crowns and Helms ###
+
+N:23:of Crushing
+I:<slot>33:<rating>13:<weight>500
+W:<level>0:<rarity>0:<cost>100
+C:<max tohit>0:<max todam>0:<max ac>10:<max p1val>0:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>0:<min p2val>0
+F:CURSED
+
+N:24:of Intelligence
+I:<slot>33:<rating>13:<weight>100
+C:<max tohit>0:<max todam>0:<max ac>0:<max p1val>2:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>0
+W:<level>0:<rarity>0:<cost>500
+F:INT1 | SUST_INT
+
+N:25:of Wisdom
+I:<slot>33:<rating>13:<weight>100
+W:<level>0:<rarity>0:<cost>500
+C:<max tohit>0:<max todam>0:<max ac>0:<max p1val>2:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>0
+F:WIS1 | SUST_WIS
+
+N:26:of Beauty
+I:<slot>33:<rating>8:<weight>100
+W:<level>0:<rarity>0:<cost>1000
+C:<max tohit>0:<max todam>0:<max ac>0:<max p1val>4:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>0
+F:CHR1 | SUST_CHR
+
+# OneAbility
+
+N:27:of the Magi
+I:<slot>33:<rating>15:<weight>100
+W:<level>0:<rarity>0:<cost>7500
+C:<max tohit>0:<max todam>0:<max ac>0:<max p1val>3:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>0
+F:INT1 | SUST_INT |
+F:RES_ACID | RES_ELEC | RES_FIRE | RES_COLD |
+F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+
+N:28:of Might
+I:<slot>33:<rating>19:<weight>100
+W:<level>0:<rarity>0:<cost>2000
+C:<max tohit>0:<max todam>0:<max ac>0:<max p1val>3:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>0
+F:STR1 | DEX1 | CON1 | SUST_STR | SUST_DEX | SUST_CON | FREE_ACT
+
+N:29:of Lordliness
+I:<slot>33:<rating>17:<weight>100
+W:<level>0:<rarity>0:<cost>2000
+C:<max tohit>0:<max todam>0:<max ac>0:<max p1val>3:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>0
+F:WIS1 | CHR1 | SUST_WIS | SUST_CHR
+
+N:30:of Seeing
+I:<slot>33:<rating>8:<weight>100
+W:<level>0:<rarity>0:<cost>1000
+C:<max tohit>0:<max todam>0:<max ac>0:<max p1val>5:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>0
+F:SEARCH1 | RES_BLIND | SEE_INVIS
+
+N:31:of Infravision
+I:<slot>33:<rating>11:<weight>100
+W:<level>0:<rarity>0:<cost>500
+C:<max tohit>0:<max todam>0:<max ac>0:<max p1val>5:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>0
+F:INFRA1 | HIDE_TYPE
+
+N:32:of Light
+I:<slot>33:<rating>6:<weight>100
+W:<level>0:<rarity>0:<cost>500
+F:SOMELITE | RES_LITE
+
+N:33:of Telepathy
+I:<slot>33:<rating>20:<weight>100
+W:<level>0:<rarity>0:<cost>50000
+F:TELEPATHY
+
+N:34:of Regeneration
+I:<slot>33:<rating>10:<weight>100
+W:<level>0:<rarity>0:<cost>1500
+F:REGEN
+
+N:35:of Teleportation
+I:<slot>33:<rating>0:<weight>100
+W:<level>0:<rarity>0:<cost>0
+F:TELEPORT
+
+N:36:of Stupidity
+I:<slot>33:<rating>0:<weight>100
+C:<max tohit>0:<max todam>0:<max ac>0:<max p1val>5:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>0
+W:<level>0:<rarity>0:<cost>0
+F:INT1
+
+N:37:of Naivety
+I:<slot>33:<rating>0:<weight>100
+C:<max tohit>0:<max todam>0:<max ac>0:<max p1val>5:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>0
+W:<level>0:<rarity>0:<cost>0
+F:WIS1
+
+N:38:of Ugliness
+I:<slot>33:<rating>0:<weight>100
+C:<max tohit>0:<max todam>0:<max ac>0:<max p1val>5:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>0
+W:<level>0:<rarity>0:<cost>0
+F:CHR1
+
+N:39:of Sickliness
+I:<slot>33:<rating>0:<weight>100
+C:<max tohit>0:<max todam>0:<max ac>0:<max p1val>5:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>0
+W:<level>0:<rarity>0:<cost>0
+F:STR1 | DEX1 | CON1
+
+N:40:of the Noldor
+I:<slot>33:<rating>20:<weight>100
+C:<max tohit>0:<max todam>0:<max ac>0:<max p1val>3:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>0
+W:<level>0:<rarity>0:<cost>900
+F:DEX1 | SUST_DEX | ACTIVATE
+
+### Cloaks ###
+
+N:41:of Protection
+I:<slot>31:<rating>10:<weight>100
+W:<level>0:<rarity>0:<cost>500
+C:<max tohit>0:<max todam>0:<max ac>10:<max p1val>0:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>0:<min p2val>0
+F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+
+N:42:of Stealth
+I:<slot>31:<rating>10:<weight>100
+W:<level>0:<rarity>0:<cost>500
+C:<max tohit>0:<max todam>0:<max ac>0:<max p1val>3:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>0
+F:STEALTH1
+
+# OnePower
+
+N:43:of Aman
+I:<slot>31:<rating>20:<weight>100
+W:<level>0:<rarity>0:<cost>4000
+C:<max tohit>0:<max todam>0:<max ac>20:<max p1val>5:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>0
+F:STEALTH1 |
+F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+
+N:44:of Enveloping
+I:<slot>31:<rating>0:<weight>100
+W:<level>0:<rarity>0:<cost>0
+C:<max tohit>10:<max todam>10:<max ac>0:<max p1val>0:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>0:<min p2val>0
+F:SHOW_MODS
+
+N:45:of Vulnerability
+I:<slot>31:<rating>0:<weight>100
+W:<level>0:<rarity>0:<cost>0
+C:<max tohit>0:<max todam>0:<max ac>50:<max p1val>0:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>0:<min p2val>0
+F:AGGRAVATE
+
+N:46:of Irritation
+I:<slot>31:<rating>0:<weight>100
+W:<level>0:<rarity>0:<cost>0
+C:<max tohit>15:<max todam>15:<max ac>0:<max p1val>0:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>0:<min p2val>0
+F:AGGRAVATE | SHOW_MODS
+
+# 47 (unused)
+
+
+### Gloves ###
+
+N:48:of Free Action
+I:<slot>34:<rating>11:<weight>100
+F:FREE_ACT | EASY_KNOW
+W:<level>0:<rarity>0:<cost>1000
+
+N:49:of Slaying
+I:<slot>34:<rating>17:<weight>100
+W:<level>0:<rarity>0:<cost>1500
+C:<max tohit>5:<max todam>5:<max ac>0:<max p1val>0:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>0:<min p2val>0
+F:SHOW_MODS
+
+N:50:of Agility
+I:<slot>34:<rating>14:<weight>100
+W:<level>0:<rarity>0:<cost>1000
+C:<max tohit>0:<max todam>0:<max ac>0:<max p1val>5:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>0
+F:DEX1 | HIDE_TYPE
+
+N:51:of Power
+I:<slot>34:<rating>22:<weight>100
+W:<level>0:<rarity>0:<cost>2500
+C:<max tohit>5:<max todam>5:<max ac>0:<max p1val>5:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>0
+F:STR1 | SHOW_MODS | HIDE_TYPE
+
+N:52:of Magic
+I:<slot>34:<rating>22:<weight>100
+W:<level>0:<rarity>0:<cost>5000
+C:<max tohit>-20:<max todam>-20:<max ac>0:<max p1val>5:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>-10:<min todam>-10:<min ac>0:<min p1val>1:<min p2val>0
+F:MAGIC1 | SHOW_MODS
+
+N:53:of Weakness
+I:<slot>34:<rating>0:<weight>100
+W:<level>0:<rarity>0:<cost>0
+C:<max tohit>0:<max todam>0:<max ac>0:<max p1val>10:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>0
+F:STR1
+
+N:54:of Clumsiness
+I:<slot>34:<rating>0:<weight>100
+W:<level>0:<rarity>0:<cost>0
+C:<max tohit>0:<max todam>0:<max ac>0:<max p1val>10:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>0
+F:DEX1
+
+### Boots ###
+
+N:55:of Slow Descent
+I:<slot>35:<rating>7:<weight>100
+W:<level>0:<rarity>0:<cost>250
+F:FEATHER
+
+N:56:of Stealth
+I:<slot>35:<rating>16:<weight>100
+W:<level>0:<rarity>0:<cost>500
+C:<max tohit>0:<max todam>0:<max ac>0:<max p1val>3:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>0
+F:STEALTH1
+
+N:57:of Free Action
+I:<slot>35:<rating>15:<weight>100
+W:<level>0:<rarity>0:<cost>1000
+F:FREE_ACT
+
+N:58:of Speed
+I:<slot>35:<rating>25:<weight>100
+W:<level>0:<rarity>0:<cost>200000
+C:<max tohit>0:<max todam>0:<max ac>0:<max p1val>10:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>0
+F:SPEED1 | HIDE_TYPE
+
+# jk - boots of heavy step and of jumping added
+
+N:59:of Heavy Step
+I:<slot>35:<rating>7:<weight>400
+W:<level>0:<rarity>0:<cost>500
+C:<max tohit>0:<max todam>0:<max ac>10:<max p1val>-3:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>-1:<min p2val>0
+F:STEALTH1
+
+N:60:of Jumping
+I:<slot>35:<rating>7:<weight>100
+W:<level>0:<rarity>0:<cost>500
+F:HIDE_TYPE | ACTIVATE
+
+N:61:of Noise
+I:<slot>35:<rating>0:<weight>100
+W:<level>0:<rarity>0:<cost>0
+F:AGGRAVATE
+
+N:62:of Slowness
+I:<slot>35:<rating>0:<weight>100
+W:<level>0:<rarity>0:<cost>0
+C:<max tohit>0:<max todam>0:<max ac>0:<max p1val>5:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>0
+F:SPEED1
+
+N:63:of Annoyance
+I:<slot>35:<rating>0:<weight>100
+W:<level>0:<rarity>0:<cost>0
+C:<max tohit>0:<max todam>0:<max ac>0:<max p1val>10:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>0
+F:SPEED1 | AGGRAVATE
+
+### Rings ###
+
+N:70:of Stalking
+I:<slot>26:<rating>0:<weight>100
+W:<level>0:<rarity>0:<cost>1000
+C:<max tohit>5:<max todam>0:<max ac>0:<max p1val>3:<max p2val>-3:<ds>0:<dd>0
+M:<min tohit>1:<min todam>0:<min ac>0:<min p1val>1:<min p2val>-1
+F:DEX1 | STEALTH1 | SPEED2 | CHR2 | SHOW_MODS
+
+N:71:of Mindless Rage
+I:<slot>26:<rating>0:<weight>100
+W:<level>0:<rarity>0:<cost>1000
+C:<max tohit>0:<max todam>10:<max ac>-8:<max p1val>5:<max p2val>-3:<ds>0:<dd>0
+M:<min tohit>0:<min todam>2:<min ac>-2:<min p1val>1:<min p2val>-1
+F:STR1 | STEALTH2 | SEARCH2 | INT2 | WIS2 | MAGIC2 | SHOW_MODS
+
+N:72:of Meditation
+I:<slot>26:<rating>0:<weight>100
+W:<level>0:<rarity>0:<cost>1000
+C:<max tohit>0:<max todam>-7:<max ac>0:<max p1val>5:<max p2val>-3:<ds>0:<dd>0
+M:<min tohit>0:<min todam>-2:<min ac>0:<min p1val>1:<min p2val>-1
+F:INT1 | WIS1 | CHR1 | MAGIC1 | STEALTH2 | SEARCH2 | SPEED2 | SHOW_MODS
+
+N:73:of Rushing
+I:<slot>26:<rating>0:<weight>100
+W:<level>0:<rarity>0:<cost>1000
+C:<max tohit>0:<max todam>0:<max ac>0:<max p1val>4:<max p2val>-3:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>-1
+F:SPEED1 | STEALTH2 | SEARCH2 | STR2 | CON2
+
+N:74:of Numenor
+I:<slot>26:<rating>0:<weight>100
+W:<level>0:<rarity>0:<cost>1000
+C:<max tohit>0:<max todam>0:<max ac>0:<max p1val>2:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>0
+F:CON1 | CHR1
+
+N:75:of Moria
+I:<slot>26:<rating>0:<weight>100
+W:<level>0:<rarity>0:<cost>1000
+C:<max tohit>0:<max todam>0:<max ac>0:<max p1val>4:<max p2val>-4:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>-1
+F:STR1 | TUNNEL1 | WIS2 | DEX2
+
+N:76:of Lothlorien
+I:<slot>26:<rating>0:<weight>100
+W:<level>0:<rarity>0:<cost>1000
+C:<max tohit>0:<max todam>0:<max ac>0:<max p1val>3:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>0
+F:DEX1 | LITE1
+
+N:77:of Gondor
+I:<slot>26:<rating>0:<weight>100
+W:<level>0:<rarity>0:<cost>1000
+C:<max tohit>10:<max todam>10:<max ac>0:<max p1val>5:<max p2val>4:<ds>0:<dd>0
+M:<min tohit>2:<min todam>2:<min ac>0:<min p1val>1:<min p2val>2
+F:CHR1 | MAGIC1 | INT2 | WIS2 | SHOW_MODS
+
+N:78:of Rohan
+I:<slot>26:<rating>0:<weight>100
+W:<level>0:<rarity>0:<cost>1000
+C:<max tohit>10:<max todam>10:<max ac>0:<max p1val>3:<max p2val>-3:<ds>0:<dd>0
+M:<min tohit>2:<min todam>2:<min ac>0:<min p1val>1:<min p2val>-1
+F:CON1 | STR2 | RES_FEAR | SHOW_MODS
+
+N:80:of Withering
+I:<slot>26:<rating>0:<weight>100
+W:<level>0:<rarity>0:<cost>1000
+C:<max tohit>10:<max todam>10:<max ac>0:<max p1val>-3:<max p2val>-3:<ds>0:<dd>0
+M:<min tohit>2:<min todam>2:<min ac>0:<min p1val>-1:<min p2val>-1
+F:CON1 | STR1 | CURSED | SHOW_MODS
+
+N:81:of Feeble Fingers
+I:<slot>26:<rating>0:<weight>100
+W:<level>0:<rarity>0:<cost>1000
+C:<max tohit>10:<max todam>10:<max ac>0:<max p1val>-3:<max p2val>-3:<ds>0:<dd>0
+M:<min tohit>2:<min todam>2:<min ac>0:<min p1val>-1:<min p2val>-1
+F:DEX1 | STR1 | CURSED | SHOW_MODS
+
+N:82:of Shaking
+I:<slot>26:<rating>0:<weight>100
+W:<level>0:<rarity>0:<cost>1000
+C:<max tohit>10:<max todam>10:<max ac>0:<max p1val>-3:<max p2val>-3:<ds>0:<dd>0
+M:<min tohit>2:<min todam>2:<min ac>0:<min p1val>-1:<min p2val>-1
+F:DEX1 | CON1 | CURSED | SHOW_MODS
+
+N:83:of Dulled Mind
+I:<slot>26:<rating>0:<weight>100
+W:<level>0:<rarity>0:<cost>1000
+C:<max tohit>10:<max todam>10:<max ac>0:<max p1val>-3:<max p2val>-3:<ds>0:<dd>0
+M:<min tohit>2:<min todam>2:<min ac>0:<min p1val>-1:<min p2val>-1
+F:DEX1 | INT1 | CURSED | SHOW_MODS
+
+N:84:of Dulled Spirit
+I:<slot>26:<rating>0:<weight>100
+W:<level>0:<rarity>0:<cost>1000
+C:<max tohit>10:<max todam>10:<max ac>0:<max p1val>-3:<max p2val>-3:<ds>0:<dd>0
+M:<min tohit>2:<min todam>2:<min ac>0:<min p1val>-1:<min p2val>-1
+F:DEX1 | WIS1 | CURSED | SHOW_MODS
+
+N:85:of Slothfulness
+I:<slot>26:<rating>0:<weight>100
+W:<level>0:<rarity>0:<cost>1000
+C:<max tohit>10:<max todam>10:<max ac>0:<max p1val>-3:<max p2val>-3:<ds>0:<dd>0
+M:<min tohit>2:<min todam>2:<min ac>0:<min p1val>-1:<min p2val>-1
+F:STR1 | WIS1 | CHR1 | CURSED | SHOW_MODS
+
+N:86:of Slothfulness
+I:<slot>26:<rating>0:<weight>100
+W:<level>0:<rarity>0:<cost>1000
+C:<max tohit>10:<max todam>10:<max ac>0:<max p1val>-3:<max p2val>-3:<ds>0:<dd>0
+M:<min tohit>2:<min todam>2:<min ac>0:<min p1val>-1:<min p2val>-1
+F:DEX1 | INT1 | CHR1 | CURSED | SHOW_MODS
+
+
+### Weapons ###
+
+# OneSustain
+
+N:100:(Holy Avenger)
+I:<slot>24:<rating>30:<weight>100
+W:<level>0:<rarity>0:<cost>20000
+C:<max tohit>6:<max todam>6:<max ac>4:<max p1val>4:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>0
+F:WIS1 |
+F:SLAY_EVIL | SLAY_UNDEAD | SLAY_DEMON |
+F:SEE_INVIS | BLESSED
+
+# OneSustain
+
+N:101:(Defender)
+I:<slot>24:<rating>25:<weight>100
+W:<level>0:<rarity>0:<cost>15000
+C:<max tohit>4:<max todam>4:<max ac>8:<max p1val>4:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>0
+F:STEALTH1 |
+F:FREE_ACT | SEE_INVIS | FEATHER | REGEN |
+F:RES_ACID | RES_ELEC | RES_FIRE | RES_COLD |
+F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+
+# OneAbility
+
+N:102:(Blessed)
+I:<slot>24:<rating>20:<weight>100
+W:<level>0:<rarity>0:<cost>5000
+C:<max tohit>0:<max todam>0:<max ac>0:<max p1val>3:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>0
+F:WIS1 |
+F:BLESSED
+
+N:103:(Vampiric)
+I:<slot>24:<rating>25:<weight>100
+W:<level>0:<rarity>0:<cost>25000
+C:<max tohit>5:<max todam>5:<max ac>0:<max p1val>3:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>0
+F:SUST_CON | SLAY_UNDEAD | HOLD_LIFE | VAMPIRIC1
+
+N:104:of Westernesse
+I:<slot>24:<rating>20:<weight>100
+W:<level>0:<rarity>0:<cost>20000
+C:<max tohit>5:<max todam>5:<max ac>0:<max p1val>2:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>0
+F:STR1 | DEX1 | CON1 |
+F:SLAY_ORC | SLAY_TROLL | SLAY_GIANT |
+F:FREE_ACT | SEE_INVIS
+
+N:105:of Extra Attacks
+I:<slot>24:<rating>20:<weight>100
+W:<level>0:<rarity>0:<cost>10000
+C:<max tohit>0:<max todam>0:<max ac>0:<max p1val>2:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>0
+F:BLOWS1
+
+N:106:of Extra Size
+I:<slot>24:<rating>15:<weight>250
+W:<level>0:<rarity>0:<cost>5000
+C:<max tohit>0:<max todam>10:<max ac>0:<max p1val>0:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>0:<min p2val>0
+F:MUST2H
+
+# 107 (unused)
+
+# The "Elemental" brands (4)
+
+N:108:of Melting
+I:<slot>24:<rating>15:<weight>100
+W:<level>0:<rarity>0:<cost>8000
+F:BRAND_ACID | RES_ACID | IGNORE_ACID
+
+N:109:of Shocking
+I:<slot>24:<rating>20:<weight>100
+W:<level>0:<rarity>0:<cost>4500
+F:BRAND_ELEC | RES_ELEC | IGNORE_ELEC
+
+N:110:of Burning
+I:<slot>24:<rating>20:<weight>100
+W:<level>0:<rarity>0:<cost>3000
+F:BRAND_FIRE | RES_FIRE | IGNORE_FIRE
+
+N:111:of Freezing
+I:<slot>24:<rating>15:<weight>100
+W:<level>0:<rarity>0:<cost>2500
+F:BRAND_COLD | RES_COLD | IGNORE_COLD
+
+N:112:of the Mage
+I:<slot>24:<rating>15:<weight>100
+W:<level>0:<rarity>0:<cost>5000
+C:<max tohit>5:<max todam>5:<max ac>0:<max p1val>1:<max p2val>0:<ds>2:<dd>9
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>0
+F:INT1 | CON1 | MAGIC1 | SOMELITE | ACTIVATE
+
+N:113:of the Adept
+I:<slot>24:<rating>15:<weight>100
+W:<level>0:<rarity>0:<cost>12000
+C:<max tohit>10:<max todam>10:<max ac>0:<max p1val>2:<max p2val>0:<ds>3:<dd>9
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>0
+F:INT1 | CON1 | MAGIC1 | SOMELITE | ACTIVATE
+
+N:114:of the Archmage
+I:<slot>24:<rating>15:<weight>100
+W:<level>0:<rarity>0:<cost>25000
+C:<max tohit>15:<max todam>15:<max ac>0:<max p1val>3:<max p2val>0:<ds>4:<dd>9
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>2:<min p2val>0
+F:INT1 | CON1 | MAGIC1 | SOMELITE | ACTIVATE
+
+# 115 (unused)
+
+# The "Slay" brands (8)
+N:116:of Slay Animal
+I:<slot>24:<rating>18:<weight>100
+W:<level>0:<rarity>0:<cost>3500
+F:SLAY_ANIMAL
+
+N:117:of Slay Evil
+I:<slot>24:<rating>18:<weight>100
+W:<level>0:<rarity>0:<cost>3500
+F:SLAY_EVIL
+
+N:118:of Slay Undead
+I:<slot>24:<rating>18:<weight>100
+W:<level>0:<rarity>0:<cost>3500
+F:SLAY_UNDEAD
+
+N:119:of Slay Demon
+I:<slot>24:<rating>14:<weight>100
+W:<level>0:<rarity>0:<cost>2500
+F:SLAY_DEMON
+
+N:120:of Slay Orc
+I:<slot>24:<rating>10:<weight>100
+W:<level>0:<rarity>0:<cost>2500
+F:SLAY_ORC
+
+N:121:of Slay Troll
+I:<slot>24:<rating>10:<weight>100
+W:<level>0:<rarity>0:<cost>2500
+F:SLAY_TROLL
+
+N:122:of Slay Giant
+I:<slot>24:<rating>14:<weight>100
+W:<level>0:<rarity>0:<cost>2500
+F:SLAY_GIANT
+
+N:123:of Slay Dragon
+I:<slot>24:<rating>18:<weight>100
+W:<level>0:<rarity>0:<cost>3500
+F:SLAY_DRAGON
+
+# The "Kill" brands (8)
+
+N:124:of *Slay* Animal
+I:<slot>24:<rating>20:<weight>100
+W:<level>0:<rarity>0:<cost>6000
+C:<max tohit>0:<max todam>0:<max ac>0:<max p1val>2:<max p2val>-2:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>-1
+F:INT1 | KILL_ANIMAL | REGEN | WIS2
+
+N:125:of *Slay* Evil
+I:<slot>24:<rating>20:<weight>100
+W:<level>0:<rarity>0:<cost>5000
+C:<max tohit>0:<max todam>0:<max ac>0:<max p1val>2:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>0
+F:WIS1 | KILL_EVIL | BLESSED
+
+N:126:of *Slay* Undead
+I:<slot>24:<rating>24:<weight>100
+W:<level>0:<rarity>0:<cost>8000
+C:<max tohit>0:<max todam>0:<max ac>0:<max p1val>2:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>0
+F:WIS1 | KILL_UNDEAD | SEE_INVIS
+
+N:127:of *Slay* Demon
+I:<slot>24:<rating>16:<weight>100
+W:<level>0:<rarity>0:<cost>4000
+C:<max tohit>0:<max todam>0:<max ac>0:<max p1val>2:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>0
+F:INT1 | KILL_DEMON
+
+N:128:of *Slay* Orc
+I:<slot>24:<rating>14:<weight>100
+W:<level>0:<rarity>0:<cost>4000
+C:<max tohit>0:<max todam>0:<max ac>0:<max p1val>2:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>0
+F:DEX1 | KILL_ORC
+
+N:129:of *Slay* Troll
+I:<slot>24:<rating>14:<weight>100
+W:<level>0:<rarity>0:<cost>4000
+C:<max tohit>0:<max todam>0:<max ac>0:<max p1val>2:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>0
+F:STR1 | KILL_TROLL
+
+N:130:of *Slay* Giant
+I:<slot>24:<rating>16:<weight>100
+W:<level>0:<rarity>0:<cost>4000
+C:<max tohit>0:<max todam>0:<max ac>0:<max p1val>2:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>0
+F:STR1 | KILL_GIANT
+
+N:131:of *Slay* Dragon
+I:<slot>24:<rating>24:<weight>100
+W:<level>0:<rarity>0:<cost>6000
+C:<max tohit>0:<max todam>0:<max ac>0:<max p1val>1:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>0
+F:CON1 | KILL_DRAGON
+
+N:132:of Joy
+I:<slot>24:<rating>10:<weight>100
+W:<level>0:<rarity>0:<cost>2500
+C:<max tohit>0:<max todam>0:<max ac>0:<max p1val>3:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>0
+F:SLAY_UNDEAD | CHR1 | RES_FEAR
+
+# 133 (unused)
+
+# 134 (unused)
+
+# 135 (unused)
+
+N:136:of Digging
+I:<slot>24:<rating>4:<weight>100
+W:<level>0:<rarity>0:<cost>500
+C:<max tohit>0:<max todam>0:<max ac>0:<max p1val>5:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>0
+F:TUNNEL1 | BRAND_ACID |
+F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+
+# 137 (unused)
+
+N:138:of Morgul
+I:<slot>24:<rating>0:<weight>100
+W:<level>0:<rarity>0:<cost>0
+C:<max tohit>20:<max todam>20:<max ac>10:<max p1val>0:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>0:<min p2val>0
+F:SEE_INVIS | AGGRAVATE | HEAVY_CURSE | CURSED
+
+# 139 (unused)
+
+
+### Missile Launchers ###
+
+N:140:of Accuracy
+I:<slot>25:<rating>10:<weight>100
+W:<level>0:<rarity>0:<cost>1000
+C:<max tohit>15:<max todam>5:<max ac>0:<max p1val>0:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>0:<min p2val>0
+
+N:141:of Velocity
+I:<slot>25:<rating>10:<weight>100
+W:<level>0:<rarity>0:<cost>1000
+C:<max tohit>5:<max todam>15:<max ac>0:<max p1val>0:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>0:<min p2val>0
+
+# 142 (unused)
+
+# 143
+N:143:of Numenor
+I:<slot>25:<rating>40:<weight>200
+W:<level>0:<rarity>0:<cost>30000
+C:<max tohit>5:<max todam>10:<max ac>0:<max p1val>2:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>0
+F:MIGHT1 | SHOTS1
+D:The dreaded bow of the King of Numenor's archers, of whom it was said
+D:'send before them a great cloud, as a rain turned to serpents, or a black
+D: hail tipped with steel'. Made of hollow steel, it is heavy and very powerful.
+
+N:144:of Extra Might
+I:<slot>25:<rating>20:<weight>100
+W:<level>0:<rarity>0:<cost>10000
+C:<max tohit>5:<max todam>10:<max ac>0:<max p1val>2:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>0
+F:MIGHT1
+
+N:145:of Extra Shots
+I:<slot>25:<rating>20:<weight>100
+C:<max tohit>10:<max todam>5:<max ac>0:<max p1val>1:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>1:<min p2val>0
+W:<level>0:<rarity>0:<cost>10000
+F:SHOTS1
+
+# 146 (unused)
+
+# 147 (unused)
+
+### Ammo ###
+
+N:148:of Hurt Animal
+I:<slot>36:<rating>10:<weight>100
+W:<level>0:<rarity>0:<cost>25
+F:SLAY_ANIMAL
+
+N:149:of Hurt Evil
+I:<slot>36:<rating>10:<weight>100
+W:<level>0:<rarity>0:<cost>25
+F:SLAY_EVIL
+
+N:150:of the Orcs
+I:<slot>36:<rating>10:<weight>100
+W:<level>0:<rarity>0:<cost>15
+C:<max tohit>5:<max todam>10:<max ac>0:<max p1val>0:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>0:<min p2val>0
+F:SLAY_TROLL | SLAY_ANIMAL
+
+N:151:of Elvenkind
+I:<slot>36:<rating>10:<weight>25
+W:<level>0:<rarity>0:<cost>25
+C:<max tohit>15:<max todam>5:<max ac>0:<max p1val>0:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>0:<min p2val>0
+F:SLAY_EVIL | SLAY_ANIMAL
+
+N:152:of the Hobbits
+I:<slot>36:<rating>10:<weight>100
+W:<level>0:<rarity>0:<cost>25
+C:<max tohit>10:<max todam>10:<max ac>0:<max p1val>0:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>0:<min p2val>0
+F:SLAY_ORC | SLAY_GIANT
+
+# 153
+N:153:with Black Feathers
+I:<slot>36:<rating>10:<weight>150
+W:<level>0:<rarity>0:<cost>25
+C:<max tohit>10:<max todam>10:<max ac>0:<max p1val>0:<max p2val>0:<ds>2:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>0:<min p2val>0
+D:Black-feathered arrows, a full ell long from point to notch, as used by
+D:the King of Numenor's Archers.
+
+# 154 (unused)
+
+N:155:of Hurt Dragon
+I:<slot>36:<rating>10:<weight>100
+F:SLAY_DRAGON
+W:<level>0:<rarity>0:<cost>35
+
+# 156 (unused)
+
+# 157 (unused)
+
+N:158:of Flames
+I:<slot>36:<rating>10:<weight>100
+F:BRAND_FIRE | IGNORE_FIRE
+W:<level>0:<rarity>0:<cost>30
+
+N:159:of Frost
+I:<slot>36:<rating>10:<weight>100
+F:BRAND_COLD | IGNORE_COLD
+W:<level>0:<rarity>0:<cost>25
+
+N:160:of Wounding
+I:<slot>36:<rating>5:<weight>100
+W:<level>0:<rarity>0:<cost>20
+C:<max tohit>5:<max todam>5:<max ac>0:<max p1val>0:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>0:<min p2val>0
+
+N:161:of Backbiting
+I:<slot>36:<rating>0:<weight>100
+W:<level>0:<rarity>0:<cost>0
+C:<max tohit>50:<max todam>50:<max ac>0:<max p1val>0:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>0:<min p2val>0
+
+### Special Broken Items ###
+
+# Destroyed Weapon
+N:162:(Shattered)
+I:<slot>24:<rating>0:<weight>100
+W:<level>0:<rarity>0:<cost>0
+C:<max tohit>5:<max todam>5:<max ac>0:<max p1val>0:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>0:<min p2val>0
+
+# Destroyed Body Armor
+
+N:170:(Blasted)
+I:<slot>30:<rating>0:<weight>100
+W:<level>0:<rarity>0:<cost>0
+C:<max tohit>0:<max todam>0:<max ac>10:<max p1val>0:<max p2val>0:<ds>0:<dd>0
+M:<min tohit>0:<min todam>0:<min ac>0:<min p1val>0:<min p2val>0
+
+# Books
+
+N:180:in red leather
+I:<slot>0:<rating>10:<weight>100
+F:RES_FIRE | IGNORE_FIRE
+W:<level>0:<rarity>0:<cost>10000
+
+N:181:with steel corners
+I:<slot>0:<rating>10:<weight>150
+F:RES_ACID | IGNORE_ACID
+W:<level>0:<rarity>0:<cost>2500
+
+N:182:in tough leather
+I:<slot>0:<rating>10:<weight>100
+F:RES_FIRE | IGNORE_FIRE | RES_ACID | IGNORE_ACID
+W:<level>0:<rarity>0:<cost>35000

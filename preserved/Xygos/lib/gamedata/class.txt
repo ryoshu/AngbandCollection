@@ -1,0 +1,454 @@
+# File: class.txt
+
+
+# This file is used to initialize the "player class" information for Angband.
+
+# Do not modify this file unless you know exactly what you are doing,
+# unless you wish to risk possible system crashes and broken savefiles.
+
+# === Understanding class.txt ===
+
+# Format:
+# name:class number:class name
+# stats:str:int:wis:dex:con
+# skill-disarm-phys:base:increment
+# skill-disarm-magic:base:increment
+# skill-device:base:increment
+# skill-save:base:increment
+# skill-stealth:base:increment
+# skill-search:base:increment
+# skill-melee:base:increment
+# skill-shoot:base:increment
+# skill-throw:base:increment
+# skill-dig:base:increment
+# hitdie:increment
+# exp:percent
+# max-attacks:count
+# min-weight:weight in tenths of pounds
+# strength-multiplier:multiplicative factor
+# title:title
+# hitdie:hp
+# equip:tval:sval:min:max:eopts
+# level-from:level
+# obj-flags:object property flags
+# player-flags:player property flags
+# magic:spell_first:spell_weight:num_books
+# book:name
+# spell:name:level:fail:exp:stat:hp:cooldown
+# seffect:seffect:subtype (if needed):radius (if needed):parameter (if needed)
+# sdice:dice string
+# sexpr:dice expression
+# seffect-msg:message
+# desc: description
+
+
+# 'name' indicates the beginning of an entry. The serial number must
+# increase for each new class.
+
+# 'stats' is for the stat modifiers - strength, intelligence, wisdom,
+# dexterity, constitution.
+
+# 'skill-<skill name>' is for skills - physical and magical disarming,
+# magic devices, saving throws, stealth, to hit (normal), to hit (bows),
+# to hit (throwing), digging.  The base entry is what gets added to the
+# character's skills at birth, the increments are added to the base skill
+# every ten levels.
+
+# 'hitdie' is for additional average hitpoints gained at maximum level.
+
+# 'exp' is for percent of "standard" experience needed to gain a level.
+
+# 'info' is for extra info - max. hitpoints gained per level, experience
+# factor in percent.
+
+# 'exp' sets the classes additive contribution, in percent, to the experience
+# point penalty.  The original classes don't set this and get the default of
+# no experience point penalty.
+
+# 'max-attacks' sets the maximum possible number of blows per round.
+
+# 'min-weight' is the minimum, in tenths of pounds, imposed on a weapon's weight
+# when computing the number of blows per round.
+
+# 'strength-multiplier' is the multiplier for strength's contribution to the
+# number of blows per round; a bigger value grants more blows.
+
+# 'equip' is for starting equipment - tval of the item, sval of the item,
+# minimum amount, maximum amount, names of birth options separated by spaces
+# or | (or none for no exclusion rules) which will exclude the item if set
+# (or, if the name of the option is preceded by NOT-, will exclude the item if
+# not set).
+
+# 'level-from' is the first level which the following flags apply to
+
+# 'obj-flags' is for object properties (from object_property.txt) that the
+# class has.
+
+# 'player-flags' is for player properties (from player_property.txt) that the
+# class has.
+
+# 'title' is for class titles.
+# There can be any number of them - max 12 chars if possible (13 would mean
+# overlapping the blank space on the char sheet and mani display, more won't
+# be seen.)
+
+# 'magic' is for general magic info - level of the first spell, weight that
+# hurts spells, number of books used.
+
+# 'book' names the following techniques as being part of a book. This is
+# not an actual object, just a way of classifying techniques.
+
+# 'spell' defines an individual spell - name, level, mana required,
+# fail-rate, experience for first casting.    'spell:' lines always refer to
+# spells in the previous 'book:' line.  The lines below are all used in
+# reference to the previous 'spell:' line.
+
+# 'effect' defines the spell effect (as listed in src/list-effects.h),
+# and optionally parameters for effect subtype, effect radius and
+# an extra parameter for various things
+
+# 'effect-yx' sets the y (i.e. vertical) range and x (i.e. horizontal) range
+# about the effect's centre.  Only some effects (often detections) use those
+# ranges.
+
+# 'dice' provides a random value to be used by an effect (for damage,
+# healing, etc).  As well as the normal random value fields described above,
+# it can contain expressions like $B, which refer forward to an 'expr' line.
+
+# 'expr' provides an expression for use in effect dice.  It consists of a
+# code letter (eg B) for the expression, a base function to use (for example
+# PLAYER_LEVEL), and a sequence of operations to perform on that base.
+
+# 'seffect-msg' provides a message which can be used in whatever way the effect
+# needs, typically to print during the effect, or as a death message.
+
+# 'desc' is for description. As many desc: lines may be used as are needed
+# to describe the spell. Note that lines will need spaces at their
+# ends or the beginning of the next line to prevent words from running
+# together.
+
+
+
+############### SOLDIER ###############
+name:Soldier
+stats:3:-2:-2:2:2:-1:1
+skill-disarm-phys:25:15
+skill-disarm-magic:20:10
+skill-device:18:7
+skill-save:18:10
+skill-stealth:0:0
+skill-search:10:12
+skill-melee:70:45
+skill-martial:40:35
+skill-shoot:55:45
+skill-throw:55:45
+skill-dig:0:0
+hitdie:275
+exp:20
+talents:-2:-1
+max-attacks:6
+min-weight:30
+strength-multiplier:5
+equip:food:random:1:3:none
+equip:food:random:1:3:none
+equip:food:random:1:3:none
+#equip:light:Wooden Torch:1:3:none
+equip:pill:Berserk Strength:1:1:none
+equip:sword:survival knife:1:1:none
+#equip:soft armour:Soft Leather Armour:1:1:none
+equip:card:Word of Recall:1:1:none
+player-flags:BRAVERY_30 | SHIELD_BASH
+title:Cadet
+title:Private
+title:Private 1st
+title:Lnc Corporal
+title:Corporal
+title:Sergeant
+title:Sergeant Maj
+title:Lieutenant 2
+title:Lieutenant 1
+title:Captain
+title:Major
+title:Lt Colonel
+title:Colonel
+title:Maj General
+title:Lt General
+title:General
+cdesc:You are a Space Marine. You are well trained in most forms of combat, being especially good with long guns, but your biggest advantage comes from the Marines' support: after getting a promotion and returning to field HQ you will be equipped appropriately.
+
+############### MARKSMAN ###############
+name:Marksman
+stats:1:0:0:3:0:0:0
+title:Hobbyist
+title:Amateur
+title:Marksman
+title:Deadeye
+title:Contender
+#Medalist? Survivalist?
+title:Prizewinner
+title:Champion
+title:Sharpshooter
+title:Sniper
+#Expert?
+#Gunsmith?
+title:Specialist
+skill-disarm-phys:25:15
+skill-disarm-magic:20:10
+skill-device:18:7
+skill-save:18:10
+skill-stealth:0:0
+skill-search:10:12
+skill-melee:45:40
+skill-martial:25:30
+skill-shoot:72:45
+skill-throw:66:30
+skill-dig:0:0
+exp:0
+talents:0:0
+hitdie:130
+max-attacks:5
+min-weight:40
+strength-multiplier:3
+equip:food:random:1:3:none
+equip:gun:6mm handgun:1:1:none
+equip:6mm ammo:6mm bullet:30:40:none
+cdesc:A civilian weapon expert, reasonably skilled with all ranged weapons and the best of any role with your chosen specialty. Being used to firing at paper targets which rarely fire back though, your melee combat and stealth are not so hot. You'll start being able to recognize all weapon mods.
+
+############### WRESTLER ##############
+name:Wrestler
+stats:5:-3:-3:2:4:0:0
+title:Wrestler
+skill-disarm-phys:25:20
+skill-disarm-magic:10:10
+skill-device:10:7
+skill-save:24:10
+skill-stealth:0:0
+skill-search:10:12
+skill-martial:75:60
+skill-melee:25:20
+skill-shoot:15:20
+skill-throw:15:30
+exp:5
+talents:-1:-1
+hitdie:330
+max-attacks:4
+min-weight:40
+strength-multiplier:4
+equip:food:random:2:3:none
+equip:food:random:1:1:none
+level-from:15
+obj-flags:REGEN
+level-from:20
+obj-flags:PROT_FEAR
+level-from:25
+obj-flags:FREE_ACT
+level-from:30
+obj-flags:PROT_STUN
+level-from:35
+obj-flags:PROT_CONF | SUST_STR | SUST_CON
+level-from:40
+obj-flags:SUST_DEX | SUST_SPD
+level-from:45
+obj-flags:HOLD_LIFE
+#padded armor? martial arts weapon?
+cdesc:It sounds crazy at first - to fight only with bare hands and in your skivvies to boot. But with the right training it works surprisingly well, though you'll still be hoping for a green belt (as in mil-spec forcefield kit) and similar unencumbering protection.
+
+############### CLOWN #################
+name:Clown
+stats:0:-1:-2:2:0:3:0
+title:Mascot
+title:Sidekick
+title:Clown
+title:Entertainer
+title:Conjurer
+title:Magician
+title:Mentalist
+#Puppetmaster? 
+exp:10
+talents:-1:0
+hitdie:50
+skill-disarm-phys:15:30
+skill-disarm-magic:15:25
+skill-device:20:15
+skill-save:0:0
+skill-stealth:0:0
+skill-search:0:5
+skill-martial:35:25
+skill-melee:30:15
+skill-shoot:25:20
+skill-throw:40:20
+skill-dig:5:10
+max-attacks:5
+min-weight:30
+strength-multiplier:3
+equip:food:durian:1:1:none
+equip:food:pineapple:1:1:none
+equip:food:Hunter's pie:1:1:none
+equip:food:random:2:3:none
+cdesc:A master of deception, misdirection and custard pies. You can perform impressive card tricks and are a great shot with a thrown knife or more exotic weapons (it's always best to kill your enemies in a humorous way, after all). And when it turns out that you shouldn't have brought a pie to a gun fight, some useful athletic techniques may speed your escape.
+
+magic:1:300
+book:[Clown]
+# spell:name:level:fail:exp:stat:hp:cooldown
+spell:Rare Card:5:20:8:5:1:10d2
+seffect:TIMED_INC:RARE_CARD
+sdice:4d2
+sdesc:Some cards have a hidden mode - using this technique before running the card will allow you to access it, if you are high enough level. The object information for the card will tell you what it does.
+
+
+############### MEDIC #################
+
+############### PILOT #################
+name:Pilot
+stats:0:1:1:2:0:1:0
+title:Trainee
+title:Student
+title:Rider
+title:Pilot
+title:Instructor
+title:Aviator
+title:Ace
+title:Hunter
+title:Bounder
+title:Shadowlord
+exp:10
+talents:-1:1
+hitdie:90
+# FIXME: skills
+max-attacks:5
+min-weight:40
+strength-multiplier:3
+# light armor - maybe more? mapping card?
+equip:food:random:1:3:none
+cdesc:You fly a cavespeeder, giving you increased speed (in straight lines) which improves with your skill. You can also avoid pits, lava and similar hazards but must be aware that a jet engine wakes the heaviest sleepers. Later you'll be able to upgrade to a fighter, equipped with a plasma cannon.
+
+############### TOURIST ###############
+name:Tourist
+stats:-1:0:-3:0:0:2:0
+title:Tripper
+title:Holidaymaker
+title:Tourist
+title:Backpacker
+title:Hiker
+title:Trekker
+title:Traveller
+title:Journeyer
+title:Adventurer
+title:Guide
+title:Explorer
+title:Trailblazer
+title:Pioneer
+skill-disarm-phys:30:10
+skill-disarm-magic:35:12
+skill-device:36:13
+skill-save:30:9
+skill-stealth:2:0
+skill-search:10:12
+skill-melee:15:25
+skill-martial:1:25
+skill-shoot:20:15
+skill-throw:25:35
+skill-dig:0:0
+hitdie:30
+exp:-30
+talents:-2:3
+max-attacks:5
+min-weight:40
+strength-multiplier:4
+cdesc:You are well equipped, for the beach. You are in fact rather out of your depth here - this is definitely going to be a challenge. But you do have some advantages - a universal map, a winning smile, some spending money and (due to being the least experienced role) the best experience and talent gain rates.
+equip:food:random:1:1:none
+equip:food:random:1:1:none
+equip:food:random:1:1:none
+equip:food:random:1:1:none
+equip:food:random:1:1:none
+equip:food:random:1:1:none
+equip:gadget:galactic map:1:1:none
+equip:boots:flip flops:1:1:none
+equip:helm:sun hat:1:1:none
+equip:soft armor:loud shirt:1:1:none
+
+############### SPELUNKER ###############
+name:Spelunker
+stats:2:0:0:3:1:0:0
+hitdie:190
+max-attacks:5
+min-weight:40
+exp:5
+talents:0:0
+#Digger, climber, diver, excavator, explorer, mapper, pathfinder, cave finder...
+title:Climber
+title:Spelunker
+title:Caver
+title:Speleologist
+skill-disarm-phys:25:20
+skill-disarm-magic:20:10
+skill-device:20:10
+skill-save:28:10
+skill-stealth:2:2
+skill-search:30:22
+skill-melee:40:35
+skill-shoot:25:45
+skill-throw:55:45
+skill-dig:20:20
+equip:helm:hard hat (lamp):1:1:none
+equip:light:glowstick:2:4:none
+equip:light:electric torch:1:1:none
+equip:battery:alkaline battery:4:6:none
+# FF clothes?
+# spikes have disappeared
+
+magic:1:300
+book:[Spelunker]
+# spell:name:level:fail:exp:stat:hp:cooldown
+spell:Climb:5:80:4:0:1:10
+seffect:CLIMBING
+sdesc:When next to a rock face, climb up it to the level above. 
+sdesc:Failing can hurt - Feather Falling is recommended.
+
+cdesc:You are trained and equipped for underground exploration, can avoid falls and will gain powerful abilities to dig, climb, map, detect and find hidden passages. Your combat ability is middling - fitness helps but only so much without having practiced much. However you can become an effective tactical fighter through your positioning abilities.
+
+############### JEDI #####################
+name:Jedi
+stats:1:1:4:3:1:1:0
+title:Aspirant
+title:Padawan
+title:Initiate
+title:Adept
+title:Knight
+title:Master
+title:Grand Master
+exp:20
+talents:0:1
+cdesc:Jedi are famous for skill with a lightsaber - you'll excel with melee energy weapons and do well with other melee weapons. Eventually you'll even be able to construct your own. Ranged weapons are not you, but you'll be supported by a number of subtle powers as you advance. There are also Dark Jedi... who are powerful, yes, but at a cost!
+
+############### ENGINEER #####################
+name:Engineer
+stats:0:3:1:-1:0:-1:0
+title:Hobbyist
+title:Modder
+title:Maker
+title:Student
+title:Techie
+title:Engineer
+title:Expert
+title:Hacker
+skill-disarm-phys:30:20
+skill-disarm-magic:35:12
+skill-device:40:25
+skill-save:10:5
+skill-stealth:0:2
+skill-search:0:5
+skill-melee:35:15
+skill-shoot:20:15
+skill-throw:20:15
+skill-dig:0:0
+hitdie:0
+exp:0
+talents:1:2
+max-attacks:4
+min-weight:40
+strength-multiplier:2
+equip:sword:pocket knife:1:1:none
+
+cdesc:Devices are your strength - you'll know most on sight, and know how to get the best out of them too. While you aren't much of a fighter in general, you do know energy weapons (melee and ranged) and can see any machine or cyborg's weak points. You also excel with printers and item related cards, and will gain a few skills to use items in unexpected ways.
+

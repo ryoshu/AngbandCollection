@@ -1,0 +1,238 @@
+(This file is included in the distribution.)
+
+--- Version 2.8.3v4 ---
+
+* Added monster speech, which was stolen from both Kamband and Zangband;
+  to add speech to a monster, give the monster the CAN_SPEAK flag, and
+  be sure the third number in the "W:" line matches the numbers in
+  "bravnnn.txt" and "fearnnn.txt". Speech kinds 0 and 52 were stolen
+  from Zangband, while kinds 4 and 137 were from the built-in
+  "moan"/"insult" arrays.
+* Turned off auto-pickup, and made it so that if you stay still and
+  pick up an object, you do not use up a turn (but searching doesn't
+  activate, and you should use '_' to enter a store without taking
+  a turn)
+* Under the knowledge ('~') command, there is a new self knowledge
+  sub-command, but it is not the same as the magical effect...
+* Added circular rooms from Ying-Yangband by Dag Arneson (does every
+  variant have this now? ;-)
+* Raised the quality of treasure in the "cross-shaped, inner
+  vault" room type (Remco Gerlich)
+* Changed the names of certain "novice xxx" monsters and other
+  monsters which have the same name as each other
+* Applied Keldon Jones' "center panel on player" patch, adding two
+  options in the Goingband Options screen
+* Added dungeon level/max to the character display
+* Removed the "EVIL implies RES_NETH" stuff
+* (Aidan Ryder) Chests drop good items; changed the levels of chests
+* The roguelike set now uses the ']' key for the 'repeat last command'
+  command, and the multiple artifact and monster inventory bugs were
+  fixed due to the Recall Patch 1.1
+* (Tim Baker) Fixed bug in earthquake routine where monsters would
+  end up in walls
+* Alter Reality updates stores and generates a new town layout
+
+Goingband is now among the Angband variants listed at Bablos's page:
+  http://homepages.enterprise.net/bablos/angband/
+
+Darin Takemoto has ported Goingband 2.8.3v3 for the Macintosh (68K):
+  ftp://export.andrew.cmu.edu/angband/Incoming/goingband-2833.cpt.bin
+
+--- Version 2.8.3v3, merge with GW-Angband (Sunjul 26, 1998) ---
+
+* Added lots of things from GW-Angband, including three
+  inappropriately named classes (GW-Mage, GW-Ranger, GW-Rogue),
+  *not* including random artifacts (oh well... :-)
+* Added Zangband's time-of-day command (CTRL-T)
+* Quitting is no longer scored if you have no experience
+* Activated the HURT_FIRE and HURT_COLD flags: branded weapons and
+  distance attacks do double damage on such creatures, added these
+  susceptibilities to many monsters
+* Gabriel gets Mana Storm...
+* Added the Seeker Arrow of Bard
+* Activated RES_WATE, RES_PLAS, RES_NEXU, RES_NETH, RES_DISE for monsters
+* Changed normal walls' color to 'slate'; if you 'l'ook at traps, they
+  give more descriptive names; changed colors of veins
+* If your memory is blanked, *all* inscriptions are removed, unless the
+  item would not be otherwise affected by memory loss
+* Demon pits occur at much lower levels; however, they now include
+  minor demons; monster pits now use the monster flags instead of the
+  race characters (this means that troll pits can now include skeleton
+  trolls)
+* Modifimplemented Andrew Berman's suggestions for *slay* items
+* Fixed bug from Angband 2.8.3 with examining items with more than one
+  screenful of powers (pointed out by Robin Smith)
+* Added stat modifications/sustains to extended character dump
+* If you press 'escape' at the 'more' prompt, you will stop receiving
+  messages until a non-message-related keypress is asked for.
+* Changed MICoM and Grond: both are (only) heavily cursed and aggravate
+* The wizard create object command now can handle up to 60 different "kinds"
+* Modifimplemented Joseph W. Dixon's "My Custom Artifacts"
+* Added some more new monsters, mostly from r.g.r.a posts
+* (weisiger) Detect Traps detects trapped chests
+
+The Angband Variant ('v'/'v')
+This creature breeds explosively and can be found at town level.  It
+can summon the RNG, and is magical, casting spells to take over your
+hard drive or cause you to become addicted to the game; 1 time in 4.
+It can hit to lose sleep, hit to make you late to work, hit to lose
+sleep and hit to drain intelligence and thereby cause stupid character
+deaths and other stupid player tricks.
+
+Humbreto has ported Goingband 2.8.3v2 for DOS:
+  http://www.geocities.com/TimesSquare/Arcade/7832/Goingbnd.zip
+
+Darin Takemoto has ported Goingband 2.8.3v2 for the Macintosh (68K):
+  ftp://export.andrew.cmu.edu/angband/Variant/goingband-2832.cpt.bin
+
+--- Version 2.8.3v2, bug fixes (Satjul 11, 1998) ---
+
+When I say "bugs", I mean "bugs and warnings". Or do I?
+
+* Changed makefiles to include wor.c/wor.o/wor.obj/wor.o32
+* Fixed "extern" bugs with the Easy Patch, and other bugs with it
+* Fixed small bugs with IGNORE_DISEN, 'C h *'
+* Fixed bugs with store examine patch
+* Fixed bug with artifact creation patch
+* Included lib/user directory!
+* Fixed bugs with extend_dump (being the first option > OLD_OPT_MAX
+  didn't help)
+* Changed the Midget's name to Twerp, and made Ga-Nat more greedy
+  than Vella (maybe this was in v1?)
+* Added "class_colors" option, to control whether your "@" is colored
+* Added "race_chars" option, enabling races to have their own characters
+  and colors, like Kamband, except a little different. Note that
+  "class_colors" (partially) overrides "race_chars". "race_chars" is
+  off by default, to appease The Law of Roguelike Games (the one that
+  says, "You Are @.") (suggested by Mischa Gelman)
+* Somewhere, made some as-yet-nonexistent spell attacks (like Gravity
+  and Nexus) do more things to monsters
+* Just now, changed it so that Ithyl-Mak/Ludwig/Kon-Dar
+  aren't *that* cheap... :-)
+* Consolidated all word-of-recall code (for you programmers out there,
+  it's do_word_recall in xtra2.c)
+* Added a new spell: ice storm. A few monsters have it...
+* Resist nexus provides resistance to the "... teleports you away"
+  spell and "phase door" effect of gravity
+* If you have both feather fall and free action, you are immune to the
+  slowing effects of inertia and gravity
+* (Karl Peters) Warriors' Fear Resistance shows up on 'C h'
+* Options summary includes info for 'n' (Repeat last command) command
+
+The gruesome software bug ('l'/'l')
+It breeds explosively, moves invisibly and very fast. It can cast
+spells which paralyze the game, produce errors which slow the game
+down, and cause hallucination, 1 time in 2. It can leap at you 
+to crash the game, leap at you to crash the game, leap at you 
+to crash the game, leap at you to corrupt your savefile, and
+leap at you to crash the game.
+
+--- Version 2.8.3v1, initial release (Tuejun 7, 1998) ---
+
+* Applied Tim Baker's Easy Patch 1.1
+* Applied Tim Baker's Recall Patch 1.0
+* Applied dsb's rod-sorting patch
+* Applied Daniel Nash's '^aC' wizard artifact creation patch
+  (noticed at 1.2)
+* Applied James D. Lockwood's "store examine" patch
+* Applied David Blackston's damage rating patch
+* Applied Keldon Jones's widely-circulated monster AI patch,
+  and added a new option to toggle it (which is off by default)
+* Greg Wooledge's fear/sleep health bars, plus my own
+  for confusion/stun
+* Classes now color that '@' that we know and either love or hate
+  (this should be made into a "class_chars" option in the future)
+* A new item flag, "IGNORE_DISEN" (but nothing uses this yet)
+* GoI tweaked a little:
+  * monster distance attacks bypass invulnerability
+  * attempting to engage in hand-to-hand combat while
+    invulnerable just has you switch places with that monster
+  * Thus the name Goingband.
+* Bronze, Gold, and Shining dragon pits now available
+* "Detect doors" detects locked doors now
+* Monster inventories are now part of savefiles
+* The "Hack -- save/restore memory" in monster1.c is patched
+* The 4/6 keys no longer are legal keys in options screens
+* The "keymap_dump" bug was fixed in the more straightforward manner
+  (using Greg Harvey's patch)
+* Character dumps now include (part of) the 'C h' screen,
+  which now displays immunities as '*' (idea and some
+  code from GJW) if you use the "extend_dump" option
+* Stat bonuses with sustains are now displayed correctly in 'C h'
+* Resist chaos displays a '*' in resist confusion in 'C h', and "S.Dig"
+  was changed to "SlowD"
+* No more flavored "Amulet s" (note the space, that's what I got rid of!)
+* (from COLORS.DIF) New "spell_colors" option
+* The quitting prompts now prompt for SUICIDE (like
+  GW-Angband), and, if you quit, your score is registered.
+* Auto-haggle is off by default (I like haggling!), and the testing
+  options are on by default
+* r_info now has a limit of around 575, v_info of 511, options of 128
+* Some more monsters in r_info.txt have exceptional drops
+* Several other changes in r_info.txt
+* Vault changes: three new vaults, info on making vaults, three
+  new vault specifiers from Kangband/Kamband (';', 'T', 'D')
+* Minor spelling change
+* Debug mode and spoilers generation are compiled in
+  by default
+* Number of turns included in character dump
+* Artifacts *can* break (but not as easily as regular objects),
+  to allow for the future Seeker Arrow of Bard
+
+DONE:
+. Bug: Recall Patch 1.0 generates multiple artifacts with preserve mode
+  (because of this, "remember_recall" is now off by default, but this is
+  just a hack until a new version of the Recall Patch comes out) (fixed
+  in 2.8.3v4)
+. Bug: monster_place (or whatever it's called) doesn't take into account
+  hold_o_idx, so monster inventories still don't get restored XXX XXX XXX
+  (fixed in 2.8.3v4)
+, Orc/yeek uniques should insult you without taking up precious
+  (no, not Smeagol's) melee attacks... (see below for similar idea)
+. Monster elemental susceptibilities! (done for fire/cold in 2.8.3v3)
+. (like Zangband) Have a specialized form of talking uniques, where you
+  can give messages to each unique monster. Make a generic set of speech
+  lines for non-specific uniques. Differentiate bravado and fear. (done
+  in 2.8.3v4)
+. (Aidan Ryder) Monsters should be less resistant; most EVIL monsters
+  should not resist nether (done in 2.8.3v4), more susceptibilities
+  (done in 2.8.3v3)
+. (several) Should give not just info on "cuts", "stuns", "paralyzation"
+  but also "bless", "heroism", "berserker", etc. (done in 2.8.3v4)
+
+TO DO:
+* Sleep brand for ammo (!!!)
+* Items which actually use IGNORE_DISEN
+* Taking an idea from Zangband: magicbane weapons! They will give you
+  an amount proportional to the number of RF5/RF6 spells the monster has.
+  Maybe also include charge-draining attacks?
+* Change the maximum number of monster blows to 8
+* Also BR_PARA, but GF_OLD_SLEEP should be able to work on
+  player before I do this
+* Add new town buildings (bookstore, castle, arena, gambling house,
+  adventurer's guild, etc.)
+* Be able to customize town, spells, races, classes,
+  (!!!) artifact activations
+* Add "auto_stair" option that will make stairs go up/down
+  approximately 1d6 levels (somewhat like Cthangband)
+* Add highscore-summarising features, like "angscore"
+* Add "video recorder" mechanism
+* Add lots of things from GW-Angband (2.8.3v3), Kangband, Kamband
+  (both have annoying bugs now), Cthangband, and Zangband
+* Add a spell to command a monster to return to where you are
+* Have chests give items based on the level on which they were created
+* More detailed monster descriptions (weisiger is working on this)
+* Black Market: be able to order items, either
+  price = base price * turns to generate
+  price = level^2 * turns to generate, prepay 10 turns
+* Scrolls of Endurance that reduce chances of player items being destroyed
+  due to acid/fire/elec/cold damage; SHATTER attacks should try to destroy
+  player items
+* A new "spell", Energy Drain, will remove 1 hit die of a monster. When
+  done, will turn the monster into an undead (skeleton/zombie/mummy) under
+  your control. This does not work on EMPTY_MIND monsters.
+* "spell_colors" modifiable by font pref files
+
+-- P+rfnoff
+Flip a coin. What is it? Heads? Tails? *Side*!??
+Ignore dialog "Really?" "No, I lied!"

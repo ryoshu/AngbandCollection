@@ -1,0 +1,131 @@
+# File: shop_own.txt
+
+
+# This file is used to initialize the "lib/data/shop_own.raw" file, which is
+# used to initialize the "shop owner" information for the Angband game.
+
+# Do not modify this file unless you know exactly what you are doing,
+# unless you wish to risk possible system crashes and broken savefiles.
+# After modifying this file, delete the "lib/data/shop_own.raw" file.
+
+
+# Format:
+# N:store:owner idx:owner name
+# I:race idx:purse:maxgreed:mingreed:haggleper:tolerance
+
+
+# Version stamp (required)
+
+V:0.6.0
+
+
+# General Store
+N:0:0:Rolf the Money Guy
+I:0:200:200:110:4:12
+N:0:1:Karin Kanzuki
+I:0:200:180:107:5:15
+N:0:2:Heath-Chan the Fair
+I:1:200:170:107:5:15
+N:0:3:Kiki the Witch
+I:0:300:155:107:6:18
+
+# Armoury
+N:1:0:Gohan the Super Sayian
+I:2:5000:210:115:5:7
+N:1:1:Ayeka the Annoying
+I:3:10000:190:111:4:9
+N:1:2:Anti the Social
+I:6:25000:240:132:4:10
+N:1:3:Miyazawa Yukino
+I:0:30000:200:112:4:5
+
+# Weapon Smith
+N:2:0:Terles the Cruel
+I:2:5000:220:120:6:6
+N:2:1:Gourry Demon-Slayer
+I:0:10000:185:110:5:9
+N:2:2:Donovan Sword-Master
+I:0:25000:190:115:5:7
+N:2:3:Kamui Dragon-Slayer
+I:8:30000:195:112:4:8
+
+# Temple
+N:3:0:Cherry the Nimble
+I:0:5000:175:109:6:15
+N:3:1:Lady Kaede
+I:0:10000:185:110:5:23
+N:3:2:Sylphiel the Timid
+I:0:25000:160:107:6:20
+N:3:3:Parara
+I:9:30000:175:109:5:15
+
+# Alchemist
+N:4:0:Bowman Jean the Doctor
+I:0:10000:190:111:5:8
+N:4:1:Kasumi the Tom Boy
+I:0:10000:190:110:6:8
+N:4:2:Sasami the Cheerful
+I:3:15000:200:116:6:9
+N:4:3:Ayanojou Aburatsubo 
+I:0:15000:220:111:4:9
+
+# Magic Shop
+N:5:0:Amelia the Justice Freak
+I:0:20000:200:110:7:8
+N:5:1:Hattori Hanpei
+I:7:20000:215:113:6:10
+N:5:2:Takeo Takakura 
+I:0:30000:200:110:7:10
+N:5:3:Noel Chandler
+I:1:30000:175:110:5:11
+
+# Black Market
+N:6:0:Leon Geeste the Bratty
+I:5:20000:250:150:10:5
+N:6:1:The Tentacruel
+I:6:20000:250:150:10:5
+N:6:2:Spike the Cowboy
+I:0:30000:250:150:10:5
+N:6:3:Fujiko Mine the Fair
+I:0:30000:250:150:10:5
+
+# Home
+N:7:0:Your home
+I:99:0:100:100:0:99
+N:7:1:Your home
+I:99:0:100:100:0:99
+N:7:2:Your home
+I:99:0:100:100:0:99
+N:7:3:Your home
+I:99:0:100:100:0:99
+
+# Vending Machine
+N:8:0:Vending Machine
+I:99:0:100:100:0:99
+N:8:1:Vending Machine
+I:99:0:100:100:0:99
+N:8:2:Vending Machine
+I:99:0:100:100:0:99
+N:8:3:Vending Machine
+I:99:0:100:100:0:99
+
+
+# Ramen Stand
+N:9:0:Ramen Stand
+I:99:0:100:100:0:99
+N:9:1:Ramen Stand
+I:99:0:100:100:0:99
+N:9:2:Ramen Stand
+I:99:0:100:100:0:99
+N:9:3:Ramen Stand
+I:99:0:100:100:0:99
+
+# Grocery Store
+N:10:0:Shokuryohin Boy
+I:1:200:200:110:4:12
+N:10:1:Otsu
+I:0:200:180:107:5:15
+N:10:2:Kikikaikai
+I:0:200:170:107:5:15
+N:10:3:Matahachi
+I:0:300:155:107:6:18

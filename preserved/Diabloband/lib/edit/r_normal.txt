@@ -1,0 +1,3673 @@
+# File: r_info.txt
+
+# This file is used to initialize the "lib/data/r_info.raw" file, which is
+# used to initialize the "monster race" information for the Angband game.
+
+# Do not modify this file unless you know exactly what you are doing,
+# unless you wish to risk possible system crashes and broken savefiles.
+# After modifying this file, delete the "lib/data/r_info.raw" file.
+
+# Currently, "unique" monsters are just "special" monster races, with
+# the requirement that only one monster of that race can exist at a time,
+# and when it is killed, it can never again be generated.
+
+# The "0" and "9" symbols are reserved for internal debugging use.
+
+# The "&" symbol is reserved for future use as a special "terrain feature".
+
+# The "`" symbol is reserved as an "alternate" open door picture, since
+# the "'" symbol looks like the "," symbol in some fonts (esp. IBM).
+
+# As always, you can enforce any "visual picture" you want with a "pref file".
+
+# Note that monster zero contains the "player" picture.
+
+
+# === Understanding r_info.txt === 
+
+# 2 N:   serial number : monster name
+# 2 G:   symbol : color
+# 4 I:   speed (code uses this value *5 and +85) : min and max group
+#        size : vision (currently all are at 50) : alertness (currently all are
+#        at 5)
+# 3 W:   act (0-5, 0 = town/cow-level) : rarity (most are at 1,
+#        escorts/minions/etc are at 100, also used 2 and 5) : r_idx of escort
+#        (0 for none)
+# 4 JKL: depth : min and max hitpoints : armor class (usual max seems
+#        to be 528) : xp (code uses /10 of this value, players need *2 XP, so
+#        monsters are worth /20 of what is listed here)
+# 3 ABC: attack method : attack effect : min and max damage
+# 6 XYZ: dmg, magic, fire, elec, cold, pois (dmg and magic currently
+#        have no effect) these can also be negative for a 'susceptibility'
+# 3 H:   (unused) element : chance to add to normal attack : min and max damage
+#   F:   flag | flag | etc
+#   S:   spell frequency |
+#   S:   spell type | spell type | etc
+#   D:   Description
+
+# Uniques get DROP_3D2, DROP_GOOD and ONLY_ITEM, group leaders get
+# DROP_1D2 and ONLY_ITEM, most other monsters get DROP_60
+
+
+# a -					A - izual
+# b - bat demon				B - crow/hawk, vulture demon
+# c - corpulent				C - scruffy dog, vile dog, pain worm
+# d -					D - megademon
+# e - minion				E - suicide minion
+# f - scrwany cat, sabre cat, slinger	F - 
+# g - 					G - will-o-wisp
+# h - zealot/cantor, council member	H - vile mother, putrid defiler
+# i - mosquito demon			I - swarm
+# j - tentacle beast			J - claw viper
+# k - goatmen, blood lord		K - scarab demon
+# l -					L - undead horror
+# m -					M - mummy, greater mummy
+# n - gorgon				N - wendigo, yeti
+# o - sand leaper			O - sand raider
+# p - corrupt rogue/archer/lancer	P - the act bosses, the smith/hephasto
+# q - cow, tainted, hell bovine		Q - crow/hawk/sucker nest
+# r - spike fiend/giant			R - frog demon
+# s - skeleton + archers/mages		S - evil spider
+# t - deckard cain			T - baboon demon, frozen horror
+# u - fallen + shamans, demon imps	U - fetish + shamans/skeletons
+# v -					V - vampire
+# w - sand maggot + young/queens	W - wraith, finger-mage
+# x - thorned hulk			X - blunderbore
+# y - overseer				Y - siege beast
+# z - zombie, reanimated, griswold	Z - succubae
+
+# D - Dark Gray    w - White          s - Gray          o - Orange
+# r - Red          g - Green          b - Blue          u - Brown
+# d - Black        W - Light Gray     v - Violet        y - Yellow
+# R - Light Red    G - Light Green    B - Light Blue    U - Light Brown
+
+
+##### TODO #####
+
+# names of putrid defiler and pain worms
+# vision, alertness : give monsters suitable values
+
+# stanima drain -> random drain health, con, xp
+# add missiles to spike fiend/giant, corrupt/skeleton archer, slinger, blood raven, death mauler
+# add spells to spellcasters (from skills?) serpent/spider magus
+# some monsters should not be generated except as an
+#  escort/brood/summon - crow, hawk, sucker, sand maggot young, vile dog
+
+# fallen : runs away when something is killed
+# scarab demon : lightning aura
+# mummy : poison cloud wken killed
+# giant spider : slow
+# vampire : drain life
+# claw viper cold attack 1/3 = tail
+# blunderbore/thorned hulk stuns
+# cantor, heal minions
+# finger mage, drain mana and stun
+# regurgitator, eats and spits corpses
+
+# reanimated horde, charges, chance to not stay dead
+# siege beast, earthquake
+# baal's minion, can be morphed to suicide minions by Overseers
+# suicide minion, charges and attempts to blow up
+# succubae, curses
+# overseer, can morph and heal minions
+
+# unqiues based on existing monsters (* = quest monster)
+
+# Act I
+# corpsefire			s zombie		spectral hit
+# bishibosh			G fallen shaman		magic res, fire
+# bonebreaker			B bone mage		strong, magic res
+# coldcrow			v dark ranger		cold
+# rakanishu*			B carver		lightning, fast
+# treehead woodfist		g wendigo		strong/fast
+# the countess			g dark stalker		fire, fire wall
+# pitspwan fouldog		B tainted		cursed, cold
+# flamespike			r razor spine		fire, cursed
+# bone ash			g bone mage		strong, cold
+
+# Act II
+# ???				g mummy			strong, cold
+# blood witch the wild		G sabre cat		strong, cursed
+# beetleburst			v scarab demon		magic res
+# coldworm the burrower*	o sand maggot queen	cold, magic res
+# dark elder			U zombie		fast, magic res
+# fangskin*			B claw viper		lightning, fast
+# fire eye			u sand raider		fire enchated, fast
+# ancient kaa the soulless	v greater mummy		magic res, strong, lightning
+
+# Act III
+# sszark the burning		B giant spider		strong, cursed	
+# witch doctor endugu		g fetish shaman		magic res, fire
+# stormtree			g thorned hulk		fast, lightning
+# battlemaid sarina		v corrupted rogue	fast, spectral hit
+# icehawk riftwing		B bat demon		cold, blink
+# ismail vilehand		council member		fast, cursed
+# geleb flamefinger		council member		strong, fire
+# toorc icefist			y council member	cold, stone skin
+# bremm sparkfist		council member		aura, lightning
+# wyand voidfinger		council member		mana burn, blink
+# maffer dragonhand		council member		fast, strong, blink
+
+# Act IV
+# grand vizier of chaos		finger mage		strong, fire
+# lord de seis			B oblivion knight	strong, aura, thief
+# infector of souls		v megademon		fast, spectral hit
+
+# Act V
+# dac farren			G demon gremlin		cold
+# shenk the overseer		s overseer		strong
+# eldritch the rectifier	b enslaved		fast
+# thresh socket			s/u blood bringer	cursed
+# eyeback the unleashed		B death mauler		fast, strong
+# sharptooth slayer		B overlord		fast
+# frozenstein			B frozen abyss		cold, mana burn
+# bonesaw bonebreaker		D ???			strong, magic res
+# snapchip shatter		B frozen creeper	cursed, cold
+# pindleskin*			D defiled warrior	fire
+# the ancients
+
+# baal's champions, have to kill them all to reach baal, need to make
+# their minions available in Act V but never generated except with the
+# champion
+# colenzo			r fallen shaman		fire
+# achmel the cursed		r greater mummy		immune to poison
+# bartuc the bloody		council memebr		lightning
+# ventar the unholy		venom lord		fast
+# lister the tormentor		U ???			spectral hit			
+
+# Version stamp (required)
+
+V:2.9.2
+
+
+##### Non-race (contains the "player" picture) #####
+
+N:0:<player>
+G:@:w
+
+##### Town monsters #####
+
+N:1:Scrawny cat
+G:f:U
+I:5:1d1:10:5
+W:0:2:0
+J:0:1d2:1:0
+A:CLAW:HURT:1d1
+F:RAND_25 | ANIMAL
+D:A skinny little furball with sharp claws and a menacing look.
+
+N:2:Scruffy little dog
+G:C:U
+I:5:1d3:10:5
+W:0:2:0
+J:0:1d3:1:0
+A:BITE:HURT:1d1
+F:RAND_25 | ANIMAL
+D:A thin flea-ridden mutt, growling as you get close.
+
+# from Ey
+N:3:Stray Cow
+G:q:w
+I:4:1d3:10:5
+W:0:1:0
+J:0:5d5:1:0
+A:BUTT:HURT:1d1
+F:RAND_25 | ANIMAL
+D:It wandered in from the outside and now it won't leave.
+
+##### D2X based monsters #####
+
+# Skeletons
+
+N:10:Skeleton
+G:s:w
+I:3:1d3:10:5
+W:1:1:0
+J:2:6d9:10:34
+A:HIT:HURT:1d3
+A:HIT:HURT:1d3
+F:DROP_60 | OPEN_DOOR | UNDEAD | EVIL
+X:0:0:0:0:0:50
+D:.
+
+N:11:Returned
+G:s:g
+I:4:2d3:10:5
+W:1:1:0
+J:6:13d19:30:68
+A:HIT:HURT:2d5
+A:HIT:HURT:2d5
+F:DROP_60 | OPEN_DOOR | UNDEAD | EVIL
+X:0:0:0:0:0:50
+D:.
+
+N:12:Bone Warrior
+G:s:s
+I:4:2d4:10:5
+W:1:1:0
+J:7:15d21:35:76
+A:HIT:HURT:2d6
+A:HIT:HURT:2d6
+F:DROP_60 | OPEN_DOOR | UNDEAD | EVIL
+X:0:0:0:0:40:50
+D:.
+
+N:13:Burning Dead
+G:s:r
+I:5:2d4:10:5
+W:2:1:0
+J:13:26d37:65:130
+A:HIT:HURT:4d9
+A:HIT:HURT:3d9
+#H:FIRE:50:2d5
+F:DROP_60 | OPEN_DOOR | UNDEAD | EVIL
+X:0:0:50:0:0:50
+D:.
+
+N:14:Horror
+G:s:b
+I:5:2d4:10:5
+W:2:1:0
+J:14:28d39:70:143
+A:HIT:HURT:4d10
+A:HIT:HURT:3d10
+#H:ELEC:60:3d6
+F:DROP_60 | OPEN_DOOR | UNDEAD | EVIL
+X:0:20:0:60:0:50
+D:.
+
+# Zombies
+
+N:15:Zombie
+G:z:w
+I:1:1d2:10:5
+W:1:1:0
+J:1:5d9:5:33
+A:HIT:HURT:1d3
+A:HIT:HURT:2d3
+F:DROP_60 | UNDEAD | EVIL
+X:0:0:0:0:0:50
+D:.
+
+N:16:Hungry Dead
+G:z:D
+I:1:1d3:10:5
+W:1:1:0
+J:2:7d13:10:44
+A:HIT:HURT:1d3
+A:HIT:HURT:3d4
+F:DROP_60 | UNDEAD | EVIL
+X:0:0:0:0:0:50
+D:.
+
+N:17:Ghoul
+G:z:s
+I:1:2d3:10:5
+W:1:1:0
+J:12:28d51:60:152
+A:HIT:HURT:4d11
+A:HIT:HURT:9d13
+F:DROP_60 | UNDEAD | EVIL
+X:0:0:0:0:0:50
+D:.
+
+N:18:Drowned Carcass
+G:z:B
+I:1:2d4:10:5
+W:3:1:0
+J:22:49d88:111:395
+A:HIT:HURT:7d19
+A:HIT:HURT:15d23
+#H:COLD:75:3d6
+F:DROP_60 | UNDEAD | EVIL
+X:20:0:50:0:0:50
+D:.
+
+N:19:Plague Bearer
+G:z:g
+I:1:3d4:10:5
+W:2:1:0
+J:17:39d69:85:245
+A:HIT:HURT:6d15
+A:HIT:HURT:11d18
+#H:POIS:50:3d6
+F:DROP_60 | UNDEAD | EVIL
+X:0:50:0:0:0:50
+D:.
+
+# Tainted
+
+N:20:Afflicted
+G:q:g
+I:6:2d3:10:5
+W:1:1:0
+J:12:17d33:45:112
+A:HIT:HURT:6d9
+F:DROP_60 | OPEN_DOOR | DEMON
+X:0:0:0:70:0:0
+S:1_IN_2 | BA_ELEC
+D:.
+
+N:21:Tainted
+G:q:D
+I:6:2d4:10:5
+W:1:1:0
+J:11:16d31:41:104
+A:HIT:HURT:5d8
+F:DROP_60 | OPEN_DOOR | DEMON
+X:0:0:0:60:0:0
+S:1_IN_2 | BA_ELEC
+D:.
+
+N:22:Misshapen
+G:q:s
+I:5:1d2:10:5
+W:1:1:0
+J:5:8d16:19:56
+A:HIT:HURT:3d4
+F:DROP_60 | OPEN_DOOR | DEMON
+X:0:0:0:40:0:0
+S:1_IN_2 | BA_ELEC
+D:.
+
+N:23:Disfigured
+G:q:b
+I:5:1d3:10:5
+W:1:1:0
+J:8:12d23:30:80
+A:HIT:HURT:4d6
+F:DROP_60 | OPEN_DOOR | DEMON
+X:0:0:0:50:0:0
+S:1_IN_2 | BA_ELEC
+D:.
+
+N:24:Damned
+G:q:u
+I:7:2d4:10:5
+W:4:1:0
+J:27:36d70:101:470
+A:HIT:HURT:12d18
+F:DROP_60 | OPEN_DOOR | DEMON
+X:0:0:0:80:0:0
+S:1_IN_2 | BA_ELEC
+D:.
+
+# Crows / Hawks
+
+N:25:Foul Crow
+G:B:u
+I:4:2d4:10:5
+W:1:100:0
+J:4:2d5:3:22
+A:HIT:HURT:1d2
+F:DROP_60 | ANIMAL
+D:.
+
+N:26:Blood Hawk
+G:B:R
+I:4:3d4:10:5
+W:1:100:0
+J:6:3d6:5:29
+A:HIT:HURT:2d3
+F:DROP_60 | ANIMAL
+D:.
+
+N:27:Black Raptor
+G:B:D
+I:5:3d5:10:5
+W:2:100:0
+J:16:7d15:12:74
+A:HIT:HURT:4d7
+F:DROP_60 | ANIMAL
+X:0:0:0:0:0:60
+D:.
+
+N:28:Cloud Stalker
+G:B:b
+I:6:4d5:10:5
+W:3:100:0
+J:22:10d20:17:130
+A:HIT:HURT:5d10
+F:DROP_60 | ANIMAL
+X:30:0:20:60:0:0
+D:.
+
+# Fallen
+
+N:29:Fallen
+G:u:r
+I:5:2d3:10:5
+W:1:100:0
+J:1:1d3:5:18
+A:HIT:HURT:1d2
+A:HIT:HURT:1d2
+F:DROP_60 | DEMON | EVIL | OPEN_DOOR | RAND_50
+D:.
+
+N:30:Carver
+G:u:b
+I:5:2d4:10:5
+W:1:100:0
+J:5:3d7:25:42
+A:HIT:HURT:2d4
+A:HIT:HURT:2d4
+F:DROP_60 | DEMON | EVIL | OPEN_DOOR | RAND_50
+D:.
+
+N:31:Devilkin
+G:u:o
+I:6:3d4:10:5
+W:1:100:0
+J:7:3d9:35:53
+A:HIT:HURT:2d5
+A:HIT:HURT:2d5
+F:DROP_60 | DEMON | EVIL | OPEN_DOOR | RAND_50
+D:.
+
+N:32:Dark One
+G:u:s
+I:6:3d5:10:5
+W:1:100:0
+J:10:5d12:50:71
+A:HIT:HURT:3d7
+A:HIT:HURT:3d7
+F:DROP_60 | DEMON | EVIL | OPEN_DOOR | RAND_50
+D:.
+
+N:33:Warped Fallen
+G:u:g
+I:8:1d1:10:5
+W:5:100:0
+J:40:17d45:201:1199
+A:HIT:HURT:11d23
+A:HIT:HURT:11d24
+F:DROP_60 | DEMON | EVIL | OPEN_DOOR | RAND_50
+X:50:50:50:50:50:50
+D:.
+
+# Wendigo
+
+N:34:Brute
+G:N:s
+I:4:1d2:10:5
+W:1:1:0
+J:5:18d29:25:84
+A:CLAW:HURT:3d4
+A:CLAW:HURT:5d6
+F:DROP_60 | ANIMAL | OPEN_DOOR
+D:.
+
+N:35:Yeti
+G:N:W
+I:5:2d2:10:5
+W:1:1:0
+J:9:29d47:45:132
+A:CLAW:HURT:4d7
+A:CLAW:HURT:8d9
+F:DROP_60 | ANIMAL | OPEN_DOOR
+X:0:0:0:0:20:0
+D:.
+
+N:36:Crusher
+G:N:D
+I:5:2d3:10:5
+W:2:1:0
+J:19:57d92:95:327
+A:CLAW:HURT:8d13
+A:CLAW:HURT:14d18
+F:DROP_60 | ANIMAL | OPEN_DOOR
+X:0:60:0:0:0:0
+D:.
+
+N:37:Wailing Beast
+G:N:g
+I:3:3d4:10:5
+W:3:1:0
+J:23:68d110:116:479
+A:CLAW:HURT:9d16
+A:CLAW:HURT:17d21
+F:DROP_60 | ANIMAL | OPEN_DOOR
+X:0:60:20:0:0:0
+D:.
+
+N:38:Gargantuan Beast
+G:N:u
+I:5:1d1:10:5
+W:1:1:0
+J:2:9d15:10:48
+A:CLAW:HURT:2d3
+A:CLAW:HURT:3d4
+F:DROP_60 | ANIMAL | OPEN_DOOR
+D:.
+
+# Sand Raiders
+
+N:39:Sand Raider
+G:O:u
+I:5:2d3:10:5
+W:2:1:0
+J:13:38d59:65:179
+A:HIT:HURT:6d9
+#H:FIRE:50:3d4
+F:DROP_60 | OPEN_DOOR | DEMON
+D:.
+
+N:40:Marauder
+G:O:g
+I:5:2d4:10:5
+W:2:1:0
+J:17:48d76:85:261
+A:HIT:HURT:7d11
+#H:FIRE:60:4d5
+F:DROP_60 | OPEN_DOOR | DEMON
+D:.
+
+N:41:Invader
+G:O:b
+I:6:3d4:10:5
+W:2:1:0
+J:18:51d80:90:288
+A:HIT:HURT:8d11
+#H:FIRE:70:5d6
+F:DROP_60 | OPEN_DOOR | DEMON
+D:.
+
+N:42:Infidel
+G:O:r
+I:6:3d5:10:5
+W:3:1:0
+J:24:67d105:121:509
+A:HIT:HURT:10d15
+#H:FIRE:80:6d8
+F:DROP_60 | OPEN_DOOR | DEMON
+D:.
+
+N:43:Assailant
+G:O:v
+I:7:4d5:10:5
+W:5:1:0
+J:26:72d113:131:616
+A:HIT:HURT:11d16
+#H:FIRE:90:8d10
+F:DROP_60 | OPEN_DOOR | DEMON
+D:.
+
+### Stared doing things with macros here, might be mistakes ###
+
+# Gorgon
+
+N:44:Gorgon
+G:n:b
+I:1:1d3:10:5
+W:5:1:0
+J:18:33d73:90:233
+A:CLAW:HURT:4d14
+F:DROP_60 | ANIMAL
+D:.
+
+N:45:Stone Stalker
+G:n:s
+I:1:2d4:10:5
+W:5:1:0
+J:20:36d81:101:282
+A:CLAW:HURT:4d16
+F:DROP_60 | ANIMAL
+D:.
+
+N:46:Serpent Queen
+G:n:g
+I:1:2d5:10:5
+W:5:1:0
+J:22:39d88:111:342
+A:CLAW:HURT:5d17
+F:DROP_60 | ANIMAL
+D:.
+
+N:47:Stygian Watcher
+G:n:D
+I:1:3d5:10:5
+W:5:1:0
+J:24:43d96:121:413
+A:CLAW:HURT:5d19
+F:DROP_60 | ANIMAL
+D:.
+
+# Wraiths
+
+N:48:Ghost
+G:W:B
+I:5:1d2:10:5
+W:1:1:0
+J:7:14d28:35:83
+A:HIT:HURT:3d6
+X:20:0:0:0:0:50
+#H:MANA:40:3d5
+F:DROP_60 | OPEN_DOOR | UNDEAD | EVIL
+D:.
+
+N:49:Wraith
+G:W:s
+I:6:1d3:10:5
+W:1:1:0
+J:10:19d38:50:110
+A:HIT:HURT:4d8
+X:30:0:0:0:0:50
+#H:MANA:45:4d7
+F:DROP_60 | OPEN_DOOR | UNDEAD | EVIL
+D:.
+
+N:50:Spectre
+G:W:w
+I:6:2d3:10:5
+W:2:1:0
+J:19:34d69:95:251
+A:HIT:HURT:8d13
+X:40:0:0:0:0:50
+#H:MANA:50:5d9
+F:DROP_60 | OPEN_DOOR | UNDEAD | EVIL
+D:.
+
+N:51:Apparition
+G:W:y
+I:7:2d4:10:5
+W:2:1:0
+J:20:36d72:101:276
+A:HIT:HURT:8d14
+X:50:0:0:0:0:50
+#H:MANA:60:6d11
+F:DROP_60 | OPEN_DOOR | UNDEAD | EVIL
+D:.
+
+N:52:Dark Shape
+G:W:D
+I:8:3d4:10:5
+W:3:1:0
+J:22:39d79:111:334
+A:HIT:HURT:9d15
+X:60:0:0:0:0:50
+#H:MANA:70:7d15
+F:DROP_60 | OPEN_DOOR | UNDEAD | EVIL
+D:.
+
+# Corrupt Rogue
+
+N:53:Dark Hunter
+G:p:w
+I:5:2d3:10:5
+W:1:1:0
+J:2:4d7:10:31
+A:HIT:HURT:1d3
+F:DROP_60 | OPEN_DOOR | EVIL | FEMALE
+D:.
+
+N:54:Vile Hunter
+G:p:r
+I:6:2d4:10:5
+W:1:1:0
+J:5:8d13:25:54
+A:HIT:HURT:2d5
+F:DROP_60 | OPEN_DOOR | EVIL | FEMALE
+D:.
+
+N:55:Dark Stalker
+G:p:b
+I:6:3d4:10:5
+W:1:1:0
+J:8:12d20:40:78
+A:HIT:HURT:3d7
+F:DROP_60 | OPEN_DOOR | EVIL | FEMALE
+D:.
+
+N:56:Black Rogue
+G:p:D
+I:7:3d5:10:5
+W:1:1:0
+J:9:13d22:45:86
+A:HIT:HURT:3d8
+F:DROP_60 | OPEN_DOOR | EVIL | FEMALE
+D:.
+
+N:57:Flesh Hunter
+G:p:u
+I:8:4d5:10:5
+W:3:1:0
+J:23:31d51:116:311
+A:HIT:HURT:7d18
+X:20:0:0:0:0:0
+F:DROP_60 | OPEN_DOOR | EVIL | FEMALE
+D:.
+
+# Baboon Demon
+
+N:58:Dune Beast
+G:T:u
+I:7:1d2:10:5
+W:2:1:0
+J:18:41d57:90:238
+A:CLAW:HURT:6d18
+F:DROP_60 | ANIMAL | OPEN_DOOR
+D:.
+
+N:59:Rock Dweller
+G:T:s
+I:7:1d3:10:5
+W:3:1:0
+J:18:41d57:90:238
+A:CLAW:HURT:6d18
+F:DROP_60 | ANIMAL | OPEN_DOOR
+D:.
+
+N:60:Jungle Hunter
+G:T:g
+I:7:2d3:10:5
+W:3:1:0
+J:21:47d66:106:317
+A:CLAW:HURT:7d21
+F:DROP_60 | ANIMAL | OPEN_DOOR
+D:.
+
+N:61:Doom Ape
+G:T:D
+I:7:2d4:10:5
+W:3:1:0
+J:22:49d69:111:348
+A:CLAW:HURT:7d22
+F:DROP_60 | ANIMAL | OPEN_DOOR
+D:.
+
+N:62:Temple Guard
+G:T:v
+I:7:3d4:10:5
+W:3:1:0
+J:24:53d75:121:422
+A:CLAW:HURT:8d24
+F:DROP_60 | ANIMAL | OPEN_DOOR
+D:.
+
+# Goatmen
+
+N:63:Moon Clan
+G:k:u
+I:5:1d2:10:5
+W:1:1:0
+J:4:12d15:12:54
+A:HIT:HURT:3d5
+A:HIT:HURT:2d5
+F:DROP_60 | ANIMAL | OPEN_DOOR
+D:.
+
+N:64:Night Clan
+G:k:b
+I:6:1d3:10:5
+W:1:1:0
+J:6:17d21:18:72
+A:HIT:HURT:4d7
+A:HIT:HURT:3d6
+F:DROP_60 | ANIMAL | OPEN_DOOR
+D:.
+
+N:65:Blood Clan
+G:k:r
+I:7:2d3:10:5
+W:1:1:0
+J:7:19d23:21:81
+A:HIT:HURT:4d8
+A:HIT:HURT:3d7
+F:DROP_60 | ANIMAL | OPEN_DOOR
+D:.
+
+N:66:Hell Clan
+G:k:R
+I:9:3d4:10:5
+W:2:1:0
+J:19:46d57:57:245
+A:HIT:HURT:9d19
+A:HIT:HURT:8d17
+X:0:0:40:0:0:0
+F:DROP_60 | ANIMAL | OPEN_DOOR
+D:.
+
+N:67:Death Clan
+G:k:D
+I:8:2d4:10:5
+W:1:1:0
+J:10:26d32:30:108
+A:HIT:HURT:5d11
+A:HIT:HURT:4d10
+X:0:30:20:0:0:0
+F:DROP_60 | ANIMAL | OPEN_DOOR
+D:.
+
+# Fallen Shaman, accompanied by Fallen
+
+N:68:Fallen Shaman
+G:u:R
+I:4:1d1:10:5
+W:1:1:29
+J:2:4d7:10:32
+A:HIT:HURT:1d3
+A:HIT:HURT:2d3
+X:0:0:25:0:0:0
+F:DROP_1D2 | ONLY_ITEM | DEMON | EVIL | OPEN_DOOR | ESCORT
+S:1_IN_2 | S_KIN | BO_FIRE
+D:.
+
+N:69:Carver Shaman
+G:u:B
+I:4:1d1:10:5
+W:1:1:30
+J:6:9d15:30:64
+A:HIT:HURT:2d6
+A:HIT:HURT:3d6
+X:0:0:30:0:0:0
+F:DROP_1D2 | ONLY_ITEM | DEMON | EVIL | OPEN_DOOR | ESCORT
+S:1_IN_2 | S_KIN | BO_FIRE
+D:.
+
+N:70:Devilkin Shaman
+G:u:y
+I:5:1d1:10:5
+W:1:1:31
+J:9:13d22:45:88
+A:HIT:HURT:3d8
+A:HIT:HURT:4d9
+X:0:0:35:0:0:0
+F:DROP_1D2 | ONLY_ITEM | DEMON | EVIL | OPEN_DOOR | ESCORT
+S:1_IN_2 | S_KIN | BO_FIRE
+D:.
+
+N:71:Dark Shaman
+G:u:D
+I:5:1d1:10:5
+W:1:1:32
+J:11:16d26:55:104
+A:HIT:HURT:4d9
+A:HIT:HURT:5d10
+X:0:0:40:0:0:0
+F:DROP_1D2 | ONLY_ITEM | DEMON | EVIL | OPEN_DOOR | ESCORT
+S:1_IN_2 | S_KIN | BO_FIRE
+D:.
+
+N:72:Warped Shaman
+G:u:G
+I:6:1d3:10:5
+W:5:1:33
+J:40:53d87:201:1621
+A:HIT:HURT:13d30
+A:HIT:HURT:15d32
+X:0:20:70:0:0:0
+F:DROP_1D2 | ONLY_ITEM | DEMON | EVIL | OPEN_DOOR | ESCORT
+S:1_IN_2 | S_KIN | BO_FIRE
+D:.
+
+# Spike Fiend
+
+N:73:Quill Rat
+G:r:s
+I:3:1d2:10:5
+W:1:1:0
+J:1:1d4:50:21
+A:CLAW:HURT:1d2
+F:DROP_60 | ANIMAL
+D:.
+
+N:74:Spike Fiend
+G:r:b
+I:3:1d3:10:5
+W:1:1:0
+J:5:3d11:25:49
+A:CLAW:HURT:1d5
+F:DROP_60 | ANIMAL
+D:.
+
+N:75:Thorn Beast
+G:r:r
+I:4:2d3:10:5
+W:1:1:0
+J:8:4d16:40:70
+A:CLAW:HURT:2d7
+F:DROP_60 | ANIMAL
+D:.
+
+N:76:Razor Spine
+G:r:v
+I:4:2d4:10:5
+W:1:1:0
+J:9:4d17:45:77
+A:CLAW:HURT:2d8
+F:DROP_60 | ANIMAL
+D:.
+
+N:77:Jungle Urchin
+G:r:g
+I:5:3d4:10:5
+W:3:1:0
+J:18:8d33:90:174
+A:CLAW:HURT:4d14
+F:DROP_60 | ANIMAL
+D:.
+
+# Sand Maggots, breeds young
+
+N:78:Sand Maggot
+G:w:o
+I:4:1d1:10:5
+W:2:1:83
+J:16:47d59:80:238
+A:BITE:HURT:9d20
+F:DROP_60 | ANIMAL | MULTIPLY
+D:.
+
+N:79:Rock Worm
+G:w:s
+I:4:1d1:10:5
+W:2:1:84
+J:17:50d62:85:261
+A:BITE:HURT:10d21
+F:DROP_60 | ANIMAL | MULTIPLY
+D:.
+
+N:80:Devourer
+G:w:G
+I:4:1d2:10:5
+W:2:1:85
+J:19:56d69:95:316
+A:BITE:HURT:11d23
+F:DROP_60 | ANIMAL | MULTIPLY
+D:.
+
+N:81:Giant Lamprey
+G:w:B
+I:4:2d2:10:5
+W:3:1:86
+J:21:61d75:106:383
+A:BITE:HURT:12d26
+F:DROP_60 | ANIMAL | MULTIPLY
+D:.
+
+N:82:World Killer
+G:w:R
+I:4:2d3:10:5
+W:4:1:87
+J:27:78d96:136:678
+A:BITE:HURT:15d32
+F:DROP_60 | ANIMAL | MULTIPLY
+D:.
+
+N:83:Sand Maggot Young
+G:w:u
+I:4:1d1:10:5
+W:2:100:0
+J:16:7d22:80:111
+A:BITE:HURT:3d5
+F:ANIMAL
+D:.
+
+N:84:Rock Worm Young
+G:w:D
+I:4:1d1:10:5
+W:2:100:0
+J:17:8d23:85:122
+A:BITE:HURT:3d5
+F:ANIMAL
+D:.
+
+N:85:Devourer Young
+G:w:g
+I:5:1d1:10:5
+W:2:100:0
+J:19:8d26:95:147
+A:BITE:HURT:3d6
+F:ANIMAL
+D:.
+
+N:86:Giant Lamprey Young
+G:w:b
+I:5:1d1:10:5
+W:3:100:0
+J:21:9d28:106:178
+A:BITE:HURT:4d6
+F:ANIMAL
+D:.
+
+N:87:World Killer Young
+G:w:r
+I:6:1d1:10:5
+W:4:100:0
+J:24:10d32:121:238
+A:BITE:HURT:4d7
+F:ANIMAL
+D:.
+
+# Claw Viper
+
+N:88:Tomb Viper
+G:J:s
+I:4:1d2:10:5
+W:2:1:0
+J:11:16d26:55:101
+A:CLAW:HURT:4d7
+A:CLAW:HURT:5d8
+#H:COLD:100:4d7
+F:DROP_60 | ANIMAL | OPEN_DOOR
+D:.
+
+N:89:Claw Viper
+G:J:g
+I:5:1d3:10:5
+W:2:1:0
+J:15:21d34:75:144
+A:CLAW:HURT:6d10
+A:CLAW:HURT:6d10
+X:0:0:0:0:20:0
+#H:COLD:100:6d10
+F:DROP_60 | ANIMAL | OPEN_DOOR
+D:.
+
+N:90:Salamander
+G:J:r
+I:5:2d3:10:5
+W:2:1:0
+J:18:25d41:90:192
+A:CLAW:HURT:6d11
+A:CLAW:HURT:7d12
+X:0:0:0:0:40:0
+#H:COLD:100:6d11
+F:DROP_60 | ANIMAL | OPEN_DOOR
+D:.
+
+N:91:Pit Viper
+G:J:D
+I:6:2d4:10:5
+W:2:1:0
+J:22:30d49:111:281
+A:CLAW:HURT:8d14
+A:CLAW:HURT:9d15
+X:0:0:0:0:60:60
+#H:COLD:100:8d14
+F:DROP_60 | ANIMAL | OPEN_DOOR
+D:.
+
+N:92:Serpent Magus
+G:J:G
+I:10:3d4:10:5
+W:2:1:0
+J:24:32d53:121:341
+A:CLAW:HURT:8d15
+A:CLAW:HURT:9d16
+X:0:0:0:0:80:20
+#H:COLD:100:8d15
+F:DROP_60 | ANIMAL | OPEN_DOOR
+D:.
+
+# Sand Leaper
+
+N:93:Sand Leaper
+G:o:u
+I:10:1d3:10:5
+W:2:1:0
+J:14:20d58:70:158
+A:HIT:HURT:6d12
+A:HIT:HURT:6d12
+F:DROP_60 | ANIMAL
+S:1_IN_3 | BLINK
+D:.
+
+N:94:Cave Leaper
+G:o:s
+I:8:2d3:10:5
+W:2:1:0
+J:15:21d62:75:174
+A:HIT:HURT:6d12
+A:HIT:HURT:6d12
+F:DROP_60 | ANIMAL
+S:1_IN_3 | BLINK
+D:.
+
+N:95:Tomb Creeper
+G:o:r
+I:8:2d4:10:5
+W:2:1:0
+J:17:23d69:85:211
+A:HIT:HURT:7d14
+A:HIT:HURT:7d14
+X:0:0:40:0:0:0
+F:DROP_60 | ANIMAL
+S:1_IN_3 | BLINK
+D:.
+
+N:96:Tree Lurker
+G:o:g
+I:8:3d4:10:5
+W:3:1:0
+J:22:30d88:111:339
+A:HIT:HURT:9d17
+A:HIT:HURT:9d17
+X:0:0:20:40:0:0
+F:DROP_60 | ANIMAL
+S:1_IN_3 | BLINK
+D:.
+
+N:97:Razor Pit Demon
+G:o:v
+I:8:3d5:10:5
+W:4:1:0
+J:26:35d104:131:497
+A:HIT:HURT:10d20
+A:HIT:HURT:10d20
+X:20:0:60:40:0:0
+F:DROP_60 | ANIMAL
+S:1_IN_3 | BLINK
+D:.
+
+# Panther Woman
+
+N:98:Huntress
+G:f:s
+I:5:1d3:10:5
+W:2:1:0
+J:1:17d29:534:119
+A:HIT:HURT:5d12
+F:DROP_60 | ANIMAL | FEMALE | OPEN_DOOR
+D:.
+
+N:99:Sabre Cat
+G:f:w
+I:6:2d3:10:5
+W:2:1:0
+J:15:18d31:56:130
+A:HIT:HURT:5d12
+F:DROP_60 | ANIMAL | FEMALE | OPEN_DOOR
+D:.
+
+N:100:Night Tiger
+G:f:b
+I:7:2d4:10:5
+W:2:1:0
+J:17:21d34:64:158
+A:HIT:HURT:6d14
+F:DROP_60 | ANIMAL | FEMALE | OPEN_DOOR
+D:.
+
+N:101:Hell Cat
+G:f:r
+I:8:3d4:10:5
+W:2:1:0
+J:19:23d38:71:191
+A:HIT:HURT:6d15
+F:DROP_60 | ANIMAL | FEMALE | OPEN_DOOR
+D:.
+
+# Swarm
+
+N:102:Itchies
+G:I:s
+I:5:4d8:10:5
+W:2:1:0
+J:16:7d15:80:124
+A:BITE:HURT:8d10
+X:60:0:0:0:0:0
+#H:Stanima:40:8d10
+F:DROP_60 | ANIMAL
+D:.
+
+N:103:Black Locusts
+G:I:D
+I:6:5d8:10:5
+W:2:1:0
+J:17:8d16:85:136
+A:BITE:HURT:8d10
+X:70:0:0:0:0:0
+#H:Stanima:60:8d10
+F:DROP_60 | ANIMAL
+D:.
+
+N:104:Plague Bugs
+G:I:r
+I:7:6d8:10:5
+W:3:1:0
+J:21:9d19:106:199
+A:BITE:HURT:10d12
+X:80:0:0:0:0:0
+#H:Stanima:80:10d12
+F:DROP_60 | ANIMAL
+D:.
+
+N:105:Hell Swarm
+G:I:b
+I:8:7d9:10:5
+W:3:1:0
+J:22:10d20:111:219
+A:BITE:HURT:11d13
+X:90:0:0:40:0:0
+#H:Stanima:90:11d13
+F:DROP_60 | ANIMAL
+D:.
+
+# Scarab Demon
+
+N:106:Dung Soilder
+G:K:D
+I:4:2d4:10:5
+W:2:1:0
+J:14:20d53:70:140
+A:BITE:HURT:5d15
+A:BITE:HURT:5d12
+#H:ELEC:20:1d3
+F:DROP_60 | ANIMAL
+D:.
+
+N:107:Sand Warrior
+G:K:u
+I:5:3d4:10:5
+W:2:1:0
+J:16:23d38:80:170
+A:BITE:HURT:6d17
+A:BITE:HURT:6d13
+#H:ELEC:20:2d3
+F:DROP_60 | ANIMAL
+D:.
+
+N:108:Scarab
+G:K:r
+I:5:3d5:10:5
+W:2:1:0
+J:17:24d40:85:187
+A:BITE:HURT:6d17
+A:BITE:HURT:6d14
+#H:ELEC:25:2d3
+F:DROP_60 | ANIMAL
+D:.
+
+N:109:Steel Weevil
+G:K:s
+I:6:4d5:10:5
+W:2:1:0
+J:19:27d44:95:226
+A:BITE:HURT:6d19
+A:BITE:HURT:6d15
+#H:ELEC:25:2d4
+F:DROP_60 | ANIMAL
+D:.
+
+N:110:Albino Roach
+G:K:W
+I:6:4d5:10:5
+W:3:1:0
+J:24:33d55:121:364
+A:BITE:HURT:8d24
+A:BITE:HURT:8d19
+#H:ELEC:30:3d4
+F:DROP_60 | ANIMAL
+D:.
+
+# Mummy
+
+N:111:Dried Corpse
+G:M:g
+I:3:2d4:10:5
+W:2:1:0
+J:13:19d44:65:132
+A:HIT:HURT:5d10
+X:0:0:0:0:0:70
+#H:POIS:25:5d10
+F:DROP_60 | UNDEAD | EVIL
+D:.
+
+N:112:Decayed
+G:M:s
+I:3:3d4:10:5
+W:2:1:0
+J:15:22d50:75:160
+A:HIT:HURT:6d11
+X:0:0:0:0:0:70
+#H:POIS:25:6d11
+F:DROP_60 | UNDEAD | EVIL
+D:.
+
+N:113:Embalmed
+G:M:w
+I:3:3d5:10:5
+W:2:1:0
+J:18:26d59:90:213
+A:HIT:HURT:6d13
+X:0:0:0:0:0:70
+#H:POIS:30:6d13
+F:DROP_60 | UNDEAD | EVIL
+D:.
+
+N:114:Preserved Dead
+G:M:b
+I:3:4d5:10:5
+W:3:1:0
+J:23:33d74:116:343
+A:HIT:HURT:8d16
+X:0:0:0:0:0:70
+#H:POIS:30:8d16
+F:DROP_60 | UNDEAD | EVIL
+D:.
+
+N:115:Cadaver
+G:M:u
+I:3:4d5:10:5
+W:3:1:0
+J:25:36d80:126:415
+A:HIT:HURT:9d17
+X:0:0:0:0:0:70
+#H:POIS:35:9d17
+F:DROP_60 | UNDEAD | EVIL
+D:.
+
+# dried corpse
+N:116:Hollow One
+G:M:r
+I:2:1d1:10:5
+W:2:1:111
+J:15:62d76:75:252
+A:HIT:HURT:12d16
+X:0:0:0:0:0:50
+#H:POIS:15:12d16
+F:DROP_1D2 | ONLY_ITEM | UNDEAD | EVIL | OPEN_DOOR | ESCORT
+S:1_IN_2 | S_UNDEAD | BR_POIS | BO_NETH
+D:.
+
+# decayed
+N:117:Guardian
+G:M:W
+I:2:1d1:10:5
+W:2:1:112
+J:18:73d90:90:336
+A:HIT:HURT:14d18
+X:0:0:0:0:0:50
+#H:POIS:20:14d18
+F:DROP_1D2 | ONLY_ITEM | UNDEAD | EVIL | OPEN_DOOR | ESCORT
+S:1_IN_2 | S_UNDEAD | BR_POIS | BO_NETH
+D:.
+
+# embalmed
+N:118:Unraveler
+G:M:D
+I:3:1d1:10:5
+W:2:1:113
+J:20:81d99:101:406
+A:HIT:HURT:16d20
+X:0:0:0:0:0:50
+#H:POIS:25:16d20
+F:DROP_1D2 | ONLY_ITEM | UNDEAD | EVIL | OPEN_DOOR | ESCORT
+S:1_IN_2 | S_UNDEAD | BR_POIS | BO_NETH
+D:.
+
+N:119:Horadrim Ancient
+G:M:y
+I:4:1d1:10:5
+W:3:1:0
+J:23:92d113:116:540
+A:HIT:HURT:18d23
+X:0:0:0:0:0:50
+#H:POIS:30:18d23
+F:DROP_1D2 | ONLY_ITEM | UNDEAD | EVIL | OPEN_DOOR
+S:1_IN_2 | S_HI_UNDEAD | BR_POIS | BO_NETH
+D:.
+
+N:120:Baal Subject Mummy
+G:M:R
+I:5:1d1:10:5
+W:5:1:0
+J:40:157d192:201:2732
+A:HIT:HURT:30d38
+X:0:0:0:0:0:50
+#H:POIS:30:30d38
+F:DROP_1D2 | ONLY_ITEM | UNDEAD | EVIL | OPEN_DOOR
+S:1_IN_2 | S_HI_UNDEAD | BR_POIS | BO_NETH
+D:.
+
+# Vulture Demon
+
+N:121:Carrion Bird
+G:B:s
+I:4:1d3:10:5
+W:2:1:0
+J:14:20d32:70:140
+A:BITE:HURT:9d12
+F:DROP_60 | ANIMAL
+D:.
+
+N:122:Undead Scavenger
+G:B:v
+I:4:2d3:10:5
+W:2:1:0
+J:15:21d34:75:154
+A:BITE:HURT:9d12
+F:DROP_60 | ANIMAL
+D:.
+
+N:123:Hell Buzzard
+G:B:r
+I:5:2d4:10:5
+W:2:1:0
+J:22:30d49:111:300
+A:BITE:HURT:13d17
+F:DROP_60 | ANIMAL
+D:.
+
+N:124:Winged Nightmare
+G:B:G
+I:5:3d4:10:5
+W:3:1:0
+J:23:31d51:116:330
+A:BITE:HURT:14d18
+F:DROP_60 | ANIMAL
+D:.
+
+# Mosquito Demon
+
+N:125:Sucker
+G:i:s
+I:6:1d3:10:5
+W:3:100:0
+J:21:9d47:106:243
+A:BITE:HURT:7d17
+A:BITE:HURT:10d17
+#H:stanima:60:50d60
+F:DROP_60 | ANIMAL
+D:.
+
+N:126:Feeder
+G:i:D
+I:6:2d3:10:5
+W:3:100:0
+J:23:10d51:116:295
+A:BITE:HURT:8d18
+A:BITE:HURT:11d18
+#H:stanima:70:60d70
+F:DROP_60 | ANIMAL
+D:.
+
+N:127:Blood Hook
+G:i:r
+I:6:2d4:10:5
+W:3:100:0
+J:22:10d49:111:268
+A:BITE:HURT:7d17
+A:BITE:HURT:11d17
+#H:stanima:80:70d80
+F:DROP_60 | ANIMAL
+D:.
+
+N:128:Blood Wing
+G:i:R
+I:6:3d4:10:5
+W:3:100:0
+J:24:10d53:121:324
+A:BITE:HURT:8d19
+A:BITE:HURT:12d19
+#H:stanima:90:80d90
+F:DROP_60 | ANIMAL
+D:.
+
+# WillOWisp
+
+N:129:Gloam
+G:G:W
+I:15:2d3:10:5
+W:3:1:0
+J:21:19d38:106:241
+A:HIT:HURT:5d21
+X:40:0:0:50:0:0
+A:HIT:HURT:12d54
+#H:mana:40:2d9
+F:DROP_60 | UNDEAD | EVIL | INVISIBLE
+S:1_IN_2 | BLINK | BO_ELEC
+D:.
+
+N:130:Swamp Ghost
+G:G:B
+I:15:2d4:10:5
+W:3:1:0
+J:23:21d41:116:292
+A:HIT:HURT:5d23
+X:50:0:0:60:0:0
+#H:mana:60:2d10
+F:DROP_60 | UNDEAD | EVIL | INVISIBLE
+S:1_IN_2 | BLINK | BO_ELEC
+D:.
+
+N:131:Burning Soul
+G:G:R
+I:15:3d4:10:5
+W:4:1:0
+J:26:24d46:131:389
+A:HIT:HURT:6d26
+X:60:0:0:70:0:0
+#H:mana:80:3d12
+F:DROP_60 | UNDEAD | EVIL | INVISIBLE
+S:1_IN_2 | BLINK | BO_ELEC
+D:.
+
+N:132:Black Soul
+G:G:D
+I:15:3d5:10:5
+W:4:1:0
+J:28:25d50:141:470
+A:HIT:HURT:6d27
+X:70:0:0:80:0:0
+#H:mana:90:3d13
+F:DROP_60 | UNDEAD | EVIL | INVISIBLE
+S:1_IN_2 | BLINK | BO_ELEC
+D:.
+
+# Evil Spider
+
+N:133:Arach
+G:S:o
+I:6:2d3:10:5
+W:1:1:0
+J:11:37d46:55:147
+A:BITE:HURT:7d11
+F:DROP_60 | ANIMAL | EVIL
+D:.
+
+N:134:Sand Fisher
+G:S:u
+I:7:3d3:10:5
+W:2:1:0
+J:15:48d61:75:210
+A:BITE:HURT:9d15
+F:DROP_60 | ANIMAL | EVIL
+D:.
+
+N:135:Poison Spinner
+G:S:g
+I:8:3d4:10:5
+W:3:1:0
+J:21:66d84:106:372
+A:BITE:HURT:12d20
+#H:POIS:33:3d5
+F:DROP_60 | ANIMAL | EVIL
+D:.
+
+N:136:Flame Spider
+G:S:r
+I:8:4d5:10:5
+W:3:1:0
+J:22:69d88:111:410
+A:BITE:HURT:13d21
+#H:FIRE:40:3d6
+F:DROP_60 | ANIMAL | EVIL
+D:.
+
+N:137:Spider Magus
+G:S:v
+I:8:4d5:10:5
+W:3:1:0
+J:23:72d91:116:451
+A:BITE:HURT:14d22
+#H:POIS:50:4d6
+F:DROP_60 | ANIMAL | EVIL
+D:.
+
+# Thorned Hulk
+
+N:138:Thorned Hulk
+G:x:u
+I:3:1d3:10:5
+W:3:1:0
+J:21:67d109:106:403
+A:CRUSH:HURT:12d20
+A:CRUSH:HURT:10d20
+F:DROP_60
+D:.
+
+N:139:Bramble Hulk
+G:x:g
+I:3:2d3:10:5
+W:3:1:0
+J:22:70d114:111:444
+A:CRUSH:HURT:13d21
+A:CRUSH:HURT:11d21
+F:DROP_60
+D:.
+
+N:140:Thrasher
+G:x:s
+I:3:2d4:10:5
+W:3:1:0
+J:23:73d119:116:488
+A:CRUSH:HURT:13d22
+A:CRUSH:HURT:11d22
+F:DROP_60
+D:.
+
+N:141:Spike Fist
+G:x:r
+I:3:3d5:10:5
+W:5:1:0
+J:27:85d138:136:715
+A:CRUSH:HURT:15d25
+A:CRUSH:HURT:13d25
+F:DROP_60
+D:.
+
+# Vampire
+
+N:142:Ghoul Lord
+G:V:s
+I:6:1d2:10:5
+W:2:1:0
+J:19:61d84:95:299
+A:HIT:HURT:6d15
+X:30:0:0:0:50:0
+#H:COLD:60:5d15
+F:DROP_60 | UNDEAD | EVIL | OPEN_DOOR
+S:1_IN_2 | BA_FIRE | BR_FIRE
+D:.
+
+N:143:Night Lord
+G:V:b
+I:7:1d2:10:5
+W:3:1:0
+J:23:73d100:116:438
+A:HIT:HURT:8d18
+X:40:0:0:0:50:0
+#H:COLD:65:6d9
+F:DROP_60 | UNDEAD | EVIL | OPEN_DOOR
+S:1_IN_2 | BA_FIRE | BR_FIRE
+D:.
+
+N:144:Dark Lord
+G:V:D
+I:7:1d3:10:5
+W:3:1:0
+J:24:76d105:121:482
+A:HIT:HURT:8d19
+X:50:0:0:0:50:0
+#H:COLD:70:7d10
+F:DROP_60 | UNDEAD | EVIL | OPEN_DOOR
+S:1_IN_2 | BA_FIRE | BR_FIRE
+D:.
+
+N:145:Blood Lord
+G:V:R
+I:8:2d3:10:5
+W:3:1:0
+J:25:79d109:126:530
+A:HIT:HURT:8d19
+X:60:0:0:0:50:0
+#H:COLD:75:8d11
+F:DROP_60 | UNDEAD | EVIL | OPEN_DOOR
+S:1_IN_2 | BA_FIRE | BR_FIRE
+D:.
+
+N:146:Banished
+G:V:v
+I:9:1d1:10:5
+W:1:1:0
+J:12:40d55:60:154
+A:HIT:HURT:4d10
+X:20:0:0:0:50:0
+#H:COLD:55:4d7
+F:DROP_60 | UNDEAD | EVIL | OPEN_DOOR
+S:1_IN_2 | BA_FIRE | BR_FIRE
+D:.
+
+# Bat Demon
+
+N:147:Desert Wing
+G:b:u
+I:7:1d3:10:5
+W:2:1:0
+J:15:14d48:75:151
+A:BITE:HURT:7d10
+#H:ELEC:65:7d10
+F:DROP_60 | ANIMAL
+D:.
+
+N:148:Fiend
+G:b:b
+I:8:2d3:10:5
+W:3:1:0
+J:19:18d60:95:222
+A:BITE:HURT:8d12
+#H:ELEC:70:8d12
+F:DROP_60 | ANIMAL
+D:.
+
+N:149:Gloombat
+G:b:s
+I:9:2d3:10:5
+W:3:1:0
+J:22:20d69:111:295
+A:BITE:HURT:9d14
+#H:ELEC:75:9d14
+F:DROP_60 | ANIMAL
+D:.
+
+N:150:Blood Diver
+G:b:R
+I:10:2d4:10:5
+W:3:1:0
+J:24:22d75:121:357
+A:BITE:HURT:10d15
+#H:ELEC:80:10d15
+F:DROP_60 | ANIMAL
+D:.
+
+N:151:Dark Familiar
+G:b:v
+I:12:3d4:10:5
+W:4:1:0
+J:27:24d84:136:475
+A:BITE:HURT:11d17
+#H:ELEC:85:11d17
+F:DROP_60 | ANIMAL
+D:.
+
+# Fetish
+
+N:152:Ratman
+G:U:u
+I:6:1d1:10:5
+W:1:1:0
+J:10:14d24:50:95
+A:HIT:HURT:5d8
+F:DROP_60 | DEMON | EVIL | OPEN_DOOR | RAND_50
+D:.
+
+N:153:Fetish
+G:U:g
+I:7:1d2:10:5
+W:3:1:0
+J:21:28d47:106:260
+A:HIT:HURT:9d14
+F:DROP_60 | DEMON | EVIL | OPEN_DOOR | RAND_50
+D:.
+
+N:154:Flayer
+G:U:s
+I:8:1d3:10:5
+W:3:1:0
+J:22:30d49:111:286
+A:HIT:HURT:10d15
+F:DROP_60 | DEMON | EVIL | OPEN_DOOR | RAND_50
+D:.
+
+N:155:Soul Killer
+G:U:b
+I:9:2d3:10:5
+W:3:1:0
+J:23:31d51:116:315
+A:HIT:HURT:10d16
+F:DROP_60 | DEMON | EVIL | OPEN_DOOR | RAND_50
+D:.
+
+N:156:Stygian Doll
+G:U:r
+I:10:2d4:10:5
+W:3:1:0
+J:24:32d53:121:346
+A:HIT:HURT:11d16
+F:DROP_60 | DEMON | EVIL | OPEN_DOOR | RAND_50
+D:.
+
+# Corrupt Archer
+
+N:157:Dark Ranger
+G:p:w
+I:4:1d2:10:5
+W:1:1:0
+J:4:10d14:20:54
+F:DROP_60 | OPEN_DOOR | EVIL | FEMALE
+D:.
+
+N:158:Vile Archer
+G:p:r
+I:5:1d3:10:5
+W:1:1:0
+J:5:12d17:25:63
+F:DROP_60 | OPEN_DOOR | EVIL | FEMALE
+D:.
+
+N:159:Dark Archer
+G:p:b
+I:5:2d3:10:5
+W:1:1:0
+J:7:16d23:35:81
+F:DROP_60 | OPEN_DOOR | EVIL | FEMALE
+D:.
+
+N:160:Black Archer
+G:p:D
+I:6:2d4:10:5
+W:1:1:0
+J:10:21d31:50:108
+F:DROP_60 | OPEN_DOOR | EVIL | FEMALE
+D:.
+
+N:161:Flesh Archer
+G:p:u
+I:7:3d4:10:5
+W:3:1:0
+J:24:48d68:121:397
+F:DROP_60 | OPEN_DOOR | EVIL | FEMALE
+D:.
+
+# Corrupt Lancer
+
+N:162:Dark Spearwoman
+G:p:s
+I:4:1d2:10:5
+W:1:1:0
+J:2:6d9:10:36
+A:HIT:HURT:2d4
+F:DROP_60 | OPEN_DOOR | EVIL | FEMALE
+D:.
+
+N:163:Vile Lancer
+G:p:R
+I:5:1d3:10:5
+W:1:1:0
+J:5:11d16:25:63
+A:HIT:HURT:3d6
+F:DROP_60 | OPEN_DOOR | EVIL | FEMALE
+D:.
+
+N:164:Dark Lancer
+G:p:B
+I:5:2d3:10:5
+W:1:1:0
+J:8:16d24:40:90
+A:HIT:HURT:4d9
+F:DROP_60 | OPEN_DOOR | EVIL | FEMALE
+D:.
+
+N:165:Black Lancer
+G:p:v
+I:6:2d4:10:5
+W:1:1:0
+J:9:17d26:45:99
+A:HIT:HURT:4d10
+F:DROP_60 | OPEN_DOOR | EVIL | FEMALE
+D:.
+
+N:166:Flesh Lancer
+G:p:U
+I:7:3d4:10:5
+W:3:1:0
+J:24:43d65:121:394
+A:HIT:HURT:9d23
+F:DROP_60 | OPEN_DOOR | EVIL | FEMALE
+D:.
+
+# Skeleton Archer
+
+N:167:Skeleton Archer
+G:s:w
+I:4:1d2:10:5
+W:1:1:0
+J:5:9d19:25:62
+X:0:0:0:0:0:50
+F:DROP_60 | OPEN_DOOR | UNDEAD | EVIL
+D:.
+
+N:168:Returned Archer
+G:s:g
+I:4:1d3:10:5
+W:1:1:0
+J:8:14d28:40:89
+X:0:0:0:0:0:50
+F:DROP_60 | OPEN_DOOR | UNDEAD | EVIL
+D:.
+
+N:169:Bone Archer
+G:s:s
+I:5:2d3:10:5
+W:1:1:0
+J:9:15d31:45:98
+X:0:0:0:0:20:50
+F:DROP_60 | OPEN_DOOR | UNDEAD | EVIL
+D:.
+
+N:170:Burning Dead Archer
+G:s:r
+I:5:2d4:10:5
+W:2:1:0
+J:13:21d42:65:137
+X:0:0:30:0:0:50
+F:DROP_60 | OPEN_DOOR | UNDEAD | EVIL
+D:.
+
+N:171:Horror Archer
+G:s:b
+I:5:2d4:10:5
+W:2:1:0
+J:18:28d57:90:221
+X:0:20:0:40:0:60
+F:DROP_60 | OPEN_DOOR | UNDEAD | EVIL
+D:.
+
+# Blunderbore
+
+N:172:Blunderbore
+G:X:o
+I:3:1d2:10:5
+W:2:1:0
+J:18:41d73:90:282
+A:CRUSH:HURT:9d16
+A:CRUSH:HURT:14d18
+F:DROP_60 | OPEN_DOOR
+D:.
+
+N:173:Gorbelly
+G:X:w
+I:4:1d3:10:5
+W:2:1:0
+J:20:45d81:101:341
+A:CRUSH:HURT:10d18
+A:CRUSH:HURT:16d20
+F:DROP_60 | OPEN_DOOR
+D:.
+
+N:174:Mauler
+G:X:D
+I:6:2d3:10:5
+W:3:1:0
+J:25:55d100:126:550
+A:CRUSH:HURT:12d22
+A:CRUSH:HURT:19d24
+F:DROP_60 | OPEN_DOOR
+D:.
+
+N:175:Urdar
+G:X:B
+I:8:2d4:10:5
+W:4:1:0
+J:32:70d126:161:1071
+A:CRUSH:HURT:15d27
+A:CRUSH:HURT:24d30
+X:0:0:25:25:50:25
+F:DROP_60 | OPEN_DOOR
+D:.
+
+# Nest, summons crows/hawks
+
+N:176:Foul Crow Nest
+G:Q:u
+I:5:1d1:10:5
+W:1:1:25
+J:3:41d49:3:88
+F:NEVER_MOVE | NEVER_BLOW | MULTIPLY | ESCORT
+D:.
+
+N:177:Blood Hawk Nest
+G:Q:R
+I:5:1d1:10:5
+W:1:1:26
+J:8:88d105:9:177
+F:NEVER_MOVE | NEVER_BLOW | MULTIPLY | ESCORT
+D:.
+
+N:178:Black Raptor Nest
+G:Q:D
+I:5:1d1:10:5
+W:2:1:27
+J:15:153d184:17:329
+F:NEVER_MOVE | NEVER_BLOW | MULTIPLY | ESCORT
+D:.
+
+N:179:Cloud Stalker Nest
+G:Q:b
+I:5:1d1:10:5
+W:3:1:28
+J:22:219d263:25:641
+F:NEVER_MOVE | NEVER_BLOW | MULTIPLY | ESCORT
+D:.
+
+# Fetish Skeleton
+
+N:180:Undead Ratman
+G:U:y
+I:6:1d1:10:5
+W:1:1:0
+J:10:14d24:50:95
+A:HIT:HURT:5d8
+X:0:0:0:0:0:50
+F:DROP_60 | UNDEAD | EVIL | OPEN_DOOR
+D:.
+
+N:181:Undead Fetish
+G:U:w
+I:7:1d2:10:5
+W:3:1:0
+J:21:28d47:106:260
+A:HIT:HURT:9d14
+X:0:0:0:0:0:50
+F:DROP_60 | UNDEAD | EVIL | OPEN_DOOR
+D:.
+
+N:182:Undead Flayer
+G:U:v
+I:8:1d3:10:5
+W:3:1:0
+J:22:30d49:111:286
+A:HIT:HURT:10d15
+X:0:0:0:0:0:50
+F:DROP_60 | UNDEAD | EVIL | OPEN_DOOR
+D:.
+
+N:183:Undead Soul Killer
+G:U:W
+I:9:2d3:10:5
+W:3:1:0
+J:23:31d51:116:315
+A:HIT:HURT:10d16
+X:0:0:0:0:0:50
+F:DROP_60 | UNDEAD | EVIL | OPEN_DOOR
+D:.
+
+N:184:Undead Stygian Doll
+G:U:U
+I:10:2d4:10:5
+W:3:1:0
+J:24:32d53:121:346
+A:HIT:HURT:11d16
+F:DROP_60 | UNDEAD | EVIL | OPEN_DOOR
+D:.
+
+# Zealot/Cantor
+
+N:185:Zakarumite
+G:h:s
+I:6:1d2:10:5
+W:3:1:0
+J:20:54d72:101:297
+A:HIT:HURT:8d14
+A:HIT:HURT:8d14
+F:DROP_60 | MALE | EVIL | OPEN_DOOR
+D:.
+
+N:186:Faithful
+G:h:r
+I:6:1d3:10:5
+W:3:1:0
+J:22:60d79:111:360
+A:HIT:HURT:9d15
+A:HIT:HURT:9d15
+F:DROP_60 | MALE | EVIL | OPEN_DOOR
+D:.
+
+N:187:Zealot
+G:h:D
+I:6:2d3:10:5
+W:3:1:0
+J:24:65d86:121:435
+A:HIT:HURT:9d16
+A:HIT:HURT:9d16
+F:DROP_60 | MALE | EVIL | OPEN_DOOR
+D:.
+
+# zakarumite
+N:188:Sexton
+G:h:R
+I:6:1d1:10:5
+W:3:1:185
+J:22:60d79:111:381
+A:HIT:HURT:10d22
+#H:ELEC:45:4d8
+F:DROP_1D2 | ONLY_ITEM | MALE | EVIL | OPEN_DOOR | ESCORT
+S:1_IN_2 | BO_ELEC | BR_COLD
+D:.
+
+# faithful
+N:189:Cantor
+G:h:w
+I:6:1d1:10:5
+W:3:1:186
+J:23:62d82:116:419
+A:HIT:HURT:10d23
+#H:COLD:55:5d9
+F:DROP_1D2 | ONLY_ITEM | MALE | EVIL | OPEN_DOOR | ESCORT
+S:1_IN_2 | BO_ELEC | BR_COLD
+D:.
+
+# zealot
+N:190:Heirophant
+G:h:y
+I:6:1d2:10:5
+W:3:1:187
+J:24:65d86:121:461
+A:HIT:HURT:11d24
+#H:COLD:65:5d10
+F:DROP_1D2 | ONLY_ITEM | MALE | EVIL | OPEN_DOOR | ESCORT
+S:1_IN_2 | BO_ELEC | BR_COLD
+D:.
+
+# Frog Demon
+
+N:191:Swamp Dweller
+G:R:o
+I:9:1d2:10:5
+W:3:1:0
+J:21:57d75:106:360
+A:CLAW:HURT:9d21
+F:DROP_60 | ANIMAL
+S:1_IN_2 | BO_POIS
+D:.
+
+N:192:Bog Creature
+G:R:g
+I:10:1d3:10:5
+W:3:1:0
+J:22:60d79:111:396
+A:CLAW:HURT:10d22
+F:DROP_60 | ANIMAL
+S:1_IN_2 | BO_POIS
+D:.
+
+N:193:Slime Prince
+G:R:G
+I:11:2d3:10:5
+W:3:1:0
+J:24:65d86:121:479
+A:CLAW:HURT:11d24
+#H:POIS:10:16d16
+F:DROP_60 | ANIMAL
+S:1_IN_2 | BO_POIS
+D:.
+
+# Tentacle Beast
+
+N:194:Water Watcher
+G:j:b
+I:5:1d1:10:5
+W:3:1:0
+J:18:49d65:90:263
+A:SPIT:HURT:9d18
+F:ANIMAL | NEVER_MOVE
+S:1_IN_2 | BO_POIS
+D:.
+
+N:195:River Stalker
+G:j:s
+I:5:1d1:10:5
+W:3:1:0
+J:20:54d72:101:318
+A:SPIT:HURT:10d20
+F:ANIMAL | NEVER_MOVE
+S:1_IN_2 | BO_POIS
+D:.
+
+N:196:Stygian Watcher
+G:j:g
+I:5:1d1:10:5
+W:3:1:0
+J:22:60d79:111:385
+A:SPIT:HURT:11d22
+F:ANIMAL | NEVER_MOVE
+S:1_IN_2 | BO_POIS
+D:.
+
+# Skeleton Mage
+
+N:197:Returned Mage
+G:s:W
+I:4:1d2:10:5
+W:1:1:0
+J:8:10d15:40:55
+X:0:0:0:0:30:50
+F:DROP_60 | UNDEAD | EVIL | OPEN_DOOR
+S:1_IN_1 | BO_FIRE | BO_COLD | BO_ELEC | BO_POIS
+D:.
+
+N:198:Bone Mage
+G:s:G
+I:4:1d3:10:5
+W:1:1:0
+J:10:12d18:50:66
+X:0:0:0:0:0:70
+F:DROP_60 | UNDEAD | EVIL | OPEN_DOOR
+S:1_IN_1 | BO_FIRE | BO_POIS | BO_ELEC | BO_COLD
+D:.
+
+N:199:Burning Dead Mage
+G:s:R
+I:5:2d3:10:5
+W:2:1:0
+J:14:17d24:70:93
+X:0:0:30:0:0:50
+F:DROP_60 | UNDEAD | EVIL | OPEN_DOOR
+S:1_IN_1 | BO_FIRE | BO_POIS
+D:.
+
+N:200:Horror Mage
+G:s:B
+I:5:2d4:10:5
+W:2:1:0
+J:17:20d29:85:123
+X:0:0:0:30:0:50
+F:DROP_60 | UNDEAD | EVIL | OPEN_DOOR
+S:1_IN_1 | BO_ELEC | BO_COLD
+D:.
+
+# Fetish Shaman, accompanied by fetish
+
+N:201:Ratman Shaman
+G:U:o
+I:6:1d1:10:5
+W:1:1:152
+J:11:16d26:55:99
+A:HIT:HURT:3d7
+A:HIT:HURT:5d7
+F:DROP_1D2 | ONLY_ITEM | DEMON | EVIL | OPEN_DOOR | ESCORT
+S:1_IN_2 | S_KIN | BR_FIRE
+D:.
+
+N:202:Fetish Shaman
+G:U:G
+I:7:1d1:10:5
+W:3:1:153
+J:22:30d49:111:276
+A:HIT:HURT:5d13
+A:HIT:HURT:9d13
+F:DROP_1D2 | ONLY_ITEM | DEMON | EVIL | OPEN_DOOR | ESCORT
+S:1_IN_2 | S_KIN | BR_FIRE
+D:.
+
+N:203:Flayer Shaman
+G:U:D
+I:8:1d1:10:5
+W:3:1:154
+J:23:31d51:116:303
+A:HIT:HURT:5d13
+A:HIT:HURT:9d13
+F:DROP_1D2 | ONLY_ITEM | DEMON | EVIL | OPEN_DOOR | ESCORT
+S:1_IN_2 | S_KIN | BR_FIRE
+D:.
+
+N:204:Soul Killer Shaman
+G:U:B
+I:9:1d1:10:5
+W:3:1:155
+J:24:32d53:121:334
+A:HIT:HURT:5d13
+A:HIT:HURT:9d13
+F:DROP_1D2 | ONLY_ITEM | DEMON | EVIL | OPEN_DOOR | ESCORT
+S:1_IN_2 | S_KIN | BR_FIRE
+D:.
+
+N:205:Stygian Doll Shaman
+G:U:R
+I:10:1d1:10:5
+W:3:1:156
+J:24:32d53:121:334
+A:HIT:HURT:5d13
+A:HIT:HURT:9d13
+F:DROP_1D2 | ONLY_ITEM | DEMON | EVIL | OPEN_DOOR | ESCORT
+S:1_IN_2 | S_KIN | BR_FIRE
+D:.
+
+# Sand Maggot Queen, accompanied by sand maggots
+
+N:206:Sand Maggot Queen
+G:w:y
+I:4:1d1:10:5
+W:2:5:78
+J:11:38d62:55:173
+A:BITE:HURT:7d14
+F:DROP_1D2 | ONLY_ITEM | ANIMAL | ESCORT
+D:.
+
+N:207:Rock Worm Queen
+G:w:w
+I:4:1d1:10:5
+W:2:5:79
+J:14:48d78:70:226
+A:BITE:HURT:8d18
+F:DROP_1D2 | ONLY_ITEM | ANIMAL | ESCORT
+D:.
+
+N:208:Devourer Queen
+G:w:W
+I:4:1d1:10:5
+W:2:5:80
+J:17:57d93:85:300
+A:BITE:HURT:10d21
+F:DROP_1D2 | ONLY_ITEM | ANIMAL | ESCORT
+D:.
+
+N:209:Giant Lamprey Queen
+G:w:v
+I:4:1d1:10:5
+W:3:5:81
+J:21:70d113:106:439
+A:BITE:HURT:12d26
+F:DROP_1D2 | ONLY_ITEM | ANIMAL | ESCORT
+D:.
+
+N:210:World Killer Queen
+G:w:U
+I:4:1d1:10:5
+W:4:5:82
+J:29:94d154:146:942
+A:BITE:HURT:16d34
+F:DROP_1D2 | ONLY_ITEM | ANIMAL | ESCORT
+D:.
+
+# Spirit Baboon
+
+N:211:Night Marauder
+G:T:b
+I:10:2d3:10:5
+W:3:1:0
+J:24:53d75:121:422
+A:CLAW:HURT:8d24
+#H:COLD:85:5d11
+F:DROP_60 | ANIMAL | OPEN_DOOR
+D:.
+
+# Vile Mother, breeds Vile Dog
+
+N:212:Flesh Spawner
+G:H:u
+I:7:1d2:10:5
+W:4:1:215
+J:24:114d147:90:622
+A:CLAW:HURT:13d29
+F:DROP_60 | FEMALE | EVIL | OPEN_DOOR | MULTIPLY | DEMON
+D:.
+
+N:213:Stygian Hag
+G:H:G
+I:7:1d3:10:5
+W:4:1:216
+J:27:128d165:101:828
+A:CLAW:HURT:15d32
+X:0:0:0:0:25:0
+F:DROP_60 | FEMALE | EVIL | OPEN_DOOR | MULTIPLY | DEMON
+D:.
+
+N:214:Grotesque
+G:H:o
+I:7:2d3:10:5
+W:4:1:217
+J:30:141d182:113:1102
+A:CLAW:HURT:17d36
+X:0:0:0:0:40:0
+F:DROP_60 | FEMALE | EVIL | OPEN_DOOR | MULTIPLY | DEMON
+D:.
+
+N:215:Flesh Beast
+G:C:u
+I:8:1d2:10:5
+W:4:100:0
+J:24:28d42:121:330
+A:BITE:HURT:7d12
+F:EVIL | DEMON
+D:.
+
+N:216:Stygian Dog
+G:C:G
+I:9:1d3:10:5
+W:4:100:0
+J:27:31d47:136:439
+A:BITE:HURT:8d13
+X:0:0:0:0:25:0
+F:EVIL | DEMON
+D:.
+
+N:217:Grotesque Wyrm
+G:C:o
+I:10:2d3:10:5
+W:4:100:0
+J:30:34d52:151:584
+A:BITE:HURT:9d14
+X:0:0:0:0:40:0
+F:EVIL | DEMON
+D:.
+
+# Finger Mage
+
+N:218:Doom Caster
+G:W:R
+I:10:1d2:10:5
+W:4:1:0
+J:24:76d105:121:482
+A:CRUSH:HURT:8d19
+X:0:0:40:40:0:0
+F:DROP_60 | UNDEAD | EVIL | OPEN_DOOR
+D:.
+
+N:219:Strangler
+G:W:U
+I:10:1d3:10:5
+W:4:1:0
+J:27:85d117:136:641
+A:CRUSH:HURT:9d21
+X:0:0:50:50:0:0
+F:DROP_60 | UNDEAD | EVIL | OPEN_DOOR
+D:.
+
+N:220:Storm Caster
+G:W:W
+I:10:2d3:10:5
+W:4:1:0
+J:30:94d129:151:854
+A:CRUSH:HURT:10d23
+X:0:0:60:60:0:0
+F:DROP_60 | UNDEAD | EVIL | OPEN_DOOR
+D:.
+
+# Regurgitator
+
+N:221:Corpulent
+G:c:u
+I:6:1d2:10:5
+W:4:1:0
+J:24:105d142:121:604
+A:HIT:HURT:13d22
+A:HIT:HURT:12d23
+F:DROP_60 | EVIL
+D:.
+
+N:222:Corpse Spitter
+G:c:D
+I:7:1d3:10:5
+W:4:1:0
+J:27:117d158:136:804
+A:HIT:HURT:15d25
+A:HIT:HURT:13d25
+F:DROP_60 | EVIL
+D:.
+
+N:223:Maw Fiend
+G:c:r
+I:8:2d3:10:5
+W:4:1:0
+J:30:129d175:151:1070
+A:HIT:HURT:17d28
+A:HIT:HURT:14d28
+F:DROP_60 | EVIL
+D:.
+
+# Undead Horror
+
+N:224:Doom Knight
+G:L:u
+I:6:2d3:10:5
+W:4:1:0
+J:24:65d86:153:486
+A:HIT:HURT:11d24
+A:HIT:HURT:8d19
+X:0:0:80:20:20:40
+#H:RAND:60:5d10
+F:DROP_60 | MALE | UNDEAD | EVIL | OPEN_DOOR
+S:1_IN_2 | BO_NETH
+D:.
+
+N:225:Abyss Knight
+G:L:U
+I:7:1d3:10:5
+W:4:1:0
+J:27:72d96:172:647
+A:HIT:HURT:12d26
+A:HIT:HURT:9d21
+X:0:0:40:80:40:40
+#H:RAND:50:5d10
+F:DROP_60 | MALE | UNDEAD | EVIL | OPEN_DOOR
+S:1_IN_2 | BO_NETH
+D:.
+
+N:226:Oblivion Knight
+G:L:w
+I:8:1d2:10:5
+W:4:1:0
+J:30:80d106:191:861
+A:HIT:HURT:13d29
+A:HIT:HURT:10d23
+X:0:0:60:60:60:60
+#H:RAND:40:5d10
+F:DROP_60 | MALE | UNDEAD | EVIL | OPEN_DOOR
+S:1_IN_2 | BO_NETH
+D:.
+
+# Sucker Nest, summons suckers
+
+N:227:Sucker Nest
+G:Q:w
+I:5:1d1:10:5
+W:3:1:125
+J:6:31d122:30:156
+F:NEVER_MOVE | NEVER_BLOW | MULTIPLY | ESCORT
+D:.
+
+N:228:Feeder Nest
+G:Q:v
+I:5:1d1:10:5
+W:3:1:126
+J:9:43d172:45:215
+F:NEVER_MOVE | NEVER_BLOW | MULTIPLY | ESCORT
+D:.
+
+N:229:Blood Hook Nest
+G:Q:U
+I:5:1d1:10:5
+W:3:1:127
+J:17:77d306:85:440
+F:NEVER_MOVE | NEVER_BLOW | MULTIPLY | ESCORT
+D:.
+
+N:230:Blood Wing Nest
+G:Q:u
+I:5:1d1:10:5
+W:3:1:128
+J:25:111d439:126:942
+F:NEVER_MOVE | NEVER_BLOW | MULTIPLY | ESCORT
+D:.
+
+# Megademon
+
+N:231:Balrog
+G:D:r
+I:10:1d2:10:5
+W:4:1:0
+J:24:95d114:144:563
+A:HIT:HURT:8d15
+A:HIT:HURT:12d16
+X:0:0:70:0:0:0
+F:DROP_60 | MALE | DEMON | EVIL | OPEN_DOOR
+S:1_IN_2 | BR_FIRE
+D:.
+
+N:232:Pit Lord
+G:D:b
+I:10:1d3:10:5
+W:4:1:0
+J:27:106d128:162:749
+A:HIT:HURT:9d17
+A:HIT:HURT:13d18
+X:0:0:70:0:0:0
+F:DROP_60 | MALE | DEMON | EVIL | OPEN_DOOR
+S:1_IN_2 | BR_FIRE
+D:.
+
+N:233:Venom Lord
+G:D:g
+I:10:2d3:10:5
+W:4:1:0
+J:30:118d141:180:997
+A:HIT:HURT:10d18
+A:HIT:HURT:15d20
+X:0:0:70:0:0:70
+F:DROP_60 | MALE | DEMON | EVIL | OPEN_DOOR
+S:1_IN_2 | BR_FIRE | BR_POIS
+D:.
+
+# Slinger
+
+N:234:Slinger
+G:f:s
+I:5:1d3:10:5
+W:3:1:0
+J:14:16d26:48:113
+A:HIT:HURT:5d12
+#missile:3d5
+#missile:8d17
+#missile:18d39
+F:DROP_60 | ANIMAL | FEMALE | OPEN_DOOR
+D:.
+
+N:235:Spear Cat
+G:f:w
+I:5:2d3:10:5
+W:3:1:0
+J:15:17d28:52:124
+A:HIT:HURT:5d12
+#missile:3d6
+#missile:8d18
+#missile:19d39
+F:DROP_60 | ANIMAL | FEMALE | OPEN_DOOR
+D:.
+
+N:236:Night Slinger
+G:f:b
+I:5:2d4:10:5
+W:3:1:0
+J:17:19d31:59:150
+A:HIT:HURT:6d14
+#missile:3d6
+#missile:9d19
+#missile:19d40
+F:DROP_60 | ANIMAL | FEMALE | OPEN_DOOR
+D:.
+
+N:237:Hell Slinger
+G:f:r
+I:5:3d4:10:5
+W:3:1:0
+J:19:21d34:66:182
+A:HIT:HURT:6d15
+#missile:3d7
+#missile:9d19
+#missile:19d41
+F:DROP_60 | ANIMAL | FEMALE | OPEN_DOOR
+D:.
+
+# Spike Giant, accompanied by spike fiend
+
+N:238:Quill Bear
+G:r:w
+I:4:1d1:10:5
+W:1:5:73
+J:1:11d18:50:47
+A:CLAW:HURT:1d3
+F:DROP_1D2 | ONLY_ITEM | ANIMAL | ESCORT
+D:.
+
+N:239:Spike Giant
+G:r:B
+I:4:1d2:10:5
+W:1:5:74
+J:5:30d48:25:109
+A:CLAW:HURT:2d6
+F:DROP_1D2 | ONLY_ITEM | ANIMAL | ESCORT
+D:.
+
+N:240:Thorn Brute
+G:r:R
+I:5:1d3:10:5
+W:1:5:75
+J:8:44d70:40:155
+A:CLAW:HURT:3d9
+F:DROP_1D2 | ONLY_ITEM | ANIMAL | ESCORT
+D:.
+
+N:241:Razor Beast
+G:r:D
+I:5:2d3:10:5
+W:1:5:76
+J:9:48d78:45:171
+A:CLAW:HURT:3d10
+F:DROP_1D2 | ONLY_ITEM | ANIMAL | ESCORT
+D:.
+
+N:242:Giant Urchin
+G:r:G
+I:6:2d4:10:5
+W:3:5:77
+J:19:95d153:95:424
+A:CLAW:HURT:6d19
+F:DROP_1D2 | ONLY_ITEM | ANIMAL | ESCORT
+D:.
+
+# Reanimated Horde
+
+N:243:Rat Walker
+G:z:u
+I:5:2d4:10:5
+W:5:1:0
+J:31:73d109:198:899
+A:HIT:HURT:6d17
+A:HIT:HURT:8d19
+X:0:0:0:0:0:70
+F:DROP_60 | UNDEAD | EVIL
+D:.
+
+N:244:Reanimated Horde
+G:z:U
+I:5:2d4:10:5
+W:5:1:0
+J:33:77d116:210:1088
+A:HIT:HURT:7d18
+A:HIT:HURT:9d20
+X:0:0:0:0:0:80
+F:DROP_60 | UNDEAD | EVIL
+D:.
+
+N:245:Prowling Dead
+G:z:D
+I:5:2d4:10:5
+W:5:1:0
+J:35:82d123:223:1316
+A:HIT:HURT:7d19
+A:HIT:HURT:9d21
+X:0:0:0:0:0:90
+F:DROP_60 | UNDEAD | EVIL
+D:.
+
+N:246:Unholy Corpse
+G:z:s
+I:5:2d4:10:5
+W:5:1:0
+J:40:93d140:255:2120
+A:HIT:HURT:8d22
+A:HIT:HURT:11d24
+X:20:0:50:0:0:70
+F:DROP_60 | UNDEAD | EVIL
+D:.
+
+N:247:Defiled Warrior
+G:z:w
+I:5:2d4:10:5
+W:5:1:0
+J:42:98d146:268:2565
+A:HIT:HURT:9d23
+A:HIT:HURT:11d25
+X:0:50:0:0:0:70
+F:DROP_60 | UNDEAD | EVIL
+D:.
+
+# Siege Beast, accompanied by demon imps
+
+N:248:Siege Beast
+G:Y:u
+I:3:1d1:10:5
+W:5:1:291
+J:37:288d288:194:3034
+A:CRUSH:HURT:21d28
+F:DROP_60 | MULTIPLY
+S:1_IN_2 | BA_FIRE | BA_COLD
+D:.
+
+N:249:Crush Beast
+G:Y:U
+I:3:1d1:10:5
+W:5:1:292
+J:38:295d295:200:3337
+A:CRUSH:HURT:21d29
+F:DROP_60 | MULTIPLY
+S:1_IN_2 | BA_FIRE | BA_COLD
+D:.
+
+N:250:Blood Bringer
+G:Y:r
+I:4:1d1:10:5
+W:5:1:293
+J:38:295d295:200:3337
+A:CRUSH:HURT:21d29
+F:DROP_60 | MULTIPLY
+S:1_IN_2 | BA_FIRE | BA_COLD
+D:.
+
+N:251:Gore Bearer
+G:Y:s
+I:5:1d1:10:5
+W:5:1:294
+J:38:295d295:200:3337
+A:CRUSH:HURT:21d29
+F:DROP_60 | MULTIPLY
+S:1_IN_2 | BA_FIRE | BA_COLD
+D:.
+
+N:252:Deamon Steed
+G:Y:R
+I:6:1d1:10:5
+W:5:1:295
+J:38:295d295:200:3337
+A:CRUSH:HURT:21d29
+F:DROP_60 | MULTIPLY
+S:1_IN_2 | BA_FIRE | BA_COLD
+D:.
+
+# Snow Yeti
+
+N:253:Snow Drifter
+G:Y:B
+I:5:3d4:10:5
+W:5:1:0
+J:40:155d186:255:2562
+A:CLAW:HURT:8d22
+A:CLAW:HURT:11d24
+X:0:20:0:0:75:0
+#H:stun::8d12
+F:DROP_60 | ANIMAL
+D:.
+
+N:254:Abominable
+G:Y:B
+I:6:3d4:10:5
+W:5:1:0
+J:41:159d191:261:2818
+A:CLAW:HURT:8d22
+A:CLAW:HURT:11d25
+X:0:30:0:0:75:0
+#H:stun::12d16
+F:DROP_60 | ANIMAL
+D:.
+
+N:255:Chilled Froth
+G:Y:B
+I:7:3d4:10:5
+W:5:1:0
+J:42:163d195:268:3099
+A:CLAW:HURT:9d23
+A:CLAW:HURT:11d25
+X:0:0:0:0:75:0
+#H:stun::16d20
+F:DROP_60 | ANIMAL
+D:.
+
+N:256:Frozen Abyss
+G:Y:B
+I:7:3d4:10:5
+W:5:1:0
+J:43:166d200:274:3409
+A:CLAW:HURT:9d23
+A:CLAW:HURT:11d26
+X:0:0:0:0:75:0
+#H:stun::20d24
+F:DROP_60 | ANIMAL
+D:.
+
+# Wolf Rider (257-259)
+
+# Minion
+
+N:260:Minion
+G:e:u
+I:7:2d4:10:5
+W:5:5:0
+J:31:121d152:186:1172
+A:HIT:HURT:15d19
+A:HIT:HURT:18d22
+F:DROP_60 | DEMON | EVIL
+D:.
+
+N:261:Slayer
+G:e:U
+I:7:2d4:10:5
+W:5:5:0
+J:33:129d161:198:1418
+A:HIT:HURT:16d20
+A:HIT:HURT:19d24
+F:DROP_60 | DEMON | EVIL
+D:.
+
+N:262:Ice Boar
+G:e:s
+I:7:2d4:10:5
+W:5:5:0
+J:35:136d170:210:1716
+A:HIT:HURT:17d21
+A:HIT:HURT:20d25
+F:DROP_60 | DEMON | EVIL
+D:.
+
+N:263:Fire Boar
+G:e:o
+I:7:2d4:10:5
+W:5:5:0
+J:36:140d175:216:1887
+A:HIT:HURT:17d22
+A:HIT:HURT:20d26
+F:DROP_60 | DEMON | EVIL
+D:.
+
+N:264:Hell Spawn
+G:e:r
+I:7:2d4:10:5
+W:5:5:0
+J:37:144d180:222:2076
+A:HIT:HURT:17d22
+A:HIT:HURT:21d26
+F:DROP_60 | DEMON | EVIL
+D:.
+
+N:265:Ice Spwan
+G:e:w
+I:7:2d4:10:5
+W:5:5:0
+J:40:155d194:240:2763
+A:HIT:HURT:19d24
+A:HIT:HURT:23d29
+F:DROP_60 | DEMON | EVIL
+D:.
+
+N:266:Greater Hell Spawn
+G:e:R
+I:7:3d5:10:5
+W:5:5:0
+J:41:159d198:246:3040
+A:HIT:HURT:19d25
+A:HIT:HURT:23d29
+F:DROP_60 | DEMON | EVIL
+D:.
+
+N:267:Greater Ice Spawn
+G:e:W
+I:7:3d5:10:5
+W:5:5:0
+J:42:163d203:252:3344
+A:HIT:HURT:20d25
+A:HIT:HURT:24d30
+F:DROP_60 | DEMON | EVIL
+D:.
+
+# Suicide Minions
+
+N:268:Fanatic Minion
+G:E:u
+I:10:1d1:10:5
+W:5:5:0
+J:31:24d36:156:1250
+A:HIT:HURT:59d88
+A:HIT:HURT:8d19
+X:0:0:25:0:0:0
+F:DROP_60 | DEMON | EVIL | NO_FEAR | NO_SLEEP
+D:.
+
+N:269:Berserk Slayer
+G:E:U
+I:10:1d1:10:5
+W:5:5:0
+J:33:26d39:166:1512
+A:HIT:HURT:63d94
+A:HIT:HURT:9d20
+X:0:0:30:0:0:0
+F:DROP_60 | DEMON | EVIL | NO_FEAR | NO_SLEEP
+D:.
+
+N:270:Consumed Fire Boar
+G:E:o
+I:10:1d1:10:5
+W:5:5:0
+J:35:27d41:176:1829
+A:HIT:HURT:66d99
+A:HIT:HURT:9d21
+X:0:0:35:0:0:0
+F:DROP_60 | DEMON | EVIL | NO_FEAR | NO_SLEEP
+D:.
+
+N:271:Consumed Ice Boar
+G:E:s
+I:10:1d1:10:5
+W:5:5:0
+J:36:28d42:181:2012
+A:HIT:HURT:68d102
+A:HIT:HURT:10d22
+X:0:0:40:0:0:0
+F:DROP_60 | DEMON | EVIL | NO_FEAR | NO_SLEEP
+D:.
+
+N:272:Frenzied Hell Spawn
+G:E:r
+I:10:1d1:10:5
+W:5:5:0
+J:37:29d43:186:2214
+A:HIT:HURT:69d104
+A:HIT:HURT:10d22
+X:0:20:70:0:0:0
+F:DROP_60 | DEMON | EVIL | NO_FEAR | NO_SLEEP
+D:.
+
+N:273:Frenzied Ice Spawn
+G:E:w
+I:10:1d1:10:5
+W:5:5:0
+J:40:31d47:201:2946
+A:HIT:HURT:75d113
+A:HIT:HURT:11d24
+X:0:0:35:0:0:0
+F:DROP_60 | DEMON | EVIL | NO_FEAR | NO_SLEEP
+D:.
+
+N:274:Insane Hell Spawn
+G:E:R
+I:10:1d1:10:5
+W:5:5:0
+J:41:32d48:206:3241
+A:HIT:HURT:77d115
+A:HIT:HURT:11d25
+X:0:0:40:0:0:0
+F:DROP_60 | DEMON | EVIL | NO_FEAR | NO_SLEEP
+D:.
+
+N:275:Insane Ice Spawn
+G:E:W
+I:10:1d1:10:5
+W:5:5:0
+J:42:33d49:211:3565
+A:HIT:HURT:79d118
+A:HIT:HURT:11d25
+X:0:20:70:0:0:0
+F:DROP_60 | DEMON | EVIL | NO_FEAR | NO_SLEEP
+D:.
+
+# Succubae
+
+N:276:Succubus
+G:Z:b
+I:10:2d3:10:5
+W:5:1:0
+J:32:63d100:204:907
+A:HIT:HURT:9d17
+A:HIT:HURT:9d15
+F:DROP_60 | FEMALE | DEMON | EVIL
+D:.
+
+N:277:Vile Temptress
+G:Z:D
+I:11:2d4:10:5
+W:5:1:0
+J:34:66d106:217:1097
+A:HIT:HURT:10d18
+A:HIT:HURT:10d16
+F:DROP_60 | FEMALE | DEMON | EVIL
+D:.
+
+N:278:Stygian Harlot
+G:Z:g
+I:12:3d4:10:5
+W:5:1:0
+J:35:68d109:223:1207
+A:HIT:HURT:10d19
+A:HIT:HURT:10d17
+F:DROP_60 | FEMALE | DEMON | EVIL
+D:.
+
+N:279:Blight Wing
+G:Z:u
+I:13:3d5:10:5
+W:5:1:0
+J:40:78d124:255:1943
+A:HIT:HURT:11d21
+A:HIT:HURT:11d19
+F:DROP_60 | FEMALE | DEMON | EVIL
+D:.
+
+N:280:Blood Witch
+G:Z:r
+I:14:4d5:10:5
+W:5:1:0
+J:42:81d130:268:2351
+A:HIT:HURT:12d22
+A:HIT:HURT:12d20
+F:DROP_60 | FEMALE | DEMON | EVIL
+D:.
+
+N:281:Dominus
+G:Z:B
+I:7:2d3:10:5
+W:5:1:0
+J:32:63d100:204:907
+A:HIT:HURT:9d17
+A:HIT:HURT:9d15
+F:DROP_60 | FEMALE | DEMON | EVIL
+D:.
+
+N:282:Vile Witch
+G:Z:s
+I:8:2d4:10:5
+W:5:1:0
+J:34:66d106:217:1097
+A:HIT:HURT:10d18
+A:HIT:HURT:10d16
+F:DROP_60 | FEMALE | DEMON | EVIL
+D:.
+
+N:283:Stygian Fury
+G:Z:G
+I:9:3d4:10:5
+W:5:1:0
+J:35:68d109:223:1207
+A:HIT:HURT:10d19
+A:HIT:HURT:10d17
+F:DROP_60 | FEMALE | DEMON | EVIL
+D:.
+
+N:284:Mage Wing
+G:Z:U
+I:10:3d5:10:5
+W:5:1:0
+J:40:78d124:255:1943
+A:HIT:HURT:11d21
+A:HIT:HURT:11d19
+F:DROP_60 | FEMALE | DEMON | EVIL
+D:.
+
+N:285:Hell Bitch
+G:Z:R
+I:12:4d5:10:5
+W:5:1:0
+J:42:81d130:268:2351
+A:HIT:HURT:12d22
+A:HIT:HURT:12d20
+X:0:0:0:0:80:0
+F:DROP_60 | FEMALE | DEMON | EVIL
+D:.
+
+# Overseer, accompanied by minions
+
+N:286:Overseer
+G:y:u
+I:4:1d2:10:5
+W:5:1:260
+J:33:258d258:166:971
+A:HIT:HURT:13d25
+A:HIT:HURT:21d43
+F:DROP_1D2 | ONLY_ITEM | ESCORT | EVIL
+D:.
+
+N:287:Lasher
+G:y:U
+I:4:1d2:10:5
+W:5:1:261
+J:34:265d265:171:1068
+A:HIT:HURT:13d26
+A:HIT:HURT:22d44
+F:DROP_1D2 | ONLY_ITEM | ESCORT | EVIL
+D:.
+
+N:288:Overlord
+G:y:s
+I:5:1d2:10:5
+W:5:1:262
+J:36:280d280:181:1293
+A:HIT:HURT:14d27
+A:HIT:HURT:23d46
+F:DROP_1D2 | ONLY_ITEM | ESCORT | EVIL
+D:.
+
+N:289:Blood Boss
+G:y:r
+I:5:1d2:10:5
+W:5:1:263
+J:37:288d288:186:1422
+A:HIT:HURT:14d28
+A:HIT:HURT:24d47
+F:DROP_1D2 | ONLY_ITEM | ESCORT | EVIL
+D:.
+
+N:290:Hell Whip
+G:y:R
+I:6:2d3:10:5
+W:5:1:264
+J:39:303d303:196:1721
+A:HIT:HURT:15d29
+A:HIT:HURT:25d50
+F:DROP_1D2 | ONLY_ITEM | ESCORT | EVIL
+D:.
+
+# Demon Imp
+
+N:291:Demon Imp
+G:u:r
+I:7:3d4:10:5
+W:5:2:0
+J:31:41d68:156:792
+A:HIT:HURT:12d24
+A:HIT:HURT:20d40
+F:DROP_60 | OPEN_DOOR | DEMON | EVIL
+S:1_IN_3 | BLINK | BO_FIRE
+D:.
+
+N:292:Demon Rascal
+G:u:u
+I:7:3d4:10:5
+W:5:2:0
+J:33:44d72:166:958
+A:HIT:HURT:13d25
+A:HIT:HURT:21d43
+F:DROP_60 | OPEN_DOOR | DEMON | EVIL
+S:1_IN_3 | BLINK | BO_FIRE
+D:.
+
+N:293:Demon Gremlin
+G:u:U
+I:7:3d4:10:5
+W:5:2:0
+J:34:45d74:171:1054
+A:HIT:HURT:13d26
+A:HIT:HURT:22d44
+F:DROP_60 | OPEN_DOOR | DEMON | EVIL
+S:1_IN_3 | BLINK | BO_FIRE
+D:.
+
+N:294:Demon Trickster
+G:u:o
+I:7:3d4:10:5
+W:5:2:0
+J:36:48d78:181:1276
+A:HIT:HURT:14d27
+A:HIT:HURT:23d46
+F:DROP_60 | OPEN_DOOR | DEMON | EVIL
+S:1_IN_3 | BLINK | BO_FIRE
+D:.
+
+N:295:Demon Rogue
+G:u:R
+I:7:3d4:10:5
+W:5:2:0
+J:38:50d83:191:1543
+A:HIT:HURT:14d29
+A:HIT:HURT:24d48
+F:DROP_60 | OPEN_DOOR | DEMON | EVIL
+S:1_IN_3 | BLINK | BO_FIRE
+D:.
+
+# Frozen Horror
+
+N:296:Frozen Creeper
+G:T:B
+I:3:2d3:10:5
+W:5:1:0
+J:37:216d288:222:2560
+A:HIT:HURT:14d22
+A:HIT:HURT:18d24
+X:0:0:0:0:75:0
+F:DROP_60 | ANIMAL
+S:1_IN_2 | BR_COLD
+D:.
+
+N:297:Frozen Terror
+G:T:B
+I:3:2d3:10:5
+W:5:1:0
+J:38:221d295:228:2816
+A:HIT:HURT:14d23
+A:HIT:HURT:19d24
+X:0:0:0:0:75:0
+F:DROP_60 | ANIMAL
+S:1_IN_2 | BR_COLD
+D:.
+
+N:298:Frozen Scrouge
+G:T:B
+I:3:2d3:10:5
+W:5:1:0
+J:39:227d303:234:3097
+A:HIT:HURT:15d23
+A:HIT:HURT:19d25
+X:0:0:0:0:75:0
+F:DROP_60 | ANIMAL
+S:1_IN_2 | BR_COLD
+D:.
+
+N:299:Frozen Horror
+G:T:B
+I:3:2d3:10:5
+W:5:1:0
+J:40:233d310:240:3407
+A:HIT:HURT:15d24
+A:HIT:HURT:20d26
+X:0:0:0:0:75:0
+F:DROP_60 | ANIMAL
+S:1_IN_2 | BR_COLD
+D:.
+
+N:300:Frozen Horror
+G:T:B
+I:3:2d3:10:5
+W:5:1:0
+J:41:238d318:246:3748
+A:HIT:HURT:15d25
+A:HIT:HURT:20d26
+X:0:0:0:0:75:0
+F:DROP_60 | ANIMAL
+S:1_IN_2 | BR_COLD
+D:.
+
+# Blood Lord
+
+N:301:Moon Lord
+G:k:U
+I:9:1d2:10:5
+W:5:1:0
+J:33:193d258:248:1933
+A:HIT:HURT:14d31
+A:HIT:HURT:14d31
+X:0:0:0:0:0:0
+F:DROP_60 | ANIMAL | OPEN_DOOR
+D:.
+
+N:302:Night Lord
+G:k:B
+I:9:1d2:10:5
+W:5:1:0
+J:35:204d273:263:2339
+A:HIT:HURT:15d33
+A:HIT:HURT:15d33
+X:0:0:0:0:0:0
+F:DROP_60 | ANIMAL | OPEN_DOOR
+D:.
+
+N:303:Blood Lord
+G:k:v
+I:9:1d2:10:5
+W:5:1:0
+J:36:210d280:270:2573
+A:HIT:HURT:15d34
+A:HIT:HURT:15d34
+X:0:0:0:0:0:0
+F:DROP_60 | ANIMAL | OPEN_DOOR
+D:.
+
+N:304:Hell Lord
+G:k:o
+I:9:1d2:10:5
+W:5:1:0
+J:40:233d310:300:3767
+A:HIT:HURT:17d38
+A:HIT:HURT:17d38
+X:0:0:0:0:0:0
+F:DROP_60 | ANIMAL | OPEN_DOOR
+D:.
+
+N:305:Death Lord
+G:k:s
+I:9:1d2:10:5
+W:5:1:0
+J:43:249d333:323:5013
+A:HIT:HURT:18d40
+A:HIT:HURT:18d40
+X:0:0:0:0:0:0
+F:DROP_60 | ANIMAL | OPEN_DOOR
+D:.
+
+# Putrid Defiler
+
+N:306:Putrid Defiler
+G:H:r
+I:6:1d1:10:5
+W:5:1:311
+J:35:82d136:263:1371
+A:HIT:HURT:7d20
+X:0:0:33:33:33:50
+F:DROP_60 | EVIL | DEMON | OPEN_DOOR | MULTIPLY
+D:.
+
+N:307:Putrid Defiler
+G:H:r
+I:6:1d1:10:5
+W:5:1:312
+J:37:86d144:278:1659
+A:HIT:HURT:7d21
+X:0:0:33:33:33:50
+F:DROP_60 | EVIL | DEMON | OPEN_DOOR | MULTIPLY
+D:.
+
+N:308:Putrid Defiler
+G:H:r
+I:6:1d1:10:5
+W:5:1:313
+J:38:89d148:285:1825
+A:HIT:HURT:7d21
+X:0:0:33:33:33:50
+F:DROP_60 | EVIL | DEMON | OPEN_DOOR | MULTIPLY
+D:.
+
+N:309:Putrid Defiler
+G:H:r
+I:6:1d1:10:5
+W:5:1:314
+J:39:91d151:293:2007
+A:HIT:HURT:7d22
+X:0:0:33:33:33:50
+F:DROP_60 | EVIL | DEMON | OPEN_DOOR | MULTIPLY
+D:.
+
+N:310:Putrid Defiler
+G:H:r
+I:6:1d1:10:5
+W:5:1:315
+J:40:93d155:300:2208
+A:HIT:HURT:8d23
+X:0:0:33:33:33:50
+F:DROP_60 | EVIL | DEMON | OPEN_DOOR | MULTIPLY
+D:.
+
+# Pain Worm
+
+N:311:Pain Worm
+G:C:r
+I:8:2d2:10:5
+W:5:100:0
+J:34:45d74:171:36
+A:HIT:HURT:6d13
+F:EVIL | DEMON
+D:.
+
+N:312:Pain Worm
+G:C:r
+I:8:2d2:10:5
+W:5:100:0
+J:35:46d76:176:39
+A:HIT:HURT:7d13
+F:EVIL | DEMON
+D:.
+
+N:313:Pain Worm
+G:C:r
+I:8:2d2:10:5
+W:5:100:0
+J:36:48d78:181:43
+A:HIT:HURT:7d14
+F:EVIL | DEMON
+D:.
+
+N:314:Pain Worm
+G:C:r
+I:8:2d2:10:5
+W:5:100:0
+J:37:49d81:186:47
+A:HIT:HURT:7d14
+F:EVIL | DEMON
+D:.
+
+N:315:Pain Worm
+G:C:r
+I:8:2d2:10:5
+W:5:100:0
+J:42:55d91:211:76
+A:HIT:HURT:8d16
+F:EVIL | DEMON
+D:.
+
+### Uniques and Quest monsters ###
+
+# Baal's Minion
+
+N:531:Baal's Minion
+I:8:2d3:10:5
+W:5:100:0
+J:56:547d766:295:26436
+A:HIT:HURT:11d32
+A:HIT:HURT:5d58
+X:0:0:50:0:50:95
+F:DROP_1D2 | ONLY_ITEM | DEMON | EVIL | OPEN_DOOR | FORCE_DEPTH
+D:.
+
+# Blood Raven (Corrupt Rogue), accompanied by hungry dead
+
+N:532:Blood Raven
+G:p:W
+I:8:1d1:10:5
+W:1:1:16
+J:4:71d71:38:181
+X:0:50:50:50:50:50
+F:DROP_3D2 | DROP_GOOD | ONLY_ITEM | UNIQUE | FEMALE | EVIL | ESCORT
+D:.
+
+# Griswold (zombie)
+
+N:533:Griswold
+G:z:r
+I:4:1d1:10:5
+W:1:1:0
+J:6:79d79:25:191
+A:HIT:HURT:2d6
+A:HIT:HURT:4d9
+X:0:0:0:0:0:50
+F:DROP_3D2 | DROP_GOOD | ONLY_ITEM | MALE | UNDEAD | EVIL | OPEN_DOOR | UNIQUE
+D:.
+
+# The Smith (2/2/1 levels before Andariel)
+
+N:534:The Smith
+G:P:U
+I:7:1d1:10:5
+W:1:1:0
+J:10:64d64:50:181
+A:HIT:HURT:7d9
+X:0:0:0:0:0:-50
+F:DROP_3D2 | DROP_GOOD | ONLY_ITEM | MALE | OPEN_DOOR | UNIQUE | FORCE_DEPTH
+D:.
+
+# The Summoner (on the level before Duriel's level)
+
+N:535:The Summoner
+G:P:y
+I:5:1d1:10:5
+W:2:1:0
+J:23:49d65:165:305
+A:HIT:HURT:9d18
+X:0:0:50:50:50:0
+F:DROP_3D2 | DROP_GOOD | ONLY_ITEM | UNIQUE | QUESTOR | MALE | EVIL | 
+F:FORCE_DEPTH | OPEN_DOOR
+S:1_IN_2 | S_MONSTER
+D:.
+
+# Radament (Greater Mummy), accompanied by horror mages
+
+N:536:Radament
+G:M:U
+I:2:1d1:10:5
+W:2:1:200
+J:16:169d169:60:446
+A:HIT:HURT:8d17
+A:HIT:HURT:8d17
+X:0:0:0:0:40:50
+#H:POIS:25:20d30
+F:DROP_3D2 | DROP_GOOD | ONLY_ITEM | UNIQUE | UNDEAD | EVIL | MALE | OPEN_DOOR | ESCORT
+S:1_IN_2 | S_UNDEAD | BR_POIS | BO_NETH
+D:.
+
+# Council Member (same level as Mephisto)
+
+N:537:Council Member
+G:h:o
+I:12:1d1:10:5
+W:3:1:0
+J:36:99d198:126:696
+A:HIT:HURT:8d19
+F:DROP_3D2 | DROP_GOOD | ONLY_ITEM | MALE | EVIL | OPEN_DOOR | FORCE_DEPTH
+D:.
+
+N:538:Council Member
+G:h:o
+I:12:1d1:10:5
+W:3:1:0
+J:36:99d198:126:696
+A:HIT:HURT:8d19
+F:DROP_3D2 | DROP_GOOD | ONLY_ITEM | MALE | EVIL | OPEN_DOOR | FORCE_DEPTH
+D:.
+
+# Izual (2 levels before Diablo)
+
+N:539:Izual
+G:A:B
+I:10:1d1:10:5
+W:4:1:0
+J:42:5688d5688:146:22759
+A:HIT:HURT:24d45
+X:30:30:30:30:75:30
+#H:COLD:100:8d16
+F:DROP_3D2 | DROP_GOOD | ONLY_ITEM | UNIQUE | DEMON | EVIL | MALE | 
+F:FORCE_SLEEP | FORCE_DEPTH
+S:1_IN_2 | BA_COLD
+D:.
+
+# Hephasto the Armorer (1 level before Diablo)
+
+N:540:Hephasto
+G:P:o
+I:8:1d1:10:5
+W:4:1:0
+J:43:395d395:159:1593
+A:HIT:HURT:24d36
+X:0:0:0:0:0:-50
+F:DROP_3D2 | DROP_GOOD | ONLY_ITEM | UNIQUE | MALE | OPEN_DOOR | FORCE_DEPTH | QUESTOR
+D:.
+
+# Andariel is the Act I boss, accompanied by Dark Shamans
+
+N:541:Andariel
+G:P:g
+I:8:1d1:10:5
+W:1:1:71
+J:12:666d666:60:1281
+A:HIT:HURT:6d19
+A:HIT:HURT:13d23
+X:0:0:-50:50:50:80
+#H:POIS:100:5d10
+F:DROP_3D2 | DROP_GOOD | ONLY_ITEM | UNIQUE | QUESTOR | MALE | DEMON | EVIL | 
+F:FORCE_DEPTH | OPEN_DOOR | ESCORT
+D:.
+
+# Duriel is the Act II boss
+
+N:542:Duriel
+G:P:r
+I:10:1d1:10:5
+W:2:1:0
+J:24:2188d2188:111:6005
+A:BUTT:HURT:22d32
+A:BUTT:HURT:16d23
+X:0:0:20:20:50:20
+F:DROP_3D2 | DROP_GOOD | ONLY_ITEM | UNIQUE | QUESTOR | MALE | DEMON | EVIL | 
+F:FORCE_SLEEP | FORCE_DEPTH
+D:.
+
+# Mepisto is the Act III boss, accompnaied by Blood Lords
+
+N:543:Mephisto
+G:P:W
+I:8:1d1:10:5
+W:3:1:145
+J:36:3075d3075:193:10714
+A:HIT:HURT:50d75
+X:0:0:33:33:25:50
+F:DROP_3D2 | DROP_GOOD | ONLY_ITEM | UNIQUE | QUESTOR | MALE | DEMON | EVIL | 
+F:FORCE_SLEEP | FORCE_DEPTH | OPEN_DOOR | ESCORT
+D:.
+
+# Diablo is the Act IV boss
+
+N:544:Diablo
+G:P:R
+I:6:1d1:10:5
+W:4:1:0
+J:44:5270d5270:207:44896
+A:HIT:HURT:19d49
+A:HIT:HURT:28d64
+X:0:0:33:33:33:50
+F:DROP_3D2 | DROP_GOOD | ONLY_ITEM | UNIQUE | QUESTOR | MALE | DEMON | EVIL | 
+F:FORCE_SLEEP | FORCE_DEPTH | OPEN_DOOR
+D:.
+
+# Baal is the Act V boss, accompanied by Baal's Minions
+
+N:545:Baal
+G:P:u
+I:6:1d1:10:5
+W:5:1:531
+J:56:7666d7666:311:297964
+A:HIT:HURT:39d66
+A:HIT:HURT:50d100
+X:0:0:33:33:33:50
+F:DROP_3D2 | DROP_GOOD | ONLY_ITEM | UNIQUE | QUESTOR | MALE | DEMON | EVIL | ESCORT | 
+F:FORCE_SLEEP | FORCE_DEPTH | OPEN_DOOR
+D:.
+
+# Hell Bovine (act 0, the level after Baal)
+
+N:546:Hell Bovine
+G:q:w
+I:5:5d10:10:5
+W:0:1:0
+J:57:77d165:147:804
+A:HIT:HURT:27d40
+A:HIT:HURT:32d43
+F:DROP_3D2 | DROP_GOOD | ONLY_ITEM | ANIMAL | OPEN_DOOR | FORCE_DEPTH
+D:.
+
+# Need to add the Cow King, after killing it no more Hell Bovines are
+# generated for that difficulty level

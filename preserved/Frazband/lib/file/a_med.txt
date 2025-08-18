@@ -1,0 +1,88 @@
+N:*:Default
+86
+'Resistor'
+'Warrior's Shield'
+of Polonium
+'Guardian'
+'Protector'
+of Thiron
+of Quatis
+of Holiness
+'Bloodshield'
+'Morthog'
+of Tyrolia
+'Pendulum'
+of the Champions
+of Ziggmund
+'Defence'
+'Protection of Ramses'
+'Orion's Belt'
+'Saver'
+of Steel
+'Steelskin'
+'Lawbringer'
+'Shadow'
+of the Shadows
+'Sentinel'
+'Restorer'
+'Cloka'
+'Conservator'
+'Cyclopean'
+of Oorit
+of Ilmar
+of Ulund
+'Dam'
+'Yemismeun'
+of Ohoir
+of Seadal
+of Sniedadi
+'Mana Web'
+'Mightstone'
+of Runes
+'Yeete'
+of Gendiglir
+'Symal'
+'Worfin'
+'Camot'
+'Metacus'
+'Regetor'
+'Moonstone'
+'Stormcloak'
+'Honesty'
+of Honour
+of Justice
+of Ralin
+of Crystallion
+of the Iron Lord
+'Windwalker'
+of Gordion
+of Super Zaxxon
+'Survivalist'
+of the Magi
+of Robustness
+of Sussamma
+of Akebono
+of Takanohana
+of Sybok
+'Morthog'
+of Tyrolia
+'Pendulum'
+of the Champions
+of Ziggmund
+'Defence'
+'Protection of Ramses'
+'Orion's Belt'
+'Saver'
+of Steel
+'Steelskin'
+'Lawbringer'
+'Shadow'
+of the Shadows
+'Sentinel'
+'Restorer'
+'Clowor'
+'Conservator'
+'Cyclopean'
+of Ilmar
+of Ilmar
+of Stouli

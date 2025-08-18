@@ -1,0 +1,283 @@
+# File: p_class.txt
+
+
+# This file is used to initialize the "player class" information for Angband.
+
+# Do not modify this file unless you know exactly what you are doing,
+# unless you wish to risk possible system crashes and broken savefiles.
+
+# === Understanding p_class.txt ===
+
+# Format:
+# N:class number:class name
+# S:str:int:wis:dex:con:chr
+# C:dis:dev:sav:stl:srh:fos:thn:thb:throw:dig
+# X:dis:dev:sav:stl:srh:fos:thn:thb:throw:dig
+# I:mhp:exp:sense_base:sense_div
+# A:max_attacks:min_weight:att_multiply
+# M:spellbook tval:spell-stat:first-level:max weight
+# B:spell number:level:mana:fail:exp
+# T:title
+# E:tval:sval:min:max
+# F:class flags
+
+# 'N' indicates the beginning of an entry. The serial number must
+# increase for each new class.
+
+# 'S' is for the stat modifiers - strength, intelligence, wisdom,
+# dexterity, constitution, charisma.
+
+# 'C' is for the base skills - disarming, magic devices, saving throws,
+# stealth, searching ability, searching frequency, to hit (normal),
+# to hit (bows), to hit (throwing), digging.
+
+# 'X' is for the skill modifiers (as above).  The modifiers are added to
+# the base skill every ten levels.
+
+# 'I' is for extra info - max. hitpoints gained per level, experience
+# factor in percent, base chance for pseudo-id (smaller is better),
+# level dependent divisor for the pseudo-id chance.
+
+# 'A' is for attack info - maximum possible number of attacks, minimum
+# weapon weight for calculating the number of attacks, multiplier for
+# attack calculations.
+
+# 'M' is for magic info - tval of the used spellbook, number of the
+# spell-stat, level of the first spell, weight that hurts spells.
+
+# 'B' is for spell/prayer info - number of the spell, level, mana
+# required, fail-rate, experience for first casting.
+
+# 'T' is for class titles.
+
+# 'E' is for starting equipment - tval of the item, sval of the item,
+# minimum amount, maximum amount.
+
+# 'F' is for class flags.
+
+
+# Version stamp (required)
+
+V:3.0.11
+
+N:0:Adventurer
+S:0:0:0:0:0:0
+C:30:30:30:1:15:5:50:50:50:0
+X:10:10:10:0:1:0:30:30:30:0
+I:5:-50:5000:40
+A:5:20:4
+M:0:0:0:0
+E:potion:Heroism:3:3
+E:hafted:Whip~:1:1
+E:bow:Sling~:1:1
+E:shot:Rounded Pebble~:20:20
+E:soft armour:Robe~:1:1
+E:scroll:Word of Recall:1:1
+E:magic book:[Magic for Beginners]:1:1
+E:prayer book:[Beginners Handbook]:1:1
+F:PSEUDO_ID_IMPROV
+T:Loser
+T:Nobody
+T:Average Joe
+T:Minstrel
+T:Adventurer
+T:Explorer
+T:Celebrity
+T:Superstar
+T:Hero
+T:Legend
+
+N:1:Warrior
+S:5:-2:-2:2:2:-1
+C:25:18:18:1:14:2:70:55:55:0
+X:10:7:10:0:0:0:45:45:45:0
+I:9:0:7000:40
+A:6:30:5
+M:0:0:0:0
+E:potion:Berserk Strength:1:1
+E:sword:Short Sword~:1:1
+E:soft armour:Soft Leather Armour~:1:1
+E:scroll:Word of Recall:1:1
+F:BRAVERY_30 | PSEUDO_ID_IMPROV
+T:Rookie
+T:Soldier
+T:Swordsman
+T:Swashbuckler
+T:Veteran
+T:Myrmidon
+T:Commando
+T:Champion
+T:Hero
+T:Lord
+
+N:2:Mage
+S:-5:3:0:1:-2:1
+C:30:36:30:2:16:20:34:20:20:0
+X:7:13:9:0:0:0:15:15:15:0
+I:0:30:170000:5
+A:4:40:2
+M:90:1:1:300
+E:magic book:[Magic for Beginners]:1:1
+E:sword:Dagger~:1:1
+E:scroll:Word of Recall:1:1
+F:CUMBER_GLOVE | ZERO_FAIL | BEAM | CHOOSE_SPELLS
+T:Novice
+T:Apprentice
+T:Trickster
+T:Illusionist
+T:Spellbinder
+T:Evoker
+T:Conjurer
+T:Warlock
+T:Sorcerer
+T:Arch-Mage
+B:0:1:1:22:4
+B:1:1:1:23:4
+B:2:1:2:24:4
+B:3:1:2:26:4
+B:4:3:3:25:2
+B:5:3:3:25:3
+B:6:99:0:0:0
+B:8:11:7:25:6
+B:9:15:6:40:6
+B:10:30:10:70:10
+B:11:3:2:27:3
+B:12:5:4:30:4
+B:13:5:4:30:4
+B:14:7:5:30:4
+B:15:7:10:50:5
+B:16:7:3:40:6
+B:17:15:4:50:8
+B:18:10:3:50:7
+B:19:5:5:30:6
+B:20:7:6:30:5
+B:21:9:7:44:8
+B:22:13:9:40:12
+B:23:20:18:60:20
+B:24:24:20:50:20
+B:25:5:5:35:4
+B:26:9:7:45:8
+B:27:99:0:0:0
+B:28:99:0:0:0
+B:29:25:12:65:10
+B:30:7:6:35:5
+B:31:17:9:50:7
+B:32:23:12:60:8
+B:33:28:17:65:20
+B:34:30:25:75:15
+B:35:11:7:45:9
+B:36:16:5:40:6
+B:37:20:10:50:10
+B:38:20:5:50:8
+B:39:25:7:50:6
+B:40:25:15:60:24
+B:41:25:15:80:30
+B:42:33:21:80:35
+B:43:38:15:90:40
+B:44:10:5:50:10
+B:45:10:5:50:10
+B:46:25:10:45:20
+B:47:28:20:65:30
+B:48:32:24:75:30
+B:49:36:60:70:40
+B:50:9:7:75:10
+B:51:99:0:0:0
+B:52:99:0:0:0
+B:53:30:30:95:100
+B:54:32:60:95:120
+B:55:19:6:55:8
+B:56:20:7:70:20
+B:57:26:9:65:12
+B:58:27:11:75:24
+B:59:30:45:95:25
+B:60:30:14:85:34
+B:61:35:75:90:100
+B:62:35:20:60:25
+B:63:42:16:95:200
+
+N:3:Priest
+S:-1:-3:3:-1:0:2
+C:25:30:32:2:16:8:48:35:35:0
+X:7:10:12:0:0:0:20:20:20:0
+I:2:20:15000:40
+A:4:35:3
+M:91:2:1:350
+E:prayer book:[Beginners Handbook]:1:1
+E:hafted:Mace~:1:1
+E:potion:Cure Serious Wounds:2:2
+E:scroll:Word of Recall:1:1
+F:BLESS_WEAPON | ZERO_FAIL | PSEUDO_ID_IMPROV
+T:Believer
+T:Acolyte
+T:Adept
+T:Evangelist
+T:Priest
+T:Curate
+T:Canon
+T:Bishop
+T:Prophet
+T:Patriarch
+B:0:1:1:10:4
+B:1:1:2:15:4
+B:2:1:2:20:4
+B:3:1:2:5:4
+B:4:3:2:25:1
+B:5:3:3:27:2
+B:6:3:3:27:2
+B:7:3:3:28:4
+B:8:5:4:29:3
+B:9:5:4:30:4
+B:10:5:4:32:4
+B:11:5:5:34:4
+B:12:7:5:36:3
+B:13:7:5:38:4
+B:14:7:6:38:5
+B:15:7:7:38:5
+B:16:9:6:38:4
+B:17:9:7:40:4
+B:18:9:7:38:4
+B:19:11:8:42:4
+B:20:11:8:42:4
+B:21:11:9:55:5
+B:22:13:10:45:4
+B:23:13:11:45:4
+B:24:15:12:50:5
+B:25:15:14:50:5
+B:26:17:14:55:7
+B:27:21:16:60:7
+B:28:25:20:70:12
+B:29:33:55:90:15
+B:30:39:32:95:20
+B:31:3:3:50:2
+B:32:10:10:80:20
+B:33:20:20:80:20
+B:34:25:40:80:150
+B:35:35:50:80:230
+B:36:15:5:50:25
+B:37:17:7:60:45
+B:38:30:50:80:130
+B:39:35:70:90:230
+B:40:35:70:90:250
+B:41:15:7:70:25
+B:42:20:10:75:60
+B:43:25:25:80:250
+B:44:35:35:80:115
+B:45:45:60:75:250
+B:46:5:6:50:40
+B:47:15:20:80:25
+B:48:25:40:80:160
+B:49:35:50:80:230
+B:50:37:60:85:250
+B:51:45:95:85:250
+B:52:3:3:50:6
+B:53:10:10:50:8
+B:54:20:20:80:16
+B:55:30:40:75:133
+B:56:35:50:75:11
+B:57:40:60:75:250
+B:58:99:0:0:0
+B:59:99:0:0:0
+B:60:99:0:0:0
+B:61:99:0:0:0
+B:62:99:0:0:0
+B:63:99:0:0:0

@@ -1,0 +1,87 @@
+N:*:Default
+85
+'Ehr Rhee'
+of Coucew
+'Zir Dawn'
+'Lor Goth'
+of the Foo
+of Pobox
+of Demos
+of Acisubo
+of Evasion
+of Traveling
+of Balmoth
+of the Uncaring
+of Zod
+of Glenda
+'Wind Shield'
+'Van's Shield'
+of Lesser Shielding
+'Dasmiff'
+'Ridras'
+'Whisperfeet'
+of Shifting
+'Curator'
+'Adasma'
+'Fissa'
+'Burrle'
+of Nuqui
+'Leanegoka'
+of Smaise
+of Ourleer
+of Ivipre
+of Dalmar
+of Lutefreme
+of the Mirror Image
+of Demir
+of Queece
+of the kouti
+of Meget
+'Sad Giant's Shield'
+'Weakstone'
+of Ruwonse
+'Veeri'
+'Akiyi'
+'Rezoid'
+of Humility
+of Passion
+of Ankegre
+of Oreasiogri
+'Midnight Resistance'
+of Truglaboo
+'Asetounar'
+'Seese'
+'Tetatu'
+'Jaiglaw'
+'Pesirigo'
+'Dugea'
+'Eebeffe'
+'Iddel'
+'Rebulso'
+of Reatikela
+'Zaxxon'
+'Wapiti'
+'Dexicew'
+of Hifel
+of Dirsipair
+of Rimaidut
+of Savrai
+of Nesosceul
+of Gasicar
+of the Rahaggo
+of Calpi
+'Ridane'
+'Gorex'
+of Gurnemanz
+of Tannhaeuser
+of Truglaboo
+'Asetounar'
+'Seese'
+'Tetatu'
+'Jaiglaw'
+'Pesirigo'
+'Dugea'
+'Eebeffe'
+'Iddel'
+'Rebulso'
+of Reatikela

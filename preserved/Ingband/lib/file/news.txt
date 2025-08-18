@@ -1,0 +1,22 @@
+
+
+ ===                               ==                           000   222   000
+  |   __  _   _   _ _   _   _  __ |__|  _   _  |_   _   _   _|  0 0     2   0 0
+  |  |   | | | | | | | | | | |    |  | | | |_| | | | | | | | |  0 0    2    0 0
+ === ~    ~  ~ ~ ~ ~ ~  ~~ ~ ~    =  = ~ ~  _|  ~   ~~ ~ ~  ~   000 O 222 O 000
+
+              Ironman-Angband (Ingband) 0.2.0 by Robert Shiells
+                    Copyright (C)1997-1999 Robert Shiells
+
+                    Based on Angband 2.8.3 by Ben Harrison
+         Copyright (C)1997 Ben Harrison, Charles Swiger, Ales Cutler,
+       Andy Astrand, Sean Marsh, Geoff Hill, Charles Teague, and others
+
+             Based on Umoria, Copyright (c) 1989 James E. Wilson
+            Based on Moria, Copyright (c) 1985 Robert Alan Koeneke
+
+ ==============================================================================
+ =                                                                            =
+ ==============================================================================
+
+http://www.sucs.swan.ac.uk/~element/ingband/      email:element@sucs.swan.ac.uk

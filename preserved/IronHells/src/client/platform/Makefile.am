@@ -1,0 +1,2 @@
+SUBDIRS = linux mac win
+

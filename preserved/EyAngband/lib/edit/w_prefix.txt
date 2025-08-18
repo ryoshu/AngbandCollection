@@ -1,0 +1,262 @@
+# File: w_prefix.txt
+
+# This file is used to initialize the "lib/data/w_prefix.raw" file, which is
+# used to initialize the "weapon prefix" information for the Angband game.
+
+# Do not modify this file unless you know exactly what you are doing,
+# unless you wish to risk possible system crashes and broken savefiles.
+
+# Format:
+# N: serial number : prefix name
+# K: evl:chs:anl:plt:udd:dmn:hmn:ppl:fry:drg:lyc:acd:elc:fir:cld:psn:lit:drk
+# W: depth : rarity : weight % : cost % 
+# M: base material : material to use
+# P: + to hit, damage percentile
+# F: flags 
+
+# Flags - SHOP, GOOD, determine whether the object is legal in stores and 
+# good items respectively.
+
+# Version stamp (required)
+
+V:0.5.2
+
+N:0:<none>
+W:0:1:100:100
+P:0:100
+F:SHOP | GOOD
+
+### Racial Prefixes ###
+
+# Player Races #
+
+N:1:Elven
+W:0:35:90:200
+P:2:100
+F:SHOP | GOOD
+
+N:2:Dwarven
+W:0:35:110:150
+P:0:110
+F:SHOP | GOOD
+
+N:3:Gnomish
+W:0:45:80:90
+P:0:90
+F:SHOP | GOOD
+
+N:4:Grippli
+W:0:45:70:100
+P:0:85
+F:SHOP | GOOD
+
+N:5:Lizardman
+W:0:45:115:100
+P:0:120
+F:SHOP | GOOD
+
+N:6:Rattikin
+W:0:35:85:115
+P:1:90
+F:SHOP | GOOD
+
+N:7:Felpurr
+W:0:40:90:110
+P:0:100
+F:SHOP | GOOD
+
+N:8:Ursan
+W:0:40:160:200
+P:0:130
+F:SHOP | GOOD
+
+N:9:Vargr
+W:0:40:95:150
+P:0:100
+K:0:0:0:0:0:0:11:11:0:0:0:0:0:0:0:0:0:0
+F:SHOP | GOOD
+
+N:10:Kyrral
+W:0:55:110:125
+P:0:100
+K:11:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0
+F:SHOP | GOOD
+
+# Other Races #
+
+N:11:Kobold
+W:0:35:80:80
+P:0:90
+F:SHOP | GOOD
+
+N:12:Orcish
+W:0:25:120:130
+P:0:120
+F:SHOP | GOOD
+
+N:13:Ogrish
+W:0:55:250:200
+P:-2:150
+F:GOOD
+
+### Quality Prefixes ###
+
+# Low quality #
+
+N:14:Broken
+W:0:10:50:1
+P:-5:10
+
+N:15:Rusty
+W:0:10:100:50
+M:12:0
+P:-2:75
+
+N:16:Cheap
+W:0:15:100:85
+P:-1:100
+F:SHOP
+
+N:17:Ornamental
+W:0:75:110:350
+M:12:0
+P:-3:80
+
+# High Quality #
+
+N:18:Hunter's
+W:0:15:100:120
+P:0:100
+K:0:0:12:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0
+F:SHOP | GOOD
+
+N:19:Forester's
+W:0:15:100:120
+P:0:100
+K:0:0:0:12:0:0:0:0:0:0:0:0:0:0:0:0:0:0
+F:SHOP | GOOD
+
+N:20:Quality
+W:0:15:100:130
+P:1:110
+F:SHOP | GOOD
+
+N:21:Runed
+W:5:70:100:200
+P:5:110
+F:GOOD
+
+N:22:Majestic
+W:10:150:120:500
+P:2:175
+F:GOOD
+
+### Material Prefixes ###
+
+# New materials for wooden weapons #
+
+N:23:Bone
+G:W
+W:0:20:90:90
+P:0:100
+M:7:8
+F:GOOD 
+
+N:24:Stone
+G:W
+W:0:25:110:90
+P:0:105
+M:7:9
+F:GOOD 
+
+N:25:Metal
+G:s
+W:0:25:115:100
+P:0:110
+M:7:12
+F:GOOD | SHOP
+
+N:26:Dragonbone
+G:W
+W:5:50:100:150
+P:0:110
+M:7:8
+F:GOOD
+
+# New materials for metal weapons #
+
+N:27:Iron
+W:0:40:100:120
+P:0:100
+M:12:12
+K:0:0:0:0:0:11:0:0:12:0:0:0:0:0:0:0:0:0
+F:GOOD | SHOP
+
+N:28:Silver
+G:s
+W:0:60:100:200
+P:0:100
+M:12:17
+K:0:0:0:0:12:0:0:0:0:0:12:0:0:0:0:0:0:0
+F:GOOD
+
+N:29:Golden
+G:y
+W:5:100:140:300
+P:0:90
+M:12:17
+K:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:12:0
+F:GOOD
+
+N:30:Crystal
+G:W
+W:2:90:100:150
+P:0:110
+M:12:10
+F:GOOD
+
+N:31:Emerald
+G:g
+W:5:100:100:350
+P:0:125
+K:0:0:0:0:0:0:0:0:0:0:0:13:0:0:0:0:0:0
+M:12:10
+F:GOOD
+
+N:32:Topaz
+G:y
+W:5:100:100:350
+P:0:125
+K:0:0:0:0:0:0:0:0:0:0:0:0:13:0:0:0:0:0
+M:12:10
+F:GOOD
+
+N:33:Ruby
+G:r
+W:5:100:100:350
+P:0:125
+K:0:0:0:0:0:0:0:0:0:0:0:0:0:13:0:0:0:0
+M:12:10
+F:GOOD
+
+N:34:Sapphire
+G:b
+W:5:100:100:350
+P:0:125
+K:0:0:0:0:0:0:0:0:0:0:0:0:0:0:13:0:0:0
+M:12:10
+F:GOOD
+
+N:35:Diamond
+G:w
+W:10:150:100:400
+P:0:160
+M:12:10
+F:GOOD
+
+N:36:Blackrock
+G:D
+W:10:150:175:350
+P:0:130
+M:0:14
+F:GOOD

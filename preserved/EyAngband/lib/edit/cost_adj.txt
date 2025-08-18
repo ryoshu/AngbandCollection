@@ -1,0 +1,58 @@
+# File: cost_adj.txt
+
+
+# This file is used to initialize the "lib/data/cost_adj.raw" file, which is
+# used to initialize the "racial price adjustment" information for the
+# Angband game.
+
+# Do not modify this file unless you know exactly what you are doing,
+# unless you wish to risk possible system crashes and broken savefiles.
+
+# Format:
+# A:store adjustments
+
+# Version stamp (required)
+
+V:0.5.2
+
+# Hum,Elf,Dwa,Gno,Gri,Liz,Rat,Fel,Urs,Var,Kyr,Ang,Dem
+
+# Human
+A:100:110:110:110:105:120:115:105:115:115:105: 90:115
+
+# Elf
+A:100: 95:110:110:130:125:130:115:125:120:120: 90:110
+
+# Dwarf
+A:105:110: 95:105:110:125:115:110:110:120:115: 90:115
+
+# Gnome
+A:105:105:110:100:105:120:110:105:120:120:105: 90:115
+
+# Grippli
+A:100:115:110:105: 95:100:110:110:130:120:110: 90:110
+
+# Lizardman
+A:115:125:130:125:100: 95:110:115:110:115:120:120: 90
+
+# Rattikin
+A:110:120:110:120:110:110: 95:125:115:110:120:100:100
+
+# Felpurr
+A:100:110:110:110:110:110:120:100:120:130:110: 90:110
+
+# Ursa
+A:110:110:130:130:120:120:120:115:100:105:110:100:115
+
+# Vargr
+A:110:105:115:120:120:120:110:125:110: 95:115: 90:110
+
+# Kyrrus
+A:100:110:115:105:115:125:120:110:110:115: 95: 85:110
+
+# Angel
+A:100:100:100:100:100:100:100:100:100:100: 90:100:140
+
+# Demon
+A:115:115:115:115:115:110:115:115:115:110:130:140:100
+

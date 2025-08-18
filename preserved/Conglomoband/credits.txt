@@ -1,0 +1,9 @@
+Credit list(lots are still not present here, if you think you should
+drop me a line please) in no particular order:
+
+- Nick Minkler <sleaker@qwest.net>, main programming stuff
+- DarkGod <darkgod@ifrance.com> lots, LOTS, LOTS of help thx!
+- Lemming <lemming030@ntlworld.com> help with programming
+- Cookie3 for a couple ideas
+
+- Many other people from #angband and #conglomoband
