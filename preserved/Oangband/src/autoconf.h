@@ -26,7 +26,7 @@
 #define HAVE_SETEGID 1
 
 /* Define to 1 if you have the `setresgid' function. */
-#define HAVE_SETRESGID 1
+/* #undef HAVE_SETRESGID */
 
 /* Define to 1 if stdbool.h conforms to C99. */
 #define HAVE_STDBOOL_H 1
@@ -77,10 +77,10 @@
 #define RETSIGTYPE void
 
 /* Define to 1 if using SDL_mixer sound support and it's found. */
-#define SDL_SOUND 1
+/* #undef SDL_SOUND */
 
 /* Define to 1 if you have the ANSI C header files. */
-#define STDC_HEADERS 1
+/* #undef STDC_HEADERS */
 
 /* Define to 1 if Curses or PDCurses is found, but NCurses is not. */
 #define USE_CURSES 0
@@ -89,16 +89,16 @@
 #define USE_GCU 1
 
 /* Define to 1 if using the GTK+ 2.x interface and GTK+ 2.x is found. */
-#define USE_GTK 1
+/* #undef USE_GTK */
 
 /* Define to 1 if NCurses is found. */
 #define USE_NCURSES 1
 
 /* Define to 1 if using the SDL interface and SDL is found. */
-#define USE_SDL 1
+/* #undef USE_SDL */
 
 /* Define to 1 if using the X11 frontend and X11 libraries are found. */
-#define USE_X11 1
+/* #undef USE_X11 */
 
 /* Version number of package */
 #define VERSION "1.1.0u"

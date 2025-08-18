@@ -1,0 +1,69 @@
+# Oangband Build Artifacts
+
+# Compiled object files
+*.o
+*.obj
+*.lo
+
+# Compiled executables
+src/oangband
+oangband-terminal
+src/*.exe
+
+# macOS App Bundle (if created)
+*.app/
+
+# Build system artifacts
+src/.depend
+src/.depend-done
+src/.deps/
+src/autoconf.h
+config.cache
+config.log
+config.status
+
+# Generated Makefiles
+Makefile
+mk/rules.mk
+
+# Temporary files
+*~
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# Save files and user data
+lib/save/*
+lib/user/*
+lib/apex/*
+!lib/save/.gitkeep
+!lib/user/.gitkeep
+!lib/apex/.gitkeep
+
+# macOS system files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Development artifacts
+*.dSYM/
+*.xcodeproj/
+*.xcworkspace/
+
+# Distribution files
+*.dmg
+*.tar.gz
+*.zip
+disttemp/
+
+# Log files
+*.log
+
+# Core dumps
+core
+core.*

@@ -1,0 +1,172 @@
+attack.o: attack.c angband.h h-basic.h autoconf.h h-config.h h-system.h \
+  h-type.h h-define.h z-util.h z-virt.h z-form.h z-rand.h z-term.h \
+  z-file.h config.h defines.h types.h externs.h cmds.h ui.h z-type.h
+birth.o: birth.c angband.h h-basic.h autoconf.h h-config.h h-system.h \
+  h-type.h h-define.h z-util.h z-virt.h z-form.h z-rand.h z-term.h \
+  z-file.h config.h defines.h types.h externs.h cmds.h ui.h z-type.h
+cave.o: cave.c angband.h h-basic.h autoconf.h h-config.h h-system.h \
+  h-type.h h-define.h z-util.h z-virt.h z-form.h z-rand.h z-term.h \
+  z-file.h config.h defines.h types.h externs.h cmds.h ui.h z-type.h
+cmd0.o: cmd0.c angband.h h-basic.h autoconf.h h-config.h h-system.h \
+  h-type.h h-define.h z-util.h z-virt.h z-form.h z-rand.h z-term.h \
+  z-file.h config.h defines.h types.h externs.h cmds.h ui.h z-type.h
+cmd1.o: cmd1.c angband.h h-basic.h autoconf.h h-config.h h-system.h \
+  h-type.h h-define.h z-util.h z-virt.h z-form.h z-rand.h z-term.h \
+  z-file.h config.h defines.h types.h externs.h cmds.h ui.h z-type.h
+cmd2.o: cmd2.c angband.h h-basic.h autoconf.h h-config.h h-system.h \
+  h-type.h h-define.h z-util.h z-virt.h z-form.h z-rand.h z-term.h \
+  z-file.h config.h defines.h types.h externs.h cmds.h ui.h z-type.h
+cmd3.o: cmd3.c angband.h h-basic.h autoconf.h h-config.h h-system.h \
+  h-type.h h-define.h z-util.h z-virt.h z-form.h z-rand.h z-term.h \
+  z-file.h config.h defines.h types.h externs.h cmds.h ui.h z-type.h
+cmd4.o: cmd4.c angband.h h-basic.h autoconf.h h-config.h h-system.h \
+  h-type.h h-define.h z-util.h z-virt.h z-form.h z-rand.h z-term.h \
+  z-file.h config.h defines.h types.h externs.h cmds.h ui.h z-type.h
+cmd5.o: cmd5.c angband.h h-basic.h autoconf.h h-config.h h-system.h \
+  h-type.h h-define.h z-util.h z-virt.h z-form.h z-rand.h z-term.h \
+  z-file.h config.h defines.h types.h externs.h cmds.h ui.h z-type.h
+cmd6.o: cmd6.c angband.h h-basic.h autoconf.h h-config.h h-system.h \
+  h-type.h h-define.h z-util.h z-virt.h z-form.h z-rand.h z-term.h \
+  z-file.h config.h defines.h types.h externs.h cmds.h ui.h z-type.h
+dungeon.o: dungeon.c angband.h h-basic.h autoconf.h h-config.h h-system.h \
+  h-type.h h-define.h z-util.h z-virt.h z-form.h z-rand.h z-term.h \
+  z-file.h config.h defines.h types.h externs.h cmds.h ui.h z-type.h
+files.o: files.c angband.h h-basic.h autoconf.h h-config.h h-system.h \
+  h-type.h h-define.h z-util.h z-virt.h z-form.h z-rand.h z-term.h \
+  z-file.h config.h defines.h types.h externs.h cmds.h ui.h z-type.h
+generate.o: generate.c angband.h h-basic.h autoconf.h h-config.h \
+  h-system.h h-type.h h-define.h z-util.h z-virt.h z-form.h z-rand.h \
+  z-term.h z-file.h config.h defines.h types.h externs.h cmds.h ui.h \
+  z-type.h
+init1.o: init1.c angband.h h-basic.h autoconf.h h-config.h h-system.h \
+  h-type.h h-define.h z-util.h z-virt.h z-form.h z-rand.h z-term.h \
+  z-file.h config.h defines.h types.h externs.h cmds.h ui.h z-type.h \
+  init.h
+init2.o: init2.c angband.h h-basic.h autoconf.h h-config.h h-system.h \
+  h-type.h h-define.h z-util.h z-virt.h z-form.h z-rand.h z-term.h \
+  z-file.h config.h defines.h types.h externs.h cmds.h ui.h z-type.h \
+  init.h
+load.o: load.c angband.h h-basic.h autoconf.h h-config.h h-system.h \
+  h-type.h h-define.h z-util.h z-virt.h z-form.h z-rand.h z-term.h \
+  z-file.h config.h defines.h types.h externs.h cmds.h ui.h z-type.h
+monmove.o: monmove.c angband.h h-basic.h autoconf.h h-config.h h-system.h \
+  h-type.h h-define.h z-util.h z-virt.h z-form.h z-rand.h z-term.h \
+  z-file.h config.h defines.h types.h externs.h cmds.h ui.h z-type.h
+monattk.o: monattk.c angband.h h-basic.h autoconf.h h-config.h h-system.h \
+  h-type.h h-define.h z-util.h z-virt.h z-form.h z-rand.h z-term.h \
+  z-file.h config.h defines.h types.h externs.h cmds.h ui.h z-type.h
+monster1.o: monster1.c angband.h h-basic.h autoconf.h h-config.h \
+  h-system.h h-type.h h-define.h z-util.h z-virt.h z-form.h z-rand.h \
+  z-term.h z-file.h config.h defines.h types.h externs.h cmds.h ui.h \
+  z-type.h
+monster2.o: monster2.c angband.h h-basic.h autoconf.h h-config.h \
+  h-system.h h-type.h h-define.h z-util.h z-virt.h z-form.h z-rand.h \
+  z-term.h z-file.h config.h defines.h types.h externs.h cmds.h ui.h \
+  z-type.h
+info.o: info.c angband.h h-basic.h autoconf.h h-config.h h-system.h \
+  h-type.h h-define.h z-util.h z-virt.h z-form.h z-rand.h z-term.h \
+  z-file.h config.h defines.h types.h externs.h cmds.h ui.h z-type.h
+object1.o: object1.c angband.h h-basic.h autoconf.h h-config.h h-system.h \
+  h-type.h h-define.h z-util.h z-virt.h z-form.h z-rand.h z-term.h \
+  z-file.h config.h defines.h types.h externs.h cmds.h ui.h z-type.h
+object2.o: object2.c angband.h h-basic.h autoconf.h h-config.h h-system.h \
+  h-type.h h-define.h z-util.h z-virt.h z-form.h z-rand.h z-term.h \
+  z-file.h config.h defines.h types.h externs.h cmds.h ui.h z-type.h
+randart.o: randart.c angband.h h-basic.h autoconf.h h-config.h h-system.h \
+  h-type.h h-define.h z-util.h z-virt.h z-form.h z-rand.h z-term.h \
+  z-file.h config.h defines.h types.h externs.h cmds.h ui.h z-type.h
+randname.o: randname.c angband.h h-basic.h autoconf.h h-config.h \
+  h-system.h h-type.h h-define.h z-util.h z-virt.h z-form.h z-rand.h \
+  z-term.h z-file.h config.h defines.h types.h externs.h cmds.h ui.h \
+  z-type.h randname.h
+save.o: save.c angband.h h-basic.h autoconf.h h-config.h h-system.h \
+  h-type.h h-define.h z-util.h z-virt.h z-form.h z-rand.h z-term.h \
+  z-file.h config.h defines.h types.h externs.h cmds.h ui.h z-type.h
+spells1.o: spells1.c angband.h h-basic.h autoconf.h h-config.h h-system.h \
+  h-type.h h-define.h z-util.h z-virt.h z-form.h z-rand.h z-term.h \
+  z-file.h config.h defines.h types.h externs.h cmds.h ui.h z-type.h
+spells2.o: spells2.c angband.h h-basic.h autoconf.h h-config.h h-system.h \
+  h-type.h h-define.h z-util.h z-virt.h z-form.h z-rand.h z-term.h \
+  z-file.h config.h defines.h types.h externs.h cmds.h ui.h z-type.h
+squelch.o: squelch.c angband.h h-basic.h autoconf.h h-config.h h-system.h \
+  h-type.h h-define.h z-util.h z-virt.h z-form.h z-rand.h z-term.h \
+  z-file.h config.h defines.h types.h externs.h cmds.h ui.h z-type.h
+store.o: store.c angband.h h-basic.h autoconf.h h-config.h h-system.h \
+  h-type.h h-define.h z-util.h z-virt.h z-form.h z-rand.h z-term.h \
+  z-file.h config.h defines.h types.h externs.h cmds.h ui.h z-type.h
+tables.o: tables.c angband.h h-basic.h autoconf.h h-config.h h-system.h \
+  h-type.h h-define.h z-util.h z-virt.h z-form.h z-rand.h z-term.h \
+  z-file.h config.h defines.h types.h externs.h cmds.h ui.h z-type.h
+ui.o: ui.c angband.h h-basic.h autoconf.h h-config.h h-system.h h-type.h \
+  h-define.h z-util.h z-virt.h z-form.h z-rand.h z-term.h z-file.h \
+  config.h defines.h types.h externs.h cmds.h ui.h z-type.h
+util.o: util.c angband.h h-basic.h autoconf.h h-config.h h-system.h \
+  h-type.h h-define.h z-util.h z-virt.h z-form.h z-rand.h z-term.h \
+  z-file.h config.h defines.h types.h externs.h cmds.h ui.h z-type.h \
+  randname.h
+variable.o: variable.c angband.h h-basic.h autoconf.h h-config.h \
+  h-system.h h-type.h h-define.h z-util.h z-virt.h z-form.h z-rand.h \
+  z-term.h z-file.h config.h defines.h types.h externs.h cmds.h ui.h \
+  z-type.h
+wizard1.o: wizard1.c angband.h h-basic.h autoconf.h h-config.h h-system.h \
+  h-type.h h-define.h z-util.h z-virt.h z-form.h z-rand.h z-term.h \
+  z-file.h config.h defines.h types.h externs.h cmds.h ui.h z-type.h
+wizard2.o: wizard2.c angband.h h-basic.h autoconf.h h-config.h h-system.h \
+  h-type.h h-define.h z-util.h z-virt.h z-form.h z-rand.h z-term.h \
+  z-file.h config.h defines.h types.h externs.h cmds.h ui.h z-type.h
+xtra1.o: xtra1.c angband.h h-basic.h autoconf.h h-config.h h-system.h \
+  h-type.h h-define.h z-util.h z-virt.h z-form.h z-rand.h z-term.h \
+  z-file.h config.h defines.h types.h externs.h cmds.h ui.h z-type.h
+xtra2.o: xtra2.c angband.h h-basic.h autoconf.h h-config.h h-system.h \
+  h-type.h h-define.h z-util.h z-virt.h z-form.h z-rand.h z-term.h \
+  z-file.h config.h defines.h types.h externs.h cmds.h ui.h z-type.h
+main.o: main.c angband.h h-basic.h autoconf.h h-config.h h-system.h \
+  h-type.h h-define.h z-util.h z-virt.h z-form.h z-rand.h z-term.h \
+  z-file.h config.h defines.h types.h externs.h cmds.h ui.h z-type.h \
+  main.h
+maid-x11.o: maid-x11.c angband.h h-basic.h autoconf.h h-config.h \
+  h-system.h h-type.h h-define.h z-util.h z-virt.h z-form.h z-rand.h \
+  z-term.h z-file.h config.h defines.h types.h externs.h cmds.h ui.h \
+  z-type.h
+main-gcu.o: main-gcu.c angband.h h-basic.h autoconf.h h-config.h \
+  h-system.h h-type.h h-define.h z-util.h z-virt.h z-form.h z-rand.h \
+  z-term.h z-file.h config.h defines.h types.h externs.h cmds.h ui.h \
+  z-type.h main.h
+main-gtk.o: main-gtk.c angband.h h-basic.h autoconf.h h-config.h \
+  h-system.h h-type.h h-define.h z-util.h z-virt.h z-form.h z-rand.h \
+  z-term.h z-file.h config.h defines.h types.h externs.h cmds.h ui.h \
+  z-type.h
+main-sdl.o: main-sdl.c angband.h h-basic.h autoconf.h h-config.h \
+  h-system.h h-type.h h-define.h z-util.h z-virt.h z-form.h z-rand.h \
+  z-term.h z-file.h config.h defines.h types.h externs.h cmds.h ui.h \
+  z-type.h
+main-win.o: main-win.c angband.h h-basic.h autoconf.h h-config.h \
+  h-system.h h-type.h h-define.h z-util.h z-virt.h z-form.h z-rand.h \
+  z-term.h z-file.h config.h defines.h types.h externs.h cmds.h ui.h \
+  z-type.h
+main-x11.o: main-x11.c angband.h h-basic.h autoconf.h h-config.h \
+  h-system.h h-type.h h-define.h z-util.h z-virt.h z-form.h z-rand.h \
+  z-term.h z-file.h config.h defines.h types.h externs.h cmds.h ui.h \
+  z-type.h main.h
+main-xaw.o: main-xaw.c angband.h h-basic.h autoconf.h h-config.h \
+  h-system.h h-type.h h-define.h z-util.h z-virt.h z-form.h z-rand.h \
+  z-term.h z-file.h config.h defines.h types.h externs.h cmds.h ui.h \
+  z-type.h main.h
+snd-sdl.o: snd-sdl.c angband.h h-basic.h autoconf.h h-config.h h-system.h \
+  h-type.h h-define.h z-util.h z-virt.h z-form.h z-rand.h z-term.h \
+  z-file.h config.h defines.h types.h externs.h cmds.h ui.h z-type.h
+z-form.o: z-form.c z-form.h h-basic.h autoconf.h h-config.h h-system.h \
+  h-type.h h-define.h z-type.h z-util.h z-virt.h z-term.h
+z-rand.o: z-rand.c z-rand.h h-basic.h autoconf.h h-config.h h-system.h \
+  h-type.h h-define.h
+z-term.o: z-term.c z-term.h h-basic.h autoconf.h h-config.h h-system.h \
+  h-type.h h-define.h z-virt.h
+z-type.o: z-type.c h-basic.h autoconf.h h-config.h h-system.h h-type.h \
+  h-define.h z-form.h z-term.h ui.h z-type.h
+z-util.o: z-util.c z-util.h h-basic.h autoconf.h h-config.h h-system.h \
+  h-type.h h-define.h
+z-virt.o: z-virt.c z-virt.h h-basic.h autoconf.h h-config.h h-system.h \
+  h-type.h h-define.h z-util.h
+z-file.o: z-file.c angband.h h-basic.h autoconf.h h-config.h h-system.h \
+  h-type.h h-define.h z-util.h z-virt.h z-form.h z-rand.h z-term.h \
+  z-file.h config.h defines.h types.h externs.h cmds.h ui.h z-type.h
