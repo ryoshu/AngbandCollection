@@ -4,16 +4,17 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository Purpose
 
-This is a public archive and registry of Angband variants and related roguelike games. The repository serves as both a discovery hub and preservation archive for the Angband ecosystem.
+This is a public archive and registry of Angband variants and related roguelike games. The repository serves as both a discovery hub and preservation archive for the Angband ecosystem, with an active focus on modernizing orphaned variants to run on contemporary operating systems, particularly macOS.
 
 ## Architecture Strategy
 
-Pure registry + selective preservation approach:
+Pure registry + selective preservation + modernization approach:
 
 1. **Primary registry** - README.md serves as the canonical discovery hub with links to authoritative repos
 2. **Selective preservation** - Only truly orphaned variants are stored locally in `/preserved/`
-3. **Utility scripts** - Tools in `/scripts/` for link validation and orphan management
-4. **Fast discovery** - Users can quickly browse all variants without downloading gigabytes
+3. **Active modernization** - Porting orphaned variants to run on modern macOS using systematic approach
+4. **Utility scripts** - Tools in `/scripts/` for link validation and orphan management
+5. **Fast discovery** - Users can quickly browse all variants without downloading gigabytes
 
 ## Repository Structure
 
@@ -51,6 +52,12 @@ Pure registry + selective preservation approach:
 2. Place in `/preserved/` directory
 3. Add to README.md without link
 
+### Modernizing orphaned variants for macOS
+1. **Assessment Phase** - Analyze existing build system and identify deprecated dependencies
+2. **Adaptation Phase** - Create modern Makefile, switch to terminal/SDL2 interfaces, update SDK paths
+3. **Testing Phase** - Build on Intel and Apple Silicon, test game functionality
+4. **Documentation Phase** - Create build instructions and troubleshooting guides
+
 ### Validating repository health
 - Run `scripts/validate-links.sh` to check all external links
 - Review variants in `/preserved/` for potential new upstream homes
@@ -62,3 +69,6 @@ Pure registry + selective preservation approach:
 - Prefer links to live repositories over static copies
 - Keep the repository lightweight for fast cloning
 - Maintain scripts for automated validation and maintenance
+- Modernize orphaned variants using systematic approach (Oangband serves as template)
+- Prioritize variants with high compatibility (similar era and build systems)
+- Use standardized modernization components: modern Makefiles, terminal interfaces, universal binaries
