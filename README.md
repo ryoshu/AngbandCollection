@@ -205,3 +205,7 @@ cd ..
 ## Contributing
 
 Found an orphaned Angband variant that should be preserved, or have a fix for one of the failing builds? Please submit a pull request or open an issue!
+
+## Acknowledgments
+
+The batch modernization of 45 variants — including Makefile generation, source fixes, build automation scripts, and per-variant documentation — was accomplished with [Claude Code](https://claude.ai/code) by Anthropic.
