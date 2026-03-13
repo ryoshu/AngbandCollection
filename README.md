@@ -95,67 +95,71 @@ These variants have active development and should be cloned from their official 
 
 ## Preserved Variants (Historical Archive)
 
-These variants have no known active development and are preserved locally in `/preserved/`:
+These variants have no known active development and are preserved locally in `/preserved/`. **45 of 52** now compile on modern macOS (Apple Silicon and Intel) using ncurses terminal interface.
 
-* Angband64
-* Angband65  
-* Animeband
-* BAngband
-* Chengband
-* ChocolateAngband
-* ComPosband
-* Conglomoband
-* Craftband
-* D11Angband
-* DaJAngband
-* Diabloband
-* Discband
-* Easyband
-* Entroband
-* EricAngband
-* EyAngband
-* Frazband
-* Friendband
-* GSNband
-* GilAngband
-* Goingband
-* Ingband
-* IronHells
-* IsoAngband
-* Iso-PernAngband
-* Jackalband
-* Jackband
-* Kamband
-* Kangband
-* MJBand
-* Minimal
-* Multiband
-* Neoband
-* NuAngband
-* Oangband
-* PernAngband
-* PsiAngband
-* PziAngband
-* Questband
-* RandomBand
-* RePosband
-* RobertAngband
-* Sil
-* TFork
-* TOband
-* TeamAngband
-* Utumno
-* Weird
-* XAngband
-* XBand
-* Xygos
-* eband
+| Variant | macOS Build | Warnings | Known Issues |
+|---------|:-----------:|:--------:|--------------|
+| Angband64 | Builds | 650 | High warning count from legacy K&R-style code |
+| Angband65 | Builds | 30 | |
+| Animeband | Builds | 237 | |
+| BAngband | Skipped | — | Moria-derived codebase, needs custom build system |
+| Chengband | Builds | 454 | High warning count from complex variant features |
+| ChocolateAngband | Builds | 61 | Required `externs.h` and `init2.c` fixes |
+| ComPosband | Builds | 195 | |
+| Conglomoband | Fails | — | Requires Lua (`lua.h` not found); source fixes applied but Lua dependency unresolved |
+| Craftband | Builds | 22 | Required `main-gcu.c` fix |
+| D11Angband | Builds | 146 | |
+| DaJAngband | Builds | 271 | Required `Makefile.src` and `main-gcu.c` fixes |
+| Diabloband | Builds | 60 | |
+| Discband | Builds | 313 | |
+| Easyband | Fails | — | Linker error: missing `run_step` symbol; incomplete source archive |
+| Entroband | Builds | 146 | |
+| EricAngband | Builds | 244 | Required `externs.h`, `load1.c`, `load2.c` fixes |
+| EyAngband | Builds | 65 | |
+| Frazband | Builds | 380 | High warning count |
+| Friendband | Builds | 13 | |
+| GSNband | Builds | 316 | Required `FILES.C` and `SPELLS1.C` fixes |
+| GilAngband | Builds | 4 | Required `cmd5.c` fix |
+| Goingband | Builds | 180 | |
+| Ingband | Builds | 58 | |
+| IronHells | Skipped | — | Client/server architecture, not a standalone build |
+| IsoAngband | Builds | 132 | |
+| Iso-PernAngband | Skipped | — | No source files in archive |
+| Jackalband | Builds | 7 | |
+| Jackband | Builds | 36 | |
+| Kamband | Fails | — | Requires Lua (`lua_strlibopen` linker error) |
+| Kangband | Builds | 188 | Required `wizard2.c` fix |
+| MJBand | Builds | 184 | |
+| Minimal | Builds | 22 | |
+| Multiband | Builds | 230 | |
+| Neoband | Builds | 28 | |
+| NuAngband | Builds | 256 | Required `defines.h` fix |
+| Oangband | Builds | 179 | Template variant for modernization process |
+| PernAngband | Builds | 508 | High warning count; required fixes to `birth.c`, `cmd3.c`, `generate.c`, `monster2.c`, `store.c`, `variable.c`, `xtra2.c` |
+| PsiAngband | Builds | 260 | |
+| PziAngband | Builds | 272 | |
+| Questband | Builds | 146 | |
+| RandomBand | Builds | 453 | High warning count |
+| RePosband | Builds | 49 | |
+| RobertAngband | Builds | 225 | |
+| Sil | Builds | 87 | |
+| TFork | Fails | — | Requires Lua/tolua (`tolua.h` not found) |
+| TOband | Builds | 792 | Highest warning count; required `autopick.c` fix |
+| TeamAngband | Builds | 189 | |
+| Utumno | Skipped | — | C++ codebase, needs separate modernization approach |
+| Weird | Builds | 169 | |
+| XAngband | Builds | 376 | |
+| XBand | Builds | 157 | Required `externs.h`, `h-define.h`, `wild2.c` fixes |
+| Xygos | Builds | 14 | |
+| eband | Builds | 31 | Required `main-gcu.c` and `z-file.c` fixes |
+
+**Summary:** 45 build, 4 fail, 3 skipped
 
 ---
 
 ## Modern macOS Build Support
 
-**45 of 52 preserved variants** now compile on modern macOS (Apple Silicon and Intel). Each buildable variant includes a `Makefile.osx-modern` and `BUILD-MODERN-MACOS.md` with instructions.
+Each buildable variant includes a `Makefile.osx-modern` and `BUILD-MODERN-MACOS.md` with instructions.
 
 ### Quick Build (any supported variant)
 
@@ -166,14 +170,6 @@ make -f Makefile.osx-modern install-terminal
 cd ..
 ./<variantname>-terminal
 ```
-
-### Build Status
-
-| Status | Count | Details |
-|--------|-------|---------|
-| Builds | 45 | Terminal (ncurses) interface, native ARM64/x86_64 |
-| Fails | 4 | Conglomoband, Kamband, TFork (require Lua), Easyband (incomplete archive) |
-| Skipped | 3 | IronHells (client/server), Utumno (C++), BAngband (Moria-style, needs custom work) |
 
 ### Key Modernization Details
 
