@@ -2413,7 +2413,7 @@ static errr init_alloc(void)
 /*
  * Hack -- take notes on line 23
  */
-static void note(cptr str)
+void note(cptr str)
 {
 	Term_erase(0, 23, 255);
 	Term_putstr(20, 23, -1, TERM_WHITE, str);

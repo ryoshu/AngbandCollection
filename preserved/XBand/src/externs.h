@@ -485,7 +485,7 @@ extern errr init_t_info_txt(FILE *fp, char *buf);
 extern errr init_w_info(void);
 extern errr init_t_info(void);
 extern errr init_s_info(void);
-extern errr init_s_info_txt(void);
+extern errr init_s_info_txt(FILE *fp, char *buf);
 extern void init_file_paths(char *path);
 extern void init_angband(void);
 extern void cleanup_angband(void);

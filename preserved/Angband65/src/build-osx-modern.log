@@ -1,0 +1,251 @@
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o attack.o attack.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o birth.o birth.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o button.o button.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o cave.o cave.c
+cave.c:587:7: warning: logical not is only applied to the left hand side of this bitwise operator [-Wlogical-not-parentheses]
+  587 |         if (!cave_info2[y][x] & CAVE2_DTRAP) return FALSE; 
+      |             ^                 ~
+cave.c:587:7: note: add parentheses after the '!' to evaluate the bitwise operator first
+  587 |         if (!cave_info2[y][x] & CAVE2_DTRAP) return FALSE; 
+      |             ^                              
+      |              (                             )
+cave.c:587:7: note: add parentheses around left hand side expression to silence this warning
+  587 |         if (!cave_info2[y][x] & CAVE2_DTRAP) return FALSE; 
+      |             ^
+      |             (                )
+cave.c:590:41: warning: logical not is only applied to the left hand side of this bitwise operator [-Wlogical-not-parentheses]
+  590 |         if (in_bounds_fully(y + 1, x    ) && (!cave_info2[y + 1][x    ] & CAVE2_DTRAP)) return TRUE; 
+      |                                               ^                         ~
+cave.c:590:41: note: add parentheses after the '!' to evaluate the bitwise operator first
+  590 |         if (in_bounds_fully(y + 1, x    ) && (!cave_info2[y + 1][x    ] & CAVE2_DTRAP)) return TRUE; 
+      |                                               ^                                      
+      |                                                (                                     )
+cave.c:590:41: note: add parentheses around left hand side expression to silence this warning
+  590 |         if (in_bounds_fully(y + 1, x    ) && (!cave_info2[y + 1][x    ] & CAVE2_DTRAP)) return TRUE; 
+      |                                               ^
+      |                                               (                        )
+cave.c:591:41: warning: logical not is only applied to the left hand side of this bitwise operator [-Wlogical-not-parentheses]
+  591 |         if (in_bounds_fully(y    , x + 1) && (!cave_info2[y    ][x + 1] & CAVE2_DTRAP)) return TRUE; 
+      |                                               ^                         ~
+cave.c:591:41: note: add parentheses after the '!' to evaluate the bitwise operator first
+  591 |         if (in_bounds_fully(y    , x + 1) && (!cave_info2[y    ][x + 1] & CAVE2_DTRAP)) return TRUE; 
+      |                                               ^                                      
+      |                                                (                                     )
+cave.c:591:41: note: add parentheses around left hand side expression to silence this warning
+  591 |         if (in_bounds_fully(y    , x + 1) && (!cave_info2[y    ][x + 1] & CAVE2_DTRAP)) return TRUE; 
+      |                                               ^
+      |                                               (                        )
+cave.c:592:41: warning: logical not is only applied to the left hand side of this bitwise operator [-Wlogical-not-parentheses]
+  592 |         if (in_bounds_fully(y - 1, x    ) && (!cave_info2[y - 1][x    ] & CAVE2_DTRAP)) return TRUE; 
+      |                                               ^                         ~
+cave.c:592:41: note: add parentheses after the '!' to evaluate the bitwise operator first
+  592 |         if (in_bounds_fully(y - 1, x    ) && (!cave_info2[y - 1][x    ] & CAVE2_DTRAP)) return TRUE; 
+      |                                               ^                                      
+      |                                                (                                     )
+cave.c:592:41: note: add parentheses around left hand side expression to silence this warning
+  592 |         if (in_bounds_fully(y - 1, x    ) && (!cave_info2[y - 1][x    ] & CAVE2_DTRAP)) return TRUE; 
+      |                                               ^
+      |                                               (                        )
+cave.c:593:41: warning: logical not is only applied to the left hand side of this bitwise operator [-Wlogical-not-parentheses]
+  593 |         if (in_bounds_fully(y    , x - 1) && (!cave_info2[y    ][x - 1] & CAVE2_DTRAP)) return TRUE; 
+      |                                               ^                         ~
+cave.c:593:41: note: add parentheses after the '!' to evaluate the bitwise operator first
+  593 |         if (in_bounds_fully(y    , x - 1) && (!cave_info2[y    ][x - 1] & CAVE2_DTRAP)) return TRUE; 
+      |                                               ^                                      
+      |                                                (                                     )
+cave.c:593:41: note: add parentheses around left hand side expression to silence this warning
+  593 |         if (in_bounds_fully(y    , x - 1) && (!cave_info2[y    ][x - 1] & CAVE2_DTRAP)) return TRUE; 
+      |                                               ^
+      |                                               (                        )
+cave.c:886:13: warning: variable 'info2' set but not used [-Wunused-but-set-variable]
+  886 |         byte info, info2;
+      |                    ^
+6 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o cmd0.o cmd0.c
+cmd0.c:676:16: warning: variable 'evt' set but not used [-Wunused-but-set-variable]
+  676 |         ui_event_data evt;
+      |                       ^
+1 warning generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o cmd1.o cmd1.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o cmd2.o cmd2.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o cmd3.o cmd3.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o cmd4.o cmd4.c
+cmd4.c:173:9: warning: variable 'c' set but not used [-Wunused-but-set-variable]
+  173 |    char c;
+      |         ^
+cmd4.c:195:7: warning: variable 'c' set but not used [-Wunused-but-set-variable]
+  195 |         char c;
+      |              ^
+cmd4.c:622:13: warning: cast to smaller integer type 'int' from 'void *' [-Wvoid-pointer-to-int-cast]
+  622 |         int page = (int)vpage;
+      |                    ^~~~~~~~~~
+3 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o cmd5.o cmd5.c
+cmd5.c:309:40: warning: result of comparison of constant -1 with expression of type 'bool' is always true [-Wtautological-constant-out-of-range-compare]
+  309 |                                 done=(add_spell(j_ptr, o_ptr->sval)!=-1);
+      |                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^ ~~
+cmd5.c:332:40: warning: result of comparison of constant -1 with expression of type 'bool' is always true [-Wtautological-constant-out-of-range-compare]
+  332 |                                 done=(add_spell(j_ptr, o_ptr->sval)!=-1);
+      |                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^ ~~
+cmd5.c:549:7: warning: variable 'comment' set but not used [-Wunused-but-set-variable]
+  549 |         cptr comment;
+      |              ^
+cmd5.c:551:7: warning: variable 'cheat_any' set but not used [-Wunused-but-set-variable]
+  551 |         bool cheat_any = FALSE;
+      |              ^
+cmd5.c:736:32: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+  736 |                 if ((s_info[spellno].numcast == (10 * s_info[spellno].level)) /* && (! cheat_spell_info) */ ) /* TODO Implement cheat_spell_info ? */
+      |                      ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cmd5.c:736:32: note: remove extraneous parentheses around the comparison to silence this warning
+  736 |                 if ((s_info[spellno].numcast == (10 * s_info[spellno].level)) /* && (! cheat_spell_info) */ ) /* TODO Implement cheat_spell_info ? */
+      |                     ~                        ^                              ~
+cmd5.c:736:32: note: use '=' to turn this equality comparison into an assignment
+  736 |                 if ((s_info[spellno].numcast == (10 * s_info[spellno].level)) /* && (! cheat_spell_info) */ ) /* TODO Implement cheat_spell_info ? */
+      |                                              ^~
+      |                                              =
+cmd5.c:683:15: warning: variable 'plev' set but not used [-Wunused-but-set-variable]
+  683 |         s16b chance, plev;
+      |                      ^
+6 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o cmd6.o cmd6.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o cmd-know.o cmd-know.c
+cmd-know.c:596:9: warning: case value not in enumerated type 'ui_event_type' [-Wswitch]
+  596 |                         case ESCAPE:
+      |                              ^
+./h-basic.h:309:16: note: expanded from macro 'ESCAPE'
+  309 | #define ESCAPE  '\033'
+      |                 ^
+1 warning generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o cmd-obj.o cmd-obj.c
+cmd-obj.c:745:13: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+  745 |                                 if ((buf=='a')) buf='A';
+      |                                      ~~~^~~~~
+cmd-obj.c:745:13: note: remove extraneous parentheses around the comparison to silence this warning
+  745 |                                 if ((buf=='a')) buf='A';
+      |                                     ~   ^    ~
+cmd-obj.c:745:13: note: use '=' to turn this equality comparison into an assignment
+  745 |                                 if ((buf=='a')) buf='A';
+      |                                         ^~
+      |                                         =
+cmd-obj.c:746:13: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+  746 |                                 if ((buf=='u')) buf='U';
+      |                                      ~~~^~~~~
+cmd-obj.c:746:13: note: remove extraneous parentheses around the comparison to silence this warning
+  746 |                                 if ((buf=='u')) buf='U';
+      |                                     ~   ^    ~
+cmd-obj.c:746:13: note: use '=' to turn this equality comparison into an assignment
+  746 |                                 if ((buf=='u')) buf='U';
+      |                                         ^~
+      |                                         =
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o death.o death.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o debug.o debug.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o dungeon.o dungeon.c
+dungeon.c:1585:7: warning: variable 'existing_dead_save' set but not used [-Wunused-but-set-variable]
+ 1585 |         bool existing_dead_save = FALSE;
+      |              ^
+1 warning generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o effects.o effects.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o files.o files.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o game-cmd.o game-cmd.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o game-event.o game-event.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o generate.o generate.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o history.o history.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o init1.o init1.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o init2.o init2.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o load.o load.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o load-old.o load-old.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o option.o option.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o randname.o randname.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o pathfind.o pathfind.c
+pathfind.c:703:6: warning: variable 'check_dir' set but not used [-Wunused-but-set-variable]
+  703 |         int check_dir = 0;
+      |             ^
+1 warning generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o prefs.o prefs.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o score.o score.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o signals.o signals.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o save.o save.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o savefile.o savefile.c
+savefile.c:280:7: warning: variable 'block_version' set but not used [-Wunused-but-set-variable]
+  280 |         u32b block_version, block_size, block_checksum;
+      |              ^
+savefile.c:280:34: warning: variable 'block_checksum' set but not used [-Wunused-but-set-variable]
+  280 |         u32b block_version, block_size, block_checksum;
+      |                                         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o spells1.o spells1.c
+spells1.c:2118:7: warning: variable 'name' set but not used [-Wunused-but-set-variable]
+ 2118 |         cptr name;
+      |              ^
+1 warning generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o spells2.o spells2.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o squelch.o squelch.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o store.o store.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o tables.o tables.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o target.o target.c
+target.c:490:7: warning: variable 'floored' set but not used [-Wunused-but-set-variable]
+  490 |         bool floored;
+      |              ^
+1 warning generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o trap.o trap.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o ui.o ui.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o ui-birth.o ui-birth.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o ui-event.o ui-event.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o ui-menu.o ui-menu.c
+ui-menu.c:753:19: warning: passing arguments to a function without a prototype is deprecated in all versions of C and is not supported in C2x [-Wdeprecated-non-prototype]
+  753 |                                         menu->refresh(menu);
+      |                                                      ^
+1 warning generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o util.o util.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o variable.o variable.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o wiz-spoil.o wiz-spoil.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o wiz-stats.o wiz-stats.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o wizard.o wizard.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o x-spell.o x-spell.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o xtra2.o xtra2.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o xtra3.o xtra3.c
+xtra3.c:371:8: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  371 |                     (!mon_list[p_ptr->health_who].hp < 0))
+      |                      ^                               ~
+xtra3.c:371:8: note: add parentheses after the '!' to evaluate the comparison first
+  371 |                     (!mon_list[p_ptr->health_who].hp < 0))
+      |                      ^                                  
+      |                       (                                 )
+xtra3.c:371:8: note: add parentheses around left hand side expression to silence this warning
+  371 |                     (!mon_list[p_ptr->health_who].hp < 0))
+      |                      ^
+      |                      (                              )
+xtra3.c:371:40: warning: result of comparison of constant 0 with boolean expression is always false [-Wtautological-constant-compare]
+  371 |                     (!mon_list[p_ptr->health_who].hp < 0))
+      |                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^ ~
+xtra3.c:441:8: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  441 |                     (!mon_list[p_ptr->health_who].hp < 0)) /* Dead (?) */
+      |                      ^                               ~
+xtra3.c:441:8: note: add parentheses after the '!' to evaluate the comparison first
+  441 |                     (!mon_list[p_ptr->health_who].hp < 0)) /* Dead (?) */
+      |                      ^                                  
+      |                       (                                 )
+xtra3.c:441:8: note: add parentheses around left hand side expression to silence this warning
+  441 |                     (!mon_list[p_ptr->health_who].hp < 0)) /* Dead (?) */
+      |                      ^
+      |                      (                              )
+xtra3.c:441:40: warning: result of comparison of constant 0 with boolean expression is always false [-Wtautological-constant-compare]
+  441 |                     (!mon_list[p_ptr->health_who].hp < 0)) /* Dead (?) */
+      |                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^ ~
+4 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o z-file.o z-file.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o z-form.o z-form.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o z-msg.o z-msg.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o z-quark.o z-quark.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o z-rand.o z-rand.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o z-term.o z-term.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o z-type.o z-type.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o z-util.o z-util.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o z-virt.o z-virt.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o main.o main.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o main-gcu.o main-gcu.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -o angband65 attack.o birth.o button.o cave.o cmd0.o cmd1.o cmd2.o cmd3.o cmd4.o cmd5.o cmd6.o cmd-know.o cmd-obj.o death.o debug.o dungeon.o effects.o files.o game-cmd.o game-event.o generate.o history.o init1.o init2.o load.o load-old.o monster/melee1.o monster/melee2.o monster/monster1.o monster/monster2.o object/identify.o object/obj-desc.o object/obj-info.o object/obj-make.o object/obj-power.o object/obj-ui.o object/obj-util.o object/randart.o option.o randname.o pathfind.o prefs.o player/calcs.o player/timed.o player/plyr-util.o score.o signals.o save.o savefile.o spells1.o spells2.o squelch.o store.o tables.o target.o trap.o ui.o ui-birth.o ui-event.o ui-menu.o util.o variable.o wiz-spoil.o wiz-stats.o wizard.o x-spell.o xtra2.o xtra3.o z-file.o z-form.o z-msg.o z-quark.o z-rand.o z-term.o z-type.o z-util.o z-virt.o main.o main-gcu.o -lncurses
+Installing terminal version...
+Terminal version installed as ../angband65-terminal
+Run with: ./angband65-terminal

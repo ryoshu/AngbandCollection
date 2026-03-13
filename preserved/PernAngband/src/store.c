@@ -2545,7 +2545,7 @@ void store_stole(void)
 	/* Find the number of objects on this and following pages */
 	i = (st_ptr->stock_num - store_top);
 
-	/* And then restrict it to the current page */
+	/* And then class_restrict it to the current page */
 	if (i > 12) i = 12;
 
 	/* Prompt */
@@ -2752,7 +2752,7 @@ void store_purchase(void)
 	/* Find the number of objects on this and following pages */
 	i = (st_ptr->stock_num - store_top);
 
-	/* And then restrict it to the current page */
+	/* And then class_restrict it to the current page */
 	if (i > 12) i = 12;
 
 	/* Prompt */
@@ -3423,7 +3423,7 @@ void store_examine(void)
    /* Find the number of objects on this and following pages */
    i = (st_ptr->stock_num - store_top);
 
-   /* And then restrict it to the current page */
+   /* And then class_restrict it to the current page */
    if (i > 12) i = 12;
 
    /* Prompt */

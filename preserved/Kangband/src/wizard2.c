@@ -357,15 +357,6 @@ static void wiz_display_item(const object_type *o_ptr)
 
 
 /*
- * A structure to hold a tval and its description
- */
-typedef struct tval_desc
-{
-	int tval;
-	cptr desc;
-} tval_desc;
-
-/*
  * A list of tvals and their textual names
  */
 static const tval_desc tvals[] =

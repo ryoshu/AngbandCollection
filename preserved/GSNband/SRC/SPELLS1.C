@@ -304,8 +304,7 @@ void depolymorph_player (void)
 
 	if (r_info[0].flags2 & RF2_EXTINCT)
 	{
-	      msg_print("Unfortunately players have been swept off the face of
-		this planet.");
+	      msg_print("Unfortunately players have been swept off the face of this planet.");
 	    take_hit (5000, "super genocide");
 	}
 

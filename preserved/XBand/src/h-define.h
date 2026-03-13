@@ -84,6 +84,9 @@
  */
 #undef MIN
 #define MIN(a,b)	(((a) > (b)) ? (b)  : (a))
+#ifndef min
+#define min(a,b)	MIN(a,b)
+#endif
 
 /*
  * Non-typed maximum value macro

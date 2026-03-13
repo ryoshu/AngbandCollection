@@ -4629,7 +4629,7 @@ void ang_sort(vptr u, vptr v, int n)
  * the player can hit it with a projection, and the player is not
  * hallucinating.  This allows use of "use closest target" macros.
  *
- * Future versions may restrict the ability to target "trappers"
+ * Future versions may class_restrict the ability to target "trappers"
  * and "mimics", but the semantics is a little bit weird.
  */
 bool target_able(int m_idx)

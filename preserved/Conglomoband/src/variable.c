@@ -1077,14 +1077,14 @@ void (*ang_sort_swap)(vptr u, vptr v, int a, int b);
 
 
 /*
- * Hack -- function hooks to restrict "get_mon_num_prep()" function
+ * Hack -- function hooks to class_restrict "get_mon_num_prep()" function
  */
 bool (*get_mon_num_hook)(int r_idx);
 bool (*get_mon_num2_hook)(int r_idx);
 
 
 /*
- * Hack -- function hook to restrict "get_obj_num_prep()" function
+ * Hack -- function hook to class_restrict "get_obj_num_prep()" function
  */
 bool (*get_obj_num_hook)(int k_idx);
 

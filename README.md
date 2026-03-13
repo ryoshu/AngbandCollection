@@ -153,6 +153,37 @@ These variants have no known active development and are preserved locally in `/p
 
 ---
 
+## Modern macOS Build Support
+
+**45 of 52 preserved variants** now compile on modern macOS (Apple Silicon and Intel). Each buildable variant includes a `Makefile.osx-modern` and `BUILD-MODERN-MACOS.md` with instructions.
+
+### Quick Build (any supported variant)
+
+```bash
+cd preserved/<VariantName>/src
+make -f Makefile.osx-modern clean
+make -f Makefile.osx-modern install-terminal
+cd ..
+./<variantname>-terminal
+```
+
+### Build Status
+
+| Status | Count | Details |
+|--------|-------|---------|
+| Builds | 45 | Terminal (ncurses) interface, native ARM64/x86_64 |
+| Fails | 4 | Conglomoband, Kamband, TFork (require Lua), Easyband (incomplete archive) |
+| Skipped | 3 | IronHells (client/server), Utumno (C++), BAngband (Moria-style, needs custom work) |
+
+### Key Modernization Details
+
+- Frontend: Carbon/QuickTime GUI replaced with ncurses terminal interface
+- Compiler: Clang with current Xcode SDK, `-std=gnu99`
+- Architecture: Native build for current arch, `UNIVERSAL=1` for fat binaries
+- Build scripts in `/scripts/`: `generate-makefile.sh`, `batch-modernize.sh`, `verify-builds.sh`
+
+---
+
 ## Usage
 
 **To explore active variants:**

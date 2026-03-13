@@ -1,0 +1,2482 @@
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o actmagic.o actmagic.c
+In file included from actmagic.c:18:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from actmagic.c:18:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from actmagic.c:18:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+actmagic.c:4495:15: warning: variable 'c_ptr' set but not used [-Wunused-but-set-variable]
+ 4495 |                         cave_type *c_ptr;
+      |                                    ^
+actmagic.c:5488:8: warning: unused variable 'num' [-Wunused-variable]
+ 5488 |                         int num = damroll(5, 3);
+      |                             ^~~
+actmagic.c:5489:8: warning: unused variable 'y' [-Wunused-variable]
+ 5489 |                         int y, x;
+      |                             ^
+actmagic.c:5489:11: warning: unused variable 'x' [-Wunused-variable]
+ 5489 |                         int y, x;
+      |                                ^
+actmagic.c:5490:8: warning: unused variable 'attempts' [-Wunused-variable]
+ 5490 |                         int attempts;
+      |                             ^~~~~~~~
+actmagic.c:5491:14: warning: unused variable 'k' [-Wunused-variable]
+ 5491 |          int k = 0;
+      |              ^
+actmagic.c:5492:15: warning: unused variable 'c_ptr' [-Wunused-variable]
+ 5492 |                         cave_type *c_ptr;
+      |                                    ^~~~~
+actmagic.c:7181:9: warning: unused variable 'group' [-Wunused-variable]
+ 7181 |                         bool group = (pet ? FALSE : TRUE);
+      |                              ^~~~~
+actmagic.c:7193:9: warning: unused variable 'group' [-Wunused-variable]
+ 7193 |                         bool group = (pet ? FALSE : TRUE);
+      |                              ^~~~~
+actmagic.c:7205:9: warning: unused variable 'group' [-Wunused-variable]
+ 7205 |                         bool group = (pet ? FALSE : TRUE);
+      |                              ^~~~~
+actmagic.c:7229:9: warning: unused variable 'group' [-Wunused-variable]
+ 7229 |                         bool group = (pet ? FALSE : TRUE);
+      |                              ^~~~~
+actmagic.c:7241:9: warning: unused variable 'group' [-Wunused-variable]
+ 7241 |                         bool group = (pet ? FALSE : TRUE);
+      |                              ^~~~~
+actmagic.c:7262:9: warning: unused variable 'group' [-Wunused-variable]
+ 7262 |                         bool group = (pet ? FALSE : TRUE);
+      |                              ^~~~~
+actmagic.c:7274:9: warning: unused variable 'group' [-Wunused-variable]
+ 7274 |                         bool group = (pet ? FALSE : TRUE);
+      |                              ^~~~~
+actmagic.c:4587:9: warning: variable 'success' set but not used [-Wunused-but-set-variable]
+ 4587 |    bool success = FALSE;
+      |         ^
+actmagic.c:4588:9: warning: unused variable 'success2' [-Wunused-variable]
+ 4588 |    bool success2 = FALSE;
+      |         ^~~~~~~~
+actmagic.c:4593:9: warning: unused variable 'bad' [-Wunused-variable]
+ 4593 |    bool bad = FALSE;
+      |         ^~~
+actmagic.c:4594:9: warning: unused variable 'group' [-Wunused-variable]
+ 4594 |    bool group = FALSE;
+      |         ^~~~~
+actmagic.c:4596:8: warning: unused variable 'chance' [-Wunused-variable]
+ 4596 |    int chance = 0;
+      |        ^~~~~~
+actmagic.c:4597:8: warning: unused variable 'i' [-Wunused-variable]
+ 4597 |    int i = 0;
+      |        ^
+actmagic.c:4598:6: warning: unused variable 'plev' [-Wunused-variable]
+ 4598 |         int plev = p_ptr->lev;
+      |             ^~~~
+actmagic.c:4599:9: warning: unused variable 'temp' [-Wunused-variable]
+ 4599 |    cptr temp;
+      |         ^~~~
+actmagic.c:4600:9: warning: unused variable 'temval' [-Wunused-variable]
+ 4600 |    char temval[25];
+      |         ^~~~~~
+29 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o artifact.o artifact.c
+In file included from artifact.c:13:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from artifact.c:13:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from artifact.c:13:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+artifact.c:1527:10: warning: variable 'has_pval' set but not used [-Wunused-but-set-variable]
+ 1527 |         int     has_pval = 0;
+      |                 ^
+artifact.c:1528:12: warning: unused variable 'has_pval2' [-Wunused-variable]
+ 1528 |    int     has_pval2 = 0;
+      |            ^~~~~~~~~
+artifact.c:2015:6: warning: unused variable 'px' [-Wunused-variable]
+ 2015 |         int px = p_ptr->px;
+      |             ^~
+artifact.c:2016:6: warning: unused variable 'py' [-Wunused-variable]
+ 2016 |         int py = p_ptr->py;
+      |             ^~
+artifact.c:2018:6: warning: unused variable 'plev' [-Wunused-variable]
+ 2018 |         int plev = p_ptr->lev;
+      |             ^~~~
+artifact.c:2019:6: warning: unused variable 'k' [-Wunused-variable]
+ 2019 |         int k, dir, dummy;
+      |             ^
+artifact.c:2019:9: warning: unused variable 'dir' [-Wunused-variable]
+ 2019 |         int k, dir, dummy;
+      |                ^~~
+artifact.c:2019:14: warning: unused variable 'dummy' [-Wunused-variable]
+ 2019 |         int k, dir, dummy;
+      |                     ^~~~~
+artifact.c:2020:7: warning: variable 'activate' set but not used [-Wunused-but-set-variable]
+ 2020 |         byte activate;
+      |              ^
+15 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o avatar.o avatar.c
+In file included from avatar.c:19:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from avatar.c:19:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from avatar.c:19:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+6 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o birth.o birth.c
+In file included from birth.c:13:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from birth.c:13:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from birth.c:13:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+6 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o bldg.o bldg.c
+In file included from bldg.c:15:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from bldg.c:15:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from bldg.c:15:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+6 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o cave.o cave.c
+In file included from cave.c:14:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from cave.c:14:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from cave.c:14:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+cave.c:2153:13: warning: variable 'n' set but not used [-Wunused-but-set-variable]
+ 2153 |         int     v, n;
+      |                    ^
+cave.c:3367:15: warning: variable 'p' set but not used [-Wunused-but-set-variable]
+ 3367 |                 vinfo_type *p;
+      |                             ^
+8 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o cmd1.o cmd1.c
+In file included from cmd1.c:13:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from cmd1.c:13:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from cmd1.c:13:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+cmd1.c:1316:5: warning: logical not is only applied to the left hand side of this bitwise operator [-Wlogical-not-parentheses]
+ 1316 |                         (!r_ptr->flags3 & (RF3_NO_CONF)))
+      |                          ^              ~
+cmd1.c:1316:5: note: add parentheses after the '!' to evaluate the bitwise operator first
+ 1316 |                         (!r_ptr->flags3 & (RF3_NO_CONF)))
+      |                          ^                             
+      |                           (                            )
+cmd1.c:1316:5: note: add parentheses around left hand side expression to silence this warning
+ 1316 |                         (!r_ptr->flags3 & (RF3_NO_CONF)))
+      |                          ^
+      |                          (             )
+7 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o cmd2.o cmd2.c
+In file included from cmd2.c:13:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from cmd2.c:13:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from cmd2.c:13:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+cmd2.c:3013:14: warning: variable 'chance2' set but not used [-Wunused-but-set-variable]
+ 3013 |         int chance, chance2, chance3, tdis;
+      |                     ^
+7 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o cmd3.o cmd3.c
+In file included from cmd3.c:13:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from cmd3.c:13:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from cmd3.c:13:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+6 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o cmd4.o cmd4.c
+In file included from cmd4.c:13:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from cmd4.c:13:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from cmd4.c:13:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+cmd4.c:3650:13: warning: unused function 'do_cmd_knowledge_virtues' [-Wunused-function]
+ 3650 | static void do_cmd_knowledge_virtues(void)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+7 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o cmd5.o cmd5.c
+In file included from cmd5.c:13:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from cmd5.c:13:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from cmd5.c:13:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+cmd5.c:235:6: warning: variable 'sval' set but not used [-Wunused-but-set-variable]
+  235 |         int sval;
+      |             ^
+cmd5.c:695:25: warning: variable 'realm' set but not used [-Wunused-but-set-variable]
+  695 |         int     item, sval, spell, realm;
+      |                                    ^
+cmd5.c:698:6: warning: variable 'use_realm' set but not used [-Wunused-but-set-variable]
+  698 |         int     use_realm;
+      |                 ^
+cmd5.c:1261:10: warning: variable 'redraw' set but not used [-Wunused-but-set-variable]
+ 1261 |    bool  redraw;
+      |          ^
+10 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o cmd6.o cmd6.c
+In file included from cmd6.c:13:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from cmd6.c:13:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from cmd6.c:13:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+cmd6.c:527:14: warning: unused variable 'k' [-Wunused-variable]
+  527 |         int         k, used_up, ident, lev;
+      |                     ^
+cmd6.c:529:14: warning: unused variable 'Rumor' [-Wunused-variable]
+  529 |         char        Rumor[1024];
+      |                     ^~~~~
+cmd6.c:649:29: warning: unused variable 'k' [-Wunused-variable]
+  649 |         int         ident, chance, k, lev;
+      |                                    ^
+cmd6.c:842:39: warning: unused variable 'sval' [-Wunused-variable]
+  842 |         int         lev, ident, chance, dir, sval;
+      |                                              ^~~~
+cmd6.c:1239:6: warning: variable 'ident' set but not used [-Wunused-but-set-variable]
+ 1239 |         int     ident,dir, lev, chance;
+      |                 ^
+cmd6.c:1239:12: warning: unused variable 'dir' [-Wunused-variable]
+ 1239 |         int     ident,dir, lev, chance;
+      |                       ^~~
+cmd6.c:1244:8: warning: variable 'Hi' set but not used [-Wunused-but-set-variable]
+ 1244 |    int Hi, Low, Size, Boost;
+      |        ^
+cmd6.c:1244:12: warning: variable 'Low' set but not used [-Wunused-but-set-variable]
+ 1244 |    int Hi, Low, Size, Boost;
+      |            ^
+cmd6.c:1244:17: warning: variable 'Size' set but not used [-Wunused-but-set-variable]
+ 1244 |    int Hi, Low, Size, Boost;
+      |                 ^
+cmd6.c:1244:23: warning: variable 'Boost' set but not used [-Wunused-but-set-variable]
+ 1244 |    int Hi, Low, Size, Boost;
+      |                       ^
+16 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o dungeon.o dungeon.c
+In file included from dungeon.c:13:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from dungeon.c:13:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from dungeon.c:13:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+6 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o effects.o effects.c
+In file included from effects.c:13:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from effects.c:13:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from effects.c:13:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+effects.c:1904:13: warning: unused variable 'gain' [-Wunused-variable]
+ 1904 |         int value, gain;
+      |                    ^~~~
+effects.c:2668:14: warning: variable 'ok' set but not used [-Wunused-but-set-variable]
+ 2668 |    int i,j,k,ok;
+      |              ^
+8 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o fields.o fields.c
+In file included from fields.c:13:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from fields.c:13:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from fields.c:13:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+6 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o files.o files.c
+In file included from files.c:13:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from files.c:13:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from files.c:13:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+files.c:2090:7: warning: variable 'k_idx' set but not used [-Wunused-but-set-variable]
+ 2090 |         s16b k_idx;
+      |              ^
+files.c:4049:20: warning: expression which evaluates to zero treated as a null pointer constant of type 'time_t *' (aka 'long *') [-Wnon-literal-null-conversion]
+ 4049 |                 time_t  ct = time((time_t)0);
+      |                                   ^~~~~~~~~
+8 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o flavor.o flavor.c
+In file included from flavor.c:13:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from flavor.c:13:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from flavor.c:13:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+6 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o generate.o generate.c
+In file included from generate.c:101:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from generate.c:101:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from generate.c:101:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+6 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o grid.o grid.c
+In file included from grid.c:14:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from grid.c:14:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from grid.c:14:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+6 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o init1.o init1.c
+In file included from init1.c:5:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from init1.c:5:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from init1.c:5:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+init1.c:2313:12: warning: unused variable 't' [-Wunused-variable]
+ 2313 |         char *s, *t;
+      |                   ^
+7 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o init2.o init2.c
+In file included from init2.c:5:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from init2.c:5:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from init2.c:5:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+6 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o load.o load.c
+In file included from load.c:5:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from load.c:5:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from load.c:5:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+load.c:441:12: warning: passing 'bool_hack *' (aka 'char *') to parameter of type 'byte_hack *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  441 |    rd_byte(&o_ptr->aware);
+      |            ^~~~~~~~~~~~~
+load.c:221:27: note: passing argument to parameter 'ip' here
+  221 | static void rd_byte(byte *ip)
+      |                           ^
+load.c:320:7: warning: unused variable 'tmpbyte' [-Wunused-variable]
+  320 |         byte tmpbyte;
+      |              ^~~~~~~
+load.c:327:7: warning: variable 'name1' set but not used [-Wunused-but-set-variable]
+  327 |         byte name1, name2, xtra1, xtra2;
+      |              ^
+load.c:327:21: warning: variable 'xtra1' set but not used [-Wunused-but-set-variable]
+  327 |         byte name1, name2, xtra1, xtra2;
+      |                            ^
+10 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o main-gcu.o main-gcu.c
+In file included from main-gcu.c:49:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from main-gcu.c:49:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from main-gcu.c:49:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+6 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o main.o main.c
+In file included from main.c:11:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from main.c:11:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from main.c:11:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+6 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o melee1.o melee1.c
+In file included from melee1.c:13:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from melee1.c:13:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from melee1.c:13:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+6 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o melee2.o melee2.c
+In file included from melee2.c:18:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from melee2.c:18:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from melee2.c:18:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+6 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o mind.o mind.c
+In file included from mind.c:13:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from mind.c:13:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from mind.c:13:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+6 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o monster1.o monster1.c
+In file included from monster1.c:13:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from monster1.c:13:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from monster1.c:13:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+6 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o monster2.o monster2.c
+In file included from monster2.c:13:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from monster2.c:13:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from monster2.c:13:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+6 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o mspells1.o mspells1.c
+In file included from mspells1.c:13:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from mspells1.c:13:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from mspells1.c:13:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+6 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o mspells2.o mspells2.c
+In file included from mspells2.c:13:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from mspells2.c:13:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from mspells2.c:13:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+6 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o mutation.o mutation.c
+In file included from mutation.c:13:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from mutation.c:13:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from mutation.c:13:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+mutation.c:1406:31: warning: logical not is only applied to the left hand side of this bitwise operator [-Wlogical-not-parentheses]
+ 1406 |                 if (!p_ptr->resist_nexus && !p_ptr->muta1 & MUT1_VTELEPORT &&
+      |                                             ^             ~
+mutation.c:1406:31: note: add parentheses after the '!' to evaluate the bitwise operator first
+ 1406 |                 if (!p_ptr->resist_nexus && !p_ptr->muta1 & MUT1_VTELEPORT &&
+      |                                             ^
+      |                                              (                            )
+mutation.c:1406:31: note: add parentheses around left hand side expression to silence this warning
+ 1406 |                 if (!p_ptr->resist_nexus && !p_ptr->muta1 & MUT1_VTELEPORT &&
+      |                                             ^
+      |                                             (            )
+7 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o notes.o notes.c
+In file included from notes.c:14:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from notes.c:14:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from notes.c:14:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+6 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o obj_kind.o obj_kind.c
+In file included from obj_kind.c:13:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from obj_kind.c:13:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from obj_kind.c:13:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+6 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o object1.o object1.c
+In file included from object1.c:13:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from object1.c:13:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from object1.c:13:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+object1.c:183:20: warning: variable 's_ptr' set but not used [-Wunused-but-set-variable]
+  183 |         const magic_type *s_ptr;
+      |                           ^
+7 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o object2.o object2.c
+In file included from object2.c:13:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from object2.c:13:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from object2.c:13:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+object2.c:17:8: warning: variable 'i' set but not used [-Wunused-but-set-variable]
+   17 |    int i, k;
+      |        ^
+object2.c:30:8: warning: variable 'i' set but not used [-Wunused-but-set-variable]
+   30 |    int i, k;
+      |        ^
+object2.c:2147:8: warning: variable 'j' set but not used [-Wunused-but-set-variable]
+ 2147 |         int i,j,k;
+      |               ^
+object2.c:2147:10: warning: variable 'k' set but not used [-Wunused-but-set-variable]
+ 2147 |         int i,j,k;
+      |                 ^
+object2.c:3367:12: warning: variable 'k' set but not used [-Wunused-but-set-variable]
+ 3367 |    int i,j,k;
+      |            ^
+object2.c:3368:8: warning: unused variable 'stmp' [-Wunused-variable]
+ 3368 |    int stmp[8];
+      |        ^~~~
+object2.c:3369:14: warning: variable 'done2' set but not used [-Wunused-but-set-variable]
+ 3369 |    bool done,done2;
+      |              ^
+object2.c:910:13: warning: unused function 'sqvalue' [-Wunused-function]
+  910 | static s32b sqvalue(s32b x)
+      |             ^~~~~~~
+14 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o racial.o racial.c
+In file included from racial.c:13:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from racial.c:13:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from racial.c:13:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+6 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o rooms.o rooms.c
+In file included from rooms.c:14:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from rooms.c:14:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from rooms.c:14:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+rooms.c:639:31: warning: unused variable 'xhsize' [-Wunused-variable]
+  639 |         int grd, roug, xsize, ysize, xhsize, yhsize, y0, x0;
+      |                                      ^~~~~~
+rooms.c:639:39: warning: unused variable 'yhsize' [-Wunused-variable]
+  639 |         int grd, roug, xsize, ysize, xhsize, yhsize, y0, x0;
+      |                                              ^~~~~~
+rooms.c:639:47: warning: variable 'y0' set but not used [-Wunused-but-set-variable]
+  639 |         int grd, roug, xsize, ysize, xhsize, yhsize, y0, x0;
+      |                                                      ^
+rooms.c:639:51: warning: variable 'x0' set but not used [-Wunused-but-set-variable]
+  639 |         int grd, roug, xsize, ysize, xhsize, yhsize, y0, x0;
+      |                                                          ^
+rooms.c:642:6: warning: unused variable 'type' [-Wunused-variable]
+  642 |         int type = LAKE_CAVERN;
+      |             ^~~~
+11 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o save.o save.c
+In file included from save.c:5:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from save.c:5:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from save.c:5:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+6 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o scores.o scores.c
+In file included from scores.c:13:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from scores.c:13:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from scores.c:13:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+scores.c:657:10: warning: variable 'pc' set but not used [-Wunused-but-set-variable]
+  657 |         int pr, pc, clev/*, al*/;
+      |                 ^
+scores.c:717:10: warning: variable 'pc' set but not used [-Wunused-but-set-variable]
+  717 |         int pr, pc, clev, lastlev;
+      |                 ^
+8 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o spells1.o spells1.c
+In file included from spells1.c:13:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from spells1.c:13:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from spells1.c:13:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+spells1.c:4117:11: warning: variable 'y1' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+ 4117 |         else if (who > 0)
+      |                  ^~~~~~~
+spells1.c:4161:32: note: uninitialized use occurs here
+ 4161 |         path_n = project_path(path_g, y1, x1, y2, x2, flg);
+      |                                       ^~
+spells1.c:4117:7: note: remove the 'if' if its condition is always true
+ 4117 |         else if (who > 0)
+      |              ^~~~~~~~~~~~
+ 4118 |         {
+spells1.c:4036:8: note: initialize the variable 'y1' to silence this warning
+ 4036 |         int y1, x1;
+      |               ^
+      |                = 0
+spells1.c:4117:11: warning: variable 'x1' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+ 4117 |         else if (who > 0)
+      |                  ^~~~~~~
+spells1.c:4161:36: note: uninitialized use occurs here
+ 4161 |         path_n = project_path(path_g, y1, x1, y2, x2, flg);
+      |                                           ^~
+spells1.c:4117:7: note: remove the 'if' if its condition is always true
+ 4117 |         else if (who > 0)
+      |              ^~~~~~~~~~~~
+ 4118 |         {
+spells1.c:4036:12: note: initialize the variable 'x1' to silence this warning
+ 4036 |         int y1, x1;
+      |                   ^
+      |                    = 0
+spells1.c:4117:11: warning: variable 'y2' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+ 4117 |         else if (who > 0)
+      |                  ^~~~~~~
+spells1.c:4161:40: note: uninitialized use occurs here
+ 4161 |         path_n = project_path(path_g, y1, x1, y2, x2, flg);
+      |                                               ^~
+spells1.c:4117:7: note: remove the 'if' if its condition is always true
+ 4117 |         else if (who > 0)
+      |              ^~~~~~~~~~~~
+ 4118 |         {
+spells1.c:4037:8: note: initialize the variable 'y2' to silence this warning
+ 4037 |         int y2, x2;
+      |               ^
+      |                = 0
+spells1.c:4117:11: warning: variable 'x2' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+ 4117 |         else if (who > 0)
+      |                  ^~~~~~~
+spells1.c:4161:44: note: uninitialized use occurs here
+ 4161 |         path_n = project_path(path_g, y1, x1, y2, x2, flg);
+      |                                                   ^~
+spells1.c:4117:7: note: remove the 'if' if its condition is always true
+ 4117 |         else if (who > 0)
+      |              ^~~~~~~~~~~~
+ 4118 |         {
+spells1.c:4037:12: note: initialize the variable 'x2' to silence this warning
+ 4037 |         int y2, x2;
+      |                   ^
+      |                    = 0
+10 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o spells2.o spells2.c
+In file included from spells2.c:13:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from spells2.c:13:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from spells2.c:13:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+spells2.c:36:34: warning: variable 'f4' set but not used [-Wunused-but-set-variable]
+   36 |         u32b f1 = 0L, f2 = 0L, f3 = 0L, f4 = 0L, f5 = 0L, f6 = 0L;
+      |                                         ^
+spells2.c:36:43: warning: variable 'f5' set but not used [-Wunused-but-set-variable]
+   36 |         u32b f1 = 0L, f2 = 0L, f3 = 0L, f4 = 0L, f5 = 0L, f6 = 0L;
+      |                                                  ^
+spells2.c:36:52: warning: variable 'f6' set but not used [-Wunused-but-set-variable]
+   36 |         u32b f1 = 0L, f2 = 0L, f3 = 0L, f4 = 0L, f5 = 0L, f6 = 0L;
+      |                                                           ^
+9 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o spells3.o spells3.c
+In file included from spells3.c:13:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from spells3.c:13:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from spells3.c:13:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+spells3.c:23:10: warning: variable 'i' set but not used [-Wunused-but-set-variable]
+   23 |    int   i,j;
+      |          ^
+spells3.c:43:10: warning: variable 'i' set but not used [-Wunused-but-set-variable]
+   43 |    int   i,j;
+      |          ^
+spells3.c:63:10: warning: variable 'i' set but not used [-Wunused-but-set-variable]
+   63 |    int   i,j,k,l,m;
+      |          ^
+spells3.c:3100:21: warning: unused variable 'j' [-Wunused-variable]
+ 3100 |         int             i, j;
+      |                            ^
+spells3.c:3102:18: warning: unused variable 'use_realm1' [-Wunused-variable]
+ 3102 |         int             use_realm1 = p_ptr->realm1;
+      |                         ^~~~~~~~~~
+spells3.c:3103:18: warning: unused variable 'use_realm2' [-Wunused-variable]
+ 3103 |         int             use_realm2 = p_ptr->realm2;
+      |                         ^~~~~~~~~~
+spells3.c:3568:18: warning: unused variable 'info' [-Wunused-variable]
+ 3568 |         char            info[80];
+      |                         ^~~~
+spells3.c:3379:13: warning: unused function 'spell_info' [-Wunused-function]
+ 3379 | static void spell_info(char *p, int spell, int realm)
+      |             ^~~~~~~~~~
+14 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o store.o store.c
+In file included from store.c:13:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from store.c:13:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from store.c:13:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+6 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o streams.o streams.c
+In file included from streams.c:16:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from streams.c:16:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from streams.c:16:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+6 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o tables.o tables.c
+In file included from tables.c:14:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from tables.c:14:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from tables.c:14:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+6 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o util.o util.c
+In file included from util.c:6:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from util.c:6:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from util.c:6:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+util.c:79:23: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+   79 | extern struct passwd *getpwuid();
+      |                       ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/pwd.h:100:16: note: conflicting prototype is here
+  100 | struct passwd   *getpwuid(uid_t);
+      |                  ^
+util.c:80:23: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+   80 | extern struct passwd *getpwnam();
+      |                       ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/pwd.h:101:16: note: conflicting prototype is here
+  101 | struct passwd   *getpwnam(const char *);
+      |                  ^
+util.c:2236:7: warning: address of array 'buf' will always evaluate to 'true' [-Wpointer-bool-conversion]
+ 2236 |                 if (buf && streq(buf, str) && (j < 1000))
+      |                     ^~~ ~~
+util.c:3172:6: warning: variable 'i' set but not used [-Wunused-but-set-variable]
+ 3172 |         int i;
+      |             ^
+10 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o variable.o variable.c
+In file included from variable.c:13:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from variable.c:13:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from variable.c:13:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+6 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o wild1.o wild1.c
+In file included from wild1.c:14:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from wild1.c:14:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from wild1.c:14:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+wild1.c:3139:30: warning: variable 'dh' set but not used [-Wunused-but-set-variable]
+ 3139 |         int i, cur_posn, high_posn, dh, river_start;
+      |                                     ^
+7 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o wild2.o wild2.c
+In file included from wild2.c:14:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from wild2.c:14:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from wild2.c:14:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+wild2.c:675:7: warning: variable 'magic' set but not used [-Wunused-but-set-variable]
+  675 |         byte magic;
+      |              ^
+7 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o wizard1.o wizard1.c
+In file included from wizard1.c:5:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from wizard1.c:5:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from wizard1.c:5:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+wizard1.c:2188:16: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 2188 |                 sprintf(buf, mut_ptr->desc_text);
+      |                              ^~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/secure/_stdio.h:47:56: note: expanded from macro 'sprintf'
+   47 |   __builtin___sprintf_chk (str, 0, __darwin_obsz(str), __VA_ARGS__)
+      |                                                        ^~~~~~~~~~~
+wizard1.c:2188:16: note: treat the string as an argument to avoid this
+ 2188 |                 sprintf(buf, mut_ptr->desc_text);
+      |                              ^
+      |                              "%s", 
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/secure/_stdio.h:47:56: note: expanded from macro 'sprintf'
+   47 |   __builtin___sprintf_chk (str, 0, __darwin_obsz(str), __VA_ARGS__)
+      |                                                        ^
+wizard1.c:2284:16: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 2284 |                 sprintf(buf, mut_ptr->desc_text);
+      |                              ^~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/secure/_stdio.h:47:56: note: expanded from macro 'sprintf'
+   47 |   __builtin___sprintf_chk (str, 0, __darwin_obsz(str), __VA_ARGS__)
+      |                                                        ^~~~~~~~~~~
+wizard1.c:2284:16: note: treat the string as an argument to avoid this
+ 2284 |                 sprintf(buf, mut_ptr->desc_text);
+      |                              ^
+      |                              "%s", 
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/secure/_stdio.h:47:56: note: expanded from macro 'sprintf'
+   47 |   __builtin___sprintf_chk (str, 0, __darwin_obsz(str), __VA_ARGS__)
+      |                                                        ^
+wizard1.c:376:22: warning: unused variable 'group_artifact' [-Wunused-const-variable]
+  376 | static const grouper group_artifact[] =
+      |                      ^~~~~~~~~~~~~~
+wizard1.c:929:13: warning: unused function 'object_analyze' [-Wunused-function]
+  929 | static void object_analyze(const object_type *o_ptr, obj_desc_list *desc_ptr)
+      |             ^~~~~~~~~~~~~~
+wizard1.c:959:13: warning: unused function 'print_header' [-Wunused-function]
+  959 | static void print_header(void)
+      |             ^~~~~~~~~~~~
+wizard1.c:1008:13: warning: unused function 'spoiler_outlist' [-Wunused-function]
+ 1008 | static void spoiler_outlist(cptr header, cptr *list, char separator)
+      |             ^~~~~~~~~~~~~~~
+12 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o wizard2.o wizard2.c
+In file included from wizard2.c:13:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from wizard2.c:13:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from wizard2.c:13:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+wizard2.c:1105:15: warning: variable 'k_ptr' set but not used [-Wunused-but-set-variable]
+ 1105 |         object_kind *k_ptr;
+      |                      ^
+7 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o xtra1.o xtra1.c
+In file included from xtra1.c:13:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from xtra1.c:13:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from xtra1.c:13:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+xtra1.c:1045:11: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+ 1045 |         else if (!m_list[p_ptr->health_who].hp < 0)
+      |                  ^                             ~
+xtra1.c:1045:11: note: add parentheses after the '!' to evaluate the comparison first
+ 1045 |         else if (!m_list[p_ptr->health_who].hp < 0)
+      |                  ^                                
+      |                   (                               )
+xtra1.c:1045:11: note: add parentheses around left hand side expression to silence this warning
+ 1045 |         else if (!m_list[p_ptr->health_who].hp < 0)
+      |                  ^
+      |                  (                            )
+xtra1.c:1045:41: warning: result of comparison of constant 0 with boolean expression is always false [-Wtautological-constant-compare]
+ 1045 |         else if (!m_list[p_ptr->health_who].hp < 0)
+      |                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^ ~
+8 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o xtra2.o xtra2.c
+In file included from xtra2.c:13:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from xtra2.c:13:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from xtra2.c:13:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+6 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o z-form.o z-form.c
+In file included from z-form.c:5:
+In file included from ./z-form.h:6:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+4 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o z-rand.o z-rand.c
+In file included from z-rand.c:5:
+In file included from ./z-rand.h:6:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+4 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o z-term.o z-term.c
+In file included from z-term.c:13:
+In file included from ./angband.h:19:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from z-term.c:13:
+In file included from ./angband.h:34:
+./z-config.h:182:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  182 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from z-term.c:13:
+In file included from ./angband.h:34:
+./z-config.h:365:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  365 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+6 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o z-util.o z-util.c
+In file included from z-util.c:13:
+In file included from ./z-util.h:14:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+4 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o z-virt.o z-virt.c
+In file included from z-virt.c:13:
+In file included from ./z-virt.h:14:
+In file included from ./h-basic.h:20:
+./h-system.h:112:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  112 | extern char *strstr();
+      |              ^
+./h-system.h:115:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  115 | extern char *strchr();
+      |              ^
+./h-system.h:118:14: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  118 | extern char *strrchr();
+      |              ^
+./h-system.h:130:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  130 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+4 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -o randomband actmagic.o artifact.o avatar.o birth.o bldg.o cave.o cmd1.o cmd2.o cmd3.o cmd4.o cmd5.o cmd6.o dungeon.o effects.o fields.o files.o flavor.o generate.o grid.o init1.o init2.o load.o main-gcu.o main.o melee1.o melee2.o mind.o monster1.o monster2.o mspells1.o mspells2.o mutation.o notes.o obj_kind.o object1.o object2.o racial.o rooms.o save.o scores.o spells1.o spells2.o spells3.o store.o streams.o tables.o util.o variable.o wild1.o wild2.o wizard1.o wizard2.o xtra1.o xtra2.o z-form.o z-rand.o z-term.o z-util.o z-virt.o -lncurses
+Installing terminal version...
+Terminal version installed as ../randomband-terminal
+Run with: ./randomband-terminal

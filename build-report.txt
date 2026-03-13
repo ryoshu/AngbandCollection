@@ -1,0 +1,62 @@
+Build Verification Report
+=========================
+Date: Fri Mar 13 11:06:27 EDT 2026
+System: Darwin 23.6.0 arm64
+Compiler: Apple clang version 16.0.0 (clang-1600.0.26.6)
+SDK: /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk
+
+Summary
+-------
+Total: 49  Pass: 0  Warn: 45  Fail: 4  Skip: 3
+
+Results
+-------
+  WARN    Angband64 (650 warnings)
+  WARN    Angband65 (30 warnings)
+  WARN    Animeband (237 warnings)
+  WARN    Chengband (454 warnings)
+  WARN    ChocolateAngband (61 warnings)
+  WARN    ComPosband (195 warnings)
+  FAIL    Conglomoband: w_spells.c:13:10: fatal error: 'lua.h' file not found
+  WARN    Craftband (22 warnings)
+  WARN    D11Angband (146 warnings)
+  WARN    DaJAngband (271 warnings)
+  WARN    Diabloband (60 warnings)
+  WARN    Discband (313 warnings)
+  FAIL    Easyband: clang: error: linker command failed with exit code 1 (use -v to see invocation)
+  WARN    Entroband (146 warnings)
+  WARN    EricAngband (244 warnings)
+  WARN    EyAngband (65 warnings)
+  WARN    Frazband (380 warnings)
+  WARN    Friendband (13 warnings)
+  WARN    GSNband (316 warnings)
+  WARN    GilAngband (4 warnings)
+  WARN    Goingband (180 warnings)
+  WARN    Ingband (58 warnings)
+  WARN    IsoAngband (132 warnings)
+  WARN    Jackalband (7 warnings)
+  WARN    Jackband (36 warnings)
+  FAIL    Kamband: clang: error: linker command failed with exit code 1 (use -v to see invocation)
+  WARN    Kangband (188 warnings)
+  WARN    MJBand (184 warnings)
+  WARN    Minimal (22 warnings)
+  WARN    Multiband (230 warnings)
+  WARN    Neoband (28 warnings)
+  WARN    NuAngband (256 warnings)
+  WARN    Oangband (179 warnings)
+  WARN    PernAngband (508 warnings)
+  WARN    PsiAngband (260 warnings)
+  WARN    PziAngband (272 warnings)
+  WARN    Questband (146 warnings)
+  WARN    RandomBand (453 warnings)
+  WARN    RePosband (49 warnings)
+  WARN    RobertAngband (225 warnings)
+  WARN    Sil (87 warnings)
+  FAIL    TFork: cmd5.c:16:10: fatal error: 'tolua.h' file not found
+  WARN    TOband (792 warnings)
+  WARN    TeamAngband (189 warnings)
+  WARN    Weird (169 warnings)
+  WARN    XAngband (376 warnings)
+  WARN    XBand (157 warnings)
+  WARN    Xygos (14 warnings)
+  WARN    eband (31 warnings)

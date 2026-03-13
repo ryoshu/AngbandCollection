@@ -796,7 +796,7 @@ errr get_mon_num_prep(void)
 }
 
 /*
- * Some dungeon types restrict the possible monsters.
+ * Some dungeon types class_restrict the possible monsters.
  * Return TRUE is the monster is OK and FALSE otherwise
  */
 bool apply_rule(monster_race *r_ptr, byte rule)
@@ -1022,7 +1022,7 @@ s16b get_mon_num(int level)
                 /* Joke monsters allowed ? or not ? */
                 if(!joke_monsters && (r_ptr->flags8 & RF8_JOKEANGBAND)) continue;
 
-                /* Some dungeon types restrict the possible monsters */
+                /* Some dungeon types class_restrict the possible monsters */
                 if(!summon_hack && !restrict_monster_to_dungeon(r_idx) && dun_level) continue;
 
 		/* Accept */
@@ -2564,7 +2564,7 @@ static bool place_monster_okay(int r_idx)
  * Note the "bizarre" use of non-recursion to prevent annoying output
  * when running a code profiler.
  *
- * Note the use of the new "monster allocation table" code to restrict
+ * Note the use of the new "monster allocation table" code to class_restrict
  * the "get_mon_num()" function to "legal" escort types.
  */
 bool place_monster_aux(int y, int x, int r_idx, bool slp, bool grp, int status)
@@ -3138,7 +3138,7 @@ static bool summon_specific_okay(int r_idx)
  * five to allow slight increases in monster power.
  *
  * Note that we use the new "monster allocation table" creation code
- * to restrict the "get_mon_num()" function to the set of "legal"
+ * to class_restrict the "get_mon_num()" function to the set of "legal"
  * monsters, making this function much faster and more reliable.
  *
  * Note that this function may not succeed, though this is very rare.

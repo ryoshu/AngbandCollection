@@ -21,88 +21,45 @@ This document outlines the strategy for modernizing orphaned Angband variants to
 - `oangband-launcher.sh` - Convenience launcher script
 - `.gitignore` - Standard development artifacts exclusion
 
-## Strategy for Other Variants
+## Batch Modernization Results
 
-### Target Variants for Modernization
-Based on similarity to Oangband's build system and era:
+Using `scripts/generate-makefile.sh` and `scripts/batch-modernize.sh`, all 52 preserved variants were processed. Source-level fixes were applied where needed (deprecated API replacements, C99 compliance, linker conflicts).
 
-**High Compatibility (Similar Era & Build System)**
-- NPPAngband - Uses autotools like Oangband
-- FAangband - Same developer lineage as Oangband  
-- Sangband - Similar timeframe and structure
-- Zangband - Classic variant with established build patterns
+### Results: 45 of 52 Build Successfully
 
-**Medium Compatibility (May Need Adaptation)**
-- Older variants using custom build systems
-- Variants with unique platform dependencies
-- Games requiring specific library versions
+**Builds (45 variants):**
+Angband64, Angband65, Animeband, Chengband, ChocolateAngband, ComPosband, Craftband, D11Angband, DaJAngband, Diabloband, Discband, Entroband, EricAngband, EyAngband, Frazband, Friendband, GilAngband, Goingband, GSNband, Ingband, IsoAngband, Jackalband, Jackband, Kangband, MJBand, Minimal, Multiband, Neoband, NuAngband, Oangband, PernAngband, PsiAngband, PziAngband, Questband, RandomBand, RePosband, RobertAngband, Sil, TOband, TeamAngband, Weird, XAngband, XBand, Xygos, eband
 
-### General Modernization Process
+**Fails (4 variants):**
+- Conglomoband — requires Lua library (lua.h)
+- Kamband — requires Lua library
+- TFork — requires toLua library (tolua.h)
+- Easyband — incomplete source archive (64 undefined symbols)
 
-1. **Assessment Phase**
-   - Analyze existing build system (autotools, custom Makefiles, etc.)
-   - Identify deprecated dependencies (Carbon, QuickTime, old SDL versions)
-   - Check for hardcoded paths and architecture assumptions
+**Skipped (3 variants):**
+- IronHells — client/server architecture, not applicable
+- Utumno — C++ codebase, needs separate approach
+- BAngband — Moria-style (curses in main.c, no main-gcu.c), needs custom Makefile
 
-2. **Adaptation Phase**  
-   - Create modern Makefile based on Oangband template
-   - Switch deprecated GUI frameworks to terminal/SDL2 alternatives
-   - Update SDK paths and compiler flags
-   - Add universal binary support
+### Common Source Fixes Applied
 
-3. **Testing Phase**
-   - Build on both Intel and Apple Silicon Macs
-   - Test basic game functionality
-   - Verify save file compatibility
+- `cuserid()` replaced with `getlogin()` (removed from modern POSIX)
+- `strnicmp` aliased to `strncasecmp` (Windows-only function)
+- `restrict` C99 keyword conflicts resolved by renaming variables
+- `static` declaration conflicts resolved (extern vs static in separate files)
+- Split string literals across lines joined onto single lines
+- `#undef bool` removed from main-gcu.c (conflicts with ncurses.h)
+- Missing source files added to Makefiles (variant-specific extras)
+- Uppercase .C/.H files renamed to lowercase (GNU Make case sensitivity)
 
-4. **Documentation Phase**
-   - Create build instructions
-   - Document any variant-specific requirements
-   - Add troubleshooting guide
+### Build Scripts
 
-### Reusable Components
+- `scripts/generate-makefile.sh` — generates `Makefile.osx-modern` for a single variant
+- `scripts/batch-modernize.sh` — runs generator across all preserved variants
+- `scripts/verify-builds.sh` — builds all variants and produces summary report
 
-#### Template Makefile Structure
-```makefile
-# Modern SDK detection
-SDK_PATH = $(shell xcrun --show-sdk-path)
-ARCH_FLAGS = -arch $(shell uname -m)
+### Future Work
 
-# Universal binary option
-ifeq ($(UNIVERSAL),1)
-  ARCH_FLAGS = -arch x86_64 -arch arm64
-endif
-
-# Terminal interface flags
-CFLAGS = -DUSE_GCU -DUSE_TRANSPARENCY
-LIBS = -lncurses
-```
-
-#### Standard Frontend Migration
-- Replace `main-crb.c` (Carbon) with `main-gcu.c` (curses)
-- Remove QuickTime and Carbon framework dependencies
-- Add ncurses library linking
-
-#### Common Build Targets
-- `install-terminal` - Create terminal executable
-- `clean` - Remove build artifacts  
-- `help` - Show available options
-- Universal binary support via `UNIVERSAL=1`
-
-### Benefits of This Approach
-
-1. **Preservation** - Keeps historical variants accessible
-2. **Consistency** - Standardized build process across variants
-3. **Modern Compatibility** - Works on current and future macOS versions
-4. **Documentation** - Clear instructions for users and developers
-5. **Template** - Reusable pattern for additional variants
-
-### Next Steps
-
-When modernizing additional variants:
-1. Copy and adapt `Makefile.osx-modern` template
-2. Identify variant-specific source files and dependencies
-3. Test build process and document any unique requirements
-4. Create launcher script and documentation following Oangband pattern
-
-This systematic approach ensures orphaned Angband variants remain playable while maintaining their historical character and gameplay.
+- Conglomoband/Kamband/TFork could build if Lua is installed (e.g., `brew install lua`)
+- BAngband needs a hand-written Makefile (different architecture from standard Angband)
+- Easyband may need source files recovered from other archives

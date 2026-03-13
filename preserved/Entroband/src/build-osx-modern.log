@@ -1,0 +1,1257 @@
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o artifact.o artifact.c
+In file included from artifact.c:11:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from artifact.c:11:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o autopick.o autopick.c
+In file included from autopick.c:13:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from autopick.c:13:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o avatar.o avatar.c
+In file included from avatar.c:21:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from avatar.c:21:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o birth.o birth.c
+In file included from birth.c:11:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from birth.c:11:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o bldg.o bldg.c
+In file included from bldg.c:14:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from bldg.c:14:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o cave.o cave.c
+In file included from cave.c:14:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from cave.c:14:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+cave.c:1746:8: warning: variable 'ta' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+ 1746 |                         if (c_ptr->m_idx && m_list[c_ptr->m_idx].ml)
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cave.c:1769:65: note: uninitialized use occurs here
+ 1769 |                         Term_queue_bigchar(panel_col_of(nx), ny-panel_row_prt, a, c, ta, tc);
+      |                                                                                      ^~
+cave.c:1746:4: note: remove the 'if' if its condition is always true
+ 1746 |                         if (c_ptr->m_idx && m_list[c_ptr->m_idx].ml)
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1747 |                         {
+cave.c:1746:8: warning: variable 'ta' is used uninitialized whenever '&&' condition is false [-Wsometimes-uninitialized]
+ 1746 |                         if (c_ptr->m_idx && m_list[c_ptr->m_idx].ml)
+      |                             ^~~~~~~~~~~~
+cave.c:1769:65: note: uninitialized use occurs here
+ 1769 |                         Term_queue_bigchar(panel_col_of(nx), ny-panel_row_prt, a, c, ta, tc);
+      |                                                                                      ^~
+cave.c:1746:8: note: remove the '&&' if its condition is always true
+ 1746 |                         if (c_ptr->m_idx && m_list[c_ptr->m_idx].ml)
+      |                             ^~~~~~~~~~~~~~~
+cave.c:1743:11: note: initialize the variable 'ta' to silence this warning
+ 1743 |                         byte ta;
+      |                                ^
+      |                                 = '\0'
+cave.c:1746:8: warning: variable 'tc' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+ 1746 |                         if (c_ptr->m_idx && m_list[c_ptr->m_idx].ml)
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cave.c:1769:69: note: uninitialized use occurs here
+ 1769 |                         Term_queue_bigchar(panel_col_of(nx), ny-panel_row_prt, a, c, ta, tc);
+      |                                                                                          ^~
+cave.c:1746:4: note: remove the 'if' if its condition is always true
+ 1746 |                         if (c_ptr->m_idx && m_list[c_ptr->m_idx].ml)
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1747 |                         {
+cave.c:1746:8: warning: variable 'tc' is used uninitialized whenever '&&' condition is false [-Wsometimes-uninitialized]
+ 1746 |                         if (c_ptr->m_idx && m_list[c_ptr->m_idx].ml)
+      |                             ^~~~~~~~~~~~
+cave.c:1769:69: note: uninitialized use occurs here
+ 1769 |                         Term_queue_bigchar(panel_col_of(nx), ny-panel_row_prt, a, c, ta, tc);
+      |                                                                                          ^~
+cave.c:1746:8: note: remove the '&&' if its condition is always true
+ 1746 |                         if (c_ptr->m_idx && m_list[c_ptr->m_idx].ml)
+      |                             ^~~~~~~~~~~~~~~
+cave.c:1744:11: note: initialize the variable 'tc' to silence this warning
+ 1744 |                         char tc;
+      |                                ^
+      |                                 = '\0'
+cave.c:4925:4: warning: explicitly assigning value of variable of type 'int' to itself [-Wself-assign]
+ 4925 |         m = m;
+      |         ~ ^ ~
+cave.c:5009:14: warning: explicitly assigning value of variable of type 'int' to itself [-Wself-assign]
+ 5009 |         unused_flag = unused_flag;
+      |         ~~~~~~~~~~~ ^ ~~~~~~~~~~~
+8 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o chuukei.o chuukei.c
+In file included from chuukei.c:3:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from chuukei.c:3:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o cmd1.o cmd1.c
+In file included from cmd1.c:13:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from cmd1.c:13:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o cmd2.o cmd2.c
+In file included from cmd2.c:13:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from cmd2.c:13:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o cmd3.o cmd3.c
+In file included from cmd3.c:13:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from cmd3.c:13:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o cmd4.o cmd4.c
+In file included from cmd4.c:13:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from cmd4.c:13:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+cmd4.c:6064:17: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 6064 |                         fprintf(fff, html_head[i]);
+      |                                      ^~~~~~~~~~~~
+cmd4.c:6064:17: note: treat the string as an argument to avoid this
+ 6064 |                         fprintf(fff, html_head[i]);
+      |                                      ^
+      |                                      "%s", 
+cmd4.c:6126:17: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 6126 |                         fprintf(fff, html_foot[i]);
+      |                                      ^~~~~~~~~~~~
+cmd4.c:6126:17: note: treat the string as an argument to avoid this
+ 6126 |                         fprintf(fff, html_foot[i]);
+      |                                      ^
+      |                                      "%s", 
+cmd4.c:9262:18: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 9262 |                                 fprintf(fff, tmp_str);
+      |                                              ^~~~~~~
+cmd4.c:9262:18: note: treat the string as an argument to avoid this
+ 9262 |                                 fprintf(fff, tmp_str);
+      |                                              ^
+      |                                              "%s", 
+cmd4.c:9271:19: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 9271 |                                         fprintf(fff, tmp_str);
+      |                                                      ^~~~~~~
+cmd4.c:9271:19: note: treat the string as an argument to avoid this
+ 9271 |                                         fprintf(fff, tmp_str);
+      |                                                      ^
+      |                                                      "%s", 
+cmd4.c:9325:36: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 9325 |         if (rand_tmp_str[0]) fprintf(fff, rand_tmp_str);
+      |                                           ^~~~~~~~~~~~
+cmd4.c:9325:36: note: treat the string as an argument to avoid this
+ 9325 |         if (rand_tmp_str[0]) fprintf(fff, rand_tmp_str);
+      |                                           ^
+      |                                           "%s", 
+cmd4.c:9416:17: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 9416 |                         fprintf(fff, tmp_str);
+      |                                      ^~~~~~~
+cmd4.c:9416:17: note: treat the string as an argument to avoid this
+ 9416 |                         fprintf(fff, tmp_str);
+      |                                      ^
+      |                                      "%s", 
+cmd4.c:9490:17: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 9490 |                         fprintf(fff, tmp_str);
+      |                                      ^~~~~~~
+cmd4.c:9490:17: note: treat the string as an argument to avoid this
+ 9490 |                         fprintf(fff, tmp_str);
+      |                                      ^
+      |                                      "%s", 
+cmd4.c:9532:17: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 9532 |                         fprintf(fff, tmp_str);
+      |                                      ^~~~~~~
+cmd4.c:9532:17: note: treat the string as an argument to avoid this
+ 9532 |                         fprintf(fff, tmp_str);
+      |                                      ^
+      |                                      "%s", 
+10 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o cmd5.o cmd5.c
+In file included from cmd5.c:13:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from cmd5.c:13:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o cmd6.o cmd6.c
+In file included from cmd6.c:13:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from cmd6.c:13:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o do-spell.o do-spell.c
+In file included from do-spell.c:5:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from do-spell.c:5:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o dungeon.o dungeon.c
+In file included from dungeon.c:13:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from dungeon.c:13:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o effects.o effects.c
+In file included from effects.c:13:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from effects.c:13:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+effects.c:5277:6: warning: 'strcpy' will always overflow; destination buffer has size 10, but the source string has length 13 (including NUL byte) [-Wfortify-source]
+ 5277 |                                         strcpy(buf,"in the Arena");
+      |                                         ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/secure/_string.h:84:3: note: expanded from macro 'strcpy'
+   84 |                 __builtin___strcpy_chk (dest, __VA_ARGS__, __darwin_obsz (dest))
+      |                 ^
+effects.c:5283:6: warning: 'strcpy' will always overflow; destination buffer has size 10, but the source string has length 15 (including NUL byte) [-Wfortify-source]
+ 5283 |                                         strcpy(buf,"on the surface");
+      |                                         ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/secure/_string.h:84:3: note: expanded from macro 'strcpy'
+   84 |                 __builtin___strcpy_chk (dest, __VA_ARGS__, __darwin_obsz (dest))
+      |                 ^
+effects.c:5290:6: warning: 'strcpy' will always overflow; destination buffer has size 10, but the source string has length 11 (including NUL byte) [-Wfortify-source]
+ 5290 |                                         strcpy(buf,"in a quest");
+      |                                         ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/secure/_string.h:84:3: note: expanded from macro 'strcpy'
+   84 |                 __builtin___strcpy_chk (dest, __VA_ARGS__, __darwin_obsz (dest))
+      |                 ^
+5 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o files.o files.c
+In file included from files.c:13:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from files.c:13:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+files.c:4334:17: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 4334 |                         fprintf(fff, p[i]);
+      |                                      ^~~~
+files.c:4334:17: note: treat the string as an argument to avoid this
+ 4334 |                         fprintf(fff, p[i]);
+      |                                      ^
+      |                                      "%s", 
+files.c:6539:20: warning: expression which evaluates to zero treated as a null pointer constant of type 'time_t *' (aka 'long *') [-Wnon-literal-null-conversion]
+ 6539 |                 time_t ct = time((time_t)0);
+      |                                  ^~~~~~~~~
+4 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o flavor.o flavor.c
+In file included from flavor.c:11:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from flavor.c:11:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o floors.o floors.c
+In file included from floors.c:13:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from floors.c:13:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o generate.o generate.c
+In file included from generate.c:101:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from generate.c:101:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+generate.c:1530:6: warning: variable 'num' set but not used [-Wunused-but-set-variable]
+ 1530 |         int num;
+      |             ^
+3 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o grid.o grid.c
+In file included from grid.c:14:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from grid.c:14:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o hissatsu.o hissatsu.c
+In file included from hissatsu.c:13:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from hissatsu.c:13:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o inet.o inet.c
+In file included from inet.c:3:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from inet.c:3:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o init1.o init1.c
+In file included from init1.c:13:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from init1.c:13:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o init2.o init2.c
+In file included from init2.c:13:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from init2.c:13:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+init2.c:2011:25: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+ 2011 |                 elements[i].pointer = (void*)i;
+      |                                       ^~~~~~~~
+init2.c:2028:19: warning: cast to smaller integer type 'int' from 'void *' [-Wvoid-pointer-to-int-cast]
+ 2028 |                 r_ptr = &r_info[(int)elements[i].pointer];
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~
+init2.c:2042:32: warning: cast to smaller integer type 'int' from 'void *' [-Wvoid-pointer-to-int-cast]
+ 2042 |                         alloc_race_table[i].index = (int)elements[i].pointer;
+      |                                                     ^~~~~~~~~~~~~~~~~~~~~~~~
+5 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o japanese.o japanese.c
+In file included from japanese.c:4:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from japanese.c:4:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o load.o load.c
+In file included from load.c:13:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from load.c:13:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o main-gcu.o main-gcu.c
+In file included from main-gcu.c:159:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from main-gcu.c:159:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o main.o main.c
+In file included from main.c:11:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from main.c:11:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o mane.o mane.c
+In file included from mane.c:13:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from mane.c:13:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o melee1.o melee1.c
+In file included from melee1.c:13:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from melee1.c:13:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o melee2.o melee2.c
+In file included from melee2.c:18:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from melee2.c:18:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o mind.o mind.c
+In file included from mind.c:13:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from mind.c:13:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o monster1.o monster1.c
+In file included from monster1.c:13:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from monster1.c:13:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o monster2.o monster2.c
+In file included from monster2.c:13:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from monster2.c:13:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o mspells1.o mspells1.c
+In file included from mspells1.c:13:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from mspells1.c:13:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o mspells2.o mspells2.c
+In file included from mspells2.c:13:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from mspells2.c:13:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o mspells3.o mspells3.c
+In file included from mspells3.c:13:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from mspells3.c:13:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o mutation.o mutation.c
+In file included from mutation.c:13:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from mutation.c:13:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o obj_kind.o obj_kind.c
+In file included from obj_kind.c:3:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from obj_kind.c:3:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o object1.o object1.c
+In file included from object1.c:13:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from object1.c:13:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o object2.o object2.c
+In file included from object2.c:13:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from object2.c:13:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o racial.o racial.c
+In file included from racial.c:13:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from racial.c:13:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o report.o report.c
+In file included from report.c:4:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from report.c:4:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o rooms.o rooms.c
+In file included from rooms.c:14:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from rooms.c:14:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o save.o save.c
+In file included from save.c:13:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from save.c:13:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o scores.o scores.c
+In file included from scores.c:13:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from scores.c:13:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o spells1.o spells1.c
+In file included from spells1.c:13:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from spells1.c:13:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o spells2.o spells2.c
+In file included from spells2.c:13:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from spells2.c:13:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o spells3.o spells3.c
+In file included from spells3.c:13:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from spells3.c:13:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o store.o store.c
+In file included from store.c:13:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from store.c:13:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o streams.o streams.c
+In file included from streams.c:16:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from streams.c:16:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o tables.o tables.c
+In file included from tables.c:13:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from tables.c:13:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o util.o util.c
+In file included from util.c:13:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from util.c:13:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+util.c:2454:7: warning: address of array 'buf' will always evaluate to 'true' [-Wpointer-bool-conversion]
+ 2454 |                 if (buf && streq(buf, str) && (j < 1000))
+      |                     ^~~ ~~
+3 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o variable.o variable.c
+In file included from variable.c:13:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from variable.c:13:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o wild.o wild.c
+In file included from wild.c:14:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from wild.c:14:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o wizard1.o wizard1.c
+In file included from wizard1.c:13:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from wizard1.c:13:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o wizard2.o wizard2.c
+In file included from wizard2.c:13:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from wizard2.c:13:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o xtra1.o xtra1.c
+In file included from xtra1.c:14:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from xtra1.c:14:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o xtra2.o xtra2.c
+In file included from xtra2.c:13:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from xtra2.c:13:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o z-form.o z-form.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o z-rand.o z-rand.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o z-term.o z-term.c
+In file included from z-term.c:12:
+In file included from ./angband.h:38:
+./z-config.h:211:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  211 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from z-term.c:12:
+In file included from ./angband.h:38:
+./z-config.h:354:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  354 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o z-util.o z-util.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o z-virt.o z-virt.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -o entroband artifact.o autopick.o avatar.o birth.o bldg.o cave.o chuukei.o cmd1.o cmd2.o cmd3.o cmd4.o cmd5.o cmd6.o do-spell.o dungeon.o effects.o files.o flavor.o floors.o generate.o grid.o hissatsu.o inet.o init1.o init2.o japanese.o load.o main-gcu.o main.o mane.o melee1.o melee2.o mind.o monster1.o monster2.o mspells1.o mspells2.o mspells3.o mutation.o obj_kind.o object1.o object2.o racial.o report.o rooms.o save.o scores.o spells1.o spells2.o spells3.o store.o streams.o tables.o util.o variable.o wild.o wizard1.o wizard2.o xtra1.o xtra2.o z-form.o z-rand.o z-term.o z-util.o z-virt.o -lncurses
+Installing terminal version...
+Terminal version installed as ../entroband-terminal
+Run with: ./entroband-terminal

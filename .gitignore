@@ -4,11 +4,64 @@
 # Compiled objects
 *.o
 
-# Compiled binaries (preserved variants may build these)
-preserved/Oangband/oangband
+# Compiled binaries - variant executables built from source
+preserved/Angband64/src/angband64
+preserved/Angband65/src/angband65
+preserved/Animeband/src/animeband
+preserved/Chengband/src/chengband
+preserved/ChocolateAngband/src/chocolateangband
+preserved/Conglomoband/src/conglomoband
+preserved/Craftband/src/craftband
+preserved/D11Angband/SRC/d11angband
+preserved/DaJAngband/src/dajangband
+preserved/Diabloband/src/diabloband
+preserved/Discband/src/discband
+preserved/Easyband/SRC/easyband
+preserved/Entroband/src/entroband
+preserved/EricAngband/src/ericangband
+preserved/EyAngband/src/eyangband
+preserved/Frazband/src/frazband
+preserved/Friendband/src/friendband
+preserved/GilAngband/src/gilangband
+preserved/Goingband/src/goingband
+preserved/GSNband/SRC/gsnband
+preserved/Ingband/src/ingband
+preserved/IsoAngband/src/isoangband
+preserved/Jackband/src/jackband
+preserved/Kamband/src/kamband
+preserved/Kangband/src/kangband
+preserved/MJBand/src/mjband
+preserved/Minimal/src/minimal
+preserved/Multiband/src/multiband
+preserved/Neoband/src/neoband
+preserved/NuAngband/Source/nuangband
+preserved/Oangband/src/oangband
+preserved/PernAngband/src/pernangband
+preserved/PsiAngband/src/psiangband
+preserved/PziAngband/SRC/pziangband
+preserved/Questband/src/questband
+preserved/RandomBand/src/randomband
+preserved/RePosband/src/reposband
+preserved/RobertAngband/src/robertangband
+preserved/Sil/src/sil
+preserved/TeamAngband/src/teamangband
+preserved/TFork/src/tfork
+preserved/TOband/src/toband
+preserved/Weird/src/weird
+preserved/XAngband/src/xangband
+preserved/XBand/src/xband
+preserved/Xygos/src/xygos
+preserved/eband/src/eband
 preserved/ComPosband/composband
-preserved/ComPosband/composband-terminal
-preserved/XAngband/xangband
+preserved/Oangband/oangband
+
+# Terminal launcher scripts
+preserved/*-terminal
+preserved/*/*-terminal
+
+# Temporary/corrupt files
+preserved/*/src/.!*
+preserved/*/SRC/.!*
 
 # Debug symbols
 *.dSYM/

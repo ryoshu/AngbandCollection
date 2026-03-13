@@ -284,7 +284,7 @@ void print_desc(cptr txt)
         }
 }
 
-int dump_realms(int sel, s32b *restrict)
+int dump_realms(int sel, s32b *class_restrict)
 {
         int n = 0, m;
 	char buf[80];
@@ -300,7 +300,7 @@ int dump_realms(int sel, s32b *restrict)
                 /* Analyze */
                 str = realm_names[m][0];
 
-                if (!(restrict[(m - 1) / 32] & BIT(m - 1))) continue;
+                if (!(class_restrict[(m - 1) / 32] & BIT(m - 1))) continue;
 
                 if (sel == n)
                 {
@@ -1888,7 +1888,7 @@ static void gen_random_quests(int n)
 	}
 }
 
-int dump_classes(s16b *classes, int sel, s32b *restrict)
+int dump_classes(s16b *classes, int sel, s32b *class_restrict)
 {
         int n = 0;
 	char buf[80];
@@ -1913,7 +1913,7 @@ int dump_classes(s16b *classes, int sel, s32b *restrict)
                         p2 = ']';
                 }
 
-                if (!(restrict[classes[n] / 32] & (1L << classes[n] )))
+                if (!(class_restrict[classes[n] / 32] & (1L << classes[n] )))
                         sprintf(buf, "%c%c%c (%s)%s", p1, (n <= 25)?I2A(n):I2D(n-26), p2, str, mod);
                 else
                         /* Display */
@@ -2088,7 +2088,7 @@ static bool player_birth_aux_ask()
 
         int racem[100], max_racem = 0;
 
-        u32b restrict[2];
+        u32b class_restrict[2];
 
 	cptr str;
 
@@ -2443,7 +2443,7 @@ repeat_player_class:
         int z;
 
         for (z = 0; z < 2; z++)
-                restrict[z] = rp_ptr->choice[z] + rmp_ptr->pclass[z] - rmp_ptr->mclass[z];
+                class_restrict[z] = rp_ptr->choice[z] + rmp_ptr->pclass[z] - rmp_ptr->mclass[z];
 
 	/* Extra info */
         Term_putstr(5, 13, -1, TERM_WHITE,
@@ -2480,7 +2480,7 @@ repeat_player_class:
 
 	/* Dump classes */
         sel = 0;
-        n = dump_classes(class_types, sel, restrict);
+        n = dump_classes(class_types, sel, class_restrict);
 
 	/* Get a class */
 	while (1)
@@ -2508,13 +2508,13 @@ repeat_player_class:
                 {
                         sel++;
                         if (sel >= n) sel = 0;
-                        dump_classes(class_types, sel, restrict);
+                        dump_classes(class_types, sel, class_restrict);
                 }
                 else if (c == '8')
                 {
                         sel--;
                         if (sel < 0) sel = n - 1;
-                        dump_classes(class_types, sel, restrict);
+                        dump_classes(class_types, sel, class_restrict);
                 }
                 else if (c == '4')
                 {
@@ -2531,7 +2531,7 @@ repeat_player_class:
 
 	/* Set class */
 #ifdef FORBID_BAD_COMBINAISON
-        if (!(restrict & (1L << k )))
+        if (!(class_restrict & (1L << k )))
         {
                 noscore |= 0x0020;
                 message_add(MESSAGE_MSG, " ", TERM_VIOLET);

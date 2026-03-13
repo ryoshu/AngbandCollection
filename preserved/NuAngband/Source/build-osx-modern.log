@@ -1,0 +1,3333 @@
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o birth.o birth.c
+In file included from birth.c:11:
+In file included from ./angband.h:31:
+./config.h:412:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  412 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+In file included from birth.c:11:
+In file included from ./angband.h:31:
+./config.h:433:8: warning: '/*' within block comment [-Wcomment]
+  433 | #endif /* SET_UID */
+      |        ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o cave.o cave.c
+In file included from cave.c:11:
+In file included from ./angband.h:31:
+./config.h:412:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  412 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+In file included from cave.c:11:
+In file included from ./angband.h:31:
+./config.h:433:8: warning: '/*' within block comment [-Wcomment]
+  433 | #endif /* SET_UID */
+      |        ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o cmd1.o cmd1.c
+In file included from cmd1.c:11:
+In file included from ./angband.h:31:
+./config.h:412:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  412 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+In file included from cmd1.c:11:
+In file included from ./angband.h:31:
+./config.h:433:8: warning: '/*' within block comment [-Wcomment]
+  433 | #endif /* SET_UID */
+      |        ^
+cmd1.c:1136:24: warning: incompatible pointer types passing 'int *' to parameter of type 'u32b *' (aka 'unsigned long *') [-Wincompatible-pointer-types]
+ 1136 |                 object_flags(w_ptr1, &w1f1, &w1f2, &w1f3, &w1f4);
+      |                                      ^~~~~
+./externs.h:445:58: note: passing argument to parameter 'f1' here
+  445 | extern void object_flags(const object_type *o_ptr, u32b *f1, u32b *f2, u32b *f3, u32b *f4);
+      |                                                          ^
+cmd1.c:1136:31: warning: incompatible pointer types passing 'int *' to parameter of type 'u32b *' (aka 'unsigned long *') [-Wincompatible-pointer-types]
+ 1136 |                 object_flags(w_ptr1, &w1f1, &w1f2, &w1f3, &w1f4);
+      |                                             ^~~~~
+./externs.h:445:68: note: passing argument to parameter 'f2' here
+  445 | extern void object_flags(const object_type *o_ptr, u32b *f1, u32b *f2, u32b *f3, u32b *f4);
+      |                                                                    ^
+cmd1.c:1136:38: warning: incompatible pointer types passing 'int *' to parameter of type 'u32b *' (aka 'unsigned long *') [-Wincompatible-pointer-types]
+ 1136 |                 object_flags(w_ptr1, &w1f1, &w1f2, &w1f3, &w1f4);
+      |                                                    ^~~~~
+./externs.h:445:78: note: passing argument to parameter 'f3' here
+  445 | extern void object_flags(const object_type *o_ptr, u32b *f1, u32b *f2, u32b *f3, u32b *f4);
+      |                                                                              ^
+cmd1.c:1136:45: warning: incompatible pointer types passing 'int *' to parameter of type 'u32b *' (aka 'unsigned long *') [-Wincompatible-pointer-types]
+ 1136 |                 object_flags(w_ptr1, &w1f1, &w1f2, &w1f3, &w1f4);
+      |                                                           ^~~~~
+./externs.h:445:88: note: passing argument to parameter 'f4' here
+  445 | extern void object_flags(const object_type *o_ptr, u32b *f1, u32b *f2, u32b *f3, u32b *f4);
+      |                                                                                        ^
+cmd1.c:1137:24: warning: incompatible pointer types passing 'int *' to parameter of type 'u32b *' (aka 'unsigned long *') [-Wincompatible-pointer-types]
+ 1137 |                 object_flags(w_ptr1, &w2f1, &w2f2, &w2f3, &w2f4);
+      |                                      ^~~~~
+./externs.h:445:58: note: passing argument to parameter 'f1' here
+  445 | extern void object_flags(const object_type *o_ptr, u32b *f1, u32b *f2, u32b *f3, u32b *f4);
+      |                                                          ^
+cmd1.c:1137:31: warning: incompatible pointer types passing 'int *' to parameter of type 'u32b *' (aka 'unsigned long *') [-Wincompatible-pointer-types]
+ 1137 |                 object_flags(w_ptr1, &w2f1, &w2f2, &w2f3, &w2f4);
+      |                                             ^~~~~
+./externs.h:445:68: note: passing argument to parameter 'f2' here
+  445 | extern void object_flags(const object_type *o_ptr, u32b *f1, u32b *f2, u32b *f3, u32b *f4);
+      |                                                                    ^
+cmd1.c:1137:38: warning: incompatible pointer types passing 'int *' to parameter of type 'u32b *' (aka 'unsigned long *') [-Wincompatible-pointer-types]
+ 1137 |                 object_flags(w_ptr1, &w2f1, &w2f2, &w2f3, &w2f4);
+      |                                                    ^~~~~
+./externs.h:445:78: note: passing argument to parameter 'f3' here
+  445 | extern void object_flags(const object_type *o_ptr, u32b *f1, u32b *f2, u32b *f3, u32b *f4);
+      |                                                                              ^
+cmd1.c:1137:45: warning: incompatible pointer types passing 'int *' to parameter of type 'u32b *' (aka 'unsigned long *') [-Wincompatible-pointer-types]
+ 1137 |                 object_flags(w_ptr1, &w2f1, &w2f2, &w2f3, &w2f4);
+      |                                                           ^~~~~
+./externs.h:445:88: note: passing argument to parameter 'f4' here
+  445 | extern void object_flags(const object_type *o_ptr, u32b *f1, u32b *f2, u32b *f3, u32b *f4);
+      |                                                                                        ^
+10 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o cmd2.o cmd2.c
+In file included from cmd2.c:11:
+In file included from ./angband.h:31:
+./config.h:412:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  412 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+In file included from cmd2.c:11:
+In file included from ./angband.h:31:
+./config.h:433:8: warning: '/*' within block comment [-Wcomment]
+  433 | #endif /* SET_UID */
+      |        ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o cmd3.o cmd3.c
+In file included from cmd3.c:11:
+In file included from ./angband.h:31:
+./config.h:412:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  412 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+In file included from cmd3.c:11:
+In file included from ./angband.h:31:
+./config.h:433:8: warning: '/*' within block comment [-Wcomment]
+  433 | #endif /* SET_UID */
+      |        ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o cmd4.o cmd4.c
+In file included from cmd4.c:11:
+In file included from ./angband.h:31:
+./config.h:412:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  412 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+In file included from cmd4.c:11:
+In file included from ./angband.h:31:
+./config.h:433:8: warning: '/*' within block comment [-Wcomment]
+  433 | #endif /* SET_UID */
+      |        ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o cmd5.o cmd5.c
+In file included from cmd5.c:11:
+In file included from ./angband.h:31:
+./config.h:412:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  412 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+In file included from cmd5.c:11:
+In file included from ./angband.h:31:
+./config.h:433:8: warning: '/*' within block comment [-Wcomment]
+  433 | #endif /* SET_UID */
+      |        ^
+cmd5.c:1264:4: warning: '/*' within block comment [-Wcomment]
+ 1264 |                         /* Get the spell * /
+      |                         ^
+cmd5.c:1267:4: warning: '/*' within block comment [-Wcomment]
+ 1267 |                         /* Prompt * /
+      |                         ^
+cmd5.c:1272:4: warning: '/*' within block comment [-Wcomment]
+ 1272 |                         /* Belay that order * /
+      |                         ^
+cmd5.c:1276:3: warning: '/*' within block comment [-Wcomment]
+ 1276 |                 /* Stop the loop */
+      |                 ^
+cmd5.c:1132:7: warning: variable 'verify' set but not used [-Wunused-but-set-variable]
+ 1132 |         bool verify;
+      |              ^
+cmd5.c:1310:8: warning: assigning to 'magic_type *' (aka 'struct magic_type *') from 'const magic_type *' (aka 'const struct magic_type *') discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+ 1310 |         s_ptr = &high_info[spell];
+      |               ^ ~~~~~~~~~~~~~~~~~
+cmd5.c:1444:14: warning: result of comparison against a string literal is unspecified (use an explicit string comparison function instead) [-Wstring-compare]
+ 1444 |                 if ((index == " ") || (index == "*") || (index == "?"))
+      |                            ^  ~~~
+cmd5.c:1444:32: warning: result of comparison against a string literal is unspecified (use an explicit string comparison function instead) [-Wstring-compare]
+ 1444 |                 if ((index == " ") || (index == "*") || (index == "?"))
+      |                                              ^  ~~~
+cmd5.c:1444:50: warning: result of comparison against a string literal is unspecified (use an explicit string comparison function instead) [-Wstring-compare]
+ 1444 |                 if ((index == " ") || (index == "*") || (index == "?"))
+      |                                                                ^  ~~~
+cmd5.c:1467:9: warning: incompatible pointer to integer conversion assigning to 'int' from 'char *' [-Wint-conversion]
+ 1467 |                 realm = A2I(index)-1;
+      |                       ^ ~~~~~~~~~~~~
+cmd5.c:1441:69: warning: variable 'index' is uninitialized when used here [-Wuninitialized]
+ 1441 |         while(!done && get_com("which realm? hit space, *, or ? for list", index))
+      |                                                                            ^~~~~
+cmd5.c:1420:13: note: initialize the variable 'index' to silence this warning
+ 1420 |         char *index;
+      |                    ^
+      |                     = NULL
+13 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o cmd6.o cmd6.c
+In file included from cmd6.c:11:
+In file included from ./angband.h:31:
+./config.h:412:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  412 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+In file included from cmd6.c:11:
+In file included from ./angband.h:31:
+./config.h:433:8: warning: '/*' within block comment [-Wcomment]
+  433 | #endif /* SET_UID */
+      |        ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o dungeon.o dungeon.c
+In file included from dungeon.c:11:
+In file included from ./angband.h:31:
+./config.h:412:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  412 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+In file included from dungeon.c:11:
+In file included from ./angband.h:31:
+./config.h:433:8: warning: '/*' within block comment [-Wcomment]
+  433 | #endif /* SET_UID */
+      |        ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o files.o files.c
+In file included from files.c:11:
+In file included from ./angband.h:31:
+./config.h:412:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  412 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+In file included from files.c:11:
+In file included from ./angband.h:31:
+./config.h:433:8: warning: '/*' within block comment [-Wcomment]
+  433 | #endif /* SET_UID */
+      |        ^
+files.c:2267:13: warning: unused function 'string_lower' [-Wunused-function]
+ 2267 | static void string_lower(char *buf)
+      |             ^~~~~~~~~~~~
+3 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o generate.o generate.c
+In file included from generate.c:11:
+In file included from ./angband.h:31:
+./config.h:412:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  412 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+In file included from generate.c:11:
+In file included from ./angband.h:31:
+./config.h:433:8: warning: '/*' within block comment [-Wcomment]
+  433 | #endif /* SET_UID */
+      |        ^
+generate.c:1541:6: warning: logical not is only applied to the left hand side of this bitwise operator [-Wlogical-not-parentheses]
+ 1541 |         if (!r_ptr->flags3 & RF3_ORC) return (FALSE);
+      |             ^              ~
+generate.c:1541:6: note: add parentheses after the '!' to evaluate the bitwise operator first
+ 1541 |         if (!r_ptr->flags3 & RF3_ORC) return (FALSE);
+      |             ^                       
+      |              (                      )
+generate.c:1541:6: note: add parentheses around left hand side expression to silence this warning
+ 1541 |         if (!r_ptr->flags3 & RF3_ORC) return (FALSE);
+      |             ^
+      |             (             )
+generate.c:1559:6: warning: logical not is only applied to the left hand side of this bitwise operator [-Wlogical-not-parentheses]
+ 1559 |         if (!r_ptr->flags3 & RF3_TROLL) return (FALSE);
+      |             ^              ~
+generate.c:1559:6: note: add parentheses after the '!' to evaluate the bitwise operator first
+ 1559 |         if (!r_ptr->flags3 & RF3_TROLL) return (FALSE);
+      |             ^                         
+      |              (                        )
+generate.c:1559:6: note: add parentheses around left hand side expression to silence this warning
+ 1559 |         if (!r_ptr->flags3 & RF3_TROLL) return (FALSE);
+      |             ^
+      |             (             )
+generate.c:1577:6: warning: logical not is only applied to the left hand side of this bitwise operator [-Wlogical-not-parentheses]
+ 1577 |         if (!r_ptr->flags3 & RF3_GIANT) return (FALSE);
+      |             ^              ~
+generate.c:1577:6: note: add parentheses after the '!' to evaluate the bitwise operator first
+ 1577 |         if (!r_ptr->flags3 & RF3_GIANT) return (FALSE);
+      |             ^                         
+      |              (                        )
+generate.c:1577:6: note: add parentheses around left hand side expression to silence this warning
+ 1577 |         if (!r_ptr->flags3 & RF3_GIANT) return (FALSE);
+      |             ^
+      |             (             )
+generate.c:1601:6: warning: logical not is only applied to the left hand side of this bitwise operator [-Wlogical-not-parentheses]
+ 1601 |         if (!r_ptr->flags3 & RF3_DRAGON) return (FALSE);
+      |             ^              ~
+generate.c:1601:6: note: add parentheses after the '!' to evaluate the bitwise operator first
+ 1601 |         if (!r_ptr->flags3 & RF3_DRAGON) return (FALSE);
+      |             ^                          
+      |              (                         )
+generate.c:1601:6: note: add parentheses around left hand side expression to silence this warning
+ 1601 |         if (!r_ptr->flags3 & RF3_DRAGON) return (FALSE);
+      |             ^
+      |             (             )
+generate.c:1622:6: warning: logical not is only applied to the left hand side of this bitwise operator [-Wlogical-not-parentheses]
+ 1622 |         if (!r_ptr->flags3 & RF3_DEMON) return (FALSE);
+      |             ^              ~
+generate.c:1622:6: note: add parentheses after the '!' to evaluate the bitwise operator first
+ 1622 |         if (!r_ptr->flags3 & RF3_DEMON) return (FALSE);
+      |             ^                         
+      |              (                        )
+generate.c:1622:6: note: add parentheses around left hand side expression to silence this warning
+ 1622 |         if (!r_ptr->flags3 & RF3_DEMON) return (FALSE);
+      |             ^
+      |             (             )
+7 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o h-spell.o h-spell.c
+In file included from h-spell.c:11:
+In file included from ./angband.h:31:
+./config.h:412:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  412 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+In file included from h-spell.c:11:
+In file included from ./angband.h:31:
+./config.h:433:8: warning: '/*' within block comment [-Wcomment]
+  433 | #endif /* SET_UID */
+      |        ^
+h-spell.c:101:2: warning: shift count is negative [-Wshift-count-negative]
+  101 |         BOOK(HIGH_FIRE_BOLT,
+      |         ^~~~~~~~~~~~~~~~~~~~
+  102 |                  HIGH_FIRE_BALL,
+      |                  ~~~~~~~~~~~~~~~
+  103 |                  HIGH_FIRE_SWARM,
+      |                  ~~~~~~~~~~~~~~~~
+  104 |                  HIGH_COLD_BOLT,
+      |                  ~~~~~~~~~~~~~~~
+  105 |                  HIGH_COLD_BALL,
+      |                  ~~~~~~~~~~~~~~~
+  106 |                  HIGH_COLD_SWARM,
+      |                  ~~~~~~~~~~~~~~~~
+  107 |                  HIGH_PLASMA_FLOOD,
+      |                  ~~~~~~~~~~~~~~~~~~
+  108 |                  HIGH_ICE_BEAM,
+      |                  ~~~~~~~~~~~~~~
+  109 |                  -1),
+      |                  ~~~
+h-spell.c:82:36: note: expanded from macro 'BOOK'
+   82 |          BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+      |                                           ^~~~~~~~
+h-spell.c:76:50: note: expanded from macro 'BOOK1'
+   76 | #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+      |                                                  ^  ~~~
+h-spell.c:101:2: warning: shift count is negative [-Wshift-count-negative]
+  101 |         BOOK(HIGH_FIRE_BOLT,
+      |         ^~~~~~~~~~~~~~~~~~~~
+  102 |                  HIGH_FIRE_BALL,
+      |                  ~~~~~~~~~~~~~~~
+  103 |                  HIGH_FIRE_SWARM,
+      |                  ~~~~~~~~~~~~~~~~
+  104 |                  HIGH_COLD_BOLT,
+      |                  ~~~~~~~~~~~~~~~
+  105 |                  HIGH_COLD_BALL,
+      |                  ~~~~~~~~~~~~~~~
+  106 |                  HIGH_COLD_SWARM,
+      |                  ~~~~~~~~~~~~~~~~
+  107 |                  HIGH_PLASMA_FLOOD,
+      |                  ~~~~~~~~~~~~~~~~~~
+  108 |                  HIGH_ICE_BEAM,
+      |                  ~~~~~~~~~~~~~~
+  109 |                  -1),
+      |                  ~~~
+h-spell.c:84:36: note: expanded from macro 'BOOK'
+   84 |          BOOK2(f) | BOOK2(g) | BOOK2(h) | BOOK2(i)) \
+      |                                           ^~~~~~~~
+h-spell.c:77:54: note: expanded from macro 'BOOK2'
+   77 | #define BOOK2(x) (((x) < 0) ? 0 : (x) < 32 ? 0 : (1L << ((x) % 32)))
+      |                                                      ^  ~~~~~~~~~~
+h-spell.c:112:2: warning: shift count is negative [-Wshift-count-negative]
+  112 |         BOOK(HIGH_ACID_BOLT,
+      |         ^~~~~~~~~~~~~~~~~~~~
+  113 |                  HIGH_ACID_BEAM,
+      |                  ~~~~~~~~~~~~~~~
+  114 |                  HIGH_ACID_BALL,
+      |                  ~~~~~~~~~~~~~~~
+  115 |                  HIGH_ACID_FLOOD,
+      |                  ~~~~~~~~~~~~~~~~
+  116 |                  HIGH_STONE_MUD,
+      |                  ~~~~~~~~~~~~~~~
+  117 |                  HIGH_SLOW_BOLT,
+      |                  ~~~~~~~~~~~~~~~
+  118 |                  HIGH_SLOW_BALL,
+      |                  ~~~~~~~~~~~~~~~
+  119 |                  -1,
+      |                  ~~~
+  120 |                  -1),
+      |                  ~~~
+h-spell.c:82:25: note: expanded from macro 'BOOK'
+   82 |          BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+      |                                ^~~~~~~~
+h-spell.c:76:50: note: expanded from macro 'BOOK1'
+   76 | #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+      |                                                  ^  ~~~
+h-spell.c:112:2: warning: shift count is negative [-Wshift-count-negative]
+  112 |         BOOK(HIGH_ACID_BOLT,
+      |         ^~~~~~~~~~~~~~~~~~~~
+  113 |                  HIGH_ACID_BEAM,
+      |                  ~~~~~~~~~~~~~~~
+  114 |                  HIGH_ACID_BALL,
+      |                  ~~~~~~~~~~~~~~~
+  115 |                  HIGH_ACID_FLOOD,
+      |                  ~~~~~~~~~~~~~~~~
+  116 |                  HIGH_STONE_MUD,
+      |                  ~~~~~~~~~~~~~~~
+  117 |                  HIGH_SLOW_BOLT,
+      |                  ~~~~~~~~~~~~~~~
+  118 |                  HIGH_SLOW_BALL,
+      |                  ~~~~~~~~~~~~~~~
+  119 |                  -1,
+      |                  ~~~
+  120 |                  -1),
+      |                  ~~~
+h-spell.c:82:36: note: expanded from macro 'BOOK'
+   82 |          BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+      |                                           ^~~~~~~~
+h-spell.c:76:50: note: expanded from macro 'BOOK1'
+   76 | #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+      |                                                  ^  ~~~
+h-spell.c:112:2: warning: shift count is negative [-Wshift-count-negative]
+  112 |         BOOK(HIGH_ACID_BOLT,
+      |         ^~~~~~~~~~~~~~~~~~~~
+  113 |                  HIGH_ACID_BEAM,
+      |                  ~~~~~~~~~~~~~~~
+  114 |                  HIGH_ACID_BALL,
+      |                  ~~~~~~~~~~~~~~~
+  115 |                  HIGH_ACID_FLOOD,
+      |                  ~~~~~~~~~~~~~~~~
+  116 |                  HIGH_STONE_MUD,
+      |                  ~~~~~~~~~~~~~~~
+  117 |                  HIGH_SLOW_BOLT,
+      |                  ~~~~~~~~~~~~~~~
+  118 |                  HIGH_SLOW_BALL,
+      |                  ~~~~~~~~~~~~~~~
+  119 |                  -1,
+      |                  ~~~
+  120 |                  -1),
+      |                  ~~~
+h-spell.c:84:25: note: expanded from macro 'BOOK'
+   84 |          BOOK2(f) | BOOK2(g) | BOOK2(h) | BOOK2(i)) \
+      |                                ^~~~~~~~
+h-spell.c:77:54: note: expanded from macro 'BOOK2'
+   77 | #define BOOK2(x) (((x) < 0) ? 0 : (x) < 32 ? 0 : (1L << ((x) % 32)))
+      |                                                      ^  ~~~~~~~~~~
+h-spell.c:112:2: warning: shift count is negative [-Wshift-count-negative]
+  112 |         BOOK(HIGH_ACID_BOLT,
+      |         ^~~~~~~~~~~~~~~~~~~~
+  113 |                  HIGH_ACID_BEAM,
+      |                  ~~~~~~~~~~~~~~~
+  114 |                  HIGH_ACID_BALL,
+      |                  ~~~~~~~~~~~~~~~
+  115 |                  HIGH_ACID_FLOOD,
+      |                  ~~~~~~~~~~~~~~~~
+  116 |                  HIGH_STONE_MUD,
+      |                  ~~~~~~~~~~~~~~~
+  117 |                  HIGH_SLOW_BOLT,
+      |                  ~~~~~~~~~~~~~~~
+  118 |                  HIGH_SLOW_BALL,
+      |                  ~~~~~~~~~~~~~~~
+  119 |                  -1,
+      |                  ~~~
+  120 |                  -1),
+      |                  ~~~
+h-spell.c:84:36: note: expanded from macro 'BOOK'
+   84 |          BOOK2(f) | BOOK2(g) | BOOK2(h) | BOOK2(i)) \
+      |                                           ^~~~~~~~
+h-spell.c:77:54: note: expanded from macro 'BOOK2'
+   77 | #define BOOK2(x) (((x) < 0) ? 0 : (x) < 32 ? 0 : (1L << ((x) % 32)))
+      |                                                      ^  ~~~~~~~~~~
+h-spell.c:123:2: warning: shift count is negative [-Wshift-count-negative]
+  123 |         BOOK(HIGH_MAP_AREA,
+      |         ^~~~~~~~~~~~~~~~~~~
+  124 |                  HIGH_MAP_ALL,
+      |                  ~~~~~~~~~~~~~
+  125 |                  HIGH_DET_FEAT,
+      |                  ~~~~~~~~~~~~~~
+  126 |                  HIGH_SHARD_BOLT,
+      |                  ~~~~~~~~~~~~~~~~
+  127 |                  HIGH_SHARD_BALL,
+      |                  ~~~~~~~~~~~~~~~~
+  128 |                  HIGH_FORCE_BOLT,
+      |                  ~~~~~~~~~~~~~~~~
+  129 |                  HIGH_FORCE_SWARM,
+      |                  ~~~~~~~~~~~~~~~~~
+  130 |                  -1,
+      |                  ~~~
+  131 |                  -1),
+      |                  ~~~
+h-spell.c:82:25: note: expanded from macro 'BOOK'
+   82 |          BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+      |                                ^~~~~~~~
+h-spell.c:76:50: note: expanded from macro 'BOOK1'
+   76 | #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+      |                                                  ^  ~~~
+h-spell.c:123:2: warning: shift count is negative [-Wshift-count-negative]
+  123 |         BOOK(HIGH_MAP_AREA,
+      |         ^~~~~~~~~~~~~~~~~~~
+  124 |                  HIGH_MAP_ALL,
+      |                  ~~~~~~~~~~~~~
+  125 |                  HIGH_DET_FEAT,
+      |                  ~~~~~~~~~~~~~~
+  126 |                  HIGH_SHARD_BOLT,
+      |                  ~~~~~~~~~~~~~~~~
+  127 |                  HIGH_SHARD_BALL,
+      |                  ~~~~~~~~~~~~~~~~
+  128 |                  HIGH_FORCE_BOLT,
+      |                  ~~~~~~~~~~~~~~~~
+  129 |                  HIGH_FORCE_SWARM,
+      |                  ~~~~~~~~~~~~~~~~~
+  130 |                  -1,
+      |                  ~~~
+  131 |                  -1),
+      |                  ~~~
+h-spell.c:82:36: note: expanded from macro 'BOOK'
+   82 |          BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+      |                                           ^~~~~~~~
+h-spell.c:76:50: note: expanded from macro 'BOOK1'
+   76 | #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+      |                                                  ^  ~~~
+h-spell.c:123:2: warning: shift count is negative [-Wshift-count-negative]
+  123 |         BOOK(HIGH_MAP_AREA,
+      |         ^~~~~~~~~~~~~~~~~~~
+  124 |                  HIGH_MAP_ALL,
+      |                  ~~~~~~~~~~~~~
+  125 |                  HIGH_DET_FEAT,
+      |                  ~~~~~~~~~~~~~~
+  126 |                  HIGH_SHARD_BOLT,
+      |                  ~~~~~~~~~~~~~~~~
+  127 |                  HIGH_SHARD_BALL,
+      |                  ~~~~~~~~~~~~~~~~
+  128 |                  HIGH_FORCE_BOLT,
+      |                  ~~~~~~~~~~~~~~~~
+  129 |                  HIGH_FORCE_SWARM,
+      |                  ~~~~~~~~~~~~~~~~~
+  130 |                  -1,
+      |                  ~~~
+  131 |                  -1),
+      |                  ~~~
+h-spell.c:84:25: note: expanded from macro 'BOOK'
+   84 |          BOOK2(f) | BOOK2(g) | BOOK2(h) | BOOK2(i)) \
+      |                                ^~~~~~~~
+h-spell.c:77:54: note: expanded from macro 'BOOK2'
+   77 | #define BOOK2(x) (((x) < 0) ? 0 : (x) < 32 ? 0 : (1L << ((x) % 32)))
+      |                                                      ^  ~~~~~~~~~~
+h-spell.c:123:2: warning: shift count is negative [-Wshift-count-negative]
+  123 |         BOOK(HIGH_MAP_AREA,
+      |         ^~~~~~~~~~~~~~~~~~~
+  124 |                  HIGH_MAP_ALL,
+      |                  ~~~~~~~~~~~~~
+  125 |                  HIGH_DET_FEAT,
+      |                  ~~~~~~~~~~~~~~
+  126 |                  HIGH_SHARD_BOLT,
+      |                  ~~~~~~~~~~~~~~~~
+  127 |                  HIGH_SHARD_BALL,
+      |                  ~~~~~~~~~~~~~~~~
+  128 |                  HIGH_FORCE_BOLT,
+      |                  ~~~~~~~~~~~~~~~~
+  129 |                  HIGH_FORCE_SWARM,
+      |                  ~~~~~~~~~~~~~~~~~
+  130 |                  -1,
+      |                  ~~~
+  131 |                  -1),
+      |                  ~~~
+h-spell.c:84:36: note: expanded from macro 'BOOK'
+   84 |          BOOK2(f) | BOOK2(g) | BOOK2(h) | BOOK2(i)) \
+      |                                           ^~~~~~~~
+h-spell.c:77:54: note: expanded from macro 'BOOK2'
+   77 | #define BOOK2(x) (((x) < 0) ? 0 : (x) < 32 ? 0 : (1L << ((x) % 32)))
+      |                                                      ^  ~~~~~~~~~~
+h-spell.c:134:2: warning: shift count is negative [-Wshift-count-negative]
+  134 |         BOOK(HIGH_HEAL,
+      |         ^~~~~~~~~~~~~~~
+  135 |                  HIGH_CURE,
+      |                  ~~~~~~~~~~
+  136 |                  HIGH_RESTORE,
+      |                  ~~~~~~~~~~~~~
+  137 |                  HIGH_FOOD,
+      |                  ~~~~~~~~~~
+  138 |                  HIGH_POIS_BOLT,
+      |                  ~~~~~~~~~~~~~~~
+  139 |                  HIGH_POIS_BALL,
+      |                  ~~~~~~~~~~~~~~~
+  140 |                  HIGH_SPEED,
+      |                  ~~~~~~~~~~~
+  141 |                  HIGH_HEROISM,
+      |                  ~~~~~~~~~~~~~
+  142 |                  -1),
+      |                  ~~~
+h-spell.c:82:36: note: expanded from macro 'BOOK'
+   82 |          BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+      |                                           ^~~~~~~~
+h-spell.c:76:50: note: expanded from macro 'BOOK1'
+   76 | #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+      |                                                  ^  ~~~
+h-spell.c:134:2: warning: shift count is negative [-Wshift-count-negative]
+  134 |         BOOK(HIGH_HEAL,
+      |         ^~~~~~~~~~~~~~~
+  135 |                  HIGH_CURE,
+      |                  ~~~~~~~~~~
+  136 |                  HIGH_RESTORE,
+      |                  ~~~~~~~~~~~~~
+  137 |                  HIGH_FOOD,
+      |                  ~~~~~~~~~~
+  138 |                  HIGH_POIS_BOLT,
+      |                  ~~~~~~~~~~~~~~~
+  139 |                  HIGH_POIS_BALL,
+      |                  ~~~~~~~~~~~~~~~
+  140 |                  HIGH_SPEED,
+      |                  ~~~~~~~~~~~
+  141 |                  HIGH_HEROISM,
+      |                  ~~~~~~~~~~~~~
+  142 |                  -1),
+      |                  ~~~
+h-spell.c:84:36: note: expanded from macro 'BOOK'
+   84 |          BOOK2(f) | BOOK2(g) | BOOK2(h) | BOOK2(i)) \
+      |                                           ^~~~~~~~
+h-spell.c:77:54: note: expanded from macro 'BOOK2'
+   77 | #define BOOK2(x) (((x) < 0) ? 0 : (x) < 32 ? 0 : (1L << ((x) % 32)))
+      |                                                      ^  ~~~~~~~~~~
+h-spell.c:145:2: warning: shift count is negative [-Wshift-count-negative]
+  145 |         BOOK(HIGH_BLINK,
+      |         ^~~~~~~~~~~~~~~~
+  146 |                  HIGH_RECALL,
+      |                  ~~~~~~~~~~~~
+  147 |                  HIGH_TIME_BOLT,
+      |                  ~~~~~~~~~~~~~~~
+  148 |                  HIGH_TIME_BALL,
+      |                  ~~~~~~~~~~~~~~~
+  149 |                  HIGH_GRAV_BOLT,
+      |                  ~~~~~~~~~~~~~~~
+  150 |                  HIGH_GRAV_BALL,
+      |                  ~~~~~~~~~~~~~~~
+  151 |                  HIGH_GRAV_SWARM,
+      |                  ~~~~~~~~~~~~~~~~
+  152 |                  HIGH_NEXUS_FLOOD,
+      |                  ~~~~~~~~~~~~~~~~~
+  153 |                  -1),
+      |                  ~~~
+h-spell.c:82:36: note: expanded from macro 'BOOK'
+   82 |          BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+      |                                           ^~~~~~~~
+h-spell.c:76:50: note: expanded from macro 'BOOK1'
+   76 | #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+      |                                                  ^  ~~~
+h-spell.c:145:2: warning: shift count is negative [-Wshift-count-negative]
+  145 |         BOOK(HIGH_BLINK,
+      |         ^~~~~~~~~~~~~~~~
+  146 |                  HIGH_RECALL,
+      |                  ~~~~~~~~~~~~
+  147 |                  HIGH_TIME_BOLT,
+      |                  ~~~~~~~~~~~~~~~
+  148 |                  HIGH_TIME_BALL,
+      |                  ~~~~~~~~~~~~~~~
+  149 |                  HIGH_GRAV_BOLT,
+      |                  ~~~~~~~~~~~~~~~
+  150 |                  HIGH_GRAV_BALL,
+      |                  ~~~~~~~~~~~~~~~
+  151 |                  HIGH_GRAV_SWARM,
+      |                  ~~~~~~~~~~~~~~~~
+  152 |                  HIGH_NEXUS_FLOOD,
+      |                  ~~~~~~~~~~~~~~~~~
+  153 |                  -1),
+      |                  ~~~
+h-spell.c:84:36: note: expanded from macro 'BOOK'
+   84 |          BOOK2(f) | BOOK2(g) | BOOK2(h) | BOOK2(i)) \
+      |                                           ^~~~~~~~
+h-spell.c:77:54: note: expanded from macro 'BOOK2'
+   77 | #define BOOK2(x) (((x) < 0) ? 0 : (x) < 32 ? 0 : (1L << ((x) % 32)))
+      |                                                      ^  ~~~~~~~~~~
+h-spell.c:156:2: warning: shift count is negative [-Wshift-count-negative]
+  156 |         BOOK(HIGH_MANA_BOLT,
+      |         ^~~~~~~~~~~~~~~~~~~~
+  157 |                  HIGH_MANA_BEAM,
+      |                  ~~~~~~~~~~~~~~~
+  158 |                  HIGH_MANA_BALL,
+      |                  ~~~~~~~~~~~~~~~
+  159 |                  HIGH_DISEN_FLOOD,
+      |                  ~~~~~~~~~~~~~~~~~
+  160 |                  HIGH_CHAOS_SWARM,
+      |                  ~~~~~~~~~~~~~~~~~
+  161 |                  HIGH_ENCH_WEAP,
+      |                  ~~~~~~~~~~~~~~~
+  162 |                  HIGH_ENCH_ARMOR,
+      |                  ~~~~~~~~~~~~~~~~
+  163 |                  HIGH_RECHARGE,
+      |                  ~~~~~~~~~~~~~~
+  164 |                  -1)
+      |                  ~~~
+h-spell.c:82:36: note: expanded from macro 'BOOK'
+   82 |          BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+      |                                           ^~~~~~~~
+h-spell.c:76:50: note: expanded from macro 'BOOK1'
+   76 | #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+      |                                                  ^  ~~~
+h-spell.c:156:2: warning: shift count is negative [-Wshift-count-negative]
+  156 |         BOOK(HIGH_MANA_BOLT,
+      |         ^~~~~~~~~~~~~~~~~~~~
+  157 |                  HIGH_MANA_BEAM,
+      |                  ~~~~~~~~~~~~~~~
+  158 |                  HIGH_MANA_BALL,
+      |                  ~~~~~~~~~~~~~~~
+  159 |                  HIGH_DISEN_FLOOD,
+      |                  ~~~~~~~~~~~~~~~~~
+  160 |                  HIGH_CHAOS_SWARM,
+      |                  ~~~~~~~~~~~~~~~~~
+  161 |                  HIGH_ENCH_WEAP,
+      |                  ~~~~~~~~~~~~~~~
+  162 |                  HIGH_ENCH_ARMOR,
+      |                  ~~~~~~~~~~~~~~~~
+  163 |                  HIGH_RECHARGE,
+      |                  ~~~~~~~~~~~~~~
+  164 |                  -1)
+      |                  ~~~
+h-spell.c:84:36: note: expanded from macro 'BOOK'
+   84 |          BOOK2(f) | BOOK2(g) | BOOK2(h) | BOOK2(i)) \
+      |                                           ^~~~~~~~
+h-spell.c:77:54: note: expanded from macro 'BOOK2'
+   77 | #define BOOK2(x) (((x) < 0) ? 0 : (x) < 32 ? 0 : (1L << ((x) % 32)))
+      |                                                      ^  ~~~~~~~~~~
+h-spell.c:319:6: warning: unused variable 'py' [-Wunused-variable]
+  319 |         int py = p_ptr->py;
+      |             ^~
+h-spell.c:320:6: warning: unused variable 'px' [-Wunused-variable]
+  320 |         int px = p_ptr->px;
+      |             ^~
+h-spell.c:792:22: warning: parameter 'spell' was not declared, defaults to 'int'; ISO C99 and later do not support implicit int [-Wimplicit-int]
+  792 | cptr get_h_spel_info(spell)
+      |                      ^
+  793 | {
+h-spell.c:792:6: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C2x [-Wdeprecated-non-prototype]
+  792 | cptr get_h_spel_info(spell)
+      |      ^
+h-spell.c:853:23: warning: more '%' conversions than data arguments [-Wformat-insufficient-args]
+  853 |                 sprintf(p, " dam #d%d6");
+      |                                    ~^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/secure/_stdio.h:47:56: note: expanded from macro 'sprintf'
+   47 |   __builtin___sprintf_chk (str, 0, __darwin_obsz(str), __VA_ARGS__)
+      |                                                        ^~~~~~~~~~~
+23 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o init1.o init1.c
+In file included from init1.c:11:
+In file included from ./angband.h:31:
+./config.h:412:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  412 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+In file included from init1.c:11:
+In file included from ./angband.h:31:
+./config.h:433:8: warning: '/*' within block comment [-Wcomment]
+  433 | #endif /* SET_UID */
+      |        ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o init2.o init2.c
+In file included from init2.c:12:
+In file included from ./angband.h:31:
+./config.h:412:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  412 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+In file included from init2.c:12:
+In file included from ./angband.h:31:
+./config.h:433:8: warning: '/*' within block comment [-Wcomment]
+  433 | #endif /* SET_UID */
+      |        ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o l-misc.o l-misc.c
+In file included from l-misc.c:12:
+In file included from ./angband.h:31:
+./config.h:412:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  412 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+In file included from l-misc.c:12:
+In file included from ./angband.h:31:
+./config.h:433:8: warning: '/*' within block comment [-Wcomment]
+  433 | #endif /* SET_UID */
+      |        ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o l-monst.o l-monst.c
+In file included from l-monst.c:12:
+In file included from ./angband.h:31:
+./config.h:412:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  412 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+In file included from l-monst.c:12:
+In file included from ./angband.h:31:
+./config.h:433:8: warning: '/*' within block comment [-Wcomment]
+  433 | #endif /* SET_UID */
+      |        ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o l-object.o l-object.c
+In file included from l-object.c:12:
+In file included from ./angband.h:31:
+./config.h:412:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  412 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+In file included from l-object.c:12:
+In file included from ./angband.h:31:
+./config.h:433:8: warning: '/*' within block comment [-Wcomment]
+  433 | #endif /* SET_UID */
+      |        ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o l-player.o l-player.c
+In file included from l-player.c:12:
+In file included from ./angband.h:31:
+./config.h:412:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  412 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+In file included from l-player.c:12:
+In file included from ./angband.h:31:
+./config.h:433:8: warning: '/*' within block comment [-Wcomment]
+  433 | #endif /* SET_UID */
+      |        ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o l-random.o l-random.c
+In file included from l-random.c:12:
+In file included from ./angband.h:31:
+./config.h:412:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  412 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+In file included from l-random.c:12:
+In file included from ./angband.h:31:
+./config.h:433:8: warning: '/*' within block comment [-Wcomment]
+  433 | #endif /* SET_UID */
+      |        ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o l-spell.o l-spell.c
+In file included from l-spell.c:12:
+In file included from ./angband.h:31:
+./config.h:412:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  412 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+In file included from l-spell.c:12:
+In file included from ./angband.h:31:
+./config.h:433:8: warning: '/*' within block comment [-Wcomment]
+  433 | #endif /* SET_UID */
+      |        ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o l-ui.o l-ui.c
+In file included from l-ui.c:12:
+In file included from ./angband.h:31:
+./config.h:412:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  412 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+In file included from l-ui.c:12:
+In file included from ./angband.h:31:
+./config.h:433:8: warning: '/*' within block comment [-Wcomment]
+  433 | #endif /* SET_UID */
+      |        ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o load.o load.c
+In file included from load.c:11:
+In file included from ./angband.h:31:
+./config.h:412:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  412 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+In file included from load.c:11:
+In file included from ./angband.h:31:
+./config.h:433:8: warning: '/*' within block comment [-Wcomment]
+  433 | #endif /* SET_UID */
+      |        ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o main-gcu.o main-gcu.c
+In file included from main-gcu.c:46:
+In file included from ./angband.h:31:
+./config.h:412:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  412 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+In file included from main-gcu.c:46:
+In file included from ./angband.h:31:
+./config.h:433:8: warning: '/*' within block comment [-Wcomment]
+  433 | #endif /* SET_UID */
+      |        ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o main.o main.c
+In file included from main.c:11:
+In file included from ./angband.h:31:
+./config.h:412:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  412 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+In file included from main.c:11:
+In file included from ./angband.h:31:
+./config.h:433:8: warning: '/*' within block comment [-Wcomment]
+  433 | #endif /* SET_UID */
+      |        ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o melee1.o melee1.c
+In file included from melee1.c:11:
+In file included from ./angband.h:31:
+./config.h:412:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  412 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+In file included from melee1.c:11:
+In file included from ./angband.h:31:
+./config.h:433:8: warning: '/*' within block comment [-Wcomment]
+  433 | #endif /* SET_UID */
+      |        ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o melee2.o melee2.c
+In file included from melee2.c:11:
+In file included from ./angband.h:31:
+./config.h:412:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  412 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+In file included from melee2.c:11:
+In file included from ./angband.h:31:
+./config.h:433:8: warning: '/*' within block comment [-Wcomment]
+  433 | #endif /* SET_UID */
+      |        ^
+melee2.c:439:2: warning: '/*' within block comment [-Wcomment]
+  439 |         /* Determine the radius of the blast * /
+      |         ^
+melee2.c:442:2: warning: '/*' within block comment [-Wcomment]
+  442 |         /* Target the player with a ball attack * /
+      |         ^
+melee2.c:445:1: warning: '/*' within block comment [-Wcomment]
+  445 | /*
+      | ^
+melee2.c:459:7: warning: unused variable 'noticed' [-Wunused-variable]
+  459 |         bool noticed = FALSE;
+      |              ^~~~~~~
+6 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o monster1.o monster1.c
+In file included from monster1.c:11:
+In file included from ./angband.h:31:
+./config.h:412:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  412 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+In file included from monster1.c:11:
+In file included from ./angband.h:31:
+./config.h:433:8: warning: '/*' within block comment [-Wcomment]
+  433 | #endif /* SET_UID */
+      |        ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o monster2.o monster2.c
+In file included from monster2.c:11:
+In file included from ./angband.h:31:
+./config.h:412:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  412 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+In file included from monster2.c:11:
+In file included from ./angband.h:31:
+./config.h:433:8: warning: '/*' within block comment [-Wcomment]
+  433 | #endif /* SET_UID */
+      |        ^
+monster2.c:1972:9: warning: incompatible pointer to integer conversion assigning to 'bool_hack' (aka 'char') from 'char *'; dereference with * [-Wint-conversion]
+ 1972 |                         okay = (strchr(MON_HIGH_UNDEAD, r_ptr->d_char));
+      |                              ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                *(                                      )
+monster2.c:1978:9: warning: incompatible pointer to integer conversion assigning to 'bool_hack' (aka 'char') from 'char *'; dereference with * [-Wint-conversion]
+ 1978 |                         okay = (strchr(MON_HIGH_DRAGON, r_ptr->d_char));
+      |                              ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                *(                                      )
+monster2.c:1984:9: warning: incompatible pointer to integer conversion assigning to 'bool_hack' (aka 'char') from 'char *'; dereference with * [-Wint-conversion]
+ 1984 |                         okay = (strchr(MON_HIGH_DEMON, r_ptr->d_char));
+      |                              ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                *(                                     )
+5 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o object1.o object1.c
+In file included from object1.c:11:
+In file included from ./angband.h:31:
+./config.h:412:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  412 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+In file included from object1.c:11:
+In file included from ./angband.h:31:
+./config.h:433:8: warning: '/*' within block comment [-Wcomment]
+  433 | #endif /* SET_UID */
+      |        ^
+object1.c:2336:49: warning: if statement has empty body [-Wempty-body]
+ 2336 |                         if ((&k_info[o_ptr->k_idx])->flags4 & TR4_2H);
+      |                                                                      ^
+object1.c:2336:49: note: put the semicolon on a separate line to silence this warning
+object1.c:2444:24: warning: use of logical '||' with constant operand [-Wconstant-logical-operand]
+ 2444 |         if (i == INVEN_WIELD1 || INVEN_WIELD2)
+      |                               ^  ~~~~~~~~~~~~
+object1.c:2444:24: note: use '|' for a bitwise operation
+ 2444 |         if (i == INVEN_WIELD1 || INVEN_WIELD2)
+      |                               ^~
+      |                               |
+object1.c:2507:24: warning: use of logical '||' with constant operand [-Wconstant-logical-operand]
+ 2507 |         if (i == INVEN_WIELD1 || INVEN_WIELD2)
+      |                               ^  ~~~~~~~~~~~~
+object1.c:2507:24: note: use '|' for a bitwise operation
+ 2507 |         if (i == INVEN_WIELD1 || INVEN_WIELD2)
+      |                               ^~
+      |                               |
+5 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o object2.o object2.c
+In file included from object2.c:11:
+In file included from ./angband.h:31:
+./config.h:412:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  412 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+In file included from object2.c:11:
+In file included from ./angband.h:31:
+./config.h:433:8: warning: '/*' within block comment [-Wcomment]
+  433 | #endif /* SET_UID */
+      |        ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o randart.o randart.c
+In file included from randart.c:12:
+In file included from ./angband.h:31:
+./config.h:412:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  412 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+In file included from randart.c:12:
+In file included from ./angband.h:31:
+./config.h:433:8: warning: '/*' within block comment [-Wcomment]
+  433 | #endif /* SET_UID */
+      |        ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o save.o save.c
+In file included from save.c:11:
+In file included from ./angband.h:31:
+./config.h:412:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  412 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+In file included from save.c:11:
+In file included from ./angband.h:31:
+./config.h:433:8: warning: '/*' within block comment [-Wcomment]
+  433 | #endif /* SET_UID */
+      |        ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o script.o script.c
+In file included from script.c:3:
+In file included from ./angband.h:31:
+./config.h:412:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  412 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+In file included from script.c:3:
+In file included from ./angband.h:31:
+./config.h:433:8: warning: '/*' within block comment [-Wcomment]
+  433 | #endif /* SET_UID */
+      |        ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o spells1.o spells1.c
+In file included from spells1.c:11:
+In file included from ./angband.h:31:
+./config.h:412:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  412 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+In file included from spells1.c:11:
+In file included from ./angband.h:31:
+./config.h:433:8: warning: '/*' within block comment [-Wcomment]
+  433 | #endif /* SET_UID */
+      |        ^
+spells1.c:1245:32: warning: '&&' within '||' [-Wlogical-op-parentheses]
+ 1245 |         if((mode == 1) || (mode == 3) && (rand_int(100) < 5))
+      |                        ~~ ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+spells1.c:1245:32: note: place parentheses around the '&&' expression to silence this warning
+ 1245 |         if((mode == 1) || (mode == 3) && (rand_int(100) < 5))
+      |                                       ^                     
+      |                           (                                 )
+spells1.c:2081:46: warning: passing 'byte_hack *' (aka 'unsigned char *') to parameter of type 'bool_hack *' (aka 'char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+ 2081 |                         else if (whom>0) mon_take_hit(whom, dist, &(m_ptr->monfear),"is crushed");
+      |                                                                   ^~~~~~~~~~~~~~~~~
+./externs.h:743:52: note: passing argument to parameter 'fear' here
+  743 | extern bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note);
+      |                                                    ^
+spells1.c:4527:10: warning: variable 'ident' set but not used [-Wunused-but-set-variable]
+ 4527 |         bool    ident = FALSE;
+      |                 ^
+spells1.c:4528:10: warning: variable 'angry' set but not used [-Wunused-but-set-variable]
+ 4528 |         bool    angry = FALSE;
+      |                 ^
+6 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o spells2.o spells2.c
+In file included from spells2.c:11:
+In file included from ./angband.h:31:
+./config.h:412:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  412 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+In file included from spells2.c:11:
+In file included from ./angband.h:31:
+./config.h:433:8: warning: '/*' within block comment [-Wcomment]
+  433 | #endif /* SET_UID */
+      |        ^
+spells2.c:407:16: warning: variable 'f2' set but not used [-Wunused-but-set-variable]
+  407 |         u32b f1 = 0L, f2 = 0L, f3 = 0L, f4 = 0L;
+      |                       ^
+3 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o store.o store.c
+In file included from store.c:11:
+In file included from ./angband.h:31:
+./config.h:412:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  412 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+In file included from store.c:11:
+In file included from ./angband.h:31:
+./config.h:433:8: warning: '/*' within block comment [-Wcomment]
+  433 | #endif /* SET_UID */
+      |        ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o tables.o tables.c
+In file included from tables.c:11:
+In file included from ./angband.h:31:
+./config.h:412:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  412 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+In file included from tables.c:11:
+In file included from ./angband.h:31:
+./config.h:433:8: warning: '/*' within block comment [-Wcomment]
+  433 | #endif /* SET_UID */
+      |        ^
+tables.c:1920:17: warning: '/*' within block comment [-Wcomment]
+ 1920 |         TRUE,/*FALSE,           /* OPT_always_repeat */
+      |                                 ^
+tables.c:1922:17: warning: '/*' within block comment [-Wcomment]
+ 1922 |         TRUE,/*FALSE,           /* OPT_stack_force_notes */
+      |                                 ^
+tables.c:1923:17: warning: '/*' within block comment [-Wcomment]
+ 1923 |         TRUE,/*FALSE,           /* OPT_stack_force_costs */
+      |                                 ^
+tables.c:1929:17: warning: '/*' within block comment [-Wcomment]
+ 1929 |         FALSE,/*TRUE,           /* OPT_show_flavors */
+      |                                 ^
+tables.c:1930:17: warning: '/*' within block comment [-Wcomment]
+ 1930 |         FALSE,/*TRUE,           /* OPT_run_ignore_stairs */
+      |                                 ^
+tables.c:1934:17: warning: '/*' within block comment [-Wcomment]
+ 1934 |         FALSE,/*TRUE,           /* OPT_disturb_move */
+      |                                 ^
+tables.c:1935:17: warning: '/*' within block comment [-Wcomment]
+ 1935 |         FALSE,/*TRUE,           /* OPT_disturb_near */
+      |                                 ^
+tables.c:1938:17: warning: '/*' within block comment [-Wcomment]
+ 1938 |         FALSE,/*TRUE,           /* OPT_disturb_minor */
+      |                                 ^
+tables.c:1942:17: warning: '/*' within block comment [-Wcomment]
+ 1942 |         FALSE,/*TRUE,           /* OPT_verify_destroy */
+      |                                 ^
+tables.c:1943:17: warning: '/*' within block comment [-Wcomment]
+ 1943 |         FALSE,/*TRUE,           /* OPT_verify_special */
+      |                                 ^
+tables.c:1953:17: warning: '/*' within block comment [-Wcomment]
+ 1953 |         TRUE,/*FALSE,           /* OPT_view_torch_grids */
+      |                                 ^
+tables.c:1956:17: warning: '/*' within block comment [-Wcomment]
+ 1956 |         TRUE,/*FALSE,           /* OPT_flow_by_sound */
+      |                                 ^
+tables.c:1957:17: warning: '/*' within block comment [-Wcomment]
+ 1957 |         TRUE,/*FALSE,           /* OPT_flow_by_smell */
+      |                                 ^
+tables.c:1960:17: warning: '/*' within block comment [-Wcomment]
+ 1960 |         TRUE,/*FALSE,           /* OPT_smart_learn */
+      |                                 ^
+tables.c:1978:17: warning: '/*' within block comment [-Wcomment]
+ 1978 |         TRUE,/*FALSE,           /* OPT_easy_open */
+      |                                 ^
+tables.c:1979:17: warning: '/*' within block comment [-Wcomment]
+ 1979 |         TRUE,/*FALSE,           /* OPT_easy_alter */
+      |                                 ^
+tables.c:1981:17: warning: '/*' within block comment [-Wcomment]
+ 1981 |         TRUE,/*FALSE,           /* OPT_show_piles */
+      |                                 ^
+tables.c:1982:17: warning: '/*' within block comment [-Wcomment]
+ 1982 |         TRUE,/*FALSE,           /* OPT_center_player */
+      |                                 ^
+tables.c:1983:17: warning: '/*' within block comment [-Wcomment]
+ 1983 |         TRUE,/*FALSE,           /* OPT_run_avoid_center */
+      |                                 ^
+tables.c:1986:17: warning: '/*' within block comment [-Wcomment]
+ 1986 |         TRUE,/*FALSE,           /* OPT_smart_monsters */
+      |                                 ^
+tables.c:1987:17: warning: '/*' within block comment [-Wcomment]
+ 1987 |         TRUE,/*FALSE,           /* OPT_smart_packs */
+      |                                 ^
+23 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o use-obj.o use-obj.c
+In file included from use-obj.c:11:
+In file included from ./angband.h:31:
+./config.h:412:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  412 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+In file included from use-obj.c:11:
+In file included from ./angband.h:31:
+./config.h:433:8: warning: '/*' within block comment [-Wcomment]
+  433 | #endif /* SET_UID */
+      |        ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o util.o util.c
+In file included from util.c:11:
+In file included from ./angband.h:31:
+./config.h:412:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  412 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+In file included from util.c:11:
+In file included from ./angband.h:31:
+./config.h:433:8: warning: '/*' within block comment [-Wcomment]
+  433 | #endif /* SET_UID */
+      |        ^
+util.c:66:23: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+   66 | extern struct passwd *getpwuid();
+      |                       ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/pwd.h:100:16: note: conflicting prototype is here
+  100 | struct passwd   *getpwuid(uid_t);
+      |                  ^
+util.c:67:23: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+   67 | extern struct passwd *getpwnam();
+      |                       ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/pwd.h:101:16: note: conflicting prototype is here
+  101 | struct passwd   *getpwnam(const char *);
+      |                  ^
+4 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o variable.o variable.c
+In file included from variable.c:11:
+In file included from ./angband.h:31:
+./config.h:412:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  412 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+In file included from variable.c:11:
+In file included from ./angband.h:31:
+./config.h:433:8: warning: '/*' within block comment [-Wcomment]
+  433 | #endif /* SET_UID */
+      |        ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o wizard1.o wizard1.c
+In file included from wizard1.c:11:
+In file included from ./angband.h:31:
+./config.h:412:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  412 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+In file included from wizard1.c:11:
+In file included from ./angband.h:31:
+./config.h:433:8: warning: '/*' within block comment [-Wcomment]
+  433 | #endif /* SET_UID */
+      |        ^
+wizard1.c:565:24: warning: unused variable 'mundane_flags_desc' [-Wunused-const-variable]
+  565 | static const flag_desc mundane_flags_desc[] = 
+      |                        ^~~~~~~~~~~~~~~~~~
+3 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o wizard2.o wizard2.c
+In file included from wizard2.c:11:
+In file included from ./angband.h:31:
+./config.h:412:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  412 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+In file included from wizard2.c:11:
+In file included from ./angband.h:31:
+./config.h:433:8: warning: '/*' within block comment [-Wcomment]
+  433 | #endif /* SET_UID */
+      |        ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o x-spell.o x-spell.c
+In file included from x-spell.c:12:
+In file included from ./angband.h:31:
+./config.h:412:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  412 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+In file included from x-spell.c:12:
+In file included from ./angband.h:31:
+./config.h:433:8: warning: '/*' within block comment [-Wcomment]
+  433 | #endif /* SET_UID */
+      |        ^
+x-spell.c:214:2: warning: shift count is negative [-Wshift-count-negative]
+  214 |         BOOK(SPELL_FROST_BALL,
+      |         ^~~~~~~~~~~~~~~~~~~~~~
+  215 |              SPELL_TELEPORT_OTHER,
+      |              ~~~~~~~~~~~~~~~~~~~~~
+  216 |              SPELL_HASTE_SELF,
+      |              ~~~~~~~~~~~~~~~~~
+  217 |              SPELL_MASS_SLEEP,
+      |              ~~~~~~~~~~~~~~~~~
+  218 |              SPELL_FIRE_BALL,
+      |              ~~~~~~~~~~~~~~~~
+  219 |              SPELL_DETECT_ENCHANTMENT,
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~
+  220 |              -1,
+      |              ~~~
+  221 |              -1,
+      |              ~~~
+  222 |              -1),
+      |              ~~~
+x-spell.c:168:14: note: expanded from macro 'BOOK'
+  168 |          BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+      |                     ^~~~~~~~
+x-spell.c:162:50: note: expanded from macro 'BOOK1'
+  162 | #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+      |                                                  ^  ~~~
+x-spell.c:214:2: warning: shift count is negative [-Wshift-count-negative]
+  214 |         BOOK(SPELL_FROST_BALL,
+      |         ^~~~~~~~~~~~~~~~~~~~~~
+  215 |              SPELL_TELEPORT_OTHER,
+      |              ~~~~~~~~~~~~~~~~~~~~~
+  216 |              SPELL_HASTE_SELF,
+      |              ~~~~~~~~~~~~~~~~~
+  217 |              SPELL_MASS_SLEEP,
+      |              ~~~~~~~~~~~~~~~~~
+  218 |              SPELL_FIRE_BALL,
+      |              ~~~~~~~~~~~~~~~~
+  219 |              SPELL_DETECT_ENCHANTMENT,
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~
+  220 |              -1,
+      |              ~~~
+  221 |              -1,
+      |              ~~~
+  222 |              -1),
+      |              ~~~
+x-spell.c:168:25: note: expanded from macro 'BOOK'
+  168 |          BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+      |                                ^~~~~~~~
+x-spell.c:162:50: note: expanded from macro 'BOOK1'
+  162 | #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+      |                                                  ^  ~~~
+x-spell.c:214:2: warning: shift count is negative [-Wshift-count-negative]
+  214 |         BOOK(SPELL_FROST_BALL,
+      |         ^~~~~~~~~~~~~~~~~~~~~~
+  215 |              SPELL_TELEPORT_OTHER,
+      |              ~~~~~~~~~~~~~~~~~~~~~
+  216 |              SPELL_HASTE_SELF,
+      |              ~~~~~~~~~~~~~~~~~
+  217 |              SPELL_MASS_SLEEP,
+      |              ~~~~~~~~~~~~~~~~~
+  218 |              SPELL_FIRE_BALL,
+      |              ~~~~~~~~~~~~~~~~
+  219 |              SPELL_DETECT_ENCHANTMENT,
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~
+  220 |              -1,
+      |              ~~~
+  221 |              -1,
+      |              ~~~
+  222 |              -1),
+      |              ~~~
+x-spell.c:168:36: note: expanded from macro 'BOOK'
+  168 |          BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+      |                                           ^~~~~~~~
+x-spell.c:162:50: note: expanded from macro 'BOOK1'
+  162 | #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+      |                                                  ^  ~~~
+x-spell.c:214:2: warning: shift count is negative [-Wshift-count-negative]
+  214 |         BOOK(SPELL_FROST_BALL,
+      |         ^~~~~~~~~~~~~~~~~~~~~~
+  215 |              SPELL_TELEPORT_OTHER,
+      |              ~~~~~~~~~~~~~~~~~~~~~
+  216 |              SPELL_HASTE_SELF,
+      |              ~~~~~~~~~~~~~~~~~
+  217 |              SPELL_MASS_SLEEP,
+      |              ~~~~~~~~~~~~~~~~~
+  218 |              SPELL_FIRE_BALL,
+      |              ~~~~~~~~~~~~~~~~
+  219 |              SPELL_DETECT_ENCHANTMENT,
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~
+  220 |              -1,
+      |              ~~~
+  221 |              -1,
+      |              ~~~
+  222 |              -1),
+      |              ~~~
+x-spell.c:170:14: note: expanded from macro 'BOOK'
+  170 |          BOOK2(f) | BOOK2(g) | BOOK2(h) | BOOK2(i)) \
+      |                     ^~~~~~~~
+x-spell.c:163:54: note: expanded from macro 'BOOK2'
+  163 | #define BOOK2(x) (((x) < 0) ? 0 : (x) < 32 ? 0 : (1L << ((x) % 32)))
+      |                                                      ^  ~~~~~~~~~~
+x-spell.c:214:2: warning: shift count is negative [-Wshift-count-negative]
+  214 |         BOOK(SPELL_FROST_BALL,
+      |         ^~~~~~~~~~~~~~~~~~~~~~
+  215 |              SPELL_TELEPORT_OTHER,
+      |              ~~~~~~~~~~~~~~~~~~~~~
+  216 |              SPELL_HASTE_SELF,
+      |              ~~~~~~~~~~~~~~~~~
+  217 |              SPELL_MASS_SLEEP,
+      |              ~~~~~~~~~~~~~~~~~
+  218 |              SPELL_FIRE_BALL,
+      |              ~~~~~~~~~~~~~~~~
+  219 |              SPELL_DETECT_ENCHANTMENT,
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~
+  220 |              -1,
+      |              ~~~
+  221 |              -1,
+      |              ~~~
+  222 |              -1),
+      |              ~~~
+x-spell.c:170:25: note: expanded from macro 'BOOK'
+  170 |          BOOK2(f) | BOOK2(g) | BOOK2(h) | BOOK2(i)) \
+      |                                ^~~~~~~~
+x-spell.c:163:54: note: expanded from macro 'BOOK2'
+  163 | #define BOOK2(x) (((x) < 0) ? 0 : (x) < 32 ? 0 : (1L << ((x) % 32)))
+      |                                                      ^  ~~~~~~~~~~
+x-spell.c:214:2: warning: shift count is negative [-Wshift-count-negative]
+  214 |         BOOK(SPELL_FROST_BALL,
+      |         ^~~~~~~~~~~~~~~~~~~~~~
+  215 |              SPELL_TELEPORT_OTHER,
+      |              ~~~~~~~~~~~~~~~~~~~~~
+  216 |              SPELL_HASTE_SELF,
+      |              ~~~~~~~~~~~~~~~~~
+  217 |              SPELL_MASS_SLEEP,
+      |              ~~~~~~~~~~~~~~~~~
+  218 |              SPELL_FIRE_BALL,
+      |              ~~~~~~~~~~~~~~~~
+  219 |              SPELL_DETECT_ENCHANTMENT,
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~
+  220 |              -1,
+      |              ~~~
+  221 |              -1,
+      |              ~~~
+  222 |              -1),
+      |              ~~~
+x-spell.c:170:36: note: expanded from macro 'BOOK'
+  170 |          BOOK2(f) | BOOK2(g) | BOOK2(h) | BOOK2(i)) \
+      |                                           ^~~~~~~~
+x-spell.c:163:54: note: expanded from macro 'BOOK2'
+  163 | #define BOOK2(x) (((x) < 0) ? 0 : (x) < 32 ? 0 : (1L << ((x) % 32)))
+      |                                                      ^  ~~~~~~~~~~
+x-spell.c:225:2: warning: shift count >= width of type [-Wshift-count-overflow]
+  225 |         BOOK(SPELL_RESIST_COLD,
+      |         ^~~~~~~~~~~~~~~~~~~~~~~
+  226 |              SPELL_RESIST_FIRE,
+      |              ~~~~~~~~~~~~~~~~~~
+  227 |              SPELL_RESIST_POISON,
+      |              ~~~~~~~~~~~~~~~~~~~~
+  228 |              SPELL_RESISTANCE,
+      |              ~~~~~~~~~~~~~~~~~
+  229 |              SPELL_SHIELD,
+      |              ~~~~~~~~~~~~~
+  230 |              SPELL_GLOBE_OF_INVULNERABILITY,
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  231 |              -1,
+      |              ~~~
+  232 |              -1,
+      |              ~~~
+  233 |              -1),
+      |              ~~~
+x-spell.c:168:3: note: expanded from macro 'BOOK'
+  168 |          BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+      |          ^~~~~~~~
+x-spell.c:162:50: note: expanded from macro 'BOOK1'
+  162 | #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+      |                                                  ^  ~~~
+x-spell.c:225:2: warning: shift count is negative [-Wshift-count-negative]
+  225 |         BOOK(SPELL_RESIST_COLD,
+      |         ^~~~~~~~~~~~~~~~~~~~~~~
+  226 |              SPELL_RESIST_FIRE,
+      |              ~~~~~~~~~~~~~~~~~~
+  227 |              SPELL_RESIST_POISON,
+      |              ~~~~~~~~~~~~~~~~~~~~
+  228 |              SPELL_RESISTANCE,
+      |              ~~~~~~~~~~~~~~~~~
+  229 |              SPELL_SHIELD,
+      |              ~~~~~~~~~~~~~
+  230 |              SPELL_GLOBE_OF_INVULNERABILITY,
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  231 |              -1,
+      |              ~~~
+  232 |              -1,
+      |              ~~~
+  233 |              -1),
+      |              ~~~
+x-spell.c:168:14: note: expanded from macro 'BOOK'
+  168 |          BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+      |                     ^~~~~~~~
+x-spell.c:162:50: note: expanded from macro 'BOOK1'
+  162 | #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+      |                                                  ^  ~~~
+x-spell.c:225:2: warning: shift count is negative [-Wshift-count-negative]
+  225 |         BOOK(SPELL_RESIST_COLD,
+      |         ^~~~~~~~~~~~~~~~~~~~~~~
+  226 |              SPELL_RESIST_FIRE,
+      |              ~~~~~~~~~~~~~~~~~~
+  227 |              SPELL_RESIST_POISON,
+      |              ~~~~~~~~~~~~~~~~~~~~
+  228 |              SPELL_RESISTANCE,
+      |              ~~~~~~~~~~~~~~~~~
+  229 |              SPELL_SHIELD,
+      |              ~~~~~~~~~~~~~
+  230 |              SPELL_GLOBE_OF_INVULNERABILITY,
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  231 |              -1,
+      |              ~~~
+  232 |              -1,
+      |              ~~~
+  233 |              -1),
+      |              ~~~
+x-spell.c:168:25: note: expanded from macro 'BOOK'
+  168 |          BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+      |                                ^~~~~~~~
+x-spell.c:162:50: note: expanded from macro 'BOOK1'
+  162 | #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+      |                                                  ^  ~~~
+x-spell.c:225:2: warning: shift count is negative [-Wshift-count-negative]
+  225 |         BOOK(SPELL_RESIST_COLD,
+      |         ^~~~~~~~~~~~~~~~~~~~~~~
+  226 |              SPELL_RESIST_FIRE,
+      |              ~~~~~~~~~~~~~~~~~~
+  227 |              SPELL_RESIST_POISON,
+      |              ~~~~~~~~~~~~~~~~~~~~
+  228 |              SPELL_RESISTANCE,
+      |              ~~~~~~~~~~~~~~~~~
+  229 |              SPELL_SHIELD,
+      |              ~~~~~~~~~~~~~
+  230 |              SPELL_GLOBE_OF_INVULNERABILITY,
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  231 |              -1,
+      |              ~~~
+  232 |              -1,
+      |              ~~~
+  233 |              -1),
+      |              ~~~
+x-spell.c:168:36: note: expanded from macro 'BOOK'
+  168 |          BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+      |                                           ^~~~~~~~
+x-spell.c:162:50: note: expanded from macro 'BOOK1'
+  162 | #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+      |                                                  ^  ~~~
+x-spell.c:225:2: warning: shift count is negative [-Wshift-count-negative]
+  225 |         BOOK(SPELL_RESIST_COLD,
+      |         ^~~~~~~~~~~~~~~~~~~~~~~
+  226 |              SPELL_RESIST_FIRE,
+      |              ~~~~~~~~~~~~~~~~~~
+  227 |              SPELL_RESIST_POISON,
+      |              ~~~~~~~~~~~~~~~~~~~~
+  228 |              SPELL_RESISTANCE,
+      |              ~~~~~~~~~~~~~~~~~
+  229 |              SPELL_SHIELD,
+      |              ~~~~~~~~~~~~~
+  230 |              SPELL_GLOBE_OF_INVULNERABILITY,
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  231 |              -1,
+      |              ~~~
+  232 |              -1,
+      |              ~~~
+  233 |              -1),
+      |              ~~~
+x-spell.c:170:14: note: expanded from macro 'BOOK'
+  170 |          BOOK2(f) | BOOK2(g) | BOOK2(h) | BOOK2(i)) \
+      |                     ^~~~~~~~
+x-spell.c:163:54: note: expanded from macro 'BOOK2'
+  163 | #define BOOK2(x) (((x) < 0) ? 0 : (x) < 32 ? 0 : (1L << ((x) % 32)))
+      |                                                      ^  ~~~~~~~~~~
+x-spell.c:225:2: warning: shift count is negative [-Wshift-count-negative]
+  225 |         BOOK(SPELL_RESIST_COLD,
+      |         ^~~~~~~~~~~~~~~~~~~~~~~
+  226 |              SPELL_RESIST_FIRE,
+      |              ~~~~~~~~~~~~~~~~~~
+  227 |              SPELL_RESIST_POISON,
+      |              ~~~~~~~~~~~~~~~~~~~~
+  228 |              SPELL_RESISTANCE,
+      |              ~~~~~~~~~~~~~~~~~
+  229 |              SPELL_SHIELD,
+      |              ~~~~~~~~~~~~~
+  230 |              SPELL_GLOBE_OF_INVULNERABILITY,
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  231 |              -1,
+      |              ~~~
+  232 |              -1,
+      |              ~~~
+  233 |              -1),
+      |              ~~~
+x-spell.c:170:25: note: expanded from macro 'BOOK'
+  170 |          BOOK2(f) | BOOK2(g) | BOOK2(h) | BOOK2(i)) \
+      |                                ^~~~~~~~
+x-spell.c:163:54: note: expanded from macro 'BOOK2'
+  163 | #define BOOK2(x) (((x) < 0) ? 0 : (x) < 32 ? 0 : (1L << ((x) % 32)))
+      |                                                      ^  ~~~~~~~~~~
+x-spell.c:225:2: warning: shift count is negative [-Wshift-count-negative]
+  225 |         BOOK(SPELL_RESIST_COLD,
+      |         ^~~~~~~~~~~~~~~~~~~~~~~
+  226 |              SPELL_RESIST_FIRE,
+      |              ~~~~~~~~~~~~~~~~~~
+  227 |              SPELL_RESIST_POISON,
+      |              ~~~~~~~~~~~~~~~~~~~~
+  228 |              SPELL_RESISTANCE,
+      |              ~~~~~~~~~~~~~~~~~
+  229 |              SPELL_SHIELD,
+      |              ~~~~~~~~~~~~~
+  230 |              SPELL_GLOBE_OF_INVULNERABILITY,
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  231 |              -1,
+      |              ~~~
+  232 |              -1,
+      |              ~~~
+  233 |              -1),
+      |              ~~~
+x-spell.c:170:36: note: expanded from macro 'BOOK'
+  170 |          BOOK2(f) | BOOK2(g) | BOOK2(h) | BOOK2(i)) \
+      |                                           ^~~~~~~~
+x-spell.c:163:54: note: expanded from macro 'BOOK2'
+  163 | #define BOOK2(x) (((x) < 0) ? 0 : (x) < 32 ? 0 : (1L << ((x) % 32)))
+      |                                                      ^  ~~~~~~~~~~
+x-spell.c:236:2: warning: shift count >= width of type [-Wshift-count-overflow]
+  236 |         BOOK(SPELL_SHOCK_WAVE,
+      |         ^~~~~~~~~~~~~~~~~~~~~~
+  237 |              SPELL_EXPLOSION,
+      |              ~~~~~~~~~~~~~~~~
+  238 |              SPELL_CLOUD_KILL,
+      |              ~~~~~~~~~~~~~~~~~
+  239 |              SPELL_ACID_BALL,
+      |              ~~~~~~~~~~~~~~~~
+  240 |              SPELL_ICE_STORM,
+      |              ~~~~~~~~~~~~~~~~
+  241 |              SPELL_METEOR_SWARM,
+      |              ~~~~~~~~~~~~~~~~~~~
+  242 |              SPELL_RIFT,
+      |              ~~~~~~~~~~~
+  243 |              SPELL_FLOOD,
+      |              ~~~~~~~~~~~~
+  244 |              -1),
+      |              ~~~
+x-spell.c:168:25: note: expanded from macro 'BOOK'
+  168 |          BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+      |                                ^~~~~~~~
+x-spell.c:162:50: note: expanded from macro 'BOOK1'
+  162 | #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+      |                                                  ^  ~~~
+x-spell.c:236:2: warning: shift count is negative [-Wshift-count-negative]
+  236 |         BOOK(SPELL_SHOCK_WAVE,
+      |         ^~~~~~~~~~~~~~~~~~~~~~
+  237 |              SPELL_EXPLOSION,
+      |              ~~~~~~~~~~~~~~~~
+  238 |              SPELL_CLOUD_KILL,
+      |              ~~~~~~~~~~~~~~~~~
+  239 |              SPELL_ACID_BALL,
+      |              ~~~~~~~~~~~~~~~~
+  240 |              SPELL_ICE_STORM,
+      |              ~~~~~~~~~~~~~~~~
+  241 |              SPELL_METEOR_SWARM,
+      |              ~~~~~~~~~~~~~~~~~~~
+  242 |              SPELL_RIFT,
+      |              ~~~~~~~~~~~
+  243 |              SPELL_FLOOD,
+      |              ~~~~~~~~~~~~
+  244 |              -1),
+      |              ~~~
+x-spell.c:168:36: note: expanded from macro 'BOOK'
+  168 |          BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+      |                                           ^~~~~~~~
+x-spell.c:162:50: note: expanded from macro 'BOOK1'
+  162 | #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+      |                                                  ^  ~~~
+x-spell.c:236:2: warning: shift count is negative [-Wshift-count-negative]
+  236 |         BOOK(SPELL_SHOCK_WAVE,
+      |         ^~~~~~~~~~~~~~~~~~~~~~
+  237 |              SPELL_EXPLOSION,
+      |              ~~~~~~~~~~~~~~~~
+  238 |              SPELL_CLOUD_KILL,
+      |              ~~~~~~~~~~~~~~~~~
+  239 |              SPELL_ACID_BALL,
+      |              ~~~~~~~~~~~~~~~~
+  240 |              SPELL_ICE_STORM,
+      |              ~~~~~~~~~~~~~~~~
+  241 |              SPELL_METEOR_SWARM,
+      |              ~~~~~~~~~~~~~~~~~~~
+  242 |              SPELL_RIFT,
+      |              ~~~~~~~~~~~
+  243 |              SPELL_FLOOD,
+      |              ~~~~~~~~~~~~
+  244 |              -1),
+      |              ~~~
+x-spell.c:170:36: note: expanded from macro 'BOOK'
+  170 |          BOOK2(f) | BOOK2(g) | BOOK2(h) | BOOK2(i)) \
+      |                                           ^~~~~~~~
+x-spell.c:163:54: note: expanded from macro 'BOOK2'
+  163 | #define BOOK2(x) (((x) < 0) ? 0 : (x) < 32 ? 0 : (1L << ((x) % 32)))
+      |                                                      ^  ~~~~~~~~~~
+x-spell.c:247:2: warning: shift count >= width of type [-Wshift-count-overflow]
+  247 |         BOOK(SPELL_DOOR_CREATION,
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+  248 |              SPELL_STAIR_CREATION,
+      |              ~~~~~~~~~~~~~~~~~~~~~
+  249 |              SPELL_TELEPORT_LEVEL,
+      |              ~~~~~~~~~~~~~~~~~~~~~
+  250 |              SPELL_WORD_OF_RECALL,
+      |              ~~~~~~~~~~~~~~~~~~~~~
+  251 |              SPELL_RUNE_OF_PROTECTION,
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~
+  252 |              SPELL_BLASTING,
+      |              ~~~~~~~~~~~~~~~
+  253 |              -1,
+      |              ~~~
+  254 |              -1,
+      |              ~~~
+  255 |              -1),
+      |              ~~~
+x-spell.c:168:3: note: expanded from macro 'BOOK'
+  168 |          BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+      |          ^~~~~~~~
+x-spell.c:162:50: note: expanded from macro 'BOOK1'
+  162 | #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+      |                                                  ^  ~~~
+x-spell.c:247:2: warning: shift count is negative [-Wshift-count-negative]
+  247 |         BOOK(SPELL_DOOR_CREATION,
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+  248 |              SPELL_STAIR_CREATION,
+      |              ~~~~~~~~~~~~~~~~~~~~~
+  249 |              SPELL_TELEPORT_LEVEL,
+      |              ~~~~~~~~~~~~~~~~~~~~~
+  250 |              SPELL_WORD_OF_RECALL,
+      |              ~~~~~~~~~~~~~~~~~~~~~
+  251 |              SPELL_RUNE_OF_PROTECTION,
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~
+  252 |              SPELL_BLASTING,
+      |              ~~~~~~~~~~~~~~~
+  253 |              -1,
+      |              ~~~
+  254 |              -1,
+      |              ~~~
+  255 |              -1),
+      |              ~~~
+x-spell.c:168:14: note: expanded from macro 'BOOK'
+  168 |          BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+      |                     ^~~~~~~~
+x-spell.c:162:50: note: expanded from macro 'BOOK1'
+  162 | #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+      |                                                  ^  ~~~
+x-spell.c:247:2: warning: shift count is negative [-Wshift-count-negative]
+  247 |         BOOK(SPELL_DOOR_CREATION,
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+  248 |              SPELL_STAIR_CREATION,
+      |              ~~~~~~~~~~~~~~~~~~~~~
+  249 |              SPELL_TELEPORT_LEVEL,
+      |              ~~~~~~~~~~~~~~~~~~~~~
+  250 |              SPELL_WORD_OF_RECALL,
+      |              ~~~~~~~~~~~~~~~~~~~~~
+  251 |              SPELL_RUNE_OF_PROTECTION,
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~
+  252 |              SPELL_BLASTING,
+      |              ~~~~~~~~~~~~~~~
+  253 |              -1,
+      |              ~~~
+  254 |              -1,
+      |              ~~~
+  255 |              -1),
+      |              ~~~
+x-spell.c:168:25: note: expanded from macro 'BOOK'
+  168 |          BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+      |                                ^~~~~~~~
+x-spell.c:162:50: note: expanded from macro 'BOOK1'
+  162 | #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+      |                                                  ^  ~~~
+x-spell.c:247:2: warning: shift count is negative [-Wshift-count-negative]
+  247 |         BOOK(SPELL_DOOR_CREATION,
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+  248 |              SPELL_STAIR_CREATION,
+      |              ~~~~~~~~~~~~~~~~~~~~~
+  249 |              SPELL_TELEPORT_LEVEL,
+      |              ~~~~~~~~~~~~~~~~~~~~~
+  250 |              SPELL_WORD_OF_RECALL,
+      |              ~~~~~~~~~~~~~~~~~~~~~
+  251 |              SPELL_RUNE_OF_PROTECTION,
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~
+  252 |              SPELL_BLASTING,
+      |              ~~~~~~~~~~~~~~~
+  253 |              -1,
+      |              ~~~
+  254 |              -1,
+      |              ~~~
+  255 |              -1),
+      |              ~~~
+x-spell.c:168:36: note: expanded from macro 'BOOK'
+  168 |          BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+      |                                           ^~~~~~~~
+x-spell.c:162:50: note: expanded from macro 'BOOK1'
+  162 | #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+      |                                                  ^  ~~~
+x-spell.c:247:2: warning: shift count is negative [-Wshift-count-negative]
+  247 |         BOOK(SPELL_DOOR_CREATION,
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+  248 |              SPELL_STAIR_CREATION,
+      |              ~~~~~~~~~~~~~~~~~~~~~
+  249 |              SPELL_TELEPORT_LEVEL,
+      |              ~~~~~~~~~~~~~~~~~~~~~
+  250 |              SPELL_WORD_OF_RECALL,
+      |              ~~~~~~~~~~~~~~~~~~~~~
+  251 |              SPELL_RUNE_OF_PROTECTION,
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~
+  252 |              SPELL_BLASTING,
+      |              ~~~~~~~~~~~~~~~
+  253 |              -1,
+      |              ~~~
+  254 |              -1,
+      |              ~~~
+  255 |              -1),
+      |              ~~~
+x-spell.c:170:14: note: expanded from macro 'BOOK'
+  170 |          BOOK2(f) | BOOK2(g) | BOOK2(h) | BOOK2(i)) \
+      |                     ^~~~~~~~
+x-spell.c:163:54: note: expanded from macro 'BOOK2'
+  163 | #define BOOK2(x) (((x) < 0) ? 0 : (x) < 32 ? 0 : (1L << ((x) % 32)))
+      |                                                      ^  ~~~~~~~~~~
+x-spell.c:247:2: warning: shift count is negative [-Wshift-count-negative]
+  247 |         BOOK(SPELL_DOOR_CREATION,
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+  248 |              SPELL_STAIR_CREATION,
+      |              ~~~~~~~~~~~~~~~~~~~~~
+  249 |              SPELL_TELEPORT_LEVEL,
+      |              ~~~~~~~~~~~~~~~~~~~~~
+  250 |              SPELL_WORD_OF_RECALL,
+      |              ~~~~~~~~~~~~~~~~~~~~~
+  251 |              SPELL_RUNE_OF_PROTECTION,
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~
+  252 |              SPELL_BLASTING,
+      |              ~~~~~~~~~~~~~~~
+  253 |              -1,
+      |              ~~~
+  254 |              -1,
+      |              ~~~
+  255 |              -1),
+      |              ~~~
+x-spell.c:170:25: note: expanded from macro 'BOOK'
+  170 |          BOOK2(f) | BOOK2(g) | BOOK2(h) | BOOK2(i)) \
+      |                                ^~~~~~~~
+x-spell.c:163:54: note: expanded from macro 'BOOK2'
+  163 | #define BOOK2(x) (((x) < 0) ? 0 : (x) < 32 ? 0 : (1L << ((x) % 32)))
+      |                                                      ^  ~~~~~~~~~~
+x-spell.c:247:2: warning: shift count is negative [-Wshift-count-negative]
+  247 |         BOOK(SPELL_DOOR_CREATION,
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+  248 |              SPELL_STAIR_CREATION,
+      |              ~~~~~~~~~~~~~~~~~~~~~
+  249 |              SPELL_TELEPORT_LEVEL,
+      |              ~~~~~~~~~~~~~~~~~~~~~
+  250 |              SPELL_WORD_OF_RECALL,
+      |              ~~~~~~~~~~~~~~~~~~~~~
+  251 |              SPELL_RUNE_OF_PROTECTION,
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~
+  252 |              SPELL_BLASTING,
+      |              ~~~~~~~~~~~~~~~
+  253 |              -1,
+      |              ~~~
+  254 |              -1,
+      |              ~~~
+  255 |              -1),
+      |              ~~~
+x-spell.c:170:36: note: expanded from macro 'BOOK'
+  170 |          BOOK2(f) | BOOK2(g) | BOOK2(h) | BOOK2(i)) \
+      |                                           ^~~~~~~~
+x-spell.c:163:54: note: expanded from macro 'BOOK2'
+  163 | #define BOOK2(x) (((x) < 0) ? 0 : (x) < 32 ? 0 : (1L << ((x) % 32)))
+      |                                                      ^  ~~~~~~~~~~
+x-spell.c:258:2: warning: shift count is negative [-Wshift-count-negative]
+  258 |         BOOK(SPELL_HEROISM,
+      |         ^~~~~~~~~~~~~~~~~~~
+  259 |              SPELL_BERSERKER,
+      |              ~~~~~~~~~~~~~~~~
+  260 |              SPELL_ENCHANT_ARMOR,
+      |              ~~~~~~~~~~~~~~~~~~~~
+  261 |              SPELL_ENCHANT_WEAPON,
+      |              ~~~~~~~~~~~~~~~~~~~~~
+  262 |              SPELL_RECHARGE_ITEM_II,
+      |              ~~~~~~~~~~~~~~~~~~~~~~~
+  263 |              SPELL_ELEMENTAL_BRAND,
+      |              ~~~~~~~~~~~~~~~~~~~~~~
+  264 |              -1,
+      |              ~~~
+  265 |              -1,
+      |              ~~~
+  266 |              -1),
+      |              ~~~
+x-spell.c:168:14: note: expanded from macro 'BOOK'
+  168 |          BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+      |                     ^~~~~~~~
+x-spell.c:162:50: note: expanded from macro 'BOOK1'
+  162 | #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+      |                                                  ^  ~~~
+x-spell.c:258:2: warning: shift count is negative [-Wshift-count-negative]
+  258 |         BOOK(SPELL_HEROISM,
+      |         ^~~~~~~~~~~~~~~~~~~
+  259 |              SPELL_BERSERKER,
+      |              ~~~~~~~~~~~~~~~~
+  260 |              SPELL_ENCHANT_ARMOR,
+      |              ~~~~~~~~~~~~~~~~~~~~
+  261 |              SPELL_ENCHANT_WEAPON,
+      |              ~~~~~~~~~~~~~~~~~~~~~
+  262 |              SPELL_RECHARGE_ITEM_II,
+      |              ~~~~~~~~~~~~~~~~~~~~~~~
+  263 |              SPELL_ELEMENTAL_BRAND,
+      |              ~~~~~~~~~~~~~~~~~~~~~~
+  264 |              -1,
+      |              ~~~
+  265 |              -1,
+      |              ~~~
+  266 |              -1),
+      |              ~~~
+x-spell.c:168:25: note: expanded from macro 'BOOK'
+  168 |          BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+      |                                ^~~~~~~~
+x-spell.c:162:50: note: expanded from macro 'BOOK1'
+  162 | #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+      |                                                  ^  ~~~
+x-spell.c:258:2: warning: shift count is negative [-Wshift-count-negative]
+  258 |         BOOK(SPELL_HEROISM,
+      |         ^~~~~~~~~~~~~~~~~~~
+  259 |              SPELL_BERSERKER,
+      |              ~~~~~~~~~~~~~~~~
+  260 |              SPELL_ENCHANT_ARMOR,
+      |              ~~~~~~~~~~~~~~~~~~~~
+  261 |              SPELL_ENCHANT_WEAPON,
+      |              ~~~~~~~~~~~~~~~~~~~~~
+  262 |              SPELL_RECHARGE_ITEM_II,
+      |              ~~~~~~~~~~~~~~~~~~~~~~~
+  263 |              SPELL_ELEMENTAL_BRAND,
+      |              ~~~~~~~~~~~~~~~~~~~~~~
+  264 |              -1,
+      |              ~~~
+  265 |              -1,
+      |              ~~~
+  266 |              -1),
+      |              ~~~
+x-spell.c:168:36: note: expanded from macro 'BOOK'
+  168 |          BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+      |                                           ^~~~~~~~
+x-spell.c:162:50: note: expanded from macro 'BOOK1'
+  162 | #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+      |                                                  ^  ~~~
+x-spell.c:258:2: warning: shift count is negative [-Wshift-count-negative]
+  258 |         BOOK(SPELL_HEROISM,
+      |         ^~~~~~~~~~~~~~~~~~~
+  259 |              SPELL_BERSERKER,
+      |              ~~~~~~~~~~~~~~~~
+  260 |              SPELL_ENCHANT_ARMOR,
+      |              ~~~~~~~~~~~~~~~~~~~~
+  261 |              SPELL_ENCHANT_WEAPON,
+      |              ~~~~~~~~~~~~~~~~~~~~~
+  262 |              SPELL_RECHARGE_ITEM_II,
+      |              ~~~~~~~~~~~~~~~~~~~~~~~
+  263 |              SPELL_ELEMENTAL_BRAND,
+      |              ~~~~~~~~~~~~~~~~~~~~~~
+  264 |              -1,
+      |              ~~~
+  265 |              -1,
+      |              ~~~
+  266 |              -1),
+      |              ~~~
+x-spell.c:170:14: note: expanded from macro 'BOOK'
+  170 |          BOOK2(f) | BOOK2(g) | BOOK2(h) | BOOK2(i)) \
+      |                     ^~~~~~~~
+x-spell.c:163:54: note: expanded from macro 'BOOK2'
+  163 | #define BOOK2(x) (((x) < 0) ? 0 : (x) < 32 ? 0 : (1L << ((x) % 32)))
+      |                                                      ^  ~~~~~~~~~~
+x-spell.c:258:2: warning: shift count is negative [-Wshift-count-negative]
+  258 |         BOOK(SPELL_HEROISM,
+      |         ^~~~~~~~~~~~~~~~~~~
+  259 |              SPELL_BERSERKER,
+      |              ~~~~~~~~~~~~~~~~
+  260 |              SPELL_ENCHANT_ARMOR,
+      |              ~~~~~~~~~~~~~~~~~~~~
+  261 |              SPELL_ENCHANT_WEAPON,
+      |              ~~~~~~~~~~~~~~~~~~~~~
+  262 |              SPELL_RECHARGE_ITEM_II,
+      |              ~~~~~~~~~~~~~~~~~~~~~~~
+  263 |              SPELL_ELEMENTAL_BRAND,
+      |              ~~~~~~~~~~~~~~~~~~~~~~
+  264 |              -1,
+      |              ~~~
+  265 |              -1,
+      |              ~~~
+  266 |              -1),
+      |              ~~~
+x-spell.c:170:25: note: expanded from macro 'BOOK'
+  170 |          BOOK2(f) | BOOK2(g) | BOOK2(h) | BOOK2(i)) \
+      |                                ^~~~~~~~
+x-spell.c:163:54: note: expanded from macro 'BOOK2'
+  163 | #define BOOK2(x) (((x) < 0) ? 0 : (x) < 32 ? 0 : (1L << ((x) % 32)))
+      |                                                      ^  ~~~~~~~~~~
+x-spell.c:258:2: warning: shift count is negative [-Wshift-count-negative]
+  258 |         BOOK(SPELL_HEROISM,
+      |         ^~~~~~~~~~~~~~~~~~~
+  259 |              SPELL_BERSERKER,
+      |              ~~~~~~~~~~~~~~~~
+  260 |              SPELL_ENCHANT_ARMOR,
+      |              ~~~~~~~~~~~~~~~~~~~~
+  261 |              SPELL_ENCHANT_WEAPON,
+      |              ~~~~~~~~~~~~~~~~~~~~~
+  262 |              SPELL_RECHARGE_ITEM_II,
+      |              ~~~~~~~~~~~~~~~~~~~~~~~
+  263 |              SPELL_ELEMENTAL_BRAND,
+      |              ~~~~~~~~~~~~~~~~~~~~~~
+  264 |              -1,
+      |              ~~~
+  265 |              -1,
+      |              ~~~
+  266 |              -1),
+      |              ~~~
+x-spell.c:170:36: note: expanded from macro 'BOOK'
+  170 |          BOOK2(f) | BOOK2(g) | BOOK2(h) | BOOK2(i)) \
+      |                                           ^~~~~~~~
+x-spell.c:163:54: note: expanded from macro 'BOOK2'
+  163 | #define BOOK2(x) (((x) < 0) ? 0 : (x) < 32 ? 0 : (1L << ((x) % 32)))
+      |                                                      ^  ~~~~~~~~~~
+x-spell.c:269:2: warning: shift count is negative [-Wshift-count-negative]
+  269 |         BOOK(SPELL_EARTHQUAKE,
+      |         ^~~~~~~~~~~~~~~~~~~~~~
+  270 |                  SPELL_REND_SOUL,
+      |                  ~~~~~~~~~~~~~~~~
+  271 |              SPELL_GENOCIDE,
+      |              ~~~~~~~~~~~~~~~
+  272 |              SPELL_WORD_OF_DESTRUCTION,
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~~
+  273 |              SPELL_MASS_GENOCIDE,
+      |              ~~~~~~~~~~~~~~~~~~~~
+  274 |                  SPELL_LAW_STRIKE,
+      |                  ~~~~~~~~~~~~~~~~~
+  275 |              SPELL_CHAOS_STRIKE,
+      |              ~~~~~~~~~~~~~~~~~~~
+  276 |              SPELL_MANA_STORM,
+      |              ~~~~~~~~~~~~~~~~~
+  277 |              -1),
+      |              ~~~
+x-spell.c:168:36: note: expanded from macro 'BOOK'
+  168 |          BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+      |                                           ^~~~~~~~
+x-spell.c:162:50: note: expanded from macro 'BOOK1'
+  162 | #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+      |                                                  ^  ~~~
+x-spell.c:269:2: warning: shift count is negative [-Wshift-count-negative]
+  269 |         BOOK(SPELL_EARTHQUAKE,
+      |         ^~~~~~~~~~~~~~~~~~~~~~
+  270 |                  SPELL_REND_SOUL,
+      |                  ~~~~~~~~~~~~~~~~
+  271 |              SPELL_GENOCIDE,
+      |              ~~~~~~~~~~~~~~~
+  272 |              SPELL_WORD_OF_DESTRUCTION,
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~~
+  273 |              SPELL_MASS_GENOCIDE,
+      |              ~~~~~~~~~~~~~~~~~~~~
+  274 |                  SPELL_LAW_STRIKE,
+      |                  ~~~~~~~~~~~~~~~~~
+  275 |              SPELL_CHAOS_STRIKE,
+      |              ~~~~~~~~~~~~~~~~~~~
+  276 |              SPELL_MANA_STORM,
+      |              ~~~~~~~~~~~~~~~~~
+  277 |              -1),
+      |              ~~~
+x-spell.c:170:36: note: expanded from macro 'BOOK'
+  170 |          BOOK2(f) | BOOK2(g) | BOOK2(h) | BOOK2(i)) \
+      |                                           ^~~~~~~~
+x-spell.c:163:54: note: expanded from macro 'BOOK2'
+  163 | #define BOOK2(x) (((x) < 0) ? 0 : (x) < 32 ? 0 : (1L << ((x) % 32)))
+      |                                                      ^  ~~~~~~~~~~
+x-spell.c:282:3: warning: shift count is negative [-Wshift-count-negative]
+  282 |                 BOOK(PRAYER_DETECT_EVIL,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~
+  283 |                          PRAYER_CURE_LIGHT_WOUNDS,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~~~
+  284 |                          PRAYER_BLESS,
+      |                          ~~~~~~~~~~~~~
+  285 |                          PRAYER_REMOVE_FEAR,
+      |                          ~~~~~~~~~~~~~~~~~~~
+  286 |                          PRAYER_CALL_LIGHT,
+      |                          ~~~~~~~~~~~~~~~~~~
+  287 |                          PRAYER_FIND_TRAPS,
+      |                          ~~~~~~~~~~~~~~~~~~
+  288 |                          PRAYER_DETECT_DOORS_STAIRS,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  289 |                          PRAYER_SLOW_POISON,
+      |                          ~~~~~~~~~~~~~~~~~~~
+  290 |                          -1),
+      |                          ~~~
+x-spell.c:168:36: note: expanded from macro 'BOOK'
+  168 |          BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+      |                                           ^~~~~~~~
+x-spell.c:162:50: note: expanded from macro 'BOOK1'
+  162 | #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+      |                                                  ^  ~~~
+x-spell.c:282:3: warning: shift count is negative [-Wshift-count-negative]
+  282 |                 BOOK(PRAYER_DETECT_EVIL,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~
+  283 |                          PRAYER_CURE_LIGHT_WOUNDS,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~~~
+  284 |                          PRAYER_BLESS,
+      |                          ~~~~~~~~~~~~~
+  285 |                          PRAYER_REMOVE_FEAR,
+      |                          ~~~~~~~~~~~~~~~~~~~
+  286 |                          PRAYER_CALL_LIGHT,
+      |                          ~~~~~~~~~~~~~~~~~~
+  287 |                          PRAYER_FIND_TRAPS,
+      |                          ~~~~~~~~~~~~~~~~~~
+  288 |                          PRAYER_DETECT_DOORS_STAIRS,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  289 |                          PRAYER_SLOW_POISON,
+      |                          ~~~~~~~~~~~~~~~~~~~
+  290 |                          -1),
+      |                          ~~~
+x-spell.c:170:36: note: expanded from macro 'BOOK'
+  170 |          BOOK2(f) | BOOK2(g) | BOOK2(h) | BOOK2(i)) \
+      |                                           ^~~~~~~~
+x-spell.c:163:54: note: expanded from macro 'BOOK2'
+  163 | #define BOOK2(x) (((x) < 0) ? 0 : (x) < 32 ? 0 : (1L << ((x) % 32)))
+      |                                                      ^  ~~~~~~~~~~
+x-spell.c:291:3: warning: shift count is negative [-Wshift-count-negative]
+  291 |                 BOOK(PRAYER_SCARE_MONSTER,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~
+  292 |                          PRAYER_PORTAL,
+      |                          ~~~~~~~~~~~~~~
+  293 |                          PRAYER_CURE_SERIOUS_WOUNDS,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  294 |                          PRAYER_CHANT,
+      |                          ~~~~~~~~~~~~~
+  295 |                          PRAYER_SANCTUARY,
+      |                          ~~~~~~~~~~~~~~~~~
+  296 |                          PRAYER_SATISFY_HUNGER,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~
+  297 |                          PRAYER_REMOVE_CURSE,
+      |                          ~~~~~~~~~~~~~~~~~~~~
+  298 |                          PRAYER_RESIST_HEAT_COLD,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~~
+  299 |                          -1),
+      |                          ~~~
+x-spell.c:168:36: note: expanded from macro 'BOOK'
+  168 |          BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+      |                                           ^~~~~~~~
+x-spell.c:162:50: note: expanded from macro 'BOOK1'
+  162 | #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+      |                                                  ^  ~~~
+x-spell.c:291:3: warning: shift count is negative [-Wshift-count-negative]
+  291 |                 BOOK(PRAYER_SCARE_MONSTER,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~
+  292 |                          PRAYER_PORTAL,
+      |                          ~~~~~~~~~~~~~~
+  293 |                          PRAYER_CURE_SERIOUS_WOUNDS,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  294 |                          PRAYER_CHANT,
+      |                          ~~~~~~~~~~~~~
+  295 |                          PRAYER_SANCTUARY,
+      |                          ~~~~~~~~~~~~~~~~~
+  296 |                          PRAYER_SATISFY_HUNGER,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~
+  297 |                          PRAYER_REMOVE_CURSE,
+      |                          ~~~~~~~~~~~~~~~~~~~~
+  298 |                          PRAYER_RESIST_HEAT_COLD,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~~
+  299 |                          -1),
+      |                          ~~~
+x-spell.c:170:36: note: expanded from macro 'BOOK'
+  170 |          BOOK2(f) | BOOK2(g) | BOOK2(h) | BOOK2(i)) \
+      |                                           ^~~~~~~~
+x-spell.c:163:54: note: expanded from macro 'BOOK2'
+  163 | #define BOOK2(x) (((x) < 0) ? 0 : (x) < 32 ? 0 : (1L << ((x) % 32)))
+      |                                                      ^  ~~~~~~~~~~
+x-spell.c:309:3: warning: shift count is negative [-Wshift-count-negative]
+  309 |                 BOOK(PRAYER_PRAYER,
+      |                 ^~~~~~~~~~~~~~~~~~~
+  310 |                          PRAYER_DISPEL_UNDEAD,
+      |                          ~~~~~~~~~~~~~~~~~~~~~
+  311 |                          PRAYER_HEAL,
+      |                          ~~~~~~~~~~~~
+  312 |                          PRAYER_DISPEL_EVIL,
+      |                          ~~~~~~~~~~~~~~~~~~~
+  313 |                          PRAYER_GLYPH_OF_WARDING,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~~
+  314 |                          PRAYER_HOLY_WORD,
+      |                          ~~~~~~~~~~~~~~~~~
+  315 |                          -1,
+      |                          ~~~
+  316 |                          -1,
+      |                          ~~~
+  317 |                          -1),
+      |                          ~~~
+x-spell.c:168:14: note: expanded from macro 'BOOK'
+  168 |          BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+      |                     ^~~~~~~~
+x-spell.c:162:50: note: expanded from macro 'BOOK1'
+  162 | #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+      |                                                  ^  ~~~
+x-spell.c:309:3: warning: shift count is negative [-Wshift-count-negative]
+  309 |                 BOOK(PRAYER_PRAYER,
+      |                 ^~~~~~~~~~~~~~~~~~~
+  310 |                          PRAYER_DISPEL_UNDEAD,
+      |                          ~~~~~~~~~~~~~~~~~~~~~
+  311 |                          PRAYER_HEAL,
+      |                          ~~~~~~~~~~~~
+  312 |                          PRAYER_DISPEL_EVIL,
+      |                          ~~~~~~~~~~~~~~~~~~~
+  313 |                          PRAYER_GLYPH_OF_WARDING,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~~
+  314 |                          PRAYER_HOLY_WORD,
+      |                          ~~~~~~~~~~~~~~~~~
+  315 |                          -1,
+      |                          ~~~
+  316 |                          -1,
+      |                          ~~~
+  317 |                          -1),
+      |                          ~~~
+x-spell.c:168:25: note: expanded from macro 'BOOK'
+  168 |          BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+      |                                ^~~~~~~~
+x-spell.c:162:50: note: expanded from macro 'BOOK1'
+  162 | #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+      |                                                  ^  ~~~
+x-spell.c:309:3: warning: shift count is negative [-Wshift-count-negative]
+  309 |                 BOOK(PRAYER_PRAYER,
+      |                 ^~~~~~~~~~~~~~~~~~~
+  310 |                          PRAYER_DISPEL_UNDEAD,
+      |                          ~~~~~~~~~~~~~~~~~~~~~
+  311 |                          PRAYER_HEAL,
+      |                          ~~~~~~~~~~~~
+  312 |                          PRAYER_DISPEL_EVIL,
+      |                          ~~~~~~~~~~~~~~~~~~~
+  313 |                          PRAYER_GLYPH_OF_WARDING,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~~
+  314 |                          PRAYER_HOLY_WORD,
+      |                          ~~~~~~~~~~~~~~~~~
+  315 |                          -1,
+      |                          ~~~
+  316 |                          -1,
+      |                          ~~~
+  317 |                          -1),
+      |                          ~~~
+x-spell.c:168:36: note: expanded from macro 'BOOK'
+  168 |          BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+      |                                           ^~~~~~~~
+x-spell.c:162:50: note: expanded from macro 'BOOK1'
+  162 | #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+      |                                                  ^  ~~~
+x-spell.c:309:3: warning: shift count is negative [-Wshift-count-negative]
+  309 |                 BOOK(PRAYER_PRAYER,
+      |                 ^~~~~~~~~~~~~~~~~~~
+  310 |                          PRAYER_DISPEL_UNDEAD,
+      |                          ~~~~~~~~~~~~~~~~~~~~~
+  311 |                          PRAYER_HEAL,
+      |                          ~~~~~~~~~~~~
+  312 |                          PRAYER_DISPEL_EVIL,
+      |                          ~~~~~~~~~~~~~~~~~~~
+  313 |                          PRAYER_GLYPH_OF_WARDING,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~~
+  314 |                          PRAYER_HOLY_WORD,
+      |                          ~~~~~~~~~~~~~~~~~
+  315 |                          -1,
+      |                          ~~~
+  316 |                          -1,
+      |                          ~~~
+  317 |                          -1),
+      |                          ~~~
+x-spell.c:170:14: note: expanded from macro 'BOOK'
+  170 |          BOOK2(f) | BOOK2(g) | BOOK2(h) | BOOK2(i)) \
+      |                     ^~~~~~~~
+x-spell.c:163:54: note: expanded from macro 'BOOK2'
+  163 | #define BOOK2(x) (((x) < 0) ? 0 : (x) < 32 ? 0 : (1L << ((x) % 32)))
+      |                                                      ^  ~~~~~~~~~~
+x-spell.c:309:3: warning: shift count is negative [-Wshift-count-negative]
+  309 |                 BOOK(PRAYER_PRAYER,
+      |                 ^~~~~~~~~~~~~~~~~~~
+  310 |                          PRAYER_DISPEL_UNDEAD,
+      |                          ~~~~~~~~~~~~~~~~~~~~~
+  311 |                          PRAYER_HEAL,
+      |                          ~~~~~~~~~~~~
+  312 |                          PRAYER_DISPEL_EVIL,
+      |                          ~~~~~~~~~~~~~~~~~~~
+  313 |                          PRAYER_GLYPH_OF_WARDING,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~~
+  314 |                          PRAYER_HOLY_WORD,
+      |                          ~~~~~~~~~~~~~~~~~
+  315 |                          -1,
+      |                          ~~~
+  316 |                          -1,
+      |                          ~~~
+  317 |                          -1),
+      |                          ~~~
+x-spell.c:170:25: note: expanded from macro 'BOOK'
+  170 |          BOOK2(f) | BOOK2(g) | BOOK2(h) | BOOK2(i)) \
+      |                                ^~~~~~~~
+x-spell.c:163:54: note: expanded from macro 'BOOK2'
+  163 | #define BOOK2(x) (((x) < 0) ? 0 : (x) < 32 ? 0 : (1L << ((x) % 32)))
+      |                                                      ^  ~~~~~~~~~~
+x-spell.c:309:3: warning: shift count is negative [-Wshift-count-negative]
+  309 |                 BOOK(PRAYER_PRAYER,
+      |                 ^~~~~~~~~~~~~~~~~~~
+  310 |                          PRAYER_DISPEL_UNDEAD,
+      |                          ~~~~~~~~~~~~~~~~~~~~~
+  311 |                          PRAYER_HEAL,
+      |                          ~~~~~~~~~~~~
+  312 |                          PRAYER_DISPEL_EVIL,
+      |                          ~~~~~~~~~~~~~~~~~~~
+  313 |                          PRAYER_GLYPH_OF_WARDING,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~~
+  314 |                          PRAYER_HOLY_WORD,
+      |                          ~~~~~~~~~~~~~~~~~
+  315 |                          -1,
+      |                          ~~~
+  316 |                          -1,
+      |                          ~~~
+  317 |                          -1),
+      |                          ~~~
+x-spell.c:170:36: note: expanded from macro 'BOOK'
+  170 |          BOOK2(f) | BOOK2(g) | BOOK2(h) | BOOK2(i)) \
+      |                                           ^~~~~~~~
+x-spell.c:163:54: note: expanded from macro 'BOOK2'
+  163 | #define BOOK2(x) (((x) < 0) ? 0 : (x) < 32 ? 0 : (1L << ((x) % 32)))
+      |                                                      ^  ~~~~~~~~~~
+x-spell.c:318:3: warning: shift count is negative [-Wshift-count-negative]
+  318 |                 BOOK(PRAYER_BLINK,
+      |                 ^~~~~~~~~~~~~~~~~~
+  319 |                          PRAYER_TELEPORT_SELF,
+      |                          ~~~~~~~~~~~~~~~~~~~~~
+  320 |                          PRAYER_TELEPORT_OTHER,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~
+  321 |                          PRAYER_TELEPORT_LEVEL,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~
+  322 |                          PRAYER_WORD_OF_RECALL,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~
+  323 |                          PRAYER_ALTER_REALITY,
+      |                          ~~~~~~~~~~~~~~~~~~~~~
+  324 |                          -1,
+      |                          ~~~
+  325 |                          -1,
+      |                          ~~~
+  326 |                          -1),
+      |                          ~~~
+x-spell.c:168:14: note: expanded from macro 'BOOK'
+  168 |          BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+      |                     ^~~~~~~~
+x-spell.c:162:50: note: expanded from macro 'BOOK1'
+  162 | #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+      |                                                  ^  ~~~
+x-spell.c:318:3: warning: shift count is negative [-Wshift-count-negative]
+  318 |                 BOOK(PRAYER_BLINK,
+      |                 ^~~~~~~~~~~~~~~~~~
+  319 |                          PRAYER_TELEPORT_SELF,
+      |                          ~~~~~~~~~~~~~~~~~~~~~
+  320 |                          PRAYER_TELEPORT_OTHER,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~
+  321 |                          PRAYER_TELEPORT_LEVEL,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~
+  322 |                          PRAYER_WORD_OF_RECALL,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~
+  323 |                          PRAYER_ALTER_REALITY,
+      |                          ~~~~~~~~~~~~~~~~~~~~~
+  324 |                          -1,
+      |                          ~~~
+  325 |                          -1,
+      |                          ~~~
+  326 |                          -1),
+      |                          ~~~
+x-spell.c:168:25: note: expanded from macro 'BOOK'
+  168 |          BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+      |                                ^~~~~~~~
+x-spell.c:162:50: note: expanded from macro 'BOOK1'
+  162 | #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+      |                                                  ^  ~~~
+x-spell.c:318:3: warning: shift count is negative [-Wshift-count-negative]
+  318 |                 BOOK(PRAYER_BLINK,
+      |                 ^~~~~~~~~~~~~~~~~~
+  319 |                          PRAYER_TELEPORT_SELF,
+      |                          ~~~~~~~~~~~~~~~~~~~~~
+  320 |                          PRAYER_TELEPORT_OTHER,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~
+  321 |                          PRAYER_TELEPORT_LEVEL,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~
+  322 |                          PRAYER_WORD_OF_RECALL,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~
+  323 |                          PRAYER_ALTER_REALITY,
+      |                          ~~~~~~~~~~~~~~~~~~~~~
+  324 |                          -1,
+      |                          ~~~
+  325 |                          -1,
+      |                          ~~~
+  326 |                          -1),
+      |                          ~~~
+x-spell.c:168:36: note: expanded from macro 'BOOK'
+  168 |          BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+      |                                           ^~~~~~~~
+x-spell.c:162:50: note: expanded from macro 'BOOK1'
+  162 | #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+      |                                                  ^  ~~~
+x-spell.c:318:3: warning: shift count is negative [-Wshift-count-negative]
+  318 |                 BOOK(PRAYER_BLINK,
+      |                 ^~~~~~~~~~~~~~~~~~
+  319 |                          PRAYER_TELEPORT_SELF,
+      |                          ~~~~~~~~~~~~~~~~~~~~~
+  320 |                          PRAYER_TELEPORT_OTHER,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~
+  321 |                          PRAYER_TELEPORT_LEVEL,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~
+  322 |                          PRAYER_WORD_OF_RECALL,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~
+  323 |                          PRAYER_ALTER_REALITY,
+      |                          ~~~~~~~~~~~~~~~~~~~~~
+  324 |                          -1,
+      |                          ~~~
+  325 |                          -1,
+      |                          ~~~
+  326 |                          -1),
+      |                          ~~~
+x-spell.c:170:14: note: expanded from macro 'BOOK'
+  170 |          BOOK2(f) | BOOK2(g) | BOOK2(h) | BOOK2(i)) \
+      |                     ^~~~~~~~
+x-spell.c:163:54: note: expanded from macro 'BOOK2'
+  163 | #define BOOK2(x) (((x) < 0) ? 0 : (x) < 32 ? 0 : (1L << ((x) % 32)))
+      |                                                      ^  ~~~~~~~~~~
+x-spell.c:318:3: warning: shift count is negative [-Wshift-count-negative]
+  318 |                 BOOK(PRAYER_BLINK,
+      |                 ^~~~~~~~~~~~~~~~~~
+  319 |                          PRAYER_TELEPORT_SELF,
+      |                          ~~~~~~~~~~~~~~~~~~~~~
+  320 |                          PRAYER_TELEPORT_OTHER,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~
+  321 |                          PRAYER_TELEPORT_LEVEL,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~
+  322 |                          PRAYER_WORD_OF_RECALL,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~
+  323 |                          PRAYER_ALTER_REALITY,
+      |                          ~~~~~~~~~~~~~~~~~~~~~
+  324 |                          -1,
+      |                          ~~~
+  325 |                          -1,
+      |                          ~~~
+  326 |                          -1),
+      |                          ~~~
+x-spell.c:170:25: note: expanded from macro 'BOOK'
+  170 |          BOOK2(f) | BOOK2(g) | BOOK2(h) | BOOK2(i)) \
+      |                                ^~~~~~~~
+x-spell.c:163:54: note: expanded from macro 'BOOK2'
+  163 | #define BOOK2(x) (((x) < 0) ? 0 : (x) < 32 ? 0 : (1L << ((x) % 32)))
+      |                                                      ^  ~~~~~~~~~~
+x-spell.c:318:3: warning: shift count is negative [-Wshift-count-negative]
+  318 |                 BOOK(PRAYER_BLINK,
+      |                 ^~~~~~~~~~~~~~~~~~
+  319 |                          PRAYER_TELEPORT_SELF,
+      |                          ~~~~~~~~~~~~~~~~~~~~~
+  320 |                          PRAYER_TELEPORT_OTHER,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~
+  321 |                          PRAYER_TELEPORT_LEVEL,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~
+  322 |                          PRAYER_WORD_OF_RECALL,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~
+  323 |                          PRAYER_ALTER_REALITY,
+      |                          ~~~~~~~~~~~~~~~~~~~~~
+  324 |                          -1,
+      |                          ~~~
+  325 |                          -1,
+      |                          ~~~
+  326 |                          -1),
+      |                          ~~~
+x-spell.c:170:36: note: expanded from macro 'BOOK'
+  170 |          BOOK2(f) | BOOK2(g) | BOOK2(h) | BOOK2(i)) \
+      |                                           ^~~~~~~~
+x-spell.c:163:54: note: expanded from macro 'BOOK2'
+  163 | #define BOOK2(x) (((x) < 0) ? 0 : (x) < 32 ? 0 : (1L << ((x) % 32)))
+      |                                                      ^  ~~~~~~~~~~
+x-spell.c:327:3: warning: shift count is negative [-Wshift-count-negative]
+  327 |                 BOOK(PRAYER_DETECT_MONSTERS,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  328 |                          PRAYER_DETECTION,
+      |                          ~~~~~~~~~~~~~~~~~
+  329 |                          PRAYER_PERCEPTION,
+      |                          ~~~~~~~~~~~~~~~~~~
+  330 |                          PRAYER_PROBING,
+      |                          ~~~~~~~~~~~~~~~
+  331 |                          PRAYER_CLAIRVOYANCE,
+      |                          ~~~~~~~~~~~~~~~~~~~~
+  332 |                          -1,
+      |                          ~~~
+  333 |                          -1,
+      |                          ~~~
+  334 |                          -1,
+      |                          ~~~
+  335 |                          -1),
+      |                          ~~~
+x-spell.c:168:3: note: expanded from macro 'BOOK'
+  168 |          BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+      |          ^~~~~~~~
+x-spell.c:162:50: note: expanded from macro 'BOOK1'
+  162 | #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+      |                                                  ^  ~~~
+x-spell.c:327:3: warning: shift count is negative [-Wshift-count-negative]
+  327 |                 BOOK(PRAYER_DETECT_MONSTERS,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  328 |                          PRAYER_DETECTION,
+      |                          ~~~~~~~~~~~~~~~~~
+  329 |                          PRAYER_PERCEPTION,
+      |                          ~~~~~~~~~~~~~~~~~~
+  330 |                          PRAYER_PROBING,
+      |                          ~~~~~~~~~~~~~~~
+  331 |                          PRAYER_CLAIRVOYANCE,
+      |                          ~~~~~~~~~~~~~~~~~~~~
+  332 |                          -1,
+      |                          ~~~
+  333 |                          -1,
+      |                          ~~~
+  334 |                          -1,
+      |                          ~~~
+  335 |                          -1),
+      |                          ~~~
+x-spell.c:168:14: note: expanded from macro 'BOOK'
+  168 |          BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+      |                     ^~~~~~~~
+x-spell.c:162:50: note: expanded from macro 'BOOK1'
+  162 | #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+      |                                                  ^  ~~~
+x-spell.c:327:3: warning: shift count is negative [-Wshift-count-negative]
+  327 |                 BOOK(PRAYER_DETECT_MONSTERS,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  328 |                          PRAYER_DETECTION,
+      |                          ~~~~~~~~~~~~~~~~~
+  329 |                          PRAYER_PERCEPTION,
+      |                          ~~~~~~~~~~~~~~~~~~
+  330 |                          PRAYER_PROBING,
+      |                          ~~~~~~~~~~~~~~~
+  331 |                          PRAYER_CLAIRVOYANCE,
+      |                          ~~~~~~~~~~~~~~~~~~~~
+  332 |                          -1,
+      |                          ~~~
+  333 |                          -1,
+      |                          ~~~
+  334 |                          -1,
+      |                          ~~~
+  335 |                          -1),
+      |                          ~~~
+x-spell.c:168:25: note: expanded from macro 'BOOK'
+  168 |          BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+      |                                ^~~~~~~~
+x-spell.c:162:50: note: expanded from macro 'BOOK1'
+  162 | #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+      |                                                  ^  ~~~
+x-spell.c:327:3: warning: shift count is negative [-Wshift-count-negative]
+  327 |                 BOOK(PRAYER_DETECT_MONSTERS,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  328 |                          PRAYER_DETECTION,
+      |                          ~~~~~~~~~~~~~~~~~
+  329 |                          PRAYER_PERCEPTION,
+      |                          ~~~~~~~~~~~~~~~~~~
+  330 |                          PRAYER_PROBING,
+      |                          ~~~~~~~~~~~~~~~
+  331 |                          PRAYER_CLAIRVOYANCE,
+      |                          ~~~~~~~~~~~~~~~~~~~~
+  332 |                          -1,
+      |                          ~~~
+  333 |                          -1,
+      |                          ~~~
+  334 |                          -1,
+      |                          ~~~
+  335 |                          -1),
+      |                          ~~~
+x-spell.c:168:36: note: expanded from macro 'BOOK'
+  168 |          BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+      |                                           ^~~~~~~~
+x-spell.c:162:50: note: expanded from macro 'BOOK1'
+  162 | #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+      |                                                  ^  ~~~
+x-spell.c:327:3: warning: shift count is negative [-Wshift-count-negative]
+  327 |                 BOOK(PRAYER_DETECT_MONSTERS,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  328 |                          PRAYER_DETECTION,
+      |                          ~~~~~~~~~~~~~~~~~
+  329 |                          PRAYER_PERCEPTION,
+      |                          ~~~~~~~~~~~~~~~~~~
+  330 |                          PRAYER_PROBING,
+      |                          ~~~~~~~~~~~~~~~
+  331 |                          PRAYER_CLAIRVOYANCE,
+      |                          ~~~~~~~~~~~~~~~~~~~~
+  332 |                          -1,
+      |                          ~~~
+  333 |                          -1,
+      |                          ~~~
+  334 |                          -1,
+      |                          ~~~
+  335 |                          -1),
+      |                          ~~~
+x-spell.c:170:3: note: expanded from macro 'BOOK'
+  170 |          BOOK2(f) | BOOK2(g) | BOOK2(h) | BOOK2(i)) \
+      |          ^~~~~~~~
+x-spell.c:163:54: note: expanded from macro 'BOOK2'
+  163 | #define BOOK2(x) (((x) < 0) ? 0 : (x) < 32 ? 0 : (1L << ((x) % 32)))
+      |                                                      ^  ~~~~~~~~~~
+x-spell.c:327:3: warning: shift count is negative [-Wshift-count-negative]
+  327 |                 BOOK(PRAYER_DETECT_MONSTERS,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  328 |                          PRAYER_DETECTION,
+      |                          ~~~~~~~~~~~~~~~~~
+  329 |                          PRAYER_PERCEPTION,
+      |                          ~~~~~~~~~~~~~~~~~~
+  330 |                          PRAYER_PROBING,
+      |                          ~~~~~~~~~~~~~~~
+  331 |                          PRAYER_CLAIRVOYANCE,
+      |                          ~~~~~~~~~~~~~~~~~~~~
+  332 |                          -1,
+      |                          ~~~
+  333 |                          -1,
+      |                          ~~~
+  334 |                          -1,
+      |                          ~~~
+  335 |                          -1),
+      |                          ~~~
+x-spell.c:170:14: note: expanded from macro 'BOOK'
+  170 |          BOOK2(f) | BOOK2(g) | BOOK2(h) | BOOK2(i)) \
+      |                     ^~~~~~~~
+x-spell.c:163:54: note: expanded from macro 'BOOK2'
+  163 | #define BOOK2(x) (((x) < 0) ? 0 : (x) < 32 ? 0 : (1L << ((x) % 32)))
+      |                                                      ^  ~~~~~~~~~~
+x-spell.c:327:3: warning: shift count is negative [-Wshift-count-negative]
+  327 |                 BOOK(PRAYER_DETECT_MONSTERS,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  328 |                          PRAYER_DETECTION,
+      |                          ~~~~~~~~~~~~~~~~~
+  329 |                          PRAYER_PERCEPTION,
+      |                          ~~~~~~~~~~~~~~~~~~
+  330 |                          PRAYER_PROBING,
+      |                          ~~~~~~~~~~~~~~~
+  331 |                          PRAYER_CLAIRVOYANCE,
+      |                          ~~~~~~~~~~~~~~~~~~~~
+  332 |                          -1,
+      |                          ~~~
+  333 |                          -1,
+      |                          ~~~
+  334 |                          -1,
+      |                          ~~~
+  335 |                          -1),
+      |                          ~~~
+x-spell.c:170:25: note: expanded from macro 'BOOK'
+  170 |          BOOK2(f) | BOOK2(g) | BOOK2(h) | BOOK2(i)) \
+      |                                ^~~~~~~~
+x-spell.c:163:54: note: expanded from macro 'BOOK2'
+  163 | #define BOOK2(x) (((x) < 0) ? 0 : (x) < 32 ? 0 : (1L << ((x) % 32)))
+      |                                                      ^  ~~~~~~~~~~
+x-spell.c:327:3: warning: shift count is negative [-Wshift-count-negative]
+  327 |                 BOOK(PRAYER_DETECT_MONSTERS,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  328 |                          PRAYER_DETECTION,
+      |                          ~~~~~~~~~~~~~~~~~
+  329 |                          PRAYER_PERCEPTION,
+      |                          ~~~~~~~~~~~~~~~~~~
+  330 |                          PRAYER_PROBING,
+      |                          ~~~~~~~~~~~~~~~
+  331 |                          PRAYER_CLAIRVOYANCE,
+      |                          ~~~~~~~~~~~~~~~~~~~~
+  332 |                          -1,
+      |                          ~~~
+  333 |                          -1,
+      |                          ~~~
+  334 |                          -1,
+      |                          ~~~
+  335 |                          -1),
+      |                          ~~~
+x-spell.c:170:36: note: expanded from macro 'BOOK'
+  170 |          BOOK2(f) | BOOK2(g) | BOOK2(h) | BOOK2(i)) \
+      |                                           ^~~~~~~~
+x-spell.c:163:54: note: expanded from macro 'BOOK2'
+  163 | #define BOOK2(x) (((x) < 0) ? 0 : (x) < 32 ? 0 : (1L << ((x) % 32)))
+      |                                                      ^  ~~~~~~~~~~
+x-spell.c:336:3: warning: shift count is negative [-Wshift-count-negative]
+  336 |                 BOOK(PRAYER_CURE_SERIOUS_WOUNDS2,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  337 |                          PRAYER_CURE_MORTAL_WOUNDS2,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  338 |                          PRAYER_HEALING,
+      |                          ~~~~~~~~~~~~~~~
+  339 |                          PRAYER_RESTORATION,
+      |                          ~~~~~~~~~~~~~~~~~~~
+  340 |                          PRAYER_REMEMBRANCE,
+      |                          ~~~~~~~~~~~~~~~~~~~
+  341 |                          -1,
+      |                          ~~~
+  342 |                          -1,
+      |                          ~~~
+  343 |                          -1,
+      |                          ~~~
+  344 |                          -1),
+      |                          ~~~
+x-spell.c:168:3: note: expanded from macro 'BOOK'
+  168 |          BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+      |          ^~~~~~~~
+x-spell.c:162:50: note: expanded from macro 'BOOK1'
+  162 | #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+      |                                                  ^  ~~~
+x-spell.c:336:3: warning: shift count is negative [-Wshift-count-negative]
+  336 |                 BOOK(PRAYER_CURE_SERIOUS_WOUNDS2,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  337 |                          PRAYER_CURE_MORTAL_WOUNDS2,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  338 |                          PRAYER_HEALING,
+      |                          ~~~~~~~~~~~~~~~
+  339 |                          PRAYER_RESTORATION,
+      |                          ~~~~~~~~~~~~~~~~~~~
+  340 |                          PRAYER_REMEMBRANCE,
+      |                          ~~~~~~~~~~~~~~~~~~~
+  341 |                          -1,
+      |                          ~~~
+  342 |                          -1,
+      |                          ~~~
+  343 |                          -1,
+      |                          ~~~
+  344 |                          -1),
+      |                          ~~~
+x-spell.c:168:14: note: expanded from macro 'BOOK'
+  168 |          BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+      |                     ^~~~~~~~
+x-spell.c:162:50: note: expanded from macro 'BOOK1'
+  162 | #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+      |                                                  ^  ~~~
+x-spell.c:336:3: warning: shift count is negative [-Wshift-count-negative]
+  336 |                 BOOK(PRAYER_CURE_SERIOUS_WOUNDS2,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  337 |                          PRAYER_CURE_MORTAL_WOUNDS2,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  338 |                          PRAYER_HEALING,
+      |                          ~~~~~~~~~~~~~~~
+  339 |                          PRAYER_RESTORATION,
+      |                          ~~~~~~~~~~~~~~~~~~~
+  340 |                          PRAYER_REMEMBRANCE,
+      |                          ~~~~~~~~~~~~~~~~~~~
+  341 |                          -1,
+      |                          ~~~
+  342 |                          -1,
+      |                          ~~~
+  343 |                          -1,
+      |                          ~~~
+  344 |                          -1),
+      |                          ~~~
+x-spell.c:168:25: note: expanded from macro 'BOOK'
+  168 |          BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+      |                                ^~~~~~~~
+x-spell.c:162:50: note: expanded from macro 'BOOK1'
+  162 | #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+      |                                                  ^  ~~~
+x-spell.c:336:3: warning: shift count is negative [-Wshift-count-negative]
+  336 |                 BOOK(PRAYER_CURE_SERIOUS_WOUNDS2,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  337 |                          PRAYER_CURE_MORTAL_WOUNDS2,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  338 |                          PRAYER_HEALING,
+      |                          ~~~~~~~~~~~~~~~
+  339 |                          PRAYER_RESTORATION,
+      |                          ~~~~~~~~~~~~~~~~~~~
+  340 |                          PRAYER_REMEMBRANCE,
+      |                          ~~~~~~~~~~~~~~~~~~~
+  341 |                          -1,
+      |                          ~~~
+  342 |                          -1,
+      |                          ~~~
+  343 |                          -1,
+      |                          ~~~
+  344 |                          -1),
+      |                          ~~~
+x-spell.c:168:36: note: expanded from macro 'BOOK'
+  168 |          BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+      |                                           ^~~~~~~~
+x-spell.c:162:50: note: expanded from macro 'BOOK1'
+  162 | #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+      |                                                  ^  ~~~
+x-spell.c:336:3: warning: shift count is negative [-Wshift-count-negative]
+  336 |                 BOOK(PRAYER_CURE_SERIOUS_WOUNDS2,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  337 |                          PRAYER_CURE_MORTAL_WOUNDS2,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  338 |                          PRAYER_HEALING,
+      |                          ~~~~~~~~~~~~~~~
+  339 |                          PRAYER_RESTORATION,
+      |                          ~~~~~~~~~~~~~~~~~~~
+  340 |                          PRAYER_REMEMBRANCE,
+      |                          ~~~~~~~~~~~~~~~~~~~
+  341 |                          -1,
+      |                          ~~~
+  342 |                          -1,
+      |                          ~~~
+  343 |                          -1,
+      |                          ~~~
+  344 |                          -1),
+      |                          ~~~
+x-spell.c:170:3: note: expanded from macro 'BOOK'
+  170 |          BOOK2(f) | BOOK2(g) | BOOK2(h) | BOOK2(i)) \
+      |          ^~~~~~~~
+x-spell.c:163:54: note: expanded from macro 'BOOK2'
+  163 | #define BOOK2(x) (((x) < 0) ? 0 : (x) < 32 ? 0 : (1L << ((x) % 32)))
+      |                                                      ^  ~~~~~~~~~~
+x-spell.c:336:3: warning: shift count is negative [-Wshift-count-negative]
+  336 |                 BOOK(PRAYER_CURE_SERIOUS_WOUNDS2,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  337 |                          PRAYER_CURE_MORTAL_WOUNDS2,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  338 |                          PRAYER_HEALING,
+      |                          ~~~~~~~~~~~~~~~
+  339 |                          PRAYER_RESTORATION,
+      |                          ~~~~~~~~~~~~~~~~~~~
+  340 |                          PRAYER_REMEMBRANCE,
+      |                          ~~~~~~~~~~~~~~~~~~~
+  341 |                          -1,
+      |                          ~~~
+  342 |                          -1,
+      |                          ~~~
+  343 |                          -1,
+      |                          ~~~
+  344 |                          -1),
+      |                          ~~~
+x-spell.c:170:14: note: expanded from macro 'BOOK'
+  170 |          BOOK2(f) | BOOK2(g) | BOOK2(h) | BOOK2(i)) \
+      |                     ^~~~~~~~
+x-spell.c:163:54: note: expanded from macro 'BOOK2'
+  163 | #define BOOK2(x) (((x) < 0) ? 0 : (x) < 32 ? 0 : (1L << ((x) % 32)))
+      |                                                      ^  ~~~~~~~~~~
+x-spell.c:336:3: warning: shift count is negative [-Wshift-count-negative]
+  336 |                 BOOK(PRAYER_CURE_SERIOUS_WOUNDS2,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  337 |                          PRAYER_CURE_MORTAL_WOUNDS2,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  338 |                          PRAYER_HEALING,
+      |                          ~~~~~~~~~~~~~~~
+  339 |                          PRAYER_RESTORATION,
+      |                          ~~~~~~~~~~~~~~~~~~~
+  340 |                          PRAYER_REMEMBRANCE,
+      |                          ~~~~~~~~~~~~~~~~~~~
+  341 |                          -1,
+      |                          ~~~
+  342 |                          -1,
+      |                          ~~~
+  343 |                          -1,
+      |                          ~~~
+  344 |                          -1),
+      |                          ~~~
+x-spell.c:170:25: note: expanded from macro 'BOOK'
+  170 |          BOOK2(f) | BOOK2(g) | BOOK2(h) | BOOK2(i)) \
+      |                                ^~~~~~~~
+x-spell.c:163:54: note: expanded from macro 'BOOK2'
+  163 | #define BOOK2(x) (((x) < 0) ? 0 : (x) < 32 ? 0 : (1L << ((x) % 32)))
+      |                                                      ^  ~~~~~~~~~~
+x-spell.c:336:3: warning: shift count is negative [-Wshift-count-negative]
+  336 |                 BOOK(PRAYER_CURE_SERIOUS_WOUNDS2,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  337 |                          PRAYER_CURE_MORTAL_WOUNDS2,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  338 |                          PRAYER_HEALING,
+      |                          ~~~~~~~~~~~~~~~
+  339 |                          PRAYER_RESTORATION,
+      |                          ~~~~~~~~~~~~~~~~~~~
+  340 |                          PRAYER_REMEMBRANCE,
+      |                          ~~~~~~~~~~~~~~~~~~~
+  341 |                          -1,
+      |                          ~~~
+  342 |                          -1,
+      |                          ~~~
+  343 |                          -1,
+      |                          ~~~
+  344 |                          -1),
+      |                          ~~~
+x-spell.c:170:36: note: expanded from macro 'BOOK'
+  170 |          BOOK2(f) | BOOK2(g) | BOOK2(h) | BOOK2(i)) \
+      |                                           ^~~~~~~~
+x-spell.c:163:54: note: expanded from macro 'BOOK2'
+  163 | #define BOOK2(x) (((x) < 0) ? 0 : (x) < 32 ? 0 : (1L << ((x) % 32)))
+      |                                                      ^  ~~~~~~~~~~
+x-spell.c:345:3: warning: shift count is negative [-Wshift-count-negative]
+  345 |                 BOOK(PRAYER_UNBARRING_WAYS,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+  346 |                          PRAYER_RECHARGING,
+      |                          ~~~~~~~~~~~~~~~~~~
+  347 |                          PRAYER_DISPEL_CURSE,
+      |                          ~~~~~~~~~~~~~~~~~~~~
+  348 |                          PRAYER_ENCHANT_WEAPON,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~
+  349 |                          PRAYER_ENCHANT_ARMOUR,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~
+  350 |                          PRAYER_ELEMENTAL_BRAND,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~
+  351 |                          -1,
+      |                          ~~~
+  352 |                          -1,
+      |                          ~~~
+  353 |                          -1),
+      |                          ~~~
+x-spell.c:168:14: note: expanded from macro 'BOOK'
+  168 |          BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+      |                     ^~~~~~~~
+x-spell.c:162:50: note: expanded from macro 'BOOK1'
+  162 | #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+      |                                                  ^  ~~~
+x-spell.c:345:3: warning: shift count is negative [-Wshift-count-negative]
+  345 |                 BOOK(PRAYER_UNBARRING_WAYS,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+  346 |                          PRAYER_RECHARGING,
+      |                          ~~~~~~~~~~~~~~~~~~
+  347 |                          PRAYER_DISPEL_CURSE,
+      |                          ~~~~~~~~~~~~~~~~~~~~
+  348 |                          PRAYER_ENCHANT_WEAPON,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~
+  349 |                          PRAYER_ENCHANT_ARMOUR,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~
+  350 |                          PRAYER_ELEMENTAL_BRAND,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~
+  351 |                          -1,
+      |                          ~~~
+  352 |                          -1,
+      |                          ~~~
+  353 |                          -1),
+      |                          ~~~
+x-spell.c:168:25: note: expanded from macro 'BOOK'
+  168 |          BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+      |                                ^~~~~~~~
+x-spell.c:162:50: note: expanded from macro 'BOOK1'
+  162 | #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+      |                                                  ^  ~~~
+x-spell.c:345:3: warning: shift count is negative [-Wshift-count-negative]
+  345 |                 BOOK(PRAYER_UNBARRING_WAYS,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+  346 |                          PRAYER_RECHARGING,
+      |                          ~~~~~~~~~~~~~~~~~~
+  347 |                          PRAYER_DISPEL_CURSE,
+      |                          ~~~~~~~~~~~~~~~~~~~~
+  348 |                          PRAYER_ENCHANT_WEAPON,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~
+  349 |                          PRAYER_ENCHANT_ARMOUR,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~
+  350 |                          PRAYER_ELEMENTAL_BRAND,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~
+  351 |                          -1,
+      |                          ~~~
+  352 |                          -1,
+      |                          ~~~
+  353 |                          -1),
+      |                          ~~~
+x-spell.c:168:36: note: expanded from macro 'BOOK'
+  168 |          BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+      |                                           ^~~~~~~~
+x-spell.c:162:50: note: expanded from macro 'BOOK1'
+  162 | #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+      |                                                  ^  ~~~
+x-spell.c:345:3: warning: shift count is negative [-Wshift-count-negative]
+  345 |                 BOOK(PRAYER_UNBARRING_WAYS,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+  346 |                          PRAYER_RECHARGING,
+      |                          ~~~~~~~~~~~~~~~~~~
+  347 |                          PRAYER_DISPEL_CURSE,
+      |                          ~~~~~~~~~~~~~~~~~~~~
+  348 |                          PRAYER_ENCHANT_WEAPON,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~
+  349 |                          PRAYER_ENCHANT_ARMOUR,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~
+  350 |                          PRAYER_ELEMENTAL_BRAND,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~
+  351 |                          -1,
+      |                          ~~~
+  352 |                          -1,
+      |                          ~~~
+  353 |                          -1),
+      |                          ~~~
+x-spell.c:170:14: note: expanded from macro 'BOOK'
+  170 |          BOOK2(f) | BOOK2(g) | BOOK2(h) | BOOK2(i)) \
+      |                     ^~~~~~~~
+x-spell.c:163:54: note: expanded from macro 'BOOK2'
+  163 | #define BOOK2(x) (((x) < 0) ? 0 : (x) < 32 ? 0 : (1L << ((x) % 32)))
+      |                                                      ^  ~~~~~~~~~~
+x-spell.c:345:3: warning: shift count is negative [-Wshift-count-negative]
+  345 |                 BOOK(PRAYER_UNBARRING_WAYS,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+  346 |                          PRAYER_RECHARGING,
+      |                          ~~~~~~~~~~~~~~~~~~
+  347 |                          PRAYER_DISPEL_CURSE,
+      |                          ~~~~~~~~~~~~~~~~~~~~
+  348 |                          PRAYER_ENCHANT_WEAPON,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~
+  349 |                          PRAYER_ENCHANT_ARMOUR,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~
+  350 |                          PRAYER_ELEMENTAL_BRAND,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~
+  351 |                          -1,
+      |                          ~~~
+  352 |                          -1,
+      |                          ~~~
+  353 |                          -1),
+      |                          ~~~
+x-spell.c:170:25: note: expanded from macro 'BOOK'
+  170 |          BOOK2(f) | BOOK2(g) | BOOK2(h) | BOOK2(i)) \
+      |                                ^~~~~~~~
+x-spell.c:163:54: note: expanded from macro 'BOOK2'
+  163 | #define BOOK2(x) (((x) < 0) ? 0 : (x) < 32 ? 0 : (1L << ((x) % 32)))
+      |                                                      ^  ~~~~~~~~~~
+x-spell.c:345:3: warning: shift count is negative [-Wshift-count-negative]
+  345 |                 BOOK(PRAYER_UNBARRING_WAYS,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+  346 |                          PRAYER_RECHARGING,
+      |                          ~~~~~~~~~~~~~~~~~~
+  347 |                          PRAYER_DISPEL_CURSE,
+      |                          ~~~~~~~~~~~~~~~~~~~~
+  348 |                          PRAYER_ENCHANT_WEAPON,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~
+  349 |                          PRAYER_ENCHANT_ARMOUR,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~
+  350 |                          PRAYER_ELEMENTAL_BRAND,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~
+  351 |                          -1,
+      |                          ~~~
+  352 |                          -1,
+      |                          ~~~
+  353 |                          -1),
+      |                          ~~~
+x-spell.c:170:36: note: expanded from macro 'BOOK'
+  170 |          BOOK2(f) | BOOK2(g) | BOOK2(h) | BOOK2(i)) \
+      |                                           ^~~~~~~~
+x-spell.c:163:54: note: expanded from macro 'BOOK2'
+  163 | #define BOOK2(x) (((x) < 0) ? 0 : (x) < 32 ? 0 : (1L << ((x) % 32)))
+      |                                                      ^  ~~~~~~~~~~
+x-spell.c:354:3: warning: shift count is negative [-Wshift-count-negative]
+  354 |                 BOOK(PRAYER_DISPEL_UNDEAD2,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+  355 |                          PRAYER_DISPEL_EVIL2,
+      |                          ~~~~~~~~~~~~~~~~~~~~
+  356 |                          PRAYER_BANISHMENT,
+      |                          ~~~~~~~~~~~~~~~~~~
+  357 |                          PRAYER_WORD_OF_DESTRUCTION,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  358 |                          PRAYER_ANNIHILATION,
+      |                          ~~~~~~~~~~~~~~~~~~~~
+  359 |                          -1,
+      |                          ~~~
+  360 |                          -1,
+      |                          ~~~
+  361 |                          -1,
+      |                          ~~~
+  362 |                          -1)
+      |                          ~~~
+x-spell.c:168:3: note: expanded from macro 'BOOK'
+  168 |          BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+      |          ^~~~~~~~
+x-spell.c:162:50: note: expanded from macro 'BOOK1'
+  162 | #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+      |                                                  ^  ~~~
+x-spell.c:354:3: warning: shift count is negative [-Wshift-count-negative]
+  354 |                 BOOK(PRAYER_DISPEL_UNDEAD2,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+  355 |                          PRAYER_DISPEL_EVIL2,
+      |                          ~~~~~~~~~~~~~~~~~~~~
+  356 |                          PRAYER_BANISHMENT,
+      |                          ~~~~~~~~~~~~~~~~~~
+  357 |                          PRAYER_WORD_OF_DESTRUCTION,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  358 |                          PRAYER_ANNIHILATION,
+      |                          ~~~~~~~~~~~~~~~~~~~~
+  359 |                          -1,
+      |                          ~~~
+  360 |                          -1,
+      |                          ~~~
+  361 |                          -1,
+      |                          ~~~
+  362 |                          -1)
+      |                          ~~~
+x-spell.c:168:14: note: expanded from macro 'BOOK'
+  168 |          BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+      |                     ^~~~~~~~
+x-spell.c:162:50: note: expanded from macro 'BOOK1'
+  162 | #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+      |                                                  ^  ~~~
+x-spell.c:354:3: warning: shift count is negative [-Wshift-count-negative]
+  354 |                 BOOK(PRAYER_DISPEL_UNDEAD2,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+  355 |                          PRAYER_DISPEL_EVIL2,
+      |                          ~~~~~~~~~~~~~~~~~~~~
+  356 |                          PRAYER_BANISHMENT,
+      |                          ~~~~~~~~~~~~~~~~~~
+  357 |                          PRAYER_WORD_OF_DESTRUCTION,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  358 |                          PRAYER_ANNIHILATION,
+      |                          ~~~~~~~~~~~~~~~~~~~~
+  359 |                          -1,
+      |                          ~~~
+  360 |                          -1,
+      |                          ~~~
+  361 |                          -1,
+      |                          ~~~
+  362 |                          -1)
+      |                          ~~~
+x-spell.c:168:25: note: expanded from macro 'BOOK'
+  168 |          BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+      |                                ^~~~~~~~
+x-spell.c:162:50: note: expanded from macro 'BOOK1'
+  162 | #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+      |                                                  ^  ~~~
+x-spell.c:354:3: warning: shift count is negative [-Wshift-count-negative]
+  354 |                 BOOK(PRAYER_DISPEL_UNDEAD2,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+  355 |                          PRAYER_DISPEL_EVIL2,
+      |                          ~~~~~~~~~~~~~~~~~~~~
+  356 |                          PRAYER_BANISHMENT,
+      |                          ~~~~~~~~~~~~~~~~~~
+  357 |                          PRAYER_WORD_OF_DESTRUCTION,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  358 |                          PRAYER_ANNIHILATION,
+      |                          ~~~~~~~~~~~~~~~~~~~~
+  359 |                          -1,
+      |                          ~~~
+  360 |                          -1,
+      |                          ~~~
+  361 |                          -1,
+      |                          ~~~
+  362 |                          -1)
+      |                          ~~~
+x-spell.c:168:36: note: expanded from macro 'BOOK'
+  168 |          BOOK1(f) | BOOK1(g) | BOOK1(h) | BOOK1(i)), \
+      |                                           ^~~~~~~~
+x-spell.c:162:50: note: expanded from macro 'BOOK1'
+  162 | #define BOOK1(x) (((x) < 0) ? 0 : (x) < 32 ? (1L << (x)) : 0)
+      |                                                  ^  ~~~
+x-spell.c:354:3: warning: shift count is negative [-Wshift-count-negative]
+  354 |                 BOOK(PRAYER_DISPEL_UNDEAD2,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+  355 |                          PRAYER_DISPEL_EVIL2,
+      |                          ~~~~~~~~~~~~~~~~~~~~
+  356 |                          PRAYER_BANISHMENT,
+      |                          ~~~~~~~~~~~~~~~~~~
+  357 |                          PRAYER_WORD_OF_DESTRUCTION,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  358 |                          PRAYER_ANNIHILATION,
+      |                          ~~~~~~~~~~~~~~~~~~~~
+  359 |                          -1,
+      |                          ~~~
+  360 |                          -1,
+      |                          ~~~
+  361 |                          -1,
+      |                          ~~~
+  362 |                          -1)
+      |                          ~~~
+x-spell.c:170:3: note: expanded from macro 'BOOK'
+  170 |          BOOK2(f) | BOOK2(g) | BOOK2(h) | BOOK2(i)) \
+      |          ^~~~~~~~
+x-spell.c:163:54: note: expanded from macro 'BOOK2'
+  163 | #define BOOK2(x) (((x) < 0) ? 0 : (x) < 32 ? 0 : (1L << ((x) % 32)))
+      |                                                      ^  ~~~~~~~~~~
+x-spell.c:354:3: warning: shift count is negative [-Wshift-count-negative]
+  354 |                 BOOK(PRAYER_DISPEL_UNDEAD2,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+  355 |                          PRAYER_DISPEL_EVIL2,
+      |                          ~~~~~~~~~~~~~~~~~~~~
+  356 |                          PRAYER_BANISHMENT,
+      |                          ~~~~~~~~~~~~~~~~~~
+  357 |                          PRAYER_WORD_OF_DESTRUCTION,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  358 |                          PRAYER_ANNIHILATION,
+      |                          ~~~~~~~~~~~~~~~~~~~~
+  359 |                          -1,
+      |                          ~~~
+  360 |                          -1,
+      |                          ~~~
+  361 |                          -1,
+      |                          ~~~
+  362 |                          -1)
+      |                          ~~~
+x-spell.c:170:14: note: expanded from macro 'BOOK'
+  170 |          BOOK2(f) | BOOK2(g) | BOOK2(h) | BOOK2(i)) \
+      |                     ^~~~~~~~
+x-spell.c:163:54: note: expanded from macro 'BOOK2'
+  163 | #define BOOK2(x) (((x) < 0) ? 0 : (x) < 32 ? 0 : (1L << ((x) % 32)))
+      |                                                      ^  ~~~~~~~~~~
+x-spell.c:354:3: warning: shift count is negative [-Wshift-count-negative]
+  354 |                 BOOK(PRAYER_DISPEL_UNDEAD2,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+  355 |                          PRAYER_DISPEL_EVIL2,
+      |                          ~~~~~~~~~~~~~~~~~~~~
+  356 |                          PRAYER_BANISHMENT,
+      |                          ~~~~~~~~~~~~~~~~~~
+  357 |                          PRAYER_WORD_OF_DESTRUCTION,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  358 |                          PRAYER_ANNIHILATION,
+      |                          ~~~~~~~~~~~~~~~~~~~~
+  359 |                          -1,
+      |                          ~~~
+  360 |                          -1,
+      |                          ~~~
+  361 |                          -1,
+      |                          ~~~
+  362 |                          -1)
+      |                          ~~~
+x-spell.c:170:25: note: expanded from macro 'BOOK'
+  170 |          BOOK2(f) | BOOK2(g) | BOOK2(h) | BOOK2(i)) \
+      |                                ^~~~~~~~
+x-spell.c:163:54: note: expanded from macro 'BOOK2'
+  163 | #define BOOK2(x) (((x) < 0) ? 0 : (x) < 32 ? 0 : (1L << ((x) % 32)))
+      |                                                      ^  ~~~~~~~~~~
+x-spell.c:354:3: warning: shift count is negative [-Wshift-count-negative]
+  354 |                 BOOK(PRAYER_DISPEL_UNDEAD2,
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+  355 |                          PRAYER_DISPEL_EVIL2,
+      |                          ~~~~~~~~~~~~~~~~~~~~
+  356 |                          PRAYER_BANISHMENT,
+      |                          ~~~~~~~~~~~~~~~~~~
+  357 |                          PRAYER_WORD_OF_DESTRUCTION,
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  358 |                          PRAYER_ANNIHILATION,
+      |                          ~~~~~~~~~~~~~~~~~~~~
+  359 |                          -1,
+      |                          ~~~
+  360 |                          -1,
+      |                          ~~~
+  361 |                          -1,
+      |                          ~~~
+  362 |                          -1)
+      |                          ~~~
+x-spell.c:170:36: note: expanded from macro 'BOOK'
+  170 |          BOOK2(f) | BOOK2(g) | BOOK2(h) | BOOK2(i)) \
+      |                                           ^~~~~~~~
+x-spell.c:163:54: note: expanded from macro 'BOOK2'
+  163 | #define BOOK2(x) (((x) < 0) ? 0 : (x) < 32 ? 0 : (1L << ((x) % 32)))
+      |                                                      ^  ~~~~~~~~~~
+79 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o xtra1.o xtra1.c
+In file included from xtra1.c:11:
+In file included from ./angband.h:31:
+./config.h:412:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  412 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+In file included from xtra1.c:11:
+In file included from ./angband.h:31:
+./config.h:433:8: warning: '/*' within block comment [-Wcomment]
+  433 | #endif /* SET_UID */
+      |        ^
+xtra1.c:752:11: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  752 |         else if (!m_list[p_ptr->health_who].hp < 0)
+      |                  ^                             ~
+xtra1.c:752:11: note: add parentheses after the '!' to evaluate the comparison first
+  752 |         else if (!m_list[p_ptr->health_who].hp < 0)
+      |                  ^                                
+      |                   (                               )
+xtra1.c:752:11: note: add parentheses around left hand side expression to silence this warning
+  752 |         else if (!m_list[p_ptr->health_who].hp < 0)
+      |                  ^
+      |                  (                            )
+xtra1.c:752:41: warning: result of comparison of constant 0 with boolean expression is always false [-Wtautological-constant-compare]
+  752 |         else if (!m_list[p_ptr->health_who].hp < 0)
+      |                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^ ~
+xtra1.c:2196:71: warning: '/*' within block comment [-Wcomment]
+ 2196 |         /* p_ptr->to_a += ((int)(adj_dex_ta[p_ptr->stat_ind[A_DEX]]) - 128); /* now dodge */
+      |                                                                              ^
+xtra1.c:2202:76: warning: '/*' within block comment [-Wcomment]
+ 2202 |         /* p_ptr->dis_to_a += ((int)(adj_dex_ta[p_ptr->stat_ind[A_DEX]]) - 128);  /* now dodge */
+      |                                                                                   ^
+6 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o xtra2.o xtra2.c
+In file included from xtra2.c:11:
+In file included from ./angband.h:31:
+./config.h:412:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  412 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+In file included from xtra2.c:11:
+In file included from ./angband.h:31:
+./config.h:433:8: warning: '/*' within block comment [-Wcomment]
+  433 | #endif /* SET_UID */
+      |        ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o z-form.o z-form.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o z-rand.o z-rand.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o z-term.o z-term.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o z-util.o z-util.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o z-virt.o z-virt.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -o nuangband birth.o cave.o cmd1.o cmd2.o cmd3.o cmd4.o cmd5.o cmd6.o dungeon.o files.o generate.o h-spell.o init1.o init2.o l-misc.o l-monst.o l-object.o l-player.o l-random.o l-spell.o l-ui.o load.o main-gcu.o main.o melee1.o melee2.o monster1.o monster2.o object1.o object2.o randart.o save.o script.o spells1.o spells2.o store.o tables.o use-obj.o util.o variable.o wizard1.o wizard2.o x-spell.o xtra1.o xtra2.o z-form.o z-rand.o z-term.o z-util.o z-virt.o -lncurses
+Installing terminal version...
+Terminal version installed as ../nuangband-terminal
+Run with: ./nuangband-terminal

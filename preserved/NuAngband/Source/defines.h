@@ -3131,6 +3131,6 @@ extern int PlayerUID;
  */
 #define N_ELEMENTS(a) (sizeof(a) / sizeof((a)[0]))
 
-#ifndef min(a)
-#define min(a) (MIN(a))
+#ifndef min
+#define min(a,b) ((a) < (b) ? (a) : (b))
 #endif

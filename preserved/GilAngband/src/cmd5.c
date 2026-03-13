@@ -110,7 +110,7 @@ bool spell_okay(int spell, bool known)
 /*
  * Spells in each book (mage spells then priest spells)
  */
-static const s16b spell_list[2][BOOKS_PER_REALM][SPELLS_PER_BOOK] =
+const s16b spell_list[2][BOOKS_PER_REALM][SPELLS_PER_BOOK] =
 {
 	/* Mage spells */
 	{
@@ -357,7 +357,7 @@ static const s16b spell_list[2][BOOKS_PER_REALM][SPELLS_PER_BOOK] =
 /*
  * Names of the spells (mage spells then priest spells)
  */
-static cptr spell_names[2][PY_MAX_SPELLS] =
+cptr spell_names[2][PY_MAX_SPELLS] =
 {
 	/*** Mage Spells ***/
 

@@ -46,7 +46,6 @@
 /*
  * Hack -- play games with "bool" and "term"
  */
-#undef bool
 
 /* Avoid 'struct term' name conflict with <curses.h> (via <term.h>) on AIX */
 #define term System_term

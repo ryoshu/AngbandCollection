@@ -515,7 +515,6 @@ extern bool (*item_tester_hook)(object_type *i_ptr);
 extern bool (*ang_sort_comp)(vptr u, vptr v, s16b a, s16b b);
 extern void (*ang_sort_swap)(vptr u, vptr v, s16b a, s16b b);
 extern bool (*get_mon_num_hook)(s16b r_idx);
-extern s16b summon_specific_type;
 extern bool (*get_obj_num_hook)(s16b k_idx);
 extern bool (*get_obj_num_hook2)(s16b k_idx);
 extern event_type event[MAX_EVENTS];

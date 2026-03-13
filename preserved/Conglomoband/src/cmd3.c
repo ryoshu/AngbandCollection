@@ -300,7 +300,7 @@ void do_cmd_wield(void)
 
                 if ((p_ptr->body_parts[slot - INVEN_WIELD] == INVEN_ARM) && (f4 & TR4_COULD2H))
                 {
-                        if (!get_check("Are you sure you want to restrict your fighting? "))
+                        if (!get_check("Are you sure you want to class_restrict your fighting? "))
                                 return;
                 }
         }

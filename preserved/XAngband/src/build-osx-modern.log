@@ -1,0 +1,2560 @@
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o artifact.o artifact.c
+In file included from artifact.c:13:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from artifact.c:13:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from artifact.c:13:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+3 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o autopick.o autopick.c
+In file included from autopick.c:13:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from autopick.c:13:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from autopick.c:13:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+3 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o birth.o birth.c
+In file included from birth.c:13:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from birth.c:13:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from birth.c:13:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+3 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o bldg.o bldg.c
+In file included from bldg.c:14:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from bldg.c:14:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from bldg.c:14:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+bldg.c:1774:12: warning: unused function 'hit_prob' [-Wunused-function]
+ 1774 | static int hit_prob(int to_h, int ac)
+      |            ^~~~~~~~
+4 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o cave.o cave.c
+In file included from cave.c:6:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from cave.c:6:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from cave.c:6:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+cave.c:1751:8: warning: variable 'ta' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+ 1751 |                         if (cave[ny][nx].m_idx && m_list[cave[ny][nx].m_idx].ml)
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cave.c:1773:65: note: uninitialized use occurs here
+ 1773 |                         Term_queue_bigchar(panel_col_of(nx), ny-panel_row_prt, a, c, ta, tc);
+      |                                                                                      ^~
+cave.c:1751:4: note: remove the 'if' if its condition is always true
+ 1751 |                         if (cave[ny][nx].m_idx && m_list[cave[ny][nx].m_idx].ml)
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1752 |                         {
+cave.c:1751:8: warning: variable 'ta' is used uninitialized whenever '&&' condition is false [-Wsometimes-uninitialized]
+ 1751 |                         if (cave[ny][nx].m_idx && m_list[cave[ny][nx].m_idx].ml)
+      |                             ^~~~~~~~~~~~~~~~~~
+cave.c:1773:65: note: uninitialized use occurs here
+ 1773 |                         Term_queue_bigchar(panel_col_of(nx), ny-panel_row_prt, a, c, ta, tc);
+      |                                                                                      ^~
+cave.c:1751:8: note: remove the '&&' if its condition is always true
+ 1751 |                         if (cave[ny][nx].m_idx && m_list[cave[ny][nx].m_idx].ml)
+      |                             ^~~~~~~~~~~~~~~~~~~~~
+cave.c:1748:11: note: initialize the variable 'ta' to silence this warning
+ 1748 |                         byte ta;
+      |                                ^
+      |                                 = '\0'
+cave.c:1751:8: warning: variable 'tc' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+ 1751 |                         if (cave[ny][nx].m_idx && m_list[cave[ny][nx].m_idx].ml)
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cave.c:1773:69: note: uninitialized use occurs here
+ 1773 |                         Term_queue_bigchar(panel_col_of(nx), ny-panel_row_prt, a, c, ta, tc);
+      |                                                                                          ^~
+cave.c:1751:4: note: remove the 'if' if its condition is always true
+ 1751 |                         if (cave[ny][nx].m_idx && m_list[cave[ny][nx].m_idx].ml)
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 1752 |                         {
+cave.c:1751:8: warning: variable 'tc' is used uninitialized whenever '&&' condition is false [-Wsometimes-uninitialized]
+ 1751 |                         if (cave[ny][nx].m_idx && m_list[cave[ny][nx].m_idx].ml)
+      |                             ^~~~~~~~~~~~~~~~~~
+cave.c:1773:69: note: uninitialized use occurs here
+ 1773 |                         Term_queue_bigchar(panel_col_of(nx), ny-panel_row_prt, a, c, ta, tc);
+      |                                                                                          ^~
+cave.c:1751:8: note: remove the '&&' if its condition is always true
+ 1751 |                         if (cave[ny][nx].m_idx && m_list[cave[ny][nx].m_idx].ml)
+      |                             ^~~~~~~~~~~~~~~~~~~~~
+cave.c:1749:11: note: initialize the variable 'tc' to silence this warning
+ 1749 |                         char tc;
+      |                                ^
+      |                                 = '\0'
+cave.c:2089:6: warning: variable 'ex' set but not used [-Wunused-but-set-variable]
+ 2089 |         int ex;
+      |             ^
+cave.c:4468:25: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+ 4468 |                         if ((cave[y][x].feat == FEAT_DEEP_LAVA))
+      |                              ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+cave.c:4468:25: note: remove extraneous parentheses around the comparison to silence this warning
+ 4468 |                         if ((cave[y][x].feat == FEAT_DEEP_LAVA))
+      |                             ~                ^                ~
+cave.c:4468:25: note: use '=' to turn this equality comparison into an assignment
+ 4468 |                         if ((cave[y][x].feat == FEAT_DEEP_LAVA))
+      |                                              ^~
+      |                                              =
+9 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o chuukei.o chuukei.c
+In file included from chuukei.c:3:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from chuukei.c:3:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from chuukei.c:3:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+chuukei.c:156:8: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  156 |                 prt("<C1><F7><BC><F5><BF><AE><A5>Хåե<A1><A4><AC><B0><EE><A4><EC><A4>ޤ<B7><A4><BF><A1><A3><A5><B5><A1><BC><A5>ФȤ<CE><C0><DC>³<A4><F2><C0><DA><C3>Ǥ<B7><A4>ޤ<B9><A1><A3>", 0, 0);
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~ ~~~~~~~~~~~~
+chuukei.c:223:9: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  223 |                         prt("<A5><B5><A1><BC><A5>ФȤ<CE><C0><DC>³<A4><AC><C0><DA><C3>Ǥ<B5><A4><EC><A4>ޤ<B7><A4><BF><A1><A3>", 0, 0);
+      |                              ^~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~
+chuukei.c:722:8: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  722 |                 prt("<C9><C1><B2>西<A5><A4><A5>ߥ<U+E5C25><AD><A5>塼<A4><AC><B0><EE><A4><EC><A4>ޤ<B7><A4><BF><A1><A3><A5><B5><A1><BC><A5>ФȤ<CE><C0><DC>³<A4><F2><C0><DA><C3>Ǥ<B7><A4>ޤ<B9><A1><A3>", 0, 0);
+      |                      ^~~~~~~~~~~~  ~~~~~~~~~~~~          ~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~ ~~~~~~~~~~~~
+6 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o cmd1.o cmd1.c
+In file included from cmd1.c:13:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from cmd1.c:13:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from cmd1.c:13:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+cmd1.c:1543:5: warning: logical not is only applied to the left hand side of this bitwise operator [-Wlogical-not-parentheses]
+ 1543 |                         (!r_ptr->flags3 & (RF3_NO_CONF)))
+      |                          ^              ~
+cmd1.c:1543:5: note: add parentheses after the '!' to evaluate the bitwise operator first
+ 1543 |                         (!r_ptr->flags3 & (RF3_NO_CONF)))
+      |                          ^                             
+      |                           (                            )
+cmd1.c:1543:5: note: add parentheses around left hand side expression to silence this warning
+ 1543 |                         (!r_ptr->flags3 & (RF3_NO_CONF)))
+      |                          ^
+      |                          (             )
+cmd1.c:2554:8: warning: variable 'obvious' set but not used [-Wunused-but-set-variable]
+ 2554 |                 bool obvious = FALSE;
+      |                      ^
+cmd1.c:4867:25: warning: unused variable 'check_dir' [-Wunused-variable]
+ 4867 |         int prev_dir, new_dir, check_dir = 0;
+      |                                ^~~~~~~~~
+6 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o cmd2.o cmd2.c
+In file included from cmd2.c:13:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from cmd2.c:13:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from cmd2.c:13:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+cmd2.c:2929:7: warning: variable 'stick' set but not used [-Wunused-but-set-variable]
+ 2929 |         bool stick;
+      |              ^
+cmd2.c:3988:18: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+ 3988 |                         msg_format("%s<A4>Ϥɤ<B3><A4><AB><A4>عԤä<BF><A1><A3>", o_name);
+      |                                       ^~~~  ~~~~~~~~~~~~~~~~   ~~~~~~~~~~~~
+5 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o cmd3.o cmd3.c
+In file included from cmd3.c:13:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from cmd3.c:13:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from cmd3.c:13:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+3 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o cmd4.o cmd4.c
+In file included from cmd4.c:13:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from cmd4.c:13:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from cmd4.c:13:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+cmd4.c:4735:17: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 4735 |                         fprintf(fff, html_head[i]);
+      |                                      ^~~~~~~~~~~~
+cmd4.c:4735:17: note: treat the string as an argument to avoid this
+ 4735 |                         fprintf(fff, html_head[i]);
+      |                                      ^
+      |                                      "%s", 
+cmd4.c:4801:17: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 4801 |                         fprintf(fff, html_foot[i]);
+      |                                      ^~~~~~~~~~~~
+cmd4.c:4801:17: note: treat the string as an argument to avoid this
+ 4801 |                         fprintf(fff, html_foot[i]);
+      |                                      ^
+      |                                      "%s", 
+cmd4.c:7468:17: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7468 |                         fprintf(fff, tmp_str);
+      |                                      ^~~~~~~
+cmd4.c:7468:17: note: treat the string as an argument to avoid this
+ 7468 |                         fprintf(fff, tmp_str);
+      |                                      ^
+      |                                      "%s", 
+cmd4.c:7529:17: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7529 |                         fprintf(fff, tmp_str);
+      |                                      ^~~~~~~
+cmd4.c:7529:17: note: treat the string as an argument to avoid this
+ 7529 |                         fprintf(fff, tmp_str);
+      |                                      ^
+      |                                      "%s", 
+cmd4.c:7563:18: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7563 |                                 fprintf(fff, tmp_str);
+      |                                              ^~~~~~~
+cmd4.c:7563:18: note: treat the string as an argument to avoid this
+ 7563 |                                 fprintf(fff, tmp_str);
+      |                                              ^
+      |                                              "%s", 
+cmd4.c:7719:18: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7719 |                                 fprintf(fff, tmp_str);
+      |                                              ^~~~~~~
+cmd4.c:7719:18: note: treat the string as an argument to avoid this
+ 7719 |                                 fprintf(fff, tmp_str);
+      |                                              ^
+      |                                              "%s", 
+cmd4.c:7728:19: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7728 |                                         fprintf(fff, tmp_str);
+      |                                                      ^~~~~~~
+cmd4.c:7728:19: note: treat the string as an argument to avoid this
+ 7728 |                                         fprintf(fff, tmp_str);
+      |                                                      ^
+      |                                                      "%s", 
+cmd4.c:7781:36: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7781 |         if (rand_tmp_str[0]) fprintf(fff, rand_tmp_str);
+      |                                           ^~~~~~~~~~~~
+cmd4.c:7781:36: note: treat the string as an argument to avoid this
+ 7781 |         if (rand_tmp_str[0]) fprintf(fff, rand_tmp_str);
+      |                                           ^
+      |                                           "%s", 
+cmd4.c:7900:41: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7900 |                         if (f[1] & TR2_IM_ACID) fprintf(fff, imm);
+      |                                                              ^~~
+cmd4.c:7900:41: note: treat the string as an argument to avoid this
+ 7900 |                         if (f[1] & TR2_IM_ACID) fprintf(fff, imm);
+      |                                                              ^
+      |                                                              "%s", 
+cmd4.c:7901:47: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7901 |                         else if (f[1] & TR2_RES_ACID) fprintf(fff, res);
+      |                                                                    ^~~
+cmd4.c:7901:47: note: treat the string as an argument to avoid this
+ 7901 |                         else if (f[1] & TR2_RES_ACID) fprintf(fff, res);
+      |                                                                    ^
+      |                                                                    "%s", 
+cmd4.c:7902:22: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7902 |                         else fprintf(fff, non);
+      |                                           ^~~
+cmd4.c:7902:22: note: treat the string as an argument to avoid this
+ 7902 |                         else fprintf(fff, non);
+      |                                           ^
+      |                                           "%s", 
+cmd4.c:7904:41: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7904 |                         if (f[1] & TR2_IM_ELEC) fprintf(fff, imm);
+      |                                                              ^~~
+cmd4.c:7904:41: note: treat the string as an argument to avoid this
+ 7904 |                         if (f[1] & TR2_IM_ELEC) fprintf(fff, imm);
+      |                                                              ^
+      |                                                              "%s", 
+cmd4.c:7905:47: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7905 |                         else if (f[1] & TR2_RES_ELEC) fprintf(fff, res);
+      |                                                                    ^~~
+cmd4.c:7905:47: note: treat the string as an argument to avoid this
+ 7905 |                         else if (f[1] & TR2_RES_ELEC) fprintf(fff, res);
+      |                                                                    ^
+      |                                                                    "%s", 
+cmd4.c:7906:22: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7906 |                         else fprintf(fff, non);
+      |                                           ^~~
+cmd4.c:7906:22: note: treat the string as an argument to avoid this
+ 7906 |                         else fprintf(fff, non);
+      |                                           ^
+      |                                           "%s", 
+cmd4.c:7908:41: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7908 |                         if (f[1] & TR2_IM_FIRE) fprintf(fff, imm);
+      |                                                              ^~~
+cmd4.c:7908:41: note: treat the string as an argument to avoid this
+ 7908 |                         if (f[1] & TR2_IM_FIRE) fprintf(fff, imm);
+      |                                                              ^
+      |                                                              "%s", 
+cmd4.c:7909:47: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7909 |                         else if (f[1] & TR2_RES_FIRE) fprintf(fff, res);
+      |                                                                    ^~~
+cmd4.c:7909:47: note: treat the string as an argument to avoid this
+ 7909 |                         else if (f[1] & TR2_RES_FIRE) fprintf(fff, res);
+      |                                                                    ^
+      |                                                                    "%s", 
+cmd4.c:7910:22: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7910 |                         else fprintf(fff, non);
+      |                                           ^~~
+cmd4.c:7910:22: note: treat the string as an argument to avoid this
+ 7910 |                         else fprintf(fff, non);
+      |                                           ^
+      |                                           "%s", 
+cmd4.c:7912:41: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7912 |                         if (f[1] & TR2_IM_COLD) fprintf(fff, imm);
+      |                                                              ^~~
+cmd4.c:7912:41: note: treat the string as an argument to avoid this
+ 7912 |                         if (f[1] & TR2_IM_COLD) fprintf(fff, imm);
+      |                                                              ^
+      |                                                              "%s", 
+cmd4.c:7913:47: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7913 |                         else if (f[1] & TR2_RES_COLD) fprintf(fff, res);
+      |                                                                    ^~~
+cmd4.c:7913:47: note: treat the string as an argument to avoid this
+ 7913 |                         else if (f[1] & TR2_RES_COLD) fprintf(fff, res);
+      |                                                                    ^
+      |                                                                    "%s", 
+cmd4.c:7914:22: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7914 |                         else fprintf(fff, non);
+      |                                           ^~~
+cmd4.c:7914:22: note: treat the string as an argument to avoid this
+ 7914 |                         else fprintf(fff, non);
+      |                                           ^
+      |                                           "%s", 
+cmd4.c:7916:42: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7916 |                         if (f[1] & TR2_RES_POIS) fprintf(fff, res);
+      |                                                               ^~~
+cmd4.c:7916:42: note: treat the string as an argument to avoid this
+ 7916 |                         if (f[1] & TR2_RES_POIS) fprintf(fff, res);
+      |                                                               ^
+      |                                                               "%s", 
+cmd4.c:7917:22: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7917 |                         else fprintf(fff, non);
+      |                                           ^~~
+cmd4.c:7917:22: note: treat the string as an argument to avoid this
+ 7917 |                         else fprintf(fff, non);
+      |                                           ^
+      |                                           "%s", 
+cmd4.c:7919:42: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7919 |                         if (f[1] & TR2_RES_LITE) fprintf(fff, res);
+      |                                                               ^~~
+cmd4.c:7919:42: note: treat the string as an argument to avoid this
+ 7919 |                         if (f[1] & TR2_RES_LITE) fprintf(fff, res);
+      |                                                               ^
+      |                                                               "%s", 
+cmd4.c:7920:22: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7920 |                         else fprintf(fff, non);
+      |                                           ^~~
+cmd4.c:7920:22: note: treat the string as an argument to avoid this
+ 7920 |                         else fprintf(fff, non);
+      |                                           ^
+      |                                           "%s", 
+cmd4.c:7922:42: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7922 |                         if (f[1] & TR2_RES_DARK) fprintf(fff, res);
+      |                                                               ^~~
+cmd4.c:7922:42: note: treat the string as an argument to avoid this
+ 7922 |                         if (f[1] & TR2_RES_DARK) fprintf(fff, res);
+      |                                                               ^
+      |                                                               "%s", 
+cmd4.c:7923:22: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7923 |                         else fprintf(fff, non);
+      |                                           ^~~
+cmd4.c:7923:22: note: treat the string as an argument to avoid this
+ 7923 |                         else fprintf(fff, non);
+      |                                           ^
+      |                                           "%s", 
+cmd4.c:7925:44: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7925 |                         if (f[1] & TR2_RES_SHARDS) fprintf(fff, res);
+      |                                                                 ^~~
+cmd4.c:7925:44: note: treat the string as an argument to avoid this
+ 7925 |                         if (f[1] & TR2_RES_SHARDS) fprintf(fff, res);
+      |                                                                 ^
+      |                                                                 "%s", 
+cmd4.c:7926:22: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7926 |                         else fprintf(fff, non);
+      |                                           ^~~
+cmd4.c:7926:22: note: treat the string as an argument to avoid this
+ 7926 |                         else fprintf(fff, non);
+      |                                           ^
+      |                                           "%s", 
+cmd4.c:7928:43: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7928 |                         if (f[1] & TR2_RES_SOUND) fprintf(fff, res);
+      |                                                                ^~~
+cmd4.c:7928:43: note: treat the string as an argument to avoid this
+ 7928 |                         if (f[1] & TR2_RES_SOUND) fprintf(fff, res);
+      |                                                                ^
+      |                                                                "%s", 
+cmd4.c:7929:22: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7929 |                         else fprintf(fff, non);
+      |                                           ^~~
+cmd4.c:7929:22: note: treat the string as an argument to avoid this
+ 7929 |                         else fprintf(fff, non);
+      |                                           ^
+      |                                           "%s", 
+cmd4.c:7931:44: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7931 |                         if (f[1] & TR2_RES_NETHER) fprintf(fff, res);
+      |                                                                 ^~~
+cmd4.c:7931:44: note: treat the string as an argument to avoid this
+ 7931 |                         if (f[1] & TR2_RES_NETHER) fprintf(fff, res);
+      |                                                                 ^
+      |                                                                 "%s", 
+cmd4.c:7932:22: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7932 |                         else fprintf(fff, non);
+      |                                           ^~~
+cmd4.c:7932:22: note: treat the string as an argument to avoid this
+ 7932 |                         else fprintf(fff, non);
+      |                                           ^
+      |                                           "%s", 
+cmd4.c:7934:43: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7934 |                         if (f[1] & TR2_RES_NEXUS) fprintf(fff, res);
+      |                                                                ^~~
+cmd4.c:7934:43: note: treat the string as an argument to avoid this
+ 7934 |                         if (f[1] & TR2_RES_NEXUS) fprintf(fff, res);
+      |                                                                ^
+      |                                                                "%s", 
+cmd4.c:7935:22: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7935 |                         else fprintf(fff, non);
+      |                                           ^~~
+cmd4.c:7935:22: note: treat the string as an argument to avoid this
+ 7935 |                         else fprintf(fff, non);
+      |                                           ^
+      |                                           "%s", 
+cmd4.c:7937:43: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7937 |                         if (f[1] & TR2_RES_CHAOS) fprintf(fff, res);
+      |                                                                ^~~
+cmd4.c:7937:43: note: treat the string as an argument to avoid this
+ 7937 |                         if (f[1] & TR2_RES_CHAOS) fprintf(fff, res);
+      |                                                                ^
+      |                                                                "%s", 
+cmd4.c:7938:22: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7938 |                         else fprintf(fff, non);
+      |                                           ^~~
+cmd4.c:7938:22: note: treat the string as an argument to avoid this
+ 7938 |                         else fprintf(fff, non);
+      |                                           ^
+      |                                           "%s", 
+cmd4.c:7940:43: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7940 |                         if (f[1] & TR2_RES_DISEN) fprintf(fff, res);
+      |                                                                ^~~
+cmd4.c:7940:43: note: treat the string as an argument to avoid this
+ 7940 |                         if (f[1] & TR2_RES_DISEN) fprintf(fff, res);
+      |                                                                ^
+      |                                                                "%s", 
+cmd4.c:7941:22: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7941 |                         else fprintf(fff, non);
+      |                                           ^~~
+cmd4.c:7941:22: note: treat the string as an argument to avoid this
+ 7941 |                         else fprintf(fff, non);
+      |                                           ^
+      |                                           "%s", 
+cmd4.c:7945:43: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7945 |                         if (f[1] & TR2_RES_BLIND) fprintf(fff, res);
+      |                                                                ^~~
+cmd4.c:7945:43: note: treat the string as an argument to avoid this
+ 7945 |                         if (f[1] & TR2_RES_BLIND) fprintf(fff, res);
+      |                                                                ^
+      |                                                                "%s", 
+cmd4.c:7946:22: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7946 |                         else fprintf(fff, non);
+      |                                           ^~~
+cmd4.c:7946:22: note: treat the string as an argument to avoid this
+ 7946 |                         else fprintf(fff, non);
+      |                                           ^
+      |                                           "%s", 
+cmd4.c:7948:42: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7948 |                         if (f[1] & TR2_RES_FEAR) fprintf(fff, res);
+      |                                                               ^~~
+cmd4.c:7948:42: note: treat the string as an argument to avoid this
+ 7948 |                         if (f[1] & TR2_RES_FEAR) fprintf(fff, res);
+      |                                                               ^
+      |                                                               "%s", 
+cmd4.c:7949:22: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7949 |                         else fprintf(fff, non);
+      |                                           ^~~
+cmd4.c:7949:22: note: treat the string as an argument to avoid this
+ 7949 |                         else fprintf(fff, non);
+      |                                           ^
+      |                                           "%s", 
+cmd4.c:7951:42: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7951 |                         if (f[1] & TR2_RES_CONF) fprintf(fff, res);
+      |                                                               ^~~
+cmd4.c:7951:42: note: treat the string as an argument to avoid this
+ 7951 |                         if (f[1] & TR2_RES_CONF) fprintf(fff, res);
+      |                                                               ^
+      |                                                               "%s", 
+cmd4.c:7952:22: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7952 |                         else fprintf(fff, non);
+      |                                           ^~~
+cmd4.c:7952:22: note: treat the string as an argument to avoid this
+ 7952 |                         else fprintf(fff, non);
+      |                                           ^
+      |                                           "%s", 
+cmd4.c:7954:42: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7954 |                         if (f[1] & TR2_FREE_ACT) fprintf(fff, res);
+      |                                                               ^~~
+cmd4.c:7954:42: note: treat the string as an argument to avoid this
+ 7954 |                         if (f[1] & TR2_FREE_ACT) fprintf(fff, res);
+      |                                                               ^
+      |                                                               "%s", 
+cmd4.c:7955:22: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7955 |                         else fprintf(fff, non);
+      |                                           ^~~
+cmd4.c:7955:22: note: treat the string as an argument to avoid this
+ 7955 |                         else fprintf(fff, non);
+      |                                           ^
+      |                                           "%s", 
+cmd4.c:7957:43: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7957 |                         if (f[2] & TR3_SEE_INVIS) fprintf(fff, res);
+      |                                                                ^~~
+cmd4.c:7957:43: note: treat the string as an argument to avoid this
+ 7957 |                         if (f[2] & TR3_SEE_INVIS) fprintf(fff, res);
+      |                                                                ^
+      |                                                                "%s", 
+cmd4.c:7958:22: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7958 |                         else fprintf(fff, non);
+      |                                           ^~~
+cmd4.c:7958:22: note: treat the string as an argument to avoid this
+ 7958 |                         else fprintf(fff, non);
+      |                                           ^
+      |                                           "%s", 
+cmd4.c:7960:43: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7960 |                         if (f[1] & TR2_HOLD_LIFE) fprintf(fff, res);
+      |                                                                ^~~
+cmd4.c:7960:43: note: treat the string as an argument to avoid this
+ 7960 |                         if (f[1] & TR2_HOLD_LIFE) fprintf(fff, res);
+      |                                                                ^
+      |                                                                "%s", 
+cmd4.c:7961:22: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7961 |                         else fprintf(fff, non);
+      |                                           ^~~
+cmd4.c:7961:22: note: treat the string as an argument to avoid this
+ 7961 |                         else fprintf(fff, non);
+      |                                           ^
+      |                                           "%s", 
+cmd4.c:7963:43: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7963 |                         if (f[2] & TR3_TELEPATHY) fprintf(fff, res);
+      |                                                                ^~~
+cmd4.c:7963:43: note: treat the string as an argument to avoid this
+ 7963 |                         if (f[2] & TR3_TELEPATHY) fprintf(fff, res);
+      |                                                                ^
+      |                                                                "%s", 
+cmd4.c:7964:22: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7964 |                         else fprintf(fff, non);
+      |                                           ^~~
+cmd4.c:7964:22: note: treat the string as an argument to avoid this
+ 7964 |                         else fprintf(fff, non);
+      |                                           ^
+      |                                           "%s", 
+cmd4.c:7966:45: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7966 |                         if (f[2] & TR3_SLOW_DIGEST) fprintf(fff, res);
+      |                                                                  ^~~
+cmd4.c:7966:45: note: treat the string as an argument to avoid this
+ 7966 |                         if (f[2] & TR3_SLOW_DIGEST) fprintf(fff, res);
+      |                                                                  ^
+      |                                                                  "%s", 
+cmd4.c:7967:22: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7967 |                         else fprintf(fff, non);
+      |                                           ^~~
+cmd4.c:7967:22: note: treat the string as an argument to avoid this
+ 7967 |                         else fprintf(fff, non);
+      |                                           ^
+      |                                           "%s", 
+cmd4.c:7969:39: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7969 |                         if (f[2] & TR3_REGEN) fprintf(fff, res);
+      |                                                            ^~~
+cmd4.c:7969:39: note: treat the string as an argument to avoid this
+ 7969 |                         if (f[2] & TR3_REGEN) fprintf(fff, res);
+      |                                                            ^
+      |                                                            "%s", 
+cmd4.c:7970:22: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7970 |                         else fprintf(fff, non);
+      |                                           ^~~
+cmd4.c:7970:22: note: treat the string as an argument to avoid this
+ 7970 |                         else fprintf(fff, non);
+      |                                           ^
+      |                                           "%s", 
+cmd4.c:7972:41: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7972 |                         if (f[2] & TR3_FEATHER) fprintf(fff, res);
+      |                                                              ^~~
+cmd4.c:7972:41: note: treat the string as an argument to avoid this
+ 7972 |                         if (f[2] & TR3_FEATHER) fprintf(fff, res);
+      |                                                              ^
+      |                                                              "%s", 
+cmd4.c:7973:22: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 7973 |                         else fprintf(fff, non);
+      |                                           ^~~
+cmd4.c:7973:22: note: treat the string as an argument to avoid this
+ 7973 |                         else fprintf(fff, non);
+      |                                           ^
+      |                                           "%s", 
+cmd4.c:8091:9: warning: variable 'x' set but not used [-Wunused-but-set-variable]
+ 8091 |         int i, x;
+      |                ^
+62 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o cmd5.o cmd5.c
+In file included from cmd5.c:13:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from cmd5.c:13:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from cmd5.c:13:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+cmd5.c:1913:6: warning: unused variable 'old_total_friends' [-Wunused-variable]
+ 1913 |         int old_total_friends = total_friends; 
+      |             ^~~~~~~~~~~~~~~~~
+4 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o cmd6.o cmd6.c
+In file included from cmd6.c:13:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from cmd6.c:13:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from cmd6.c:13:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+3 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o dungeon.o dungeon.c
+In file included from dungeon.c:13:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from dungeon.c:13:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from dungeon.c:13:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+dungeon.c:2208:31: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+ 2208 |                         msg_print("Revenge, revenge<A1><AA>");
+      |                                                    ^~~~~~~~
+4 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o effects.o effects.c
+In file included from effects.c:13:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from effects.c:13:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from effects.c:13:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+3 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o element.o element.c
+In file included from element.c:14:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from element.c:14:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from element.c:14:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+element.c:930:24: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  930 |                         strcat(tip_string, "<B0><D2><CE>Ϥ<CE>Ⱦʬ<A4><C0><A4><B1>HP<A4><AC><C2><CE><CE>ϲ<F3><C9><FC><A4><B9><A4>롣");
+      |                                             ^~~~~~~~~~~~ ~~~~  ~~~~~~~~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/secure/_string.h:135:33: note: expanded from macro 'strcat'
+  135 |                 __builtin___strcat_chk (dest, __VA_ARGS__, __darwin_obsz (dest))
+      |                                               ^~~~~~~~~~~
+4 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o files.o files.c
+In file included from files.c:13:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from files.c:13:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from files.c:13:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+files.c:5870:20: warning: expression which evaluates to zero treated as a null pointer constant of type 'time_t *' (aka 'long *') [-Wnon-literal-null-conversion]
+ 5870 |                 time_t  ct = time((time_t)0);
+      |                                   ^~~~~~~~~
+files.c:6742:16: warning: variable 'rows' set but not used [-Wunused-but-set-variable]
+ 6742 |         int wid, hgt, rows;
+      |                       ^
+5 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o flavor.o flavor.c
+In file included from flavor.c:13:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from flavor.c:13:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from flavor.c:13:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+flavor.c:664:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  664 |         { "<B9><B6>", "At", TR1_BLOWS, 1, 0 },
+      |            ^~~~~~~~
+flavor.c:666:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  666 |         { "<CF><D3>", "St", TR1_STR, 1, 0 },
+      |            ^~~~~~~~
+flavor.c:667:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  667 |         { "<C3><CE>", "In", TR1_INT, 1, 0 },
+      |            ^~~~~~~~
+flavor.c:668:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  668 |         { "<B8><AD>", "Wi", TR1_WIS, 1, 0 },
+      |            ^~~~~~~~
+flavor.c:669:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  669 |         { "<B4><EF>", "Dx", TR1_DEX, 1, 0 },
+      |            ^~~~~~~~
+flavor.c:670:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  670 |         { "<C2><D1>", "Cn", TR1_CON, 1, 0 },
+      |            ^~~~~~~~
+flavor.c:672:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  672 |         { "<B6><F1>", "Sl", TR1_MAGIC_MASTERY, 1, 0 },
+      |            ^~~~~~~~
+flavor.c:673:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  673 |         { "<B1><A3>", "Sl", TR1_STEALTH, 1, 0 },
+      |            ^~~~~~~~
+flavor.c:675:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  675 |         { "<C0><D6>", "If", TR1_INFRA, 1, 0 },
+      |            ^~~~~~~~
+flavor.c:676:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  676 |         { "<B7><A1>", "Dg", TR1_TUNNEL, 1, 0 },
+      |            ^~~~~~~~
+flavor.c:682:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  682 |         { "<BB><C0>", "Ac", TR2_IM_ACID, 2, 0 },
+      |            ^~~~~~~~
+flavor.c:683:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  683 |         { "<C5><C5>", "El", TR2_IM_ELEC, 2, 0 },
+      |            ^~~~~~~~
+flavor.c:684:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  684 |         { "<B1><EA>", "Fi", TR2_IM_FIRE, 2, 0 },
+      |            ^~~~~~~~
+flavor.c:685:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  685 |         { "<CE><E4>", "Co", TR2_IM_COLD, 2, 0 },
+      |            ^~~~~~~~
+flavor.c:691:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  691 |         { "<BB><C0>", "Ac", TR2_RES_ACID, 2, TR2_IM_ACID },
+      |            ^~~~~~~~
+flavor.c:692:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  692 |         { "<C5><C5>", "El", TR2_RES_ELEC, 2, TR2_IM_ELEC },
+      |            ^~~~~~~~
+flavor.c:693:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  693 |         { "<B1><EA>", "Fi", TR2_RES_FIRE, 2, TR2_IM_FIRE },
+      |            ^~~~~~~~
+flavor.c:694:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  694 |         { "<CE><E4>", "Co", TR2_RES_COLD, 2, TR2_IM_COLD },
+      |            ^~~~~~~~
+flavor.c:695:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  695 |         { "<C6><C7>", "Po", TR2_RES_POIS, 2, 0 },
+      |            ^~~~~~~~
+flavor.c:696:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  696 |         { "<C1><AE>", "Li", TR2_RES_LITE, 2, 0 },
+      |            ^~~~~~~~
+flavor.c:697:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  697 |         { "<B0><C5>", "Dk", TR2_RES_DARK, 2, 0 },
+      |            ^~~~~~~~
+flavor.c:698:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  698 |         { "<C7><CB>", "Sh", TR2_RES_SHARDS, 2, 0 },
+      |            ^~~~~~~~
+flavor.c:699:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  699 |         { "<CC><D5>", "Bl", TR2_RES_BLIND, 2, 0 },
+      |            ^~~~~~~~
+flavor.c:700:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  700 |         { "<CD><F0>", "Cf", TR2_RES_CONF, 2, 0 },
+      |            ^~~~~~~~
+flavor.c:701:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  701 |         { "<B9><EC>", "So", TR2_RES_SOUND, 2, 0 },
+      |            ^~~~~~~~
+flavor.c:702:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  702 |         { "<B9><F6>", "Nt", TR2_RES_NETHER, 2, 0 },
+      |            ^~~~~~~~
+flavor.c:703:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  703 |         { "<B0><F8>", "Nx", TR2_RES_NEXUS, 2, 0 },
+      |            ^~~~~~~~
+flavor.c:704:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  704 |         { "<C6><D9>", "Ca", TR2_RES_CHAOS, 2, 0 },
+      |            ^~~~~~~~
+flavor.c:705:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  705 |         { "<CE><F4>", "Di", TR2_RES_DISEN, 2, 0 },
+      |            ^~~~~~~~
+flavor.c:706:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  706 |         { "<B6><B2>", "Fe", TR2_RES_FEAR, 2, 0 },
+      |            ^~~~~~~~
+flavor.c:712:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  712 |         { "<CB><E2><CE><CF>", "Ma", TR3_DEC_MANA, 3, 0 },
+      |            ^~~~~~~~~~~~~~~~
+flavor.c:713:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  713 |         { "<C5><EA>", "Th", TR2_THROW, 2, 0 },
+      |            ^~~~~~~~
+flavor.c:715:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  715 |         { "<CB><E3>", "Fa", TR2_FREE_ACT, 2, 0 },
+      |            ^~~~~~~~
+flavor.c:716:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  716 |         { "<BB><EB>", "Si", TR3_SEE_INVIS, 3, 0 },
+      |            ^~~~~~~~
+flavor.c:717:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  717 |         { "<B7><D0>", "Hl", TR2_HOLD_LIFE, 2, 0 },
+      |            ^~~~~~~~
+flavor.c:718:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  718 |         { "<B4><B6>", "Esp", TR3_TELEPATHY, 3, 0 },
+      |            ^~~~~~~~
+flavor.c:719:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  719 |         { "<C3><D9>", "Sd", TR3_SLOW_DIGEST, 3, 0 },
+      |            ^~~~~~~~
+flavor.c:720:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  720 |         { "<B3><E8>", "Rg", TR3_REGEN, 3, 0 },
+      |            ^~~~~~~~
+flavor.c:721:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  721 |         { "<C9><E2>", "Lv", TR3_FEATHER, 3, 0 },
+      |            ^~~~~~~~
+flavor.c:722:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  722 |         { "<CC><C0>", "Xl", TR3_LITE, 3, 0 },
+      |            ^~~~~~~~
+flavor.c:723:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  723 |         { "<B7><D9>", "Wr", TR3_WARNING, 3, 0},
+      |            ^~~~~~~~
+flavor.c:724:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  724 |         { "<C7><DC>", "Xm", TR3_XTRA_MIGHT, 3, 0 },
+      |            ^~~~~~~~
+flavor.c:725:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  725 |         { "<BC><CD>", "Xs", TR3_XTRA_SHOTS, 3, 0 },
+      |            ^~~~~~~~
+flavor.c:726:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  726 |         { "<BD><D6>", "Te", TR3_TELEPORT, 3, 0 },
+      |            ^~~~~~~~
+flavor.c:727:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  727 |         { "<C5><DC>", "Ag", TR3_AGGRAVATE, 3, 0 },
+      |            ^~~~~~~~
+flavor.c:728:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  728 |         { "<BD><CB>", "Bs", TR3_BLESSED, 3, 0 },
+      |            ^~~~~~~~
+flavor.c:729:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  729 |         { "<B1>ʼ<F6>", "Pc", TR3_PERMA_CURSE, 3, 0 },
+      |            ^~~~ ~~~~
+flavor.c:730:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  730 |         { "<BC><F6>", "Cu", TR3_HEAVY_CURSE, 3, TR3_PERMA_CURSE },
+      |            ^~~~~~~~
+flavor.c:731:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  731 |         { "<B4><F7>", "Ty", TR3_TY_CURSE, 3, 0 },
+      |            ^~~~~~~~
+flavor.c:740:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  740 |         { "<B1><EA>", "F", TR3_SH_FIRE, 3, 0 },
+      |            ^~~~~~~~
+flavor.c:741:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  741 |         { "<C5><C5>", "E", TR3_SH_ELEC, 3, 0 },
+      |            ^~~~~~~~
+flavor.c:742:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  742 |         { "<CE><E4>", "C", TR3_SH_COLD, 3, 0 },
+      |            ^~~~~~~~
+flavor.c:743:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  743 |         { "<CB><E2>", "M", TR3_NO_MAGIC, 3, 0 },
+      |            ^~~~~~~~
+flavor.c:744:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  744 |         { "<BD><D6>", "T", TR3_NO_TELE, 3, 0 },
+      |            ^~~~~~~~
+flavor.c:750:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  750 |         { "<BB><C0>", "A", TR1_BRAND_ACID, 1, 0 },
+      |            ^~~~~~~~
+flavor.c:751:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  751 |         { "<C5><C5>", "E", TR1_BRAND_ELEC, 1, 0 },
+      |            ^~~~~~~~
+flavor.c:752:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  752 |         { "<BE><C6>", "F", TR1_BRAND_FIRE, 1, 0 },
+      |            ^~~~~~~~
+flavor.c:753:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  753 |         { "<C5><E0>", "Co", TR1_BRAND_COLD, 1, 0 },
+      |            ^~~~~~~~
+flavor.c:754:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  754 |         { "<C6><C7>", "P", TR1_BRAND_POIS, 1, 0 },
+      |            ^~~~~~~~
+flavor.c:755:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  755 |         { "<C6><D9>", "Ca", TR1_CHAOTIC, 1, 0 },
+      |            ^~~~~~~~
+flavor.c:756:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  756 |         { "<B5><DB>", "V", TR1_VAMPIRIC, 1, 0 },
+      |            ^~~~~~~~
+flavor.c:757:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  757 |         { "<BF><CC>", "Q", TR1_IMPACT, 1, 0 },
+      |            ^~~~~~~~
+flavor.c:758:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  758 |         { "<C0><DA>", "S", TR1_VORPAL, 1, 0 },
+      |            ^~~~~~~~
+flavor.c:764:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  764 |         { "<BC><D9>", "*", TR1_SLAY_EVIL, 1, 0 },
+      |            ^~~~~~~~
+flavor.c:767:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  767 |         { "<A5><AA>", "o", TR1_SLAY_ORC, 1, 0 },
+      |            ^~~~~~~~
+flavor.c:768:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  768 |         { "<A5><C8>", "T", TR1_SLAY_TROLL, 1, 0 },
+      |            ^~~~~~~~
+flavor.c:769:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  769 |         { "<B5><F0>", "P", TR1_SLAY_GIANT, 1, 0 },
+      |            ^~~~~~~~
+flavor.c:770:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  770 |         { "<A5><C7>", "U", TR1_SLAY_DEMON, 1, 0 },
+      |            ^~~~~~~~
+flavor.c:771:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  771 |         { "<BB><E0>", "L", TR1_SLAY_UNDEAD, 1, 0 },
+      |            ^~~~~~~~
+flavor.c:778:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  778 |         { "<CF><D3>", "St", TR2_SUST_STR, 2, 0 },
+      |            ^~~~~~~~
+flavor.c:779:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  779 |         { "<C3><CE>", "In", TR2_SUST_INT, 2, 0 },
+      |            ^~~~~~~~
+flavor.c:780:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  780 |         { "<B8><AD>", "Wi", TR2_SUST_WIS, 2, 0 },
+      |            ^~~~~~~~
+flavor.c:781:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  781 |         { "<B4><EF>", "Dx", TR2_SUST_DEX, 2, 0 },
+      |            ^~~~~~~~
+flavor.c:782:5: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  782 |         { "<C2><D1>", "Cn", TR2_SUST_CON, 2, 0 },
+      |            ^~~~~~~~
+77 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o generate.o generate.c
+In file included from generate.c:101:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from generate.c:101:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from generate.c:101:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+3 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o grid.o grid.c
+In file included from grid.c:14:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from grid.c:14:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from grid.c:14:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+3 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o init1.o init1.c
+In file included from init1.c:5:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from init1.c:5:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from init1.c:5:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+3 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o init2.o init2.c
+In file included from init2.c:5:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from init2.c:5:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from init2.c:5:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+init2.c:1694:25: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+ 1694 |                 elements[i].pointer = (void*)i;
+      |                                       ^~~~~~~~
+init2.c:1711:19: warning: cast to smaller integer type 'int' from 'void *' [-Wvoid-pointer-to-int-cast]
+ 1711 |                 r_ptr = &r_info[(int)elements[i].pointer];
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~
+init2.c:1725:32: warning: cast to smaller integer type 'int' from 'void *' [-Wvoid-pointer-to-int-cast]
+ 1725 |                         alloc_race_table[i].index = (int)elements[i].pointer;
+      |                                                     ^~~~~~~~~~~~~~~~~~~~~~~~
+6 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o japanese.o japanese.c
+In file included from japanese.c:12:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from japanese.c:12:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from japanese.c:12:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+3 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o load.o load.c
+In file included from load.c:5:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from load.c:5:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from load.c:5:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+3 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o magic.o magic.c
+In file included from magic.c:1:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from magic.c:1:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from magic.c:1:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+magic.c:181:16: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  181 |                         prt("     ̾<C1><B0>", y, x + 5);
+      |                                   ^~~~~~~~
+magic.c:573:50: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  573 |                         if (!get_check(format("Do you curse %s, really<A1><A9>", o_name))) return FALSE;
+      |                                                                       ^~~~~~~~
+5 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o main-gcu.o main-gcu.c
+In file included from main-gcu.c:49:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from main-gcu.c:49:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from main-gcu.c:49:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+3 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o main.o main.c
+In file included from main.c:11:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from main.c:11:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from main.c:11:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+3 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o melee1.o melee1.c
+In file included from melee1.c:13:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from melee1.c:13:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from melee1.c:13:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+3 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o melee2.o melee2.c
+In file included from melee2.c:18:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from melee2.c:18:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from melee2.c:18:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+3 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o mind.o mind.c
+In file included from mind.c:13:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from mind.c:13:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from mind.c:13:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+3 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o monster1.o monster1.c
+In file included from monster1.c:13:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from monster1.c:13:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from monster1.c:13:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+3 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o monster2.o monster2.c
+In file included from monster2.c:13:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from monster2.c:13:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from monster2.c:13:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+3 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o mspells1.o mspells1.c
+In file included from mspells1.c:13:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from mspells1.c:13:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from mspells1.c:13:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+3 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o mspells2.o mspells2.c
+In file included from mspells2.c:13:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from mspells2.c:13:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from mspells2.c:13:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+3 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o mspells3.o mspells3.c
+In file included from mspells3.c:13:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from mspells3.c:13:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from mspells3.c:13:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+mspells3.c:419:19: warning: variable 'count' set but not used [-Wunused-but-set-variable]
+  419 |         int k, dir, dam, count = 0;
+      |                          ^
+mspells3.c:2225:7: warning: unused variable 'redraw' [-Wunused-variable]
+ 2225 |         bool redraw = FALSE;
+      |              ^~~~~~
+mspells3.c:2430:6: warning: unused variable 'plev' [-Wunused-variable]
+ 2430 |         int plev = p_ptr->lev;
+      |             ^~~~
+6 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o mutation.o mutation.c
+In file included from mutation.c:13:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from mutation.c:13:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from mutation.c:13:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+3 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o notes.o notes.c
+In file included from notes.c:14:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from notes.c:14:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from notes.c:14:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+notes.c:60:15: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+   60 |         fprintf(fff, final_note);
+      |                      ^~~~~~~~~~
+notes.c:60:15: note: treat the string as an argument to avoid this
+   60 |         fprintf(fff, final_note);
+      |                      ^
+      |                      "%s", 
+notes.c:266:28: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+  266 |                         strnfmt(buf, 1024, "%s1 <C6><FC><CC><DC>\n",buf);
+      |                                                 ^~~~~~~~~~~~~~~~
+5 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o obj_kind.o obj_kind.c
+In file included from obj_kind.c:13:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from obj_kind.c:13:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from obj_kind.c:13:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+3 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o object1.o object1.c
+In file included from object1.c:13:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from object1.c:13:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from object1.c:13:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+3 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o object2.o object2.c
+In file included from object2.c:13:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from object2.c:13:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from object2.c:13:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+3 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o racial.o racial.c
+In file included from racial.c:13:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from racial.c:13:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from racial.c:13:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+racial.c:434:5: warning: logical not is only applied to the left hand side of this bitwise operator [-Wlogical-not-parentheses]
+  434 |                         (!r_ptr->flags3 & (RF3_NO_CONF)))
+      |                          ^              ~
+racial.c:434:5: note: add parentheses after the '!' to evaluate the bitwise operator first
+  434 |                         (!r_ptr->flags3 & (RF3_NO_CONF)))
+      |                          ^                             
+      |                           (                            )
+racial.c:434:5: note: add parentheses around left hand side expression to silence this warning
+  434 |                         (!r_ptr->flags3 & (RF3_NO_CONF)))
+      |                          ^
+      |                          (             )
+racial.c:686:8: warning: unused variable 'flag' [-Wunused-variable]
+  686 |                 bool flag = FALSE;
+      |                      ^~~~
+racial.c:72:13: warning: unused function 'jump_wall' [-Wunused-function]
+   72 | static bool jump_wall(void)
+      |             ^~~~~~~~~
+6 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o rooms.o rooms.c
+In file included from rooms.c:14:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from rooms.c:14:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from rooms.c:14:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+3 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o save.o save.c
+In file included from save.c:5:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from save.c:5:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from save.c:5:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+3 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o scores.o scores.c
+In file included from scores.c:13:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from scores.c:13:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from scores.c:13:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+3 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o snatch.o snatch.c
+In file included from snatch.c:3:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from snatch.c:3:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from snatch.c:3:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+snatch.c:208:16: warning: unused variable 'r_ptr' [-Wunused-variable]
+  208 |         monster_race *r_ptr = &r_info[p_ptr->r_idx];
+      |                       ^~~~~
+snatch.c:223:7: warning: unused variable 'f1' [-Wunused-variable]
+  223 |         u32b f1 = r_ptr->flags1;
+      |              ^~
+snatch.c:227:7: warning: unused variable 'f5' [-Wunused-variable]
+  227 |         u32b f5 = r_ptr->flags5;
+      |              ^~
+snatch.c:228:7: warning: unused variable 'f6' [-Wunused-variable]
+  228 |         u32b f6 = r_ptr->flags6;
+      |              ^~
+snatch.c:348:7: warning: unused variable 'f1' [-Wunused-variable]
+  348 |         u32b f1 = r_ptr->flags1;
+      |              ^~
+snatch.c:352:7: warning: unused variable 'f5' [-Wunused-variable]
+  352 |         u32b f5 = r_ptr->flags5;
+      |              ^~
+snatch.c:353:7: warning: unused variable 'f6' [-Wunused-variable]
+  353 |         u32b f6 = r_ptr->flags6;
+      |              ^~
+snatch.c:530:7: warning: unused variable 'f3' [-Wunused-variable]
+  530 |         u32b f3 = r_ptr->flags3;
+      |              ^~
+11 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o snipe.o snipe.c
+In file included from snipe.c:1:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from snipe.c:1:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from snipe.c:1:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+snipe.c:541:18: warning: unused variable 'plev' [-Wunused-variable]
+  541 |         int             plev = p_ptr->lev;
+      |                         ^~~~
+snipe.c:542:18: warning: unused variable 'old_chp' [-Wunused-variable]
+  542 |         int             old_chp = p_ptr->chp;
+      |                         ^~~~~~~
+snipe.c:543:18: warning: variable 'spell' set but not used [-Wunused-but-set-variable]
+  543 |         snipe_power     spell;
+      |                         ^
+6 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o spells1.o spells1.c
+In file included from spells1.c:13:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from spells1.c:13:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from spells1.c:13:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+spells1.c:3845:47: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+ 3845 |                         else if(remove_monster(dam, c_ptr->m_idx, "<BE><C3><CC><C7>"))
+      |                                                                    ^~~~~~~~~~~~~~~~
+spells1.c:3877:44: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+ 3877 |                                 if (remove_monster(dam, c_ptr->m_idx, "<BE><C3><CC><C7>"))
+      |                                                                        ^~~~~~~~~~~~~~~~
+spells1.c:6128:15: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+ 6128 |                         msg_print("<A4><A2><A4>ʤ<BF><A4>Ϥ<BD><A4>ξ<EC><A4><C7><C8><F4><A4><D3>ķ<A4>ͤ<BF><A1><A3>");
+      |                                    ^~~~~~~~~~~~ ~~~~~~~~ ~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~
+6 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o spells2.o spells2.c
+In file included from spells2.c:13:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from spells2.c:13:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from spells2.c:13:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+3 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o spells3.o spells3.c
+In file included from spells3.c:13:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from spells3.c:13:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from spells3.c:13:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+spells3.c:3831:27: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+ 3831 |                                 case  0: strcpy (p, " <B2><F3><C9><FC>:1d10"); break;
+      |                                                       ^~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/secure/_string.h:84:33: note: expanded from macro 'strcpy'
+   84 |                 __builtin___strcpy_chk (dest, __VA_ARGS__, __darwin_obsz (dest))
+      |                                               ^~~~~~~~~~~
+spells3.c:3832:29: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+ 3832 |                                 case  4: sprintf(p, " »<BD><FD>:1d%d", ((p_ptr->lev / 2) + 5)); break;
+      |                                                        ^~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/secure/_stdio.h:47:56: note: expanded from macro 'sprintf'
+   47 |   __builtin___sprintf_chk (str, 0, __darwin_obsz(str), __VA_ARGS__)
+      |                                                        ^~~~~~~~~~~
+spells3.c:3833:27: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+ 3833 |                                 case 10: strcpy (p, " <B2><F3><C9><FC>:2d10"); break;
+      |                                                       ^~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/secure/_string.h:84:33: note: expanded from macro 'strcpy'
+   84 |                 __builtin___strcpy_chk (dest, __VA_ARGS__, __darwin_obsz (dest))
+      |                                               ^~~~~~~~~~~
+spells3.c:3834:29: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+ 3834 |                                 case 13: sprintf(p, " »<BD><FD>:1d%d", ((p_ptr->lev / 2) + 5)); break;
+      |                                                        ^~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/secure/_stdio.h:47:56: note: expanded from macro 'sprintf'
+   47 |   __builtin___sprintf_chk (str, 0, __darwin_obsz(str), __VA_ARGS__)
+      |                                                        ^~~~~~~~~~~
+spells3.c:3835:27: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+ 3835 |                                 case 21: strcpy (p, " <B2><F3><C9><FC>:4d10"); break;
+      |                                                       ^~~~~~~~~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/secure/_string.h:84:33: note: expanded from macro 'strcpy'
+   84 |                 __builtin___strcpy_chk (dest, __VA_ARGS__, __darwin_obsz (dest))
+      |                                               ^~~~~~~~~~~
+spells3.c:3836:54: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+ 3836 |                                 case 31: if (p_ptr->tim_sentence) sprintf(p, " »<BD><FD>:%d", (p_ptr->rvs_d)); break;
+      |                                                                                 ^~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/secure/_stdio.h:47:56: note: expanded from macro 'sprintf'
+   47 |   __builtin___sprintf_chk (str, 0, __darwin_obsz(str), __VA_ARGS__)
+      |                                                        ^~~~~~~~~~~
+spells3.c:3836:62: warning: format specifies type 'int' but the argument has type 's32b' (aka 'long') [-Wformat]
+ 3836 |                                 case 31: if (p_ptr->tim_sentence) sprintf(p, " »<BD><FD>:%d", (p_ptr->rvs_d)); break;
+      |                                                                                          ~~   ^~~~~~~~~~~~~~
+      |                                                                                          %ld
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/secure/_stdio.h:47:56: note: expanded from macro 'sprintf'
+   47 |   __builtin___sprintf_chk (str, 0, __darwin_obsz(str), __VA_ARGS__)
+      |                                                        ^~~~~~~~~~~
+10 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o store.o store.c
+In file included from store.c:13:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from store.c:13:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from store.c:13:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+3 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o streams.o streams.c
+In file included from streams.c:16:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from streams.c:16:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from streams.c:16:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+3 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o tables.o tables.c
+In file included from tables.c:13:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from tables.c:13:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from tables.c:13:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+3 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o util.o util.c
+In file included from util.c:6:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from util.c:6:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from util.c:6:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+util.c:2455:7: warning: address of array 'buf' will always evaluate to 'true' [-Wpointer-bool-conversion]
+ 2455 |                 if (buf && streq(buf, str) && (j < 1000))
+      |                     ^~~ ~~
+4 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o variable.o variable.c
+In file included from variable.c:13:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from variable.c:13:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from variable.c:13:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+3 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o wild.o wild.c
+In file included from wild.c:14:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from wild.c:14:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from wild.c:14:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+3 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o wizard1.o wizard1.c
+In file included from wizard1.c:5:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from wizard1.c:5:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from wizard1.c:5:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+3 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o wizard2.o wizard2.c
+In file included from wizard2.c:13:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from wizard2.c:13:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from wizard2.c:13:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+wizard2.c:2581:24: warning: format specifies type 'int' but the argument has type 'u32b' (aka 'unsigned long') [-Wformat]
+ 2581 |                                 sprintf(buf, "%d", p_ptr->r_idx);
+      |                                               ~~   ^~~~~~~~~~~~
+      |                                               %lu
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/secure/_stdio.h:47:56: note: expanded from macro 'sprintf'
+   47 |   __builtin___sprintf_chk (str, 0, __darwin_obsz(str), __VA_ARGS__)
+      |                                                        ^~~~~~~~~~~
+wizard2.c:2583:10: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+ 2583 |                                 prt("<B2><BF><C8>֡<A9>", 0, 0);
+      |                                      ^~~~~~~~~~~~~~~~
+wizard2.c:2589:23: warning: format specifies type 'int *' but the argument has type 'u32b *' (aka 'unsigned long *') [-Wformat]
+ 2589 |                                 sscanf(buf, "%d", &p_ptr->r_idx);
+      |                                              ~~   ^~~~~~~~~~~~~
+      |                                              %ld
+6 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o xtra1.o xtra1.c
+In file included from xtra1.c:13:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from xtra1.c:13:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from xtra1.c:13:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+xtra1.c:1082:3: warning: 'strcpy' will always overflow; destination buffer has size 5, but the source string has length 6 (including NUL byte) [-Wfortify-source]
+ 1082 |                 strcpy(text, "Spell");
+      |                 ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/secure/_string.h:84:3: note: expanded from macro 'strcpy'
+   84 |                 __builtin___strcpy_chk (dest, __VA_ARGS__, __darwin_obsz (dest))
+      |                 ^
+xtra1.c:1339:11: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+ 1339 |         else if (!m_list[p_ptr->health_who].hp < 0)
+      |                  ^                             ~
+xtra1.c:1339:11: note: add parentheses after the '!' to evaluate the comparison first
+ 1339 |         else if (!m_list[p_ptr->health_who].hp < 0)
+      |                  ^                                
+      |                   (                               )
+xtra1.c:1339:11: note: add parentheses around left hand side expression to silence this warning
+ 1339 |         else if (!m_list[p_ptr->health_who].hp < 0)
+      |                  ^
+      |                  (                            )
+xtra1.c:1339:41: warning: result of comparison of constant 0 with boolean expression is always false [-Wtautological-constant-compare]
+ 1339 |         else if (!m_list[p_ptr->health_who].hp < 0)
+      |                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^ ~
+6 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o xtra2.o xtra2.c
+In file included from xtra2.c:13:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from xtra2.c:13:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from xtra2.c:13:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+xtra2.c:4050:8: warning: unused variable 'move_fast' [-Wunused-variable]
+ 4050 |                 bool move_fast = FALSE;
+      |                      ^~~~~~~~~
+4 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o z-form.o z-form.c
+In file included from z-form.c:5:
+In file included from ./z-form.h:6:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+1 warning generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o z-rand.o z-rand.c
+In file included from z-rand.c:5:
+In file included from ./z-rand.h:6:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+1 warning generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o z-term.o z-term.c
+In file included from z-term.c:13:
+In file included from ./angband.h:22:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+In file included from z-term.c:13:
+In file included from ./angband.h:38:
+./z-config.h:205:9: warning: 'ALLOW_WIZARD' macro redefined [-Wmacro-redefined]
+  205 | #define ALLOW_WIZARD
+      |         ^
+<command line>:6:9: note: previous definition is here
+    6 | #define ALLOW_WIZARD 1
+      |         ^
+In file included from z-term.c:13:
+In file included from ./angband.h:38:
+./z-config.h:448:9: warning: 'PRIVATE_USER_PATH' macro redefined [-Wmacro-redefined]
+  448 | #define PRIVATE_USER_PATH "~/.angband"
+      |         ^
+<command line>:4:9: note: previous definition is here
+    4 | #define PRIVATE_USER_PATH "~/Library/Preferences"
+      |         ^
+3 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o z-util.o z-util.c
+In file included from z-util.c:5:
+In file included from ./z-util.h:6:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+1 warning generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o z-virt.o z-virt.c
+In file included from z-virt.c:13:
+In file included from ./z-virt.h:14:
+In file included from ./h-basic.h:20:
+./h-system.h:113:13: warning: a function declaration without a prototype is deprecated in all versions of C and is treated as a zero-parameter prototype in C2x, conflicting with a previous declaration [-Wdeprecated-non-prototype]
+  113 | extern long atol();
+      |             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdlib.h:132:7: note: conflicting prototype is here
+  132 | long     atol(const char *);
+      |          ^
+1 warning generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -o xangband artifact.o autopick.o birth.o bldg.o cave.o chuukei.o cmd1.o cmd2.o cmd3.o cmd4.o cmd5.o cmd6.o dungeon.o effects.o element.o files.o flavor.o generate.o grid.o init1.o init2.o japanese.o load.o magic.o main-gcu.o main.o melee1.o melee2.o mind.o monster1.o monster2.o mspells1.o mspells2.o mspells3.o mutation.o notes.o obj_kind.o object1.o object2.o racial.o rooms.o save.o scores.o snatch.o snipe.o spells1.o spells2.o spells3.o store.o streams.o tables.o util.o variable.o wild.o wizard1.o wizard2.o xtra1.o xtra2.o z-form.o z-rand.o z-term.o z-util.o z-virt.o -lncurses
+Installing terminal version...
+Terminal version installed as ../xangband-terminal
+Run with: ./xangband-terminal

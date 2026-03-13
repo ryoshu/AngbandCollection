@@ -3231,7 +3231,7 @@ bool show_file(cptr name, cptr what, int line, int mode)
 			int key = -1;
 
 			if (isdigit(k)) key = D2I(k);
-			else if isalpha(k) key = k - 'A' + 10;
+			else if (isalpha(k)) key = k - 'A' + 10;
 
 			if ((key > -1) && hook[key][0])
 			{

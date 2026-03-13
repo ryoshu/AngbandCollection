@@ -1,0 +1,1454 @@
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o birth.o birth.c
+In file included from birth.c:11:
+In file included from ./angband.h:34:
+./defines.h:1505:39: warning: '/*' within block comment [-Wcomment]
+ 1505 | /* #define SV_SCROLL_DETECT_GOLD                        26 /* removed detect_gold */
+      |                                                            ^
+./defines.h:2096:41: warning: '/*' within block comment [-Wcomment]
+ 2096 | /* #define SM_RES_CHARM                 /* what do I do with this? */
+      |                                         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o cave.o cave.c
+In file included from cave.c:11:
+In file included from ./angband.h:34:
+./defines.h:1505:39: warning: '/*' within block comment [-Wcomment]
+ 1505 | /* #define SV_SCROLL_DETECT_GOLD                        26 /* removed detect_gold */
+      |                                                            ^
+./defines.h:2096:41: warning: '/*' within block comment [-Wcomment]
+ 2096 | /* #define SM_RES_CHARM                 /* what do I do with this? */
+      |                                         ^
+cave.c:1051:57: warning: '&&' within '||' [-Wlogical-op-parentheses]
+ 1051 |                                 (k_info[fkidx].aware)) || (!(k_info[fkidx].flavor)) &&
+      |                                                        ~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+ 1052 |                 (k_info[fkidx].tval))
+      |                 ~~~~~~~~~~~~~~~~~~~~
+cave.c:1051:57: note: place parentheses around the '&&' expression to silence this warning
+ 1051 |                                 (k_info[fkidx].aware)) || (!(k_info[fkidx].flavor)) &&
+      |                                                                                     ^
+      |                                                           (
+ 1052 |                 (k_info[fkidx].tval))
+      |                                     
+      |                                     )
+3 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o cmd0.o cmd0.c
+In file included from cmd0.c:18:
+In file included from ./angband.h:34:
+./defines.h:1505:39: warning: '/*' within block comment [-Wcomment]
+ 1505 | /* #define SV_SCROLL_DETECT_GOLD                        26 /* removed detect_gold */
+      |                                                            ^
+./defines.h:2096:41: warning: '/*' within block comment [-Wcomment]
+ 2096 | /* #define SM_RES_CHARM                 /* what do I do with this? */
+      |                                         ^
+cmd0.c:581:13: warning: variable 'evt' set but not used [-Wunused-but-set-variable]
+  581 |         event_type evt;
+      |                    ^
+3 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o cmd1.o cmd1.c
+In file included from cmd1.c:11:
+In file included from ./angband.h:34:
+./defines.h:1505:39: warning: '/*' within block comment [-Wcomment]
+ 1505 | /* #define SV_SCROLL_DETECT_GOLD                        26 /* removed detect_gold */
+      |                                                            ^
+./defines.h:2096:41: warning: '/*' within block comment [-Wcomment]
+ 2096 | /* #define SM_RES_CHARM                 /* what do I do with this? */
+      |                                         ^
+cmd1.c:185:12: warning: variable 'tmp' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+  185 |                 else if (dstun)
+      |                          ^~~~~
+cmd1.c:192:21: note: uninitialized use occurs here
+  192 |                 m_ptr->stunned = (tmp < 200) ? tmp : 200;
+      |                                   ^~~
+cmd1.c:185:8: note: remove the 'if' if its condition is always true
+  185 |                 else if (dstun)
+      |                      ^~~~~~~~~~
+  186 |                 {
+cmd1.c:170:10: note: initialize the variable 'tmp' to silence this warning
+  170 |                 int tmp;
+      |                        ^
+      |                         = 0
+cmd1.c:215:7: warning: variable 'ftval' set but not used [-Wunused-but-set-variable]
+  215 |         byte ftval;
+      |              ^
+cmd1.c:1706:35: warning: incompatible function pointer types assigning to 'bool (*)(const object_type *)' (aka 'bool (*)(const struct object_type *)') from 'bool (object_type *)' (aka 'bool (struct object_type *)') [-Wincompatible-function-pointer-types]
+ 1706 |                 if (!telemove) item_tester_hook = inven_carry_okay;
+      |                                                 ^ ~~~~~~~~~~~~~~~~
+cmd1.c:2430:6: warning: variable 'hit' set but not used [-Wunused-but-set-variable]
+ 2430 |         int hit = 0;
+      |             ^
+cmd1.c:2735:15: warning: variable 'quk' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+ 2735 |                                         else if (k > 47) quk = 2;
+      |                                                  ^~~~~~
+cmd1.c:2739:26: note: uninitialized use occurs here
+ 2739 |                                         if (rand_int(100) < quk)
+      |                                                             ^~~
+cmd1.c:2735:11: note: remove the 'if' if its condition is always true
+ 2735 |                                         else if (k > 47) quk = 2;
+      |                                              ^~~~~~~~~~~
+cmd1.c:2733:13: note: initialize the variable 'quk' to silence this warning
+ 2733 |                                         int quk, qrad;
+      |                                                ^
+      |                                                 = 0
+cmd1.c:3797:6: warning: variable 'check_dir' set but not used [-Wunused-but-set-variable]
+ 3797 |         int check_dir = 0;
+      |             ^
+cmd1.c:4221:58: warning: '&&' within '||' [-Wlogical-op-parentheses]
+ 4221 |                 else if (easy_alter && (cave_info[y][x] & (CAVE_MARK)) &&
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+ 4222 |                         (cave_feat[y][x] == FEAT_DOOR_LOCKD) || (cave_feat[y][x] == FEAT_DOOR_STUCK))
+      |                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+cmd1.c:4221:58: note: place parentheses around the '&&' expression to silence this warning
+ 4221 |                 else if (easy_alter && (cave_info[y][x] & (CAVE_MARK)) &&
+      |                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+ 4222 |                         (cave_feat[y][x] == FEAT_DOOR_LOCKD) || (cave_feat[y][x] == FEAT_DOOR_STUCK))
+      |                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+9 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o cmd2.o cmd2.c
+In file included from cmd2.c:11:
+In file included from ./angband.h:34:
+./defines.h:1505:39: warning: '/*' within block comment [-Wcomment]
+ 1505 | /* #define SV_SCROLL_DETECT_GOLD                        26 /* removed detect_gold */
+      |                                                            ^
+./defines.h:2096:41: warning: '/*' within block comment [-Wcomment]
+ 2096 | /* #define SM_RES_CHARM                 /* what do I do with this? */
+      |                                         ^
+cmd2.c:2314:14: warning: unused variable 'num' [-Wunused-variable]
+ 2314 |         int spikes, num = 0;
+      |                     ^~~
+cmd2.c:2756:64: warning: if statement has empty body [-Wempty-body]
+ 2756 |         if (inkey() == ESCAPE) /* do nothing (just a -more-) */;
+      |                                                                ^
+cmd2.c:2756:64: note: put the semicolon on a separate line to silence this warning
+cmd2.c:2780:52: warning: if statement has empty body [-Wempty-body]
+ 2780 |             if (inkey() == ESCAPE) /* do nothing */;
+      |                                                    ^
+cmd2.c:2780:52: note: put the semicolon on a separate line to silence this warning
+cmd2.c:2786:52: warning: if statement has empty body [-Wempty-body]
+ 2786 |             if (inkey() == ESCAPE) /* do nothing */;
+      |                                                    ^
+cmd2.c:2786:52: note: put the semicolon on a separate line to silence this warning
+cmd2.c:3434:10: warning: variable 'luckstr' set but not used [-Wunused-but-set-variable]
+ 3434 |                                 bool luckstr = FALSE;
+      |                                      ^
+cmd2.c:3535:21: warning: variable 'j' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+ 3535 |                 if ((f4 & TR4_EXPLODE_A) && (rand_int(100) > 1 + ((badluck+1)/3) ))
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cmd2.c:3624:7: note: uninitialized use occurs here
+ 3624 |         if (!j) j = (hit_body ? breakage_chance(i_ptr, hitwall, waterlose) : 0);
+      |              ^
+cmd2.c:3535:17: note: remove the 'if' if its condition is always true
+ 3535 |                 if ((f4 & TR4_EXPLODE_A) && (rand_int(100) > 1 + ((badluck+1)/3) ))
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 3536 |                                 {
+ 3537 |                                         /* Explode the missile */
+ 3538 |                                         explode_grenade(y, x, o_ptr, 0, tdam);
+ 3539 | 
+ 3540 |                                         /* 100% chance of breakage */
+ 3541 |                                         j = 100;
+ 3542 |                                         break;
+ 3543 |                                 }
+      |                                  
+ 3544 |                                 else if ((f4 & TR4_EXPLODE_A) && (object_known_p(o_ptr)))
+      |                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 3545 |                                 {
+      |                                 ~
+ 3546 |                                         msg_format("Unfortunately, the %s fails to explode.", o_name);
+      |                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 3547 |                                 }
+      |                                 ~
+cmd2.c:3535:21: warning: variable 'j' is used uninitialized whenever '&&' condition is false [-Wsometimes-uninitialized]
+ 3535 |                 if ((f4 & TR4_EXPLODE_A) && (rand_int(100) > 1 + ((badluck+1)/3) ))
+      |                     ^~~~~~~~~~~~~~~~~~~~
+cmd2.c:3624:7: note: uninitialized use occurs here
+ 3624 |         if (!j) j = (hit_body ? breakage_chance(i_ptr, hitwall, waterlose) : 0);
+      |              ^
+cmd2.c:3535:21: note: remove the '&&' if its condition is always true
+ 3535 |                 if ((f4 & TR4_EXPLODE_A) && (rand_int(100) > 1 + ((badluck+1)/3) ))
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~
+cmd2.c:3431:8: warning: variable 'j' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+ 3431 |                         if (test_hit(chance2, monac, m_ptr->ml))
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cmd2.c:3624:7: note: uninitialized use occurs here
+ 3624 |         if (!j) j = (hit_body ? breakage_chance(i_ptr, hitwall, waterlose) : 0);
+      |              ^
+cmd2.c:3431:4: note: remove the 'if' if its condition is always true
+ 3431 |                         if (test_hit(chance2, monac, m_ptr->ml))
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 3432 |                         {
+cmd2.c:3282:12: warning: variable 'j' is used uninitialized whenever 'if' condition is true [-Wsometimes-uninitialized]
+ 3282 |                 else if (!cave_floor_bold(ny, nx))
+      |                          ^~~~~~~~~~~~~~~~~~~~~~~~
+cmd2.c:3624:7: note: uninitialized use occurs here
+ 3624 |         if (!j) j = (hit_body ? breakage_chance(i_ptr, hitwall, waterlose) : 0);
+      |              ^
+cmd2.c:3282:8: note: remove the 'if' if its condition is always false
+ 3282 |                 else if (!cave_floor_bold(ny, nx))
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 3283 |                 {
+      |                 ~
+ 3284 |                         /* chance of breakage when hitting a wall */
+      |                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 3285 |                         if (randint(100) < 35 - goodluck + badluck)
+      |                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 3286 |                         {
+      |                         ~
+ 3287 |                                 hitwall = TRUE;
+      |                                 ~~~~~~~~~~~~~~~
+ 3288 |                                 dy = y;
+      |                                 ~~~~~~~
+ 3289 |                                 dx = x;
+      |                                 ~~~~~~~
+ 3290 |                         }
+      |                         ~
+ 3291 |                         break;
+      |                         ~~~~~~
+ 3292 |                 }
+      |                 ~
+cmd2.c:3264:14: warning: variable 'j' is used uninitialized whenever 'for' loop exits because its condition is false [-Wsometimes-uninitialized]
+ 3264 |         for (i = 0; i < path_n; ++i)
+      |                     ^~~~~~~~~~
+cmd2.c:3624:7: note: uninitialized use occurs here
+ 3624 |         if (!j) j = (hit_body ? breakage_chance(i_ptr, hitwall, waterlose) : 0);
+      |              ^
+cmd2.c:3264:14: note: remove the condition if it is always true
+ 3264 |         for (i = 0; i < path_n; ++i)
+      |                     ^~~~~~~~~~
+cmd2.c:3050:10: note: initialize the variable 'j' to silence this warning
+ 3050 |         int i, j, y, x, ty, tx, dy, dx;
+      |                 ^
+      |                  = 0
+cmd2.c:4574:15: warning: unused variable 'k_ptr' [-Wunused-variable]
+ 4574 |         object_kind *k_ptr = &k_info[o_ptr->k_idx];
+      |                      ^~~~~
+13 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o cmd3.o cmd3.c
+In file included from cmd3.c:11:
+In file included from ./angband.h:34:
+./defines.h:1505:39: warning: '/*' within block comment [-Wcomment]
+ 1505 | /* #define SV_SCROLL_DETECT_GOLD                        26 /* removed detect_gold */
+      |                                                            ^
+./defines.h:2096:41: warning: '/*' within block comment [-Wcomment]
+ 2096 | /* #define SM_RES_CHARM                 /* what do I do with this? */
+      |                                         ^
+cmd3.c:329:7: warning: variable 'is_splendid' set but not used [-Wunused-but-set-variable]
+  329 |         bool is_splendid, new_lite/*, ammo*/;
+      |              ^
+3 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o cmd4.o cmd4.c
+In file included from cmd4.c:19:
+In file included from ./angband.h:34:
+./defines.h:1505:39: warning: '/*' within block comment [-Wcomment]
+ 1505 | /* #define SV_SCROLL_DETECT_GOLD                        26 /* removed detect_gold */
+      |                                                            ^
+./defines.h:2096:41: warning: '/*' within block comment [-Wcomment]
+ 2096 | /* #define SM_RES_CHARM                 /* what do I do with this? */
+      |                                         ^
+cmd4.c:635:9: warning: case value not in enumerated type 'event_class' [-Wswitch]
+  635 |                         case ESCAPE:
+      |                              ^
+./h-basic.h:289:16: note: expanded from macro 'ESCAPE'
+  289 | #define ESCAPE  '\033'
+      |                 ^
+cmd4.c:2390:13: warning: cast to smaller integer type 'int' from 'void *' [-Wvoid-pointer-to-int-cast]
+ 2390 |         int page = (int)vpage;
+      |                    ^~~~~~~~~~
+cmd4.c:4555:22: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 4555 |         fprintf(notes_file, info_note);
+      |                             ^~~~~~~~~
+cmd4.c:4555:22: note: treat the string as an argument to avoid this
+ 4555 |         fprintf(notes_file, info_note);
+      |                             ^
+      |                             "%s", 
+cmd4.c:4785:7: warning: variable 'f4' set but not used [-Wunused-but-set-variable]
+ 4785 |         u32b f4, f5, f6, lf4, lf5, lf6;
+      |              ^
+cmd4.c:4785:11: warning: variable 'f5' set but not used [-Wunused-but-set-variable]
+ 4785 |         u32b f4, f5, f6, lf4, lf5, lf6;
+      |                  ^
+cmd4.c:4785:15: warning: variable 'f6' set but not used [-Wunused-but-set-variable]
+ 4785 |         u32b f4, f5, f6, lf4, lf5, lf6;
+      |                      ^
+cmd4.c:4785:19: warning: variable 'lf4' set but not used [-Wunused-but-set-variable]
+ 4785 |         u32b f4, f5, f6, lf4, lf5, lf6;
+      |                          ^
+cmd4.c:4785:24: warning: variable 'lf5' set but not used [-Wunused-but-set-variable]
+ 4785 |         u32b f4, f5, f6, lf4, lf5, lf6;
+      |                               ^
+cmd4.c:4785:29: warning: variable 'lf6' set but not used [-Wunused-but-set-variable]
+ 4785 |         u32b f4, f5, f6, lf4, lf5, lf6;
+      |                                    ^
+11 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o cmd5.o cmd5.c
+In file included from cmd5.c:11:
+In file included from ./angband.h:34:
+./defines.h:1505:39: warning: '/*' within block comment [-Wcomment]
+ 1505 | /* #define SV_SCROLL_DETECT_GOLD                        26 /* removed detect_gold */
+      |                                                            ^
+./defines.h:2096:41: warning: '/*' within block comment [-Wcomment]
+ 2096 | /* #define SM_RES_CHARM                 /* what do I do with this? */
+      |                                         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o cmd6.o cmd6.c
+In file included from cmd6.c:11:
+In file included from ./angband.h:34:
+./defines.h:1505:39: warning: '/*' within block comment [-Wcomment]
+ 1505 | /* #define SV_SCROLL_DETECT_GOLD                        26 /* removed detect_gold */
+      |                                                            ^
+./defines.h:2096:41: warning: '/*' within block comment [-Wcomment]
+ 2096 | /* #define SM_RES_CHARM                 /* what do I do with this? */
+      |                                         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o dungeon.o dungeon.c
+In file included from dungeon.c:11:
+In file included from ./angband.h:34:
+./defines.h:1505:39: warning: '/*' within block comment [-Wcomment]
+ 1505 | /* #define SV_SCROLL_DETECT_GOLD                        26 /* removed detect_gold */
+      |                                                            ^
+./defines.h:2096:41: warning: '/*' within block comment [-Wcomment]
+ 2096 | /* #define SM_RES_CHARM                 /* what do I do with this? */
+      |                                         ^
+dungeon.c:160:7: warning: variable 'sensedany' set but not used [-Wunused-but-set-variable]
+  160 |         bool sensedany;
+      |              ^
+dungeon.c:188:2: warning: expression result unused [-Wunused-value]
+  188 |         phase;
+      |         ^~~~~
+dungeon.c:188:2: warning: variable 'phase' is uninitialized when used here [-Wuninitialized]
+  188 |         phase;
+      |         ^~~~~
+dungeon.c:161:11: note: initialize the variable 'phase' to silence this warning
+  161 |         int phase;
+      |                  ^
+      |                   = 0
+5 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o files.o files.c
+In file included from files.c:11:
+In file included from ./angband.h:34:
+./defines.h:1505:39: warning: '/*' within block comment [-Wcomment]
+ 1505 | /* #define SV_SCROLL_DETECT_GOLD                        26 /* removed detect_gold */
+      |                                                            ^
+./defines.h:2096:41: warning: '/*' within block comment [-Wcomment]
+ 2096 | /* #define SM_RES_CHARM                 /* what do I do with this? */
+      |                                         ^
+files.c:1813:23: warning: unused variable 'o_ptr' [-Wunused-variable]
+ 1813 |                         const object_type *o_ptr= &inventory[INVEN_WIELD];
+      |                                            ^~~~~
+files.c:4406:19: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 4406 |                                         fprintf(htm, close_color_fmt);
+      |                                                      ^~~~~~~~~~~~~~~
+files.c:4406:19: note: treat the string as an argument to avoid this
+ 4406 |                                         fprintf(htm, close_color_fmt);
+      |                                                      ^
+      |                                                      "%s", 
+files.c:4431:37: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+ 4431 |         if (oa != TERM_WHITE) fprintf(htm, close_color_fmt);
+      |                                            ^~~~~~~~~~~~~~~
+files.c:4431:37: note: treat the string as an argument to avoid this
+ 4431 |         if (oa != TERM_WHITE) fprintf(htm, close_color_fmt);
+      |                                            ^
+      |                                            "%s", 
+5 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o generate.o generate.c
+In file included from generate.c:11:
+In file included from ./angband.h:34:
+./defines.h:1505:39: warning: '/*' within block comment [-Wcomment]
+ 1505 | /* #define SV_SCROLL_DETECT_GOLD                        26 /* removed detect_gold */
+      |                                                            ^
+./defines.h:2096:41: warning: '/*' within block comment [-Wcomment]
+ 2096 | /* #define SM_RES_CHARM                 /* what do I do with this? */
+      |                                         ^
+generate.c:483:32: warning: overlapping comparisons always evaluate to false [-Wtautological-overlap-compare]
+  483 |                 else if ((p_ptr->theme == 1) && (p_ptr->theme == 2))
+      |                          ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+generate.c:481:32: warning: overlapping comparisons always evaluate to false [-Wtautological-overlap-compare]
+  481 |                 else if ((p_ptr->theme == 1) && (p_ptr->theme == 2) && (cavernlvl))
+      |                          ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+generate.c:2122:10: warning: unused variable 'rname' [-Wunused-variable]
+ 2122 |     cptr rname = (r_name + r_ptr->name);
+      |          ^~~~~
+generate.c:2243:10: warning: unused variable 'rname' [-Wunused-variable]
+ 2243 |     cptr rname = (r_name + r_ptr->name);
+      |          ^~~~~
+generate.c:3571:3: warning: call to undeclared function 'place_monster_aux_pit'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+ 3571 |                 place_monster_aux_pit(y0 - 2, x, what[0], TRUE, FALSE);
+      |                 ^
+generate.c:3578:3: warning: call to undeclared function 'place_monster_aux_pit'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+ 3578 |                 place_monster_aux_pit(y, x0 - 9, what[0], FALSE, FALSE);
+      |                 ^
+generate.c:3606:3: warning: call to undeclared function 'place_monster_aux_pit'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+ 3606 |                 place_monster_aux_pit(y0 + 1, x, what[5], FALSE, FALSE);
+      |                 ^
+generate.c:3611:2: warning: call to undeclared function 'place_monster_aux_pit'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+ 3611 |         place_monster_aux_pit(y0, x0 + 1, what[6], FALSE, FALSE);
+      |         ^
+generate.c:5922:30: warning: '&&' within '||' [-Wlogical-op-parentheses]
+ 5922 |                                         if ((!room_runes(y, x)) && ((*t == 'A') && (die < 54)) || (die < 30))
+      |                                             ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+generate.c:5922:30: note: place parentheses around the '&&' expression to silence this warning
+ 5922 |                                         if ((!room_runes(y, x)) && ((*t == 'A') && (die < 54)) || (die < 30))
+      |                                                                 ^
+      |                                             (                                                 )
+generate.c:6903:7: warning: unused variable 'spacey' [-Wunused-variable]
+ 6903 |                 int spacey = 0;
+      |                     ^~~~~~
+generate.c:7001:1: warning: non-void function does not return a value [-Wreturn-type]
+ 7001 | }
+      | ^
+generate.c:7320:12: warning: variable 'puddles' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+ 7320 |                 else if (amt > 4) puddles = rand_int(3);
+      |                          ^~~~~~~
+generate.c:7321:7: note: uninitialized use occurs here
+ 7321 |                 if (puddles)
+      |                     ^~~~~~~
+generate.c:7320:8: note: remove the 'if' if its condition is always true
+ 7320 |                 else if (amt > 4) puddles = rand_int(3);
+      |                      ^~~~~~~~~~~~
+generate.c:7240:13: note: initialize the variable 'puddles' to silence this warning
+ 7240 |         int puddles, pits, statue;
+      |                    ^
+      |                     = 0
+generate.c:7516:65: warning: '&&' within '||' [-Wlogical-op-parentheses]
+ 7516 |                         if (((mutmod == 4) && (density > 32) && (rand_int(102) < 2)) &&
+      |                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+ 7517 |                                 ((modea < 112) && (modeb > 8)) || (modea < 105 || modeb > 13))
+      |                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+generate.c:7516:65: note: place parentheses around the '&&' expression to silence this warning
+ 7516 |                         if (((mutmod == 4) && (density > 32) && (rand_int(102) < 2)) &&
+      |                                                                                      ^
+      |                             (
+ 7517 |                                 ((modea < 112) && (modeb > 8)) || (modea < 105 || modeb > 13))
+      |                                                               )
+generate.c:7824:7: warning: unused variable 'river' [-Wunused-variable]
+ 7824 |         bool river = FALSE, litcave = FALSE;
+      |              ^~~~~
+16 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o init1.o init1.c
+In file included from init1.c:11:
+In file included from ./angband.h:34:
+./defines.h:1505:39: warning: '/*' within block comment [-Wcomment]
+ 1505 | /* #define SV_SCROLL_DETECT_GOLD                        26 /* removed detect_gold */
+      |                                                            ^
+./defines.h:2096:41: warning: '/*' within block comment [-Wcomment]
+ 2096 | /* #define SM_RES_CHARM                 /* what do I do with this? */
+      |                                         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o init2.o init2.c
+In file included from init2.c:12:
+In file included from ./angband.h:34:
+./defines.h:1505:39: warning: '/*' within block comment [-Wcomment]
+ 1505 | /* #define SV_SCROLL_DETECT_GOLD                        26 /* removed detect_gold */
+      |                                                            ^
+./defines.h:2096:41: warning: '/*' within block comment [-Wcomment]
+ 2096 | /* #define SM_RES_CHARM                 /* what do I do with this? */
+      |                                         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o load.o load.c
+In file included from load.c:11:
+In file included from ./angband.h:34:
+./defines.h:1505:39: warning: '/*' within block comment [-Wcomment]
+ 1505 | /* #define SV_SCROLL_DETECT_GOLD                        26 /* removed detect_gold */
+      |                                                            ^
+./defines.h:2096:41: warning: '/*' within block comment [-Wcomment]
+ 2096 | /* #define SM_RES_CHARM                 /* what do I do with this? */
+      |                                         ^
+load.c:549:7: warning: unused variable 'tmp8u' [-Wunused-variable]
+  549 |         byte tmp8u;
+      |              ^~~~~
+load.c:875:43: warning: array index 9 is past the end of the array (that has type 'bool[9]') [-Warray-bounds]
+  875 |                 birth_no_stacking = adult_no_stacking = old_birth[9];
+      |                                                         ^         ~
+load.c:862:3: note: array 'old_birth' declared here
+  862 |                 bool old_birth[9];
+      |                 ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/stdbool.h:20:14: note: expanded from macro 'bool'
+   20 | #define bool _Bool
+      |              ^
+load.c:1924:9: warning: unused variable 'dx' [-Wunused-variable]
+ 1924 |         int i, dx, dy;
+      |                ^~
+load.c:1924:13: warning: unused variable 'dy' [-Wunused-variable]
+ 1924 |         int i, dx, dy;
+      |                    ^~
+load.c:110:13: warning: unused function 'wearable_p' [-Wunused-function]
+  110 | static bool wearable_p(const object_type *o_ptr)
+      |             ^~~~~~~~~~
+7 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o melee1.o melee1.c
+In file included from melee1.c:11:
+In file included from ./angband.h:34:
+./defines.h:1505:39: warning: '/*' within block comment [-Wcomment]
+ 1505 | /* #define SV_SCROLL_DETECT_GOLD                        26 /* removed detect_gold */
+      |                                                            ^
+./defines.h:2096:41: warning: '/*' within block comment [-Wcomment]
+ 2096 | /* #define SM_RES_CHARM                 /* what do I do with this? */
+      |                                         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o melee2.o melee2.c
+In file included from melee2.c:11:
+In file included from ./angband.h:34:
+./defines.h:1505:39: warning: '/*' within block comment [-Wcomment]
+ 1505 | /* #define SV_SCROLL_DETECT_GOLD                        26 /* removed detect_gold */
+      |                                                            ^
+./defines.h:2096:41: warning: '/*' within block comment [-Wcomment]
+ 2096 | /* #define SM_RES_CHARM                 /* what do I do with this? */
+      |                                         ^
+melee2.c:404:1: warning: non-void function does not return a value in all control paths [-Wreturn-type]
+  404 | }
+      | ^
+melee2.c:463:1: warning: non-void function does not return a value [-Wreturn-type]
+  463 | }
+      | ^
+melee2.c:1217:17: warning: unused variable 'cr_ptr' [-Wunused-variable]
+ 1217 |                 monster_race *cr_ptr = &r_info[cm_ptr->r_idx];
+      |                               ^~~~~~
+melee2.c:1211:16: warning: unused variable 'r_ptr' [-Wunused-variable]
+ 1211 |         monster_race *r_ptr = &r_info[m_ptr->r_idx];
+      |                       ^~~~~
+melee2.c:3832:33: warning: variable 'damage' is uninitialized when used here [-Wuninitialized]
+ 3832 |                         if (p_ptr->roomeffect == 12) damage += 4 + randint(rlev/5 + 2);
+      |                                                      ^~~~~~
+melee2.c:1588:20: note: initialize the variable 'damage' to silence this warning
+ 1588 |     int dir, damage, basebr, brdie, roomeff = 0;
+      |                    ^
+      |                     = 0
+melee2.c:5281:34: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+ 5281 |             if ((cave_feat[y][x] == FEAT_PERM_INNER)) return TRUE;
+      |                  ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+melee2.c:5281:34: note: remove extraneous parentheses around the comparison to silence this warning
+ 5281 |             if ((cave_feat[y][x] == FEAT_PERM_INNER)) return TRUE;
+      |                 ~                ^                 ~
+melee2.c:5281:34: note: use '=' to turn this equality comparison into an assignment
+ 5281 |             if ((cave_feat[y][x] == FEAT_PERM_INNER)) return TRUE;
+      |                                  ^~
+      |                                  =
+melee2.c:5323:7: warning: unused variable 'in_sight' [-Wunused-variable]
+ 5323 |         bool in_sight = FALSE;
+      |              ^~~~~~~~
+melee2.c:6348:7: warning: variable 'f4' set but not used [-Wunused-but-set-variable]
+ 6348 |         u32b f4, f5, f6;
+      |              ^
+melee2.c:6348:11: warning: variable 'f5' set but not used [-Wunused-but-set-variable]
+ 6348 |         u32b f4, f5, f6;
+      |                  ^
+melee2.c:6348:15: warning: variable 'f6' set but not used [-Wunused-but-set-variable]
+ 6348 |         u32b f4, f5, f6;
+      |                      ^
+melee2.c:6549:31: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+ 6549 |         if ((n_ptr->extra2 <= 2) && (!m_ptr->extra2 <= 2)) return (1);
+      |                                      ^              ~~
+melee2.c:6549:31: note: add parentheses after the '!' to evaluate the comparison first
+ 6549 |         if ((n_ptr->extra2 <= 2) && (!m_ptr->extra2 <= 2)) return (1);
+      |                                      ^                  
+      |                                       (                 )
+melee2.c:6549:31: note: add parentheses around left hand side expression to silence this warning
+ 6549 |         if ((n_ptr->extra2 <= 2) && (!m_ptr->extra2 <= 2)) return (1);
+      |                                      ^
+      |                                      (             )
+melee2.c:6550:12: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+ 6550 |         else if ((!n_ptr->extra2 <= 2) && (m_ptr->extra2 <= 2)) return (-1);
+      |                   ^              ~~
+melee2.c:6550:12: note: add parentheses after the '!' to evaluate the comparison first
+ 6550 |         else if ((!n_ptr->extra2 <= 2) && (m_ptr->extra2 <= 2)) return (-1);
+      |                   ^                  
+      |                    (                 )
+melee2.c:6550:12: note: add parentheses around left hand side expression to silence this warning
+ 6550 |         else if ((!n_ptr->extra2 <= 2) && (m_ptr->extra2 <= 2)) return (-1);
+      |                   ^
+      |                   (             )
+melee2.c:6549:46: warning: result of comparison of constant 2 with boolean expression is always true [-Wtautological-constant-out-of-range-compare]
+ 6549 |         if ((n_ptr->extra2 <= 2) && (!m_ptr->extra2 <= 2)) return (1);
+      |                                      ~~~~~~~~~~~~~~ ^  ~
+melee2.c:6550:27: warning: result of comparison of constant 2 with boolean expression is always true [-Wtautological-constant-out-of-range-compare]
+ 6550 |         else if ((!n_ptr->extra2 <= 2) && (m_ptr->extra2 <= 2)) return (-1);
+      |                   ~~~~~~~~~~~~~~ ^  ~
+melee2.c:6654:8: warning: unused variable 'f1' [-Wunused-variable]
+ 6654 |                 u32b f1, f2, f3, f4;
+      |                      ^~
+melee2.c:6654:12: warning: unused variable 'f2' [-Wunused-variable]
+ 6654 |                 u32b f1, f2, f3, f4;
+      |                          ^~
+melee2.c:6654:16: warning: unused variable 'f3' [-Wunused-variable]
+ 6654 |                 u32b f1, f2, f3, f4;
+      |                              ^~
+melee2.c:6654:20: warning: unused variable 'f4' [-Wunused-variable]
+ 6654 |                 u32b f1, f2, f3, f4;
+      |                                  ^~
+melee2.c:7741:3: warning: '/*' within block comment [-Wcomment]
+ 7741 |                 /* most monsters ignore water */
+      |                 ^
+melee2.c:7072:6: warning: unused variable 'ridx' [-Wunused-variable]
+ 7072 |         int ridx = m_ptr->r_idx;
+      |             ^~~~
+melee2.c:8878:16: warning: unused variable 'l_ptr' [-Wunused-variable]
+ 8878 |         monster_lore *l_ptr = &l_list[m_ptr->r_idx];
+      |                       ^~~~~
+23 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o monster1.o monster1.c
+In file included from monster1.c:11:
+In file included from ./angband.h:34:
+./defines.h:1505:39: warning: '/*' within block comment [-Wcomment]
+ 1505 | /* #define SV_SCROLL_DETECT_GOLD                        26 /* removed detect_gold */
+      |                                                            ^
+./defines.h:2096:41: warning: '/*' within block comment [-Wcomment]
+ 2096 | /* #define SM_RES_CHARM                 /* what do I do with this? */
+      |                                         ^
+monster1.c:1477:7: warning: variable 'evil_individual' set but not used [-Wunused-but-set-variable]
+ 1477 |         bool evil_individual = FALSE;
+      |              ^
+3 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o monster2.o monster2.c
+In file included from monster2.c:11:
+In file included from ./angband.h:34:
+./defines.h:1505:39: warning: '/*' within block comment [-Wcomment]
+ 1505 | /* #define SV_SCROLL_DETECT_GOLD                        26 /* removed detect_gold */
+      |                                                            ^
+./defines.h:2096:41: warning: '/*' within block comment [-Wcomment]
+ 2096 | /* #define SM_RES_CHARM                 /* what do I do with this? */
+      |                                         ^
+monster2.c:400:17: warning: unused variable 'r_ptr' [-Wunused-variable]
+  400 |                 monster_race *r_ptr = &r_info[m_ptr->r_idx];
+      |                               ^~~~~
+monster2.c:961:14: warning: variable 'choose' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+  961 |                                 else if (level < 50) choose = 483; /* black skeleton(34) */
+      |                                          ^~~~~~~~~~
+monster2.c:1357:9: note: uninitialized use occurs here
+ 1357 |         return choose;
+      |                ^~~~~~
+monster2.c:961:10: note: remove the 'if' if its condition is always true
+  961 |                                 else if (level < 50) choose = 483; /* black skeleton(34) */
+      |                                      ^~~~~~~~~~~~~~~
+monster2.c:921:14: warning: variable 'choose' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+  921 |                                 else if (level < 70) choose = 685; /* demilich(54) */
+      |                                          ^~~~~~~~~~
+monster2.c:1357:9: note: uninitialized use occurs here
+ 1357 |         return choose;
+      |                ^~~~~~
+monster2.c:921:10: note: remove the 'if' if its condition is always true
+  921 |                                 else if (level < 70) choose = 685; /* demilich(54) */
+      |                                      ^~~~~~~~~~~~~~~
+monster2.c:515:13: note: initialize the variable 'choose' to silence this warning
+  515 |         s16b choose;
+      |                    ^
+      |                     = 0
+monster2.c:1746:10: warning: equality comparison result unused [-Wunused-comparison]
+ 1746 |                                 okay == TRUE;
+      |                                 ~~~~~^~~~~~~
+monster2.c:1746:10: note: use '=' to turn this equality comparison into an assignment
+ 1746 |                                 okay == TRUE;
+      |                                      ^~
+      |                                      =
+monster2.c:1583:7: warning: variable 'f4' set but not used [-Wunused-but-set-variable]
+ 1583 |         u32b f4, f5, f6;
+      |              ^
+monster2.c:1583:11: warning: variable 'f5' set but not used [-Wunused-but-set-variable]
+ 1583 |         u32b f4, f5, f6;
+      |                  ^
+monster2.c:1583:15: warning: variable 'f6' set but not used [-Wunused-but-set-variable]
+ 1583 |         u32b f4, f5, f6;
+      |                      ^
+monster2.c:3134:30: warning: parameter 'm_idx' was not declared, defaults to 'int'; ISO C99 and later do not support implicit int [-Wimplicit-int]
+ 3134 | static void discern_illusion(m_idx)
+      |                              ^
+ 3135 | {
+monster2.c:3134:13: warning: a function definition without a prototype is deprecated in all versions of C and is not supported in C2x [-Wdeprecated-non-prototype]
+ 3134 | static void discern_illusion(m_idx)
+      |             ^
+monster2.c:4287:55: warning: logical not is only applied to the left hand side of this bitwise operator [-Wlogical-not-parentheses]
+ 4287 |        if ((cp_ptr->spell_book == TV_PRAYER_BOOK) && (!cp_ptr->flags & CF_ZERO_FAIL))
+      |                                                       ^              ~
+monster2.c:4287:55: note: add parentheses after the '!' to evaluate the bitwise operator first
+ 4287 |        if ((cp_ptr->spell_book == TV_PRAYER_BOOK) && (!cp_ptr->flags & CF_ZERO_FAIL))
+      |                                                       ^                            
+      |                                                        (                           )
+monster2.c:4287:55: note: add parentheses around left hand side expression to silence this warning
+ 4287 |        if ((cp_ptr->spell_book == TV_PRAYER_BOOK) && (!cp_ptr->flags & CF_ZERO_FAIL))
+      |                                                       ^
+      |                                                       (             )
+monster2.c:3754:7: warning: variable 'f4' set but not used [-Wunused-but-set-variable]
+ 3754 |         u32b f4, f5, f6;
+      |              ^
+monster2.c:3754:11: warning: variable 'f5' set but not used [-Wunused-but-set-variable]
+ 3754 |         u32b f4, f5, f6;
+      |                  ^
+monster2.c:3754:15: warning: variable 'f6' set but not used [-Wunused-but-set-variable]
+ 3754 |         u32b f4, f5, f6;
+      |                      ^
+monster2.c:5090:7: warning: unused variable 'name' [-Wunused-variable]
+ 5090 |         cptr name = (r_name + r_ptr->name);
+      |              ^~~~
+monster2.c:5556:7: warning: variable 'maxspeedscale' set but not used [-Wunused-but-set-variable]
+ 5556 |                 int maxspeedscale, scalebase = p_ptr->depth - (r_ptr->level + 4);
+      |                     ^
+monster2.c:6393:7: warning: unused variable 'nwater' [-Wunused-variable]
+ 6393 |         bool nwater = FALSE;
+      |              ^~~~~~
+18 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o obj-info.o obj-info.c
+In file included from obj-info.c:11:
+In file included from ./angband.h:34:
+./defines.h:1505:39: warning: '/*' within block comment [-Wcomment]
+ 1505 | /* #define SV_SCROLL_DETECT_GOLD                        26 /* removed detect_gold */
+      |                                                            ^
+./defines.h:2096:41: warning: '/*' within block comment [-Wcomment]
+ 2096 | /* #define SM_RES_CHARM                 /* what do I do with this? */
+      |                                         ^
+obj-info.c:136:17: warning: logical not is only applied to the left hand side of this bitwise operator [-Wlogical-not-parentheses]
+  136 |         if ((!cnt) && (!f1 & (TR1_INFRA)) && (!f1 & (TR1_MAGIC_MASTERY)) && (!f3 & (TR3_THROWMULT)) &&
+      |                        ^   ~
+obj-info.c:136:17: note: add parentheses after the '!' to evaluate the bitwise operator first
+  136 |         if ((!cnt) && (!f1 & (TR1_INFRA)) && (!f1 & (TR1_MAGIC_MASTERY)) && (!f3 & (TR3_THROWMULT)) &&
+      |                        ^                
+      |                         (               )
+obj-info.c:136:17: note: add parentheses around left hand side expression to silence this warning
+  136 |         if ((!cnt) && (!f1 & (TR1_INFRA)) && (!f1 & (TR1_MAGIC_MASTERY)) && (!f3 & (TR3_THROWMULT)) &&
+      |                        ^
+      |                        (  )
+obj-info.c:136:40: warning: logical not is only applied to the left hand side of this bitwise operator [-Wlogical-not-parentheses]
+  136 |         if ((!cnt) && (!f1 & (TR1_INFRA)) && (!f1 & (TR1_MAGIC_MASTERY)) && (!f3 & (TR3_THROWMULT)) &&
+      |                                               ^   ~
+obj-info.c:136:40: note: add parentheses after the '!' to evaluate the bitwise operator first
+  136 |         if ((!cnt) && (!f1 & (TR1_INFRA)) && (!f1 & (TR1_MAGIC_MASTERY)) && (!f3 & (TR3_THROWMULT)) &&
+      |                                               ^                        
+      |                                                (                       )
+obj-info.c:136:40: note: add parentheses around left hand side expression to silence this warning
+  136 |         if ((!cnt) && (!f1 & (TR1_INFRA)) && (!f1 & (TR1_MAGIC_MASTERY)) && (!f3 & (TR3_THROWMULT)) &&
+      |                                               ^
+      |                                               (  )
+obj-info.c:136:71: warning: logical not is only applied to the left hand side of this bitwise operator [-Wlogical-not-parentheses]
+  136 |         if ((!cnt) && (!f1 & (TR1_INFRA)) && (!f1 & (TR1_MAGIC_MASTERY)) && (!f3 & (TR3_THROWMULT)) &&
+      |                                                                              ^   ~
+obj-info.c:136:71: note: add parentheses after the '!' to evaluate the bitwise operator first
+  136 |         if ((!cnt) && (!f1 & (TR1_INFRA)) && (!f1 & (TR1_MAGIC_MASTERY)) && (!f3 & (TR3_THROWMULT)) &&
+      |                                                                              ^                    
+      |                                                                               (                   )
+obj-info.c:136:71: note: add parentheses around left hand side expression to silence this warning
+  136 |         if ((!cnt) && (!f1 & (TR1_INFRA)) && (!f1 & (TR1_MAGIC_MASTERY)) && (!f3 & (TR3_THROWMULT)) &&
+      |                                                                              ^
+      |                                                                              (  )
+obj-info.c:137:9: warning: logical not is only applied to the left hand side of this bitwise operator [-Wlogical-not-parentheses]
+  137 |        (!f1 & (TR1_EQLUCK)))
+      |         ^   ~
+obj-info.c:137:9: note: add parentheses after the '!' to evaluate the bitwise operator first
+  137 |        (!f1 & (TR1_EQLUCK)))
+      |         ^                 
+      |          (                )
+obj-info.c:137:9: note: add parentheses around left hand side expression to silence this warning
+  137 |        (!f1 & (TR1_EQLUCK)))
+      |         ^
+      |         (  )
+obj-info.c:1245:14: warning: logical not is only applied to the left hand side of this bitwise operator [-Wlogical-not-parentheses]
+ 1245 |         if ((!cp_ptr->flags & CF_BLESS_WEAPON) || (!weapon)) return;
+      |              ^              ~
+obj-info.c:1245:14: note: add parentheses after the '!' to evaluate the bitwise operator first
+ 1245 |         if ((!cp_ptr->flags & CF_BLESS_WEAPON) || (!weapon)) return;
+      |              ^                               
+      |               (                              )
+obj-info.c:1245:14: note: add parentheses around left hand side expression to silence this warning
+ 1245 |         if ((!cp_ptr->flags & CF_BLESS_WEAPON) || (!weapon)) return;
+      |              ^
+      |              (             )
+obj-info.c:1267:9: warning: variable 'sbdam' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+ 1267 |            if (o_ptr->sbdd) sbdam = ((o_ptr->sbds + 1) * o_ptr->sbdd * 5);
+      |                ^~~~~~~~~~~
+obj-info.c:1311:5: note: uninitialized use occurs here
+ 1311 |            sbdam += strdec * 5;
+      |            ^~~~~
+obj-info.c:1267:5: note: remove the 'if' if its condition is always true
+ 1267 |            if (o_ptr->sbdd) sbdam = ((o_ptr->sbds + 1) * o_ptr->sbdd * 5);
+      |            ^~~~~~~~~~~~~~~~
+obj-info.c:1016:16: note: initialize the variable 'sbdam' to silence this warning
+ 1016 |         int dam, sbdam, cnt, total_dam, total_sbdam, critc, ptodam, tmpblow;
+      |                       ^
+      |                        = 0
+8 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o object1.o object1.c
+In file included from object1.c:11:
+In file included from ./angband.h:34:
+./defines.h:1505:39: warning: '/*' within block comment [-Wcomment]
+ 1505 | /* #define SV_SCROLL_DETECT_GOLD                        26 /* removed detect_gold */
+      |                                                            ^
+./defines.h:2096:41: warning: '/*' within block comment [-Wcomment]
+ 2096 | /* #define SM_RES_CHARM                 /* what do I do with this? */
+      |                                         ^
+object1.c:1432:48: warning: address of array 'o_ptr->randego_name' will always evaluate to 'true' [-Wpointer-bool-conversion]
+ 1432 |                         else if ((is_ego_randart(o_ptr)) && (o_ptr->randego_name))
+      |                                                          ~~  ~~~~~~~^~~~~~~~~~~~
+object1.c:2998:7: warning: variable 'ammo_slot' set but not used [-Wunused-but-set-variable]
+ 2998 |                 int ammo_slot, ammo_space = 0, ammo_numb = 0, ammo_spaceb = 0;
+      |                     ^
+object1.c:3123:7: warning: variable 'ptag_space' set but not used [-Wunused-but-set-variable]
+ 3123 |         byte ptag_space;
+      |              ^
+object1.c:3814:11: warning: result of comparison against a string literal is unspecified (use an explicit string comparison function instead) [-Wstring-compare]
+ 3814 |         if ((pmt == "Wear/Wield which item? ") || 
+      |                  ^  ~~~~~~~~~~~~~~~~~~~~~~~~~
+object1.c:3815:8: warning: result of comparison against a string literal is unspecified (use an explicit string comparison function instead) [-Wstring-compare]
+ 3815 |                 (pmt == "Put which item into the quiver? "))
+      |                      ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+object1.c:4582:33: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
+ 4582 |                         (void)scan_floor(floor_list, &num, my, mx, 3);
+      |                                                      ^~~~
+object1.c:2540:34: note: passing argument to parameter 'item_num' here
+ 2540 | bool scan_floor(int *items, int *item_num, int y, int x, int mode)
+      |                                  ^
+8 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o object2.o object2.c
+In file included from object2.c:11:
+In file included from ./angband.h:34:
+./defines.h:1505:39: warning: '/*' within block comment [-Wcomment]
+ 1505 | /* #define SV_SCROLL_DETECT_GOLD                        26 /* removed detect_gold */
+      |                                                            ^
+./defines.h:2096:41: warning: '/*' within block comment [-Wcomment]
+ 2096 | /* #define SM_RES_CHARM                 /* what do I do with this? */
+      |                                         ^
+object2.c:3686:28: warning: '&&' within '||' [-Wlogical-op-parentheses]
+ 3686 |                                 if (((xrandskill == 2) && ((o_ptr->randbon == 2) && (o_ptr->randbon2 == 6)) ||
+      |                                      ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+object2.c:3686:28: note: place parentheses around the '&&' expression to silence this warning
+ 3686 |                                 if (((xrandskill == 2) && ((o_ptr->randbon == 2) && (o_ptr->randbon2 == 6)) ||
+      |                                                        ^
+      |                                      (                                                                     )
+object2.c:4937:46: warning: '/*' within block comment [-Wcomment]
+ 4937 |                         /* if (cave_feat[ty][tx] == FEAT_RUBBLE) ;/* okay */
+      |                                                                   ^
+4 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o randart.o randart.c
+In file included from randart.c:12:
+In file included from ./angband.h:34:
+./defines.h:1505:39: warning: '/*' within block comment [-Wcomment]
+ 1505 | /* #define SV_SCROLL_DETECT_GOLD                        26 /* removed detect_gold */
+      |                                                            ^
+./defines.h:2096:41: warning: '/*' within block comment [-Wcomment]
+ 2096 | /* #define SM_RES_CHARM                 /* what do I do with this? */
+      |                                         ^
+randart.c:794:24: warning: '&&' within '||' [-Wlogical-op-parentheses]
+  794 |                 if ((forbid_thrower) && ((r2 >= 35) && (r2 < 45)) ||
+      |                     ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+randart.c:794:24: note: place parentheses around the '&&' expression to silence this warning
+  794 |                 if ((forbid_thrower) && ((r2 >= 35) && (r2 < 45)) ||
+      |                                      ^
+      |                     (                                            )
+randart.c:1413:5: warning: add explicit braces to avoid dangling else [-Wdangling-else]
+ 1413 |                                 else a_ptr->to_a += (s16b)(3 + rand_int(3));
+      |                                 ^
+randart.c:1047:28: warning: variable 'align' set but not used [-Wunused-but-set-variable]
+ 1047 |         int r, what, teleordarkv, align;
+      |                                   ^
+5 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o randname.o randname.c
+In file included from randname.c:19:
+In file included from ./angband.h:34:
+./defines.h:1505:39: warning: '/*' within block comment [-Wcomment]
+ 1505 | /* #define SV_SCROLL_DETECT_GOLD                        26 /* removed detect_gold */
+      |                                                            ^
+./defines.h:2096:41: warning: '/*' within block comment [-Wcomment]
+ 2096 | /* #define SM_RES_CHARM                 /* what do I do with this? */
+      |                                         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o pathfind.o pathfind.c
+In file included from pathfind.c:18:
+In file included from ./angband.h:34:
+./defines.h:1505:39: warning: '/*' within block comment [-Wcomment]
+ 1505 | /* #define SV_SCROLL_DETECT_GOLD                        26 /* removed detect_gold */
+      |                                                            ^
+./defines.h:2096:41: warning: '/*' within block comment [-Wcomment]
+ 2096 | /* #define SM_RES_CHARM                 /* what do I do with this? */
+      |                                         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o signals.o signals.c
+In file included from signals.c:18:
+In file included from ./angband.h:34:
+./defines.h:1505:39: warning: '/*' within block comment [-Wcomment]
+ 1505 | /* #define SV_SCROLL_DETECT_GOLD                        26 /* removed detect_gold */
+      |                                                            ^
+./defines.h:2096:41: warning: '/*' within block comment [-Wcomment]
+ 2096 | /* #define SM_RES_CHARM                 /* what do I do with this? */
+      |                                         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o save.o save.c
+In file included from save.c:11:
+In file included from ./angband.h:34:
+./defines.h:1505:39: warning: '/*' within block comment [-Wcomment]
+ 1505 | /* #define SV_SCROLL_DETECT_GOLD                        26 /* removed detect_gold */
+      |                                                            ^
+./defines.h:2096:41: warning: '/*' within block comment [-Wcomment]
+ 2096 | /* #define SM_RES_CHARM                 /* what do I do with this? */
+      |                                         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o spells1.o spells1.c
+In file included from spells1.c:11:
+In file included from ./angband.h:34:
+./defines.h:1505:39: warning: '/*' within block comment [-Wcomment]
+ 1505 | /* #define SV_SCROLL_DETECT_GOLD                        26 /* removed detect_gold */
+      |                                                            ^
+./defines.h:2096:41: warning: '/*' within block comment [-Wcomment]
+ 2096 | /* #define SM_RES_CHARM                 /* what do I do with this? */
+      |                                         ^
+spells1.c:53:10: warning: variable 'tries' is uninitialized when used here [-Wuninitialized]
+   53 |                 while (tries < 999) /* keep trying until get_mon_num succeeds */
+      |                        ^~~~~
+spells1.c:26:29: note: initialize the variable 'tries' to silence this warning
+   26 |         int i, r, lev1, lev2, tries;
+      |                                    ^
+      |                                     = 0
+spells1.c:129:7: warning: unused variable 'f6' [-Wunused-variable]
+  129 |         u32b f6 = r_ptr->flags6;
+      |              ^~
+spells1.c:593:61: warning: if statement has empty body [-Wempty-body]
+  593 |      if (inkey() == ESCAPE) /* do nothing (just a -more-) */;
+      |                                                             ^
+spells1.c:593:61: note: put the semicolon on a separate line to silence this warning
+spells1.c:548:10: warning: variable 'opy' set but not used [-Wunused-but-set-variable]
+  548 |      int opy, opx, controlchance, dir;
+      |          ^
+spells1.c:548:15: warning: variable 'opx' set but not used [-Wunused-but-set-variable]
+  548 |      int opy, opx, controlchance, dir;
+      |               ^
+spells1.c:2676:19: warning: variable 'r_ptr' set but not used [-Wunused-but-set-variable]
+ 2676 |                                 monster_race *r_ptr;
+      |                                               ^
+spells1.c:2056:6: warning: variable 'tx' set but not used [-Wunused-but-set-variable]
+ 2056 |         int tx, ty;
+      |             ^
+spells1.c:2056:10: warning: variable 'ty' set but not used [-Wunused-but-set-variable]
+ 2056 |         int tx, ty;
+      |                 ^
+spells1.c:3947:8: warning: logical not is only applied to the left hand side of this bitwise operator [-Wlogical-not-parentheses]
+ 3947 |                         if (!r_ptr->flags3 & RF3_NO_STUN) do_stun = (randint(15) + r) / (r + 1);
+      |                             ^              ~
+spells1.c:3947:8: note: add parentheses after the '!' to evaluate the bitwise operator first
+ 3947 |                         if (!r_ptr->flags3 & RF3_NO_STUN) do_stun = (randint(15) + r) / (r + 1);
+      |                             ^                           
+      |                              (                          )
+spells1.c:3947:8: note: add parentheses around left hand side expression to silence this warning
+ 3947 |                         if (!r_ptr->flags3 & RF3_NO_STUN) do_stun = (randint(15) + r) / (r + 1);
+      |                             ^
+      |                             (             )
+spells1.c:3117:7: warning: unused variable 'scaleit' [-Wunused-variable]
+ 3117 |         bool scaleit = FALSE;
+      |              ^~~~~~~
+12 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o spells2.o spells2.c
+In file included from spells2.c:11:
+In file included from ./angband.h:34:
+./defines.h:1505:39: warning: '/*' within block comment [-Wcomment]
+ 1505 | /* #define SV_SCROLL_DETECT_GOLD                        26 /* removed detect_gold */
+      |                                                            ^
+./defines.h:2096:41: warning: '/*' within block comment [-Wcomment]
+ 2096 | /* #define SM_RES_CHARM                 /* what do I do with this? */
+      |                                         ^
+spells2.c:478:6: warning: variable 'sensemany' set but not used [-Wunused-but-set-variable]
+  478 |         int sensemany;
+      |             ^
+spells2.c:515:31: warning: variable 'sensemany' is uninitialized when used here [-Wuninitialized]
+  515 |                                 case 1: {senseorc = TRUE; sensemany += 1; break;}
+      |                                                           ^~~~~~~~~
+spells2.c:478:15: note: initialize the variable 'sensemany' to silence this warning
+  478 |         int sensemany;
+      |                      ^
+      |                       = 0
+spells2.c:4204:29: warning: unused variable 'notice' [-Wunused-variable]
+ 4204 |         int rad, bigrad, firstdam, notice = FALSE;
+      |                                    ^~~~~~
+5 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o spells3.o spells3.c
+In file included from spells3.c:14:
+In file included from ./angband.h:34:
+./defines.h:1505:39: warning: '/*' within block comment [-Wcomment]
+ 1505 | /* #define SV_SCROLL_DETECT_GOLD                        26 /* removed detect_gold */
+      |                                                            ^
+./defines.h:2096:41: warning: '/*' within block comment [-Wcomment]
+ 2096 | /* #define SM_RES_CHARM                 /* what do I do with this? */
+      |                                         ^
+spells3.c:301:13: warning: variable 'm_ptr' is used uninitialized whenever 'if' condition is true [-Wsometimes-uninitialized]
+  301 |                         else if (!cave_floor_bold(ny, nx)) break;
+      |                                  ^~~~~~~~~~~~~~~~~~~~~~~~
+spells3.c:324:7: note: uninitialized use occurs here
+  324 |         if (!m_ptr) return 0;
+      |              ^~~~~
+spells3.c:301:9: note: remove the 'if' if its condition is always false
+  301 |                         else if (!cave_floor_bold(ny, nx)) break;
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+spells3.c:295:15: warning: variable 'm_ptr' is used uninitialized whenever 'for' loop exits because its condition is false [-Wsometimes-uninitialized]
+  295 |                 for (i = 0; i < path_n; ++i)
+      |                             ^~~~~~~~~~
+spells3.c:324:7: note: uninitialized use occurs here
+  324 |         if (!m_ptr) return 0;
+      |              ^~~~~
+spells3.c:295:15: note: remove the condition if it is always true
+  295 |                 for (i = 0; i < path_n; ++i)
+      |                             ^~~~~~~~~~
+spells3.c:259:21: note: initialize the variable 'm_ptr' to silence this warning
+  259 |         monster_type *m_ptr;
+      |                            ^
+      |                             = NULL
+spells3.c:766:33: warning: logical not is only applied to the left hand side of this bitwise operator [-Wlogical-not-parentheses]
+  766 |     if ((artifact_p(o_ptr)) && (!f3 & (TR3_GOOD_WEAP)) && (resistb < 30)) resistb = 30;
+      |                                 ^   ~
+spells3.c:766:33: note: add parentheses after the '!' to evaluate the bitwise operator first
+  766 |     if ((artifact_p(o_ptr)) && (!f3 & (TR3_GOOD_WEAP)) && (resistb < 30)) resistb = 30;
+      |                                 ^                    
+      |                                  (                   )
+spells3.c:766:33: note: add parentheses around left hand side expression to silence this warning
+  766 |     if ((artifact_p(o_ptr)) && (!f3 & (TR3_GOOD_WEAP)) && (resistb < 30)) resistb = 30;
+      |                                 ^
+      |                                 (  )
+spells3.c:767:38: warning: logical not is only applied to the left hand side of this bitwise operator [-Wlogical-not-parentheses]
+  767 |     else if ((ego_item_p(o_ptr)) && (!f3 & (TR3_GOOD_WEAP)) && (resistb < 15)) resistb = 15;
+      |                                      ^   ~
+spells3.c:767:38: note: add parentheses after the '!' to evaluate the bitwise operator first
+  767 |     else if ((ego_item_p(o_ptr)) && (!f3 & (TR3_GOOD_WEAP)) && (resistb < 15)) resistb = 15;
+      |                                      ^                    
+      |                                       (                   )
+spells3.c:767:38: note: add parentheses around left hand side expression to silence this warning
+  767 |     else if ((ego_item_p(o_ptr)) && (!f3 & (TR3_GOOD_WEAP)) && (resistb < 15)) resistb = 15;
+      |                                      ^
+      |                                      (  )
+spells3.c:776:10: warning: logical not is only applied to the left hand side of this bitwise operator [-Wlogical-not-parentheses]
+  776 |     if ((!cp_ptr->flags & CF_BLESS_WEAPON) && (resistb + 5 < 20)) resistb = 20;
+      |          ^              ~
+spells3.c:776:10: note: add parentheses after the '!' to evaluate the bitwise operator first
+  776 |     if ((!cp_ptr->flags & CF_BLESS_WEAPON) && (resistb + 5 < 20)) resistb = 20;
+      |          ^                               
+      |           (                              )
+spells3.c:776:10: note: add parentheses around left hand side expression to silence this warning
+  776 |     if ((!cp_ptr->flags & CF_BLESS_WEAPON) && (resistb + 5 < 20)) resistb = 20;
+      |          ^
+      |          (             )
+spells3.c:777:14: warning: logical not is only applied to the left hand side of this bitwise operator [-Wlogical-not-parentheses]
+  777 |     else if (!cp_ptr->flags & CF_BLESS_WEAPON) resistb += 5;
+      |              ^              ~
+spells3.c:777:14: note: add parentheses after the '!' to evaluate the bitwise operator first
+  777 |     else if (!cp_ptr->flags & CF_BLESS_WEAPON) resistb += 5;
+      |              ^                               
+      |               (                              )
+spells3.c:777:14: note: add parentheses around left hand side expression to silence this warning
+  777 |     else if (!cp_ptr->flags & CF_BLESS_WEAPON) resistb += 5;
+      |              ^
+      |              (             )
+spells3.c:1213:6: warning: unused variable 'py' [-Wunused-variable]
+ 1213 |         int py = p_ptr->py;
+      |             ^~
+spells3.c:1214:6: warning: unused variable 'px' [-Wunused-variable]
+ 1214 |         int px = p_ptr->px;
+      |             ^~
+spells3.c:1402:6: warning: unused variable 'py' [-Wunused-variable]
+ 1402 |         int py = p_ptr->py;
+      |             ^~
+spells3.c:1403:6: warning: unused variable 'px' [-Wunused-variable]
+ 1403 |         int px = p_ptr->px;
+      |             ^~
+spells3.c:1759:12: warning: unused variable 'k' [-Wunused-variable]
+ 1759 |         int y, x, k, some, i = 0;
+      |                   ^
+spells3.c:1760:27: warning: unused variable 'stx2' [-Wunused-variable]
+ 1760 |     int stx = 0, sty = 0, stx2 = 0, sty2 = 0;
+      |                           ^~~~
+spells3.c:1760:37: warning: unused variable 'sty2' [-Wunused-variable]
+ 1760 |     int stx = 0, sty = 0, stx2 = 0, sty2 = 0;
+      |                                     ^~~~
+spells3.c:1944:16: warning: relational comparison result unused [-Wunused-comparison]
+ 1944 |         for (i = 1; i < mon_max, mnum > 0; i++)
+      |                     ~~^~~~~~~~~
+spells3.c:1940:6: warning: unused variable 'oldhp' [-Wunused-variable]
+ 1940 |         int oldhp, oldmax, oldmin, oldlev;
+      |             ^~~~~
+spells3.c:1940:13: warning: unused variable 'oldmax' [-Wunused-variable]
+ 1940 |         int oldhp, oldmax, oldmin, oldlev;
+      |                    ^~~~~~
+spells3.c:1940:21: warning: unused variable 'oldmin' [-Wunused-variable]
+ 1940 |         int oldhp, oldmax, oldmin, oldlev;
+      |                            ^~~~~~
+spells3.c:1940:29: warning: unused variable 'oldlev' [-Wunused-variable]
+ 1940 |         int oldhp, oldmax, oldmin, oldlev;
+      |                                    ^~~~~~
+spells3.c:2071:6: warning: unused variable 'flg' [-Wunused-variable]
+ 2071 |         int flg = PROJECT_JUMP | PROJECT_KILL | PROJECT_HIDE;
+      |             ^~~
+spells3.c:2075:27: warning: unused variable 'onlyundead' [-Wunused-variable]
+ 2075 |         bool onlyliving = FALSE, onlyundead = FALSE;
+      |                                  ^~~~~~~~~~
+22 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o squelch.o squelch.c
+In file included from squelch.c:19:
+In file included from ./angband.h:34:
+./defines.h:1505:39: warning: '/*' within block comment [-Wcomment]
+ 1505 | /* #define SV_SCROLL_DETECT_GOLD                        26 /* removed detect_gold */
+      |                                                            ^
+./defines.h:2096:41: warning: '/*' within block comment [-Wcomment]
+ 2096 | /* #define SM_RES_CHARM                 /* what do I do with this? */
+      |                                         ^
+squelch.c:463:10: warning: explicitly assigning value of variable of type 'byte' (aka 'unsigned char') to itself [-Wself-assign]
+  463 |                                 feel = feel;
+      |                                 ~~~~ ^ ~~~~
+3 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o store.o store.c
+In file included from store.c:12:
+In file included from ./angband.h:34:
+./defines.h:1505:39: warning: '/*' within block comment [-Wcomment]
+ 1505 | /* #define SV_SCROLL_DETECT_GOLD                        26 /* removed detect_gold */
+      |                                                            ^
+./defines.h:2096:41: warning: '/*' within block comment [-Wcomment]
+ 2096 | /* #define SM_RES_CHARM                 /* what do I do with this? */
+      |                                         ^
+store.c:2766:6: warning: logical not is only applied to the left hand side of this bitwise operator [-Wlogical-not-parentheses]
+ 2766 |         if (!p_ptr->noscore & NOSCORE_DEBUG) p_ptr->last_nap = turn;
+      |             ^               ~
+store.c:2766:6: note: add parentheses after the '!' to evaluate the bitwise operator first
+ 2766 |         if (!p_ptr->noscore & NOSCORE_DEBUG) p_ptr->last_nap = turn;
+      |             ^                              
+      |              (                             )
+store.c:2766:6: note: add parentheses around left hand side expression to silence this warning
+ 2766 |         if (!p_ptr->noscore & NOSCORE_DEBUG) p_ptr->last_nap = turn;
+      |             ^
+      |             (              )
+3 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o tables.o tables.c
+In file included from tables.c:11:
+In file included from ./angband.h:34:
+./defines.h:1505:39: warning: '/*' within block comment [-Wcomment]
+ 1505 | /* #define SV_SCROLL_DETECT_GOLD                        26 /* removed detect_gold */
+      |                                                            ^
+./defines.h:2096:41: warning: '/*' within block comment [-Wcomment]
+ 2096 | /* #define SM_RES_CHARM                 /* what do I do with this? */
+      |                                         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o ui.o ui.c
+In file included from ui.c:18:
+In file included from ./angband.h:34:
+./defines.h:1505:39: warning: '/*' within block comment [-Wcomment]
+ 1505 | /* #define SV_SCROLL_DETECT_GOLD                        26 /* removed detect_gold */
+      |                                                            ^
+./defines.h:2096:41: warning: '/*' within block comment [-Wcomment]
+ 2096 | /* #define SM_RES_CHARM                 /* what do I do with this? */
+      |                                         ^
+ui.c:561:6: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  561 |         if (!cmd == '\xff' && (!menu->cmd_keys || !strchr(menu->cmd_keys, cmd)))
+      |             ^    ~~
+ui.c:561:6: note: add parentheses after the '!' to evaluate the comparison first
+  561 |         if (!cmd == '\xff' && (!menu->cmd_keys || !strchr(menu->cmd_keys, cmd)))
+      |             ^
+      |              (            )
+ui.c:561:6: note: add parentheses around left hand side expression to silence this warning
+  561 |         if (!cmd == '\xff' && (!menu->cmd_keys || !strchr(menu->cmd_keys, cmd)))
+      |             ^
+      |             (   )
+ui.c:561:11: warning: result of comparison of constant -1 with boolean expression is always false [-Wtautological-constant-out-of-range-compare]
+  561 |         if (!cmd == '\xff' && (!menu->cmd_keys || !strchr(menu->cmd_keys, cmd)))
+      |             ~~~~ ^  ~~~~~~
+ui.c:919:19: warning: passing arguments to a function without a prototype is deprecated in all versions of C and is not supported in C2x [-Wdeprecated-non-prototype]
+  919 |                                         menu->refresh(menu);
+      |                                                      ^
+5 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o use-obj.o use-obj.c
+In file included from use-obj.c:11:
+In file included from ./angband.h:34:
+./defines.h:1505:39: warning: '/*' within block comment [-Wcomment]
+ 1505 | /* #define SV_SCROLL_DETECT_GOLD                        26 /* removed detect_gold */
+      |                                                            ^
+./defines.h:2096:41: warning: '/*' within block comment [-Wcomment]
+ 2096 | /* #define SM_RES_CHARM                 /* what do I do with this? */
+      |                                         ^
+use-obj.c:161:61: warning: if statement has empty body [-Wempty-body]
+  161 |                         else if (goodluck - badluck - randint(11) > 0) /* skip */;
+      |                                                                                  ^
+use-obj.c:161:61: note: put the semicolon on a separate line to silence this warning
+use-obj.c:777:27: warning: if statement has empty body [-Wempty-body]
+  777 |                         if (inkey() == ESCAPE) ;/* do nothing (just a -more- to make sure player has a chance to read the message) */
+      |                                                ^
+use-obj.c:777:27: note: put the semicolon on a separate line to silence this warning
+4 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o util.o util.c
+In file included from util.c:11:
+In file included from ./angband.h:34:
+./defines.h:1505:39: warning: '/*' within block comment [-Wcomment]
+ 1505 | /* #define SV_SCROLL_DETECT_GOLD                        26 /* removed detect_gold */
+      |                                                            ^
+./defines.h:2096:41: warning: '/*' within block comment [-Wcomment]
+ 2096 | /* #define SM_RES_CHARM                 /* what do I do with this? */
+      |                                         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o variable.o variable.c
+In file included from variable.c:11:
+In file included from ./angband.h:34:
+./defines.h:1505:39: warning: '/*' within block comment [-Wcomment]
+ 1505 | /* #define SV_SCROLL_DETECT_GOLD                        26 /* removed detect_gold */
+      |                                                            ^
+./defines.h:2096:41: warning: '/*' within block comment [-Wcomment]
+ 2096 | /* #define SM_RES_CHARM                 /* what do I do with this? */
+      |                                         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o wizard1.o wizard1.c
+In file included from wizard1.c:11:
+In file included from ./angband.h:34:
+./defines.h:1505:39: warning: '/*' within block comment [-Wcomment]
+ 1505 | /* #define SV_SCROLL_DETECT_GOLD                        26 /* removed detect_gold */
+      |                                                            ^
+./defines.h:2096:41: warning: '/*' within block comment [-Wcomment]
+ 2096 | /* #define SM_RES_CHARM                 /* what do I do with this? */
+      |                                         ^
+wizard1.c:866:34: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  866 |                 if (r_ptr->Rfire) fprintf(fff, rst);
+      |                                                ^~~
+wizard1.c:866:34: note: treat the string as an argument to avoid this
+  866 |                 if (r_ptr->Rfire) fprintf(fff, rst);
+      |                                                ^
+      |                                                "%s", 
+wizard1.c:868:34: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  868 |                 if (r_ptr->Rcold) fprintf(fff, rst);
+      |                                                ^~~
+wizard1.c:868:34: note: treat the string as an argument to avoid this
+  868 |                 if (r_ptr->Rcold) fprintf(fff, rst);
+      |                                                ^
+      |                                                "%s", 
+wizard1.c:870:34: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  870 |                 if (r_ptr->Relec) fprintf(fff, rst);
+      |                                                ^~~
+wizard1.c:870:34: note: treat the string as an argument to avoid this
+  870 |                 if (r_ptr->Relec) fprintf(fff, rst);
+      |                                                ^
+      |                                                "%s", 
+wizard1.c:872:34: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  872 |                 if (r_ptr->Racid) fprintf(fff, rst);
+      |                                                ^~~
+wizard1.c:872:34: note: treat the string as an argument to avoid this
+  872 |                 if (r_ptr->Racid) fprintf(fff, rst);
+      |                                                ^
+      |                                                "%s", 
+wizard1.c:874:34: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  874 |                 if (r_ptr->Rpois) fprintf(fff, rst);
+      |                                                ^~~
+wizard1.c:874:34: note: treat the string as an argument to avoid this
+  874 |                 if (r_ptr->Rpois) fprintf(fff, rst);
+      |                                                ^
+      |                                                "%s", 
+wizard1.c:876:34: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  876 |                 if (r_ptr->Rlite) fprintf(fff, rst);
+      |                                                ^~~
+wizard1.c:876:34: note: treat the string as an argument to avoid this
+  876 |                 if (r_ptr->Rlite) fprintf(fff, rst);
+      |                                                ^
+      |                                                "%s", 
+wizard1.c:878:34: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  878 |                 if (r_ptr->Rdark) fprintf(fff, rst);
+      |                                                ^~~
+wizard1.c:878:34: note: treat the string as an argument to avoid this
+  878 |                 if (r_ptr->Rdark) fprintf(fff, rst);
+      |                                                ^
+      |                                                "%s", 
+wizard1.c:880:35: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  880 |                 if (r_ptr->Rwater) fprintf(fff, rst);
+      |                                                 ^~~
+wizard1.c:880:35: note: treat the string as an argument to avoid this
+  880 |                 if (r_ptr->Rwater) fprintf(fff, rst);
+      |                                                 ^
+      |                                                 "%s", 
+wizard1.c:882:35: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  882 |                 if (r_ptr->Rnexus) fprintf(fff, rst);
+      |                                                 ^~~
+wizard1.c:882:35: note: treat the string as an argument to avoid this
+  882 |                 if (r_ptr->Rnexus) fprintf(fff, rst);
+      |                                                 ^
+      |                                                 "%s", 
+wizard1.c:884:36: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  884 |                 if (r_ptr->Rsilver) fprintf(fff, rst);
+      |                                                  ^~~
+wizard1.c:884:36: note: treat the string as an argument to avoid this
+  884 |                 if (r_ptr->Rsilver) fprintf(fff, rst);
+      |                                                  ^
+      |                                                  "%s", 
+wizard1.c:886:37: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+  886 |                 if (r_ptr->Rmissile) fprintf(fff, rst);
+      |                                                   ^~~
+wizard1.c:886:37: note: treat the string as an argument to avoid this
+  886 |                 if (r_ptr->Rmissile) fprintf(fff, rst);
+      |                                                   ^
+      |                                                   "%s", 
+13 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o wizard2.o wizard2.c
+In file included from wizard2.c:11:
+In file included from ./angband.h:34:
+./defines.h:1505:39: warning: '/*' within block comment [-Wcomment]
+ 1505 | /* #define SV_SCROLL_DETECT_GOLD                        26 /* removed detect_gold */
+      |                                                            ^
+./defines.h:2096:41: warning: '/*' within block comment [-Wcomment]
+ 2096 | /* #define SM_RES_CHARM                 /* what do I do with this? */
+      |                                         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o x-spell.o x-spell.c
+In file included from x-spell.c:12:
+In file included from ./angband.h:34:
+./defines.h:1505:39: warning: '/*' within block comment [-Wcomment]
+ 1505 | /* #define SV_SCROLL_DETECT_GOLD                        26 /* removed detect_gold */
+      |                                                            ^
+./defines.h:2096:41: warning: '/*' within block comment [-Wcomment]
+ 2096 | /* #define SM_RES_CHARM                 /* what do I do with this? */
+      |                                         ^
+x-spell.c:1200:58: warning: expression result unused [-Wunused-value]
+ 1200 |                             strnfmt(p, len, " dur %d+d%d ", (plev * 3) + 10), plev;
+      |                                                                               ^~~~
+x-spell.c:2977:8: warning: variable 'rad' set but not used [-Wunused-but-set-variable]
+ 2977 |                         int rad = 5;
+      |                             ^
+x-spell.c:5020:6: warning: unused variable 'py' [-Wunused-variable]
+ 5020 |         int py = p_ptr->py;
+      |             ^~
+x-spell.c:5021:6: warning: unused variable 'px' [-Wunused-variable]
+ 5021 |         int px = p_ptr->px;
+      |             ^~
+x-spell.c:6629:28: warning: '&&' within '||' [-Wlogical-op-parentheses]
+ 6629 |             if ((goodluck) && ((cp_ptr->flags & CF_BEAM) && (plev >= 25)) || (plev >= 35))
+      |                 ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~
+x-spell.c:6629:28: note: place parentheses around the '&&' expression to silence this warning
+ 6629 |             if ((goodluck) && ((cp_ptr->flags & CF_BEAM) && (plev >= 25)) || (plev >= 35))
+      |                            ^
+      |                 (                                                        )
+7 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o xtra1.o xtra1.c
+In file included from xtra1.c:11:
+In file included from ./angband.h:34:
+./defines.h:1505:39: warning: '/*' within block comment [-Wcomment]
+ 1505 | /* #define SV_SCROLL_DETECT_GOLD                        26 /* removed detect_gold */
+      |                                                            ^
+./defines.h:2096:41: warning: '/*' within block comment [-Wcomment]
+ 2096 | /* #define SM_RES_CHARM                 /* what do I do with this? */
+      |                                         ^
+xtra1.c:498:11: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+  498 |         else if (!mon_list[p_ptr->health_who].hp < 0)
+      |                  ^                               ~
+xtra1.c:498:11: note: add parentheses after the '!' to evaluate the comparison first
+  498 |         else if (!mon_list[p_ptr->health_who].hp < 0)
+      |                  ^                                  
+      |                   (                                 )
+xtra1.c:498:11: note: add parentheses around left hand side expression to silence this warning
+  498 |         else if (!mon_list[p_ptr->health_who].hp < 0)
+      |                  ^
+      |                  (                              )
+xtra1.c:498:43: warning: result of comparison of constant 0 with boolean expression is always false [-Wtautological-constant-compare]
+  498 |         else if (!mon_list[p_ptr->health_who].hp < 0)
+      |                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^ ~
+xtra1.c:2340:35: warning: '/*' within block comment [-Wcomment]
+ 2340 |                 /* else if (IS_QUIVER_SLOT(i)) ;/* no longer nesesary */
+      |                                                 ^
+xtra1.c:2414:17: warning: logical not is only applied to the left hand side of this bitwise operator [-Wlogical-not-parentheses]
+ 2414 |            if ((!o_ptr->ident & (IDENT_CURSED)) && (randint(100) < 3 + badluck/2))
+      |                 ^             ~
+xtra1.c:2414:17: note: add parentheses after the '!' to evaluate the bitwise operator first
+ 2414 |            if ((!o_ptr->ident & (IDENT_CURSED)) && (randint(100) < 3 + badluck/2))
+      |                 ^                             
+      |                  (                            )
+xtra1.c:2414:17: note: add parentheses around left hand side expression to silence this warning
+ 2414 |            if ((!o_ptr->ident & (IDENT_CURSED)) && (randint(100) < 3 + badluck/2))
+      |                 ^
+      |                 (            )
+xtra1.c:3431:9: warning: logical not is only applied to the left hand side of this bitwise operator [-Wlogical-not-parentheses]
+ 3431 |     if (!cp_ptr->flags & CF_HEAVY_BONUS)
+      |         ^              ~
+xtra1.c:3431:9: note: add parentheses after the '!' to evaluate the bitwise operator first
+ 3431 |     if (!cp_ptr->flags & CF_HEAVY_BONUS)
+      |         ^                              
+      |          (                             )
+xtra1.c:3431:9: note: add parentheses around left hand side expression to silence this warning
+ 3431 |     if (!cp_ptr->flags & CF_HEAVY_BONUS)
+      |         ^
+      |         (             )
+xtra1.c:3667:19: warning: unused variable 'estr' [-Wunused-variable]
+ 3667 |                 int div, wspdm, estr;
+      |                                 ^~~~
+8 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o xtra2.o xtra2.c
+In file included from xtra2.c:11:
+In file included from ./angband.h:34:
+./defines.h:1505:39: warning: '/*' within block comment [-Wcomment]
+ 1505 | /* #define SV_SCROLL_DETECT_GOLD                        26 /* removed detect_gold */
+      |                                                            ^
+./defines.h:2096:41: warning: '/*' within block comment [-Wcomment]
+ 2096 | /* #define SM_RES_CHARM                 /* what do I do with this? */
+      |                                         ^
+xtra2.c:459:11: warning: variable 'wstat' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+  459 |         else if (v)
+      |                  ^
+xtra2.c:513:6: note: uninitialized use occurs here
+  513 |         if (wstat == A_STR) act = "strong";
+      |             ^~~~~
+xtra2.c:459:7: note: remove the 'if' if its condition is always true
+  459 |         else if (v)
+      |              ^~~~~~
+  460 |         {
+xtra2.c:448:11: note: initialize the variable 'wstat' to silence this warning
+  448 |         int wstat;
+      |                  ^
+      |                   = 0
+xtra2.c:1694:26: warning: logical not is only applied to the left hand side of this bitwise operator [-Wlogical-not-parentheses]
+ 1694 |                                 if ((!m_ptr->ml) && (!r_ptr->flags1 & (RF1_UNIQUE))) i_ptr->drop_ridx = -1;
+      |                                                      ^              ~
+xtra2.c:1694:26: note: add parentheses after the '!' to evaluate the bitwise operator first
+ 1694 |                                 if ((!m_ptr->ml) && (!r_ptr->flags1 & (RF1_UNIQUE))) i_ptr->drop_ridx = -1;
+      |                                                      ^                            
+      |                                                       (                           )
+xtra2.c:1694:26: note: add parentheses around left hand side expression to silence this warning
+ 1694 |                                 if ((!m_ptr->ml) && (!r_ptr->flags1 & (RF1_UNIQUE))) i_ptr->drop_ridx = -1;
+      |                                                      ^
+      |                                                      (             )
+xtra2.c:1800:16: warning: variable 'seen' set but not used [-Wunused-but-set-variable]
+ 1800 |         bool wakemon, seen, nomess, wasdisguised = FALSE;
+      |                       ^
+xtra2.c:3100:56: warning: '/*' within block comment [-Wcomment]
+ 3100 |                 /* if (cave_feat[y][x] == FEAT_WATER) return (TRUE); /* ? */
+      |                                                                      ^
+xtra2.c:3283:7: warning: unused variable 'b1' [-Wunused-variable]
+ 3283 |         char b1 = '[', b2 = ']';
+      |              ^~
+xtra2.c:3283:17: warning: unused variable 'b2' [-Wunused-variable]
+ 3283 |         char b1 = '[', b2 = ']';
+      |                        ^~
+xtra2.c:3284:7: warning: unused variable 'c1' [-Wunused-variable]
+ 3284 |         char c1 = '{', c2 = '}';
+      |              ^~
+xtra2.c:3284:17: warning: unused variable 'c2' [-Wunused-variable]
+ 3284 |         char c1 = '{', c2 = '}';
+      |                        ^~
+xtra2.c:3794:7: warning: variable 'floored' set but not used [-Wunused-but-set-variable]
+ 3794 |         bool floored;
+      |              ^
+11 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o z-file.o z-file.c
+In file included from z-file.c:18:
+In file included from ./angband.h:34:
+./defines.h:1505:39: warning: '/*' within block comment [-Wcomment]
+ 1505 | /* #define SV_SCROLL_DETECT_GOLD                        26 /* removed detect_gold */
+      |                                                            ^
+./defines.h:2096:41: warning: '/*' within block comment [-Wcomment]
+ 2096 | /* #define SM_RES_CHARM                 /* what do I do with this? */
+      |                                         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o z-form.o z-form.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o z-queue.o z-queue.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o z-rand.o z-rand.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o z-term.o z-term.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o z-type.o z-type.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o z-util.o z-util.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o z-virt.o z-virt.c
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o main.o main.c
+In file included from main.c:11:
+In file included from ./angband.h:34:
+./defines.h:1505:39: warning: '/*' within block comment [-Wcomment]
+ 1505 | /* #define SV_SCROLL_DETECT_GOLD                        26 /* removed detect_gold */
+      |                                                            ^
+./defines.h:2096:41: warning: '/*' within block comment [-Wcomment]
+ 2096 | /* #define SM_RES_CHARM                 /* what do I do with this? */
+      |                                         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -c -o main-gcu.o main-gcu.c
+In file included from main-gcu.c:39:
+In file included from ./angband.h:34:
+./defines.h:1505:39: warning: '/*' within block comment [-Wcomment]
+ 1505 | /* #define SV_SCROLL_DETECT_GOLD                        26 /* removed detect_gold */
+      |                                                            ^
+./defines.h:2096:41: warning: '/*' within block comment [-Wcomment]
+ 2096 | /* #define SM_RES_CHARM                 /* what do I do with this? */
+      |                                         ^
+2 warnings generated.
+clang -Wall -std=gnu99 -O2 -I. -DUSE_GCU -DUSE_TRANSPARENCY -DHAVE_MKSTEMP -DPRIVATE_USER_PATH=\"~/Library/Preferences\" -DUSE_PRIVATE_PATHS -DALLOW_WIZARD -DNCURSES_OPAQUE=0 -Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=int-conversion -Wno-error=incompatible-function-pointer-types -Wno-error=incompatible-pointer-types -Wno-error=return-type -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -Wl,-syslibroot,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -arch arm64 -o dajangband birth.o cave.o cmd0.o cmd1.o cmd2.o cmd3.o cmd4.o cmd5.o cmd6.o dungeon.o files.o generate.o init1.o init2.o load.o melee1.o melee2.o monster1.o monster2.o obj-info.o object1.o object2.o randart.o randname.o pathfind.o signals.o save.o spells1.o spells2.o spells3.o squelch.o store.o tables.o ui.o use-obj.o util.o variable.o wizard1.o wizard2.o x-spell.o xtra1.o xtra2.o z-file.o z-form.o z-queue.o z-rand.o z-term.o z-type.o z-util.o z-virt.o main.o main-gcu.o -lncurses
+Installing terminal version...
+Terminal version installed as ../dajangband-terminal
+Run with: ./dajangband-terminal

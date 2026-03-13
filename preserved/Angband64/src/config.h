@@ -593,3 +593,4 @@
 #endif
 
 
+#define strnicmp strncasecmp

@@ -397,7 +397,6 @@ extern void init_angband(void);
 extern errr rd_savefile_old(void);
 
 /* load2.c */
-extern bool wearable_p(object_type *o_ptr);
 extern errr rd_savefile_new(void);
 
 /* melee1.c */

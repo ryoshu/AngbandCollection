@@ -6122,7 +6122,7 @@ static void try_door(int y, int x)
 /*
  * Attempt to build a room of the given type at the given block
  *
- * Note that we restrict the number of "crowded" rooms to reduce
+ * Note that we class_restrict the number of "crowded" rooms to reduce
  * the chance of overflowing the monster list during level creation.
  */
 static bool room_build(int y, int x, int typ)
