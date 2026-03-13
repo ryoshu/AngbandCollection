@@ -4,71 +4,73 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository Purpose
 
-This is a public archive and registry of Angband variants and related roguelike games. The repository serves as both a discovery hub and preservation archive for the Angband ecosystem, with an active focus on modernizing orphaned variants to run on contemporary operating systems, particularly macOS.
+This is a preservation archive of orphaned Angband variants and related roguelike games, with an active focus on modernizing them to compile and run on contemporary macOS (Apple Silicon and Intel).
 
 ## Architecture Strategy
 
-Pure registry + selective preservation + modernization approach:
+Preservation + modernization approach:
 
-1. **Primary registry** - README.md serves as the canonical discovery hub with links to authoritative repos
-2. **Selective preservation** - Only truly orphaned variants are stored locally in `/preserved/`
-3. **Active modernization** - Porting orphaned variants to run on modern macOS using systematic approach
-4. **Utility scripts** - Tools in `/scripts/` for link validation and orphan management
-5. **Fast discovery** - Users can quickly browse all variants without downloading gigabytes
+1. **Preservation archive** - Orphaned variants with no upstream repository are stored in `/preserved/`
+2. **Active modernization** - 45 of 52 preserved variants ported to modern macOS using ncurses terminal interface
+3. **Utility scripts** - Tools in `/scripts/` for build automation, link validation, and orphan fetching
+4. **External references** - README.md lists actively maintained variants with links for reference
 
 ## Repository Structure
 
 ```
 /scripts/
-  validate-links.sh     # Check all GitHub links are alive  
-  fetch-orphans.sh     # Download variants without homes
-/preserved/            # Only truly orphaned variants
-  Angband64/
-  GSNband/
-  [other orphaned variants]
-/README.md            # Primary registry with links + metadata
+  generate-makefile.sh   # Generate Makefile.osx-modern for a variant
+  batch-modernize.sh     # Batch-modernize multiple variants
+  verify-builds.sh       # Build all variants and generate report
+  validate-links.sh      # Check all README URLs are reachable
+  fetch-orphans.sh       # Download orphaned variants for preservation
+/preserved/              # Orphaned variants (52 total, 45 buildable)
+  <Variant>/
+    src/                  # Source code
+    src/Makefile.osx-modern  # Modern macOS Makefile
+    src/build-osx-modern.log # Build log
+    BUILD-MODERN-MACOS.md    # Per-variant build instructions
+/README.md               # Archive index with build status table
+/build-report.txt         # Latest build verification report
 ```
 
-- README.md contains ALL variants with authoritative repo links where available
-- `/preserved/` contains only variants with no active authoritative repository
-- `/scripts/` contains maintenance utilities
-- No local copies of variants that have active upstream repositories
+- `/preserved/` contains orphaned variants with no active upstream repository
+- Each buildable variant has a `Makefile.osx-modern`, `BUILD-MODERN-MACOS.md`, and build log
+- `/scripts/` contains build automation and maintenance utilities
+- README.md lists both preserved variants (with build status) and external active variants
 
 ## Common Development Tasks
 
-### Adding a new variant
-1. Check if an authoritative repo exists
-2. If yes: Add to README.md with link only
-3. If no: Add to `/preserved/` directory and list in README.md
+### Building a preserved variant
+```bash
+cd preserved/<VariantName>/src
+make -f Makefile.osx-modern clean
+make -f Makefile.osx-modern install-terminal
+cd ..
+./<variantname>-terminal
+```
 
-### Moving variant from local to linked
-1. Verify authoritative repo exists and is actively maintained
-2. Update README.md with link
-3. Remove from `/preserved/` directory 
-4. Commit the removal
+### Preserving a new orphaned variant
+1. Use `scripts/fetch-orphans.sh <url> <name>` to download and extract
+2. Run `scripts/generate-makefile.sh` to create a modern Makefile
+3. Fix any compilation errors in source files
+4. Run `scripts/verify-builds.sh --only <name>` to confirm it builds
+5. Add to the build status table in README.md
 
-### Preserving an orphaned variant
-1. Use `scripts/fetch-orphans.sh` to download from source
-2. Place in `/preserved/` directory
-3. Add to README.md without link
-
-### Modernizing orphaned variants for macOS
+### Modernizing a variant for macOS
 1. **Assessment Phase** - Analyze existing build system and identify deprecated dependencies
-2. **Adaptation Phase** - Create modern Makefile, switch to terminal/SDL2 interfaces, update SDK paths
-3. **Testing Phase** - Build on Intel and Apple Silicon, test game functionality
-4. **Documentation Phase** - Create build instructions and troubleshooting guides
+2. **Adaptation Phase** - Create modern Makefile, switch to ncurses terminal interface, update SDK paths
+3. **Testing Phase** - Build on Apple Silicon, verify game launches
+4. **Documentation Phase** - Create BUILD-MODERN-MACOS.md with instructions
 
 ### Validating repository health
-- Run `scripts/validate-links.sh` to check all external links
-- Review variants in `/preserved/` for potential new upstream homes
+- Run `scripts/validate-links.sh` to check all external URLs in README.md
+- Run `scripts/verify-builds.sh` to rebuild all variants and generate build-report.txt
 
 ## Repository Management Principles
 
-- README.md is the single source of truth for discovery
 - Only preserve locally what cannot be found elsewhere
-- Prefer links to live repositories over static copies
-- Keep the repository lightweight for fast cloning
-- Maintain scripts for automated validation and maintenance
 - Modernize orphaned variants using systematic approach (Oangband serves as template)
-- Prioritize variants with high compatibility (similar era and build systems)
-- Use standardized modernization components: modern Makefiles, terminal interfaces, universal binaries
+- Use standardized modernization components: modern Makefiles, ncurses terminal interface
+- Keep build status table in README.md up to date
+- Compiled binaries and object files are gitignored — only source and build scripts are committed
