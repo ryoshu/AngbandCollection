@@ -1,27 +1,26 @@
 # Angband Variants Collection
 
-A comprehensive registry and preservation archive of Angband variants and related roguelike games.
+A preservation archive of orphaned Angband variants, modernized to compile on contemporary macOS.
 
 ## About This Collection
 
-This repository serves as both a **discovery hub** and **preservation archive** for the Angband ecosystem:
+This repository preserves orphaned Angband variants that have no active upstream repository, and ports them to run on modern systems:
 
-- **Live variants** with active development link to their authoritative repositories  
-- **Historical variants** without active homes are preserved locally in `/preserved/`
-- **Fast discovery** - browse all variants without downloading gigabytes
-- **Easy access** - clone only the variants you need from their official sources
+- **52 historical variants** preserved in `/preserved/`, sourced from defunct archives and old releases
+- **45 of 52 compile on modern macOS** (Apple Silicon and Intel) via ncurses terminal interface
+- **Per-variant build docs** and Makefiles included for each buildable variant
+- Links to actively maintained variants are listed below for reference
 
 ## Repository Structure
 
-- `/preserved/` - Locally preserved variants without authoritative repositories (52 variants)
-- `/scripts/` - Maintenance utilities for link validation and orphan management  
-- This README serves as the canonical registry for all variants
+- `/preserved/` - Preserved orphaned variants with modern build support (52 variants)
+- `/scripts/` - Build automation and maintenance utilities
 
 ---
 
-## Active Variants (With Authoritative Repositories)
+## Active Variants (External)
 
-These variants have active development and should be cloned from their official sources:
+These variants have active development elsewhere and are **not** included in this archive:
 
 * AlexAngband - https://github.com/NickMcConnell/AlexAngband
 * Angband - https://github.com/angband/angband
@@ -182,35 +181,27 @@ cd ..
 
 ## Usage
 
-**To explore active variants:**
 ```bash
-# Clone this registry (lightweight)
-git clone https://github.com/ryoshu/AngbandCollection.git
-
-# Then clone specific variants from their official sources
-git clone https://github.com/angband/angband.git
-git clone https://github.com/hengband/hengband.git
-```
-
-**To access preserved variants:**
-```bash
-# Clone this registry
+# Clone the archive
 git clone https://github.com/ryoshu/AngbandCollection.git
 cd AngbandCollectionRepo/preserved/
 
-# Explore historical variants
-ls -la
+# Build and play any supported variant
+cd Oangband/src
+make -f Makefile.osx-modern clean
+make -f Makefile.osx-modern install-terminal
+cd ..
+./oangband-terminal
 ```
 
 ---
 
 ## Statistics
 
-- **Total variants catalogued:** 119
-- **Active variants with repositories:** 67
 - **Preserved historical variants:** 52
-- **Repository size:** ~50MB (down from ~2GB+)
+- **Buildable on modern macOS:** 45
+- **Active variants listed (external):** 67
 
 ## Contributing
 
-Found a new Angband variant or discovered an authoritative repository for a preserved variant? Please submit a pull request or open an issue!
+Found an orphaned Angband variant that should be preserved, or have a fix for one of the failing builds? Please submit a pull request or open an issue!
