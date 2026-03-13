@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# Compiled objects
+*.o
+
+# Compiled binaries (preserved variants may build these)
+preserved/Oangband/oangband
+preserved/ComPosband/composband
+preserved/ComPosband/composband-terminal
+preserved/XAngband/xangband
+
+# Debug symbols
+*.dSYM/

@@ -238,19 +238,19 @@ P:^_CO18\r
 
 
 #
-# Hack -- Arrow-Keys
+# Hack -- Arrow-Keys - Fixed to use walking commands instead of running
 #
 
-A:4
+A:;4
 P:^_59\r
 
-A:6
+A:;6
 P:^_60\r
 
-A:2
+A:;2
 P:^_61\r
 
-A:8
+A:;8
 P:^_62\r
 
 

@@ -198,3 +198,20 @@ C:1:O
 # Display Game Time
 #A:^t
 #C:1:'
+
+# Arrow Key Fix for macOS - Map arrow keys to walking instead of running
+# Arrow Down (0x80) -> Walk South (;2)
+A:;2
+C:0:\x80
+
+# Arrow Left (0x81) -> Walk West (;4) 
+A:;4
+C:0:\x81
+
+# Arrow Right (0x82) -> Walk East (;6)
+A:;6
+C:0:\x82
+
+# Arrow Up (0x83) -> Walk North (;8)
+A:;8
+C:0:\x83

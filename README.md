@@ -158,7 +158,7 @@ These variants have no known active development and are preserved locally in `/p
 **To explore active variants:**
 ```bash
 # Clone this registry (lightweight)
-git clone https://github.com/your-username/AngbandCollectionRepo.git
+git clone https://github.com/ryoshu/AngbandCollectionRepo.git
 
 # Then clone specific variants from their official sources
 git clone https://github.com/angband/angband.git
@@ -168,7 +168,7 @@ git clone https://github.com/hengband/hengband.git
 **To access preserved variants:**
 ```bash
 # Clone this registry
-git clone https://github.com/your-username/AngbandCollectionRepo.git
+git clone https://github.com/ryoshu/AngbandCollectionRepo.git
 cd AngbandCollectionRepo/preserved/
 
 # Explore historical variants

@@ -244,6 +244,14 @@ pip-log.txt
 /poschengband
 /src/tags
 
+# Modern macOS build artifacts
+/composband
+/composband-terminal
+/src/composband
+*.app/
+ComPosband.app/
+*.dSYM/
+
 # Temporary (cache) files built during run-time
 *.raw
 

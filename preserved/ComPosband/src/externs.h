@@ -1494,6 +1494,7 @@ extern bool mundane_spell(bool only_equip);
 extern bool identify_item(object_type *o_ptr);
 extern bool recharge_from_player(int power);
 extern bool recharge_from_device(int power);
+extern bool recharge_pack(void);
 extern bool recharge_simple();
 extern bool bless_weapon(void);
 extern bool polish_shield(void);
@@ -2662,4 +2663,8 @@ extern void wild_reset_counter(int power);
 
 extern void     chaos_choose_effect(int);
 extern bool		worships_chaos();
+extern void     chaos_patron_reward(int category);
 extern cptr     chaos_patron_name(int);
+
+/* quest.c */
+extern cptr     kayttonimi(quest_ptr q);
